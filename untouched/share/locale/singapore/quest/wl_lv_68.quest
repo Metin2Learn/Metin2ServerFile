@@ -1,0 +1,158 @@
+quest wl_lv_68 begin
+	state start begin
+	end
+	
+	state run begin
+		when login or levelup or enter with pc.get_level() >= 68 begin
+			set_state(information)
+		end
+	end
+	
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(33002)
+			if v != 0 then
+				target.vid("__TARGET__", v, "Cassim")
+			end
+		end
+		
+		when button or info begin
+			say_title("The Bandit's Legacy")
+			say("")
+			say("Cassim has another favour to ask of you")
+			say("head to the Snake Field and see what you")
+			say("can do for him!")
+			say("")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 33002.chat."The Bandits Legacy" begin
+			target.delete("__TARGET__")
+			say_title("Cassim:")
+			say("")
+			say("And once again I welcome you my brave hunter!")
+			say("There is yet another treasure I crave and of")
+			say("course I will share my profit with you if we")
+			say("succeed!")
+			say("")
+			say("Snakes produce coins by biting into a piece of")
+			say("flat metal. They introduced it as a currency to")
+			say("gain access to their weaponry.")
+			wait()
+			say_title("Cassim:")
+			say("")
+			say("However, the Cruel Bandits who live in this desert")
+			say("have collected those coins from the Snake populace")
+			say("as a means to spare their lives and keep them for")
+			say("their own personal gain.")
+			say("")
+			say("I am interested in these coins. So how about it?")
+			say("Get me 100 of these Snake Coins and I shall share")
+			say("a very special reward with you this time!")
+			say("")
+			local init = select("I will do it", "Not now.")
+			if init == 1 then
+				say_title("Cassim:")
+				say("")
+				say("I knew I could trust you!")
+				say("I will wait for you here.")
+				say("")
+				say_reward("Once again, you can gather Snake Coins with a")
+				say_reward("party if you are their leader.")
+				say("")
+				set_state(hunt)
+			end
+		end
+	end
+	
+	state hunt begin
+		when letter begin
+			send_letter("The Bandit's Legacy")
+		end
+		
+		when button or info begin
+			say_title("The Bandit's Legacy")
+			say("")
+			say("Find and kill Cruel Bandits in the Snake Field")
+			say("and obtain their Snake Coins and bring 100 of them")
+			say("to Cassim!")
+			say("")
+			say("You can obtain them with a party as long as you")
+			say("are the party leader.")
+			say("")
+		end
+		
+		when 2135.party_kill begin
+			local chance = number(1,6)
+			if chance == 1 then
+				pc.give_item2(90319,1)
+				if pc.count_item(90319) >= 100 then
+					set_state(report)
+				end
+			end
+		end
+	end
+	
+	state report begin
+		when letter begin
+			local v = find_npc_by_vnum(33002)
+			if v != 0 then
+				target.vid("__TARGET__", v, "Cassim")
+			end
+		end
+		
+		when button or info begin
+			say_title("The Bandit's Legacy")
+			say("")
+			say("You have collected all 100 Snake Coins!")
+			say("Cassim is waiting for your return!")
+			say("")
+			say_reward("You should head back to Cassim now.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 33002.chat."The Bandits Legacy" begin
+			target.delete("__TARGET__")
+			if pc.count_item(90319) < 100 then
+				say_title("Cassim:")
+				say("")
+				say("Hm.. you don't quite have 100 Snake Coins.")
+				say("Sorry but I really need 100.")
+				say("")
+				say("")
+			else
+				say_title("Cassim:")
+				say("")
+				say("Listen to that tinkling of your pockets!")
+				say("You must've obtained all Snake Coins!")
+				say("")
+				say("Let's count these... ah yes, 100 - perfect!")
+				say("I can not express my gratitude for you anymore")
+				say("So let me just give you this!")
+				say("")
+				say_reward("Bottomless Wallet received.")
+				say("")
+				wait()
+				say_title("Cassim:")
+				say("")
+				say("What this is? This magic wallet increases the fortune")
+				say("of its wielder over night!")
+				say("You can deposit any sum of Yang inside and if 24 hours")
+				say("pass, you will find more Yang inside than you had before!")
+				say("")
+				say("I've also put a little starting capital inside so you")
+				say("can start building your own fortune!")
+				say("")
+				say("Once again, thank you very much!")
+				say("")
+				pc.give_item2(90323,1)
+				pc.remove_item(90319,pc.count_item(90319))
+				set_quest_state("bottomless_wallet","run")
+				set_state(__COMPLETE__)
+			end
+		end
+	end
+	
+	state __COMPLETE__ begin
+	end
+end

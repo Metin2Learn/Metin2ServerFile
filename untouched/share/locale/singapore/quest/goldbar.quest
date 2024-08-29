@@ -1,0 +1,351 @@
+quest goldbar begin
+	state start begin
+		when login or levelup with pc.get_level() > 29 begin
+			set_state(information)
+		end
+	end
+	
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20020)
+			if v != 0 then
+				target.vid("__TARGET__", v, "Betrayer Balso")
+			end
+			send_letter("The Secret Stash")
+		end
+		
+		when button or info begin
+			say_title("The Secret Stash")
+			say("")
+			say("The betrayer of the Black Ring Gang, Balso, has been looking")
+			say("out for you. According to Deokbae, he was very nervous so it")
+			say("might be important!")
+			say("")
+			say("You should go to him and check what he wants.")
+			say("You can find him in the second town of your kingdom!")
+			say("")
+			say_reward("Talk to Balso.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 20020.chat."Hey... I need to talk to you." begin
+			target.delete("__TARGET__")
+			say_title("Betrayer Balso:")
+			say("")
+			say("Hi there... come closer, I cant speak very loud about it.")
+			say("I've heard a lot about you lately, words of your heroic deeds")
+			say("spread far across the kingdom - and I think you deserve")
+			say("to be rewarded for that!")
+			say("")
+			say("How you might ask? Listen closely...")
+			say("")
+			wait()
+			say_title("Betrayer Balso:")
+			say("")
+			say("The Black Wing Gang is not really the smartest group of people")
+			say("you'll find here. They only know how to kill something with")
+			say("their weapon and that's it - but surprisingly - they're quite")
+			say("successful with that.")
+			say("They've accumulated loads of gold ingots from their robberys")
+			say("and I, fortunately for us, know where they're hidden.")
+			say("")
+			say("What do you say? - You pay me a bit of an insurance")
+			say("and I'll grab a few of those ingots for you.")
+			wait()
+			say_title("Betrayer Balso:")
+			say("")
+			say("So can we make a deal?")
+			say("")
+			local decide = select("Pay 500.000 Yang Insurance","Pay 1.000.000 Yang Insurance","Pay 1.500.000 Yang Insurance","I need some time to think.")
+			if decide < 4 then
+				if pc.get_gold() < decide*500000 then
+					say_title("System:")
+					say("")
+					say("You don't have sufficient Yang for this action.")
+					say("")
+				else
+					pc.change_gold(-500000*decide)
+					pc.setqf("insurance",decide)
+					say_title("Betrayer Balso:")
+					say("")
+					say("Allright, thank you!")
+					say("I knew you'd have a sound mind for decisions like this!")
+					say("")
+					say("I'll go and grab some ingots tonight while they sleep.")
+					say("Come back here tomorrow and become a rich man!")
+					say("Wish me luck!")
+					say("")
+					say_reward("Talk to Balso in 24 hours.")
+					say("")
+					pc.setqf("wait_time",get_time()+24*60*60)
+					set_state(ingot_wait)
+				end
+			end
+		end
+	end
+	
+	state ingot_wait begin
+		when letter begin
+			if get_time() < pc.getqf("wait_time") then
+				send_letter("The Secret Stash")
+			else
+				send_letter("A new morning has risen")
+			end
+		end
+		
+		when button or info begin
+			if get_time() < pc.getqf("wait_time") then
+				say_title("The Secret Stash")
+				say("")
+				say("You've made a deal with the betrayer Balso to retrieve")
+				say("gold ingots from the secret stash from the Black Wind Gang.")
+				say("")
+				say("You'll need to hope for his success and check back tomorrow")
+				say("to find out if he was successful.")
+				say("")
+				say_reward("Wait for Balso to complete the operation.")
+				say("")
+			else
+				say_title("A new morning has risen")
+				say("")
+				say("It's a new morning!")
+				say("You should go to Balso and see if his operation last night")
+				say("was a success.")
+				say("")
+				say_reward("Ask Balso if his attempt was successful.")
+				say("")
+				set_state(get_ingots)
+			end
+		end
+	end
+	
+	state get_ingots begin
+		when letter begin
+			local v = find_npc_by_vnum(20020)
+			if v != 0 then
+				target.vid("__TARGET__", v, "Betrayer Balso")
+			end
+		end
+		
+		when __TARGET__.target.click or 20020.chat."Robbing the bad guys" begin
+			target.delete("__TARGET__")
+			say_title("Betrayer Balso:")
+			say("")
+			say("Look what I have here!")
+			say("")
+			say(""..pc.getqf("insurance").." shiny gold ingots!")
+			say("And they're all yours! I guess you owe me one now.")
+			say("Of course I grabbed some for myself so here, take them!")
+			say("")
+			say("What you're supposed to do with them?")
+			say("I'm sure some villagers pay a good price for these!")
+			say("You should ask around if anybods needs some.")
+			say("")
+			say_reward(""..pc.getqf("insurance").." Gold Ingots received.")
+			say_reward("You should ask around if somebody needs these.")
+			say("")
+			pc.give_item2(80008,pc.getqf("insurance"))
+			set_state(trade)
+		end
+	end
+	
+	state trade begin
+		when letter begin
+			local a = find_npc_by_vnum(20084)
+			local b = find_npc_by_vnum(20011)
+			local c = find_npc_by_vnum(20016)
+			local d = find_npc_by_vnum(9006)
+			local e = find_npc_by_vnum(20018)
+			if a != 0 and pc.getqf("20084") != 1 then
+				target.vid("__TARGET__", a, "Biologist Chaegirab")
+			end
+			if b != 0 and pc.getqf("20011") != 1 then
+				target.vid("__TARGET2__", b, "Uriel")
+			end
+			if c != 0 and pc.getqf("20016") != 1 then
+				target.vid("__TARGET3__", c, "Blacksmith")
+			end
+			if d != 0 and pc.getqf("9006") != 1 then
+				target.vid("__TARGET4__", d, "Old Woman")
+			end
+			if e != 0 and pc.getqf("20018") != 1 then
+				target.vid("__TARGET5__", e, "Baek-Go")
+			end
+		end
+		
+		when __TARGET__.target.click or 20084.chat."What's this shiny thing you have there?" begin
+			target.delete("__TARGET__")
+			say_title("Biologist Chaegirab:")
+			say("")
+			say("Oh? Is that solid gold that I see in your hands?")
+			say("Hm... you think about selling it? I could put it")
+			say("to good use!")
+			say("")
+			say("I pay you 600.000 for every single one of them!")
+			say("")
+			say_white("You should remember this offer good and keep on asking around.")
+			say("")
+			pc.setqf(""..npc.get_race().."",1)
+			if pc.getqf("20084") == 1 and pc.getqf("20011") == 1 and pc.getqf("20016") == 1 and pc.getqf("9006") == 1 and pc.getqf("20018") == 1 then
+				set_state(decision)
+			end
+		end
+		
+		when __TARGET2__.target.click or 20011.chat."What's this shiny thing you have there?" begin
+			target.delete("__TARGET2__")
+			say_title("Uriel")
+			say("")
+			say("Oh? Is that solid gold that I see in your hands?")
+			say("Hm... you think about selling it? I could put it")
+			say("to good use!")
+			say("")
+			say("I pay you 750.000 for the first one but in return I ask")
+			say("for 20% more discount for every other one you want to sell.")
+			say("")
+			say_white("You should remember this offer good and keep on asking around.")
+			say("")
+			pc.setqf(""..npc.get_race().."",1)
+			if pc.getqf("20084") == 1 and pc.getqf("20011") == 1 and pc.getqf("20016") == 1 and pc.getqf("9006") == 1 and pc.getqf("20018") == 1 then
+				set_state(decision)
+			end
+		end
+		
+		when __TARGET3__.target.click or 20016.chat."What's this shiny thing you have there?" begin
+			target.delete("__TARGET3__")
+			say_title("Blacksmith:")
+			say("")
+			say("Oh? Is that solid gold that I see in your hands?")
+			say("Hm... you think about selling it? I could put it")
+			say("to good use!")
+			say("")
+			say("I pay you 400.000 for the first one but in return I will")
+			say("add half of the previous price for every other one you want")
+			say("to sell too.")
+			say("")
+			say_white("You should remember this offer good and keep on asking around.")
+			say("")
+			pc.setqf(""..npc.get_race().."",1)
+			if pc.getqf("20084") == 1 and pc.getqf("20011") == 1 and pc.getqf("20016") == 1 and pc.getqf("9006") == 1 and pc.getqf("20018") == 1 then
+				set_state(decision)
+			end
+		end
+		
+		when __TARGET4__.target.click or 9006.chat."What's this shiny thing you have there?" begin
+			target.delete("__TARGET4__")
+			say_title("Old Woman:")
+			say("")
+			say("Oh? Is that solid gold that I see in your hands?")
+			say("Hm... you think about selling it? I could put it")
+			say("to good use!")
+			say("")
+			say("I pay you 550.000 for the first two but in return I will")
+			say("add half of the previous price for the last one if you want")
+			say("to sell them to me.")
+			say("")
+			say_white("You should remember this offer good and keep on asking around.")
+			say("")
+			pc.setqf(""..npc.get_race().."",1)
+			if pc.getqf("20084") == 1 and pc.getqf("20011") == 1 and pc.getqf("20016") == 1 and pc.getqf("9006") == 1 and pc.getqf("20018") == 1 then
+				set_state(decision)
+			end
+		end
+		
+		when __TARGET5__.target.click or 20018.chat."What's this shiny thing you have there?" begin
+			target.delete("__TARGET5__")
+			say_title("Baek-Go:")
+			say("")
+			say("Oh? Is that solid gold that I see in your hands?")
+			say("Hm... you think about selling it? I could put it")
+			say("to good use!")
+			say("")
+			say("I pay you 800.000 for the first one but in return I ask")
+			say("for half the price for every other one you want to sell.")
+			say("")
+			say_white("You should remember this offer good and keep on asking around.")
+			say("")
+			pc.setqf(""..npc.get_race().."",1)
+			if pc.getqf("20084") == 1 and pc.getqf("20011") == 1 and pc.getqf("20016") == 1 and pc.getqf("9006") == 1 and pc.getqf("20018") == 1 then
+				set_state(decision)
+			end
+		end
+	end
+	
+	state decision begin
+		when letter begin
+			send_letter("Time to make a decission")
+		end
+		
+		when button or info begin
+			say_title("The Gold Ingots")
+			say("")
+			say("You've asked around and found a bunch of people that")
+			say("seem to be interested in buying the gold ingots that")
+			say("you've received from the betrayer Balso.")
+			say("")
+			say("They've all given different offers, it's time to decide now.")
+			say("Are you ready to decide your sales?")
+			say_reward("WARNING! If you decide to sell you won't be able to return")
+			say("")
+			local decision = select("Yes, I am.", "No, I need more time.")
+			if decision == 1 then
+				local names = {"Biologist Chaegirab","Uriel","Blacksmith","Old Woman","Baek-Go"}
+				local offers = {
+					{600000,1200000,1800000},
+					{750000,1350000,1830000},
+					{400000,1000000,1900000},
+					{550000,1100000,1925000},
+					{800000,1200000,1600000},
+				}
+				local i = 1
+				local sale
+				while i < 6 and pc.getqf("insurance") > 0 do
+					local ingots = pc.getqf("insurance")
+					if i == 5 then
+						say_title("The Decision")
+						say("")
+						say("You decided to sell your remaining ingots to Baek-Go.")
+						say("")
+						pc.change_gold(offers[5][pc.getqf("insurance")])
+						pc.remove_item(80008,pc.getqf("insurance"))
+						pc.setqf("insurance",0)
+					else
+						say_title("The Decision")
+						say("")
+						say("You currently have "..ingots.." gold ingots left.")
+						say("")
+						say("How many do you want to sell to "..names[i].."?")
+						say("")
+						if ingot == 3 then
+							sale = select("Sell 0 gold ingots.","Sell 1 gold ingot.","Sell 2 gold ingots.","Sell 3 gold ingots.")
+						elseif ingot == 2 then
+							sale = select("Sell 0 gold ingots.","Sell 1 gold ingot.","Sell 2 gold ingots.")
+						else
+							sale = select("Sell 0 gold ingots.","Sell 1 gold ingot.")
+						end
+						if sale-1 == 1 then
+							pc.change_gold(offers[i][1])
+							pc.remove_item(80008,1)
+							pc.setqf("insurance",pc.getqf("insurance")-1)
+						elseif sale-1 == 2 then
+							pc.change_gold(offers[i][2])
+							pc.remove_item(80008,2)
+							pc.setqf("insurance",pc.getqf("insurance")-2)
+						elseif sale-1 == 3 then
+							pc.change_gold(offers[i][3])
+							pc.remove_item(80008,3)
+							pc.setqf("insurance",pc.getqf("insurance")-3)
+						end
+						i = i+1
+					end
+				end
+				set_state(__COMPLETE__)
+			end
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+		

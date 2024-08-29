@@ -1,0 +1,109 @@
+-- Scroll of Return -> Bear gall
+-- Spirit Stone of Haste+4 -> Recommendation from Storage Guard
+-- Heroic Symbol -> Heroic Symbol
+quest stash begin
+	state start begin --Status when nothing is open
+		when warehouse_keeper.chat."GM::Yang SHOP" with pc.is_gm() begin
+			setskin(NOWINDOW)
+			npc.open_shop()
+		end
+		when warehouse_keeper.chat."Do you want to use the Warehouse?"  begin
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say_title("Storekeeper:")
+			say("")
+			say("Do you want to use the Warehouse?")
+			say("You have to pay Yang to use the Warehouse..")
+			say("")
+			say("I am in a good mood today - so you can use it for 500 Yang.")
+			say("")
+			say("So - come on, that's cheap, huh?")
+			say("")
+			wait()
+
+			if pc.gold < 500 then
+				say_title("Storekeeper:")
+				say("")
+				say("What? Not enough Yang?")
+				say("")			
+				say("Then come back later when you have enough.")
+				say("")
+			else
+				local s = select("Pay", "Don't pay")
+				if s == 1 then
+					----"123456789012345678901234567890123456789012345678901234567890"|
+					--stash.setlevel(1)
+					pc.changegold(-500)
+					game.set_safebox_level(1)
+					set_state(use)
+					say_title("Storekeeper:")
+					say("")
+					say("Your Warehouse is open now. If you want to use it, just")
+					say("talk to me. The password for your storage is:")
+					say_reward("000000")
+					say("You should change it for security reasons!")
+					say("")
+					say("You may think that 15 boxes aren't enough. But who")
+					say("knows, maybe I'll give you more space when we get to")
+					say("know each other better, hehe!")
+					say("")
+				else
+					say_title("Storekeeper:")
+					say("")
+					say("Oh well even the Mayor needn't do it if he")
+					say("doesn't want to...")
+					say("")
+				end
+			end
+		end
+	end
+			
+	state use begin
+		when warehouse_keeper.chat."Open Warehouse" begin
+			if pc.getqf("open_count") < 3 then
+				say_title("Storekeeper")
+				say("")
+				say("Welcome, welcome!")
+				say("You know what Gold Bars are for?")
+				say("")
+				say("If you carry Yang around")
+				say("that's like saying:")
+				say("Please kill me!")
+				say("")
+				say("That's why I exchange the Yang")
+				say("into Gold Bars I can store for you.")
+				say("")
+				wait()
+				say_title("Storekeeper:")
+				say("")
+				say("Hummmm..")
+				say("Okay, I ask for more than you'd usually")
+				say("pay for a Gold Bar. But it's still fair, isn't")
+				say("it? There is no reason to feel betrayed.")
+				say("As you know it's dangerous")
+				say("outside.")
+				say("")
+				pc.setqf("open_count", pc.getqf("open_count") + 1)
+				wait()
+			end
+			setskin(NOWINDOW)
+			game.open_safebox()
+		end
+			
+		when warehouse_keeper.chat."Open Itemshop Storage" begin
+			setskin(NOWINDOW)
+			game.open_mall()
+		end
+		
+		when warehouse_keeper.chat."Buying of Silver or Gold Bars" begin
+			npc.open_shop()
+			say_title("Storekeeper:")
+			say("")
+			say("Humm..")
+			say("The mines are all drained out.")
+			say("It's hard to find Gold or Silver.")
+			say("As long as no new vein is found,")
+			say("there will be no new Gold- or Silver bars.")
+			say("")
+		end
+	end
+end

@@ -1,0 +1,26 @@
+quest labor_day begin
+    state start begin
+    	when login with game.get_event_flag("labor_day") == 1 begin
+		q.set_icon("scroll_open_blue.tga")
+		send_letter("*Labor Day")
+	end
+	when button or info begin
+		----"123456789012345678901234567890123456789012345678901234567890"|
+		addimage(20, 12, "laborday.tga")
+		say("")
+		say("")
+		say("")
+		say("")
+
+		say("A special event will run only today!")
+		say("")
+		say("Every 30 minutes, the current rankings in the categories of")
+		say("Fishing, Metin farming and Mining will be announced.")
+		say("")
+		say_reward("The top ten ranked in each category will obtain a Samurai")
+		say_reward("or Umbrella Hat with 1 month duration and 10% Strength")
+		say_reward("against Monster. Good luck!")
+		say("")
+	end    		
+    end
+end

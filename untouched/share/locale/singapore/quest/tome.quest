@@ -1,0 +1,243 @@
+quest tome begin
+	state start begin
+		when 71001.use begin
+			if pc.getqf("no_delay") != 1 then
+				pc.setqf("no_delay",1)
+				pc.remove_item(71001,1)
+			else
+				syschat("Exorcism Scroll is already in use.")
+			end
+		end
+		
+		when 90108.use begin
+			if pc.getqf("no_delay") != 1 then
+				pc.setqf("no_delay",1)
+				pc.remove_item(90108,1)
+			else
+				syschat("Exorcism Scroll is already in use.")
+			end
+		end
+	
+		when 50300.use begin
+			local q = game.get_event_flag("book_set_delay")
+			local p = game.get_event_flag("book_set_chance")
+			bookskill = item.get_socket(0)
+			if pc.getqf("last_read_book_"..tostring(bookskill)) > get_time() then
+				if pc.getqf("no_delay") == 1 then
+					pc.setqf("last_read_book_"..tostring(bookskill),0)
+				else
+					syschat("You can't read this book yet.")
+					return
+				end
+			end
+			if pc.get_skill_level(bookskill) > 19 and pc.get_skill_level(bookskill) < 30 then
+				local n = number(1,100)
+				if (n <= p) then
+					local num
+					if pc.getf("traning_master_skill",tostring(bookskill)..".read_count") == nil then
+						num = 0
+					else
+						num = pc.getf("traning_master_skill",tostring(bookskill)..".read_count")
+					end
+					local get_qp = (pc.get_skill_level(bookskill)-19)
+					pc.setf("traning_master_skill",tostring(bookskill)..".read_count",pc.getf("traning_master_skill",tostring(bookskill)..".read_count")+1)
+					syschat("You read the book and learned the technique. The training was successful!")
+					if pc.getf("traning_master_skill",tostring(bookskill..".read_count")) > get_qp-1 then
+						pc.set_skill_level(bookskill,pc.get_skill_level(bookskill)+1)
+						pc.setf("traning_master_skill",tostring(bookskill..".read_count"),0)
+						syschat("You have improved your Skill Level!")
+					else
+						syschat("You need "..get_qp-pc.getf("traning_master_skill",tostring(bookskill..".read_count")).." more to raise the Skill Level.")
+					end
+					pc.setqf("no_delay",0)
+					item.remove()
+				else
+					syschat("You failed to understand the book. The training failed.")
+					pc.setqf("no_delay",0)
+					item.remove()
+				end
+				if is_test_server() then
+					pc.setqf("last_read_book_"..tostring(bookskill),get_time()+600)
+				else
+					pc.setqf("last_read_book_"..tostring(bookskill),get_time()+q*60*60) -- flag in hours
+				end
+			else
+				syschat("You cannot train with this book.")
+			end
+		end
+		
+		when 50401.use or 50402.use or 50403.use or 50404.use or 50405.use or 50406.use
+		 or 50416.use or 50417.use or 50418.use or 50419.use or 50420.use or 50421.use 
+		 or 50431.use or 50432.use or 50433.use or 50434.use or 50435.use or 50436.use 
+		 or 50446.use or 50447.use or 50448.use or 50449.use or 50450.use or 50451.use 
+		 or 50461.use or 50462.use or 50463.use or 50464.use or 50465.use or 50466.use 
+		 or 50476.use or 50477.use or 50478.use or 50479.use or 50480.use or 50481.use 
+		 or 50491.use or 50492.use or 50493.use or 50494.use or 50495.use or 50496.use 
+		 or 50506.use or 50507.use or 50508.use or 50509.use or 50510.use or 50511.use begin
+			local q = game.get_event_flag("book_set_delay")
+			local p = game.get_event_flag("book_set_chance")+20
+			tomeskill = item.get_value(0)
+			if pc.getqf("last_read_tome_"..tostring(tomeskill)) > get_time() then
+				if pc.getqf("no_delay") == 1 then
+					pc.setqf("last_read_tome_"..tostring(tomeskill),0)
+				else
+					syschat("You can't read this book yet.")
+					return
+				end
+			end
+			if pc.get_skill_level(tomeskill) > 19 and pc.get_skill_level(tomeskill) < 30 then
+				local n = number(1,100)
+				if (n <= p) then
+					local num
+					if pc.getf("traning_master_skill",tostring(tomeskill)..".read_count") == nil then
+						num = 0
+					else
+						num = pc.getf("traning_master_skill",tostring(tomeskill)..".read_count")
+					end
+					local get_qp = (pc.get_skill_level(tomeskill)-19)
+					pc.setf("traning_master_skill",tostring(tomeskill)..".read_count",pc.getf("traning_master_skill",tostring(tomeskill)..".read_count")+1)
+					syschat("You read the tome and learned the technique. The training was successful!")
+					if pc.getf("traning_master_skill",tostring(tomeskill..".read_count")) > get_qp-1 then
+						pc.set_skill_level(tomeskill,pc.get_skill_level(tomeskill)+1)
+						pc.setf("traning_master_skill",tostring(tomeskill..".read_count"),0)
+						syschat("You have improved your Skill Level!")
+					else
+						syschat("You need "..get_qp-pc.getf("traning_master_skill",tostring(tomeskill..".read_count")).." more to raise the Skill Level.")
+					end
+					pc.setqf("no_delay",0)
+					item.remove()
+				else
+					syschat("You failed to understand the tome. The training failed.")
+					pc.setqf("no_delay",0)
+					item.remove()
+				end
+				if is_test_server() then
+					pc.setqf("last_read_tome_"..tostring(tomeskill),get_time()+600)
+				else
+					pc.setqf("last_read_tome_"..tostring(tomeskill),get_time()+q*60*60) -- flag in hours
+				end
+			else
+				syschat("You cannot train with this tome.")
+			end
+		end
+		
+		when 69001.use or
+		69002.use or
+		69003.use or
+		69004.use or
+		69005.use or
+		69006.use or
+		69007.use or
+		69008.use or
+		69009.use or
+		69010.use or
+		69011.use or
+		69012.use or
+		69013.use or
+		69014.use or
+		69015.use or
+		69016.use or
+		69017.use or
+		69018.use or
+		69019.use or
+		69020.use or
+		69021.use or
+		69022.use or
+		69023.use or
+		69024.use or
+		69025.use or
+		69026.use or
+		69027.use or
+		69028.use or
+		69029.use or
+		69030.use or
+		69031.use or
+		69032.use or
+		69033.use or
+		69034.use or
+		69035.use or
+		69036.use or
+		69037.use or
+		69038.use or
+		69039.use or
+		69040.use or 
+		69041.use or
+		69042.use or
+		69043.use or
+		69044.use begin
+			tomeskill = item.get_value(0)
+			local q = game.get_event_flag("tome_set_delay")
+			local p = game.get_event_flag("tome_set_chance")
+			if pc.getqf("last_read_s_tome_"..tostring(tomeskill)) > get_time() then
+				if pc.getqf("no_delay") == 1 then
+					pc.setqf("last_read_s_tome_"..tostring(tomeskill),0)
+				else
+					syschat("You can't read this tome yet.")
+					return
+				end
+			end
+			if pc.get_skill_level(tomeskill) > 19 and pc.get_skill_level(tomeskill) < 30 then
+				local n = number(1,100)
+				if (n > p) then
+					local num
+					local i = number(1,3)
+					if pc.getf("traning_master_skill",tostring(tomeskill)..".read_count") == nil then
+						num = 0
+					else
+						num = pc.getf("traning_master_skill",tostring(tomeskill)..".read_count")
+					end
+					local get_qp = (pc.get_skill_level(tomeskill)-19)
+					pc.setf("traning_master_skill",tostring(tomeskill)..".read_count",pc.getf("traning_master_skill",tostring(tomeskill)..".read_count")+i)
+					syschat("You read the book and learned the secret technique. The training was successful!")
+					if pc.getf("traning_master_skill",tostring(tomeskill..".read_count")) > get_qp-1 then
+						pc.set_skill_level(tomeskill,pc.get_skill_level(tomeskill)+1)
+						pc.setf("traning_master_skill",tostring(tomeskill..".read_count"),0)
+						syschat("You have improved your Skill Level!")
+					else
+						syschat("You have received "..i.." Tech Points - You need "..get_qp-pc.getf("traning_master_skill",tostring(tomeskill..".read_count")).." more to raise the Skill Level.")
+					end
+					pc.setqf("no_delay",0)
+					item.remove()
+				else
+					syschat("You failed to understand the secret technique. The training failed.")
+					pc.setqf("no_delay",0)
+					item.remove()
+				end
+				if is_test_server() then
+					pc.setqf("last_read_s_tome_"..tostring(tomeskill),get_time()+30)
+				else
+					pc.setqf("last_read_s_tome_"..tostring(tomeskill),get_time()+q*60*60)
+				end
+			else
+				syschat("You cannot train with this book.")
+			end
+		end
+		
+		when 90324.use or 90325.use begin
+			bookskill = item.get_value(0)
+			if pc.getqf("last_book_read_"..tostring(bookskill)) > get_time() then
+				if pc.getqf("no_delay") == 1 then
+					pc.setqf("last_book_read_"..tostring(bookskill),0)
+				else	
+					syschat("You can't read this book yet.")
+				end
+			end
+			if pc.get_skill_level(bookskill) >= 10 then
+				syschat("You can't improve this skill any further")
+				return
+			end	
+			local n = number(1,100)
+			if (n <= 25) then
+				pc.set_skill_level(bookskill,pc.get_skill_level(bookskill)+1)
+				pc.setqf("last_book_read_"..tostring(bookskill),get_time()+60*60*24*2)
+				pc.setqf("no_delay",0)
+				syschat("You have improved your Skill Level, it has "..pc.get_skill_level(bookskill).." points now")
+				item.remove()
+			else
+				syschat("You failed to understand the secret technique. The training failed.")
+				pc.setqf("no_delay",0)
+				item.remove()
+			end
+		end		
+	end
+end

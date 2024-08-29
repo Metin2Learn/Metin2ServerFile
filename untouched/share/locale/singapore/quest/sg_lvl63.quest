@@ -1,0 +1,244 @@
+----------------------------------------------------
+-- Metin2 SG
+-- Level 63 Quest 
+----------------------------------------------------
+
+quest sg_lvl63 begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >=63 begin
+			 set_state( information )
+		end
+	end
+
+	state information begin
+		when letter begin
+					
+			local v = find_npc_by_vnum(20355)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "Go to the Captain")
+			end
+		end
+
+				
+		when __TARGET__.target.click or	20355.chat."The ambush" begin
+			target.delete("__TARGET__")
+			say_title("Captain:")
+			say("")
+			----"111111222222333333444444555555666666777777888888999999000000"
+			say("A messenger has just brought us sad news from Dragon Valley.")
+			say("")
+			local e = pc.get_empire()
+			if e == 1 then
+				say("A group of "..locale.empire_names[1].." travellers was ambushed")
+				s_name, s_pid, s_date, s_money = mgmt.monarch_state(1)
+			elseif e ==2 then
+				say("A group of "..locale.empire_names[2].." travellers was ambushed")
+				s_name, s_pid, s_date, s_money = mgmt.monarch_state(2)
+			else
+				say("A group of "..locale.empire_names[3].." travellers was ambushed")
+				s_name, s_pid, s_date, s_money = mgmt.monarch_state(3)
+			end
+			say("this morning by soldiers from the enemy army.")
+			say("")
+			say("I have been told that none of them has")
+			say("survived the battle.")
+			say("")
+			wait()
+			say_title("Captain :")
+			say("")
+			say("We can not let this outrage go unpunished.")
+			say("")
+			say("King "..s_name.." has ordered us to act in return.")
+			say("")
+			----"111111222222333333444444555555666666777777888888999999000000"
+			say("It is again time that you prove yourself worthy of us!")
+			say("Find the offenders and slay them into pieces!!")
+			say("That will teach them not to mistreat our people!")
+			say("")
+			local s=select("Accept","Refuse")
+			if 2==s then
+				say_title("System:")
+				say("")
+				say("Do you really want to cancel this quest?")
+				say("")
+				local a=select("Yes","No")
+				if  2==a then
+					say_title("Captain:")
+					say("")
+					say("I'm glad you consider your decision.")
+					say("")
+					return
+				end
+				say_title("Captain:")
+				say("")
+				say("You are a disgrace to us.")
+				say("Leave this instant!")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title("Captain:")
+			say("")
+			say("I knew you were going to accept!")
+			say("They will learn if you defeat their soldiers in battle!")
+			say("Good luck!")	
+			say("")
+			say_reward("Kill 20 players from another kingdom.")
+			say("")
+			pc.setqf("kill_count", 0)
+			q.set_counter("Remaining enemies",0)
+			set_state(goto_killenemy)
+
+		end
+	end
+	state goto_killenemy begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Slay enemy soldiers")
+			q.set_title("Kill 20 enemy players.")
+			q.start()
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."Slay 20 enemies"..locale.NORMAL_COLOR)
+			say("")			
+			----"111111222222333333444444555555666666777777888888999999000000"
+			say("Your mission is to defeat 20 soldiers from any")
+			say("enemy kingdom.")
+			say("")
+			local count=pc.getqf("kill_count")+1
+			if count == 2  then
+				say_reward("Currently".. " "..pc.getqf("kill_count").." soldier has been defeated.")
+			else
+				say_reward("Currently".. " "..pc.getqf("kill_count").." soldiers have been defeated.")
+
+			end
+			say("")
+		end
+		when 20355.chat."Revenge our countrymen" begin
+			say_title("Captain:")
+			say("")
+			say("Have you killed 20 soldiers already?")
+			say("")
+			local s=select("Not yet","Give up")
+			if 2==s then
+				say_title("System:")
+				say("")
+				say("Would you like to give up the quest?")
+				say("")
+				local a=select("Yes","No")
+				if  2==a then
+					say_title("Captain:")
+					say("")
+					say("Our kingdom will not be respected anymore if")
+					say("we let this pass.")
+					say("")
+					return
+				end
+				say_title("Captain:")
+				say("")
+				say("It seems that you are not as strong as we thought.")
+				say("Now get out of my sight.")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title("Captain:")
+			say("")
+			say("You are a brave fighter.")
+			say("I believe you can take care of those soldiers.")
+			say("")
+		end
+	
+		when kill begin
+			if npc.is_pc() and npc.empire != pc.empire then
+				--local pclv = pc.get_level()
+				--local vid = npc.get_vid()
+				--local old_pc = pc.select(vid)
+				--if old_pc != 0 then
+				--	local npclv = pc.get_level()
+				--	pc.select(old_pc)
+				--end
+				--if pclv-npclv < 10 then
+				--	local count=pc.getqf("kill_count")+1
+				--end
+				--if count<=20  then	
+				--	pc.setqf("kill_count",count)
+				--	q.set_counter("Remaining: ",20-count)
+				--	if count >= 20 then
+				--		set_state(go_back_to_boss)
+				--	end
+				--end	
+
+				local count=pc.getqf("kill_count")+1
+
+				if count<20  then	
+					pc.setqf("kill_count",count)
+					q.set_counter("Remaining: ",20-count)
+				else
+					set_state(go_back_to_boss)
+				end
+			 end
+		end
+	end
+
+	state go_back_to_boss begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Report to the Captain")
+			q.set_title("You have completed the assignment.")
+			q.start()
+			local v = find_npc_by_vnum(20355)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "Go to the captain")
+			end
+
+		end
+
+		when info or button begin
+			say_title("Killed all enemy soldiers")
+			say("")
+			say("Go to the Captain and report to him about your success!")
+			say("")
+		end
+		
+		when __TARGET__.target.click or	20355.chat."Report your victory" begin
+			target.delete("__TARGET__")
+			say_title("Captain:")
+			say("")
+			say("This was surely no easy task, but I did well by")
+			say("trusting your fighting skills.")
+			say("")
+			say("You are turning into one of our most valuable")
+			say("soldiers. I will make sure our King hears")
+			say("about your accomplishments.")
+
+			say("")
+			
+			say_reward("Gained 500.000 Yang")
+			pc.change_money(500000)
+			
+			say_reward("Gained 9.000.000 EXP points")
+			pc.give_exp2(9000000)
+			set_quest_state("levelup","run")
+			say("")
+			pc.setqf("kill_count", 0)
+			
+			say_item("You received Enhance Change Scroll",71084,"")
+           		pc.give_item2(71084)
+			
+			set_state(COMPLETE)
+			clear_letter()
+		end
+
+	end
+	state __GIVEUP__ begin
+	end
+	state COMPLETE begin
+		when enter begin
+			q.done()
+		end
+	end
+end

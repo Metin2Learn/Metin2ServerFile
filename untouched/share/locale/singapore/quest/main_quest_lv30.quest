@@ -1,0 +1,226 @@
+---------------------------------
+-- Main Quest LV30
+-- Find Uriel the Wise
+---------------------------------
+quest main_quest_lv30 begin
+        state start begin
+        end
+        state run begin
+                when login or levelup or enter begin
+                        if pc.get_level() >= 30 then
+                                setstate( gotoeUriel )
+                        end
+                end
+        end
+        state gotoeUriel begin
+                when letter begin
+                        local v=find_npc_by_vnum(20011)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find Uriel the Wise")
+                        end
+                end
+                when letter begin
+                        send_letter( "The secret of the Metin Stones")
+                end
+                when info or  button begin
+                        say_title("The secret of the Metin Stones")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Uriel finally got some information about the secrets of the")
+                        say("Metin Stones. Go and find Uriel, the wise.")
+                        say("")
+                        say_reward("When you have finished your assignment you will get some")
+                        say_reward("Yang and Experience points.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        say_title("Uriel:")
+                        say("")
+			 ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("The Captain has already sent you to me once. You seem to be")
+                        say("very talented. I need to ask you for a favour.")
+                        say("")
+                        say("You are aware of the Metin Stones as you have destroyed some")
+                        say("already. The Metin Stones came from the skies; they possess")
+                        say("evil energy, spread plagues and the animals become wild. We")
+                        say("don't know how they came to our world or what they contain.")
+                        say("")
+                        say("That makes the investigation difficult.")
+                        say("")
+                        say("But I managed to locate the key to their secrets.")
+                        say("")
+                        wait()
+			say_title("Uriel:")
+			say("")
+			 ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("There is a memorial stone from an ancient kingdom deep inside")
+                        say("a cave known as the Sujin Dungeon. I think the information")
+                        say("engraved on this stone is key to learn the secret of the")
+                        say("Metin Stones.")
+                        say("")
+                        say("If you bring me the information I might be able to find the")
+                        say("secret of the Metin Stones. Please bring me details about")
+                        say("this plaque in the Sujin Dungeon!")
+                        say("")
+                        setstate( clickstone )
+                        q.done()
+                end
+        end
+        state clickstone begin
+                when letter begin
+                        local v=find_npc_by_vnum(20352)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Sujin Dungeon Plaque")
+                        end
+                end
+                when letter begin
+                        send_letter( "The secret of the Metin Stones")
+                end
+                when info or  button begin
+                        say_title("The secret of the Metin Stones")
+                        say("")
+                        say("Find the Hasun memorial; it's somewhere deep inside")
+                        say("the Sujin Dungeon.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        say_title("The secret of the Metin Stones")
+                        say("")
+                        say("You found the plaque! Return to Uriel the wise.")
+                        say("")
+                        setstate(gotoeUriel2)
+                end
+        end
+        state gotoeUriel2 begin
+                when letter begin
+                        local v=find_npc_by_vnum(20011)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find Uriel the Wise.")
+                        end
+                end
+                when letter begin
+                        send_letter("The secret of the Metin Stones")
+                end
+                when info or button begin
+                        say_title("The secret of the Metin Stones")
+                        say("")
+                        say("You found the plaque in the Sujin Dungeon. Now talk")
+                        say("to Uriel the Wise about your findings.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                         ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("Uriel:")
+                        say("")
+                        say("Oh! So this is the information from the memorial.")
+                        say("")
+                        say("Oh no, there are letters I don't know! I can't decode those")
+                        say("letters. This is an opportunity to make an historical")
+                        say("discovery. That's unfortunate!")
+                        say("")
+                        say("Ah, I think I got an idea! Do you know the esoteric tower in")
+                        say("Dragon Valley? It is a mysterious ancient building. I think")
+                        say("that only there the encrypted information can be decoded.")
+                        say("")
+                       wait()
+                        say_title("Uriel:")
+                        say("")
+                        say("These are ancient letters that's why we need to search for")
+                        say("help in an ancient building.")
+                        say("")
+                        say("Get the necessary information near the esoteric tower.")
+                        say("")
+                        say("Then I might be able to find the secret of the Metin Stone.")
+                        say("")
+
+                        set_state(clickplace)
+                end
+        end
+        state clickplace begin
+                when letter begin
+                        local v=find_npc_by_vnum(20353)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Dragon Valley Tablet")
+                        end
+                end
+                when letter begin
+                   send_letter( "The secret of the Metin Stones")
+                end
+
+		when info or  button begin
+			say_title("The secret of the Metin Stones")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("Uriel, the scholar needs additional information. You can")
+			say("learn it in the Dragon Valley. Go to the Dragon Valley")
+			say("and find the Seul Rong memorial.")
+			say("")
+		end
+
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+			say_title("The secret of the Metin Stones")
+			say("")
+                        say("You found the Memorial! Go back to Uriel.")
+                        say("")
+                        setstate(gotoeUriel3)
+                        q.done()
+                end
+        end
+        state gotoeUriel3 begin
+                when letter begin
+                        local v=find_npc_by_vnum(20011)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find Uriel the Wise.")
+                        end
+                end
+                when letter begin
+                        send_letter( "The secret of the Metin Stones")
+                end
+                when info or  button begin
+                        say_title("The secret of the Metin Stones")
+                        say("")
+                        say("You found the Seul Rong Memorial in Dragon Valley.")
+                        say("Talk to Uriel the Wise.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+
+                        target.delete("__TARGET__")
+                         ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("Uriel:")
+                        say("")
+                        say("Oh! Thanks to you I will be able to find the secret of the")
+                        say("Metin Stones. My investigations might bear fruits faster")
+                        say("than I thought. Thank you, I thank you! Here is a proof of")
+                        say("my gratitude. Please take it.")
+                        say("")
+                        say_title("Reward:")
+                        say("")
+                        say_reward("Experience points: 400.000" )
+                        say_reward("Yang: 100.000")
+                        say_reward("Item: Green Bonus Changer")
+                        say("")
+                        pc.give_exp2( 380000 )
+                        pc.change_money( 100000 )
+                        pc.give_item2(71151)
+                        clear_letter()
+                        set_state(__COMPLETE__)
+                        set_quest_state("main_quest_lv32","run")
+                        q.done()
+                end
+        end
+        state __COMPLETE__ begin
+ 		when enter begin
+ 			q.done()
+ 		end
+        end
+end

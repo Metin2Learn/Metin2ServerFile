@@ -1,0 +1,74 @@
+quest horse_guard begin
+        state start begin
+                when 20349.chat."Horse riding tips" begin
+                        local s=number(1, 7)
+                        if 1>=s then -- 14.29% (1/7)
+                        	say_title("Stable Boy:")
+                        	say("")
+                                ----"123456789012345678901234567890123456789012345678901234567890"|
+                                say("To start a horse mission, you need a Horse Medal. You can")
+                                say("get one in the Ape Dungeons.")
+                                say("")
+                        elseif 2>=s then -- 14.29% (1/7)
+                        	say_title("Stable Boy:")
+                        	say("")
+                                say("Horses have three growth stages, novice, armed and military.")
+                                say("To approach the next stage, you need to fullfill a quest.")
+                                say("")
+                        elseif 3>=s then -- 14.29% (1/7)
+                        	say_title("Stable Boy:")
+                        	say("")
+                                say("Horses need different kind of food when they reach a new")
+                                say("growth stage. Novice horses eat Hay, Armed Horses eat")
+                                say("Carrots and Military horses only eat Red Ginseng.")
+                                say("")
+				----"123456789012345678901234567890123456789012345678901234567890"|
+                                say("As you can imagine, they are more picky")
+                                say("than us humans.")
+                                say("")
+                        elseif 4>=s then -- 14.29% (1/7)
+                        	say_title("Stable Boy:")
+                        	say("")
+                                say("If the horse is healthy, its signed in green, if it´s yellow")
+                                say("your horse is hungry, and red points out your horse is")
+                                say("starving to death!")
+                                say("")
+                                say("You must feed it to come from the yellow or red area back")
+                                say("to the Green. It is a serious affair if your horse dies.")
+                                say("")
+                        elseif 5>=s then -- 14.29% (1/7)
+				----"123456789012345678901234567890123456789012345678901234567890"|
+                        	say_title("Stable Boy:")
+                        	say("")
+                                say("While you ride a horse, his exhaustion increases and his")
+				say("health sinks. You can ride no horse without health.")
+				say("")
+				say("Therefore, you must let it rest.")
+                                say("")
+                        elseif 6>=s then -- 14.29% (1/7)
+                        	say_title("Stable Boy:")
+                        	say("")
+                                say("There are rumours that a dead horse can be revived with")
+                                say("special herbs. But this herb is guarded by monkeys and it")
+                                say("seems to be difficult to get it.")
+                                say("")
+				say("I heard if you are captured by the monkeys, they will")
+				say("curse you and transform into a monkey.")
+                                say("")
+                        elseif 7>=s then -- 14.29% (1/7)
+                        	say_title("Stable Boy:")
+                        	say("")
+                                say("There are different riding skills, and you can improve")
+				say("your horse's level so it becomes stronger.")
+				say("")
+                                say("But only if you have a Horse Sword you can use them.")
+                                say("")
+                        end
+                end
+        end
+        state __COMPLETE__ begin
+                when enter begin
+                        q.done()
+                end
+        end
+end

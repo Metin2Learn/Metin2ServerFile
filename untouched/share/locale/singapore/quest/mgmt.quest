@@ -1,0 +1,81 @@
+quest system_management begin
+	state start begin
+		when 20358.chat."Kingdom status" with pc.is_gm() begin
+			local s_name, s_pid, s_date, s_money = mgmt.monarch_state(1)
+			local c_name, c_pid, c_date, c_money = mgmt.monarch_state(2)
+			local j_name, j_pid, j_date, j_money = mgmt.monarch_state(3)
+
+			say("Kingdom status")
+			say("")
+
+			say("Shinsoo Kingdom")
+			say(string.format("   Emperor: %s(%d)   Election Date: %s", s_name, s_pid, s_date))
+			say(              "   Vault: "..s_money)
+			say("")
+
+			say("Chunjo Kingdom")
+			say(string.format("    Emperor: %s(%d)    Election Date: %s", c_name, c_pid, c_date))
+			say(              "   Vault: "..c_money)
+			say("")
+
+			say("Jinno Kingdom")
+			say(string.format("    Emperor: %s(%d)   Election Date: %s", j_name, j_pid, j_date))
+			say(              "   Vault: "..j_money)
+			say("")
+		end
+
+		when 20358.chat."Change Emperor" with pc.is_gm() begin
+			say("Select the kingdom")
+			say("")
+
+			local s = select(locale.empire_names[1], locale.empire_names[2], locale.empire_names[3], "Cancel")
+
+			if s != 4 then
+				say("Enter new emperor's PID")
+
+				local pid = input()
+
+				say( pid.." has been entered.")
+				say("is   correct? ")
+				say("")
+
+				local q = select("Yes", "No")
+
+				if q == 1 then
+					local n
+					if s == 1 then
+						n = locale.empire_names[1]
+					elseif s == 2 then
+						n = locale.empire_names[2]
+					elseif s == 3 then
+						n = locale.empire_names[3]
+					end
+
+					say(n.." Kingdom's emperor changes into "..pid..".")
+					say("Do you want to proceed?")
+					say("")
+
+					q = select("Yes", "No")
+
+					if q == 1 then
+						say("The emperor has been replaced.")
+						say("")
+
+						mgmt.monarch_change_lord(s, pid)
+					end
+				end
+			end
+		end
+
+		--[[when 20358.chat."Open Arena" with pc.is_gm() begin
+			say("Select the kingdom.")
+			say("")
+
+			local s = select("Pandemonia Kingdom", "Asmodia Kingdom", "Elgoria Kingdom", "Cancel")
+			if 4 == s then
+				return
+			end
+			ba.start(s)
+		end--]]
+	end
+end

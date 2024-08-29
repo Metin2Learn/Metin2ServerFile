@@ -1,0 +1,813 @@
+quest rice_cake_tiger begin
+        state start begin
+                when 20008.chat."Today it's the full moon-day" with pc.get_level()>=15 and game.get_event_flag("full_moon")>0  begin
+                        say_pc_name()
+                        say("Why are you so nervous, Octavio?")
+                        say("")
+                        wait()
+                        say_title("Octavio:")
+                        say("")
+                        say("Oh! You are not here to")
+                        say("deliver a rice cake?")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("What a rice cake...")
+                        say("From far away I could see that you")
+                        say("looked nervous. That's why I decided")
+                        say("to talk with you")
+                        say("")
+                        wait()
+                        say_title("Octavio:")
+                        say("")
+                        say("Ahhh! I thought you were the one")
+                        say("that should come here......to deliver")
+                        say("the rice cake, for the full moon-day..(sigh)...")
+                        say("I have no idea why Yu-Rang is so late...")
+                        say("It's probably a week ago that I have")
+                        say("ordered the rice cake by Yu-Rang.")
+                        say("I have not heard anything from her or from")
+                        say("the rice cake...")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("Oh! You still haven't got your rice cake.")
+                        say("Hmm...It wouldn't be nice to miss the high season.")
+                        say("You must be very worried...")
+                        say("")
+                        wait()
+                        say_title("Octavio:")
+                        say("")
+                        say("Hmm...If you have spare time,")
+                        say("you could do me a favour. Like you see")
+                        say("I can't get further...That's why I ask you")
+                        say("to help me...What do you think?")
+                        say("Do you want to help me?")
+                        say("")
+                        local s=select(
+                                "I will help you.",
+                                "I'm sorry, I got some other things to do.")
+                        if 1==s then
+                                say_title("Octavio:")
+                                say("")
+                                say("Oh!! You are very friendly. It's really not")
+                                say("difficult, I just want that you go to the next")
+                                say("village and ask.....Why Yu-Rang's delivery")
+                                say("is so late. She might be somewhere")
+                                say("in the village...You need to help me,")
+                                say("else I will be ruined...")
+                                say("")
+                                set_state(find)
+                                return
+                        end
+                        say_title("Octavio:")
+                        say("")
+                        say("Hmm..You need to go...I should")
+                        say("ask someone else...You are probably")
+                        say("tired from all the battles with the other countries")
+                        say("and from hunting...Take a rest.")
+                        say("")
+                        set_state(failure)
+                        return
+                end
+        end
+        state find begin
+                when letter begin
+                        send_letter("Find Yu-Rang")
+
+                        local v=find_npc_by_vnum(20012)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "")
+                        end
+
+
+                end
+                when button or info begin
+                        say_title("Find Yu-Rang")
+                        say("")
+                        say_reward("Go to the next village and find Yu-Rang...")
+                        say_reward("...She is caring a Rice basket.")
+                        say_reward("figure out why the delivery is too late.")
+                        say("")
+                end
+                when 20008.chat."What! You got it!"  begin
+                        say_title("Octavio:")
+                        say("")
+                        say("Hmm..If this business is going to failure ....then I can't")
+                        say("pay the hundred million Yang back, which")
+                        say("I borrowed... ....from a Chinese")
+                        say("a grocer and someone called Ul-Du-Ji...")
+                        say("Maybe I overestimated myself...")
+                        say("You will pay for it, Yu-Rang!")
+                        say("What are you doing here. You should be on your way to the next")
+                        say("village. I need the delivery as fast as possible.")
+                        say("")
+                end
+                when __TARGET__.target.click or
+                        20012.chat."Are you Yu-Rang?" begin
+                        target.delete("__TARGET__")
+                        say_pc_name()
+                        say("")
+                        say("You must be Yu-Rang!")
+                        say("")
+                        wait()
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("What? You know me? ...There are so many")
+                        say("people that knows me... ... because of the way I look....")
+                        say("Are you also one of them, who comes here")
+                        say("because of my beautiful face?")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("ahem,ahem.")
+                        say("(beautiful look?..I have never seen such an")
+                        say("ugly woman like you..)")
+                        say("")
+                        wait()
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("What??")
+                        say("You have never seen such an...")
+                        say("Did I hear something wrong???")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("Hahahaha.. You heard something wrong..")
+                        say("Ah nothing..It's not about you....")
+                        say("Anyway, I'm here because of Octavio's order.")
+                        say("...You know Octavio from the neighbouring village.")
+                        say("He ordered some rice cakes, but he haven't")
+                        say("received it yet.")
+                        say("He sent me to ask you...")
+                        say("")
+                        wait()
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("Ups! Octavio has sent you...")
+                        say("I was working on the problem.")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("What. What problem? Octavio said that his")
+                        say("existence depends on the rice cake.")
+                        say("That's why he sent me here.")
+                        say("")
+                        wait()
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("I know. I wanted to finish the order and")
+                        say("return to my home... ...So I could see my")
+                        say("mother, I haven't seen her a long time...")
+                        say("but because of the Tigers and the White Tigers,")
+                        say("I forgot all about it.")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("The Tigers and the White Tigers disturbed you?")
+                        say("(They said ( Give us a rice cake, or we will eat)")
+                        say("(you.), this can't be true...)")
+                        say("")
+                        wait()
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("On my way to the neighbouring village, the")
+                        say("Tigers and the White Tigers ...They blocked the")
+                        say("road and said ( Give us the rice cake, or we )")
+                        say("(will eat you.) That's why I couldn't deliver it.")
+                        say("I'm to weak, to fight against such")
+                        say("terrible animals. They blocked the road as I tried")
+                        say("to pass. Tell Octavio that I")
+                        say("had an accident.")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("Hahaha...I don't believe you...")
+                        say("That doesn¡¯t exist. I never heard that Tigers")
+                        say("can speak.")
+                        say("")
+                        wait()
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("Hey.. Take care what you say... Look here!")
+                        say("Can these eyes lie?")
+                        say("So, tell it to Octavio.")
+                        say("Please. ")
+                        say("")
+                        local s=select(
+                                "Ok, I understand. I will tell him that..",
+                                "You must be crazy!...Tell it yourself!")
+                        if 1==s then
+                                say_title("Yu-Rang:")
+                                say("")
+                                say("Thank you very much...!")
+                                say("Octavio is generous, he will understand it.")
+                                say("Thank you!")
+                                say("")
+                                set_state(secondfind)
+                                return
+                        end
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("What? I'm crazy?.. Hey! I don't believe it,")
+                        say("are you envious because of my beauty?")
+                        say("I will forget your word!!")
+                        say("Get lost!!")
+                        say("")
+                        set_state(failure)
+                        return
+                end
+        end
+        state secondfind begin
+                when letter begin
+                        send_letter("Return to Octavio")
+
+                        local v=find_npc_by_vnum(20008)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "")
+                        end
+
+                end
+                when button or info begin
+                        say_title("Return to Octavio")
+                        say("")
+                        say_reward("Go to Octavio in the neighbouring village.")
+                        say_reward("Tell him, why Yu-Rang can't deliver the")
+                        say_reward("rice cakes, that he had ordered.")
+                        say("")
+                end
+                when 20012.chat."Shaking!" begin
+                        say_title("Yu-Rang")
+                        say("")
+                        say("Octavio!! He sent someone to me!")
+                        say("Just the thought makes me shiver...")
+                        say("(Shaking)! Why did he order so many")
+                        say("Rice cakes...Beside of that he didn't believe")
+                        say("me... If it wasn't for the Tigers")
+                        say("I could have delivered it and returned to my home.")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("Ups...")
+                        say("It's true, what you told me??")
+                        say("")
+                end
+                when __TARGET__.target.click or
+                        20008.chat."Oh It's you!" begin
+                        target.delete("__TARGET__")
+                        say_title("Octavio:")
+                        say("")
+                        say("Oh! You have returned!!!")
+                        say("What did Yu-Rang say?? I mean the reason,")
+                        say("why she haven't delivered! Don't tell me that")
+                        say("the Tigers said ( Give us the rice cake,)")
+                        say("(or we will eat you!) I don't want to hear")
+                        say("this kind of an excuse...")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("...............................")
+                        say("It's like you already said.")
+                        say("Yu-Rang wanted to deliver...but then the Tigers...")
+                        say("")
+                        wait()
+                        say_title("Octavio:")
+                        say("")
+                        say("What?? Do you think that makes sense??? It's not")
+                        say("the age, where Tigers used to smoke cigarettes.")
+                        say("How could the Tigers speak???")
+                        say("Go to Yu-Rang again and tell her")
+                        say("that if she doesn¡¯t deliver...")
+                        say("... I will report her to the City Guardian, for ")
+                        say("fraud! Go, now!!!")
+                        say("")
+                        local s=select(
+                                "Hm! Ok. I will go to Yu-Rang again.",
+                                "Go and tell it yourself.")
+                        if 1==s then
+                                say_title("Octavio:")
+                                say("")
+                                say("I'm sorry that I give such a hard")
+                                say("time, but...")
+                                say("Your efforts will make a lot of people happy.")
+                                say("I bet, you want that.")
+                                say("")
+                                set_state(threefind)
+                                return
+                        end
+                        say_title("Octavio:")
+                        say("")
+                        say("What??")
+                        say("Young people nowadays don't have any manners..")
+                        say("They should learn to listen to the older people...")
+                        say("Go!! Get lost!!..I don't want")
+                        say("to see you here anymore!!!")
+                        say("")
+                        set_state(failure)
+                        return
+                end
+        end
+        state threefind begin
+                when letter begin
+                        send_letter("Return to Yu-Rang")
+
+                        local v=find_npc_by_vnum(20012)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "")
+                        end
+
+                end
+                when button or info begin
+                        say_title("Return to Yu-Rang")
+                        say("")
+                        say_reward("Return to Yu-Rang,")
+                        say_reward("and deliver Octavio's message.")
+                        say("")
+                end
+                when 20008.chat."What are you doing?" begin
+                        say_title("Octavio")
+                        say("")
+                        say("What are you doing? Hurry!!...")
+                        say("Don't tell me that you believe... that the Tigers")
+                        say("said (Give me the rice cakes, or I will eat you!)")
+                        say("What a stupid excuse!")
+                        say("")
+                end
+                when __TARGET__.target.click or
+                        20012.chat."I'm back" begin
+                        target.delete("__TARGET__")
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("So, You are back! What did Octavio say?")
+                        say("Like I know him, he")
+                        say("probably was very angry because of my excuse.")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("He said, if you don't deliver the rice cakes now,")
+                        say("then he report you to the City Guardian")
+                        say("for fraud.")
+                        say("And, he don't want to hear from the age")
+                        say("where Tigers used to smoke.")
+                        say("")
+                        wait()
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("What should I do... ")
+                        say("I need to deliver the rice cakes...but")
+                        say("I'm scared of the Tigers. I'm sorry...")
+                        say("Ah, could I ask you for a favour?")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("What kind of a favour....?")
+                        say("You look so serious.")
+                        say("")
+                        wait()
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("You look like a warrior...")
+                        say("Could you kill the Tigers and the White Tigers...")
+                        say("On the road to the next village? Please...")
+                        say("You know that such a weak woman like me")
+                        say("can't do such things.")
+                        say("")
+                        local s=select(
+                                "Ok.. I will help you.. Tigers are piece of cake..",
+                                "Hehe! I will not intervene in your affairs.")
+
+                        if 1==s then
+                                say_title("Yu-Rang:")
+                                say("")
+                                say("Enough is enough!!")
+                                say("I owe you something!!!.")
+                                say("")
+                                set_state(killtiger1)
+                                return
+                        end
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("Don't say things like that....")
+                        say("to a beauty woman like me.")
+                        say("Heh!! With such an attitude ")
+                        say("you are never going to be happy! Hehe!")
+                        say("")
+                        set_state(failure)
+                        return
+                end
+        end
+        state killtiger1 begin
+                when letter begin
+                        send_letter("Yu-Rang's Favour")
+                end
+                when button or info begin
+                        say_title("Yu-Rang's Favour")
+                        say("")
+                        say_reward("You agreed to do Yu-Rang a favour.")
+                        say_reward("When Yu-Rang asked you for a favour,")
+                        say_reward("she asked if you could kill 30 Tigers...")
+                        say_reward("...Which are on the road to the next village.")
+                        say("")
+                        say_reward("Kill 30 Tigers")
+                        say("")
+                end
+                when enter begin
+                        pc.setqf("kill_count", 0)
+                end
+                when leave begin
+                        pc.setqf("kill_count", 0)
+                        q.done()
+                end
+                when letter begin
+                        q.set_counter("Remaining Tigers", rice_cake_tiger.killtiger1_get_rest_count());
+                end
+                when 114.kill begin
+                        local kill_count=pc.getqf("kill_count")+1
+                        pc.setqf("kill_count", kill_count)
+                        q.set_counter("Remaining Tigers", rice_cake_tiger.killtiger1_get_rest_count());
+                        if rice_cake_tiger.killtiger1_is_end() then
+                                say_title("You killed all Tigers.")
+                                say("")
+                                say("It's a while ago that I have killed")
+                                say("so many Tigers. Beside of that, which one")
+                                say("caused the problem? Anyway, I should")
+                                say("return.")
+                                say("")
+                        end
+                end
+                when 20012.chat."Did you kill the Tigers?" with not rice_cake_tiger.killtiger1_is_completed() begin
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("First of all, kill all the Tigers.")
+                        say("That should be easy for you, right?")
+                        say("")
+                end
+                when 20012.chat."I have killed all the Tigers." with  rice_cake_tiger.killtiger1_is_completed() begin
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("You killed all the Tigers!! Did you see the")
+                        say("one.. The one who is crazy about")
+                        say("rice cakes????")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("( ...This is a crazy conversation... )")
+                        say("No, When I hunted those 30 Tigers I ")
+                        say("haven't seen the one.")
+                        say("")
+                        wait()
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("I remember that the Tiger said,")
+                        say("'Give me a rice cake, or...' My God! It")
+                        say("must have been a White Tiger..White Tigers can")
+                        say("do such things.")
+                        say("Please kill some White Tigers.")
+                        say("")
+                        local s=select("Accept", "Reject")
+                        if 1==s then
+                                say_title("Yu-Rang:")
+                                say("")
+                                say("Good! Please let me deliver the rice cake.")
+                                say("")
+                                set_state(killtiger2)
+                        elseif 2==s then
+                                say_title("Yu-Rang:")
+                                say("")
+                                say("You don't believe me....")
+                                say("It's sad, but it's true.")
+                                say("I wish you a good full moon-day")
+                                say("")
+                                set_state(failure)
+                            end
+                end
+                function killtiger1_get_max_count()
+                        return 30
+                end
+                function killtiger1_get_rest_count()
+                        return math.max(0, rice_cake_tiger.killtiger1_get_max_count()-pc.getqf("kill_count"))
+                end
+                function killtiger1_is_completed()
+                        return pc.getqf("kill_count")>=rice_cake_tiger.killtiger1_get_max_count()
+                end
+                function killtiger1_is_end()
+                        return pc.getqf("kill_count")==rice_cake_tiger.killtiger1_get_max_count()
+                end
+        end
+        state killtiger2 begin
+                when letter begin
+                send_letter("Yu-Rang's second favour")
+        end
+        when button or info begin
+                say_title("Yu-Rang's second favour")
+                say("")
+                say_reward("In order to find the speaking Tiger...")
+                say_reward("You have hunted 30 Tiger...")
+                say_reward("Now, to fulfil Yu-Rang's second favour")
+                say_reward("you need to kill 20 White Tigers.")
+                say("")
+                say_reward("Kill 20 White Tiger")
+                say("")
+        end
+        when enter begin
+            pc.setqf("kill_count", 0)
+        end
+        when leave begin
+            pc.setqf("kill_count", 0)
+            q.done()
+        end
+        when letter begin
+            q.set_counter("Remaining White Tiger", rice_cake_tiger.killtiger2_get_rest_count());
+        end
+        when 115.kill begin
+            local kill_count=pc.getqf("kill_count")+1
+            pc.setqf("kill_count", kill_count)
+            q.set_counter("Remaining White Tiger", rice_cake_tiger.killtiger2_get_rest_count());
+            if rice_cake_tiger.killtiger2_is_end() then
+                say_title("You killed all White Tigers.")
+                say("")
+                say("It's a while ago since I have killed")
+                say("so many White Tigers. Hmm...They were not ")
+                say("that easy to kill, I think my hunt instincts")
+                say("could be better.")
+                say("Ah yes, where is the speaking Tiger?")
+                say("")
+            end
+        end
+        when 20012.chat."Tell her about the Tigers." with not rice_cake_tiger.killtiger2_is_completed() begin
+            say_title("Yu-Rang:")
+            say("")
+            say("Hmm, I was so confused that I didn't")
+            say("notice how the Tiger looked like.")
+            say("The Tiger or the White Tiger..I'm sorry")
+            say("that I need to give you such a hard assignment")
+            say("once more.")
+            say("")
+        end
+        when 20012.chat."I killed all White Tigers." with rice_cake_tiger.killtiger2_is_completed() begin
+            say_title("Yu-Rang:")
+            say("")
+            say("Oh!! You killed all the White Tigers...")
+            say("The speaking Tiger also")
+            say("showed up, right?")
+            say("")
+            wait()
+            say_pc_name()
+            say("")
+            say("No...Only mute White Tigers..")
+            say("")
+            wait()
+            say_title("Yu-Rang:")
+            say("")
+            say("Oh, I might have been drunk when I")
+            say("delivered the rice cake...Maybe I")
+            say("have hallucinated....Ups..")
+            say("I will never drink with Ariyoung")
+            say("again...(sigh)..")
+            say("")
+            wait()
+            say_pc_name()
+            say("")
+            say("(..Then she saw the speaking Tiger when,)")
+            say("(she was drunk?..)")
+            say("(Ups..I could kill her...nevermind..)")
+            say("(I'm a gentleman and very friendly.)")
+            say("(I remain faithful to my principles.)")
+            say("")
+            wait()
+            say_title("Yu-Rang:")
+            say("")
+            say("I'm so sorry, but could you do")
+            say("another favour for me?.. Please tell Octavio,")
+            say("that I will deliver her rice cake soon.")
+            say("I'm really sorry...")
+            say("")
+
+            local s=select("Accept", "Reject")
+            if 1==s then
+                say_title("Yu-Rang:")
+                say("")
+                say("Ahhh...It's sad...Even that I'm so beautiful, I have")
+                say("never done my work properly...")
+                say("")
+                set_state(fourfind)
+            elseif 2==s then
+                say_title("Yu-Rang:")
+                say("")
+                say("...(sigh)...Octavio want to ")
+                say("report me to the City Guardian..")
+                say("...(sigh)...Then I can never return")
+                say("to my home...")
+                say("")
+                set_state(failure)
+            end
+        end
+        function killtiger2_get_max_count()
+            return 20
+        end
+        function killtiger2_get_rest_count()
+            return math.max(0, rice_cake_tiger.killtiger2_get_max_count()-pc.getqf("kill_count"))
+        end
+        function killtiger2_is_completed()
+            return pc.getqf("kill_count")>=rice_cake_tiger.killtiger2_get_max_count()
+        end
+        function killtiger2_is_end()
+            return pc.getqf("kill_count")==rice_cake_tiger.killtiger2_get_max_count()
+        end
+        end
+        state fourfind begin
+                when letter begin
+                        send_letter("Return to Octavio")
+
+                        local v=find_npc_by_vnum(20008)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "")
+                        end
+
+
+                end
+                when button or info begin
+                        say_title("Return to Octavio")
+                        say("")
+                        say_reward("Return to Octavio in the neighbouring village,")
+                        say_reward("tell her that Yu-Rang will deliver")
+                        say_reward("the rice cake as soon as possible.")
+                        say("")
+                end
+                when 20012.chat."Thank yoy." begin
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("Thank you, I thank you...I will never forget it.")
+                        say("Ahh..Every time I drink with Ariyoung")
+                        say("I get so drunk...")
+                        say("Especially when I hear about Ariyoung's worries...")
+                        say("I feel with her......")
+                        say("..It's the story about her husband...")
+                        say("it was his plan to secure the Yang...")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("Ahhhh yes...You heard the story when")
+                        say("you were drunk, right??")
+                        say("")
+                end
+
+                when __TARGET__.target.click  begin
+                        target.delete("__TARGET__")
+                        say_title("Oh! You are back!!!")
+                        say("")
+                        say("What did Yu-Rang say?? Is she going")
+                        say("to deliver the rice cakes?")
+                        say("Don't say, that she said")
+                        say("(I was hallucinating)")
+                        say("(while I was drunk.)")
+                        say("and that's the reason, why she")
+                        say("hasn't delivered....")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("...............................")
+                        say("(Ups, Octavio must be a fortune teller. I should)")
+                        say("(figure out a good story,)")
+                        say("(else she will be reported.)")
+                        say("Ahem...Because of the thieves and barbarians, which ")
+                        say("are becoming a huge problem... There is a limitation ")
+                        say("by the rice cakes traders...and also by their production. ")
+                        say("That's why the price of rice cakes is so ")
+                        say("unstable...The result is a suspension of")
+                        say("the rice cakes-trades. That's why Yu-Rang")
+                        say("couldn't deliver the rice cakes. ")
+                        say("")
+                        wait()
+                        say_title("Octavio:")
+                        say("")
+                        say("....Oh...yes...All clear, that's the reason...")
+                        say("Nevermind when is she going to")
+                        say("deliver the rice cakes?")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("(....He acts like he understand...)")
+                        say("Hmmm...She wants to deliver it as fast as possible...")
+                        say("")
+                        wait()
+                        say_title("Octavio:")
+                        say("")
+                        say("Ohhh...I know that Yu-Rang is a good person...")
+                        say("I made her embarrassed, that was not")
+                        say("my intentions at all. I was just sad,")
+                        say("because of the delivery...Please go to ")
+                        say("Yu-Rang and tell her, that I appreciate it.")
+                        say("")
+                        wait()
+                        set_state(compensate)
+                end
+        end
+        state compensate begin
+                when letter begin
+                        send_letter("Return to Yu-Rang")
+
+                        local v=find_npc_by_vnum(20012)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "")
+                        end
+
+                end
+                when button or info begin
+                        say_title("Return to Yu-Rang")
+                        say("")
+                        say_reward("Go to Yu-Rang and")
+                        say_reward("deliver her Octavios words.")
+                        say("")
+                end
+                when 20008.chat."Thank you" begin
+                        say_title("Octavio:")
+                        say("")
+                        say("I thank you very much...")
+                        say("If we soon see each other again..")
+                        say("then I will make a big party for you.")
+                        say("")
+                end
+                when __TARGET__.target.click or
+                        20012.chat."You are back!" begin
+                        target.delete("__TARGET__")
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("Oh...You are back...What did Octavio say?")
+                        say("Is she going to report me by the City Guardian??")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("No he won't, I explained him,")
+                        say("Anyway, is there any progress")
+                        say("with the delivery??")
+                        say("")
+                        wait()
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("Yes! Thank you for your help, I will deliver it immediately.")
+                        say("You went through a lot because of me...")
+                        say("I'm sorry......")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("Forget it ...It's necessary to help each other...")
+                        say("If you deliver the rice cakes...")
+                        say("you will make a lot of people happy...")
+                        say("")
+                        wait()
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("You are really friendly.....")
+                        say("I own you a lot...")
+                        say("As a reward for your help...")
+                        say("I will give you some rice cakes, that I specially")
+                        say("made for the full moon-day. I made them with")
+                        say("lot of love...Please take it.")
+                        say("")
+                        say_reward("You got 10 Mugwort-rice-cakes and")
+                        say_reward("10 Mungbean-rice-cakes from Yu-Rang.")
+                        say("")
+                        pc.give_item2(50087, 10)
+                        pc.give_item2(50088, 10)
+                        wait()
+                        say_title("Yu-Rang:")
+                        say("")
+                        say("I wish you and your family a nice")
+                        say("full moon-day. Please visit this country once in a while.")
+                        say("A last favour...")
+                        say("Please don't tell anyone...")
+                        say("that I was drunk...")
+                        say("See you!")
+                        say("")
+                        wait()
+                        set_state(__complete)
+                        q.done()
+                end
+        end
+        state failure begin
+        end
+        state __complete begin
+        end
+end

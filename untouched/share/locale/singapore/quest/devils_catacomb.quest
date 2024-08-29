@@ -1,0 +1,460 @@
+------------------------------------------------------
+-- The Devil큦 Catacomb Quest
+-- (c) 2011 - 2012 by musicinstructor@elitepvpers.com
+------------------------------------------------------
+quest devils_catacomb begin
+	state start begin
+		when 20367.click with game.get_event_flag("dc_open") != 1 begin
+			say_title("Guardian of the Catacombs:")
+			say("")
+			say("I am sorry but at the moment I can not")
+			say("let you enter the Catacombs.")
+			say("The devil's are making an uproar and it")
+			say("will be too dangerous for anybody to enter")
+			say("at this state.")
+			say("")
+		end
+		when 20367.chat."Enter the Devil's Catacomb" with pc.get_level() < 75 and pc.get_map_index() != 206 game.get_event_flag("dc_open") == 1  begin
+			say_title("Guardian of the Catacombs:")
+			say("I will not give access to the Devil's Catacomb")
+			say("to an unexperienced knight such as you.")
+			say("")
+			say("It is for your own safety.")
+			say("")
+			say_reward("Level 75 is required to enter.")
+			say("")
+		end
+		when 20367.chat."Enter the Devil's Catacomb" with pc.get_level() >= 75 and pc.get_map_index() != 206 and game.get_event_flag("dc_open") == 1 begin
+			say_title("Guardian of the Catacombs:")
+			say("")
+		--	if pc.getf("deviltower_zone", "dcenter") == 0 then
+		--		say("You have to solve the Demon Tower")
+		--		say("to pass this gate.")
+		--		say("")
+		--		return
+		--	end
+			if not party.is_party() then
+				say("You need a strong party to adventure into")
+				say("the Devil큦 Catacomb.")
+				say("")
+				return
+			elseif not party.is_leader() then
+				say("Only the leader of your group can start")
+				say("the quest.")
+				say("")
+				return
+			end
+			say("Do you wish to enter Devil's Catacomb now?")
+			say("")
+			local s = select("Yes, I want to enter.", "No, I want to leave.")
+			if s == 1 then
+				if pc.count_item(30319) < 1 then
+					say_title("Guardian of the Catacombs:")
+					say("")
+					say("You can not enter without")
+					say_item_vnum(30319)
+					say("")
+					return
+				--else
+				--	pc.remove_item(30319, 1)
+				end
+				pc.setf("deviltower_zone", "dcenter", 0)
+				--pc.warp(314700, 1210100)
+				d.join(206)
+				d.regen_file(get_locale_base_path().."/map/metin2_map_dd/regen.txt")
+				d.regen_file(get_locale_base_path().."/map/metin2_map_dd/npc.txt")
+				d.setf("base1_killed_mobs", 0)
+			end
+		end
+		when 20367.chat."Back to the Dark Temple" with pc.get_map_index() == 206 begin
+			say_title("Guardian of the Catacombs:")
+			say("")
+			say("Are you sure you want to give up and")
+			say("return to the Dark Temple?")
+			say("")
+			local s = select("Yes, I am too weak.", "No, I will fight on!")
+			if s == 1 then
+				pc.warp(591400, 99900)
+			end
+		end
+		function get_devil_base()
+			local x = pc.get_local_x()
+			local y = pc.get_local_y()
+			if pc.get_map_index() == 206 and x > 30 and y > 45 and x < 450 and y < 450 then
+				return 1
+			end
+			if pc.get_map_index() >= 2060000 and pc.get_map_index() < 2070000 then
+				if x > 30 and y > 45 and x < 450 and y < 450 then
+					return 1
+				elseif x > 540 and y > 39 and x < 1000 and y < 462 then
+					return 2
+				elseif x > 1048 and y > 35 and x < 1455 and y < 458 then
+					return 3
+				elseif x > 31 and y > 541 and x < 564 and y < 1058 then
+					return 4
+				elseif x > 650 and y > 540 and x < 1050 and y < 955 then
+					return 5
+				elseif x > 1175 and y > 576 and x < 1420 and y < 810 then
+					return 6
+				elseif x > 46 and y > 1091 and x < 102 and y < 1164 then
+					return 7
+				end
+			end
+			return 0
+		end
+		function register_player(vid)
+			local player_count = d.getf("player_count")
+			player_count = player_count + 1
+			d.setf("player_count", tonumber(player_count))
+			d.setf(string.format("player%d", player_count), tonumber(vid))
+		end
+		function unregister_player(vid)
+			local player_count = d.getf("player_count")
+			local found = false
+			for i = 1, player_count, 1 do
+				if found == true then
+					d.setf(string.format("player%d", tonumber(i)), d.getf(string.format("player%d", i+1)))
+				end
+				p = d.getf("player"..tostring(i))
+				if p == vid then
+					i = i -1
+					found = true
+				end
+			end
+			if found == true then
+				d.setf("player_count", tonumber(player_count - 1))
+			end
+		end
+		function get_players()
+			local players = {}
+			local player_count = d.getf("player_count")
+			for i = 1, player_count, 1 do
+				players[i] = d.getf("player"..tostring(i))
+			end
+			return players
+		end
+		function checkbase3item(pindex)
+			local self_checked = false
+			local self = pc.select(d.getf("player"..tostring(pindex)))
+			if pc.count_item(30319) < 1 and self_checked == false then
+				warp_to_village()
+			else
+				pc.remove_item(30319, 1)
+			end
+			if pc.get_vid() == self then
+				self_checked = true
+			end
+			pc.select(self)
+		end
+		function spawnbase4portals()
+			d.spawn_goto_mob(70, 673, 94, 847)
+			d.spawn_goto_mob(91, 948, 347, 564)
+			d.spawn_goto_mob(401, 558, 272, 829)
+			d.spawn_goto_mob(274, 713, 141, 807)
+			d.spawn_goto_mob(68, 815, 313, 868)
+			d.spawn_goto_mob(431, 935, 355, 840)
+			d.spawn_goto_mob(430, 842, 499, 787)
+		end
+		function get_remaining_minutes()
+			local m = 60 - (get_global_time() - d.getf("start_time"))/60
+			if m <= 1 then
+				return "one minute"
+			else
+				return string.format("%d minutes", m)
+			end
+		end
+		when login with devils_catacomb.get_devil_base() == 1 begin
+			addimage(20, 12, "catacombs.tga")
+			say("")
+			say("")
+			say("")
+			say("")
+			say_title("The Devil큦 Catacomb: Level 1")
+			say("")
+			say("Hunt monsters in this area to obtain the Soul")
+			say("Crystal Key and unlock the next level.")
+			say("")
+			say_item("Soul Crystal Key", 30311, "")
+			pc.remove_item(30311, pc.count_item(30311))
+			pc.remove_item(30312, pc.count_item(30312))
+		end
+		when kill with devils_catacomb.get_devil_base() == 1 begin
+			d.setf("base1_killed_mobs", d.getf("base1_killed_mobs"))
+			if number(1, 100) == 1 or d.getf("base1_killed_mobs") >= 432 then
+				game.drop_item(30311, 1)
+			end
+		end
+		when 30101.take with item.vnum == 30311 and devils_catacomb.get_devil_base() == 1 begin
+			item.remove()
+			say_title("Statue of Kud:")
+			say("")
+			say("The entrance has been unlocked.")
+			say("Pass it quickly!!")
+			say("")
+			wait()
+			say_title("The Devil큦 Catacomb:")
+			say("")
+			say("Here is where the real adventure starts.")
+			say("")
+			say("From now on you will only have one hour")
+			say("to explore the Devil's Catacomb.")
+			say("")
+			wait()
+			d.new_jump_all(206, 3626, 12083)
+			d.clear_regen()
+			d.regen_file(get_locale_base_path().."/map/metin2_map_dd/base2_regen.txt")
+			d.regen_file(get_locale_base_path().."/map/metin2_map_dd/base2_npc.txt")
+			d.setf("doors", 0)
+			d.setf("start_time", get_global_time())
+			server_timer("dc_time_expired", 60*60, d.get_map_index())
+			server_timer("dc_time_notice", 30*60, d.get_map_index())
+			server_timer("dc_time_notice", 45*60, d.get_map_index())
+			server_timer("dc_time_notice", 50*60, d.get_map_index())
+			server_timer("dc_time_notice", 55*60, d.get_map_index())
+		end
+		when login with pc.in_dungeon() == true and devils_catacomb.get_devil_base() != 0 begin
+			pc.set_warp_location(65, 5914, 999)
+			devils_catacomb.register_player(pc.get_vid())
+			loop_timer("base7_smashout", 10)
+			if party.is_leader() == true then
+				d.setf("leader", pc.get_vid())
+			end
+			if devils_catacomb.get_devil_base() != 2 then return end
+			say_title("The Devil큦 Catacomb: Level 2")
+			say("")
+			say("Destroy the seal of this door to reach Level 3.")
+			say("You have "..devils_catacomb.get_remaining_minutes().." left.")
+			say("")
+		end
+		when logout with pc.in_dungeon() == true and devils_catacomb.get_devil_base() > 1 begin
+			devils_catacomb.unregister_player(pc.get_vid())
+		end
+		when 30111.kill or 30112.kill or 30113.kill or 30114.kill or 30115.kill or 30116.kill or 30117.kill or 30118.kill or 30119.kill with pc.in_dungeon() == true and devils_catacomb.get_devil_base() == 2 begin
+			d.setf("doors", d.getf("doors") + 1)
+		end
+		when 30103.click with pc.in_dungeon() == true and devils_catacomb.get_devil_base() == 2 and d.getf("doors") >= 11 and pc.get_vid() == d.getf("leader") begin
+			npc.lock()
+			say_title("Tortoise Rock:")
+			say("")
+			say("As you observe the stone closely, you")
+			say("encounter an inscription.")
+			say("")
+			wait()
+			say_title("The Devil큦 Catacomb:")
+			say("")
+			say("Only the one who possesses the shrunken head")
+			say("may enter once the seal of three doors has")
+			say("been broken.")
+			say("")
+			say_reward("If you do not possess this relic, you will")
+			say_reward("be warped out from the Devil's Catacomb.")
+			say("")
+			wait()
+			local s = select("Yes, let me enter.", "I don't have a Relic.")
+			if s == 1 then
+				if pc.count_item(30319) < 1 then
+					say_title("The Devil큦 Catacomb:")
+					say("")
+					say("You do not possess the shrunken head.")
+					say("You will now be warped out from")
+					say("the Devil's Catacomb..")
+					say("")
+					return
+				end
+				say_title("The Devil큦 Catacomb:")
+				say("")
+				say("You possess the shrunken head and you will now")
+				say("enter Level 3.")
+				say("")
+				timer("base3_jump", 4)
+				wait()
+			else
+				say_title("The Devil큦 Catacomb:")
+				say("")
+				say("You will now be warped out of the Devil's Catacomb.")
+				say("")
+				wait()
+				pc.warp(5914, 999)
+			end
+		end
+		when base3_jump.timer begin
+			if d.getf("base3jump") == 1 then
+				return
+			end
+			d.setf("base3jump", 1)
+			d.purge()
+			--table.foreach(devils_catacomb.get_players(), devils_catacomb.checkbase3item)
+			if pc.count_item(30319) < 1 then
+				d.exit_all()
+			else
+				pc.remove_item(30319, 1)
+			end
+			
+			d.jump_all(4443, 12282)
+			d.notice("Find the correct metin stone and destroy it!")
+			d.notice("You have "..devils_catacomb.get_remaining_minutes().." left.")
+			d.clear_regen()
+			d.regen_file(get_locale_base_path().."/map/metin2_map_dd/base3_regen.txt")
+			d.spawn_mob(8038, 1237, 237)
+			d.spawn_mob(8038, 1337, 166)
+			d.spawn_mob(8038, 1152, 138)
+			d.spawn_mob(8038, 1135, 344)
+			d.spawn_mob(8038, 1367, 354)
+		end
+		when 8038.kill with pc.in_dungeon() == true and devils_catacomb.get_devil_base() == 3 and d.getf("warp_countdown_mode") != 1 begin
+			local stone_count = d.getf("stone_count")
+			stone_count = stone_count + 1
+			if stone_count >= 5 or number(1, 5) == 5 then
+				d.notice("You have destroyed the correct metin stone. You will now enter Level 4.")
+				d.setf("warp_countdown_mode", 1)
+				server_timer("base4_jump", 4, pc.get_map_index())
+			else
+				d.setf("stone_count", stone_count + 1)
+				d.notice("This was a false metin stone. Find the correct one, quick!")
+			end
+		end
+		when base4_jump.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				d.purge()
+				d.jump_all(3144, 12617)
+				d.clear_regen()
+				--d.regen_file(get_locale_base_path().."/map/metin2_map_dd/base4_portals.txt")
+				devils_catacomb.spawnbase4portals()
+				--d.spawn_mob(30104, 500, 717)
+				d.regen_file(get_locale_base_path().."/map/metin2_map_dd/base4_regen.txt")
+			end
+		end
+		when 30104.click with pc.in_dungeon() == true and devils_catacomb.get_devil_base() == 4 begin
+			npc.purge()
+			say_title("The Devil큦 Catacomb:")
+			say("")
+			say("YES, found the way out! Let큦 go down to the 5th")
+			say("level!")
+			server_timer("base5_jump", 4, pc.get_map_index())
+		end
+		when base5_jump.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				d.purge()
+				d.jump_all(3918, 12922)
+				d.notice("Kill the Demon-Guards to obtain the Totem Faces. They serve as the key to Level 6!")
+				d.notice("You have "..devils_catacomb.get_remaining_minutes().." left.")
+				local pos =
+				{
+					{850, 588},
+					{714, 655},
+					{701, 817},
+					{987, 838},
+					{994, 657},
+				}
+				cid = number(1, 5)
+				d.spawn_mob(2591, pos[cid][1], pos[cid][2])
+				
+				d.regen_file(get_locale_base_path().."/map/metin2_map_dd/base5_regen.txt")
+			end
+		end
+		when 2591.kill with pc.in_dungeon() == true and devils_catacomb.get_devil_base() == 5 begin
+			game.drop_item(30312, 1)
+		end
+		when 30102.take with item.vnum == 30312 and pc.in_dungeon() == true and devils_catacomb.get_devil_base() == 5 begin
+			item.remove()
+			d.purge()
+			d.notice("From the dephts of the Devil's Catacomb comes a furious brawl.")
+			d.notice("The Grim Reaper has awakened!")
+			d.jump_all(4339, 12702)
+			d.clear_regen()
+			d.regen_file(get_locale_base_path().."/map/metin2_map_dd/base6_regen.txt")
+			server_loop_timer('base6_update', 10, pc.get_map_index())
+			d.notice("Slay Grim Reaper and his minions!")
+			d.notice("You have "..devils_catacomb.get_remaining_minutes().." left.")
+		end
+		when base6_update.server_timer begin
+			if not d.select(get_server_timer_arg()) then
+				server_timer("base6_update_stop_timer", 1, get_server_timer_arg())
+				return
+			end
+			if d.count_monster() == 0 then
+				say_in_map(d.get_map_index(), color256(255, 230, 186).."The Devil큦 Catacomb:[ENTER]"..color256(196, 196, 196).."You have gained victory over Charon![ENTER]You will now enter the last Level[ENTER]of the Devil's Catacomb![ENTER]")
+				server_timer("base7_jump", 5, get_server_timer_arg())
+			end
+		end
+		when base6_update_stop_timer.server_timer begin
+			clear_server_timer("base6_update", get_server_timer_arg())
+		end
+		when base7_jump.server_timer begin
+			clear_server_timer("base6_update", get_server_timer_arg())
+			if not d.select(get_server_timer_arg()) then
+				return
+			end
+			d.purge()
+			d.jump_all(3146, 13185)
+			d.clear_regen()
+			d.regen_file(get_locale_base_path().."/map/metin2_map_dd/base7_regen.txt")
+			d.set_unique("boss", d.spawn_mob(2598, 74, 1105))
+			server_loop_timer("base7_boss_update", 10, get_server_timer_arg())
+			d.notice("Kill Lord Gahnasel!")
+			d.notice("You have "..devils_catacomb.get_remaining_minutes().." left.")
+			d.setf("level", 7)
+		end
+		when base7_boss_update.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				if d.is_unique_dead("boss") then
+					d.clear_regen()
+					d.purge()
+					clear_server_timer("dc_time_expired", get_server_timer_arg())
+					say_in_map(d.get_map_index(), color256(255, 230, 186).."The Devil큦 Catacomb:[ENTER]"..color256(196, 196, 196).."Lord Gahnasel has been killed. Finally[ENTER]peace can return to the Catacombs.[ENTER]You will now be warped back out.[ENTER]")
+					server_timer("base7_update_stop_timer", 1, get_server_timer_arg())
+					server_timer("dc_end_jump", 60, get_server_timer_arg())
+				end
+				return
+			end
+			server_timer("base7_update_stop_timer", 1, get_server_timer_arg())
+		end
+		when base7_update_stop_timer.server_timer begin
+			clear_server_timer("base7_boss_update", get_server_timer_arg())
+		end
+		when base7_smashout.timer begin
+			if d.getf("level") == 7 and devils_catacomb.get_devil_base() != 7 and d.select(pc.get_map_index()) then
+				d.jump_all(3146, 13185)
+			end
+		end
+		when dc_end_jump.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				d.setf("level", 0)
+				clear_server_timer("dc_time_expired", get_server_timer_arg())
+				clear_server_timer("base7_smashout", get_server_timer_arg())
+				clear_server_timer("base7_update_stop_timer", get_server_timer_arg())
+				clear_server_timer("base7_boss_update", get_server_timer_arg())
+				clear_server_timer("base6_update_stop_timer", get_server_timer_arg())
+				clear_server_timer("base6_update", get_server_timer_arg())
+				clear_server_timer("base5_jump", get_server_timer_arg())
+				clear_server_timer("base4_jump", get_server_timer_arg())
+				d.clear_regen()
+				d.exit_all()
+			end
+		end
+		when dc_time_expired.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				d.setf("level", 0)
+				d.notice("Your time is up. You failed to release the Catacombs")
+				d.notice("from the claws of evil.")
+				clear_server_timer("base7_smashout", get_server_timer_arg())
+				clear_server_timer("base7_update_stop_timer", get_server_timer_arg())
+				clear_server_timer("base7_boss_update", get_server_timer_arg())
+				clear_server_timer("base6_update_stop_timer", get_server_timer_arg())
+				clear_server_timer("base6_update", get_server_timer_arg())
+				clear_server_timer("base5_jump", get_server_timer_arg())
+				clear_server_timer("base4_jump", get_server_timer_arg())
+				d.clear_regen()
+				--table.foreach(devils_catacomb.get_players(), devils_catacomb.polyzombie)
+				d.exit_all()
+			end
+		end
+		
+		when dc_time_notice.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				d.notice("You have "..devils_catacomb.get_remaining_minutes().." left.")
+			end
+		end
+		
+	end
+end	

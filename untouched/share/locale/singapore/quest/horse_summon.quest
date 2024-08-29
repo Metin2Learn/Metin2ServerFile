@@ -1,0 +1,181 @@
+quest horse_summon begin
+        state start begin
+			function get_horse_summon_prob_pct()
+				local skill_level=pc.get_skill_level(131)
+				if skill_level==1 then
+					return 15
+				elseif skill_level==2 then
+					return 20
+				elseif skill_level==3 then
+					return 30
+				elseif skill_level==4 then
+					return 40
+				elseif skill_level==5 then
+					return 50
+				elseif skill_level==6 then
+					return 60
+				elseif skill_level==7 then
+					return 70
+				elseif skill_level==8 then
+					return 80
+				elseif skill_level==9 then
+					return 90
+				elseif skill_level>=10 then
+					return 100
+				end
+				return 10
+			end
+
+
+			when 20349.chat."Horse Sword" with horse.get_grade()==1 and pc.countitem("50051")<1 begin
+				say_title("Stable Lad:")
+				say("")
+				----"12345678901234567890123456789012345678901234567890"|
+				say("You have lost the Horse Sword!")
+				say("I can give you a new one for a 10.000 Yang payment.")
+				say("")
+				say("")
+				local b=select("OK", "Refuse it")
+				if 1==b then
+					if pc.money>=10000 then
+						pc.changemoney(-10000)
+						say_title("Stable Lad:")
+						say("")
+						----"12345678901234567890123456789012345678901234567890"|
+						say("This is the new Horse Sword.")
+						say("Avoid loosing it again.")
+						pc.give_item2("50051", 1)
+					else
+						say_title("Stable Lad:")
+						say("")
+						----"12345678901234567890123456789012345678901234567890"|
+						say("You don¡¯t have enough Yang.")
+						say("")
+					end
+				end
+			end
+			
+			when 20349.chat."Armed Horse Book." with horse.get_grade()==2 and pc.countitem("50052")<1 begin
+				say_title("Stable Lad:")
+				say("")
+				----"12345678901234567890123456789012345678901234567890"|
+				say("You have lost the Armed Horse Book!")
+				say("I can give you a new one for a 50.000 Yang payment.")
+				say("")
+				say("")
+				local b=select("OK", "Refuse it.")
+				if 1==b then
+					if pc.money>=50000 then
+						pc.changemoney(-50000)
+						say_title("Stable Lad:")
+						say("")
+						-----------"12345678901234567890123456789012345678901234567890"|
+						say("This is the new Armed Horse Book.")
+						say("Avoid losing it again.")
+						pc.give_item2("50052", 1)
+					else
+						say("You don¡¯t have enough Yang.")
+					end
+				end
+			end
+			
+			when 20349.chat."Military Horse Book." with horse.get_grade()==3 and pc.countitem("50053")<1 begin
+				say_title("Stable Lad:")
+				say("")
+				----"12345678901234567890123456789012345678901234567890"|
+				say("You have lost the Military Horse Book!")
+				say("I can give you a new one for a 100000 Yang payment.")
+				say("")
+				local b=select("OK", "Refuse it.")
+				if 1==b then
+					if pc.money>=100000 then
+						pc.changemoney(-100000)
+						say_title("Information:")
+						say("")
+						----"12345678901234567890123456789012345678901234567890"|
+						say("This is the Military Horse Book.")
+						say("Avoid losing it again.")
+						say("")
+						pc.give_item2("50053", 1)
+					else
+						say_title("Stable Lad:")
+						say("")
+						----"12345678901234567890123456789012345678901234567890"|
+						say("You don't have enough Yang.")
+					end
+				end
+			end
+			
+			when 50051.use with horse.get_grade()==0 begin
+				syschat("Your Riding Level is too low to call a beginner's horse.")
+			end
+			when 50051.use with horse.get_grade()==1 begin
+			   if pc.getsp()>=100 then
+					if number(1, 100)<=horse_summon.get_horse_summon_prob_pct() then
+						syschat("Your Beginners Horse was called.")
+						horse.summon()
+					else
+						syschat("You could not summon the Beginners Horse.")
+					end
+					pc.change_sp(-100)
+				else
+				syschat("You do not have enough SP to summon the beginner horse.")
+				end
+			end
+			when 50051.use with horse.get_grade()==2 begin
+				syschat("You need the Armed Horse Book to call armed horses.")
+			end
+			when 50051.use with horse.get_grade()==3 begin
+				syschat("You need the Military Horse Book to call military horses.")
+			end
+			when 50052.use with horse.get_grade()==0 begin
+				syschat("Your Riding Level is too low to call an armed horse.")
+			end
+			when 50052.use with horse.get_grade()==1 begin
+				syschat("You can not summon a beginner's horse with an Armed Horse Book.")
+			end
+			when 50052.use with horse.get_grade()==2 begin
+				if pc.getsp()>=200 then
+					if number(1, 100)<=horse_summon.get_horse_summon_prob_pct() then
+						syschat("Your armed horse was called.")
+						horse.summon()
+					else
+						syschat("You could not summon your armed horse.")
+					end
+					pc.change_sp(-200)
+				else
+					syschat("You do not have enough SP to summon the armed horse.")
+				end
+			end
+			when 50052.use with horse.get_grade()==3 begin
+				syschat("You need a Military Horse Book to summon a military horse.")
+			end
+			when 50053.use with horse.get_grade()==0 begin
+				syschat("Your Riding Level is too low to call an military horse.")
+			end
+			when 50053.use with horse.get_grade()==1 begin
+				syschat("You need a Horse Sword to summon the beginner horse.")
+			end
+			when 50053.use with horse.get_grade()==2 begin
+				syschat("You need an Armed Horse Book to summon the armed horse.")
+			end
+			when 50053.use with horse.get_grade()==3 begin
+				if pc.getsp()>=300 then
+					if number(1, 100)<=horse_summon.get_horse_summon_prob_pct() then
+						syschat("The military horse was called.")
+						horse.summon()
+					else
+						syschat("You could not summon your military horse.")
+					end
+					pc.change_sp(-300)
+				else
+					syschat("You do not have enough SP to call the military horse.")
+				end
+			end
+		end
+	state __COMPLETE__ begin
+		 when enter begin
+			q.done()
+		end
+	end
+end

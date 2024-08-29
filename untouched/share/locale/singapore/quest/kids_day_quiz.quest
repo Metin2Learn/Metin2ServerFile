@@ -1,0 +1,227 @@
+quest kids_day_quiz begin
+    state start begin
+	when login with game.get_event_flag("kids_day_drop") > 0 begin
+		send_letter("*Children's Day")
+	end
+    	when button or info begin
+ 			addimage(20, 12, "childrensday.tga")
+			say("")
+			say("")
+			say("")
+			say_title("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("Only today, you can drop Puzzle Boxes from any monster!")
+			say("")
+			say_item_vnum(50034)
+			say("Solve the Quiz from the Puzzle Box to get a prize.")
+			say("")
+			say("Good luck to you!")
+			say("")
+ 		
+    	end
+        when 20041.chat."GM: Change Children Day Drop" with pc.is_gm() begin
+            local low_value=game.get_event_flag("kids_day_drop")
+            local high_value=game.get_event_flag("kids_day_drop_high")
+            say_title("The percentage of the box for the Children's Day")
+            say(string.format("The percent of the low level : 1/%d", low_value))
+            say(string.format("The percent of the high level  : 1/%d", high_value))
+            local s=select("Modification of the percent of the low level", "Modification of the percent of the high level", "Close")
+            if s==1 then
+                say_title("The modification of the percent of the low level in the Children's Day")
+                say(string.format("The modification of the percent of the low level 1/%d -> ", low_value))
+                local v=tonumber(input())
+                if v<300 then
+                    say("You can't adjust less than 300 levels")
+
+                    if not is_test_server() then
+                            return
+                    end
+
+                    say("In the test server possible ")
+                end
+
+                say(string.format("The modification of the lower level in the Children's Day Quiz 1/%d -> 1/%d", low_value, v))
+                local s=select("Confirm", "Cancel")
+                if s==1 then
+                    say("Changed")
+                    game.set_event_flag("kids_day_drop", v)
+                else
+                    say("Cancelled")
+                end
+            elseif s==2 then
+                say_title("The modification of the higher level in the Children's Day")
+                say(string.format("The modification of the high percentage Level 1/%d -> ", high_value))
+                local v=tonumber(input())
+                if v<300 then
+                    say("You can't adjust less than 300 levels")
+
+                    if not is_test_server() then
+                            return
+                    end
+
+                    say("In the test server possible ")
+                end
+
+                say(string.format("The modification of the percent for the low level 1/%d -> 1/%d", high_value, v))
+                local s=select("Confirm", "Cancel")
+                if s==1 then
+                    say("Changed")
+                    game.set_event_flag("kids_day_drop_high", v)
+                else
+                    say("Cancelled")
+                end
+            end
+        end
+        when 20041.chat."GM: Reset Default Children Day Drop" with pc.is_gm() and game.get_event_flag("kids_day_drop")==0 begin
+                say("Do you want to reset default drop rate?")
+                local s=select("Yes", "No")
+                if s==1 then
+                    local default_value=1000;
+                    game.set_event_flag("kids_day_drop", default_value)
+                    game.set_event_flag("kids_day_drop_high", default_value)
+                    say(string.format("The percent of the Quiz in Children's Day: 1/%d", default_value))
+                end
+        end
+        when 20041.chat."GM: Stop the Children Day Drop" with pc.is_gm() and game.get_event_flag("kids_day_drop")!=0 begin
+                say("Do you want to stop the drop of puzzle box?")
+                local s=select("Stop", "Close")
+                if s==1 then
+                    game.set_event_flag("kids_day_drop", 0)
+                    game.set_event_flag("kids_day_drop_high", 0)
+                end
+        end
+        when 20041.chat."GM: The Metin2 Quiz! Quiz!" with pc.is_gm() begin
+            say_title("The Metin2 ! Quiz! For the qualified")
+            say("For the qualified. This is the Metin2 Quiz.")
+            say("In the begin of the numbers you start with 10 question.")
+
+            local max=table.getn(locale.quiz)
+            say(string.format("(The question-Number: %d)", max))
+
+            local quiz_begin = input()
+            if quiz_begin=="" then
+                return
+            end
+            local quiz_end = quiz_begin + 10
+
+            if quiz_end>max then quiz_end=max end
+
+            for quiz_index=quiz_begin, quiz_end do
+                local quiz_data=locale.quiz[quiz_index]
+                say_title(string.format("The Metin2 Quiz! Quiz! #%d", quiz_index))
+                say(quiz_data[1])
+                say("")
+                local s=select(quiz_data[2], quiz_data[3], quiz_data[4], quiz_data[5], "Close")
+                if s==5 then
+                    return
+                elseif s==quiz_data[6] then
+                    say_title("The Metin2 Quiz! Quiz!")
+                    say("Correct")
+                    say("")
+                    wait()
+                else
+                    say_title("The Metin2 Quiz! Quiz!")
+                    say("False!")
+                    say("")
+                    say(string.format("#%d.", quiz_index))
+                    say(quiz_data[1])
+                    say_reward(quiz_data[1+quiz_data[6]])
+                    say("")
+                    wait()
+                end
+            end
+
+        end
+        when 50034.use begin
+            say_title("Children's Day Quiz")
+            say("")
+            ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("This is the Children's Day Quiz! If you answer all the")
+            say("questions correctly, you will get a prize.")
+            say("")
+            say("Ready?")
+            say("")
+            local s=select("Let's go!", "That's too difficult.")
+            if 2==s then
+                return
+            end
+
+            --pc.remove_item(50034, 1)
+            item.remove()
+
+            local size=3
+            local chance=pc.getqf("chance")
+
+            -- Chance!
+            if 0==chance then
+                pc.setqf("chance", number(3, 5))
+            elseif pc.getqf("success_count")==chance then
+                pc.setqf("success_count", 0)
+                pc.setqf("chance", number(3, 5))
+                size=5
+            end
+
+            say_title("Children's Day Quiz")
+
+		say("")
+		----"123456789012345678901234567890123456789012345678901234567890"|
+		say("The Quiz has "..size.." questions. If you answer them")
+		say("correctly, you will receive a gift.")
+		say("")
+
+            wait()
+
+            for i=1, size+1 do
+
+                local quiz_index=number(1, table.getn(locale.quiz))
+                local quiz_data=locale.quiz[quiz_index]
+
+                say_title("Children's Day Quiz #"..i)
+                say("")
+                say(quiz_data[1])
+                say("")
+                local s=select(quiz_data[2], quiz_data[3], quiz_data[4], quiz_data[5])
+                if s==quiz_data[6] then
+                    if i==size then
+                        say_title("Children's Day Quiz")
+                        say("")
+                        say("Since you answered correct to all questions,")
+                        say("you get a reward!")
+                        say("")
+
+                        pc.setqf("success_count", pc.getqf("success_count")+1)
+
+                        if 5==size then
+                            say_item("Children's Day Gift", 50036, "")
+                            say_reward("As a gift I have a Children's Day Gift Box.")
+                            pc.give_item2(50036)
+                        else
+                            say_item("Children's Day Gift", 50035, "")
+                            say_reward("As a gift I have a Children's Day Gift Box.")
+                            pc.give_item2(50035)
+                        end
+                        say("")
+                        return
+                    else
+                        say_title("Children's Day Quiz")
+                        say("")
+                        say_reward("Correct!!")
+                        say("")
+                        say("Let's go to the next question.")
+                        say("")
+                        wait()
+                    end
+                else
+                    say_title("Children's Day Quiz")
+                    say("")
+                    say("That's not right!")
+                    say("")
+                    say("You will have to try again later, sorry!")
+                    say("")
+                    return
+                end
+            end
+
+        end
+    end
+end

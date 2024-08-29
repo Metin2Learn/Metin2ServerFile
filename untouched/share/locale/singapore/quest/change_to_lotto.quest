@@ -1,0 +1,35 @@
+quest change_to_lotto begin
+    state start begin
+        when oldwoman.chat."Exchange this for a lottery ticket." with game.get_event_flag("luck_scroll")>0 begin
+            say_title("Old woman")
+            say("")
+            ---                                                   l
+            say("Young man, I heard of an event,")
+            say("that will take place empire-wide.")
+            say("The empire-administrators are responsible for ")
+            say("that event,but they are very busy right now,")
+            say("thus they asked me for help.")
+            say("If you bring me a lottery ticket,")
+            say("I will exchange it for the Book of Luck.")
+            say("The number written in this Book of Luck will be")
+	    say("yours.")
+            say("")
+
+            if pc.countitem(50027) > 0 then
+                ---                                                   l
+		say("Are you interested in exchanging the lottery")
+		say("ticket for the Book of Luck?")
+                local s = select("Ja", "Nein")
+
+                if s == 1 then
+                    pc.removeitem("50027", 1)
+                    pc.give_lotto()
+                end
+            else
+                say_title("Old woman")
+                say("")
+                say("Ok! Bring me a lottery ticket.")
+            end
+        end
+    end
+end

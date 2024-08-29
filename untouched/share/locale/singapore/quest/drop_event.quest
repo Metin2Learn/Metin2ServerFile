@@ -1,0 +1,104 @@
+quest drop_event begin
+	state start begin
+		when login with game.get_event_flag("drop_event") > 0 begin
+			local level = pc.get_level()
+			if game.get_event_flag("drop_event") == 1 then
+				pc.setqf("rate",50-math.floor(level/4))
+				set_state(moon)
+			elseif game.get_event_flag("drop_event") == 2 then
+				pc.setqf("rate",70-math.floor(level/4))
+				set_state(hex)				
+			end
+		end
+		when enter begin
+			clear_letter()
+		end
+	end
+
+	state moon begin
+		when login with game.get_event_flag("drop_event") == 0 begin
+			set_state(start)
+		end
+		when letter begin
+			q.set_icon("scroll_open_blue.tga")
+			send_letter("*Moonlight Treasures")	
+		end
+		when button or info begin
+			addimage(20, 12, "moonlight.tga")
+			say("")
+			say("")
+			say("")
+			say_title("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("Hello young hero!")
+			say("")
+			say("Today the moon is shining in its brightest form. And that's")
+			say("because it is full moon today.")
+			say("")
+			say("On this special day, you can obtain Moonlight Boxes from")
+			say("every monster you hunt.")
+			say("")
+			say_reward("Enjoy the full moon and the treasure it holds for you!")
+			say("")
+		end
+			
+		when kill begin
+			if game.get_event_flag("drop_event") == 1 then
+				local level = pc.get_level()
+				local rate = pc.getqf("rate")
+				local limit = tonumber(get_mob_level[npc.get_race()])
+				if level < limit+11 then
+					local drop = number(1,rate)
+					if drop == 1 then
+						pc.setqf("rate",rate+3)
+						game.drop_item_with_ownership(50011)
+					end
+				end
+			else
+				set_state(start)
+			end
+		end
+	end
+	state hex begin
+		when login with game.get_event_flag("drop_event") == 0 begin
+			set_state(start)
+		end
+		when letter begin
+			q.set_icon("scroll_open_blue.tga")
+			send_letter("*Hexagonal Box")	
+		end
+		when button or info begin
+			addimage(20, 12, "hexagonal.tga")
+			say("")
+			say("")
+			say("")
+			say_title("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("One of the traditions in Chinese New year is the gifting")
+			say("and the wishes of good fortune. In Chinese culture, the")
+			say("six sides of the Hexagonal Box represent these wishes.")
+			say("")
+			say_reward("Collect Hexagonal Boxes from any monster! Hexagonal")
+			say_reward("boxes contain a random upgrade material.")
+			say("")
+		end
+			
+		when kill begin
+			if game.get_event_flag("drop_event") == 2 then
+				local level = pc.get_level()
+				local rate = pc.getqf("rate")
+				local limit = tonumber(get_mob_level[npc.get_race()])
+				if level < limit+11 then
+					local drop = number(1,rate)
+					if drop == 1 then
+						pc.setqf("rate",rate+2)
+						game.drop_item_with_ownership(50037)
+					end
+				end
+			else
+				set_state(start)
+			end
+		end
+	end
+end
+			

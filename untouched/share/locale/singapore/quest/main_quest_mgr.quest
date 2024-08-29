@@ -1,0 +1,41 @@
+quest main_quest_mgr begin
+    state start begin
+		when 20354.chat."GM: start 1 quest" with pc.is_gm() begin
+			set_quest_state("main_quest_lv1", "gotoinfomation")
+			set_quest_state("main_quest_lv2", "start")
+			set_quest_state("main_quest_lv3", "start")
+			set_quest_state("main_quest_lv6", "start")
+		end
+	
+		when 20354.chat."GM: start 2 quest" with pc.is_gm() begin
+			set_quest_state("main_quest_lv2", "gototeacher")
+			set_quest_state("main_quest_lv3", "start")
+			set_quest_state("main_quest_lv6", "start")
+		end
+	
+		when 20354.chat."GM:  start 3 quest" with pc.is_gm() begin
+			set_quest_state("main_quest_lv3", "gototeacher")
+			set_quest_state("main_quest_lv6", "start")
+		end
+		
+		when 20354.chat."GM:  start 6 quest" with pc.is_gm() begin
+			set_quest_state("main_quest_lv6", "gototeacher")
+		end
+
+		when 20354.chat."GM: start findguard quest" with pc.is_gm() begin
+			set_quest_state("find_squareguard", "find")
+		end
+		when 20354.chat."GM: start 66 quest" with pc.is_gm() begin
+			set_quest_state("main_quest_lv66", "state_1")
+		end
+		when 20354.chat."GM: start 72 quest" with pc.is_gm() begin
+			set_quest_state("main_quest_lv72", "state_1")
+		end
+		when 20354.chat."GM: start 78 quest" with pc.is_gm() begin
+			set_quest_state("main_quest_lv78", "state_1")
+		end
+		when 20354.chat."GM: start 84 quest" with pc.is_gm() begin
+			set_quest_state("main_quest_lv84", "state_1")
+		end
+    end
+end

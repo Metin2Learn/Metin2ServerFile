@@ -1,0 +1,401 @@
+quest valcon_war begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter with pc.get_level() >= 70 begin
+			set_state(information)
+		end
+	end
+	
+	state information begin
+		when letter begin
+			send_letter("The War of Spider Dungeon")
+			local a=find_npc_by_vnum(20089)
+			if 0==a then
+			else
+				target.vid("__TARGET__", a, "Pung-Ho")
+			end
+		end
+		
+		when button or info begin
+			say_title("The War of Spider Dungeon")
+			say("")
+			say("Pung-Ho, the guardian of the Spider Dungeon,")
+			say("wants to tell you the reason for the earthquakes.")
+			say("")
+			say("Head to him!")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 20089.chat."The War of Spider Dungeon" begin
+			target.delete("__TARGET__")
+			say_title("Pung-Ho:")
+			say("")
+			say("Hello "..pc.get_name()..", ")
+			say("Let me tell you a story...")
+			say("")
+			say("I am Pung-Ho, but I am not a normal person.")
+			say("I am the only human who got into the clan of snakes.")
+			say("")
+			wait()
+			say_title("Pung-Ho:")
+			say("")
+			say("The Snakes were originally vrtx peaceful animals.")
+			say("They never intended to harm anybody.")
+			say("")
+			say("But 1000 years ago the spiders conquered the")
+			say("snake pit and turned it into this Spider Dungeon.")
+			say("")
+			say("In order to not being killed, the snake wives had")
+			say("to take care of the baby spiders. Due to that")
+			say("the snake babys had to be neglected and many")
+			say("died due to these circumstances...")
+			say("")
+			wait()
+			say_title("Pung-Ho:")
+			say("")
+			say("And if this continues to happen any longer,")
+			say("snakes will become an extinct species.")
+			say("")
+			say("Our only chance is to ignite a rebellion and fight back!")
+			say("But for this, I need a proof that the spiders intend to")
+			say("attack us again. Unless I have this proof I am imprisoned.")
+			say("I promised this to the snake lord before")
+			say("he invited me into the clan.")
+			say("")
+			wait()
+			say_title("Pung-Ho:")
+			say("")
+			say("Spiders scratch on the ground to communicate with each other")
+			say("Try to find traces that indicate a planned action against")
+			say("the snakes for me! I can not leave from here ...")
+			say("")
+			say("Let me give you this pack of clay.")
+			say("With this you can make an imprint of the scratches in the")
+			say("ground, but be careful, after a few minutes the clay dries")
+			say("out and becomes useless.")
+			say("")
+			say_reward("Look for a proof in the dungeon")
+			say("")
+			local ok = select("I will do it.", "I don't want to get involved")
+			if ok == 1 then
+				say_title("Pung-Ho:")
+				say("")
+				say("I will give you a hint of where to search...")
+				say("- Pung-Ho hands you a piece of paper -")
+				say("")
+				say("But be aware that you can only use the clay if you don't")
+				say("take longer than 5 minutes. Otherwise the clay will be too")
+				say("dry to create an imprint with it.")
+				say("")
+				say("Best of luck to you!")
+				say("The snakes and my life depend on you now!")
+				say("")
+				say_reward("You can find the hint in the next quest scroll.")
+				wait()
+				pc.give_item2(90047, 1)
+				set_state(lookfortrace)
+			end
+		end
+	end
+	
+	state lookfortrace begin
+		when letter begin
+			send_letter("The Hint of Pung-Ho")
+		end
+		
+		when button or info begin
+			say_title("The Hint of Pung-Ho:")
+			say("")
+			say("-You read the paper Pung-Ho gave you-")
+			say("")
+			say_white("Unique rooms... friend and foe united...")
+			say_white("The earliest one of these will have what you desire.")
+			say_white("When all corners of the room are the same distance")
+			say_white("away from you. Look down! Four Corners, eight legs.")
+			say_white("It's body looks odd, is that what you're looking for?")
+			say("")
+			say_reward("Use the clay when you think you've found it")
+			say_reward("But don't forget you only got 5 minutes.")
+			say("")
+			local wantto = select("Yes, let's go!", "No, I changed my mind")
+			if wantto == 1 then
+				pc.setqf("tries", 0)
+				set_state(timeruntrace)
+			elseif wantto == 2 then
+				say("You really want to cancel the quest?")
+				local wantto2 = select("Yes", "No")
+				if wantto2 == 1 then
+					pc.remove_item(90047, 1)
+					q.done()
+				end
+			end
+		end
+	end
+	
+	state timeruntrace begin
+		when letter begin
+			send_letter("Find the traces")
+			pc.setqf("limit_time", get_time()+5*60)
+			q.set_clock("Time left", pc.getqf("limit_time") - get_time())
+		end
+		
+		when button or info begin
+			say_title("What was the hint again?")
+			say("")
+			say_white("Unique rooms... friend and foe united...")
+			say_white("The earliest one of these will have what you desire.")
+			say_white("When all corners of the room are the same distance")
+			say_white("away from you. Look down! Four Corners, eight legs.")
+			say_white("It's body looks odd, is that what you're looking for?")
+			say("")
+			say_reward("Hurry up there is not much time left!")
+			say("")
+		end
+		
+		when 90047.use begin
+			local delta_x = pc.get_local_x() - 188
+			local delta_y = pc.get_local_y() - 574
+			if pc.get_map_index() == 71 and (delta_x * delta_x + delta_y * delta_y) <= 25 and (pc.getqf("limit_time"))-get_time() >= 0 then
+				say_title("The weird scratches:")
+				say("")
+				say("There are some weird scratched symbols on the floor.")
+				say("They don't seem to be manmade - maybe that is a spider's")
+				say("scratch! I should definately take this and bring it to")
+				say("Pung Ho - maybe he knows what this says!")
+				say("")
+				say_white("You made an imprint of the signs with the clay")
+				say("")
+				say_reward("Let's bring this to Pung-Ho!")
+				say("")
+				wait()
+				pc.remove_item(90047, 1)
+				pc.give_item2(90048, 1)
+				clear_letter()
+				set_state(backtopungho)
+			elseif pc.getqf("limit_time")-get_time() <= 0 then
+				say_title("The clay is dry.")
+				say("")
+				say("You've took too long so the clay dried out!")
+				say("You can not use it anymore.")
+				say("")
+				say_reward("Go back to Pung-Ho to ask for a new clay")
+				say("")
+				pc.remove_item(90047, 1)
+				pc.give_item2(90049, 1)
+				pc.setqf("tries", pc.getqf("tries") + 1)
+				set_state(failurebacktopungho)
+			elseif (delta_x * delta_x + delta_y * delta_y) >= 25 then
+				chat("Quest: I don't see anything here - this can't be the right spot!")
+				chat("Quest: Look elsewhere for clues!")
+			end
+		end
+	end
+
+	state failurebacktopungho begin
+		when letter begin
+			send_letter("The clay dried!")
+			local b = find_npc_by_vnum(20089)
+
+			if b != 0 then
+				target.vid("__TARGET1__", b, "Pung-Ho")
+			end
+		end
+		
+		when button or info begin
+			say_title("The clay dried out!")
+			say("")
+			say("You failed to find a trace in time!")
+			say("The Clay dried and is not useable anymore.")
+			say("")
+			say("Go back to Pung-Ho and ask him if he has some more clay!")
+			say("")
+		end
+	
+		when __TARGET1__.target.click or 20089.chat."I did not make it in time." begin
+			target.delete("__TARGET1__")
+			local a = 3 - pc.getqf("tries")
+			if pc.getqf("tries") < 3 then
+				say_title("Pung-Ho:")
+				say("")
+				say("That's too bad...")
+				say("I have "..a.." more clay to give you.")
+				say("Please remember that this is all I have!")
+				say("I won't have enough clay for more tries!")
+				say("")
+				say_reward("If you fail 3 times the quest will be considered failed!")
+				say_reward("So give it your best now!")
+				say("")
+				pc.remove_item(90049, 1)
+				pc.give_item2(90047, 1)
+				set_state(timeruntrace)
+			elseif pc.getqf("tries") == 3 then
+				say_title("Pung-Ho:")
+				say("")
+				say("What a shame, now I will never be able to help")
+				say("the snakes defend their tribe! We're lost...")
+				say("")
+				say("Get out of my way!!!")
+				say("-cries-")
+				say("")
+				say_reward("You failed to accomplish the quest.")
+				say("")
+				wait()
+				clear_letter()
+				pc.remove_item(90049, 1)
+				q.done()
+				set_state(COMPLETE)
+				local tpfail = pc.get_empire()
+				if tpfail == 0 then
+					pc.warp(469300,964200)
+				elseif tpfail == 1 then
+					pc.warp(55700,157900)
+				elseif tpfail == 2 then
+					pc.warp(969600,278400)
+				end
+			end
+		end
+	end
+	
+	state backtopungho begin
+		when letter begin
+			send_letter("I've got the proof!")
+			local c = find_npc_by_vnum(20089)
+			if c != 0 then
+				target.vid("__TARGET2__", c, "Pung-Ho")
+			end
+		end
+		
+		when button or info begin
+			say_title("I've found some weird scratches")
+			say("")
+			say("I'd better show these to Pung-Ho!")
+			say("Maybe he knows what they mean...")
+			say("")
+		end
+	
+		when __TARGET2__.target.click or 20089.chat."I've made this print here..." begin
+			target.delete("__TARGET2__")
+			if pc.count_item(90048) == 1 then
+				pc.remove_item(90048, 1)
+				say_title("Pung-Ho:")
+				say("")
+				say("Let me read this...")
+				setdelay(200)
+				say("")
+				resetdelay()
+				say("Dear Lord, they want to assassinate")
+				say("all male snakes to extinct our population")
+				say("This can not be! I can not let this happen!!")
+				say("")
+				wait()
+				say_title("Pung-Ho:")
+				say("")
+				say("Hold on... you look tough...")
+				say("What if you go and assassinate their queen?")
+				say("")
+				say("I am sure you can do this!")
+				----"123456789012345678901234567890123456789012345678901234567890"|
+				say("I will reward you with the most valuable goods I possess!!")
+				say("")
+				local acceptking = select("I'm your man", "That is too hard.")
+				if acceptking == 1 then
+					say_title("Pung-Ho:")
+					say("")
+					say("Thank you very much!")
+					say("Kill him and come to me for the reward!")
+					say("")
+					say_reward("Kill the Queen Spider and come back")
+					say_reward("to Pung-Ho after you've done the job.")
+					say("")
+					set_state(killspiderleader)
+				elseif acceptking == 2 then
+					say_title("Pung-Ho:")
+					say("")
+					say("I see... well in that case I will go there on my own.")
+					say("You shall have my thanks for bringing me this information!")
+					say("You have my thanks - here take this!")
+					say("")
+					say_reward("10.000.000 EXP received.")
+					pc.give_exp2(10000000)
+					q.done()
+					set_state(COMPLETE)
+				end
+			end
+		end
+	end
+	
+	state killspiderleader begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Find the Queen Spider")
+			q.set_title("Defeat the Queen Spider.")
+			q.start()
+		end
+
+		when info or button begin
+			say_title("Find the Queen Spider")
+			say("")
+			say("Find the Queen Spider at the end of the Spider Dungeon's")
+			say("second floor and kill her in order to thwart the spiders")
+			say("evil scheme and rescue the Snakes from becoming extinct!")
+			say("")
+		end
+		
+		when 2091.kill begin
+			say_pc_name()
+			say("")
+			say("I have slained the leader of the claw spiders")
+			say("Let's go back to Pung-Ho and report!")
+			say("")
+			set_state(report_success)
+		end
+	end
+	
+	state report_success begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Back to Pung-Ho")
+			q.set_title("You have defeated the Queen Spider.")
+			q.start()
+			local v = find_npc_by_vnum(20089)
+
+			if v != 0 then
+				target.vid("__TARGET3__", v, "Pung-Ho")
+			end
+
+		end
+
+		when info or button begin
+			say("")
+			say("Go back to Pung-Ho and report that you.")
+			say("have successfully completed the job.")
+			say("")
+		end
+		
+		when __TARGET3__.target.click or 20089.chat."Report your victory" begin
+			target.delete("__TARGET3__")
+			say_title("Pung-Ho:")
+			say("")
+			say("Great job!!!")
+			say("")
+			say("I am very proud of you, surely the claw spiders will learn")
+			say("the error of their ways and will stop threatening us!")
+			say("Everything will turn back to normal!")
+			say("")
+			say("You have deserved the best reward I can give!")
+			say("")
+			say_reward("20.000.000 EXP received.")
+			say_reward("1.700.000 Yang received.")
+			say_reward("3x Exorcism Scroll received.")
+			pc.change_money(1700000)
+			pc.give_exp2(20000000)
+			pc.give_item2(71001, 3)
+			q.done()
+			set_state(COMPLETE)
+		end
+	end
+	
+	state COMPLETE begin
+	end
+end

@@ -1,0 +1,142 @@
+quest sg_eventarena begin
+	state start begin
+		when login with pc.get_map_index() == 103 begin
+			if game.get_event_flag("sg_eventarena") == 0 and pc.is_gm() == false then
+				warp_to_village()
+			end
+		end
+                when 11001.chat."Mount Baekdu"
+                or 11003.chat."Mount Baekdu"
+                or 11005.chat."Mount Baekdu" with game.get_event_flag("sg_eventarena") > 0 begin
+                	say_title("Archer Guardian:")
+                	say("")
+                	say("The people are gathering at the pass in Mount Baekdu.")
+                	say("Let me see if you are prepared to endure the journey there.")
+                	say("")
+                	wait()
+                	if game.get_event_flag("sg_eventarena_open"..pc.get_empire()) == 0 then
+				say_title("Archer Guardian:")
+				say("")
+				----"111111222222333333444444555555666666777777888888999999000000"
+                		say("Sorry, your empire can't access the mountain at the moment.")
+                		say("")
+                		return
+                	end
+                	if game.get_event_flag("sg_eventarena_minlv") > pc.level then
+						say_title("Archer Guardian:")
+						say("")
+                		say("Sorry, you need level "..game.get_event_flag("sg_eventarena_minlv").." to join.")
+                		say("")
+                		return
+                	end
+                	if game.get_event_flag("sg_eventarena_maxlv") < pc.level then
+						say_title("Archer Guardian:")
+						say("")
+                		say("Your level is too high. A maximum of "..game.get_event_flag("sg_eventarena_maxlv").." is allowed.")
+                		say("")
+                		return
+                	end
+                	say_title("Archer Guardian:")
+                	say("")
+                	say("You are allowed to join.")
+                	say("Off to the mountains we go...")
+                	say("")
+                	wait()
+                	if pc.get_empire() == 1 then
+                		pc.warp(46942, 45372)
+                	elseif pc.get_empire() == 2 then
+                		pc.warp(20754, 55748)
+                	else
+                		
+                		pc.warp(45253, 83437)
+                	end
+                end
+                when 11001.chat."GM: Event Arena"
+                or 11003.chat."GM: Event Arena" 
+                or 11005.chat."GM: Event Arena" with pc.is_gm() begin
+                	say_title("Event Arena Manager")
+                	say("")
+	               	if game.get_event_flag("sg_eventarena") > 0 then
+                		msg = "Arena is open."
+                		statuschange = "Close"
+                		new = 0
+                	else
+                		msg = "Arena is closed."
+                		statuschange = "Open"
+                		new = 1
+                	end
+                	say(msg.." Current settings:")
+                	say("Minimum level: "..game.get_event_flag("sg_eventarena_minlv").." Maximum level: "..game.get_event_flag("sg_eventarena_maxlv").." ")
+                	say("")
+                	say("")
+                	local s=select("Edit Level requirement", "Edit allowed empires", statuschange.." Event Arena", "Exit")
+                	if s == 1 then
+                		say("Enter minimum level:")
+                		say("")
+                		local min = input()
+            			say("Enter maximum level")
+            			say("")
+            			local max = input()
+            			if min > max then
+            				say("Maximum level must be higher than minimum!")
+            				say("")
+            				return
+            			end
+				game.set_event_flag("sg_eventarena_minlv",min)
+				game.set_event_flag("sg_eventarena_maxlv",max)
+				say("Level requirement has been set.")
+			elseif s == 2 then
+				if game.get_event_flag("sg_eventarena_open1") > 0 then
+					statuschange1 = "Disallow"
+					new1 = 0
+				else
+					statuschange1 = "Allow"
+					new1 = 1
+				end
+				
+				if game.get_event_flag("sg_eventarena_open2") > 0 then
+					statuschange2 = "Disallow"
+					new2 = 0
+				else
+					statuschange2 = "Allow"
+					new2 = 1
+				end
+				
+				if game.get_event_flag("sg_eventarena_open3") > 0 then
+					statuschange3 = "Disallow"
+					new3 = 0
+				else
+					statuschange3 = "Allow"
+					new3 = 1
+				end
+				s=select(statuschange1.." Pandemonia Kingdom", statuschange2.." Asmodia Kingdom", statuschange3.." Elgoria Kingdom", "Cancel")
+				if s == 1 then
+					game.set_event_flag("sg_eventarena_open1",new1)
+					say("Pandemonia Kingdom "..statuschange1.."ed")
+					say("")
+				elseif s ==2 then
+					game.set_event_flag("sg_eventarena_open2",new2)
+					say("Asmodia Kingdom "..statuschange2.."ed")
+					say("")
+				elseif s== 3 then
+					game.set_event_flag("sg_eventarena_open3",new3)
+					say("Elgoria Kingdom "..statuschange3.."ed")
+					say("")
+				end
+                	elseif s == 3 then
+                		if new == 0 then
+                			notice_all("Mountain Pass is closing now.")
+                			warp_all_to_village(103, 10)
+                		else
+                		        notice_all("Mountain Pass is open! The Archer Guardian")
+                			notice_all("in town is recruiting the bravest soldiers.")
+                		end
+                		game.set_event_flag("sg_eventarena",new)
+                		say("Event arena is now "..statuschange..".")
+                		say("")
+                	end
+                end
+     end
+end
+                	
+                	

@@ -1,0 +1,427 @@
+quest egg_hunt begin
+	state start begin
+		when 50183.use with game.get_event_flag("e_h") > 0 begin
+			if pc.get_map_index() != pc_get_village_map_index(1) then
+				chat("You can only find eggs in your first hometown.")
+				return
+			end
+			local t = get_global_time()
+			if pc.getqf("last_use") + 3 > t then
+				chat("The Easter Spirit Gemstone needs to regenerate its power, please wait "..(pc.getqf("last_use")+3)-t.." seconds before using it again.")
+				return;
+			else
+				pc.setqf("last_use", t)
+			end
+			local seed = game.get_event_flag("egg_hunt_seed_e"..tostring(pc.get_empire()))
+			local servertable = bitflags(game.get_event_flag("egg_hunt_flags_e"..tostring(pc.get_empire())), 10)
+			if seed + game.get_event_flag("egg_hunt_respawndelay")*60 < t then
+				game.set_event_flag("egg_hunt_seed_e"..tostring(pc.get_empire()), t)
+				seed = t
+				servertable = bitflags(0, 10)
+				game.set_event_flag("egg_hunt_flags_e"..tostring(pc.get_empire()), 0)
+			end
+			
+			local positions = {
+				[1] =	{	{671,591},
+							{713,592},
+							{732,550},
+							{786,594},
+							{818,616},
+							{867,695},
+							{845,729},
+							{837,754},
+							{856,807},
+							{706,843},
+							{671,863},
+							{703,911},
+							{728,943},
+							{703,971},
+							{632,969},
+							{616,992},
+							{561,1012},
+							{486,984},
+							{462,951},
+							{486,909},
+							{441,888},
+							{386,839},
+							{371,885},
+							{366,963},
+							{268,1013},
+							{270,1053},
+							{129,1088},
+							{119,1038},
+							{140,976},
+							{121,923},
+							{137,869},
+							{180,870},
+							{196,847},
+							{176,779},
+							{212,790},
+							{169,730},
+							{119,723},
+							{160,659},
+							{175,607},
+							{198,557},
+							{185,517},
+							{161,474},
+							{210,475},
+							{256,466},
+							{284,453},
+							{301,458},
+							{310,423},
+							{225,428},
+							{169,412},
+							{189,366},
+							{222,362},
+							{255,377},
+							{294,361},
+							{343,327},
+							{345,294},
+							{391,288},
+							{333,259},
+							{256,269},
+							{238,206},
+							{246,170},
+							{204,177},
+							{176,178},
+							{145,147},
+							{165,121},
+							{213,98},
+							{252,101},
+							{286,106},
+							{299,145},
+							{330,148},
+							{362,182},
+							{345,207},
+							{318,221},
+							{398,143},
+							{420,116},
+							{455,151},
+							{467,170},
+							{456,218},
+							{478,227},
+							{512,205},
+							{552,186},
+							{549,129},
+							{573,84},
+							{597,42},
+							{632,64},
+							{654,106},
+							{634,138},
+							{656,168},
+							{624,215},
+							{733,111},
+							{778,102},
+							{771,154},
+							{733,197},
+							{714,204},
+							{704,255},
+							{717,285},
+							{818,285},
+							{837,301},
+							{894,256},
+							{937,270},
+							{902,331},
+						},
+				[2] =	{	
+							{524,547},
+							{558,505},
+							{510,518},
+							{575,478},
+							{525,485},
+							{508,544},
+							{530,619},
+							{500,729},
+							{537,783},
+							{710,785},
+							{696,616},
+							{719,529},
+							{909,557},
+							{924,530},
+							{914,684},
+							{956,506},
+							{861,429},
+							{717,352},
+							{719,287},
+							{683,226},
+							{644,182},
+							{606,120},
+							{569,131},
+							{458,208},
+							{438,287},
+							{422,325},
+							{283,181},
+							{300,112},
+							{394,157},
+							{275,426},
+							{261,413},
+							{190,544},
+							{174,548},
+							{316,585},
+							{211,683},
+							{224,757},
+							{208,866},
+							{190,869},
+							{233,980},
+							{183,996},
+							{251,1105},
+							{307,1076},
+							{496,967},
+							{477,981},
+							{450,1157},
+							{248,1200},
+							{195,1216},
+							{594,1139},
+							{613,1168},
+							{672,1121},
+							{625,975},
+							{835,1027},
+							{829,1097},
+							{927,1151},
+							{852,832},
+							{880,838},
+							{899,797},
+							{932,775},
+							{741,848},
+							{640,846},
+							{714,785},
+							{771,681},
+							{928,56},
+							{909,84},
+							{795,164},
+							{653,174},
+							{574,206},
+							{472,360},
+							{469,379},
+							{426,447},
+							{298,647},
+							{315,679},
+							{297,816},
+							{381,837},
+							{324,943},
+							{504,981} ,
+							{497,1054},
+							{733,1133},
+							{862,958},
+							{876,1127},
+							{819,1134},
+							{812,639},
+							{872,528},
+							{712,462},
+							{640,580},
+							{640,640},
+							{507,811},
+							{690,725},
+							{625,114},
+							{497,181},
+							{389,419},
+							{189,572},
+							{192,552},
+							{814,942},
+							{798,780},
+							{946,666},
+							{810,606},
+							{684,541},
+							{362,308},
+							{372,1064},
+						},
+				[3]	=	{
+							{234,688},
+							{205,687},
+							{208,711},
+							{225,765},
+							{185,805},
+							{158,817},
+							{119,795},
+							{97,768},
+							{105,803},
+							{78,862},
+							{54,936},
+							{108,965},
+							{224,923},
+							{100,1000},
+							{99,1034},
+							{144,1057},
+							{91,1121},
+							{99,1141},
+							{112,1141},
+							{159,1151},
+							{156,1135},
+							{168,1122},
+							{208,1103},
+							{293,1025},
+							{349,1105},
+							{375,1109},
+							{409,1034},
+							{425,1113},
+							{570,1103},
+							{551,1037},
+							{637,1021},
+							{653,1225},
+							{692,1185},
+							{673,1139},
+							{727,1079},
+							{701,1018},
+							{768,1013},
+							{689,934},
+							{779,918},
+							{724,814},
+							{690,766},
+							{721,722},
+							{659,706},
+							{650,751},
+							{594,710},
+							{549,715},
+							{573,632},
+							{556,613},
+							{539,616},
+							{469,630},
+							{437,569},
+							{391,555},
+							{313,544},
+							{331,437},
+							{432,471},
+							{509,475},
+							{551,506},
+							{612,511},
+							{620,424},
+							{641,495},
+							{693,523},
+							{713,464},
+							{763,473},
+							{781,433},
+							{719,417},
+							{646,394},
+							{612,343},
+							{614,301},
+							{719,260},
+							{741,214},
+							{680,227},
+							{838,345},
+							{612,239},
+							{706,149},
+							{744,100},
+							{662,82},
+							{561,195},
+							{467,106},
+							{473,231},
+							{348,236},
+							{272,226},
+							{262,132},
+							{186,152},
+							{161,228},
+							{157,312},
+							{54,301},
+							{91,387},
+							{188,394},
+							{236,308},
+							{302,263},
+							{336,340},
+							{285,415},
+							{275,471},
+							{278,672},
+							{270,636},
+							{348,740},
+							{302,807},
+							{388,750},
+							{425,717},
+							{414,538},
+						},
+			}
+			
+			local spawntable = egg_hunt.build_spawntable(positions[pc.get_empire()], 10, seed)
+			local my_x, my_y = pc.get_local_x(), pc.get_local_y()
+			
+			
+			local shortest_distance = -1
+			local nearest = 0
+			for i = 1, 10, 1 do
+				local distance = egg_hunt.get_distance(spawntable[i][1], spawntable[i][2], my_x, my_y)
+				if servertable[i] == 0 and (shortest_distance == -1 or distance < shortest_distance) then
+					shortest_distance = distance
+					nearest = i
+				end
+			end
+			
+			if shortest_distance == -1 then
+				chat("There Easter Spirit Gemstone does not move. There seem to be no eggs around right now.")
+				return
+			elseif shortest_distance <= 4 then
+				chat("You have found an easteregg!")
+				local randomegg = number(1,20)
+				local eggvnum = tonumber(50159+randomegg)
+				pc.give_item2(eggvnum,1)
+				servertable[nearest] = 1
+				game.set_event_flag("egg_hunt_flags_e"..tostring(pc.get_empire()), bitfield(servertable))
+				--[[
+				for i = 1, 10, 1 do
+					if servertable[i] == 0 then
+						game.set_event_flag("egg_hunt_flags_e"..tostring(pc.get_empire()), bitfield(servertable))
+						return
+					end
+				end
+				game.set_event_flag("egg_hunt_flags_e"..tostring(pc.get_empire()), 0)
+				game.set_event_flag("egg_hunt_seed_e"..tostring(pc.get_empire()))
+				return
+				]]
+			end
+			
+			local orientation = {
+				[1] = "northern",
+				[2] = "north-eastern",
+				[3] = "eastern",
+				[4] = "south-eastern",
+				[5]	= "southern",
+				[6] = "south-western",
+				[7] = "western",
+				[8] = "north-western",
+				[9] = "northern",
+			}
+			
+			local alpha = -1 * math.atan2(spawntable[nearest][1] - my_x, spawntable[nearest][2] - my_y) / math.pi * 180 - 90 - 90
+			if alpha < 0 then
+				alpha = alpha + 360
+			end
+			
+			
+			local oid = alpha / 45
+			local remainder = math.mod(alpha, 45)
+			if remainder > 0 then
+				if remainder < 45/2 then
+					oid = (alpha - remainder) / 45
+				else
+					oid = (alpha + 45 - remainder) / 45
+				end
+			end
+			if orientation[tonumber(oid) + 1] == nil then
+				chat("The Easter Spirit Gemstone has lost track of the egg. Somebody must have collected it!")
+				return
+			end
+			chat("The Easter Spirit Gemstone tends in "..tostring(orientation[tonumber(oid) + 1]).." direction.")
+		end
+		
+		function get_distance(x1, y1, x2, y2)
+			return math.sqrt((x1 - x2)^2 + (y1 - y2)^2)
+		end
+		
+		function build_spawntable(positions, outputcount, seed)
+			local inputposcount = table.getn(positions)
+			if inputposcount < outputcount then
+				return positions
+			end
+			local result = {}
+			math.randomseed(seed)
+			local poscount = 0
+			while poscount < outputcount do
+				id = math.random(inputposcount)
+				if positions[id] != nil then
+					poscount = poscount + 1
+					table.insert(result, positions[id])
+					positions[id] = nil
+				end
+			end
+			return result
+		end
+		
+	end
+end

@@ -1,0 +1,198 @@
+quest find_squareguard begin
+        state start begin
+        end
+
+        state run begin
+                when login with pc.level<=5 begin
+                        set_state(find)
+                end
+        end
+        state find begin
+                when letter begin
+                        local find_npc_vnum = 0
+                        if pc.get_empire()==1 then
+                                find_npc_vnum = 11000
+                        elseif pc.get_empire()==2 then
+                                find_npc_vnum = 11002
+                        elseif pc.get_empire()==3 then
+                                find_npc_vnum = 11004
+                        end
+
+                        local v=find_npc_by_vnum(find_npc_vnum)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Guardian")
+                        end
+                end
+                when letter begin
+                        send_letter("The Guardian")
+                end
+                when button or info begin
+                        say_title("The Guardian")
+                        say("")
+                        say("Approach the center of the village and speak to the Guardian.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        say_title("The Guardian:")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("")
+                        say("Welcome to our village adventurer!")
+                        say("I hope that you are able to perform a task for me?")
+                        say("")
+                        say("If I give you 200 Yang, would you go to the General Store")
+                        say("and buy me a red potion?")
+                        say("")
+			say("Unfortunately, I must stay here.")
+                        say("")
+                        say("Use your mini map to locate the General Store using the")
+                        say("blinking red dot.")
+                        say("")
+			wait()
+			say_title("Task Information:")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("You have received 200 Yang from the Guardian. Go to the")
+			say("General Store and purchase a Red Potion. You can use Yang")
+			say("to purchase items and services from various villagers.")
+			say("")
+			pc.changemoney(200)
+			set_state(buy)
+                end
+        end
+        state buy begin
+                when letter begin
+                        send_letter("Buy a Red potion")
+
+                        local v=find_npc_by_vnum(9003)
+                        if v!=0 then
+                                target.vid("__TARGET__", v, mob_name(9003))
+                        end
+
+                end
+                when button or info begin
+                        say_title("Task Information:")
+                        say("")
+                        say("Buy a Red potion at the General Store and return with")
+                        say("it to the Guardian.")
+                        say("")
+
+                end
+                when 11000.chat."Where can I buy a red potion?" or
+                        11002.chat."Where can I buy a red potion?" or
+                        11004.chat."Where can I buy a red potion?" begin
+                        say_title("The Guardian:")
+                        say("")
+                        say("You can buy one at the General Store. Her location is")
+                        say("indicated on the minimap by a blinking red dot.")
+                        say("")
+                end
+                when __TARGET__.target.click  begin
+                        target.delete("__TARGET__")
+                        say_title("General Store:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Welcome!")
+                        say("")
+                        say("Oh, so the Guardian has sent you? He needs a red potion?")
+                        say("I will give you 5 Red potions.")
+                        say("")
+                        say("Here you are. These are for the regeneration of Health")
+                        say("Points (HP) and are quite tasty.")
+                        say("")
+                        say("")
+                        wait()
+                        say_title("General Store:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("You may be new, but I am confident that you will be a regular")
+                        say("customer soon. That is why these potions are for free now.")
+                        say("")
+                        say("Please come again.")
+                        say("")
+                        say_title("Task Information:")
+                        say("")
+                        say("You have received 5 red potions from the General Store.")
+                        say("Red potions regenerate your Health Points (HP).")
+                        say("")
+                        pc.give_item2(27001,5)
+                        setstate(deliver)
+                end
+        end
+        state deliver begin
+                when letter begin
+                	send_letter("Return to the Guardian")
+                        local find_npc_vnum = 0
+                        if pc.get_empire()==1 then
+                                find_npc_vnum = 11000
+                        elseif pc.get_empire()==2 then
+                                find_npc_vnum = 11002
+                        elseif pc.get_empire()==3 then
+                                find_npc_vnum = 11004
+                        end
+
+                        local v=find_npc_by_vnum(find_npc_vnum)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, mob_name(find_npc_vnum))
+                        end
+                end
+                when button or info begin
+                        say_title("Task Information:")
+                        say("")
+                        say("Return to the Guardian and give him his potions.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+                	if pc.countitem(27001)<1 then
+				target.delete("__TARGET__")
+				say_title("The Guardian:")
+				say("")
+				----"123456789012345678901234567890123456789012345678901234567890"|
+				say("So you did not acquire the red potion I asked for?")
+				say("")
+				say("Never mind, I will allow you to keep the Yang anyway. But")
+				say("you won't go very far if you keep avoiding your work.")
+				say("")
+				say("By the way, the teachers have asked for you.")
+				say("They would like to meet you.")
+				say("")
+			else
+				say_title("Guardian:")
+				say("")
+				----"123456789012345678901234567890123456789012345678901234567890"|
+				say("Thank you for the potion! Now I am better prepared to do my")
+				say("duty to the village.")
+				say("")
+				say("I am not only the village Guardian, but a valuable source")
+				say("of information. I announce useful information for all to")
+				say("hear, and I offer my help and protection to those who need")
+				say("it. I am also responsible for Guild business.")
+				say("")
+				say("If you become interested in founding your own Guild some")
+				say("day, come to me.")
+				say("")
+				wait()
+				say_title("The Guardian:")
+				say("")
+				say("By the way, the teachers asked for you. They would like")
+				say("to meet you.")
+				say("")
+				say("Oh, I nearly forgot! As sign of my appreciation, you may")
+				say("keep the change from the money and this little gift.")
+				say("")
+				say("See you soon.")
+				say("")
+				pc.removeitem(27001, 1)
+				pc.give_item2(15003, 1)
+			end
+			clear_letter()
+			set_quest_state("find_skillteacher", "find")
+			set_state(__COMPLETE__)
+                end
+        end
+        state __COMPLETE__ begin
+        end
+end

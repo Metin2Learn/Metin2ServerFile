@@ -1,0 +1,43 @@
+quest hl_entrance begin
+	state start begin
+		when 20090.chat."Request entrance to Heaven's Lair" begin
+			say_title("Heuk-Young")
+			say("")
+			say("Behold!")
+			say("Past me lies the dangerous Heaven's Lair!")
+			say("Dark souls have been sealed within these caves")
+			say("and I can not grant permission to these unless")
+			say("you prove yourself worthy.")
+			say("")
+			if pc.get_level() < 75 then
+				say_reward("Level 75 is required to enter.")
+				say("")
+				return
+			end
+			say("You'll need a Passage as proof that your king")
+			say("trusts you in braving these hardships.")
+			say("")
+			say_reward("A passage is required to enter Heaven's Lair.")
+			say_reward("Do you still want to enter?")
+			say("")
+			local q = select("Enter Heaven's Lair", "Turn back.")
+			if q == 1 then
+				if pc.count_item(76019) > 0 then
+					pc.remove_item(76019,1)
+					pc.warp(10112,1213216)					
+				elseif pc.count_item(71095) > 0 then
+					pc.remove_item(71095,1)
+					pc.warp(10112,1213216)
+				else
+					say_title("Heuk-Young")
+					say("")
+					say("I am afraid I can not let you pass.")
+					say("It's for your own safety.")
+					say("")
+					say_reward("You need a Passage to enter.")
+					say("")				
+				end
+			end
+		end
+	end
+end

@@ -1,0 +1,315 @@
+quest duban_pot_shop begin
+	state start begin
+	end
+	
+	state run begin
+		when 33005.chat."Create Potions" begin
+			local pot_table = select("Create Antidote Potion","Create Potion Amplifier","Create Life Scavenger Potion","Create Magic Wind Potion","Cancel")
+			if pot_table == 1 then
+				local potTab = {}
+				local pos = 1
+				for i = 1,math.min(pc.getf("rep_wl_58","quest_level"),3),1 do
+					local name = {"Create Antidote Potion","Create Great Antidote Potion","Create Strong Antidote Potion"}
+					table.insert(potTab, pos, name[i])
+					pos = pos + 1
+				end
+				table.insert(potTab, pos, "Cancel")
+				local s = select_table(potTab)
+				if potTab[s] == "Create Antidote Potion" then
+					say_title("Duban:")
+					say("")
+					say("An Antidote Potion gives you 10% Poison Resistance")
+					say("for a duration of 15 minutes.")
+					say("")
+					say("To create this I need a Doctors Code and 5 Dandelions.")
+					say("")
+					say("Do you want to create a Antidote Potion?")
+					say("")
+					local dec = select("Create Potion","Cancel")
+					if dec == 1 then
+						if pc.count_item(90313) > 0 and pc.count_item(50729) >= 5 then
+							pc.remove_item(90313,1)
+							pc.remove_item(50729,5)
+							pc.give_item2(90301)
+						else
+							syschat("You do not have enough Items to create this.")
+						end
+					end
+				end
+				
+				if potTab[s] == "Create Great Antidote Potion" then
+					say_title("Duban:")
+					say("")
+					say("A Great Antidote Potion gives you 15% Poison Resistance")
+					say("for a duration of 30 minutes.")
+					say("")
+					say("To create this I need a Doctors Code and 7 Dandelions.")
+					say("")
+					say("Do you want to create a Great Antidote Potion?")
+					say("")
+					local dec = select("Create Potion","Cancel")
+					if dec == 1 then
+						if pc.count_item(90313) > 0 and pc.count_item(50729) >= 7 then
+							pc.remove_item(90313,1)
+							pc.remove_item(50729,7)
+							pc.give_item2(90302)
+						else
+							syschat("You do not have enough Items to create this.")
+						end
+					end
+				end
+				
+				if potTab[s] == "Create Strong Antidote Potion" then
+					say_title("Duban:")
+					say("")
+					say("A Strong Antidote Potion gives you 20% Poison Resistance")
+					say("for a duration of 30 minutes.")
+					say("")
+					say("To create this I need a Doctors Code and 10 Dandelions.")
+					say("")
+					say("Do you want to create a Strong Antidote Potion?")
+					say("")
+					local dec = select("Create Potion","Cancel")
+					if dec == 1 then
+						if pc.count_item(90313) > 0 and pc.count_item(50729) >= 10 then
+							pc.remove_item(90313,1)
+							pc.remove_item(50729,10)
+							pc.give_item2(90303)
+						else
+							syschat("You do not have enough Items to create this.")
+						end
+					end
+				end
+			elseif pot_table == 2 then
+				local potTab = {}
+				local pos = 1
+				for i = 1,math.min(pc.getf("rep_wl_58","quest_level"),3),1 do
+					local name = {"Create Potion Amplifier","Create Great Potion Amplifier","Create Strong Potion Amplifier"}
+					table.insert(potTab, pos, name[i])
+					pos = pos + 1
+				end
+				table.insert(potTab, pos, "Cancel")
+				local s = select_table(potTab)
+				if potTab[s] == "Create Potion Amplifier" then
+					say_title("Duban:")
+					say("")
+					say("A Potion Amplifier increases the healing effect of")
+					say("all Red and Blue Potion by 50% for 30 minutes.")
+					say("")
+					say("To create this I need a Doctors Code and 5 Saffron.")
+					say("")
+					say("Do you want to create a Potion Amplifier?")
+					say("")
+					local dec = select("Create Potion Amplifier","Cancel")
+					if dec == 1 then
+						if pc.count_item(90313) > 0 and pc.count_item(50730) >= 5 then
+							pc.remove_item(90313,1)
+							pc.remove_item(50730,5)
+							pc.give_item2(90304)
+						else
+							syschat("You do not have enough Items to create this.")
+						end
+					end
+				end
+				
+				if potTab[s] == "Create Great Potion Amplifier" then
+					say_title("Duban:")
+					say("")
+					say("A Great Potion Amplifier increases the healing effect")
+					say("of all Blue and Red Potion by 50% for 1 hour.")
+					say("")
+					say("To create this I need a Doctors Code and 7 Saffron.")
+					say("")
+					say("Do you want to create a Great Potion Amplifier?")
+					say("")
+					local dec = select("Create Potion Amplifier","Cancel")
+					if dec == 1 then
+						if pc.count_item(90313) > 0 and pc.count_item(50730) >= 7 then
+							pc.remove_item(90313,1)
+							pc.remove_item(50730,7)
+							pc.give_item2(90305)
+						else
+							syschat("You do not have enough Items to create this.")
+						end
+					end
+				end
+				
+				if potTab[s] == "Create Strong Potion Amplifier" then
+					say_title("Duban:")
+					say("")
+					say("A Strong Potion Amplifier increases the healing effect")
+					say("of all Blue and Red Potion by x2 for 30 minutes.")
+					say("")
+					say("To create this I need a Doctors Code and 10 Saffron.")
+					say("")
+					say("Do you want to create a Strong Potion Amplifier?")
+					say("")
+					local dec = select("Create Potion Amplifier","Cancel")
+					if dec == 1 then
+						if pc.count_item(90313) > 0 and pc.count_item(50730) >= 10 then
+							pc.remove_item(90313,1)
+							pc.remove_item(50730,10)
+							pc.give_item2(90306)
+						else
+							syschat("You do not have enough Items to create this.")
+						end
+					end
+				end
+			elseif pot_table == 3 then
+				local potTab = {}
+				local pos = 1
+				for i = 1,math.min(pc.getf("rep_wl_58","quest_level"),3),1 do
+					local name = {"Create Life Scavenger Potion","Create Great Life Scavenger Potion","Create Strong Life Scavenger Potion"}
+					table.insert(potTab, pos, name[i])
+					pos = pos + 1
+				end
+				table.insert(potTab, pos, "Cancel")
+				local s = select_table(potTab)
+				if potTab[s] == "Create Life Scavenger Potion" then
+					say_title("Duban:")
+					say("")
+					say("A Life Scavenger Potion gives you a 10% Chance to")
+					say("restore 3% of your maximum HP when you kill an enemy")
+					say("for a duration of 10 minutes.")
+					say("")
+					say("To create this I need a Doctors Code and 5 Jujube.")
+					say("")
+					say("Do you want to create a Life Scavenger Potion?")
+					say("")
+					local dec = select("Create Potion","Cancel")
+					if dec == 1 then
+						if pc.count_item(90313) > 0 and pc.count_item(50731) >= 5 then
+							pc.remove_item(90313,1)
+							pc.remove_item(50731,5)
+							pc.give_item2(90307)
+						else
+							syschat("You do not have enough Items to create this.")
+						end
+					end
+				end
+				
+				if potTab[s] == "Create Great Life Scavenger Potion" then
+					say_title("Duban:")
+					say("")
+					say("A Great Life Scavenger Potion gives you a 10% Chance to")
+					say("restore 3% of your maximum HP when you kill an enemy")
+					say("for a duration of 30 minutes.")
+					say("")
+					say("To create this I need a Doctors Code and 7 Jujube.")
+					say("")
+					say("Do you want to create a Great Life Scavenger Potion?")
+					say("")
+					local dec = select("Create Potion","Cancel")
+					if dec == 1 then
+						if pc.count_item(90313) > 0 and pc.count_item(50731) >= 7 then
+							pc.remove_item(90313,1)
+							pc.remove_item(50731,7)
+							pc.give_item2(90308)
+						else
+							syschat("You do not have enough Items to create this.")
+						end
+					end
+				end
+				
+				if potTab[s] == "Create Strong Life Scavenger Potion" then
+					say_title("Duban:")
+					say("")
+					say("A Great Life Scavenger Potion gives you a 10% Chance to")
+					say("restore 5% of your maximum HP when you kill an enemy")
+					say("for a duration of 10 minutes.")
+					say("")
+					say("To create this I need a Doctors Code and 10 Jujube.")
+					say("")
+					say("Do you want to create a Strong Life Scavenger Potion?")
+					say("")
+					local dec = select("Create Potion","Cancel")
+					if dec == 1 then
+						if pc.count_item(90313) > 0 and pc.count_item(50731) >= 10 then
+							pc.remove_item(90313,1)
+							pc.remove_item(50731,10)
+							pc.give_item2(90309)
+						else
+							syschat("You do not have enough Items to create this.")
+						end
+					end
+				end
+			elseif pot_table == 4 then
+				local potTab = {}
+				local pos = 1
+				for i = 1,math.min(pc.getf("rep_wl_58","quest_level"),3),1 do
+					local name = {"Create Magic Wind Potion","Create Great Magic Wind Potion","Create Strong Magic Wind Potion"}
+					table.insert(potTab, pos, name[i])
+					pos = pos + 1
+				end
+				table.insert(potTab, pos, "Cancel")
+				local s = select_table(potTab)
+				if potTab[s] == "Create Magic Wind Potion" then
+					say_title("Duban:")
+					say("")
+					say("A Magic Wind Potion makes you immune to the")
+					say("slow status ailment for 10 minutes")
+					say("")
+					say("To create this I need a Doctors Code and 5 Burdock.")
+					say("")
+					say("Do you want to create a Magic Wind Potion?")
+					say("")
+					local dec = select("Create Potion","Cancel")
+					if dec == 1 then
+						if pc.count_item(90313) > 0 and pc.count_item(50732) >= 5 then
+							pc.remove_item(90313,1)
+							pc.remove_item(50732,5)
+							pc.give_item2(90310)
+						else
+							syschat("You do not have enough Items to create this.")
+						end
+					end
+				end
+				
+				if potTab[s] == "Create Great Magic Wind Potion" then
+					say_title("Duban:")
+					say("")
+					say("A Great Magic Wind Potion makes you immune to the")
+					say("slow status ailment for 30 minutes")
+					say("")
+					say("To create this I need a Doctors Code and 7 Burdock.")
+					say("")
+					say("Do you want to create a Great Magic Wind Potion?")
+					say("")
+					local dec = select("Create Potion","Cancel")
+					if dec == 1 then
+						if pc.count_item(90313) > 0 and pc.count_item(50732) >= 7 then
+							pc.remove_item(90313,1)
+							pc.remove_item(50732,7)
+							pc.give_item2(90311)
+						else
+							syschat("You do not have enough Items to create this.")
+						end
+					end
+				end
+				
+				if potTab[s] == "Create Strong Magic Wind Potion" then
+					say_title("Duban:")
+					say("")
+					say("A Great Magic Wind Potion makes you immune to the")
+					say("slow status ailment for 60 minutes")
+					say("")
+					say("To create this I need a Doctors Code and 10 Burdock.")
+					say("")
+					say("Do you want to create a Strong Magic Wind Potion?")
+					say("")
+					local dec = select("Create Potion","Cancel")
+					if dec == 1 then
+						if pc.count_item(90313) > 0 and pc.count_item(50732) >= 10 then
+							pc.remove_item(90313,1)
+							pc.remove_item(50732,10)
+							pc.give_item2(90312)
+						else
+							syschat("You do not have enough Items to create this.")
+						end
+					end
+				end
+			end
+		end
+	end
+end
+				

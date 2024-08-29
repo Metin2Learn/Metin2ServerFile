@@ -1,0 +1,337 @@
+quest kill_straydog begin
+	state start begin
+		when 20008.chat."Annoying Wild dogs!!" with number(1, 10)==1 and pc.level>=25 begin
+			say_title("Octavio:")
+			say("")
+			say("Welcome! You have probably heard of the annoying Wild Dogs.")
+			say("The beasts are making our lives hard, even the village is")
+			say("hunted by them. You are not secure wherever you are.")
+			say("")
+			say("For this reason I started a competition!")
+			say("Hunt as many Wild Dogs as you can in the shortest time.")
+			say("We're awaiting tourists and that's why it has to be done fast.")
+			say("If you are fast enough you will get a reward.")
+			say("")
+			local b=select("You want to participate", "You have no interest?")
+			if 1==b then
+				say_title("Me:")
+				say("")
+				say("Yes, I want to participate.")
+				say("I will start right away.")
+				say("I will return as soon I finish it.")
+				say("")
+			elseif 2==b then
+				say_title("Me:")
+				say("")
+				say("I already have enough to do.")
+				say("I can't do anything more.")
+				say("You need to find someone else.")
+				say("")
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+			
+	state recv begin
+		when login with number(1, 10)==1 and pc.level>=25 and pc.level<=35 begin
+			setstate(join)
+		end
+		
+		when 20008.chat."How does it go with the preparation for the competition for the wild dog hunt?" begin
+			say_title("Octavio:")
+			say("")
+			say("I'm not done yet.")
+			say("It's not that easy.")
+			say("I will soon give you a result.")
+			say("")
+		end
+	end
+			
+	state join begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Instructions")
+			q.set_title("The instructions for the competition for the wild dog hunt")
+			q.start()
+		end
+					
+		when button or info begin
+			say_title("Octavio's Wild Dog Hunting Festival")
+			say("")
+			say("For killing 1000 Wild Dogs, the rewards are the following:")
+			say("")
+			say("    1. Rank : 300000 Yang (Within 30 Minutes)")
+			say("    2. Rank : 100000 Yang (Within 40 Minutes)")
+			say("    3. Rank : 50000 Yang (Within 50 Minutes)")
+			say("")
+			say("                 - The host Octavio -")
+			say("")
+			say("Do you want to participate in the competition of")
+			say("the Wild Dog hunt from Octavio?")
+			local b=select("The instructions", "Participate ", "Don't participate")
+			if 1==b then
+				if pc.getqf("best_time")==0 then
+					say("Yet you haven't participated in it.")
+				else
+					say("The 1000 Wild dog hunt")
+					say("")
+					say("The shortest hunt time."..(math.floor(pc.getqf("best_time")/60)).." Minute")
+					say("The prior hunt time.  "..(math.floor(pc.getqf("prev_time")/60)).." Minute")
+				end
+			elseif 2==b then
+				setstate(desc)
+			elseif 3==b then
+				setstate(start)
+				q.done()
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+			
+	state desc begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Instructions")
+			q.set_title("The instructions for the wild dog hunt")
+			q.start()
+		end
+					
+		when button begin
+			say_title("The instructions for the wild dog hunt")
+			say("")
+			say("This is very easy!")
+			say("Hunt as fast as possible 1000 Wild dogs")
+			say("The first three ranks are rewarded.")
+			say("Please, do your best!")
+			say("")
+			say("But you only have three chances!!")
+			say("")
+			say("[Start] When you press Start it will be recorded")
+			say("")
+			local b=select("Start", "Stop", "Cancel")
+			if 1==b then
+				pc.setqf("life", 2)
+				setstate(game)
+			elseif 2==b then
+			elseif 3==b then
+				setstate(start)
+				q.done()
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+			
+	state game begin
+		when 101.party_kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+			q.set_counter("The number of the remaining wild dogs", 1000-pc.getqf("kill_count"))
+		end
+		
+		when enter begin
+			pc.setqf("start_time", get_time())
+			pc.setqf("kill_count", 0)
+		end
+					
+		when leave begin
+			q.done()
+		end
+					
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Hunt the 1000 Wild dogs!")
+			q.set_title("Hunt the 1000 Wild dogs!")
+			q.start()
+		end
+					
+		when button or info begin
+			say_title("Hunt the 1000 Wild dogs!")
+			say("")
+			say("When you have killed all 1000 wild dogs,")
+			say("go to Octavio and receive the price.")
+			say("")
+			say("Hunted amount "..(pc.getqf("kill_count")).."")
+			say("Passed time "..(math.floor((get_time()-pc.getqf("start_time"))/60)).."")
+			say("")
+			say("(remaining chances "..(pc.getqf("life"))..")")
+			local b=select("Continue", "New beginning", "Abandon")
+			if 1==b then
+			elseif 2==b then
+				if pc.getqf("life")>0 then
+					say("In renewed attempt the old results are deleted")
+					say("Are you sure you want to start all over again?")
+					say("")
+					local b=select("Yes", "No")
+					if 1==b then
+						setstate(game)
+						q.done()
+					elseif 2==b then
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("Unfortunately this is the last chance!")
+				end
+			elseif 3==b then
+				say("Are you sure you want to quit the Wild Dog hunt?")
+				say("")
+				local b=select("Yes", "No")
+				if 1==b then
+					setstate(start)
+					q.done()
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+
+		when 101.party_kill with pc.getf("kill_straydog","kill_count") >= 1000 begin
+			pc.setqf("game_time", (get_time()-pc.getqf("start_time")))
+			setstate(report)
+		end
+	end
+			
+	state report begin
+		when letter begin
+			local v=find_npc_by_vnum(20008)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "")
+			end
+		end
+					
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Completion of the 1000 Wild dog hunt!!")
+			q.set_title("Completion of the 1000 Wild dog hunt!!")
+			q.start()
+		end
+					
+		when button begin
+			say_title("Completion of the 1000 Wild dog hunt!!")
+			say("")
+			say("The Wild dogs"..(pc.getqf("kill_count")).."You have hunted the Wild dogs")
+			say("Go to Octavio")
+			say("")
+			say("Passed Time "..(math.floor(pc.getqf("game_time")/60)).."")
+			say("")
+		end
+					
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			if pc.getqf("kill_count")>=1000 then
+				if 30*60>pc.getqf("game_time") then
+					say_title("Octavio:")
+					say("")
+					say("You have managed the Wild dog hunt")
+					say("within 30 minutes!")
+					say("That's really fast!")
+					say("Congratulations!")
+					setstate(reward_1st)
+				elseif 40*60>pc.getqf("game_time") then
+					say_title("Octavio:")
+					say("")
+					say("You have managed the Wild dog hunt")
+					say("within 40 minutes!")
+					say("That's really fast!")
+					say("Congratulations!")
+					setstate(reward_2st)
+				elseif 50*60>pc.getqf("game_time") then
+					say_title("Octavio:")
+					say("")
+					say("You have managed the Wild dog hunt")
+					say("within 50 minutes!")
+					say("You are noted on the rank list. Congratulations")
+					setstate(reward_3st)
+				else
+					say_title("Octavio:")
+					say("")
+					say("I'm sorry. You are not in the")
+					say("rank list.")
+					say("Thank you")
+					setstate(__COMPLETE__)
+					q.done()
+				end
+			else
+				say("You need to hunt the 1000 Wild dogs")
+			end
+		end
+	end
+			
+	state reward_1st begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("The first rank in the competition.")
+			q.set_title("The first rank in the competition.")
+			q.start()
+		end
+					
+		when button begin
+			say_title("The first rank in the competition.")
+			say("")
+			say("The first rank by the time limitation... ")
+			say("I didn't believe it myself, I")
+			say("was so happy when I received ")
+			say("the price. Today the baldhead")
+			say("Octavio looks very sweet")
+			pc.changemoney(300000)
+			setstate(__COMPLETE__)
+			q.done()
+		end
+	end
+			
+	state reward_2st begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("The second rank in the competition.")
+			q.set_title("The second rank in the competition.")
+			q.start()
+		end
+				
+		when button begin
+			say_title("The second rank in the competition.")
+			say("")
+			say("The second rank by the time limitation... ")
+			say("I didn't believe it myself, I")
+			say("was so happy when I received ")
+			say("the price. Today the baldhead")
+			say("Octavio looks very sweet")
+			pc.changemoney(100000)
+			setstate(__COMPLETE__)
+			q.done()
+		end
+	end
+			
+	state reward_3st begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("The third rank in the competition.")
+			q.set_title("The third rank in the competition.")
+			q.start()
+		end
+					
+		when button begin
+			say_title("The third rank in the competition.")
+			say("")
+			say("The third rank by the time limitation... ")
+			say("I didn't believe it myself, but")
+			say("it was harder then I thought,")
+			say("but I'm satisfied.")
+			say("")
+			pc.changemoney(50000)
+			setstate(__COMPLETE__)
+			q.done()
+		end
+	end
+	
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

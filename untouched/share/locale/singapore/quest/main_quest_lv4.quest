@@ -1,0 +1,46 @@
+----------------------------------
+--	Main Quest LV4
+--  miscellaneous merchants quest   	
+----------------------------------
+quest main_quest_lv4 begin
+	state start begin
+		when login or levelup or enter begin
+			if  pc.get_level() >= 4 then 				
+				setstate( gototeacher )		
+			end
+		end
+	end
+	
+	state gototeacher begin
+		when letter begin
+			local v=find_npc_by_vnum(20354)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "Finding the instructor")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[4] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[4] )
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."Instructor!"..locale.NORMAL_COLOR)
+			say("Talk to the instructor")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."Instructor!"..locale.NORMAL_COLOR)
+			say("Talk to the instructor")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			pc.setqf("state", 1 )
+			--say( locale.MAIN_QUEST_LV4[1] )
+			setstate( __COMPLETE__ )
+			q.done()
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end

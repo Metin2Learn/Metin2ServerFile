@@ -1,0 +1,593 @@
+quest horse_levelup begin
+        state training1 begin
+                when letter begin
+                        q.set_counter("Bo left", 5-pc.getqf("kill_count"))
+                end
+                when 492.kill begin
+                        pc.setqf("kill_count", pc.getqf("kill_count")+1)
+                        q.set_counter("Bo left", 5-pc.getqf("kill_count"))
+                end
+                when enter begin
+                        pc.setqf("kill_count", 0)
+                end
+                when leave begin
+                        q.done()
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Kill Bo!")
+                        q.set_title("Kill Bo!")
+                        q.start()
+                end
+                when button begin
+                        say_title("Kill Bo!")
+                        say("")
+                        say("Kill Bo while sitting on your horse.")
+                        say("If you dismount you will loose.")
+                        say("")
+                end
+                when info begin
+                        say_title("Kill Bo!")
+                        say("")
+                        say("Kill Bo while sitting on your horse.")
+                        say("If you dismount you will loose.")
+                        say("")
+                end
+                when 492.kill with pc.getf("horse_levelup","kill_count") >= 5 begin
+                        setstate(report)
+                end
+                when unmount begin
+                        setstate(failure)
+                end
+        end
+        state training2 begin
+                when letter begin
+                        q.set_counter("Chuongs left", 5-pc.getqf("kill_count"))
+                end
+                when 494.kill begin
+                        pc.setqf("kill_count", pc.getqf("kill_count")+1)
+                        q.set_counter("Chuongs left", 5-pc.getqf("kill_count"))
+                end
+                when enter begin
+                        pc.setqf("kill_count", 0)
+                end
+                when leave begin
+                        q.done()
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Kill Chuong!")
+                        q.set_title("Kill Chuong!")
+                        q.start()
+                end
+                when button begin
+                        say_title("Kill Chuong!")
+                        say("")
+                        say("Kill Chuong, while sitting on your horse.")
+                        say("If you dismount you will loose.")
+                        say("")
+                end
+                when info begin
+                        say_title("Kill Chuong!")
+                        say("")
+                        say("Kill Chuong, while sitting on your horse.")
+                        say("If you dismount you will loose.")
+                        say("")
+                end
+                when 494.kill with pc.getf("horse_levelup","kill_count") >= 5 begin
+                        setstate(report)
+                end
+                when unmount begin
+                        setstate(failure)
+                end
+        end
+        state training3 begin
+                when letter begin
+                        q.set_counter("Elite Orc Generals left", 10-pc.getqf("kill_count"))
+                end
+                when 635.kill begin
+                        pc.setqf("kill_count", pc.getqf("kill_count")+1)
+                        q.set_counter("Elite Orc Generals left", 10-pc.getqf("kill_count"))
+                end
+                when enter begin
+                        pc.setqf("kill_count", 0)
+                end
+                when leave begin
+                        q.done()
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Kill Elite Orc General!")
+                        q.set_title("Kill Elite Orc General!")
+                        q.start()
+                end
+                when button begin
+                        say_title("Kill Elite Orc General!!")
+                        say("")
+			---                                                   l
+                        say("Kill Elite Orc General, while sitting on your")
+			say("horse. If you dismount you will loose.")
+                        say("")
+                end
+                when info begin
+                        say("Kill Elite Orc General!")
+                        say("")
+			---                                                   l
+                        say("Kill Elite Orc General, while sitting on your")
+			say("horse. If you dismount you will loose.")
+                        say("")
+                end
+                when 635.kill with pc.getf("horse_levelup","kill_count") >= 10 begin
+                        setstate(report)
+                end
+                when unmount begin
+                        setstate(failure)
+                end
+        end
+        state training4 begin
+                when letter begin
+                        q.set_counter("Black Orcs left", 10-pc.getqf("kill_count"))
+                end
+                when 636.kill begin
+                        pc.setqf("kill_count", pc.getqf("kill_count")+1)
+                        q.set_counter("Black Orcs left", 10-pc.getqf("kill_count"))
+                end
+                when enter begin
+                        pc.setqf("kill_count", 0)
+                end
+                when leave begin
+                        q.done()
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Kill Black Orc!")
+                        q.set_title("Kill Black Orcs!")
+                        q.start()
+                end
+                when button begin
+                        say_title("Kill Black Orcs!")
+                        say("")
+			---                                                   l
+                        say("Kill Black Orcs, while sitting on your horse.")
+                        say("If you dismount you will loose.")
+                        say("")
+                end
+                when info begin
+                        say_title("Kill Black Orc!")
+                        say("")
+                        say("Kill Black Orc, while sitting on your horse.")
+                        say("If you dismount you will loose.")
+                        say("")
+                end
+                when 636.kill with pc.getf("horse_levelup","kill_count") >= 10 begin
+                        setstate(report)
+                end
+                when unmount begin
+                        setstate(failure)
+                end
+        end
+        state training5 begin
+                when letter begin
+                        q.set_counter("Esoteric Tormentor left", 10-pc.getqf("kill_count"))
+                end
+                when 706.kill begin
+                        pc.setqf("kill_count", pc.getqf("kill_count")+1)
+                        q.set_counter("Esoteric Tormentor left", 10-pc.getqf("kill_count"))
+                end
+                when enter begin
+                        pc.setqf("kill_count", 0)
+                end
+                when leave begin
+                        q.done()
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Kill Esoteric Tormentor!")
+                        q.set_title("Kill Esoteric Tormentor!")
+                        q.start()
+                end
+                when button begin
+                        say_title("Kill Esoteric Tormentor!")
+                        say("")
+			---                                                   l
+                        say("Kill Esoteric Tormentor, while sitting on your horse.")
+                        say("If you dismount you will loose.")
+                        say("")
+                end
+                when info begin
+                        say_title("Kill Esoteric Tormentor!")
+                        say("")
+                        say("Kill Esoteric Tormentor while sitting on your horse,")
+                        say("if you dismount you will loose.")
+                        say("")
+                end
+                when 706.kill with pc.getf("horse_levelup","kill_count") >= 10 begin
+                        setstate(report)
+                end
+                when unmount begin
+                        setstate(failure)
+                end
+        end
+        state training6 begin
+                when letter begin
+                        q.set_counter("Claw Poison Spiders left", 10-pc.getqf("kill_count"))
+                end
+                when 2034.kill begin
+                        pc.setqf("kill_count", pc.getqf("kill_count")+1)
+                        q.set_counter("Claw Poison Spiders left", 10-pc.getqf("kill_count"))
+                end
+                when enter begin
+                        pc.setqf("kill_count", 0)
+                end
+                when leave begin
+                        q.done()
+                end
+                when letter begin
+
+                        setskin(NOWINDOW)
+                        makequestbutton("Kill Claw Poison Spider!")
+                        q.set_title("Kill Claw Poison Spider!")
+                        q.start()
+                end
+                when button begin
+                        say_title("Kill Claw Poison Spider")
+                        say("")
+			---                                                   l
+                        say("Kill Claw Poison Spider, while sitting on your")
+			say("horse. If you dismount you will loose.")
+                        say("")
+                end
+                when info begin
+                        say_title("Kill Claw Poison Spider")
+                        say("")
+			---                                                   l
+                        say("Kill Claw Poison Spider, while sitting on your")
+			say("horse. If you dismount you will loose.")
+                        say("")
+                end
+                when 2034.kill with pc.getf("horse_levelup","kill_count") >= 10 begin
+                        setstate(report)
+                end
+                when unmount begin
+                        setstate(failure)
+                end
+        end
+        state training7 begin
+                when letter begin
+                        q.set_counter("Desert Outlaw left", 20-pc.getqf("kill_count"))
+                end
+                when 2108.kill begin
+                        pc.setqf("kill_count", pc.getqf("kill_count")+1)
+                        q.set_counter("Desert Outlaw left", 20-pc.getqf("kill_count"))
+                end
+                when enter begin
+                        pc.setqf("kill_count", 0)
+                end
+                when leave begin
+                        q.done()
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Kill Desert Outlaw!")
+                        q.set_title("Kill Desert Outlaw!")
+                        q.start()
+                end
+                when button begin
+                        say_title("Kill Desert Outlaw!")
+                        say("")
+                        say("Kill Desert Outlaw, while sitting on your horse.")
+                        say("If you dismount you will loose.")
+                        say("")
+                end
+                when info begin
+                        say_title("Kill Desert Outlaw!")
+                        say("")
+                        say("Kill Desert Outlaw, while sitting on your horse.")
+                        say("If you dismount you will loose.")
+                        say("")
+                end
+                when 2108.kill with pc.getf("horse_levelup","kill_count") >= 20 begin
+                        setstate(report)
+                end
+                when unmount begin
+                        setstate(failure)
+                end
+        end
+        state training8 begin
+                when letter begin
+                        q.set_counter("Ice Golems left", 10-pc.getqf("kill_count"))
+                end
+                when 1107.kill begin
+                        pc.setqf("kill_count", pc.getqf("kill_count")+1)
+                        q.set_counter("Ice Golems left", 10-pc.getqf("kill_count"))
+                end
+                when enter begin
+                        pc.setqf("kill_count", 0)
+                end
+                when leave begin
+                        q.done()
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Kill Ice Golem!")
+                        q.set_title("Kill Ice Golem!")
+                        q.start()
+                end
+                when button begin
+                        say_title("Kill Ice Golem!")
+                        say("")
+                        say("Kill Ice Golems while sitting on your horse.")
+                        say("If you dismount you will loose.")
+                        say("")
+                end
+                when info begin
+                        say_title("Kill Ice Golem!")
+                        say("Kill Ice Golems while sitting on your horse.")
+                        say("If you dismount you will loose.")
+                        say("")
+                end
+                when 1107.kill with pc.getf("horse_levelup","kill_count") >= 10 begin
+                        setstate(report)
+                end
+                when unmount begin
+                        setstate(failure)
+                end
+        end
+        state training9 begin
+                when letter begin
+                        q.set_counter("Fighting Tigers left", 20-pc.getqf("kill_count"))
+                end
+                when 2203.kill begin
+                        pc.setqf("kill_count", pc.getqf("kill_count")+1)
+                        q.set_counter("Fighting Tigers left", 20-pc.getqf("kill_count"))
+                end
+                when enter begin
+                        pc.setqf("kill_count", 0)
+                end
+                when leave begin
+                        q.done()
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Kill Fighting Tigers!")
+                        q.set_title("Kill Fighting Tigers!")
+                        q.start()
+                end
+                when button begin
+                        say_title("Kill Fighting Tigers!")
+                        say("")
+                        say("Kill Fighting Tigers while sitting on your horse.")
+                        say("If you dismount you will loose.")
+                        say("")
+                end
+                when info begin
+                        say_title("Kill Fighting Tigers!")
+                        say("")
+                        say("Kill Fighting Tigers while sitting on your horse.")
+                        say("If you dismount you will loose.")
+                        say("")
+                end
+                when 2203.kill with pc.getf("horse_levelup","kill_count") >= 20 begin
+                        setstate(report)
+                end
+                when unmount begin
+                        setstate(failure)
+                end
+        end
+        state start begin
+                when 20349.chat."How do you fight while riding?" with horse.get_grade()==2 begin
+                        if horse.get_level()==20 then
+                                say_title("Stable Lad")
+                                say("")
+                                say("You horse is now experienced maximal.")
+                                say("You should strengthen your horse.")
+                                say("")
+                        elseif pc.countitem("50050")<1 then
+                                say_title("Stable Lad")
+                                say("")
+                                say("You need a Horse Medal for training.")
+                                say("Your result will be noted on it.")
+                                say("")
+                        elseif get_time()<pc.getqf("next_time") then
+							local hoursleft = math.floor((pc.getqf("duration")-get_time())/60/60)
+                                say_title("Stable Lad")
+                                say("")
+                                say("Your horse needs a rest.")
+                                say("Try it again in "..hoursleft.." hours")
+                                say("")
+                        elseif horse.get_stamina_pct()<=10 then
+                                say_title("Stable Lad")
+                                say("")
+                                say("Your horse is very tired.")
+                                say("Let it take a rest.")
+                                say("")
+                        elseif horse.get_health_pct()<=10 then
+                                say_title("Stable Lad")
+                                say("")
+                                say("Your horse is very hungry.")
+                                say("Go and feed it.")
+                                say("")
+                        elseif horse.is_riding()==0 then
+                                say_title("Stable Lad")
+                                say("")
+                                say("Come to me.")
+                        elseif (horse.get_level()>=11 and horse.get_level()<=19) then
+                                say_title("Stable Lad")
+                                say("")
+				----"123456789012345678901234567890123456789012345678901234567890"|
+                                say("Attacking while riding is much more difficult than only")
+                                say("riding. Training makes you a master of horsemanship.")
+                                say("")
+                                say("Train with the monsters. If you fall down, you will fail.")
+                                say("So be careful! Your result will be noted in the medal.")
+                                say("")
+                                if is_test_server() then
+                                        pc.setqf("next_time", get_time()+10)
+                                else
+                                        pc.setqf("next_time", get_time()+number(8, 12)*60*60)
+                                end
+                                if horse.get_level()==11 then
+                                        setstate(training1)
+                                elseif horse.get_level()==12 then
+                                        setstate(training2)
+                                elseif horse.get_level()==13 then
+                                        setstate(training3)
+                                elseif horse.get_level()==14 then
+                                        setstate(training4)
+                                elseif horse.get_level()==15 then
+                                        setstate(training5)
+                                elseif horse.get_level()==16 then
+                                        setstate(training6)
+                                elseif horse.get_level()==17 then
+                                        setstate(training7)
+                                elseif horse.get_level()==18 then
+                                        setstate(training8)
+                                elseif horse.get_level()==19 then
+                                        setstate(training9)
+                                end
+                        end
+                end
+        end
+        state need_item50050 begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Get a Horse medal!")
+                        q.set_title("Get a Horse medal!")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Get a Horse medal!")
+                        say("")
+                        say("You need a Horse Medal for learning the fight")
+                        say("on the back of a horse.")
+                        say("You can get it in the Apes Dungeon.")
+                        setstate(start)
+                        q.done()
+                end
+        end
+        state failure begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Attacking while riding was not successful")
+                        q.set_title("Attacking while riding was not successful")
+                        q.start()
+                end
+                when button begin
+                        say_title("Attacking while riding was not successful")
+                        say("")
+                        say("You fell down or dismounted.")
+                        say("The mission failed")
+                        say("")
+                        setstate(start)
+                        q.done()
+                end
+                when info begin
+                        say_title("Attacking while riding was not successful")
+                        say("")
+                        say("You fell down or dismounted.")
+                        say("The mission failed")
+                        say("")
+                        setstate(start)
+                        q.done()
+                end
+        end
+        state report begin
+                when letter begin
+                        local v=find_npc_by_vnum(20349)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "")
+                        end
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Return to the Stable Lad")
+                        q.set_title("Return to the Stable Lad")
+                        q.start()
+                end
+                when button begin
+                        say_title("Return to the Stable Lad")
+                        say("")
+                        say("If you return to the Stable Lad,")
+                        say("your result will be noted in the Horse Medal.")
+                        say("")
+                end
+                when info begin
+                        say_title("Return to the Stable Lad")
+                        say("")
+                        say("If you return to the Stable Lad,")
+                        say("your result will be noted in the Horse Medal.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        say_title("Stable Lad")
+                        say("")
+                        say("Did everything work?")
+                        say("Your training will continue tomorrow.")
+                        say("Your results are noted in the Horse Medal.")
+                        say("")
+                        setstate(reward)
+                        q.done()
+                end
+        end
+        state reward begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Trainig Results")
+                        q.set_title("Trainig Results")
+                        q.start()
+                end
+                when button begin
+                        say_title("Trainig Results")
+                        if horse.get_level()<=10 then
+                                say("Your horse has not enough training")
+                        elseif horse.get_level()>=20 then
+                                say("Your horse has not enough training")
+                        elseif (horse.get_level()>=11 and horse.get_level()<=19) then
+                                local s=number(1, 7)
+                                if s < 5 then 
+                                        say("Attacking while riding was not successful")
+                                        say("")
+                                        say("Return to the Stable Lad for a repetition.")
+                                        say("")
+                                        pc.setqf("next_time", 0)
+                                else 
+                                        say("Horse Training successful")
+                                        if pc.countitem("50050")>=1 then
+                                                char_log(0, "HORSE_ADVANCE", "BEGIN")
+                                                pc.removeitem("50050", 1)
+                                                char_log(0, "HORSE_ADVANCE", "DEC 50050 1")
+                                                horse.unride()
+                                                horse.advance()
+                                                horse.ride()
+                                                char_log(0, "HORSE_ADVANCE", "INC horse_advance 1")
+                                                char_log(0, "HORSE_ADVANCE", "END")
+                                                say("Your horse's level is:"..(horse.get_level()).."")
+                                                say("")
+                                                if horse.get_level()==20 then
+                                                        say("Return to the Stable Lad, for")
+                                                        say("transforming your armed horse into")
+                                                        say("a military horse.")
+                                                        pc.setqf("next_time", 0)
+                                                else
+                                                        say("To get a military horse you have to")
+                                                        say("train your horse till level 20.")
+                                                        say("")
+                                                end
+                                        else
+                                                say("Without a Horse Medal you won't be able to")
+                                                say("note your results.")
+                                        end
+                                end
+                        end
+                        setstate(start)
+                        q.done()
+                end
+        end
+        state __COMPLETE__ begin
+                when enter begin
+                        q.done()
+                end
+        end
+end

@@ -1,0 +1,158 @@
+quest main_quest_lv14 begin
+        state start begin
+        end
+        state run begin
+                when login or levelup or enter with pc.get_level() >= 14 begin
+                set_state( gotoboss )
+                end
+        end
+
+        state gotoboss begin
+                when letter begin
+                        send_letter("Find the Captain.")
+                        local v=find_npc_by_vnum(20355)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find the Captain.")
+                        end
+                end
+                when button or info begin
+                        say_title("Find the Captain.")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("He has a new assignment for you. Meet him in town as soon.")
+                        say("as possible.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("Captain:")
+                        say("")
+                        say("I am worried about the Metins. The Musician Yu-Hwan has")
+                        say("informed me that the Metin Stones make the animals go wild.")
+                        say("")
+                        say("Even worse, a epidemic plague is spreading.")
+                        say("")
+                        wait()
+
+                        say_title("Captain:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("If we don't do anything against the Metin Stones, the beasts")
+                        say("could attack the villagers again. Or even worse, this plague")
+                        say("might spread through the village!")
+                        say("")
+                        say("Take care of the Metin Stones that are falling down outside")
+                        say("of the village.")
+                        say("")
+                        say("I'm sure you can handle it, after you have taken out that")
+                        say("Mu-Rang.")
+			say("")
+                        wait()
+                        say_title("Reward:")
+                        say("")
+                        say_reward("Experience points: 20.000" )
+                        say_reward("Yang:  8.000")
+                        say_reward("Object: A Spirit Stone (+0 to +2)")
+                        say("")
+                        set_state( killmetinstone )
+                end
+        end
+
+        state killmetinstone begin
+                when letter begin
+                        send_letter("Destroy the Metin of Battle.")
+                end
+                when button or info begin
+                        say_title("Destroy the Metin of Battle.")
+                        say("")
+                        say("You need to destroy a Metin Stone of Battle.")
+                        say("")
+                end
+                when 8003.kill begin
+                        say_title("Assignment accomplished")
+                        say("")
+                        say("You have destroyed the Metin of Battle.")
+                        say("")
+                        say("Report to the Captain.")
+                        set_state(gotoboss2)
+                        say("")
+                end
+        end
+        state gotoboss2 begin
+                when letter begin
+                        send_letter("Ask the Captain.")
+                        local v=find_npc_by_vnum(20355)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find the Captain.")
+                        end
+                end
+                when button or info begin
+                        say_title("You destroyed the Metin of Battle")
+                        say("")
+                        say("Report this to the Captain inmdiately.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+
+                        local stones = { 28030,28130,28230 }
+                        local i = stones[number( 1, 3 )];
+                        local stone =  (i+number(1,14)-1)
+                        say_title("Captain:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Nice work! You've become a reliable helper! Now I know")
+                        say("that I can trust you with any assignment.")
+                        say("")
+                        say("Here is your reward and keep up the good work!")
+			say("")
+                        say_title("Reward:")
+                        say("")
+                        say_reward("Experience points: 20.000" )
+                        say_reward("Yang: 25.000")
+                        say_reward(item_name(stone))
+                        say("")
+                        s = select("Thank you.","What is a Spirit Stone?")
+			if s == 2 then
+                        	say_title("Captain:")
+                        	say("")				
+				----"123456789012345678901234567890123456789012345678901234567890"|
+				say("Oh, I forgot you are a new adventurer, ha ha.")
+				say("")
+				say("Spirit Stones are stones with special powers that you can")
+				say("socket into your Armour or Weapons to increase their")
+				say("performance.")
+				say("")
+				say("Their quality ranges from +0 to +5, the later can only be")
+				say("obtained through upgrading a +4 stone.")
+				say("")
+				wait()
+                        	say_title("Captain:")
+                        	say("")	
+				say("Drag the Spirit Stone into your equipment to attempt")
+				say("socketing it. Socketing fails often and can leave you")
+				say("with an unusable slot.")
+				say("")
+				say("If you want to clean the broken stones you can either try")
+				say("to upgrade the item, or use a Stone Craft Book.")
+				say("")
+				say("Also, you can remove the successfully socketed stones with")
+				say("a Spirit Stone Scroll, if you change your mind later.")
+				say("")
+			end
+                        pc.give_exp2( 20000 )
+                        pc.change_money( 25000 )
+                        pc.give_item2( stone,1 )
+
+                        clear_letter()
+                        set_state(__COMPLETE__)
+                        set_quest_state("main_quest_lv15", "run")
+
+                end
+        end
+        state __COMPLETE__ begin
+        end
+end

@@ -1,0 +1,245 @@
+--------------------------------------------------
+-- JAPAN EVENT 
+-- METIN2.NETMARBLE
+----------------------------------------------------
+
+quest susi_event begin
+	state start begin
+		when login  or levelup  with susi_event.is_event()  begin
+			set_state(information)
+			
+		end
+
+		function is_event()
+			return game.get_event_flag("susi_event")==1
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20008)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "Octavio")
+			end
+		end
+
+		when __TARGET__.target.click or
+	      20008.chat."Sushi Event"	begin
+			target.delete("__TARGET__")
+			say("Octavio :")
+			---                                                   l
+			say("Hey")
+			say("Have you heard about sushi which is")
+			say("one of the legendary food in orient?")
+            say("")
+			wait()
+			say_pc_name()
+			say("hmmm?")
+			say("Maybe I have heard somewhere..")
+			say("")
+			wait()
+			say("Octavio:")
+			say("Sushi is a combination of fillet of raw fish")
+			say("and rice.")
+			say("It's every cook's dream dish.")
+			say("But these days, it's hard to get fishes...")
+			say("Can you help me?")
+			say(" ")
+			local s=select("Accept.","Refuse.")
+			if 2==s then
+				say("Octavio:")
+				say("You're not interested in new food?")
+				say("Help me when you're free next time.")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("Octavio:")
+			say("Oh! I knew that you are going to accept my favour")
+			say("Thanks so much!")
+			say("")
+			set_state(go_to_fishing)
+			
+		end	
+	end
+
+	state go_to_fishing begin
+		when letter begin
+			if susi_event.is_event() then
+				send_letter("Go fishing")
+			end
+				
+		end
+		when info or button begin
+			say_title("Go fishing")
+			---                                                   l
+			say("")
+			say("Octavio the cook found out Sushi the")
+			say("legendary food from orient for this")
+			say("summer, but he can't get any fish to")
+			say("make sushi because of this war.")
+			say("")
+			say("So he is asking players in the kingdom")
+			say("to get fishes to make sushi.")
+			say("Who gives fish to Octavio ")
+			say("will get some sushi.")
+			say("")
+		end
+
+
+		when 20008.chat."I got fish" with susi_event.is_event() begin
+
+				local b = pc.count_item(27803);
+				local y = pc.count_item(27807);
+				local m = pc.count_item(27816);
+				local i = pc.count_item(27806);
+				local t = b + y + m + i
+
+				if t == 0 then
+					say("Octavio:")
+					say("")
+					say("I can't really do much with this fish...")
+					say("It's only for soup...")
+					say("Hmm... I can't use this for sushi")
+					say("Take it back..")
+					say("")
+					return
+				end
+
+				say("Octavio:")
+				say("Ohh.....")
+				say("You are so good at everything...")
+				say("I never seen any fish like this flesh")
+				say("Great..")
+				wait()
+				say("Octavio:")
+				say("What kind of sushi you want?")
+				local fish_list= select ("Crucian Carp Sushi","Salmon Sushi","Catfish Sushi","Carp Sushi")
+				if 1== fish_list then	
+					if b == 0 then
+						say("Octavio:")
+						say("with the fish you have")
+						say("I can't make sushi")
+						say("I need to have Crucian carp to make Crucian carp sushi")	
+						return
+					end	
+					local s= number(1,2)   --50%
+					if 1>=s then
+						pc.give_item2(50091)
+						say("Octavio:")
+						say("Wait a sec....")
+						say("Here you go!! It's done...")
+						say("This is Crucian carp sushi!")
+						say("Try it! here..")
+						say("")
+					elseif 2>=s then
+						say("Octavio:")
+						say("Ouch I'm so sorry")
+						say("I'm so bad at this")
+						say("Failed...")
+						say("I will succeed next time")
+						say("")
+					end
+					pc.remove_item(27803,1)
+
+				elseif 2== fish_list then	
+					if y == 0 then
+						say("Octavio:")
+						say("with the fish you have")
+						say("I can't make sushi")
+						say("I need to have salmon to make salmon sushi")	
+						return
+					end	
+					local s= number(1,100)
+					if 40>=s   then             --40%
+						pc.give_item2(50093)
+						say("Octavio:")
+						say("Wait a sec....")
+						say("Here you go!! It's done...")
+						say("This is salmon sushi!")
+						say("Try it! here..")
+						say("")
+						pc.remove_item(27807,1)
+						return
+					end
+
+					say("Octavio:")
+					say("Ouch I'm so sorry")
+					say("I'm so bad at this")
+					say("Failed...")
+					say("I will succeed next time")
+					say("")
+					pc.remove_item(27807,1)
+
+				elseif 3== fish_list then	
+					if m == 0 then
+						say("Octavio:")
+						say("with the fish you have")
+						say("I can't make sushi")
+						say("I need to have catfish to make catfish sushi")	
+						return
+					end	
+					local s= number(1,100)
+					if 40>=s  then            --40%
+						pc.give_item2(50094)
+						say("Octavio:")
+						say("Wait a sec....")
+						say("Here you go!! It's done...")
+						say("This is catfish sushi!")
+						say("Try it! here..")
+						pc.remove_item(27816,1)
+						return
+					end
+
+					say("Octavio:")
+					say("Ouch I'm so sorry")
+					say("I'm so bad at this")
+					say("Failed...")
+					say("I will succeed next time")
+					say("")
+					pc.remove_item(27816,1)
+				elseif 4== fish_list then	
+					if i == 0 then
+						say("Octavio:")
+						say("with the fish you have")
+						say("I can't make sushi")
+						say("I need to have carp to make carp sushi")
+						return
+					end	
+					local s= number(1,100)
+					if 45>=s  then    -- 45%
+						pc.give_item2(50092)
+						say("Octavio:")
+						say("Wait a sec....")
+						say("Here you go!! It's done...")
+						say("This is carp sushi!")
+						say("Try it! here..")
+						say("")	
+						pc.remove_item(27806,1)
+						return
+					end
+					say("Octavio:")
+					say("Ouch I'm so sorry")
+					say("I'm so bad at this")
+					say("Failed...")
+					say("I will succeed next time")
+					say("")
+					pc.remove_item(27806,1)
+
+			end	
+		end
+											
+	end
+	
+	state __GIVEUP__ begin
+		when 20008.chat."Restart Sushi event?" with susi_event.is_event() begin
+			say("Please log in to the game again")
+			say("")
+			set_state(start)
+		end
+	end
+
+end
+			
+

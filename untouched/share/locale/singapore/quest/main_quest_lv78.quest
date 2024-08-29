@@ -1,0 +1,224 @@
+quest main_quest_lv78 begin
+	state start begin
+	end
+	state state_0 begin
+		when login or levelup or enter with pc.level >= 78 begin
+			set_state (state_1)
+		end
+	end
+	state state_1 begin
+		when letter begin
+			local v = find_npc_by_vnum (20369)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv78.title_1)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv78.title_1)
+			say (locale.main_quest_lv78.say_1)
+		end
+		when 20369.chat.locale.main_quest_lv78.title_1 begin
+			target.delete("__TARGET__")
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv78.say_2)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv78.say_3)
+			set_state (make_red_bead)
+		end
+	end
+	state make_red_bead begin
+		when enter begin
+			pc.setqf ("first_make_time", 0)
+		end
+		when 2205.kill or 2204.kill or 2203.kill begin
+			if number(1, 500) == 1 then
+				pc.give_item2 (31007, 1)
+			end
+		end
+		when 20369.chat.locale.main_quest_lv78.title_1 begin
+			if pc.count_item (31006) >= 20 then
+				say_title (mob_name(20369))
+				say(string.format (locale.main_quest_lv78.say_4, 20))
+				wait()
+				
+				say_title (locale.reward)
+				say_reward(string.format (locale.main_quest_lv60.say_17, 36000000))
+				say_reward(string.format (locale.main_quest_lv60.say_19, item_name(72725)))
+				say_reward(string.format (locale.main_quest_lv60.say_19, item_name(70024)))
+				say_reward(string.format (locale.main_quest_lv60.say_19, item_name(70004)))
+
+				pc.give_exp2(36000000)
+				
+				pc.give_item2(72725) -- 수룡의 축복(대)
+				pc.give_item2(70024) -- 축복의 구슬
+				pc.give_item2(70004) -- 근면함의 훈장
+				pc.remove_item (31006, pc.count_item (31006))
+				set_state(state_2)
+				return
+			end
+			local t = get_global_time()
+			local today = t - math.mod (t, 86400)
+			if pc.getqf ("first_make_time") != today then
+				pc.setqf ("first_make_time", today)
+				pc.setqf ("make_count", 0)
+			end
+			if pc.count_item (90010) < 1 or pc.count_item (30019) < 1 or 
+					pc.count_item (31007) < 1 then
+				say_title (locale.main_quest_lv66.say_25)
+				say (locale.main_quest_lv78.say_5)
+				return
+			end
+			local n = pc.getqf ("make_count")
+			if n >= 7 then
+				say_title (locale.main_quest_lv66.say_25)
+				say(locale.main_quest_lv78.say_6)
+				return
+			else
+				pc.remove_item (90010, 1)
+				pc.remove_item (30019, 1)
+				pc.remove_item (31007, 1)
+				say_title (locale.main_quest_lv66.say_25)
+				say(locale.main_quest_lv78.say_7)
+				wait()
+				pc.setqf ("make_count", n + 1)
+				local n = number (1,100)
+				if n > 60 then 
+				say_title (locale.main_quest_lv66.say_25)
+					say(locale.main_quest_lv78.say_8)
+					wait()
+				elseif pc.count_item (31006) < 20 then
+					pc.give_item2 (31006, 1)
+				say_title (locale.main_quest_lv66.say_25)
+					say (locale.main_quest_lv78.say_9)
+					say_item_vnum (31006)
+					wait ()
+				else 
+					say_title (mob_name(20369))
+					say(string.format (locale.main_quest_lv78.say_4, 20))
+					wait()
+					
+					say_title (locale.reward)
+					say_reward(string.format (locale.main_quest_lv60.say_17, 36000000))
+					say_reward(string.format (locale.main_quest_lv60.say_19, item_name(72725)))
+					say_reward(string.format (locale.main_quest_lv60.say_19, item_name(70024)))
+					say_reward(string.format (locale.main_quest_lv60.say_19, item_name(70004)))
+
+					pc.give_exp2(36000000)
+					
+					pc.give_item2(72725) -- Red Dragon's Blessing(L)
+					pc.give_item2(70024) -- Blessing Marble
+					pc.give_item2(70004) -- 근면함의 훈장
+					pc.remove_item (31006, pc.count_item (31006))
+					set_state(state_2)
+				end
+			end
+		end
+	end
+	state state_2 begin
+		when letter begin
+			local v = find_npc_by_vnum (20369)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv78.title_2)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv78.title_2)
+			say (locale.main_quest_lv78.say_10)
+		end
+		when 20369.chat.locale.main_quest_lv78.title_2 with pc.count_item (31004) < 100 begin
+			target.delete("__TARGET__")
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv78.say_11)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv78.say_12)
+		end
+		when 2315.kill or 2314.kill begin
+			if number (1, 300) == 1 then
+				pc.give_item2 (31004, 1)
+				local n = pc.count_item (31004)
+				if n < 100 then
+					notice (string.format (locale.main_quest_lv78.say_13, 100 - n))
+				else
+					notice (locale.main_quest_lv78.say_14)
+				end
+			end
+		end
+		when 20369.chat.locale.main_quest_lv78.title_2 with pc.count_item (31004) >= 100 begin
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv78.say_15)
+			wait()
+			say_title (	pc.getname())
+			say(locale.main_quest_lv78.say_16)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv78.say_17)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv78.say_18)
+			wait()
+			say_title (locale.reward)
+			say_reward(string.format (locale.main_quest_lv60.say_17, 50000000))
+			say_reward(string.format (locale.main_quest_lv60.say_18, 2230000))
+			say_reward(string.format (locale.main_quest_lv60.say_19, item_name(72729)))
+			say_reward(string.format (locale.main_quest_lv60.say_19, item_name(70102)))
+			say_reward(string.format (locale.main_quest_lv60.say_19, item_name(50308)))
+
+			pc.give_exp2(50000000)
+			pc.change_money(2230000)
+			
+			pc.give_item2(72729) -- 화룡의 축복(대)
+			pc.give_item2(70102) -- 만년한철
+			pc.give_item2(50308) -- 육도
+			pc.remove_item (31004, pc.count_item (31004))
+			set_state(state_3)
+		end
+	end
+	state state_3 begin
+		when letter begin
+			local v = find_npc_by_vnum (20018)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv78.title_3)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv78.title_3)
+			say (locale.main_quest_lv78.say_19)
+		end
+		when 20018.chat.locale.main_quest_lv78.title_3 begin
+			target.delete("__TARGET__")
+			say_title ( mob_name(20018))
+			say(locale.main_quest_lv78.say_20)
+			wait()
+			say_title ( pc.get_name ())
+			say(locale.main_quest_lv78.say_21)
+			wait()
+			say_title ( mob_name(20018))
+			say(locale.main_quest_lv78.say_22)
+			wait()
+			say_title ( pc.get_name ())
+			say(locale.main_quest_lv78.say_23)
+			wait()
+			say_title ( mob_name(20018))
+			say(locale.main_quest_lv78.say_24)
+			wait()
+			say_title ( pc.get_name ())
+			say(locale.main_quest_lv78.say_25)
+			wait()
+			say_title ( mob_name(20018))
+			say(locale.main_quest_lv78.say_26)
+			wait()
+			say(locale.main_quest_lv78.say_27)
+			set_state(__COMPLETE__)
+			q.done()
+			set_quest_state("main_quest_lv84", "state_0")
+
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end

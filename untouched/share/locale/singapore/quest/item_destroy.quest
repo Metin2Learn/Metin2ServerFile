@@ -1,0 +1,22 @@
+quest item_destroy begin
+	state start begin
+		when 20041.take begin
+			say_title("Shabby Pedestrian:")
+			say("")
+			----"111111222222333333444444555555666666777777888888999999000000"
+			say("You really want to give that to me? That's very kind of you")
+			say("sir! I could buy a bottle or two after I sell it...")
+			say("")
+			say_item_vnum(item.get_vnum())
+
+			say_reward("Do you really want to give away this item? You can't")
+			say_reward("recover it if you proceed!")
+			say("")
+			local s = select("Yes","No")
+			if s == 1 then
+				syschat("Item has been removed: "..item.get_name(item.get_vnum()))
+				item.remove()
+			end
+		end
+	end
+end

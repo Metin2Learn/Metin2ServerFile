@@ -1,0 +1,166 @@
+quest change_empire begin
+	state start begin
+		when 20090.chat."Kingdom Change"  with game.get_event_flag("c_e") >0  begin
+
+			local count = pc.get_change_empire_count() ;
+			if count >= 1 then
+				say("Someone who already have changed his/her kingdom before")
+				say("Can not change anymore.")
+				say("")
+				return
+			end
+
+			if pc.get_empire()== 3 then
+				say("")
+				say("Sorry, migration to other kingdom is not permitted")
+				say("")
+				return 
+			end
+
+			say_reward("Kingdom change")
+			say("")
+			say("Granting asylum to other kingdom.")
+			say("guild master cannot seek asylum,")
+			say("Guild member must resign from the guild first.")
+			say("if you are married, you have to divorce as well ")
+			say("It will cost 20,000 gold.")
+			say("")
+			say("Do you want to change your Kingdom?")
+			say("")
+
+			local s = select("Change Kingdom", "Don't change Kindom")
+
+			if s == 1 then
+				change_empire.move_pc()
+			end
+		end
+
+		when 71054.use begin
+			say("You have used kingdom change scroll.")
+			say("Changing Kingdom administration will begin.")
+			
+			if get_time() < pc.getqf("next_use_time") then
+				say("You can't change the kingdom now.")
+				say("")
+
+				if pc.is_gm() then
+					say("GM can reset time for testing.")
+					say("")
+					local s = select("Reset", "Don't reset")
+					if s == 1 then
+						say("Time have been reset")
+						pc.setqf("next_use_time", 0)
+					end
+				end
+				
+				return
+			end
+			
+			if change_empire.move_pc() == true then
+				pc.setqf("next_use_time", get_time() + 86400 * 7)
+			end
+		end
+
+
+
+		function move_pc()
+			if pc.is_engaged() then
+				say("You're married")
+				say("You cannot change your kingdom")
+				say("")
+				return false
+			end
+
+			if pc.is_married() then
+				say("You're married")
+				say("You cannot change your kingdom")
+				say("")
+				return false
+			end
+
+			if pc.is_polymorphed() then
+				say("You are in transfrom")
+				say("You cannot change your kingdom")
+				say("")
+				return false
+			end
+
+			if pc.has_guild() then
+				say("You have a guild")
+				say("You cannot change your kingdom")
+				say("")
+				return false
+			end
+
+			if pc.money < 20000 then
+				say("You don't have enough gold")
+				say("You need 20,000 gold to change your kingdom")
+				say("")
+				return false
+			end
+
+			say("Changing Kingdom administration will begin")
+
+			local s = select("Shinsoo Kingdom","Jinno Kingdom","Cancel")
+
+			if 2 == s then
+				s = 3
+			end
+			
+			if 4 == s then
+				return false
+			end
+
+			say("")
+			say_reward("Are you sure you want to change your kingdom?")
+			say_reward("You cannot change again once it's changed.")
+			say("")
+			
+			local a = select("Change Kingdom", "Do not change Kingdom")
+			
+			if 2 == a then
+				return false
+			end
+
+			local ret = pc.change_empire(s)
+			local oldempire = pc.get_empire()
+
+			if ret == 999 then
+				say("You have successfully changed your Kingdom.")
+				say("You need to log in again..")
+				say("")
+				pc.change_gold(-20000)
+				pc.remove_item(71054) ;
+
+				char_log(0, "CHANGE_EMPIRE",string.format("%d -> %d", oldempire, s)) 
+
+				return true
+			else
+				if ret == 1 then
+					say("The Kindom you have chosen")
+					say("is the same kingdom you are in.")
+					say("please choose other kingdom")
+					say("")
+					say("")
+				elseif ret == 2 then
+					say("Some of your chracters")
+					say("Have guilds.")
+					say("Characters who joined guild,")
+					say("Cannot change the kingdom.")
+					say("")
+					say("")
+				elseif ret == 3 then
+					say("Some of your chracters")
+					say("are in married status.")
+					say("Married characters cannot change")
+					say("kingdom")
+					say("")
+				end
+			end
+
+			return false
+		end
+
+
+	end
+end

@@ -1,0 +1,108 @@
+quest priv_empire begin
+        state start begin
+                when guild_man1.chat."GM: Bonus of Empire" or
+                        guild_man2.chat."GM: Bonus of Empire" or
+                        guild_man3.chat."GM: Bonus of Empire" with pc.is_gm() begin
+
+                        say_title("Empire bonus grant")
+                        say("Choose Empire")
+
+                        local empire_names = {
+                                [0] = "All Empires",
+                                [1] = "Pandemonia-Empire",
+                                [2] = "Asmodia-Empire",
+                                [3] = "Elgoria-Empire",
+                        }
+
+                        local e = select(empire_names[1], empire_names[2], empire_names[3], empire_names[0], "Cancel")
+
+                        if 5 == e then
+                                return
+                        end
+
+                        -- Set as 0 if it is Junjeh Empire
+                        if 4 == e then
+                                e = 0
+                        end
+
+                        say_title("Empire bonus granted")
+                        say("Current Status")
+
+                        say(__get_empire_priv_string(e))
+                        say("")
+                        say("Choose Bonus type")
+
+                        local titles = {
+                                "Percentage for Item Drop",
+                                "Percentage for Yang Drop",
+                                "Percentage for Yang Bombs",
+                                "Experience Ratio",
+                        }
+
+                        local t = select(
+                                titles[1],
+                                titles[2],
+                                titles[3],
+                                titles[4],
+                                "Cancel")
+
+                        if 5 == t then
+                                return
+                        end
+
+                        say_title("Empire bonus granted")
+                        say(string.format("%s Bonus : %s ", empire_names[e], titles[t]))
+                        say("")
+
+
+                        say("Choose Bonus type")
+                        local g={0, 10, 25, 50, 100, 200}
+                        local p = select(g[1].."%", g[2].."%", g[3].."%", g[4].."%", g[5].."%", g[6].."%", "Cancel")
+                        if p == 7 then
+                                return
+                        end
+
+                        say_title("Empire bonus granted")
+                        say(string.format("%s Bonus : %s %d%%", empire_names[e], titles[t], g[p]))
+                        say("")
+
+                        say("Choose Bonus time")
+                        local v = 0
+                        local h = select("24 Hours", "60 Hours", "100 Hours", "Directly input", "Cancel")
+                        if 5 == h then
+                                return
+                        elseif 4 == h then
+                                say_title("Empire bonus granted")
+                                say(string.format("%s Bonus : %s %d%%", empire_names[e], titles[t], g[p]))
+                                say("")
+                                say("Choose Bonus time")
+                                v=input()
+                                if v == "" then
+                                        v = 0
+                                else
+                                        v=tonumber(v)
+                                end
+
+                        elseif 3 == h then
+                                v=100
+                        elseif 2 == h then
+                                v=60
+                        elseif 1 == h then
+                                v=24
+                        end
+
+                        say_title("Empire bonus granted")
+                        say(string.format("%s Bonus : %s %d%% (%dTime)", empire_names[e], titles[t], g[p], v))
+                        say("")
+                        say("Confirm above-mentioned settings?")
+
+                        local s = select("Yes", "No")
+                        if 1 == s then
+                                __give_empire_priv(e, t, g[p], v*60*60)
+                                say("Settings confirmed")
+                        else
+                                say("Cancelled")
+                        end
+                end
+        end
+end

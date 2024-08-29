@@ -1,0 +1,10 @@
+quest retrieve_easter begin
+	state start begin
+		when 20094.chat."Give Easter Items Back" begin
+			for i = 1,22,1 do
+				pc.remove_item(50159+i,pc.count_item(50159+i))
+			end
+			pc.remove_item(50183,pc.count_item(50183))
+		end
+	end
+end

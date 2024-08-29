@@ -1,0 +1,279 @@
+quest new_the_sacrifice begin
+	state start begin
+		when 20019.chat."The sacrifice" begin
+			if pc.getqf("herb_farming_points") < 1 then
+				pc.setqf("herblevel",1)
+			end
+			if pc.get_level() < 30 then
+				say_title(mob_name(20019))
+				say("")
+				say("You are not experienced enough to help me.")
+				say("Thanks for your courage but you can not do")
+				say("anything for me.")
+				say("")
+				say_reward("You need to be at least Level 30 or above.")
+				say("")
+			else
+				say_title(mob_name(20019))
+				say("")
+				say("Please choose an option:")
+				say("")
+				local opt=select("Information about 'The Sacrifice' Quest", "Start 'The Sacrifice' Quest", "Display Quest-Level", "Information about Quest-Levels")
+				if opt == 1 then
+					say_title(mob_name(20019))
+					say("")
+					say("Hello, I need your help.")
+					say("Our family sacrifices to the god")
+					say("of hunt each day in order to get")
+					say("his blessing for the daily hunt.")
+					say("But we run out of animal hearts.")
+					say("Due to sickness I was not able")
+					say("to get new on my own.")
+					say("Can you help me? I will offer you")
+					say("herbs for your deeds!")
+					say("")
+					say_reward("Do you want to help him? Activate")
+					say_reward("the quest in the quest menu.")
+					say("")
+				elseif opt == 2 then
+					if get_time() < pc.getqf("timelimit") then
+						say_title("The sacrifice")
+						say("")
+						say("You can only accomplish this quest")
+						say("once in every "..ts_herbtime[pc.getqf("end_state")][pc.getqf("herblevel")].." hours.")
+						say("")
+						say("Time left: "..pc.getqf("timelimit")-get_time().." seconds.")
+						say("")
+					else
+						local grade = math.floor(pc.get_level()/10)
+						local plv = grade-2
+						local num_min = 1+(plv-1)*5
+						local num_max = 5+(plv-1)*5
+						local num = number(num_min,num_max)
+						pc.setqf("target_vnum",herb_q_init_v(num))
+						pc.setqf("target_amount",herb_q_init_a(pc.getqf("herblevel"),num))
+						pc.remove_item(70022,pc.count_item(70022))
+						set_state(hunt)
+					end
+				elseif opt == 3 then
+					say_title("Quest-Level:")
+					say("")
+					say("Your current quest level: "..ts_level[pc.getqf("herblevel")]..".")
+					say("")
+					say("Your current quest points: "..pc.getqf("herb_farming_points").." Points.")
+					say("")
+				elseif opt == 4 then
+					say_title("The Quest Level")
+					say("")
+					say("In permanent quests you can gain new levels")
+					say("by doing these quests more often.")
+					say("Every quest yields points and you need")
+					say("a certain amount of points to increase")
+					say("the level for this quest.")
+					say("The higher the quest level, the better")
+					say("the reward you get each time you do it.")
+					say("")
+					say_white("N Level: 0-499 Points")
+					say_white("M Level: 500-2499 Points")
+					say_white("G Level: 2500-9999 Points")
+					say_white("P Level: 10000+ Points")
+					say("")
+				end
+			end
+		end
+	end
+	
+	state hunt begin
+		when letter begin
+			send_letter("The Sacrifice")
+		end
+		
+		when button or info begin
+			say_title("The Sacrifice")
+			say("")
+			say("Thank you so much. May the hunting god")
+			say("bless you on your journey.")
+			say("")
+			say("You can find animal hearts by killing some")
+			say(""..mob_name(pc.getqf("target_vnum"))..".")
+			say("")
+			say_item_vnum(70022)
+			say("")
+			say_reward("You require "..pc.getqf("target_amount").." animal hearts.")
+			say("")
+		end
+		
+		when 20019.chat."Abort 'The Sacrifice' Quest" begin
+			say_title("Yang-Shin:")
+			say("")
+			say("What, you say you can not do it?")
+			say("")
+			say_reward("Be aware! If you abort the quest you will")
+			say_reward("have to wait 6 hours to try again!")
+			say("")
+			local abort = select("I will keep on it.", "No, I can't do it.")
+			if abort == 2 then
+				pc.setqf("end_state",3)
+				pc.setqf("timelimit",ts_herbtime[pc.getqf("end_state")][pc.getqf("herblevel")]*60*60+get_time())
+				set_state(start)
+			end
+		end
+		
+		when kill begin
+			if npc.get_race() == pc.getqf("target_vnum") then
+				pc.give_item2(70022,1)
+				if pc.count_item(70022) == pc.getqf("target_amount") then
+					set_state(reward)
+				end
+			end
+		end
+	end
+	
+	state reward begin
+		when letter begin
+			send_letter("You have all Animal Hearts")
+		end
+		
+		when button or info begin
+			say_title("The Sacrifice")
+			say("")
+			say("You've collected all Animal Hearts!")
+			say("You should go back to the Yang-Shin")
+			say("and claim your reward!")
+			say("")
+		end
+		
+		when 20019.chat."I found all Animal Hearts" begin
+			local i = 1
+			local q = pc.getqf("herblevel")
+			local chance = 80
+			local offer
+			say_title(mob_name(20019))
+			say("")
+			say("Wow! That was extraordinary work!")
+			say("Thank you for these hearts.")
+			say("")
+			say("Now to your reward...")
+			say("")
+			wait()
+			say_title("System:")
+			say("")
+			say("Please choose a herb by typing the alocated number:")
+			say("")
+			say("1 = Peach Bloom")
+			say("2 = Thristle")
+			say("3 = Plumbago")
+			say("4 = Grinderlia")
+			say("5 = Jamul")
+			say("6 = Ganoderma")
+			say("7 = Lippia")
+			say("8 = Sundew")
+			say("")
+			local herbnum = tonumber(input())
+			if tonumber(herbnum) == nil or herbnum == 0 or herbnum > 8  then
+				say_title("System:")
+				say("")
+				say("Please enter a valid number.")
+				say("")
+				return
+			end
+			if herbnum > 0 and herbnum < 9 then
+				pc.remove_item(70022,pc.count_item(70022))
+				while true do
+					if i < 8 then
+						if q < 4 then
+							offer = 10*q+5*(q-1)+5*(i-1)
+						else
+							offer = 10*q+10*(i-1)
+						end
+						say_title("Yang-Shin:")
+						say("")
+						say("Alright, I offer you "..offer.." "..item_name(50720+herbnum)..".")
+						say("Do you accept?")
+						local answer = select("Yes!","No, I want more!")
+						if answer == 1 then
+							say_title(mob_name(20019))
+							say("")
+							say("Alright, here's your reward!")
+							say("")
+							say_reward("You've received "..offer.." "..item_name(50720+herbnum)..".")
+							pc.give_item2(50720+herbnum,offer)
+							pc.setqf("end_state",1)
+							pc.setqf("timelimit",ts_herbtime[pc.getqf("end_state")][q]*60*60+get_time())
+							pc.setqf("herb_farming_points",pc.getqf("herb_farming_points")+offer)
+							local a = pc.getqf("herb_farming_points")
+							if a >= 500 and a <= 2499 and pc.getqf("herblevel") < 2 or pc.getqf("herblevel") > 2 then
+								pc.setqf("herblevel",2)
+								syschat("You've ranked up your questlevel to level 2!")
+							end
+							if a >= 2500 and a <= 9999 and pc.getqf("herblevel") < 3 or pc.getqf("herblevel") > 3 then
+								pc.setqf("herblevel",3)
+								syschat("You've ranked up your questlevel to level 3!")
+							end
+							if a >= 10000 and pc.getqf("herblevel") < 4 then
+								pc.setqf("herblevel",4)
+								syschat("You've ranked up your questlevel to level 4!")
+							end
+							set_state(start)
+							break
+						elseif answer == 2 then
+							local dice = number(1,100)
+							if dice <= chance then
+								chance = chance-20
+								if i == 1 or i == 2 then
+									i = i+1
+								elseif i == 3 then
+									i = i+2
+								elseif i == 5 then
+									i = i+3
+								end
+							else
+								say_title(mob_name(20019))
+								say("")
+								say("So you want to be greedy?")
+								say("")
+								say("Then go! As a lession I wont give")
+								say("you anything!")
+								say("")
+								say_reward("You gained no herbs for this quest.")
+								say("")
+								pc.setqf("end_state",2)
+								pc.setqf("timelimit",ts_herbtime[pc.getqf("end_state")][pc.getqf("herblevel")]*60*60+get_time())
+								set_state(start)
+								break
+							end
+						end
+					else
+						say_title(mob_name(20019))
+						say("")
+						say("Alright, here's your reward!")
+						say("That's all I got so here, take it!")
+						say("")
+						say_reward("You've received "..offer.." "..item_name(50720+herbnum)..".")
+						pc.give_item2(50720+herbnum,offer)
+						pc.setqf("end_state",1)
+						pc.setqf("timelimit",ts_herbtime[pc.getqf("end_state")][pc.getqf("herblevel")]*60*60+get_time())
+						pc.setqf("herb_farming_points",pc.getqf("herb_farming_points")+offer)
+						local a = pc.getqf("herb_farming_points")
+						if a >= 500 and a <= 2499 and pc.getqf("herblevel") < 2 or pc.getqf("herblevel") > 2 then
+							pc.setqf("herblevel",2)
+							syschat("You've ranked up your questlevel to level 2!")
+						end
+						if a >= 2500 and a <= 9999 and pc.getqf("herblevel") < 3 or pc.getqf("herblevel") > 3 then
+							pc.setqf("herblevel",3)
+							syschat("You've ranked up your questlevel to level 3!")
+						end
+						if a >= 10000 and pc.getqf("herblevel") < 4 then
+							pc.setqf("herblevel",4)
+							syschat("You've ranked up your questlevel to level 4!")
+						end
+						notice_all(""..pc.get_name().." is a brilliant merchant and traded his animal hearts for "..offer.." "..say_item_vnum(50720+herbnum)..".")
+						set_state(start)
+						break
+					end
+				end
+			end
+		end
+	end
+end
+		

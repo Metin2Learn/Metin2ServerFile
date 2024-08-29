@@ -1,0 +1,178 @@
+quest skill_reset2 begin
+    	state start begin
+        	when 9006.chat."Reset all the skills" begin
+		    	if pc.level < 5 then
+				say_title("Old lady:")
+				say("")
+				say("You first need to learn something!")
+				say("")
+				return
+			end
+			if pc.level >60 then
+				say_title("Old lady:")
+				say("")
+				----"123456789012345678901234567890123456789012345678901234567890"|
+				say("Your level is "..pc.level..". I can't help you after your")
+				say("level reaches 61.")
+				say("")
+				say("If you want to reset your state now, you need:")
+				say("")
+				say_item_vnum(71002)
+				say("")
+				return
+			 end
+			if  pc.get_skill_group()==0 then
+				say_title("Old lady:")
+				say("")
+				say("You don't need to return anything.")
+				say("")
+				return
+			end
+
+				local cost = special.skill_reset_cost[pc.get_level()]
+				local s = 0
+
+			if not pc.has_master_skill() then
+			    say_title("Old lady:")
+			    say("")
+			    ----"123456789012345678901234567890123456789012345678901234567890"|
+			    say("You are at the right place. You eyes show a lot of sorrow.")
+			    say("I let people forget their skills so they can start all over")
+			    say("again. Do you want to forget your skills,")
+			    say("")
+			    say("It costs "..cost.." Yang.")
+			    say("")
+			    s = select( "Reset my skills", "No, thanks")
+			else
+			    say_title("Old lady:")
+			    say("")
+			    ----"123456789012345678901234567890123456789012345678901234567890"|
+			    say("Ha Ha, is it possible that you are not feeling well? Your")
+			    say("face shows me that you could need some help.")
+			    say("")
+			    say("Are you not satisfied with your skills? Through a magical")
+			    say("way I can help you to forget your skills.")
+			    wait()
+			    say("That means that you can choose a new skill, but sadly you")
+			    say("are going to lose all your points that you have been")
+			    say("working for.")
+			    say("")
+			    say("Are you sure you want to start all over again?")
+			    say("")
+			    say("It costs "..cost.." Yang.")
+			    say("")
+			    s = select("Reset the Skills", "Cancel.")
+			end
+			if 2==s then
+				say_title("Old lady:")
+				say("")
+				say("If you change your mind, come and visit me again.")
+				say("")
+				return
+			end
+			if pc.money < cost then
+				say_title("Old lady:")
+				say("")
+				say("You don't have enough Yang.")
+				say("")
+				say("I can't help you, I also need money for living.")
+				say("")
+				return
+			end
+			pc.changegold(-cost)
+			pc.clear_skill()
+			pc.set_skill_group(0)
+			char_log(0, "RESET_FULL_SKILLS", "OLD LADY")
+			set_quest_state("skill_group","run")
+		end
+		when 9006.chat."Reset one skill" begin
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say_title("Old lady:")
+			say("")
+			say("A skill of your choice will be reset, so you can assign")
+			say("your points again. You will receive 17 skill points and")
+			say("you can use them to masterize your skill.")
+			say("")
+			if pc.level < 5 then
+				say_reward("You first need to learn something!")
+				say("")
+				return
+			end
+			if pc.level >60 then
+				----"123456789012345678901234567890123456789012345678901234567890"|
+				say("Your level is "..pc.level..". I can't help you after your")
+				say("level reaches 61.")
+				say("")
+				say_reward("If you want to reset your skill now, you need:")
+				say("")
+				say_item_vnum(71003)
+				say("")
+				return
+			 end
+			if  pc.get_skill_group()==0 then
+				say_reward("You don't need to reset anything.")
+				say("")
+				return
+			end
+
+			local result = BuildSkillList(pc.get_job(), pc.get_skill_group())
+
+			local vnum_list = result[1]
+			local name_list = result[2]
+
+			if table.getn(vnum_list) < 2 then
+				say("There are no initialized skills")
+				say("")
+				return
+			end
+
+			local cost = special.skill_reset_cost[pc.get_level()]/2
+
+			say("Please choose a skill that you want to reset.")
+			say("")
+			say_reward("It costs "..cost.." Yang.")
+			say("")
+
+			local i = select_table(name_list)
+
+			if table.getn(name_list) == i then
+				return
+			end
+
+			local name = name_list[i]
+			local vnum = vnum_list[i]
+
+			say_title("Old lady:")
+			say("")
+			say(string.format("Are you sure you want to initialize the skill %s ?", name))
+			say("")
+			say("This action cannot be undone.")
+			say("")
+
+			local s = select("Yes", "No")
+			if 2 == s then
+				return
+			end
+
+			if pc.money < cost then
+				say_title("Old lady:")
+				say("")
+				say("You don't have enough Yang.")
+				say("")
+				say("I can't help you, I also need money for living.")
+				say("")
+				return
+			end
+			char_log(0, "RESET_ONE_SKILL", "OLD LADY")
+			char_log(0, "RESET_ONE_SKILL", string.format("RESET_SKILL[%s]", name))
+			pc.clear_one_skill(vnum)
+			char_log(0, "RESET_ONE_SKILL", "APPLY_17MASTER_BONUS")
+			--pc.setf("reset_scroll","force_to_master_skill", 1)			
+			pc.changegold(-cost)
+			say_title("Old lady:")
+			say("")
+			say("Your skill "..name.." has been reset.")
+			say("")
+		end    	
+    	end
+end

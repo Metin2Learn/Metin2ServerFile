@@ -1,0 +1,61 @@
+quest hair_shop begin
+        state start begin
+                when 20021.chat."Hairdresser" with pc.get_part(PART_HAIR) >= 1001 begin
+
+                        say_title("Ariyoung:")
+                        say("")
+                        say("Hey you! Your hair is very pretty,")
+                        say("but don't you want back your former hairstyle?")
+                        say("I can restore your former hairstyle.")
+                        say("So how about it? For only 500.000 Yang I can")
+                        say("restore your old hairstyle again..")
+                        say("")
+
+                        local a = select("Old Hairstyle", "No, thanks.")
+                        if a == 1 then
+                                if pc.money >= 500000 then
+                                        pc.changemoney(-500000)
+                                        say_title("Ariyoung:")
+                                        say("")
+                                        say("A good decision.")
+                                        say("One moment please.")
+                                        say("")
+                                        wait()
+                                        say("Cut, cut.")
+                                        say("Snipp, snapp.")
+                                        say("Spatter, spray.")
+                                        say("Rattle, clank.")
+                                        say("")
+                                        wait()
+                                        say_title("Ariyoung:")
+                                        say("")
+                                        say("Hmm! Perhaps here a little bit more ...")
+                                        say("Snipp, snapp.")
+                                        say("")
+                                        wait()
+                                        say_title("Ariyoung:")
+                                        say("Hmm ... finished!")
+                                        say("I would bet, you will be satisfied.")
+                                        say("")
+                                        pc.set_part(PART_HAIR, 0)
+                                else
+                                        say_title("Ariyoung:")
+                                        say("")
+                                        say("You have not enough Yang.")
+                                        say("It costs 500.000 Yang ... 500.000 Yang!")
+                                        say("")
+                                        wait()
+                                        q.done()
+                                end
+                        elseif a == 2 then
+                                say_title("Ariyoung:")
+                                say("")
+                                say("What a shame. I could beautify you much more.")
+                                say("")
+                                say("")
+                        else
+                                say("UNBEKANNTE TASTE ["..a.."]")
+                        end
+                end
+        end
+end

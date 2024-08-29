@@ -1,0 +1,102 @@
+quest guild_change begin
+	state start begin
+		function change_master( name , level_limit , time_resign_limit , time_be_other_leader , time_be_other_member , iscacheitem )
+			local ret = guild.change_master_with_limit( name , level_limit , time_resign_limit , time_be_other_leader , time_be_other_member, iscacheitem)
+			local result = false
+
+			if ret == 0 then
+				say_title("System:")
+				say("")
+				say("You have entered wrong name.")
+				say("")
+			elseif ret == 1 then
+				say_title("System:")
+				say("")
+				say("Only guild master can use the item.")
+				say("")
+			elseif ret == 2 then
+				say_title("System:")
+				say("")
+				say("Can not find the guild member.")
+				say("")
+			elseif ret == 3 then
+				say_title("System:")
+				say("")
+				say("You have successfully transferred the Guild Master position.")
+				say("")
+				result = true
+			elseif ret == 4 then
+				say_title("System:")
+				say("")
+				say("You are not in the guild.")
+				say("")
+			elseif ret == 5 then
+				say_title("System:")
+				say("")
+				say("The candidate character is not online.")
+				say("")
+			elseif ret == 6 then
+				say_title("System:")
+				say("")
+				say("Not enough level to become the guild master.")
+				say("")
+			elseif ret == 7 then
+				say_title("System:")
+				say("")
+				say("He's too young to become a leader.")
+				say("")
+			end
+
+			return result
+		end
+
+		
+		when guild_man1.chat."Change Guild Master" or guild_man2.chat."Change Guild Master" or guild_man3.chat."Change Guild Master" with pc.is_guildmaster() == true begin
+			
+			say_title("Change Guild Master:")
+			say("")
+			say("Please enter your successor's name. It costs 500.000")
+			say("Yang to transfer the guild ownership.")
+			say("")
+
+			local s = input()
+
+			if s == pc.name then
+				say_title("System:")
+				say("")
+				say("You cannot enter your own name.")
+				say("")
+				return
+			elseif s == "" then
+				say_title("System:")
+				say("")
+				say("Please enter a name.")
+				say("")
+				return
+			end
+
+			if not pc.is_near_vid( find_pc_by_name( s ) , 10 ) then
+				say_title("System:")
+				say("")
+				say("The candidate must be near you.")
+				say("")
+				return
+			end
+			
+			if pc.gold < 500000 then
+				say_title("Change Guild Master:")
+				say("")
+				say("You don't have enough Yang.")
+				say("")
+				return
+			end
+			
+			if guild_change.change_master( s , 40 , 0 , 0 , 0 ,true) == true then
+				pc.remove_item(71099)
+				pc.change_money(-500000)
+			end
+
+		end
+
+	end
+end

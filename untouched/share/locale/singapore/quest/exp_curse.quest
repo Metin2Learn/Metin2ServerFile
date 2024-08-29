@@ -1,0 +1,36 @@
+quest exp_curse begin
+	state start begin
+		when 70210.use begin
+			pc.setqf("lastexp",pc.get_exp())
+			syschat("You are under the curse of the goddess. You will gain no experience.")
+			set_state(use)
+		end
+	end
+	
+	state use begin
+		when 70210.use begin
+			syschat("You lifted the curse of the goddess. You gain experience again.")
+			set_state(start)
+		end
+		
+		when login begin
+			syschat("You are currently under the curse of the goddess and gain no experience.")
+		end
+		
+		when kill or party_kill begin
+			local current = pc.get_exp()
+			local doll = pc.count_item(70210)
+			if doll == 0 then
+				syschat("The curse of the Goddess has lifted. You will gain Experience again.")
+				set_state(start)
+			end
+			if current < pc.getqf("lastexp") then
+				pc.setqf("lastexp",current)
+			end
+			if not npc.is_pc() then
+				local dif = pc.get_exp()-pc.getqf("lastexp")
+				pc.give_exp2(-dif)
+			end
+		end
+	end
+end

@@ -1,0 +1,243 @@
+quest guild_building begin
+        state start begin
+		
+                --[[when guild_man1.chat."GM:Reregistration." or guild_man2.chat."GM:Reregistration." or guild_man3.chat."GM:Reregistration."
+                        with pc.is_gm() begin
+
+                        say_title("Guard of the Village Square")
+                        say("")
+                        ----"12345678901234567890123456789012345678901234567890"|
+                        say("Please enter the name of the user, you want")
+			say("information about.")
+                        say("")
+                        say("")
+                        local u_name = input()
+                        local u_vid=find_pc_by_name(u_name)
+
+                        if u_vid==0 then
+                                say_title("This user does not exist.")
+                                say(u_name)
+                                return
+                        end
+
+                        local old_vid = pc.select(u_vid)
+                        u_withdrawTime=pc.getqf("new_withdraw_time")
+                        u_withdrawTime=pc.getqf("new_withdraw_time")
+                        pc.select(old_vid)
+
+                        withdrawDelay=game.get_event_flag("guild_withdraw_delay")
+                        disbandDelay=game.get_event_flag("guild_disband_delay")
+
+                        say_title("Guard of the Village Square")
+                        say("")
+                        ----"12345678901234567890123456789012345678901234567890"|
+                        say("Check the earliest date for Re-registration.")
+                        say("")
+
+                        if u_withdrawTime>0 then
+                                say("Deducted time: "..time_to_str(u_withdrawTime))
+                                say("Time to wait: ".. withdrawDelay..": Day)")
+                                say("")
+                        end
+
+                        if u_disbandTime>0 then
+                                say("Time for resolving: "..time_to_str(u_disbandTime))
+                                say("(Time to wait: ".. disbandDelay.." Day)")
+                                say("")
+                        end
+
+                        local retryTime1 = u_withdrawTime + withdrawDelay*86400
+                        local retryTime2 = u_withdrawTime + disbandDelay*86400
+
+                        local retryTime = 0
+                        if retryTime1 > retryTime2 then
+                                retryTime = retryTime1
+                        else
+                                retryTime = retryTime2
+                        end
+
+                        local curTime = get_time()
+                        if curTime < retryTime then
+                                say("Next possibility, for repeating the attempt: "..time_to_str(retryTime))
+                                say("(Time left: "..((retryTime-curTime)/3600).." hours)")
+                                say("")
+
+                                if is_test_server() then
+                                        local s=select("Direct adaptation", "Close")
+                                        if s==1 then
+                                                local old_vid = pc.select(u_vid)
+                                                local curTime=get_time()
+                                                pc.setqf("new_withdraw_time", curTime-withdrawDelay*86400)
+                                                pc.setqf("new_withdraw_time", curTime-disbandDelay*86400)
+                                                pc.select(old_vid)
+                                        end
+                                end
+                        else
+                                say("Direct sign up possible.");
+                                say("")
+                        end
+                end
+                
+                when         guild_man1.chat."GM: look at guilds-related variables" or
+                        guild_man2.chat."GM: look at guilds-related variables" or
+                        guild_man3.chat."GM: look at guilds-related variables"
+                        with pc.is_gm() begin
+
+                        test_chat("pc.has_guild: "..bool_to_str(pc.has_guild()))
+                        test_chat("pc.is_guildmaster: "..bool_to_str(pc.isguildmaster()))
+                        test_chat("pc.empire: "..pc.empire)
+                        test_chat("npc.empire: "..npc.empire)
+                end
+                --]]
+                when guild_man1.chat."Leave Guild" or
+                        guild_man2.chat."Leave Guild" or
+                        guild_man3.chat."Leave Guild"
+                        with pc.hasguild() and not pc.isguildmaster() and (pc.is_gm() or npc.empire == pc.empire) begin
+                        -- ??
+                        say_title("Guardian:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Do you really want to leave the guild you belong to? I")
+			say("think you will only lose friends that way.")
+			say("")
+                        say("But it's your decision. So, do you really want to leave")
+			say("this guild?")
+                        say("")
+                        local s = select("Yes", "No")
+                        if s==1 then
+                                say_title("Guard of the Village Square:")
+                                say("")
+                                say("Allright.")
+                                say("")
+                                say("I will strike you out of the guilds roll.")
+                                say("")
+                                pc.remove_from_guild()
+                                pc.setqf("new_withdraw_time",get_global_time())
+                        end
+                end
+
+                when guild_man1.chat."Disband my Guild" or
+                        guild_man2.chat."Disband my Guild" or
+                        guild_man3.chat."Disband my Guild"
+                        with pc.hasguild() and pc.isguildmaster() and (pc.is_gm() or npc.empire == pc.empire) begin
+                        -- ??
+                        say_title("Guard of the Village Square:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("What?")
+                        say("[DELAY value;150]        [/DELAY]")
+			say("I created it with much efforts and now you want to")
+                        say("disband it? All the experience and all the remembrance")
+                        say("about your friends will be lost forever!")
+                        say("")
+                        say("Do you really want to disband it?")
+                        say("")
+                        local s = select("Yes", "No")
+                        if s==1 then
+                        say_title("Guard of the Village Square")
+                        say("")
+                        say("Ok.")
+                        say("")
+                        say("I will disband the guild you are leading.")
+                        say("")
+                        pc.destroy_guild()
+                        pc.setqf("new_disband_time", get_global_time())
+                        pc.setqf("new_withdraw_time", get_global_time())
+                        end
+                end
+
+                when guild_man1.chat."Create a new Guild" or
+                        guild_man2.chat."Create a new Guild" or
+                        guild_man3.chat."Create a new Guild" with not pc.hasguild() and pc.level >= 40 begin
+                        ----with (pc.is_gm() or npc.empire == pc.empire)
+                        --------------------------------------------------------------
+                        local level_limit;
+                        local guild_create_item
+
+                        level_limit = 40
+                        guild_create_item = false
+                        -----------------------------------------------------------------------
+
+                        if pc.hasguild() then
+                        	say_title("Guardian:")
+                        	say("")
+                        	say("You cannot create a Guild while you are still")
+                        	say("a member of a Guild!")
+                        	say("")
+                                return
+                        end
+                        if game.get_event_flag("guild_withdraw_delay")*86400 >
+                                get_global_time() - pc.getqf("new_withdraw_time") then
+                        say_title("Guardian:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("In the first day after leaving your guild, you")
+                        say("cannot establish a new one.")
+                        say(string.format("", game.get_event_flag("guild_withdraw_delay")))
+                        return
+                        end
+
+                        if game.get_event_flag("guild_disband_delay")*86400 >
+                                get_global_time() - pc.getqf("new_withdraw_time") then
+                        say_title("Guardian:")
+                        say("")
+                        say("You have recently disbanded a guild!")
+                        say("")
+                        say("In the next 24 hours you cannot establish a new one.")
+                        say(string.format("", game.get_event_flag("guild_disband_delay")))
+                        return
+                        end
+                        say_title("Guardian:")
+                        say("")
+                        say("You would like to establish a guild?")
+                        say("")
+                        say("Creating a guild costs 200.000 Yang and is only allowed")
+                        say("to citizens of level 40 or higher.")
+                        say("")
+                        say("Are you sure you want to establish a guild?")
+                        say("")
+                        local s = select("Yes", "No")
+                        if s == 2 then
+                                return
+                        end
+
+                        if pc.level >= 40 then
+                        if pc.gold >= 200000 then
+--                                        pc.remove_item(70101)
+                                if not guild_create_item or pc.countitem(guild_create_item)>0 then
+                                        game.request_make_guild()
+                                end
+
+
+--                                        if pc.countitem(70101)>0 then
+--                                                pc.remove_item(guild_create_item)
+--                                                game.request_make_guild()
+--                                        else
+--                        say_title("Guard of the Village Square")
+--                        say("")
+                        ----"12345678901234567890123456789012345678901234567890"|
+--                        say("If you want to establish a guild,")
+--                        say("you need the Book of Providence.")
+--                        say("")
+--                        say_item_vnum(70101)
+------                                        end
+                                else
+                                say_title("Guardian:")
+                                say("")
+                                ----"12345678901234567890123456789012345678901234567890"|
+                                say("You don't have enough Yang!")
+                                say("")
+                                return
+                                end
+                        else
+                        say_title("Guardian:")
+                        say("")
+                        ----"12345678901234567890123456789012345678901234567890"|
+                        say("Your level is too low for establishing a guild.")
+                        say("")
+
+                        end
+                end
+
+        end
+end

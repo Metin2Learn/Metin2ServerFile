@@ -1,0 +1,127 @@
+quest main_quest_lv16 begin
+        state start begin
+        end
+        state run begin
+                when login or levelup or enter with pc.get_level() >= 16 begin
+                        set_state( gotoboss )
+                end
+        end
+        state gotoboss begin
+                when letter begin
+                        send_letter( "Capture the Spy 1" )
+
+                        local v=find_npc_by_vnum(20355)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Go to the Captain")
+                        end
+
+                end
+                when button or info begin
+                        say_title("Capture the Spy 1")
+                        ----                                                  l
+                        say("")
+                        say("There is a spy in our village!")
+                        say("")
+                        say("The Captain has more information about the spy.")
+                        say("")
+                end
+                when __TARGET__.target.click or 20355.chat."Capture the Spy" begin
+                        say_title("Captain:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("I have a feeling we have a spy in our village. One of the")
+                        say("villagers is working for the White Oath.")
+                        say("")
+                        say("Maybe you can find some evidence. With your help we might")
+                        say("be able to find the spy.")
+                        say("")
+                        target.delete("__TARGET__")
+                        set_state( killrobber )
+                end
+        end
+
+        state killrobber begin
+                when letter begin
+                        send_letter("Find the spy")
+                end
+                when button or info begin
+                        say_title("Find the spy")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Find evidences of the spy at the White-Oath Clan and")
+                        say("return to the Captain.")
+                        say("")
+                end
+                when 394.kill or 393.kill or 392.kill or 391.kill or 301.kill or 302.kill or 303.kill or 304.kill begin
+
+                        if number( 1, 10 ) == 1 then
+                                pc.give_item2( 30001, 1 )
+                                say_title("You exposed the spy!")
+                                say("")
+                                say("Talk to the Captain.")
+                                say("")
+                                set_state(gotoboss2)
+                        end
+
+                end
+        end
+        state gotoboss2 begin
+                when letter begin
+                        local v=find_npc_by_vnum(20355)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Go to the Captain.")
+                        end
+                end
+                when button or info begin
+                        say_title("Go to the Captain.")
+                        say("")
+                        say("You found a letter. Could this be the evidence the")
+                        say("Captain is looking for?")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        if pc.count_item(30001) >= 1 then
+				say_title("Captain:")
+				say("")
+				----"123456789012345678901234567890123456789012345678901234567890"|
+				say("Do you have an evidence? Let me have a look...")
+				say("")
+				say("This is an interesting letter indeed! It should be enough")
+				say("to figure out who the spy is.")
+				say("")
+				say("Thanks to you, we're able to handle this crisis. We are")
+				say("very happy to have such a competent soldier like you!")
+				say("")
+				wait()
+				say_title("Captain:")
+				say("")
+				say("You should take some time to rest. Accept this as a reward.")
+                                say("")
+                                say_title("Reward:")
+                                say("")
+				say_reward("Experience points: 40.000" )
+                                say_reward("Yang: 42.500")
+                                say("")
+
+                                pc.remove_item(30001)
+                                pc.give_exp2( 40000 )
+                                pc.change_money( 42500 )
+				target.delete("__TARGET__")
+                                clear_letter()
+                                set_state(__COMPLETE__)
+                                set_quest_state("main_quest_lv27", "run")
+                                
+                        else
+                        	say_title(pc.name..":")
+                        	say("")
+                        	say("Ooops... I need to bring this first.")
+                        	say("")
+                        	say_item("Letter",30001,"")
+                        end
+                end
+        end
+        state __COMPLETE__ begin
+        end
+end

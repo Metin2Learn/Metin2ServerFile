@@ -1,0 +1,175 @@
+quest training_grandmaster_skill begin
+    state start begin
+        when 50513.use begin
+            say_title("Skill Training of the Grand Masters")
+            if pc.get_skill_group() == 0 then
+                ---                                                   l
+                say("You didn't start an apprenticeship yet.")
+                say(""..pc.get_skill_group())
+                return
+            end
+
+            if get_time() < pc.getqf("next_time") then -- and not is_test_server() then
+                if pc.is_skill_book_no_delay() then
+                    say("")
+                    say("As you have read the Exorcism Scroll, you")
+                    say("can participate in the advanced training")
+                    say("without making a pause.")
+                    say("")
+                    wait()
+                else
+                    say("When your training is done, you have")
+                    say("to rest for half a day.")
+                    return
+                end
+            end
+
+            local result = training_grandmaster_skill.BuildGrandMasterSkillList(pc.get_job(), pc.get_skill_group())
+
+            local vnum_list = result[1]
+            local name_list = result[2]
+
+            if table.getn(vnum_list) == 0 then
+                ---                                                   l
+                say("No skill was learned yet through the")
+                say("Skill Training of the Grand Masters.")
+                return
+            end
+            ---                                                   l
+            say("Please choose the Skill you want to learn")
+            say("through the Skill Training of ")
+            say("the Grand Masters.")
+			say("")
+            local menu_list = {}
+            table.foreach(name_list, function(i, name) table.insert(menu_list, name) end)
+            table.insert(menu_list, "Close")
+
+            local s=select_table(menu_list)
+            if table.getn(menu_list) == s then
+                return
+            end
+
+            local skill_name=name_list[s]
+			local skill_vnum=vnum_list[s]
+            local skill_level = pc.get_skill_level(skill_vnum)
+            local cur_alignment = pc.get_real_alignment()
+            local need_alignment = 1000+500*(skill_level-30)
+
+            test_chat("Current Good/Evil Points: "..cur_alignment)
+            test_chat("Needed Good/Evil Points: "..need_alignment)
+
+            local title=string.format("%s Grand Master %d Level Skill Training", skill_name, skill_level-30+1)
+
+            say_title("Skill Training of the Grand Masters")
+            say("")
+            say("When you waste your Good/Evil Points")
+            say("during the training it's possible that you")
+            say("can be downgraded, even under")
+            say("the Level of a Ronin.")
+            say("")
+
+            if cur_alignment<-19000+need_alignment then
+                say_reward("You don't have enough alignment-points")
+				say_reward("for a Grandmaster-Training.")
+				say("")
+                return
+            end
+
+            if cur_alignment<0 then
+                say_reward(string.format("Neccessary amount of Good/Evil points: %d -> %d", need_alignment, need_alignment*2))
+                say_reward("(If your level is under the Level of a ronin,")
+                say_reward("you'll waste double the Good/Evil Points compared")
+                say_reward("to somebody who is ranked higher than a ronin.")
+                need_alignment=need_alignment*2
+				elseif cur_alignment<need_alignment then
+                say_reward(string.format("Needed Good/Evil Points: %d", need_alignment))
+                say_reward("If you train now, you will be ranked")
+                say_reward("lower than a Ronin.)")
+            else
+                say_reward(string.format("Needed Good/Evil-Points: %d", need_alignment))
+            end
+            say("")
+
+            local s=select("Continue", "Postpone")
+            if s==2 then
+                return
+            end
+
+
+            if cur_alignment>=0 and cur_alignment<need_alignment then
+                say_title(string.format("%s Confirm", title))
+				say("")
+                say("If you now try to learn a Grand Master Skill")
+                say("it is possible that your alignment points")
+                say("will fall below zero.")
+                say("When this happens, your alignment turns evil and")
+				say("you can be attacked by warriors of your kingdom.")
+                say("Also, if you are over Level 50 you can lose your")
+				say("equipment upon death!")
+				say("If you're sure you want to train say the following:")
+                say("")
+                say_reward("I want to train.")
+                say("")
+                say("If you don't want to train, press 'ENTER'")
+                local s=input()
+                if s!="I want to train" then
+                    return
+                end
+            end
+
+            if get_time() < pc.getqf("next_time") then -- and not is_test_server() then
+                if pc.is_skill_book_no_delay() then
+                    pc.remove_skill_book_no_delay()
+                else
+                    say_title("Skill Training of the Grand Masters")
+                    return
+                end
+            end
+
+            pc.setqf("next_time", get_time()+time_hour_to_sec(number(8, 12)))
+
+            if need_alignment>0 then
+                if pc.learn_grand_master_skill(skill_vnum) then
+                    pc.change_alignment(-need_alignment)
+                    say_title(string.format("%s Success", title))
+                    if 40 == pc.get_skill_level(skill_vnum) then
+                        say(string.format("%s became a perfect Master.", skill_name))
+                    else
+                        say(string.format("Through the Skill Training of the Grand Masters you raised %s to Level %d.", skill_name, skill_level-30+1+1))
+                    end
+                    say("")
+                    say_reward("You raised your Level successfully!")
+                    say_reward(string.format("You used %d Good/Evil Points..", need_alignment))
+                    say("")
+                else
+                    say_title(string.format("%s failed!", title))
+                    say("You couldn't increase your Skill.")
+                    say("")
+                    say_reward("You lost some Good/Evil Points.")
+                    say("")
+                    pc.change_alignment(-number(need_alignment/3, need_alignment/2))
+                end
+            end
+            item.remove()
+        end
+		
+        function BuildGrandMasterSkillList(job, group)
+            GRAND_MASTER_SKILL_LEVEL = 30
+            PERFECT_MASTER_SKILL_LEVEL = 40
+            local skill_list = special.active_skill_list[job+1][group]
+            local ret_vnum_list = {}
+            local ret_name_list = {}
+            table.foreach(skill_list,
+            function(i, skill_vnum)
+                local skill_level = pc.get_skill_level(skill_vnum)
+                if skill_level >= GRAND_MASTER_SKILL_LEVEL and skill_level < PERFECT_MASTER_SKILL_LEVEL then
+                    table.insert(ret_vnum_list, skill_vnum)
+                    local name=locale.GM_SKILL_NAME_DICT[skill_vnum]
+                    if name == nil then name=skill_vnum end
+                    table.insert(ret_name_list, name)
+                end
+            end)
+            return {ret_vnum_list, ret_name_list}
+        end
+    end
+end

@@ -1,0 +1,209 @@
+quest main_quest_lv10 begin
+        state start begin
+        end
+        state run begin
+                when login or levelup or enter with pc.get_level() >= 10 begin
+                                set_state( gotoboss )
+                end
+
+        end
+        state gotoboss begin
+                when letter begin
+                        send_letter("Go to the Captain.")
+                        local v=find_npc_by_vnum(20355)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Captain")
+                        end
+                end
+                when button or info begin
+                	----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("Go to the Captain.")
+                        say("")
+                        say("You are now experienced enough that the Captain will give")
+                        say("you assignments. You will find him in the first village.")
+                        say("")
+                        say("Go to him, he is waiting for you.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        say_title("Captain:")
+                        say("")
+                        say("You look familiar...")
+                        say("")
+			say("Oh yes, I think I have heard of you.")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("You are the new adventurer and you have done well in")
+                        say("proving your skills. I do not know yet how skillful")
+                        say("you are, but you will be tested in future assignments.")
+                        say("")
+                        wait()
+
+                        say_title("Captain:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("There will be some challenges for you so get prepared for")
+                        say("them. Do you know the story about the three Kingdoms? Or")
+                        say("the story of the Heaven's Lair? You don't know it!?")
+                        say("")
+                        say("What do the instructors teach these days?")
+                        say("")
+                        say("Do I have to teach you such fundamental stuff?")
+                        say("")
+                        wait()
+
+                        say_title("Captain:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("This is important stuff and I will summarize it only once.")
+                        say("So listen to me!")
+                        say("")
+                        say("Once upon a time there was a united kingdom. When the Metin")
+                        say("stones appeared the kingdom was divided into two kingdoms:")
+                        say("")
+                        say("Shinsoo, the kingdom of trade;")
+                        say("and Jinno, the kingdom of military.")
+                        say("")
+                        wait()
+
+                        say_title("Captain:")
+                        say("")
+                        say("Each kingdom tries to recover from the disturbances")
+                        say("caused by the Metin stones.")
+                        say("")
+                        say("They all try to reunite the kingdoms again.")
+                        say("")
+                        say("You also need to work for the union of the kingdoms!")
+                        say("It's important that you never forget this.")
+                        say("")
+                        wait()
+			----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("Captain:")
+                        say("")
+                        say("I will give you the first assignment. Relax, it is easy.")
+                        say("")
+                        say("In the next village you will find a musician named Yuhwan.")
+			say("People think that he quit the army to become a musician.")
+                        say("He is in fact a spy.")
+                        say("")
+                        say("There is a document that I need from Yu-Hwan. Find him and")
+                        say("bring the document to me.")
+                        say("")
+                        say("Don't forget that this is a secret mission.")
+                        say("")
+                        wait()
+
+                        say_title("Captain:")
+                        say("")
+                        say("Click on the M key to figure out how you can get to the")
+                        say("next village. Use the Warp Portal marked with a blue dot.")
+                        say("")
+                        say("The musician Yu-Hwan is the big guy with an instrument.")
+                        say("")
+                        set_state(gotomusition)
+                end
+        end
+
+        state gotomusition begin
+                when letter begin
+                	send_letter("Visit the musician Yu-Hwan.")
+                        local v=find_npc_by_vnum(20017)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Visit the musician Yu-Hwan.")
+                        end
+                end
+                when button or info begin
+                        say_title("Mission from the Captain")
+                        say("")
+                        say("Talk to the musician Yu-Hwan in the "..areaname[pc.get_empire()][2].." Area.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        say_title("Musician Yu-Hwan:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Life is a dream, like everything in life. Where do we come")
+                        say("from and where do we go? The world is full of conflicts.")
+                        say("")
+                        say("Honest work never pays off.")
+                        say("")
+                        say("Are you here to listen to a song?")
+                        say("")
+                        wait()
+
+                        say_title("Musician Yu-Hwan:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Oh, the Captain sends you!")
+                        say("")
+                        say("Psst, talk quietly... No one in the village may hear about")
+                        say("my true identity.")
+                        say("")
+                        say("You must be trustworthy if you know my identity.")
+                        say("")
+                        say("Here you are. The document contains all the information I")
+                        say("could gather. Deliver it to the Captain.")
+                        say("")
+                        wait()
+
+                        say_title("Musician Yu-Hwan:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Hurry up! If you stand here too long something bad")
+                        say("could happen.")
+                        say("")
+                        say("What is life? Life is short... Enjoy it as long as you can.")
+                        say("")
+                        set_state(gotoboss2)
+                end
+        end
+        state gotoboss2 begin
+                when letter begin
+                        local v=find_npc_by_vnum(20355)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Return to the Captain.")
+                        end
+                end
+                when letter begin
+                        send_letter("Return to the Captain.")
+                end
+                when button or info begin
+                        say_title("Mission from the Captain")
+                        say("")
+                        say("You got the secret document from Yu-Hwan the musician. Now")
+                        say("let's bring it to the Captain.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+
+                        say_title("Captain:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Is that the document from the Musician?")
+                        say("")
+                        say("Not bad for a new adventurer! I have great expectations")
+                        say("of you. Take this as reward for your efforts.")
+                        say("")
+                        say("Keep up the good work for the country!")
+                        say("")
+                        say_title("Reward:")
+                        say("")
+                        say_reward("Experience points: 11.000")
+                        say_reward("Yang: 10.500")
+                        say("")
+                        pc.give_exp2( 12500 )
+                        pc.change_money( 10500 )
+                        clear_letter()
+                        set_state( __COMPLETE__ )
+                        set_quest_state("main_quest_lv12", "run")
+                end
+        end
+        state __COMPLETE__ begin
+        end
+end

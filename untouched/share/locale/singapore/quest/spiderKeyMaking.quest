@@ -1,0 +1,305 @@
+----------------------------------
+--	거미동굴의 열쇠 만들기 퀘스트 (렙제 50 이상)
+--  2012.2.3 김용욱
+----------------------------------
+quest spiderKeyMaking begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >= 50 begin
+			set_state( step1 )
+		end
+	end
+
+	state step1 begin
+		when 20355.chat."The Third Spider Dungeon" begin   --경비대장에게 말을 걸어 퀘스트를 시작한다.
+			say_title(mob_name(20355)) 
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("Oh! I'm glad you came.")
+			say("")
+			say("Our scouts have found about a third level in the Spider")
+			say("Dungeons. Apparently, huge and evil insects have nested")
+			say("in this previously unknown cave.")
+			say("")
+			say("Our men also found a Gravestone with an inscription they")
+			say("could not decipher. Search for this stone and bring")
+			say("back a copy of the inscription to me.")
+			say("")
+			say("Here is a Pass. It will allow you to enter the upper")
+			say("levels of the Spider Dungeon")
+			say("")
+			pc.give_item2(71095)
+			set_state( step2 )
+		end
+	end
+
+	state step2 begin --비석에 탁본을 뜨러 가야한다.
+		-----------퀘스트편지2------------
+		when letter begin
+			send_letter("The Gravestone")
+
+			-- 비석을 가리킨다. (아직은 미리내)
+			local v = find_npc_by_vnum(30130)
+			if 0 != v then
+				target.vid("__TARGET__", v, mob_name(30130))
+			end
+		end
+
+		when button or info begin
+			say_title("The Gravestone")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("Find the old Gravestone in the Spider Dungeons and make a")
+			say("copy of the engravings for the Captain.")
+			say("")
+		end
+
+		when 30130.chat."The Gravestone" begin
+			target.delete("__TARGET__")
+			
+			say_title("The Gravestone")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("You made a copy of the pictograms in the gravestone.")
+			say("Go back to the Captain and show it to him.")
+			say("")
+			set_state(step3)
+		end
+		
+		when 20355.chat."The Gravestone" begin
+			
+			say_title(mob_name(20355))
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("What are you waiting for? You didn't lose the Passage")
+			say("I gave it to you, didn't I?")
+			say("")
+		end
+		
+	end
+	
+	state step3 begin --탁본을 떴으니 경비에게 돌아간다.
+		when letter begin
+			send_letter("The Third Spider Dungeon")
+
+			--경비대장을 가리킨다.
+			local v = find_npc_by_vnum(20355)
+			if 0 != v then
+				target.vid("__TARGET__", v, mob_name(20355))
+			end
+		end
+
+		when button or info begin
+			say_title("The Third Spider Dungeon")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("You made a copy of the engravings in the old stone in")
+			say("the Spider's Dungeon second floor.")
+			say("")
+			say("Show it to the Captain.")
+			say("")
+		end
+		
+		--을두지를 선택하면 해당 퀘스트에 관련된 대화를 나눌 수 있다.
+		when 20355.chat."Here's a copy of the engravings" begin
+			say_title(mob_name(20355))
+			say("")
+			say("You found it already? Let's see...")
+			say("[DELAY value;70]        [/DELAY]")
+			say("What is this? I don't understand this language.")
+			say("")
+			say("Maybe we should ask the wise Uriel about it.")
+			say("")
+			set_state(step4)
+		end
+		
+	end
+		
+	state step4 begin  --을두지에게 탁본을 맡기자.
+		-----------퀘스트편지2------------
+		when letter begin
+			send_letter("The Third Spider Dungeon")
+
+			-- 을두지를 가리킨다.
+			local v = find_npc_by_vnum(20011)
+			if 0 != v then
+				target.vid("__TARGET__", v, mob_name(20011))
+			end
+		end
+
+		when button or info begin
+			say_title("The Third Spider Dungeon")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("The Captain can't figure out what's written in the")
+			say("old inscriptions. Ask Uriel for help.")
+			say("")
+		end
+		
+		when 20011.chat."The Third Spider Dungeon" begin
+			target.delete("__TARGET__")
+			say_title(mob_name(20011))
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("So the Captain wants me to decipher this mysterious")
+			say("inscription? Of course I will! I love challenges!")
+			say("[DELAY value;150]        [/DELAY]")
+			say("Oh! This is... terrible. Here is the translation. Bring it")
+			say("the Captain quickly and then come back here.")
+			say("")
+			say("If what is written here is true, we are facing a big threat.")
+			say("Quick, go and inform him!")
+			say("")
+			set_state(step5)
+		end
+	
+		when 20355.chat."A new threat" begin
+			say_title(mob_name(20355))
+			say("")
+			say("Did you talk to Uriel yet?")
+			say("")
+			say("What are you waiting for then?")
+			say("")
+		end
+	end
+	
+	state step5 begin  --경비한테 편지 배달
+		when letter begin
+			send_letter("A new threat")
+
+			-- 을두지를 가리킨다.
+			local v = find_npc_by_vnum(20355)
+			if 0 != v then
+				target.vid("__TARGET__", v, mob_name(20355))
+			end
+		end
+
+		when button or info begin
+			say_title("A new threat")
+			say("")
+			say("Hurry up! You've got to come back and talk")
+			say("with the Captain. Uriel said it is important!")
+			say("")
+		end
+		when 20355.chat."Uriel큦 letter" begin
+			target.delete("__TARGET__")
+			say_title(mob_name(20355))
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("")
+			say("Darn! A violent arachnid demon has nested in the third level")
+			say("of the Spider Dungeon. According to the inscription, a")
+			say("special key is needed to access this hidden cave.")
+			say("")
+			say_reward("Ask Uriel about this key and gather a party of strong")
+			say_reward("fighters to raid the hideout of the Spider Baroness.")
+			say("")
+			
+			set_state(step6)
+		end	
+		
+		when 20011.chat."Uriel큦 letter" begin
+			say_title(mob_name(20011))
+			say("")
+			say("Go ask the Captain! It is a crucial task!")
+			say("")
+		end
+		
+	end
+	
+	state step6 begin --경비는 나만 일시킨다. 을두지와 상의하자.
+		when letter begin
+			send_letter("Letter from Uriel")
+			
+			-- 을두지를 가리킨다.
+			local v = find_npc_by_vnum(20011)
+			if 0 != v then
+				target.vid("__TARGET__", v, mob_name(20011))
+			end
+		end
+
+		when button or info begin
+			say_title("Uriel's letter")
+			say("")
+			say("Go back and ask Uriel about the special key")
+			say("the Captain mentioned a moment ago")
+			say("")
+		end
+
+		--을두지를 선택하면 해당 퀘스트에 관련된 대화를 나눌 수 있다.
+		when 20011.chat."Uriel's Letter" begin
+			target.delete("__TARGET__")
+			say_title(mob_name(20011))
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("You are back? Ah, so the Captain asked you to raid the")
+			say("den of the Spider Baroness?")
+			say("")
+			say("Accessing it is not easy. An Arachnid Key is needed and")
+			say("creating one is not an easy task.I will need you to bring")
+			say("me a Spider Web, a Spider Egg Sack, a Spider Poison Sack,")
+			say("a Spider Leg, a Spider Eye and the Spider Queen's Poison.")
+			say("")
+			set_state(step7)
+			
+		end
+		
+	end
+
+	state step7 begin  --재료를 모아 을두지에게 가져가는 상태. 퀘스트의 최종 상태이기도 하다.
+		
+		when 20011.chat."The Arachnid Key" begin
+			say_title(mob_name(20011))
+			say("")
+			say("I see you've got all the things I told you, but you will")
+			say("to give me some time. Creating the Arachnid Key shouldn't")
+			say("be a hard task, but it will take me some time and there's")
+			say("a possibilty that it could fail while it's being created")
+			say("")
+			wait()
+			
+			if pc.count_item(30056) > 0 and pc.count_item(30057) > 0 and pc.count_item(30058) > 0 and pc.count_item(30059) > 0 and pc.count_item(30025) > 0 and pc.count_item(30326) > 0 then
+			
+		local prob = math.random(1,2000)
+
+				if prob <= 1000 then
+				
+					say_title(mob_name(20011))
+					say("")
+					say("Oh! Incredible! The fabrication of the Key was successful")
+					say("It is an incredible item, use it with wisdom")
+					say("")
+					pc.remove_item(30056, 1)
+					pc.remove_item(30057, 1)
+					pc.remove_item(30058, 1)
+					pc.remove_item(30059, 1)
+					pc.remove_item(30025, 1)
+					pc.remove_item(30326, 1)
+					pc.give_item2(30324, 1)
+					set_state(step1)
+					return
+					end
+				
+				say_title(mob_name(20011))
+				say("")
+				say("Oh, oh! Well, no one is born knowing everything..")
+				say("the fabrication of the Arachnid Key is extremely hard")
+				say("and every single mistake can make it fail... Unluckly")
+				say("I've used all the materials you gave me... but the next")
+				say("time will I'll be able to create it!!")
+				say("")
+					
+			else
+				say_title(mob_name(20011))
+				say("")
+				say("Dear friend... I told you to pick up some items for")
+				say("the fabrication of the Arachnid Key but you come back")
+				say("and you don't have them... Remember you needed these")
+				say("concrete materials: a Spider Web, a Spider Egg Sack")
+				say("a Spider Poison Sack, a Spider Eye, a Spider Leg")
+				say("and finally the Spider Queen's Poison")
+				say("")
+				say_reward("Come back when you have all of them!!")
+				say("")
+			end
+		end
+	end
+end

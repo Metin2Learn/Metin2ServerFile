@@ -1,0 +1,152 @@
+
+------------------------------------------------------------------
+-- Lost relic of the brother						--
+-- 	 NPC : Mirine(20006), Blacksmith(20016)		--
+--	Suggested player level: 22 ~ 25				--
+--	Rewards : Silver Sword +0 ~ +3					--
+--	       Barbarian Sword +0 ~ +3					--
+--	Required item: Worn Out Black Uniform				--
+------------------------------------------------------------------
+
+quest test begin
+	state start begin
+		when 20006.chat."Talking to" with pc.level >= 22 and pc.level <=25 begin
+			say("Mirine:")
+			say("Sniff Sniff... Brother...Sniff Sniff...Sniff Sniff..")
+			say("Who are you?")
+			say("")
+			wait()
+			say("Just wondering why you're crying.")
+			say("Use this handkerchief.")
+			say("")
+			wait()
+			say("Mirine:")
+			say("You're so kind.")
+			say("Would you like to help me?")
+			say("My brother dies while trying to")
+			say("get my medicine......")
+			say("Sniff Sniff... I was crying on his tomb") 
+			say("thinking of him..")
+			say("")
+			wait()
+			say("But the thing is I lost his relic ")
+			say("while I was running away from Black Wind Soldiers....")
+			say("I can't get it back. They are too scary...")
+			say("")
+			local a = select("Find it for her.", "Leave her")
+			if a == 1 then
+				say("It's a good thing to help a poor girl who ")
+				say("even lost her brother.")
+				say("I will be back soon.")
+				say("")
+				setstate(find)
+			elseif 	a == 2 then
+				say("I'm just too busy")
+				say("To help this poor orphan girl")
+				say("does she even have some money?")
+				say("")
+				setstate(__COMPLETE__)
+			else
+				say("UNKNOWN BUTTON ["..a.."]")
+			end
+		end
+	end
+
+	state find begin
+		when letter begin
+			send_letter("Find relic of Mirine's brother")
+		end
+
+		when button or info begin
+			say_title("Find relic of Mirine's brother")
+			say("")
+			say("Find Worn Out Black Uniform")
+			say("and bring it back to her")
+			say("")
+		end
+ 
+		when 20006.chat."Give the uniform" with pc.countitem("30032")>=1 begin
+			if pc.countitem("30032") >= 1 then
+				pc.removeitem(30032, 1)
+				say("Mirine:")
+				say("Oh...This uniform still has my brother's scent..")
+				say("Thank you so much..thanks you..Sniff ...")
+				say("I Found this thing.")
+				say("You can have it cause i don't need it.")
+				say("")
+				say_reward("Rusty Blade")
+				say("")
+				pc.give_item2("30030", 1)
+				wait()
+				say("Where can I use this...")
+				say("Let's go to Blacksmith.")
+				setstate(reward)
+			end
+		end
+		when 20006.chat."Talking to" with pc.countitem("30032") == 0 begin
+			say("Mirine:")
+			say("Have I asked you too much?")
+			say("Brother... B..ro..ther..... Sniff...")
+			say("")
+		end
+	end
+
+	state reward begin
+		when 20006.chat."Talking to" begin
+			say("Mirine:")
+			say("Thanks..")
+			say("")
+		end
+
+		when 20016.chat."Show Rusty blade" with pc.countitem("30030") >= 1 begin
+			say("Blacksmith:")
+			say("Oh..Rusty Blade is really valuable..")
+			say("I heard you helped Mirine.")
+			say("That's really kind of you.")
+			say("To such a good person like you")
+			say("I will fix this blade for free.")
+			say("")
+			wait()
+			pc.remove_item("30030", 1)
+			say_reward("Kang!  Kang!!")
+			say("")
+			wait()
+			say("Blacksmith:")
+			say("Now it looks beautiful!! HAHA!!")
+			say("")
+
+			local s = number(1,2)
+
+			if 1 == s then
+				local r = number(1, 4)
+				if r == 1 then
+					pc.give_item2("00060", 1)
+				elseif r == 2 then
+					pc.give_item2("00061", 1)
+				elseif r == 3 then
+					pc.give_item2("00062", 1)
+				elseif r == 4 then
+					pc.give_item2("00063", 1)
+				end
+			elseif 2 == s then
+				local r = number(1, 4)
+				if r == 1 then
+					pc.give_item2("00090", 1)
+				elseif r == 2 then
+					pc.give_item2("00091", 1)
+				elseif r == 3 then
+					pc.give_item2("00092", 1)
+				elseif r == 4 then
+					pc.give_item2("00093", 1)
+				end
+			end
+			set_state(__COMPLETE__)
+		end
+	end
+
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

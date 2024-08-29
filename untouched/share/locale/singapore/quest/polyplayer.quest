@@ -1,0 +1,56 @@
+quest polyplayer begin
+	state start begin
+		when 70111.use begin
+			local start_count = pc.count_item(item.get_vnum()) -- to prevent usage of bugs only
+			say_title("Voodoo Armband:")
+			say("")
+			say("Enter the name of the player you want to curse:")
+			say("")
+			local name = input()
+			local vid = find_pc_by_name(name)
+			--local name = pc.getname()
+			if name == "" then
+				return
+			elseif name == pc.get_name() then
+				say_title("Ring of Curse:")
+				say("")
+				say("You can not curse yourself.")
+				say("")
+				return
+			elseif vid == 0 then
+				say_title("Ring of Curse:")
+				say("")
+				say("This player is not online or does not exist.")
+				say("")
+				return
+			elseif not pc.is_near_vid(vid, 10) then
+				say_title("Ring of Curse:")
+				say("")
+				say("The player is too far away.")
+				say("")
+				return
+			end
+			
+			if pc.count_item(item.get_vnum()) != start_count then
+				return
+			end
+			
+			local myvid = pc.select(vid)
+			vnums = {2101, 20016, 20002, 11000, 5001, 992, 1301, 1303, 2191, 5161, 5162, 5163}
+			i = number(1,12)
+			pc.polymorph(vnums[i], 5*60)
+			syschat("You have been cursed.")
+			local victim = pc.get_name()
+			pc.select(myvid)
+			
+			say_title("Poly player:")
+			say("")
+			say("The player "..victim.." is now cursed for 5 minutes.")
+			say("")
+			
+			item.remove()
+			
+			
+		end
+	end
+end

@@ -1,0 +1,169 @@
+quest find_rice_cake begin
+    state start begin
+	when 20012.chat."I lost my rice cakes" with pc.get_level()>=35 and pc.get_level()<=38 begin
+	    say_pc_name()
+	    say("Nice to meet you.. How's your mother?")
+	    say("")
+	    wait()
+	    say_pc_name()
+	    say("ah,, she got better now.")
+	    say("Thank you.")
+	    say("")
+	    wait()
+	    say_pc_name()
+	    say("But what's wrong with you?")
+	    say("")
+	    wait()
+	    say_pc_name()
+	    say("")
+	    say("Oh..When I was selling rice cake in the desert,")
+	    say("Those scary spiders took all my rice cakes. ")
+	    say("They were bigger than human. If I can sell those rice cake,")
+	    say("I don't know how to support my family.")
+	    say("")
+	    say("Yu-rang told me he lost his rice cake to spiders .")
+	    local s=select(
+	   	"That's too bad. I will get you the rice cake back",
+	    	"Why are you worrying? Just get married to David")
+
+	    if 1==s then
+		    say_title("Yu-rang:")
+		    say("")
+		say("You are so kind.")
+		say("I wait here then.")
+		say("")
+		set_state(accept)
+	    elseif 2==s then
+	    say_title("Yu-rang:")
+	    say("")
+		say("David.")
+		say("David.")
+		say("Stop it! Even though I'm a poor girl")
+		say("I don't like someone who spends too much money like David.")
+		say("")
+	    end
+	end
+    end
+    state accept begin
+	when letter begin
+	    send_letter("Find the Yu-rang's rice cake!")
+	end
+	when button or info begin
+	    say_title("Find the Yu-rang's rice cake!")
+	    say("Find the Yu-rang's rice cake from the spiders of desert")
+	    say("If I can't find it soon, The spiders will eat them up")
+	    say("or dry them under the sun light.")
+	    say("")
+	    say_reward("Eliminate baby spiders!")
+	end
+	when 20012.chat."The story about the lost rice cake" with get_time()>=pc.getqf("limit_time") begin
+	    say("Yu-rang:")
+	    say("ohhh.....it's too late.")
+	    say("Even though we find the rice cakes from the spiders")
+	    say("it must have been dried by now.")
+	    say("")
+	    set_state("failure")
+	    q.done()
+	end
+	when 20012.chat."The story about the lost rice cake" with get_time()<pc.getqf("limit_time") begin
+	    say("Yu-rang:")
+	    say("What if the spiders ate all my rice cake?")
+	    say("or dried by sunlight...")
+	    say("")
+	    local s=select("No! It's going to be ok", "I think so, too. You should give up.") 
+	    if 1==s then
+	    say_title("Yu-rang:")
+	    say("")
+		say("is that so? please then.")
+		say("I wish I could get them back. sniff sniff.")
+		say("")
+	    elseif 2==s then 
+	    say_title("Yu-rang:")
+	    say("")
+		say("Can u think about it once more??")
+		say("Those rice cakes are really precious to me")
+		say("Please")
+		say("")
+		say("Are you sure want to give up this quest?")
+		local s=select(
+			"Alright. I will try again.", 
+			"I'm sorry. It is too hard.")
+
+		if 1==s then
+		elseif 2==s then
+		    say("You have given up the quest.")
+		    set_state("failure")
+		    q.done()
+		end
+	    end
+	end
+
+	when enter begin
+	    pc.setqf("limit_time", get_time()+30*60)
+	    pc.setqf("kill_count", 0)
+	end
+	when leave begin
+	    pc.setqf("limit_time", 0)
+	    pc.setqf("kill_count", 0)
+	    q.done()
+	end
+	when letter begin
+	    local rest_time=pc.getqf("limit_time")-get_time()
+	    timer("time_over", rest_time) 
+	    q.set_clock("Time left", rest_time)
+	end
+	when time_over.timer begin
+	    say("When I looked at the floor,")
+	    say("There were dried leftover rice cake pieces")
+	    say("which spiders ate")
+	    say("")
+	    say_reward("Too much time elapsed, you have failed")
+	    say_reward("the quest.")
+	    say("")
+	    set_state("failure")
+	    q.done()
+	end
+	when 2001.kill begin
+	    local cur_kill_count=pc.getqf("kill_count")+1
+	    pc.setqf("kill_count", cur_kill_count)
+
+	    if cur_kill_count>=number(30, 40) then
+		set_state(report)
+	    end
+	end
+    end
+    state report begin
+	when letter begin
+	    send_letter("Found Yu-rang's rice cake!")
+	end
+	when button or info begin
+	    say_title("Found Yu-rang's rice cake!")
+	    say("Bring the rice cake back to Yu-rang")
+	    say("from the spiders.")
+	    say("")
+	end
+	when letter begin
+	    local v=find_npc_by_vnum(20012)
+	    if v!=0 then
+		target.vid("__TARGET__", v, "Go back to Yu-rang")
+	    end
+	end
+	when __TARGET__.target.click or 20012.chat."Give rice cakes back to Yu-rang." begin
+	    target.delete("__TARGET__")
+	    say("Oh, amazing!")
+	    say("I don't know how to thank you.")
+	    say("I can go to the market to sell this now.")
+	    say("I would like give you this Zen Bean")
+	    say("to thank you")
+	    say("")
+	    say_reward("You have received Zen Bean from Yu-rang.")
+	    pc.give_item2(70102)
+	    set_state(complete)
+	    q.done()
+	end
+    end
+    state failure begin
+    end
+    state complete begin
+    end
+end

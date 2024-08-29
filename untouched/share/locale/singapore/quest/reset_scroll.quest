@@ -1,0 +1,126 @@
+quest reset_scroll begin
+    state start begin
+                when 71002.use begin
+                        ---                                                   l
+                        say_title("Return your state.")
+                        say("")
+                        say("This scroll make it possible to forget everything.")
+                        say("It concerns your whole state.")
+                        say("It's not possible to return.")
+                        say("")
+                        say("Do you want to use it?")
+                        say("")
+
+                        local s = select("Yes", "No")
+                        if 2 == s then
+                                return
+                        end
+
+                        say_title("Return your state: confirm")
+                        say("")
+                        say("All your state points are going to be deleted,")
+                        say("and you have to start all over again.")
+                        say("")
+                        say("Are you sure you want to forget your state?")
+                        say("")
+
+                        local c = select("Yes", "No")
+                        if 2 == c then
+                                return
+                        end
+
+                        char_log(0, "RESET_ALL", "USE_ITEM(71002)")
+                        pc.remove_item(71002)
+
+                        char_log(0, "RESET_ALL", "RESET_STAT_POINTS")
+                        pc.reset_point()
+
+                        char_log(0, "RESET_ALL", "RESET_SKILL_POINTS")
+                        pc.clear_skill()
+                        pc.set_skill_group(0)
+                        char_log(0, "RESET_ALL", "RESET_END")
+                end
+
+                when 71003.use begin
+
+                        ----------                                                   l
+                        say_title("Return your skills.")
+                        say("")
+                        say_reward("A chosen skill is going to be")
+                        say_reward("returned, so you can assign your points")
+                        say_reward("again. You are going to lose all the points")
+                        say_reward("gathered until now and you can only get a maximum")
+                        say_reward("of 17 points back, also if you used more points")
+                        say_reward("for the skills.")
+
+                        local result = BuildSkillList(pc.get_job(), pc.get_skill_group())
+
+                        local vnum_list = result[1]
+                        local name_list = result[2]
+
+                        if table.getn(vnum_list) < 2 then
+                                say("There are no skills, that are")
+                                say("initialized.")
+                                say("")
+                                return
+                        end
+
+                        say("Please choose a skill that you want to return.")
+                        say("")
+
+                        local i = select_table(name_list)
+
+                        if table.getn(name_list) == i then
+                                return
+                        end
+
+                        local name = name_list[i]
+                        local vnum = vnum_list[i]
+
+                        say_title("Return your skills.")
+                        say("")
+                        say("A chosen skill is going to be returned so")
+                        say("you can assign your points again. You are")
+                        say("going to lose all the points gathered until")
+                        say("now and you can only get a maximum of 17 points")
+                        say("back, even if you used more in the skill.")
+
+                        say(string.format("Are you sure you want to initialize the skill %s ?", name))
+                        say("")
+
+                        local s = select("Yes", "No")
+                        if 2 == s then
+                                return
+                        end
+
+                        say_title("Return your state: confirm")
+                        say("")
+                        say("You can not revert this action.")
+                        say("Do you really want to do it?")
+                        say("")
+
+                        local c = select("Yes", "No")
+
+                        if 2 == c then
+                                return
+                        end
+
+                        char_log(0, "RESET_ONE_SKILL", "USE_ITEM(71003)")
+                        pc.remove_item(71003)
+
+                        char_log(0, "RESET_ONE_SKILL", string.format("RESET_SKILL[%s]", name))
+                        pc.clear_one_skill(vnum)
+
+                        char_log(0, "RESET_ONE_SKILL", "APPLY_17MASTER_BONUS")
+                        pc.setqf("force_to_master_skill", 1)
+
+                        say_title("Skill re-initialized")
+                        say(string.format("%s Skill re-initialize.", name))
+                        say("")
+
+                        ---                                                   l
+                        say_reward("A chosen skill")
+                        say("")
+                end
+        end
+end

@@ -1,0 +1,68 @@
+-------------------------------------
+--Metin2 Premium Zone Pass Quest
+------------------------------------
+quest check_trans_ticket begin
+	state start begin
+		when login or levelup with pc.level >0 begin
+			set_state(zone_enter)
+		end
+	end
+		
+	state zone_enter begin
+		when 20088.chat."Entry Inspection" begin
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			setdelay(20)
+			say_title("Chuk-Sal:")
+			say("")
+			say("Oh, I've seldom seen men who dare to explore these caves.")
+			say("I am the protector of the magic seal, so evil creatures")
+			say("may never pass and threaten us.")
+			say("")
+			say("First, let me see your qualification.")
+			say("")
+			
+			wait()
+			if pc.get_premium_remain_sec(PREMIUM_EXP) > 0 then
+				setdelay(20)
+				say("Oh... you are qualified.")
+				say("Please go in!")
+				say("")
+				say("As long as you are registered to the kingdom")
+				say("you can visit anytime.")
+				wait()
+				pc.warp(704100,464100)
+				return
+			end
+			
+			if pc.count_item(71095)>0 then
+				setdelay(20)
+				say("")
+				say("So you got it. Good!")
+				say("")
+				pc.remove_item(71095)
+			elseif pc.count_item(71096) >0 then
+				setdelay(20)
+				say("")
+				say("So you got it. Good!")
+				say("")
+				
+			else
+				say("You need a Passage ticket.")
+				say("I cannot let you in if you don't have the pass.")
+				say("")
+				say_item("Passage",71095,"")
+				return
+			end
+			setdelay(20)
+			say("")
+			say("..Follow me!")	
+			say("")
+			resetdelay()
+			wait()
+			pc.warp(704100, 464100)
+			
+		end
+
+	end
+
+end

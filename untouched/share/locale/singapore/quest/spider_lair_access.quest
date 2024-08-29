@@ -1,0 +1,175 @@
+----------------------------------
+--	거미굴3층 보스룸 입장 퀘스트
+--  2012.2.6 김용욱
+----------------------------------
+quest spider_lair_access begin
+	state start begin
+	
+		when 20011.chat."타이머 테스트1" begin
+			server_timer("timer_test1", 5)
+			say("5초뒤에")
+		end
+		when 20011.chat."타이머 테스트2 : spider_end_timer" begin
+			server_timer("spider_end_timer", 5)
+			say("5초뒤에")
+		end
+		when 20011.chat."타이머 테스트3" begin
+			server_timer("timer_test3", 5)
+			say("5초뒤에")
+		end
+		when 20011.chat."타이머 테스트4" begin
+			server_timer("timer_test4", 5)
+			say("5초뒤에")
+		end
+		when timer_test1.server_timer begin
+			game.set_event_flag("timer_result", 1) 
+		end
+		
+		--2, 던전 끝 시간.
+		when spider_end_timer.server_timer begin  --
+			warp_all_in_area_to_area(72000 - 10000, 166400-10000, 72000 + 10000, 166400+10000, 72000 +13000 , 166400+13000, 72000 +16000, 166400+16000)
+			game.set_event_flag("spider_lair_ongoing_"..pc.get_channel_id(), 0)
+		end
+		
+		when timer_test3.server_timer begin
+			game.set_event_flag("timer_result", 3) 
+		end
+		when timer_test4.server_timer begin
+			game.set_event_flag("timer_result", 4) 
+		end
+		
+		when 20011.chat."타이머 테스트 결과 확인" begin
+			say("테스트 결과는 : "..game.get_event_flag("timer_result", 4) )
+		end
+		
+		when 20011.chat."테스트 초기화" begin
+			
+			game.set_event_flag("spider_lair_ongoing_"..pc.get_channel_id(), 0)
+			pc.setqf("retry_limit_time", get_global_time()-10)
+			
+			
+			say("서버 활성화 : "..game.get_event_flag("spider_lair_ongoing_"..pc.get_channel_id(), 0).." (채널 : "..pc.get_channel_id().." )");
+			say("레어 끝나는 시간 : "..game.get_event_flag("spider_lair_end_time_"..pc.get_channel_id(), 0).." , 현재시간 : "..get_global_time());
+			say("제한시간 : "..pc.getqf("retry_limit_time"))
+		
+		end 
+		when 20011.chat."거미보스잡자" begin
+			say_title("거미보스")
+			--1. 이미 진행중인가?
+			if game.get_event_flag("spider_lair_ongoing_"..pc.get_channel_id()) == 1 then
+				say("던전은 이미 만들어져있다. 리더 :"..(game.get_event_flag("spider_lair_leader_"..pc.get_channel_id() ))) -- 테스트용
+				wait()
+			
+				local starttime = game.get_event_flag("spider_lair_start_time_"..pc.get_channel_id())
+				local current_time = get_global_time()
+				
+				--1.1해당 파티에 속해있다.
+				if party.get_leader_pid() == game.get_event_flag("spider_lair_leader_"..pc.get_channel_id()) then
+					say("던전파티에 속해있다.") -- 테스트용
+					wait()
+				
+					if  starttime +  300 >= current_time then
+						say("입장가능 시간이다. 들어간다.") -- 테스트용
+						say("입장은 아직이다. 들어갔다고 치자.")-- 테스트용
+						pc.warp(71100,166400)
+						pc.setqf("firstIn",1)
+						pc.setqf("retry_limit_time", starttime + 15 + 15)
+						set_state(inLair)
+						return
+					else
+						say("입장시간 끝.") -- 테스트용
+						return
+					end
+				else
+					say("다른애가 하고있어.: "..pc.getqf("spider_lair_end_time_")..pc.get_channel_id()	 - get_global_time().."분 기달")
+					return
+				end	
+			--2. 재도전 제한 시간에 걸리나?
+			elseif  pc.getqf("retry_limit_time") > get_global_time() then
+				say("넌 아직 시간이 안됐어. : "..pc.getqf("retry_limit_time") - get_global_time())
+				return
+			--3. 리더다.
+			elseif party.is_leader()   then
+				say("리더네")
+				if pc.count_item(16) > 0 then
+					say("지주진구 있네")
+					local warp = select("들어감?","안감?")
+					if warp == 1 then
+						say("들어갔다고 칩시다. 리더 : "..party.get_leader_pid())
+						
+						pc.warp(71100,166400)
+						set_state(inLair)
+						
+						pc.remove_item(16, 1)
+						
+						--값 설정.
+						game.set_event_flag("spider_lair_ongoing_"..pc.get_channel_id()		,			1)
+						game.set_event_flag("spider_lair_start_time_"..pc.get_channel_id()	, get_global_time())
+						game.set_event_flag("spider_lair_end_time_"..pc.get_channel_id()		, get_global_time()+15)
+						game.set_event_flag("spider_lair_leader_"..pc.get_channel_id()			, party.get_leader_pid())
+						pc.setqf("retry_limit_time", game.get_event_flag("spider_lair_end_time_"..pc.get_channel_id() ) + 15)
+						pc.setqf("firstIn",1)
+						
+						
+						server_timer("spider_end_timer", 15 )
+						
+						
+					end
+					return
+				else
+					say("지주진구 없네.")
+					return
+				end
+			else --리더 아니다.
+				say("너 말고 리더오라그래")
+				return
+			end
+			
+		end
+		
+
+	end
+
+	state inLair begin
+	
+		when 20011.chat."테스트 초기화" begin
+			
+			game.set_event_flag("spider_lair_ongoing_"..pc.get_channel_id(), 0)
+			pc.setqf("retry_limit_time", get_global_time()-10)
+			
+			
+			say("서버 활성화 : "..game.get_event_flag("spider_lair_ongoing_"..pc.get_channel_id(), 0).." (채널 : "..pc.get_channel_id().." )");
+			say("레어 끝나는 시간 : "..game.get_event_flag("spider_lair_end_time_"..pc.get_channel_id(), 0).." , 현재시간 : "..get_global_time());
+			say("제한시간 : "..pc.getqf("retry_limit_time"))
+			
+			
+			set_state( start )
+		
+		end 
+	
+		when login  begin 
+			if pc.getqf("firstIn") == 1  and party.get_leader_pid() == game.get_event_flag("spider_lair_leader_"..pc.get_channel_id()) then
+				pc.setqf("firstIn",0)
+			else
+				say("나가")
+				pc.warp(72000,166400)
+				set_state( start )
+			end
+		end
+
+		
+		when 101.kill begin
+			say("왕거미 죽였다.")
+			say("3분뒤에 던전에서 쫓아냄.")
+			server_timer("spider_end_timer", 5)
+			
+			set_state( start )
+		end
+		
+		when 27001.use begin
+			say("알 소환 되라.")
+		end
+		
+		
+	end
+end

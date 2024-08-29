@@ -1,0 +1,188 @@
+quest angels_blessing begin
+	state start begin
+		when 70021.use begin 
+			if oh.ismonarch() == 0 then
+				say_title("Angels' Blessing")
+				say("")
+				say("You are not qualified to use this.")
+				say("Call me again when you become a true emperor.")
+				say("")
+			else
+				local name, pid, date, money = mgmt.monarch_state(pc.get_empire())
+				say_title("Angels' Blessing")
+				say("")
+				local s = select ("Summon a Monster","Summon Royal Guards","Emperor's Blessing","Emperor's Lion Roar","Emperor's Diamond Skin","Command help","Cancel" )
+
+				-- NPC summon (new version by BigSox)
+
+				if s == 1 then
+
+					say_title("Summon a Monster")
+					say("")
+					local m = select("Ape Lord (500.000 Yang)","Chief Elite Orc (1.000.000 Yang)","Elite Nine Tails (1.500.000 Yang)","Dark Giant Tortoise (1.500.000 Yang)","Dark Flame King (1.800.000 Yang)","Heaven's General (2.500.000 Yang)","Cancel")
+					local vnums = {5163,692,1902,2192,2207,2491}
+					local prices = {500000, 1000000,1500000,1500000,1800000,2500000}
+					if m < 7 then
+						if money >= prices[m] then
+							if pc.getqf("mobspawn_time") < get_time() then
+								--oh.takemonarchmoney(prices[m]/10000)
+								mob.spawn(vnums[m],pc.get_local_x()-5, pc.get_local_y()-5,10, 10, 1)
+								pc.setqf("mobspawn_time",get_time()+60*30)
+							else
+								-- 5 minutes cooldown time
+								local cooldown = math.floor((pc.getqf("mobspawn_time") - get_time()) / 60)
+								say_title("Summon a Monster")
+								say("")
+								say("You can't summon another monster for "..cooldown.." minutes.")
+								say("")
+							end
+						else
+							syschat("Lack of Taxes. Current Capital: "..money.." Needed Capital: "..prices[m])
+						end
+					end
+
+				elseif s == 2 then
+					say_title("Summon Royal Guards")
+					say("")
+
+					local selected_npc = select ("Infantry Spearman (200.000 Yang)","Infantry Bowman (400.000 Yang)","Elite Spearman (600.000 Yang)","Elite Bowman (800.000 Yang)", "Royal Spearman (1.000.000 Yang)", "Royal Bowman (1.200.000 Yang)", "Cancel")
+
+					local siege_npc = 
+					{
+
+						{ 9501, 9502, 9503 ,9504, 9505, 9506 },
+						{ 9511, 9512, 9513, 9514, 9515, 9516 },
+						{ 9521, 9522, 9523, 9524, 9525, 9526 },
+
+					}
+
+
+					if selected_npc<7 then
+						local cost = selected_npc * 50
+						local realcost = cost*10000
+						if money >= realcost then
+							--oh.takemonarchmoney(cost)
+							local remaining = money - realcost
+							syschat(locale.empire_names[pc.get_empire()].."'s remaining fund is "..remaining.." Yang")
+							--mob.spawn_group(siege_npc[pc.get_empire()][selected_npc],pc.get_local_x()-5, pc.get_local_y()-5,10, 10, 1)
+						else
+							syschat("Lack of Taxes. Current Capital : "..money.." Needed Capital : "..realcost)
+						end
+					end
+
+				elseif s == 3 then
+					say_title("Emperor's Blessing")
+					say("")
+					say("Emperor's Blessing can restore the HP and SP of all the")
+					say(locale.empire_names[pc.get_empire()].."ns in this map.")
+					say("")
+					say_reward("Cost : 250.000 Yang")
+					say("")
+					if money >= game.get_event_flag(MonarchHealGold) then
+						local s = select ("Use","Cancel" )
+						if s == 1 then
+							oh.monarchbless()
+						end
+					else
+						say("Your kingdom doesn't have enough funds.")
+						say("")
+					end
+
+				-- Emperor's Lion Roar
+				elseif s == 4 then
+					say_title("Emperor's Lion Loar")
+					say("")
+					say("Emperor's Lion Roar will boost all the people's attack")
+					say("power in this area for a certain period.")
+					say("")
+					say_reward("Cost : 5.000.000 Yang" )
+					say("")
+					if money >= 5000000 then
+						local s = select ("Use","Cancel" )
+						if s == 1 then
+							oh.monarchpowerup()
+						end
+					else
+						say("Your kingdom doesn't have enough funds.")
+						say("")
+					end
+
+				-- Emperor's Diamond fist
+				elseif s == 5 then
+					say_title("Emperor's Diamond Fist")
+					say("")
+					say("Emperor's Diamond Fist will boost all the people's")
+					say("defence in this area for a certain period.")
+					say("")
+					say_reward("Cost : 5.000.000 Yang" )
+					say("")
+					if money >= 5000000 then
+						local s = select ("Use","Cancel" )
+						if s == 1 then
+							oh.monarchdefenseup()
+						end
+					else
+						say("Your kingdom doesn't have enough funds.")
+						say("")
+					end
+
+
+	--			elseif s == 5 then
+	--				say_reward(" Set up Golden Toad")
+	--				say("The golden Toad is the icon of Wealth")
+	--				say("When the national fund is full, you cannot get more tax.")
+	--				say("So if you make golden toad with the tax")
+	--				say("You can set it up around the castle.")
+	--				say("Later on when you need more fund")
+	--				say("You can change the toad to the fund")
+	--				say("But one thing you have to remember is")
+	--				say("other kingdoms can steal the toad.") 
+	--				say("If anyone destroys the toad")
+	--				say("The money will come to their kingdom." )
+	--				say("")
+	--				local s = select ( "Set up", "Cancel" )
+	--				if s == 1 then 
+	--					oh.spawnmob( 11505 )
+	--				end
+	--			elseif s == 6 then
+	--				oh.frog_to_empire_money()
+
+				--[[elseif s==5 then
+					say_reward("Announce to Kingdom")
+					say("")
+					say("As an Emperor, you must have something")
+					say("to tell your people.")
+
+					if get_time() > pc.getqf("king_notice_duration") then
+
+						local s=input()
+						if s== "" then
+							say("Nothing to say?")
+							return
+						end
+							oh.notice("[Emperor] "..s.."")
+
+						pc.setqf("king_notice_duration",get_time()+10) 
+					else
+						say("")
+						say("It's not good when you do it too often")
+						say("")
+					end	
+						--]] 
+				elseif s == 6 then
+					say_title("Commands:")
+					say("")
+					say("Beyond the Angel's Blessing powers, you have the following")
+					say("commands at your disposal:")
+					say("")
+					say("/mn - Make an announcement (Free)")
+					say("/mto - Teleport to a subject (Cost: 10.000 Yang)")
+					say("/mtr - Teleport a subject to you (Cost: 10.000 Yang)")
+					say("")
+					say("The cost is deducted from the Kingdom Vault.")
+					say("")
+				end
+			end
+		end
+	end
+end

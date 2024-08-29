@@ -1,0 +1,233 @@
+quest main_quest_lv6 begin
+        state start begin
+        end
+        state run begin
+                when login or levelup or enter with pc.get_level() >= 6 begin
+                        set_state( gototeacher )
+                end
+        end
+        state gototeacher begin
+                when letter begin
+                        local v=find_npc_by_vnum(20354)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "A New Mission: The Power of Upgrading")
+                        end
+                end
+                when letter begin
+                        send_letter("A New Mission: The Power of Upgrading")
+                end
+                when button or info begin
+						----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("A New Mission: The Power of Upgrading")
+                        say("Greetings recruit,")
+                        say("I have a very important mission ready for you. This ")
+                        say("time, you will learn the importance of upgrading your ")
+                        say("equipment to better prepare yourself in battle. When you")
+                        say(" have a moment, come speak with me and I will direct you")
+                        say(" to your next assignment.")
+						say("   ")
+						say("Sincerly, the City Guard")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+						----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("City Guard:")
+                        say("There you are, I was wondering when you were going to report")
+                        say(" in. ")
+                        say("Your next training lesson is to learn about the art of ")
+                        say("blacksmithing. It is important to upgrade and improve your")
+                        say("armour and weapon. They become stronger and more durable for")
+                        say("combat. Unfortunatly, our best blacksmith perished at ")
+						say("the Battle of Sohan Mountain. His apprentice decided to take")
+						say(" his place, and while that is noble of him, his skills are ")
+						say("very...limited, to say the least.")
+			say("")
+                        wait()
+                        say_title("City Guard:")
+						----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("We're stretched thin on well trained blacksmiths so I ")
+                        say("couldn't say no. However, I think the demands of the ")
+                        say(" militia are begining to wear on him. I want you to go speak")
+                        say(" with the blacksmith and see if you can help him with ")
+                        say("anything. While you're there, you can get a jump start in ")
+                        say("learning how to upgrade your equipment. ")
+                        set_state( gotosmith )
+                end
+        end
+
+
+        state gotosmith begin
+                when letter begin
+                        local v=find_npc_by_vnum(20016)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "The Power of Upgrading")
+                        end
+                end
+                when letter begin
+                        send_letter("The Power of Upgrading")
+                end
+                when button or info begin
+                        say_title("The Power of Upgrading")
+						----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("The town's most experienced blacksmith perished in the ")
+                        say("Battle of Sohan Mountain. As a replacement, his apprentice ")
+                        say("stepped in to take over. The City Guard feels he may be ")
+						say("having a hard time keeping up with the militaries demand, ")
+						say("so he's asked you to talk with the Blacksmith to see if he ")
+						say("needs assistance.")
+                end
+
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+
+                        say_title("Blacksmith:")
+						----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Blast it! That's the fifth broken shield since this morning!")
+                        say("At this rate, I'll never get enough armours built in time ")
+                        say("for the next shipment.")
+                        say("You there! What do you need? If it's a repair, just toss it ")
+                        say("in the hut there and I'll get to it when I'm done here.")
+                        say("Oh, the City Guard sent you? About time they sent help my ")
+                        say("way! I'm up to my eyeballs in upgrading armours for a ")
+                        say("thousand man army set to depart in two days! How do they ")
+						say("expect me to build a thousand armours in two days?!")
+                        wait()
+                        say_title("Blacksmith:")
+						----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Anyway, enough about that. I need you to get me a Wolf Claw")
+                        say(" from the Storekeeper. I asked him an hour ago to deliver it")
+                        say(" to me but he's yet to show up. Can you go pick it up for ")
+                        say("me? I'd go myself, but do I really need to explain why?")
+                        say("")
+						say_item_vnum(30028)
+						say("")
+                        set_state( gotowarehousekeeper )
+
+                end
+        end
+        state gotowarehousekeeper begin
+                when letter begin
+                        local v=find_npc_by_vnum(9005)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "The Power of Upgrading")
+                        end
+                end
+                when letter begin
+                        send_letter("The Power of Upgrading")
+                end
+                when button or info begin
+                        say_title("The Power of Upgrading: Visit the Storekeeper")
+						----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("The Blacksmith has asked you to pick up a Wolf Claw from ")
+                        say("the Storekeeper so he can continue crafting sheilds for the ")
+                        say("militia. He's on a tight schedule, so better hurry before ")
+                        say("he grows impatient.")
+						say("")
+                        say_item_vnum(30028)
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+						----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("Storekeeper:")
+                        say("Welcome young one! I am the Storekeeper. I ")
+                        say("provide banking storage for all the town's folk.")
+                        say("If your inventory is getting too full, you can ")
+                        say("put all your precious belongings here in my")
+                        say(" warehouse...for only a small fee, of course.")
+                        say("Don't you worry about safety either. All your ")
+						say("belongings are locked safely behind bolt doors.")
+						say("Not even the sneakiest of assassins can break ")
+						say("into my warehouse, ha ha ha!")
+                        wait()
+                        say_title("The Storekeeper:")
+						----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Ah, the Blacksmith sent you. I completely forgot about his ")
+                        say("order. He wanted a Wolf Claw, that's right. Here you go, ")
+                        say("one Wolf Claw. Tell the Blacksmith my apologies.")
+                        say("")
+						say_item_vnum(30028)
+                        say("")
+                        say_reward("The Storekeeper hands you a Wolf Claw.")
+						say("")
+                        set_state( gotosmith2 )
+						pc.give_item2( 30028, 1 )
+                end
+        end
+        state gotosmith2 begin
+                when letter begin
+                        local v=find_npc_by_vnum(20016)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "The Power of Upgrading")
+                        end
+                end
+                when letter begin
+                        send_letter("The Power of Upgrading")
+                end
+                when button or info begin
+                        say_title("The Power of Upgrading: Return to the Blacksmith")
+						----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("You have received the Wolf Claw from the Storekeeper. ")
+                        say("Return to the Blacksmith so he may continue his work.")
+						say("")
+                        say_item_vnum(30028)
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+
+                        say_title("Blacksmith:")
+						----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Great speed, I should have you run errands for me more ")
+                        say("often. Since my Blacksmithing Master perished at the Battle ")
+                        say("of Sohan Mountain, I've felt the need to fill his shoes and ")
+                        say("continue his life long work. It's the least I could do since")
+                        say(" I was one of his most toughest students. I have a long way ")
+                        say("to go before I can reach his level of expertise, but I wont ")
+                        say("back down, no way. I have a duty to serve. ")
+                        say("Thanks again for your help, as a reward I'll teach you some ")
+                        say("of the basics to blacksmithing and upgrading equipment.")
+                        say("")
+                        wait()
+                        say_title("Blacksmith:")
+						----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("All equipment have a grade value next to their name title. ")
+                        say("It starts at +0 and ends at +9. You only need gold to ")
+                        say("upgrade your equipment to +4, but after that, I will need ")
+                        say("upgrading materials to further enhance your item. Upgrade ")
+                        say("items include things like the Wolf Claw you got for me. ")
+                        say("My skills as a Blacksmith are still fairly limited so all")
+                        say(" of your upgrades have a chance to break. You'll have to be")
+                        say(" patient with me as I am still learning this craft. The ")
+                        say("more equipment you bring me to upgrade, the more chances I ")
+                        say("have at upgrading your gear successfully. So, it's wise to ")
+						say("bring me lots of gear pieces to upgrade so you don't put all")
+                        say(" your eggs in one basket if I break your gear.")
+                        wait()
+                        say_title("Reward")
+                        say("That's all you need to know for now. Here is your reward")
+						say(" for helping me out. Goodluck to you.")
+						say("")
+                        say_reward("Experience: 2,500")
+                        say_reward("Yang: 7,500")
+                        say_reward(""..item_name(30053))
+                        say("")
+
+                        pc.give_exp2(2500)
+                        pc.change_money(7500)
+                        pc.give_item2(30053 , 2)
+
+                        clear_letter()
+                        set_state(__COMPLETE__)
+                        set_quest_state("main_quest_lv7", "run")
+
+                end
+        end
+        state __COMPLETE__ begin
+        end
+
+end

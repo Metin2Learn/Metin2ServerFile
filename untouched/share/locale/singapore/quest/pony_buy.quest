@@ -1,0 +1,327 @@
+quest pony_buy begin
+        state start begin
+                when 20349.chat."I want to ride." with horse.get_grade()==0 begin
+                        if pc.level<=24 then
+                        	----"123456789012345678901234567890123456789012345678901234567890"|
+                                say_title("Stable Boy:")
+                                say("")
+                                say("For being able to ride you first need to reach level 25.")
+                                say("")
+                                say("In my opinion you need to get better.")
+                                say("")
+                        elseif pc.countitem("50050")<1 then
+                                say_title("Stable Boy:")
+                                say("")
+                                say("For being able to ride, you first need to take a")
+                                say("qualification test.To participate in this test you must")
+                                say("give me a Horse Medal.")
+                                say("")
+                                say("The easiest way to get it is in Sujin Dungeon, in the")
+                                say(areaname[pc.get_empire()][2].." Area.")
+                                say("")
+                                say("But the Apes are not going to give it for free...")
+                                say("")
+                                setstate(need_item50050)
+                        elseif pc.countitem("50050")>=1 and pc.level>=25 then
+                                say_title("Stable Boy:")
+                                say("")
+                                say("Oh, you have the horse medal, great!")
+                                say("")
+                                ----"123456789012345678901234567890123456789012345678901234567890"|
+                                say("Now you need to prove that you have the necessary")
+                                say("qualifications for riding. Please kill 20 Savage Archers")
+                                say("within 30 minutes. You are ready to ride if you manage that.")
+                                say("")
+                                local b=select("Accept", "Reject")
+                                if 1==b then
+                                        if pc.countitem("50050")>=1 then
+                                                pc.removeitem("50050", 1)
+                                                setstate(test)
+                                        end
+                                elseif 2==b then
+                                        say_title("Stable Boy:")
+                                        say("")
+                                        say("Come again when you are interested.")
+                                        say("")
+                                else
+                                        say("UNBEKANNTE TASTE ["..b.."]")
+                                end
+                        else
+                                say_title("Stable Boy:")
+                                say("")
+                                say("Obviously there is a problem with the information")
+                        end
+                end
+        end
+        state need_item50050 begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Bring me a horse medal.")
+                        q.set_title("Bring me a horse medal!")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Information:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Bring the Stable Boy a horse medal so you can participate")
+                        say("in the test for Novice Horse.")
+                        say("")
+                        say("The easiest way to get the horse medal is in the Sujin")
+                        say("Dungeon in the second village.")
+                        say("")
+                        setstate(start)
+                        q.done()
+                end
+        end
+        state test begin
+                when letter begin
+                        q.set_counter("Remaining kills", 20-pc.getqf("kill_count"))
+                end
+                when 503.kill begin
+                        pc.setqf("kill_count", pc.getqf("kill_count")+1)
+                        q.set_counter("Remaining kills", 20-pc.getqf("kill_count"))
+                        if get_time()>=pc.getqf("limit_time") then
+                                setstate(failure)
+                        end
+                end
+                when letter begin
+                        q.set_clock("Remaining time", pc.getqf("limit_time")-get_time())
+                end
+                when enter begin
+                        pc.setqf("limit_time", get_time()+30*60)
+                        pc.setqf("kill_count", 0)
+                end
+                when leave begin
+                        q.done()
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Qualification for riding.")
+                        q.set_title("Qualification for riding.")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Qualification for riding.")
+                        say("")
+                        say("Kill 20 Savage Archers within 30 minutes and")
+                        say("inform the Stable Boy about the results.")
+                        say("")
+                end
+                when 503.kill with pc.getf("pony_buy","kill_count") >= 20 and pc.getf("pony_buy","limit_time")>=get_time() begin
+                        setstate(report)
+                end
+                when 20349.chat."STATUSVERBESSERUNG PONY-AUFTRAG" with horse.get_grade()!=0 begin
+                        setstate(start)
+                        q.done()
+                end
+                when 20349.chat."Progress of the qualification test" begin
+                        say_title("Stable Boy:")
+                        say("")
+                        say("Kill 20 Savage Archers within 30 minutes and return!")
+                        say("")
+                        local b=select("Confirm", "Cancel")
+                        if 1==b then
+                        elseif 2==b then
+                                say_title("Stable Boy:")
+                                say("")
+                                say("Do you really want to cancel the qualification test?")
+                                say("")
+                                local b=select("Yes", "No, it was only a joke.")
+                                if 1==b then
+                                        say_title("Stable Boy:")
+                                        say("")
+                                        say("Make sure that you succeed the next time.")
+                                        say("")
+                                        setstate(start)
+                                        q.done()
+                                elseif 2==b then
+                                        say_title("Stable Boy:")
+                                        say("")
+                                        say("You don't have time to make any mistake. Hurry up!")
+                                        say("")
+                                        say("Kill those Savage Archers and return!")
+                                        say("")
+                                else
+                                        say("UNBEKANNTE TASTE ["..b.."]")
+                                end
+                        else
+                                say("UNBEKANNTE TASTE ["..b.."]")
+                        end
+                end
+        end
+        state report begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Return to the Stable Boy:")
+                        q.set_title("Return to the Stable Boy:")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Return to the Stable Boy:")
+                        say("")
+                        say("Report to the Stable Boy that you succeeded in")
+                        say("killing the Savage Archers within time.")
+                        say("")
+                end
+
+                when 20349.chat."Pony improvement" with horse.get_grade()!=0 begin
+                        setstate(start)
+                        q.done()
+                end
+                when 20349.chat."Report about the Horse Test" with horse.get_grade()==0 begin
+                        say_title("Stable Boy:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("You successfully finished your test.")
+                        say("")
+                        say("For being able to ride you need a Horse Sword; it will take")
+                        say("some time before I can provide that so come again in 2 hours.")
+                        say("")
+                        say_item_vnum(50051)
+                        say("Don't forget that a Horse Sword costs 100.000 Yang!")
+                        say("")
+                        if is_test_server() then
+                                pc.setqf("make_time", get_time()+10)
+                        else
+                                pc.setqf("make_time", get_time()+2*60*60)
+                        end
+                        setstate(wait)
+                end
+        end
+        state wait begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Manufacturing of Horse Sword")
+                        q.set_title("Manufacturing of Horse Sword")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Manufacturing of Horse Sword")
+                        say("")
+                        say("Go to the Stable Boy when the Horse Sword is ready.")
+                        say("")
+                end
+                when login with get_time()>=pc.getf("pony_buy","make_time") begin
+                        setstate(buy)
+                end
+                when 20349.chat."STATUSVERBESSERUNG PONY-AUFTRAG" with horse.get_grade()!=0 begin
+                        setstate(start)
+                        q.done()
+                end
+                when 20349.chat."Is the Horse Sword ready?" with horse.get_grade()==0 begin
+                        say_title("Stable Boy:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("I think it will take a while before it's ready. Remember")
+                        say("that you need 100.000 Yang for the Horse Sword")
+                        say("")
+                end
+        end
+        state buy begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Go to the Stable Boy")
+                        q.set_title("Go to the Stable Boy")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Go to the Stable Boy")
+                        say("")
+                        say("The Horse Sword is done!")
+                        say("")
+                        say("Pick it up by the Stable Boy.")
+                        say("")
+                end
+                when 20349.chat."The Horse Sword is done!" with horse.get_grade()==0 and get_time()>=pc.getqf("make_time") begin
+                        say_title("Stable Boy:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("I have finished the Horse Sword. Now you can ride a Novice")
+                        say("horse. With a Novice Horse you will move around faster.")
+                        say("")
+                        say("It costs 100.000 Yang.")
+                        say("")
+                        say("Do you want to buy it?")
+                        say("")
+                        local b=select("Buy", "Do not buy", "Reject")
+                        if 1==b then
+                                if pc.money>=100000 then
+                                        char_log(0, " HORSE_BUY", "BEGIN")
+                                        pc.changemoney(-100000)
+                                        char_log(0, " HORSE_BUY", " DEC money 100000")
+                                        horse.unride()
+                                        horse.advance()
+                                        horse.ride()
+                                        char_log(0, " HORSE_BUY", "INC horse_advance 1")
+                                        pc.give_item2("50051", 1)
+                                        char_log(0, " HORSE_BUY", "INC 50051 1")
+                                        char_log(0, " HORSE_BUY", "END")
+                                        say_title("Stable Boy:")
+                                        say("")
+                                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                                        say("With the Horse Sword, you can call the horse")
+                                        say("wherever you are. If you lose the Horse Sword")
+                                        say("you have to pay for a reprint. So, take care of it!")
+                                        say("")
+                                        setstate(start)
+                                        q.done()
+                                else
+                                        say_title("Stable Boy:")
+                                        say("")
+                                        say("You don't have enough Yang for the Horse Sword!")
+                                        say("")
+                                        say("Come back later.")
+                                        say("")
+                                end
+                        elseif 2==b then
+                                say_title("Stable Boy:")
+                                say("")
+                                say("Come again later.")
+                                say("")
+
+                        elseif 3==b then
+                                say_title("Stable Boy:")
+                                say("")
+                                ----"123456789012345678901234567890123456789012345678901234567890"|
+                                say("Do you really want to reject the Horse Sword? If you cancel")
+                                say("now, you will have to start the mission all over again.")
+                                say("")
+                                local b=select("Yes, that's what I want", "No, rather not")
+                                if 1==b then
+                                        setstate(start)
+                                elseif 2==b then
+                                else
+                                        say("UNBEKANNTE TASTE ["..b.."]")
+                                end
+                        else
+                                say("UNBEKANNTE TASTE ["..b.."]")
+                        end
+                end
+        end
+        state failure begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Time limit expired!")
+                        q.set_title("Time limit expired!")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Time limit expired!")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Since you didn't manage to kill 20 archers within 30")
+                        say("minutes, you didn't pass the qualification test.")
+                        say("")
+                        say_reward("In order to repeat the challenge, go with a horse medal to")
+                        say_reward("the Stable Boy and apply to a new qualification test.")
+                        setstate(start)
+                        q.done()
+                end
+        end
+        state __COMPLETE__ begin
+                when enter begin
+                        q.done()
+                end
+        end
+end

@@ -1,0 +1,58 @@
+quest guild_ranking begin
+        state start begin
+                when
+                        guild_man1.chat."Top Ten Guilds" or
+                        guild_man2.chat."Top Ten Guilds" or
+                        guild_man3.chat."Top Ten Guilds" begin
+                        say_title("Guardian:")
+                        say("")
+                        say("The top 10 guilds in the ranking are:")
+                        say("[DELAY value;0]")
+                        say("  |Guild name |Points |Victories |Draws |Defeats ")
+                        say(guild.high_ranking_string().."[/DELAY]")
+                        say("")
+                end
+
+                when
+                        guild_man1.chat."My Guild ranking" or
+                        guild_man2.chat."My Guild ranking" or
+                        guild_man3.chat."My Guild ranking"
+                        with pc.hasguild() begin
+                        say_title("Guardian:")
+                        say("")
+                        say("Guilds like yours have following results: [DELAY value;0]")
+                        ---                                                                l
+                        say("  |Guild name |Points |Victories |Draws |Defeats ")
+                        say(guild.around_ranking_string().."[/DELAY]")
+                        say("")
+                end
+
+                when
+                        guild_man1.chat."My Guild score" or
+                        guild_man2.chat."My Guild score" or
+                        guild_man3.chat."My Guild score"
+                        with pc.hasguild() begin
+                        say_title("Guardian:")
+                        say("")
+                        say("The ranking position of your guild is "..guild.get_rank()..",")
+                        say("and the score in points "..guild.get_ladder_point()..".")
+                        say("")
+                end
+                
+                when
+                        guild_man1.chat."Guild Ranking rewards" or
+                        guild_man2.chat."Guild Ranking rewards" or
+                        guild_man3.chat."Guild Ranking rewards" begin
+                        say_title("Guardian:")
+                        say("") 
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("You will receive 1.000 Ladder Points for every level your")
+                        say("Guild reaches. You can also earn points by winning Guild")
+                        say("Wars. To find guilds for war, check the website ranking.")
+                        say("")
+                        say_reward("Every week, the first 5 guilds on the ranking will receive")
+                        say_reward("48 hours of experience bonus.")
+                        say("")
+                end
+        end
+end

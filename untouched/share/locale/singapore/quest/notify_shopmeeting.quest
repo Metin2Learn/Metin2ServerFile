@@ -1,0 +1,192 @@
+quest notify_shopmeeting begin
+        state start begin
+                when 9005.chat."Receive your mission." with pc.level<=4 begin
+                        say("Today a meeting of traders is taking place.")
+                        say("If you have time...")
+                        say ("why don't you ask the owners of the accessory, armoury and the weapon shop,")
+                        say ("if they will participate in the meeting for me? ")
+                    local b=select ("Accept", "What will you give me as a reward?")
+                        if 1==b then
+                                setstate(accept)
+        elseif 2==b then
+                say         ("(Ha, ha.) So you know how this kind of business works!")
+                                 ("Let's see, this is not a difficult assignment so what do you think about 500 Yang?.")
+                                local b=select ("Accept", "Reject")
+                                if 1==b then
+                                        setstate(accept)
+                                elseif 2==b then
+                                else
+                                        say("UNBEKANNTE TASTE ["..b.."]")
+                                        end
+                                else
+                                 ("UNBEKANNTE TASTE ["..b.."]")
+                                 end
+                                 end
+                                 end
+        state accept begin
+                when letter begin
+                        local v=find_npc_by_vnum(9001)
+                        if 0==v then
+                        else
+                                target.vid("target1", v, "")
+                        end
+                        local v=find_npc_by_vnum(9002)
+                        if 0==v then
+                        else
+                                target.vid("target2", v, "")
+                        end
+                        local v=find_npc_by_vnum(9003)
+                        if 0==v then
+                        else
+                                target.vid("target3", v, "")
+                        end
+                end
+                when leave begin
+                        target.delete("target1")
+                        target.delete("target2")
+                        target.delete("target3")
+
+
+                         ("Target1")
+                         ("Target2")
+                         ("Target3")
+                         ("Target1")
+                         ("Target2")
+                         ("Target3")
+                 ("Find the Trader")
+                         ("Find the Trader")
+                ("Find the Trader")
+                         ("Please review all the merchants and ask")
+                         ("if they want to participate in the meeting.")
+                         ("Participating list")
+                         ("Target1")
+                                 ("Owner of the armoury shop: Owner of the armoury shop?: Participate(o) Can't participate( )")
+                         ("Target1")
+                                 ("Owner of the armoury shop: Participate( ) Can't participate(o)")
+                         ("Target1")
+                                 ("Owner of the armoury shop: Participate( ) Can't participate( )")
+                         ("Target2")
+                                 ("Owner of the weapon shop: Participate(o) Can't participate( )")
+                 ("Target2")
+                                 ("Owner of the weapon shop: Participate( ) Can't participate(o)")
+                         ("Target2")
+                                 ("Owner of the weapon shop: Participate( ) Can't participate( )")
+                         ("Target3")
+                                 ("Owner of the accessory shop: Participate(o) Can't participate( )")
+                         ("Target3")
+                                 ("Owner of the accessory shop: Participate( ) Can't participate(o)")
+                         ("Target3")
+                                 ("Owner of the accessory shop: Participate( ) Can't participate( )")
+                        ("Find the Trader")                         ("Please review all the merchants and ask")
+                         ("if they want to participate in the meeting.")
+                         ("Participating list")
+                         ("Target1")
+                                 ("Owner of the armoury shop: Participate(o) Can't participate( )")
+                         ("Target1")
+                                 ("Owner of the armoury shop: Participate( ) Can't participate(o)")
+                         ("Target1")
+                                 ("Owner of the armoury shop: Participate( ) Can't participate( )")
+                         ("Target2")
+                                 ("Owner of the weapon shop: Participate(o) Can't participate( )")
+                         ("Target2")
+                                 ("Owner of the weapon shop: Participate( ) Can't participate(o)")
+                         ("Target2")
+                                 ("Owner of the weapon shop: Participate( ) Can't participate( )")
+                         ("Target3")
+                                 ("Owner of the accessory shop: Participate(o) Can't participate( )")
+                         ("Target3")
+                                 ("Owner of the accessory shop: Participate( ) Can't participate(o)")
+                         ("Target3")
+                                 ("Owner of the accessory shop: Participate( ) Can't participate( )")
+                        "Figure out how many traders want to participate in the meeting so far. "
+                         ("Ask the owners of the accessory, armoury and the weapon shop,")
+                         ("if they will participate in the meeting, and let me know.")
+                         ("Go", "Cancel")
+                         ("Hmm, if you don't want to help me, I can't do anything about it.")
+                                 ("I will just ask someone else.")
+                                 ("UNBEKANNTE TASTE ["..b.."]")
+
+                         ("Target1")
+                         ("A trader meeting?")
+                                 ("Hmm, let's see how my time schedule looks like, one moment...")
+                                 ("Yes I can come.")
+                                 ("Please tell him that I will be there.")
+                                 ("Target1", 11)
+                                 ("Target1")!
+                                         ("Target2")!
+                                                 ("Target3")!
+
+                                 ("A trader meeting?")
+                                 ("Hmm, let's see how my time schedule looks like, one moment...")
+                                 ("I'm sorry! Today I already have an appointment with the forest worker David Kim!")
+                                 ("Please tell him that I can't come.")
+                                 ("Target1", 10)
+                                 ("Target1")!
+                                         ("Target2")!
+                                                 ("Target3")
+                                                 ("Target2")
+                         ("Since the damn Storehouse administrator has become the president of the Trading Union")
+                                 ("the meetings of traders are often being held back.")
+                                 ("Now, if the few members do not appear, there are not going to be any real meeting.")
+                                 ("Please tell him that I will be there.")
+                                 ("Target2"
+                                 ("Target1")!
+                                         ("Target2")
+                                                 ("Target3")!
+                                                         ("Since the damn Storehouse administrator has become the president of the Trading Union")
+                                 ("the meetings of traders are often being held back.")
+                                 ("My wife asked me to get early home.")
+                                 ("I'm sorry, please tell him that I can't come.")
+                                 ("Target2"
+                                 ("Target1")!
+                                         ("Target2")
+                                                 ("Target3")
+                                                         ("Target3")
+                         ("A trader meeting?")
+                                 ("It seems that there is a trading meeting every second day!")
+                                 ("It would be rude")
+                                 ("if I would miss one of the important meetings.")
+                                 ("Please let him know that I will be there.")
+                                 ("Target3"
+                         ("Target1")
+                                         ("Target2")
+                                                 ("Target3")
+                                                         ("A trader meeting?")
+                                 ("It seems that there is a trading meeting every second day!")
+                                 ("Oh no! I promised Tina Lee that I")
+                                 ("would work out a horoscope for her")
+                                 ("I'm sorry. Please tell him that I won't be there.")
+                                 ("Target3"
+                                 ("Target1")
+                                         ("Target2")
+                                                 ("Target3")
+                                         ("__TARGET__"
+                         ("Return to the old man in the restaurant")
+                         ("Return to the old man in the restaurant")
+                        "Return to the old man in the restaurant"
+                         ("Return to the old man in the restaurant. Tell him, if the traders are going to participate in the meeting")
+                         ("and get your reward.")
+                "Return to the old man in the restaurant"
+                         ("Return to the old man in the restaurant. Tell him, if the traders are going to participate in the meeting")
+                         ("and get your reward.")
+                 ("__TARGET__")
+                         ("Target1") ("Target2") ("Target3")
+                                 ("So, everyone said that they could come?")
+                                 ("I'm in a good mood, that's why I will give you a bonus of 1000 Yang!")
+                                 ("I will let you know if I have further assignments.")
+                                                                 ("You got 1000 Yang from the old man from the restaurant.")
+                                 ("Oh, outstanding!!! ")
+                                 ("I will let you know if I have further assignments.")
+                                 ("Let me give you the promised reward.")
+                                 ("You got 500 Yang from the old man from the restaurant.")
+                                 ("Deliver Potion to Fisherman", "Case_Start")
+
+setstate(__COMPLETE__)
+			q.done()
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end

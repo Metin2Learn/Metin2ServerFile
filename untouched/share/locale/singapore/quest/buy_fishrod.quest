@@ -1,0 +1,168 @@
+quest buy_fishrod begin
+        state start begin
+		when login or levelup with pc.get_level() >= 30 begin
+			setstate(run)
+		end
+	end
+		
+	state run begin
+		when letter begin
+                	local v=find_npc_by_vnum(9009)
+			if 0==v then
+                	else
+                    		target.vid("__TARGET__", v, "Fisherman")
+                	end
+           	end
+		
+                when __TARGET__.target.click or 9009.chat."Fishing Rod Package" begin
+                        say_title("Fisherman")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("An incredible price! A Fishing Rod with a fantastic handle!")
+                        say("And with this rod come 100 pastes and 20 worms for free!")
+                        say("We, 'The sellers of best Fishing Rods', offer our customers")
+                        say("a 3-in-1 Fishing Rod Package for 3980 Yang")
+                        say("")
+                        say("Would you like to buy the Fishing Rod Package?")
+                        say("")
+                        local b=select("Buy it", "No, thanks")
+                        if 1==b then
+                                if pc.money>=3980 then
+                                        pc.changemoney(-3980)
+                                        say_title("Fisherman")
+                                        say("")
+                                        say("I bought the 3-in-1 Fishing Rod Package.")
+                                        say("")
+                                        say("While opening the Fishing Rod Package")
+                                        say("suddenly a note appears in the box.")
+                                        pc.give_item2("27400", 1)
+                                        pc.give_item2("27800", 100)
+                                        pc.give_item2("27801", 20)
+                                        setstate(notify_event)
+                                else
+                                        say_title("Fisherman")
+                                        say("")
+                                        ---                                                   l
+                                        say("I am sorry,")
+                                        say("you do not have enough Yang")
+                                        say("please wait for the next special bargain")
+                                end
+                        elseif 2==b then
+                        else
+                                say("UNKNOWN BUTTON ["..b.."]")
+                        end
+                end
+        end
+        state notify_event begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Note of the Fishing Contest")
+                        q.set_title("Note of the Fishing Contest")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Note:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Thanks for buying the Fishing Rod Package.")
+                        say("")
+                        say("We not only offer special bargains, but also Fishing Contest")
+                        say("for beginners. The first prize is desired by everyone.. a")
+                        say("Level 30 weapon !! If you bring 5 Raw Crucian Carps to")
+                        say("the Fisherman, this breath-taking prize will be awarded")
+                        say("immediately.")
+                        say("")
+                        say("This is a rare chance! So accept this challenge!")
+                        say("")
+                        local b=select("Take part", "Ignore")
+                        if 1==b then
+                                setstate(play_event)
+                        elseif 2==b then
+                                setstate(__COMPLETE__)
+                                q.done()
+                        else
+                                say("UNKNOWN BUTTON ["..b.."]")
+                        end
+                end
+        end
+        state play_event begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Fishing Contest")
+                        q.set_title("Fishing Contest")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Fisherman")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Fish a Crucian Carp an kill it through clicking on it.")
+                        say("")
+			say("Bring 5 Raw Crucian Carp to the Fisherman and you")
+                        say("and you will be rewarded.")
+                        say("")
+                end
+                when 9009.chat."Fetch the prize of the Contest" with pc.countitem("27833")>=5 begin
+                        say_title("Fisherman")
+                        say("")
+                        say("You brought me 5 Raw Crucian Carp!")
+                        say("I´ll give you the Level 30 weapon like I promised.")
+                        say("")
+                        pc.remove_item("27833", 5)
+                        setstate(reward)
+                end
+                when 9009.chat."Fetch the prize of the Contest" with pc.countitem("27833")<5 begin
+                        say_title("Fisherman")
+                        say("")
+                        say("I am sorry.")
+                        say("")
+                        say("I can only give you the prize if you bring me")
+                        say("5 Raw Crucian Carp.")
+                        say("")
+                end
+        end
+        state reward begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Fishing Contest")
+                        q.set_title("Prize of Fishing Contest")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Information:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("You took part in the Fishing Contest and fished 5 Crucian")
+                        say("Carps. You are given a wounderful box as reward!")
+                        say("")
+  			say("In the box is the promised weapon.")
+  			say("")
+			if pc.job==0 then
+				local s = number(1,2)
+				if s == 1 then
+			       		pc.give_item2(3211, 1)
+			       	else
+			       		pc.give_item2(291, 1)
+			       	end
+			elseif pc.job==1 then
+			       pc.give_item2(1172, 1)
+			elseif pc.job==2 then
+			       pc.give_item2(291, 1)
+			elseif pc.job==3 then
+				local s = number(1,2)
+				if s == 1 then
+			       		pc.give_item2(5112, 1)
+			       	else
+			       		pc.give_item2(7162, 1)
+			       	end
+			end
+                        setstate(__COMPLETE__)
+                        q.done()
+                end
+        end
+        state __COMPLETE__ begin
+                when enter begin
+                        q.done()
+                end
+        end
+end

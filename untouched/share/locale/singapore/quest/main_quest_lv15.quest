@@ -1,0 +1,264 @@
+---------------------------------------
+-- Main Quest LV15
+-- The Situation of the Three Kingdoms
+---------------------------------------
+quest main_quest_lv15 begin
+        state start begin
+        end
+        state run begin
+                when login or levelup or enter begin
+                        if pc.get_level() >= 15 then
+                                setstate(gotoboss)
+                        end
+                end
+        end
+        state gotoboss begin
+                when letter begin
+                        local v=find_npc_by_vnum(20355)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find the Captain.")
+                        end
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton( "Find the Captain." )
+                        q.set_title("The current situation" )
+                        q.start()
+                end
+                when button or info begin
+                        say_title("The current situation")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Report to the Captain, you will learn about the current")
+                        say("situation regarding the three kingdoms.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        say_title("Captain:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("I think you are ready to learn more about the world.")
+                        say("")
+                        say("Let me begin with our kingdom, "..locale.empire_names[pc.get_empire()]..".")
+                        say("")
+                        say("To win a war you have to know yourself before you can truly")
+                        say("learn about your enemy!")
+                        say("")
+                        wait()
+                        local empire = pc.getempire()
+                        if empire == 1 then
+                                say_title("Captain:")
+                                say("")
+                                say("Our kingdom has always been a kingdom of trade. We always")
+                                say("had the most extensive trade routes, and that is why the")
+                                say("business was flourishing in our kingdom.")
+                                say("")
+                                say("Since the Metin Stones appeared, trade has decreased and")
+                                say("business is just getting worse. As a trade kingdom we never")
+                                say("had a huge army as we had no need for it.")
+                                say("")
+                                say("Because of our wealth we were able to hire lots of")
+                                say("mercenaries. Mercenaries are trustworthy and loyal...")
+                                say("as long they get paid.")
+                                say("")
+                                wait()
+                                say_title("Captain:")
+                                say("")
+                                ----"123456789012345678901234567890123456789012345678901234567890"|
+                                say("Thanks to the mercenaries, our country has regained its")
+                                say("stability. But to be prepared for the future wars, we need")
+                                say("more mercenaries and a strong economy.")
+                                say("")
+                                say("This will require a lot of hard work from us and that")
+                                say("includes you.")
+                                say("")
+                                wait()
+                                say_title("Captain:")
+                                say("")
+                                ----"123456789012345678901234567890123456789012345678901234567890"|
+                                say("I will give you a new assignment.")
+                                say("")
+                                say("Bring this speciality to Yu-Hwan in the neighbouring")
+                                say("village. Our kingdom is a kingdom of traders and we are")
+                                say("trading with different goods of the region. You will")
+                                say("greatly aid the village if you deliver this to Yu-Hwan.")
+				say("")
+
+                        elseif empire == 2 then
+                                say_title("Captain:")
+                                say("")
+                                say("Our kingdom is ruled by the Warlord Liu-Bang. Our nation")
+                                say("is based on our religion. Because of this we knew before")
+                                say("everyone else of the existence of the Darkness. Our Shamans")
+                                say("prepared us for the arrival of the Metin Stones.")
+                                say("")
+				say("These days our best Shamans are working hard for the")
+				say("security of the nation. Shamans are very wise through their")
+				say("mystic powers, which are the base of their might.")
+				say("")
+                                say("Without them it would only be a matter of time before")
+                                say("another country invades and defeats us.")
+				say("")
+                                wait()
+                                say_title("Captain:")
+                                say("")
+                                ----"123456789012345678901234567890123456789012345678901234567890"|
+                                say("The villagers from our country are extremely faithful and")
+                                say("praying daily to the Dragon God.")
+                                say("")
+                                say("The charitable Dragon God is protecting us currently from")
+                                say("the resurrection of darkness.")
+                                say("")
+                                say("We should keep defending ourselves from barbarian")
+                                say("attacks and reunite the empire under our control.")
+                                say("")
+                                wait()
+                                say_title("Captain:")
+                                say("")
+                                ----"123456789012345678901234567890123456789012345678901234567890"|
+                                say("I will now give you a new assignment.")
+                                say("")
+                                say("Deliver this Stone Statue from the Dragon God to Yu-Hwan in")
+                                say("the the neighbour village.")
+                                say("")
+                                say("Religion and our deep belief in the Dragon God are very")
+                                say("important to our kingdom.")
+                                say("")
+                                say("If you deliver this to Yu-Hwan, you will be doing the")
+                                say("villagers a big favour.")
+                                say("")
+
+                        elseif empire == 3 then
+                                say_title("Captain:")
+                                say("")
+                                say("Our Kingdom has a long military tradition. The King united")
+                                say("the continent by using his excellent and powerful cavalry.")
+                                say("")
+                                say("Even now that we are divided due to the troubles that were")
+                                say("caused by those Metin Stones, our kingdom still has the")
+                                say("legitimate power of Liu-Qi.")
+                                say("")
+                                wait()
+                                say_title("Captain:")
+                                say("")
+                                ----"123456789012345678901234567890123456789012345678901234567890"|
+                                say("We still have the most powerful army of the three kingdoms,")
+                                say("even though there is nothing we can do about the Metin")
+                                say("Stones right now.")
+                                say("")
+                                say("If we really wished, we could easily conquer the other")
+                                say("kingdoms.")
+                                say("")
+                                say("You should train hard to become a good soldier!")
+                                say("")
+                                wait()
+                                say_title("Captain:")
+                                say("")
+                                ----"123456789012345678901234567890123456789012345678901234567890"|
+                                say("I will give you a new assignment.")
+                                say("")
+                                say("Deliver this ammunition to Yu-Hwan in the neighbour village.")
+                                say("Our kingdom has a powerful army, but we must be sure we have")
+                                say("enough ammunition.")
+                                say("")
+                                say("If you deliver this to Yu-Hwan, you will help to arm the")
+                                say("village for the future.")
+				say("")
+
+                        end
+
+                        set_state(gotomusition)
+                        q.done()
+                end
+        end
+
+        state gotomusition begin
+                when letter begin
+                        local v=find_npc_by_vnum(20017)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Visit Musician Yu-Hwan.")
+                        end
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton( "Visit Musician Yu-Hwan." )
+                        q.set_title("Visit Musician Yu-Hwan.")
+                        q.start()
+                        ---send_letter("Visit Musician Yu-Hwan.")
+                end
+                when button or info begin
+                        ---                                                   l
+                        say_title("The secret delivery.")
+                        say("")
+                        say("Talk to musician Yu-Hwan in the "..areaname[pc.get_empire()][2].." village.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        say_title("Yu-Hwan:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("(sings) Once upon a time there was a bloody battle between")
+                        say("the Dragon Lord and the Dragon God, now there are wars")
+                        say("between the people...")
+                        say("")
+			say("Oh, it's you again! What do you need this time? The Captain")
+			say("has something important for me? Thank you.")
+			say("")
+                        say("But I don't want anyone to see us together. You better")
+                        say("return to "..areaname[pc.get_empire()][1].." now!")
+                        say("")
+                        setstate(gotoboss2)
+                        q.done()
+                end
+        end
+        state gotoboss2 begin
+                when letter begin
+                        local v=find_npc_by_vnum(20355)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Go to the Captain.")
+                        end
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton( "Talk to the Captain" )
+                        q.set_title("Talk to the Captain")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("The current situation.")
+                        say("")
+                        say("Let the Captain know that you made the delivery")
+                        say("to Yu-Hwan to get your reward.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        pc.give_exp2( 35000 )
+                        pc.change_money( 32500 )
+                        target.delete("__TARGET__")
+                        say_title("Captain:")
+                        say("")
+                        say("Well done! You are becoming good at this.")
+                        say("")
+                        say_title("Reward:")
+                        say("")
+                        say_reward("Experience points: 35.000" )
+                        say_reward("Yang: 32.500")
+                        say("")
+
+                        clear_letter()
+                        q.done()
+                        setstate(__COMPLETE__)
+                        set_quest_state("main_quest_lv16","run")
+                end
+        end
+        state __COMPLETE__ begin
+                when enter begin
+                        q.done()
+                end
+        end
+end

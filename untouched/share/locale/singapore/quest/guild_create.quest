@@ -1,0 +1,41 @@
+quest guild_create begin
+    state start begin
+    end
+    state run begin
+        when letter begin
+                        send_letter("Get the Book")
+                end
+                when button or info begin
+                         ----"12345678901234567890123456789012345678901234567890"|
+                            say_title("Get the Book")
+                            say("")
+                            say_reward("The Book of Providence is needed to")
+                            say_reward("establish a guild.")
+                            say_item_vnum(70101)
+                            say_reward("You can get the book, if you kill a Orc Chief")
+                            say_reward("with a group helping you.")
+                        say("")
+        end
+                when 691.party_kill begin
+                        set_state(reward)
+                end
+    end
+        state reward begin
+                when letter begin
+                        send_letter("You got the Book")
+                end
+                when button or info begin
+                        say_title("You received the Book")
+                        say("")
+                        ----"12345678901234567890123456789012345678901234567890"|
+			say_reward("You received the Book of Providence from the")
+                        say_reward("Orc Chief")
+                            say_item_vnum(70101)
+                        say_reward("The Guard of the Village Square,")
+                        say_reward("will help you establish a guild.")
+                        say("")
+                        set_state(start)
+                        pc.give_item2(70101)
+                end
+        end
+end

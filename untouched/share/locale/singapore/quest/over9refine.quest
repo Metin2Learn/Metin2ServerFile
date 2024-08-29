@@ -1,0 +1,160 @@
+
+quest over9refine begin
+	state start begin
+		when 20094.chat."About the advancement of items.." begin
+			say("Hong-Hae:")
+			say("Hi~ Greetings~")
+			say("When I was travelling around world, I met someone")
+			say("Who can refine +9 items even stronger.")
+			say("But, He passed away before I learn his skills fully...")
+			say("Since then, I keep experimenting... still having problems.")
+			say("and not enough materials as well..")
+			say("If you can bring me any experimental material,")
+			say("I might be able to help your advancement. What do you say~?")
+			say("It's not completed research, so if it fails, the material will be gone")
+			say("and at least equipment will stay~!!")
+			say("This new research isn't easy thing to do~")
+			say("")
+		end
+
+		when 20094.chat."Available advancement list" begin
+			say("Hong-Hae:")
+			say("Maybe it's because still work in progress...")
+			say("Those items can be worked so far...")
+			say("When you use blessing scrolls with other lower level items")
+			say("upgrade can be success.")
+			say("")
+
+			wait()
+
+			say("Weapon:")
+			say("    Poison Sword, Lion Sword, Devil Wing Chakram, Crow Steel Bow, Bamboo Bell")
+			say("")
+			say("Armour:")
+			say("    Black Steel Armour, Black Magic, Black Wind Suit, Black Tunic")
+			say("")
+			say("Helm:")
+			say("    Ghost Mask Sallet, Steel Hood, Castle Helm, Sunlight Hat")
+			say("")
+			say("Shield:")
+			say("    Falcon Shield, Tiger Monk Shield, Lion Edge Shield, Dragon Scale Shield")
+			say("")
+			say("Shoes:")
+			say("    Wooden Shoes, Gold Threaded Shoes, Golden Shoes, Leather Boots, Bronze Boots, Nimbus Boots")
+			say("")
+
+			wait()
+
+			say("Bracelet:")
+			say("    Jade Bracelet, Ebony Bracelet, Pearl Bracelet, White Gold Bracelet, Crystal Bracelet, Amethyst Bracelet, Heaven's Tear Bracelet")
+			say("")
+			say("Necklace:")
+			say("    Silver Necklace, Gold Necklace, Jade Necklace, Ebony Necklace, Pearl Necklace, White Gold Necklace, Crystal Necklace, Amethyst Necklace,")
+			say("    Heaven's Tear Necklace")
+			say("")
+			say("Earrings:")
+			say("    Jade Earrings, Ebony Earrings, Pearl Earrings, White gold Earrings, Crystal Earrings, Amethyst Earrings, Heaven's tear Earrings")
+			say("")
+		end
+
+		when 20094.take begin
+			if get_time() < pc.getqf("next_time")then
+				say("Hong-Hae:")
+				say("I'm not ready for")
+				say("the upgrade yet...")
+				say("Can you wait a moment?")
+				say("")
+				if not is_test_server() then return end
+			end
+			
+			local val = item.can_over9refine()
+
+			if val == 0 then
+				say("Hong-Hae:")
+				say("I can upgrade this item..")
+				say("")
+				return
+			end
+
+			if pc.count_item(25040) <= 0 then
+				say("Hong-Hae:")
+				say("You need to bring the materials..")
+				say("")
+				say_reward(item_name(25040))
+				say("")
+				say("Get me this material")
+				say("")
+				return
+			end
+
+			local vnum = item.get_over9_material_vnum(item.get_vnum()) ;
+
+			if val != 1 and val != 2 then
+				say("Hong-Hae:")
+				say("Something's not working...")
+				say("")
+
+				item_log(item.get_id(), "REFINE OVER9", "FAIL WRONG RET: "..val)
+
+				return
+			end
+
+			if pc.count_item(vnum) >= 1 then
+			elseif pc.count_item(vnum+1) >= 1 then
+				vnum = vnum + 1
+			elseif pc.count_item(vnum+2) >= 1 then
+				vnum = vnum + 2
+			else
+				say("Hong-Hae:")
+				say("You need to bring the materials..")
+				say("")
+				say_reward(item_name(vnum))
+				say_reward(item_name(vnum+1))
+				say_reward(item_name(vnum+2))
+				say("")
+				say("Please get me the Blessing Scroll.")
+				say("")
+				return
+			end
+
+			say("Hong-Hae:")
+			say("I will use these items to do upgrading.")
+			say("")
+
+			say_reward(item_name(25040))
+			say_reward(item_name(vnum))
+			say("")
+
+			say("Do you want to proceed?")
+			say("")
+
+			local gogo = select("Yes", "No")
+	
+			say("Hong-Hae:")
+
+			if gogo == 1 then
+				pc.setqf("next_time", get_time() + time_hour_to_sec(2) )
+				pc.remove_item(25040)
+				pc.remove_item(vnum)
+				
+				if number(1, 100) <= 10 then
+					local ret = false ;
+					if val == 1 then
+						ret = item.change_to_over9()
+					elseif val == 2 then
+						ret = item.over9refine()
+					end
+					say("The advancemtn is working!!")
+				else
+					say("I have failed it.. So sorry...")
+					item_log(item.get_id(), "REFINE OVER9", "FAIL "..item_name(vnum).."("..vnum..")")
+				end
+			else
+				say("Come when you change your mind.")
+			end
+
+			say("")
+		end
+	end
+end
+

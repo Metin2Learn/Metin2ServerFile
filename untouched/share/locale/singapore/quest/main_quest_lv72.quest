@@ -1,0 +1,215 @@
+quest main_quest_lv72 begin
+	state start begin
+	end
+	state state_0 begin
+		when login or levelup or enter with pc.level >= 72 begin
+			set_state (state_1)
+		end
+	end
+	state state_1 begin
+		when letter begin
+			local v = find_npc_by_vnum (20369)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv72.title_1)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv72.title_1)
+			say (locale.main_quest_lv72.say_1)
+		end
+		when 20369.chat.locale.main_quest_lv72.title_1 begin
+			target.delete("__TARGET__")
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv72.say_2)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv72.say_3)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv72.say_4)
+			set_state(state_2)
+		end
+	end
+	state state_2 begin
+		when letter begin
+			local v = find_npc_by_vnum (20372)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv72.title_2)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv72.title_2)
+			say (locale.main_quest_lv72.say_5)
+		end
+		when 20372.click begin
+			target.delete("__TARGET__")
+			say(locale.main_quest_lv72.say_6)
+			wait()
+			say_title ( mob_name(20372))
+			say(locale.main_quest_lv72.say_7)
+			wait()
+			say_title ( mob_name(20372))
+			say(locale.main_quest_lv72.say_8)	
+			wait()
+			say(locale.main_quest_lv72.say_9)
+			pc.give_item2 (30160, 1)
+			set_state (report_discovery)
+		end
+	end
+	state report_discovery begin
+		when 20369.chat.locale.main_quest_lv72.title_2 begin
+			pc.remove_item (30160)
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv72.say_10)
+			wait()
+			say_title ( pc.getname())
+			say(locale.main_quest_lv72.say_11)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv72.say_12)
+			wait()
+			say_title ( pc.getname())
+			say(locale.main_quest_lv72.say_13)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv72.say_14)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv72.say_15)
+			wait()
+			
+			if number (1,2) == 1 then
+				drug = 30009
+			else
+				drug = 30083
+			end
+			say_title (locale.reward)
+			say_reward("Experience: 8.000.000")
+			say_reward("Experience Ring")
+			say_reward("2x "..item_name(drug))
+			say_reward("2x "..item_name(30039))
+
+			pc.give_exp2(8000000)
+			
+			pc.give_item2(70005) -- 경험의 반지
+			pc.give_item2(drug,2) -- 알수 없는 약 (+일 수도)
+			pc.give_item2(30039,2) -- 헝겊조각
+			
+			set_state(state_4)
+		end
+	end
+	state state_4 begin
+		when letter begin
+			local v = find_npc_by_vnum (20369)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv72.title_3)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv72.title_3)
+			say(locale.main_quest_lv72.say_16)				
+		end
+		when 20369.chat.locale.main_quest_lv72.title_3 begin
+			target.delete("__TARGET__")
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv72.say_17)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+		say(locale.main_quest_lv72.say_18)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv72.say_19)
+			pc.setqf ("collect_beads", 0)
+
+			set_state (state_5)
+		end
+	end
+	state state_5 begin
+		when letter begin
+			send_letter (locale.main_quest_lv72.title_3)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv72.title_3)
+			say (locale.main_quest_lv72.say_16)
+		end
+
+		when 1105.kill or 1107.kill begin
+			if number(1, 50) > 2 then 
+				return
+			end
+
+			local n = pc.getqf ("pass_beads")
+			local i = pc.count_item (31005)
+			if n < 50 and pc.count_item (31005) < 50 - n then
+				notice_multiline (locale.main_quest_lv72.say_21, notice)
+				notice (string.format (locale.main_quest_lv72.say_22, 50 - n - 1))
+				pc.give_item2 (31005, 1)
+			end
+		end
+
+		when 20369.chat.locale.main_quest_lv72.title_3 with pc.count_item (31005) > 0 begin
+			local now = get_global_time()
+			local today = now - math.mod (now, 86400)
+			local can_report_num
+			if pc.getqf ("last_access_date") != today then
+				pc.setqf ("last_access_date", today)
+				pc.setqf ("blue_bead_todays_report_num", 1)
+			else
+				local reported_num = pc.getqf("blue_bead_todays_report_num")
+				
+				if 10 - reported_num <= 0 then
+					say(locale.main_quest_lv72.say_23)
+					return
+				else
+					if not pc.is_gm() then 
+						pc.setqf ("blue_bead_todays_report_num", reported_num + 1)
+					end
+				end
+			end
+	
+			pc.remove_item (31005, 1)
+			local n = pc.getqf("pass_beads")
+			if number (1,100) > 60 then
+				say_title (mob_name(20369))
+				say(locale.main_quest_lv72.say_24)
+				return
+			elseif n < 50 -1 then
+				pc.setqf ("pass_beads", n + 1)
+				say_title (locale.main_quest_lv66.say_25)
+				say (string.format (locale.main_quest_lv72.say_25, 50 - n - 1))
+			else
+				pc.setqf("pass_beads", 0)
+				say_title (locale.main_quest_lv66.say_25)
+				say(locale.main_quest_lv72.say_26)						
+				wait()
+				say_title (locale.reward)
+				say_reward("Experience: 35.000.000")
+				say_reward("Yang: 2.775.000")
+				say_reward("5x Quest Potion")
+				say_reward("1x Bonus Changer")
+
+				pc.give_exp2(35000000)
+				pc.change_money(2775000)
+				
+				pc.give_item2(71035)
+				pc.give_item2(71035)
+				pc.give_item2(71035)
+				pc.give_item2(71035) 
+				pc.give_item2(71035) 
+				pc.give_item2(71084)
+
+				wait()
+				say(locale.main_quest_lv72.say_27)
+				set_state(__COMPLETE__)
+				q.done()
+				set_quest_state ("main_quest_lv78", "state_0")
+			end
+		end
+	end
+	
+	state __COMPLETE__ begin
+	end
+end

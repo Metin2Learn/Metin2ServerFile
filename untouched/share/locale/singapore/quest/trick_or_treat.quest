@@ -1,0 +1,176 @@
+quest trick_or_treat begin
+	state start begin
+		when login or enter begin
+			if get_time() > pc.getqf("halloween_info_restart") and pc.getqf("halloween_info_restart") > 0 then
+				pc.setqf("halloween_info_abort", 0)
+				pc.setqf("halloween_info_restart", 0)
+			end
+			if game.get_event_flag("halloween_active") == 1 and pc.getqf("halloween_info_abort") == 0 then
+				q.set_icon("scroll_open_blue.tga")
+				send_letter("*It's halloween!")
+			end
+		end
+		
+		when button or info begin
+			say_title("It's halloween!")
+			say("")
+			say("Jason Voorhees is visiting Metin2 SG")
+			say("for halloween! In this time you can drop")
+			say("Candy, Magic Wand and Pumpkin to trade")
+			say("for a Halloween Box with wonderful items inside.")
+			say("")
+			say("")
+			local mail = select("OK", "Do not show this message again")
+			if mail == 2 then
+				pc.setqf("halloween_info_abort", 1)
+				pc.setqf("halloween_info_restart", get_time()+691200)
+			end
+		end
+		
+		when 20501.chat."GM: Trick or treat!" with pc.is_gm() == true begin
+			if game.get_event_flag("halloween_active") == 0 then
+				say_title(mob_name(20501))
+				say("")
+				say("Do you want to start Trick or Treat?")
+				say("")
+				local start = select("Yes", "No")
+				if start == 1 then
+					notice_all("Halloween Event 'Trick or Treat' has been started.")
+					notice_all("You can drop Candies, Magic Wands and Pumpkins")
+					notice_all("to exchange them for a box with great rewards!")
+					game.set_event_flag("halloween_active", 1)
+				end
+			else
+				say_title(mob_name(20501))
+				say("")
+				say("Do you want to end Trick or Treat?")
+				say("")
+				local halloweenend = select("Yes", "No")
+				if halloweenend == 1 then
+					notice_all("'Trick or Treat' has ended. We hope you enjoy your sweets!")
+					notice_all("And don't forget to brush your teeth after eating candy!")
+					game.set_event_flag("halloween_active", 0)
+				end
+			end
+		end
+		
+--[[		when 20501.chat."I have the Scroll of Witchcraft" begin
+			if pc.count_item(30323) > 0 then
+				if pc.getqf("hair_active") > 0 then
+					say_title(mob_name(20501))
+					say("")
+					say("Hey! You are already wearing a Pumpkin!")
+					say("If you would get another one your first one")
+					say("would go to waste and I can not allow that!")
+					say("")
+					say_reward("Your Pumpkin Hairstyle has to expire")
+					say_reward("before you can activate a new one.")
+					say("")
+				else
+					say_title(mob_name(20501))
+					say("")
+					say("I see you have the Scroll of Witchcraft")
+					say("in your tiny palms... Heheheh!")
+					say("I will give you a mighty Pumpkin to wear!")
+					say("It enhances your damage against monsters by")
+					say("10% for seven days!")
+					say("")
+					say_reward("Do you want to trade?")
+					say("")
+					local hair = select("Yes", "No")
+					if hair == 1 then
+						local race = pc.get_job()
+						if race == 0 then
+							pc.set_part(PART_HAIR, 1015)
+							affect.remove_hair()
+							affect.add_hair(apply.ATTBONUS_MONSTER, 10, 604800)
+							pc.setf("hair","limit_time", get_time()+604800)
+							pc.setqf("halloween_hair_expire", get_time()+604800)
+							pc.remove_item(30323, 1)
+							pc.setqf("hair_active", 1)
+						elseif race == 1 then
+							pc.set_part(PART_HAIR, 2015)
+							affect.remove_hair()
+							affect.add_hair(apply.ATTBONUS_MONSTER, 10, 604800)
+							pc.setf("hair","limit_time", get_time()+604800)
+							pc.setqf("halloween_hair_expire", get_time()+604800)
+							pc.remove_item(30323, 1)
+							pc.setqf("hair_active", 1)
+						elseif race == 2 then
+							pc.set_part(PART_HAIR, 3015)
+							affect.remove_hair()
+							affect.add_hair(apply.ATTBONUS_MONSTER, 10, 604800)
+							pc.setf("hair","limit_time", get_time()+604800)
+							pc.setqf("halloween_hair_expire", get_time()+604800)
+							pc.remove_item(30323, 1)
+							pc.setqf("hair_active", 1)
+						else
+							pc.set_part(PART_HAIR, 4015)
+							affect.remove_hair()
+							affect.add_hair(apply.ATTBONUS_MONSTER, 10, 604800)
+							pc.setf("hair","limit_time", get_time()+604800)
+							pc.setqf("halloween_hair_expire", get_time()+604800)
+							pc.remove_item(30323, 1)
+							pc.setqf("hair_active", 1)
+						end
+					end
+				end
+			else
+				say_title("Scroll of Witchcraft")
+				say("")
+				say("You need a scroll of witchcraft!")
+				say("")
+				say_item_vnum(30323)
+				say("")
+				say_reward("You can obtain it from the Halloween Box.")
+				say("")
+			end
+		end ]]
+		
+		when 20501.chat."Trick or Treat!" begin
+			if game.get_event_flag("halloween_active") == 0 then
+				say_title(mob_name(20501))
+				say("")
+				say("The Halloween Event is not active.")
+				say("Please try again later.")
+				say("")
+			elseif game.get_event_flag("halloween_active") == 1 then
+				if pc.count_item(30322) > 0 and pc.count_item(50032) > 0 and pc.count_item(50095) > 0 then
+					say_title(mob_name(20501))
+					say("")
+					say("Hello spooky fellow!")
+					say("The time has come for candies and horror!")
+					say("")
+					say("I see you are well prepared! Do you")
+					say("want to trade a Magic Wand, a Candy and")
+					say("a Pumpkin for my valuable Halloween Box?")
+					say("")
+					local trade = select("Yeeehees of course!", "BooooOOooO no.")
+					if trade == 1 then
+						say_title(mob_name(20501))
+						say("")
+						say("Hehe okay, enjoy your Box and:")
+						say("Happy and scary Halloweeen!")
+						say("")
+						say_reward("You received a Halloween Box!")
+						pc.remove_item(30322,1)
+						pc.remove_item(50032,1)
+						pc.remove_item(50095,1)
+						pc.give_item2(50215,1)
+					end
+				else
+					say_title(mob_name(20501))
+					say("")
+					say("Heeee! No cheating on halloween!")
+					say("You dont have all items for a nice spooking!")
+					say("You need a Magic Wand, a Candy and")
+					say("a pumpking if you want to celebrate with me!")
+					say("")
+					say_reward("You can drop the missing items by killing monsters.")
+					say("")
+				end
+			end
+		end
+	end
+end
+					

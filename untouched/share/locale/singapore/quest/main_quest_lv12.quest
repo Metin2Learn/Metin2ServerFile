@@ -1,0 +1,156 @@
+quest main_quest_lv12 begin
+        state start begin
+        end
+        state run begin
+                when login or levelup or enter with pc.get_level() >= 12 begin
+                        set_state(gotoboss)
+                end
+        end
+
+        state gotoboss begin
+                when letter begin
+                         send_letter("Find the Captain.")
+
+                        local v=find_npc_by_vnum(20355)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find the Captain.")
+                        end
+                end
+                when button or info begin
+                        say_title("Find the Captain.")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("")
+                        say("The Captain has a new assignment for you.")
+                        say("Go talk to him.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+
+                        say_title("Captain:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("After the sky gets dark, the haunted Mu-Rang searches")
+                        say("for his preys among the villagers who dare to leave the")
+                        say("village that late.")
+                        say("")
+                        say("If you bring me proof that you have eliminated at least one")
+                        say("of them, the citizens will be very relieved.")
+			say("")
+                        wait()
+                        say_title("Captain:")
+                        say("")
+                        say("You don't know what a Mu-Rang is? The Mu-Rang is a wolf")
+                        say("which roams around "..areaname[pc.get_empire()][1].."; its skin glows in a strange")
+                        say("way. It's not easy to find one, but I'm sure you can manage it.")
+                        say("")
+                        say_title("Reward for completion:")
+                        say("")
+                        say_reward("Experience points: 20.000")
+                        say_reward("Yang: 20.000")
+                        say("")
+                        set_state( killgraydog )
+
+
+                end
+        end
+
+        state killgraydog begin
+                when letter begin
+                        send_letter("Hunt for the Mu-Rang")
+                end
+                when button or info begin
+                        say_title("Hunt for the Mu-Rang")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("The Mu-Rang is frightening the wanderers. Hunt this wolf")
+                        say("and take his skin to the Captain to prove you killed it.")
+                        say("")
+                 end
+                when 152.kill begin
+		       say_title("Information:")
+			say("")
+			say("You have killed the Mu-Rang!")
+			say("")
+			say("As proof, you rip the skin from the corpse of the wolf.")
+			say("")
+			pc.give_item2(30173, 1)
+			set_state(gotoboss2)
+
+                end
+                when 20355.chat."Hunt for the Mu-Rang" begin
+                        say_title("Captain:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("What, haven't you finished the assignment?")
+                        say("")
+                        say("You're having some trouble in finding the Mu-Rang?")
+                        say("")
+                        say("Do you want to try again?")
+                        say("")
+
+                end
+	end
+        state gotoboss2 begin
+                when letter begin
+                        local v=find_npc_by_vnum(20355)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find the Captain")
+                        end
+                end
+                when letter begin
+                        send_letter("Assignment finished.")
+                end
+                when button or info begin
+                        say_title("Assignment finished")
+                        say("")
+                        say("Bring the skin of the Mu-Rang to the Captain.")
+                        say("")
+                        
+                end
+                when __TARGET__.target.click begin
+                	if pc.count_item(30173) > 0 then
+				target.delete("__TARGET__")
+
+				say_title("Captain:")
+				say("")
+				----"123456789012345678901234567890123456789012345678901234567890"|
+				say("So it's true you managed to kill the Mu-Rang. Thank you so")
+				say("much! It is easier to keep the village safe, now that it's")
+				say("no more. That's good news in these times of war.")
+				say("")
+				say("Those Metin Stones make the animals go wild!")
+				say("")
+				say("Good work. Get yourself some rest before we start with")
+				say("the next assignment.")
+				say("")
+				wait()
+				say_title("Reward:")
+				say("")
+				say_reward("Experience points: 17.500")
+				say_reward("Yang: 20.000")
+				say("")
+				pc.removeitem(30173, 1)
+				pc.give_exp2( 20000 )
+				pc.change_money( 30000 )
+				clear_letter()
+				set_state(__COMPLETE__)
+				set_quest_state("main_quest_lv14","run")
+                        else
+				say_title("Captain:")
+				say("")
+				----"123456789012345678901234567890123456789012345678901234567890"|
+				say("You say the Mu-Rang is dead? Nobody will believe that")
+				say("without a proof! Who are you after all?")
+				say("")
+				say_reward("Hint: you will need the Mu-Rang skin to complete this")
+				say_reward("assignment! You didn't throw it away, did you?")
+                        end
+
+                end
+        end
+        state __COMPLETE__ begin
+        end
+end

@@ -1,0 +1,9 @@
+quest spawnfootball begin
+	state start begin
+		when 90050.use begin
+			oh.spawnmob(20500)
+			item.remove()
+		end
+	end
+end
+

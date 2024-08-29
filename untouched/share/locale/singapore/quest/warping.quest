@@ -1,0 +1,35 @@
+----------------------------------------------
+-- File: warping.quest
+-- Autor: Paylasici
+----------------------------------------------
+quest warping begin
+	state start begin
+		when login begin
+			if is_test_server() then
+				chat("Local Coordinates (x, y): "..pc.get_local_x()..", "..pc.get_local_y().." Coordinates (x, y): "..pc.get_x()..", "..pc.get_y().." MapIndex: "..pc.get_map_index())
+			end
+		end
+
+		when letter begin
+			if is_test_server() then
+				send_letter("Warping")
+			end
+		end
+
+		when button or info begin
+			if is_test_server() then
+				say_title("Warping")
+				say("Please type in the X coordinate.")
+				local x = input()
+
+				say("Please type in the Y coordinate.")
+				local y = input()
+
+				say("Please type in the MapIndex")
+				local mapindex = input()
+
+				pc.warp(x, y, mapindex)
+			end
+		end
+	end
+end

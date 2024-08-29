@@ -1,0 +1,42 @@
+quest special_stone_drop begin
+	state start begin
+		when 8059.kill begin
+			if pc.get_level() > 70 then
+			else
+				local rand = number(1,100)
+				local stone_tab = {
+				{28030,28130,28230,28330,28430},
+				{28031,28131,28231,28331,28431},
+				{28032,28132,28232,28332,28432},
+				{28033,28133,28233,28333,28433},
+				{28034,28134,28234,28334,28434},
+				{28035,28135,28235,28335,28435},
+				{28036,28136,28236,28336,28436},
+				{28037,28137,28237,28337,28437},
+				{28038,28138,28238,28338,28438},
+				{28039,28139,28239,28339,28439},
+				{28040,28140,28240,28340,28440},
+				{28041,28141,28241,28341,28441},
+				{28042,28142,28242,28342,28442},
+				{28043,28143,28243,28343,28443},
+				}
+				local a = number(1,14)
+				local b
+				if rand > 0 and rand <= 20 then
+					b = 1
+				elseif rand >= 21 and rand <= 50 then
+					b = 2
+				elseif rand >= 41 and rand <= 80 then
+					b = 3
+				else
+					b = 4
+				end
+				game.drop_item_with_ownership(stone_tab[a][b],1)
+				
+				if rand < 3 then
+					game.drop_item_with_ownership(90313)
+				end
+			end
+		end
+	end
+end

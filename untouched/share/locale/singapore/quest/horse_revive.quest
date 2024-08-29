@@ -1,0 +1,100 @@
+quest horse_revive begin
+	state start begin
+		when 20349.chat."I would like to revive my horse." with horse.get_grade()==3 and horse.is_dead() and pc.countitem("50059")<1 begin
+			say_title("Stable Lad:")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("You can revive the horse only if you get special herbs from")
+			say("the dungeon of the strong apes. But this is a difficult task")
+			say("because the herbs are guarded by those monkeys at all cost.")
+			say("They will transfigure everybody who tries to steal them")
+			say("into a monkey.")
+			say("")
+			say_reward("Retrieve the herb of the Joklor Dungeon to revive your horse.")
+			say("")
+		end
+					
+		when 20349.chat."I want to revive a horse." with horse.get_grade()==3 and horse.is_dead() and pc.countitem("50059")>=1 begin
+			say("")
+			say("These are mind herbs from Joklor Dungeon.")
+			say("They will revive your horse. First, let's call your horse.")
+			wait()
+			say("[DELAY value=200]. . .[/DELAY]")
+			horse.summon()
+			say("Feed the horse with the herbs and wait.")
+			wait()
+			say("The horse is being revived.")
+			say("Don't forget to feed your horse in the future.")
+			if pc.countitem("50059")>=1 then
+				pc.removeitem("50059", 1)
+				horse.revive()
+			end
+		end
+						
+		when 20349.chat."I want to revive a horse." with horse.get_grade()== 2 and horse.is_dead() and pc.countitem("50058") <1 begin
+			say_title("Stable Lad:")
+			say("")
+			say("You can revive the horse only if you get special herbs from")
+			say("the dungeon of the normal apes. But this is a difficult task")
+			say("because the herbs are guarded by those monkeys at all cost.")
+			say("They will transfigure everybody who tries to steal them")
+			say("into a monkey.")
+			say("")
+			say_reward("Retrieve the herb of the Honobo Dungeon to revive your horse.")
+			say("")
+		end
+					
+		when 20349.chat."I want to revive a horse." with horse.get_grade()== 2 and horse.is_dead() and pc.count_item("50058") >= 1 begin
+			say_title("Stable Boy:")
+			say("")
+			say("These are mind herbs from Sujin Dungeon.")
+			say("They will revive your horse. First, let's call your horse.")
+			wait()
+			say("[DELAY value=400]. . .[/DELAY]")
+			horse.summon()
+			say("Feed the horse with the herbs and wait.")
+			wait()
+			say("The horse is being revived.")
+			say("Don't forget to feed your horse in the future.")
+			if pc.count_item("50058") >= 1 then
+				pc.remove_item("50058",1)
+				horse.revive()
+			end
+		end
+					
+		when 20349.chat."I want to revive a horse." with horse.get_grade()==1 and horse.is_dead() and pc.countitem("50057")<1 begin
+			say_title("Stable Lad:")
+			say("")
+			say("You can revive the horse only if you get special herbs from")
+			say("the dungeon of the weak apes. But this is a difficult task")
+			say("because the herbs are guarded by those monkeys at all cost.")
+			say("They will transfigure everybody who tries to steal them")
+			say("into a monkey.")
+			say("")
+			say_reward("Retrieve the herb of the Sujin Dungeon to revive your horse.")
+			say("")
+		end
+		
+		when 20349.chat."I want to revive a horse." with horse.get_grade()==1 and horse.is_dead() and pc.countitem("50057")>=1 begin
+			say("These are mind herbs from Honobo Dungeon.")
+			say("They will revive your horse. First, let's call your horse.")
+			wait()
+			say("[DELAY value=400]. . .[/DELAY]")
+			horse.summon()
+			say("Feed the horse with the herbs and wait.")
+			wait()
+			say("The horse is being revived.")
+			say("Don't forget to feed your horse in the future.")
+			if pc.countitem("50057")>=1 then
+				pc.removeitem("50057", 1)
+				horse.revive()
+			end
+		end
+	end
+			
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

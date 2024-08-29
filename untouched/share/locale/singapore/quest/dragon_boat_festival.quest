@@ -1,0 +1,44 @@
+quest dragon_boat_festival begin
+    state start begin
+	when 20041.chat."GM: Dragon Boat Festival Status" with pc.is_gm() begin
+	    local value=game.get_event_flag("dragon_boat_drop")
+	    say_title("Dragon boat drop chance")
+	    say(string.format(" drop chance change 1/%d -> ", value))
+	    local v=tonumber(input())
+	    if v<300 then
+	        say("You can not set value less than 300")
+
+	        if not is_test_server() then
+		    return
+	    	end
+
+	    	say("Available on test server")
+	    end
+
+	    say(string.format("drop chance change 1/%d -> 1/%d", value, v))
+	    local s=select("OK", "Cancel")
+	    if s==1 then
+	    	say("Changed")
+	    	game.set_event_flag("dragon_boat_drop", v)
+	    else
+	    	say("Cancel")
+	    end
+	end
+	when 20041.chat."GM: Dragon Boat Festival event executing" with pc.is_gm() and game.get_event_flag("dragon_boat_drop")==0 begin
+		say("Do you want to execute Dragon Boat Festival event?")
+		local s=select("Execute", "Close")
+		if s==1 then
+		    local default_value=1000;
+		    game.set_event_flag("dragon_boat_drop", default_value)
+		    say(string.format("Dragon boat drop chance change : 1/%d", default_value))
+		end
+	end
+	when 20041.chat."GM: End Dragon Boat Festival event" with pc.is_gm() and game.get_event_flag("dragon_boat_drop")!=0 begin
+		say("Do you want to end Dragon Boat Festival event?")
+		local s=select("End", "Close")
+		if s==1 then
+		    game.set_event_flag("dragon_boat_drop", 0)
+		end
+	end
+    end
+end

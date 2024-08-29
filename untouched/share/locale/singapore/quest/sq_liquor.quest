@@ -1,0 +1,219 @@
+quest sg_liquor begin
+        state start begin
+                when login or levelup or enter with pc.get_level() >= 27 begin
+                        set_state(run)
+                end
+        end
+        state run begin
+        	when login or enter begin
+            		local v=find_npc_by_vnum(20041) 
+            		if 0==v then 
+            		else 
+                		target.vid("__TARGET1__", v, "Shabby Pedestrian") 
+            		end 
+ 
+        	end 
+
+        	when 20041.chat."Got something to drink?" or __TARGET1__.target.click begin 
+			target.delete("__TARGET1__") 
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say_title("Shabby Pedestrian:") 
+			say("") 
+			if pc.get_sex() == 0 then
+				gender = "boy"
+			else
+				gender = "girl"
+			end
+			say("Hey "..gender..", I may be dressed in rags, but I sure know")
+			say("a few things you don't.")
+			say("")
+			say("People think I'm dumb and ignore me so I can listen to")
+			say("a lot of gossip. Want to hear something good?")
+			say("")
+			local s = select("I'm not interested in your ramblings","Go on, please")
+			if s == 1 then
+				say_title("Shabby Pedestrian:") 
+				say("")
+				say("You don't know the saying? Only children and drunk")
+				say("people say the truth all the time! Hahaha")
+				say("")
+			else
+				say_title("Shabby Pedestrian:")
+				say("")
+				----"123456789012345678901234567890123456789012345678901234567890"|
+				say("Interested? But I can't tell you with a dry troath.")
+				say("")
+				say("I don't have much money so I only drink cheap wine. But my")
+				say("favourite drink is the Rice Wine from Asmodia. Now that's a")
+				say("delicious drink!")
+				say("")
+				say("If you get me a bottle of Rice Wine I will share with you")
+				say("some valuable information.")
+				say("")
+				local n = select("Where can I find Rice Wine?","I'm on my way!","Forget it.")
+				if n == 1 then
+					say_title("Shabby Pedestrian:")
+					say("")	
+					say("Ask Octavio about it. He is the only guy in town who")
+					say("knows more about wine than me hahaha.")
+					say("")
+					say("I would ask myself but I have a few debts with him haha.")
+					say("")
+					set_state(findoctavio)
+				elseif n == 2 then
+					say_title("Shabby Pedestrian:")
+					say("")	
+					say("Good, good. Rice Wine! Don't forget it.")
+					say("")
+					set_state(findoctavio)
+				elseif n == 3 then
+
+					say_title("Shabby Pedestrian:")
+					say("")
+					say("Oh, too shy to ask Octavio?")
+					say("")
+					if pc.get_sex() == 0 then
+						say("What a shame. Man up!")
+					else
+						say("Poor girl.")
+					end
+					say("")
+
+				end
+				
+			end
+
+        	end 
+        end
+        state findoctavio begin
+         	when login or enter begin
+            		local v=find_npc_by_vnum(20008) 
+            		if 0==v then 
+            		else 
+                		target.vid("__TARGET__", v, "Find Octavio") 
+            		end 
+ 
+        	end 
+                 when letter begin
+                        send_letter("Rice Wine")
+                end     
+                when button or info begin
+                	say_title("Rice Wine")
+                	say("")
+                	say("Ask the restaurant owner, Octavio, for Rice Wine.")
+                	say("")
+                	
+                end
+        	when 20008.chat."Got any Rice Wine?" begin 
+			target.delete("__TARGET__") 
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say_title("Octavio:") 
+			say("") 
+			say("Rice Wine? That's a traditional beverage. Sure, I could")
+			say("prepare some if you bring me Rice.")
+			say("")
+			say("Ask the Storekeeper about it. He surely has some.")
+			say("")
+
+			set_state(findstore) 
+        	end  
+        end
+        state findstore begin
+          	when login or enter begin
+            		local v=find_npc_by_vnum(20008) 
+            		if 0==v then 
+            		else 
+                		target.vid("__TARGET__", v, "Ask the Storekeeper about Rice") 
+            		end 
+ 
+        	end 
+                when letter begin
+                        send_letter("Get Rice!")
+                end     
+                when button or info begin
+                	say_title("Rice Wine")
+                	say("")
+                	say("Ask the Storekeeper if he can give you some Rice.")
+                	say("")
+                	
+                end     		
+        	when 9005.chat."Got any Rice grains?" begin 
+			target.delete("__TARGET__") 
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			if getqf("timewait") > get_time() then
+				say_title("Storekeeper:") 
+				say("") 
+				say("I told you I have no rice at the moment. Come back later.")
+				say("")				
+			else
+				say_title("Storekeeper:") 
+				say("") 
+				say("All the Rice I have is sold. What do you need it for?")
+				say("")
+				local s = select("Rice wine","Feeding my dog","Rice paper","Cakes")
+				if s == 4 then
+					say_title("Storekeeper:") 
+					say("")
+					       ----"123456789012345678901234567890123456789012345678901234567890"|
+					say("Really? I love rice cakes.")
+					say("")
+					say("The truth is I do have some Rice left but I will only give")
+					say("it to you if you solve this riddle:")
+					say("")
+					say_reward("What is greater than God, more evil than the devil,")
+					say_reward("the poor have it, the rich need it, and if you eat it,")
+					say_reward("you’ll die?")
+					say("")
+					local answer = input()
+					
+					if answer == "nothing" then
+						say_title("Storekeeper:")
+						say("")
+						say("Hahaha! That's right. Here is you rice, you earned it.")
+						say("")
+						set_state(backoctavio)
+					else
+						say_title("Storekeeper:")
+						say("")
+						say("That's not right sorry. Want to try again?")
+						say("")
+						say_reward("What is greater than God, more evil than the devil,")
+						say_reward("the poor have it, the rich need it, and if you eat it,")
+						say_reward("you’ll die?")
+						say("")
+						local answer2 = input()
+						if answer2 == "nothing" then
+							say_title("Storekeeper:")
+							say("")
+							say("Hahaha! That's right. Here is you rice, you earned it.")
+							say("")
+							set_state(backoctavio)
+						else
+							say_title("Storekeeper:")
+							say("")
+							say("That's not right sorry. That was your chance!")
+							say("")
+							say("Hah, hah!")
+							say("")
+							setqf("timewait",get_time()+60*60)
+						end
+					end
+
+					 
+				else
+					say_title("Storekeeper:") 
+					say("")
+					----"123456789012345678901234567890123456789012345678901234567890"|
+					say("Oh, really? That's a pity.")
+					say("")
+					say("Come back later, maybe then I have some in stock.")
+					say("")
+					setqf("timewait",get_time()+60*60)
+				end
+			end
+			
+        	end 
+        	
+        end
+	state backoctavio begin
+		

@@ -1,0 +1,34 @@
+-------------------------------------------------
+-- newMt2 Achievement System
+-- Version: 1.0
+-- Date: 02-19-2011
+-- Author: nico_w
+--
+
+quest achievements begin
+	state start begin	
+		when login begin -- activate everything
+		
+			local killcount1 = pc.getqf("killcount1") -- Wild Dog Killcount
+			local killcount2 = pc.getqf("killcount2") -- Alpha Grey Wolf Killcount
+			local logincount = pc.getqf("logincount") -- Logincount (increments on every login)
+			
+			logincount = logincount + 1 -- Increase Logincount by 1
+			
+			
+		end
+		
+		when kill begin
+
+			if npc.race == 101 then
+				local killcount1 = pc.getqf("killcount1")+1
+				
+				pc.setqf("killcount1", killcount1)
+				
+				if killcount1 == 100 then
+					cmdchat("achievement_kc1_100")
+				end
+			end
+		end
+	end
+end

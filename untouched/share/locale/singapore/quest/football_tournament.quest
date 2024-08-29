@@ -1,0 +1,65 @@
+quest football_tournament begin
+	state start begin
+		when 20364.chat."GM: Activate Football Stadium" with pc.is_gm() begin
+			say_title("Do you want to start football stadium?")
+			say("")
+			local act = select("Yes","No")
+			if act == 1 then
+				game.set_event_flag("football_active",1)
+				notice_all("The Football Stadium is now active.")
+				notice_all("Players and observers talk to the Uriel to participate.")
+			end
+		end
+		when 20364.chat."GM: Deactivate Football Stadium" with pc.is_gm() begin
+			say_title("Do you want to end football stadium?")
+			say("")
+			local act = select("Yes","No")
+			if act == 1 then
+				game.set_event_flag("football_active",0)
+				notice_all("The football match is over.")
+				notice_all("Players and observers will be teleported home now.")
+				warp_all_to_village(230,5)
+			end
+		end
+		when eulduji.chat."Join Football Match" with game.get_event_flag("football_active") == 1 begin
+			if pc.getqf("player") < 1 then
+				say_title("Spectator Enter")
+				say("")
+				say("Do you want to enter the Spectator Stands?")
+				say("")
+				local answ = select("Yes","No")
+				if answ == 1 then
+					if pc.get_empire() == 3 then
+						pc.warp(96363,22510)
+					elseif pc.get_empire() == 1 then
+						pc.warp(86161,14222)
+					else
+						pc.warp(106612,13156)
+					end
+				end
+			elseif pc.getqf("player") == 1 then
+				say_title("Player Enter")
+				say("")
+				say("Do you want to enter the Player Field?")
+				say("")
+				local answ = select("Yes","No")
+				if answ == 1 then
+					pc.warp(97209,14036)
+				end
+			elseif pc.getqf("player") == 2 then
+				say_title("Player Enter")
+				say("")
+				say("Do you want to enter the Player Field?")
+				say("")
+				local answ = select("Yes","No")
+				if answ == 1 then
+					pc.warp(94910,14030)
+				end
+			end
+		end
+		when logout with pc.get_map_index() == 230 begin
+			pc.setqf("player",0)
+		end
+	end
+end
+				

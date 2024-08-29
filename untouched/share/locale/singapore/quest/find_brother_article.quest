@@ -1,0 +1,225 @@
+quest find_brother_article begin		
+    state start begin		
+        when 20006.chat."A crying girl." with pc.get_level()>=23 and pc.get_level()<=26 begin		
+                say_title("Mirine:")		
+                say("")		
+                say("My brother, I miss you so much!")		
+                say("Oh!? Who are you?")		
+                wait()		
+                say_pc_name()		
+                say("I went this way and saw you crying.")		
+                say("Here, take this handkerchief.")		
+                wait()		
+                say_title("Mirine:")		
+                say("")		
+                say("Thank you, you are very kind. My name is Mirine.")		
+                say("Can you help me?")		
+                say("My older brother was going to buy medicine for me,")		
+                say("when he had an accident.")		
+                say("And I cried at his grave and held a special")		
+                say("keepsake in my hand.")		
+                say("")		
+                wait()		
+                say_title("Mirine:")		
+                say("")		
+		----"12345678901234567890123456789012345678901234567890"|
+                say("The famous Black Wind Gang suddenly came this way.")		
+                say("Unfortunately I lost my keepsake, when I was")		
+		say("running away. Now I don't have the courage to")
+		say("return and look for it. Would you search for my")
+		say("lost keepsake.")
+                say("")		
+                say("")		
+                say_reward("Show mercy and help this poor girl.")		
+                say_reward("Search for the old and worn Uniform, her")		
+                say_reward("brother weared!")		
+                say("")		
+                local s=select("Accept", "Refuse")		
+                if 1==s then		
+		    ----"12345678901234567890123456789012345678901234567890"|
+                    say("It is very honourable, helping such a poor child,")		
+                    say("that lost his brother. It shall not be too ")		
+		    say("difficult. Let's go.")
+                    set_state(accept)		
+                elseif 2==s then		
+                    say("I am busy and she is indigent.")		
+                    say("Why should I help such an orphan?")		
+                end		
+        end		
+    end		
+    state accept begin		
+        when letter begin		
+            send_letter("Search for the old, black Uniform!")		
+        end		
+        when button or info begin		
+            say_title("Search for the old, black Uniform!")		
+            say("")		
+            say_reward("Get the old, black Uniform from the")		
+            say_reward("Black Wind gang and give it back to Mirine!")		
+        end		
+        when 20006.chat."Search for the keepsake of Mirines brother." with pc.count_item(30032)==0 begin		
+            say_title("Mirine:")		
+            say("")		
+            say("Was it too much I asked for?")		
+            say("Please, please help me. (cry)")		
+            say("")		
+            local s=select("Continue", "Give Up")		
+            if 1==s then		
+                say_title("Mirine:")		
+                say("")		
+                -----------"12345678901234567890123456789012345678901234567890"|		
+		say_reward("It seems more easy to defeat 100 Members of the")
+		say_reward("Black Wind gang, instead of refusing the girls")
+		say_reward("request.")
+                say_reward("")		
+                say("")		
+            else		
+                say_title("Mirine:")		
+                say("")		
+                ----"12345678901234567890123456789012345678901234567890"|		
+		say("I am Sorry. I feel with you, but the")
+                say("Black Wind gang is too strong for me. Somebody")		
+		say("else would be a better choice for this job.")
+                say("")		
+                wait()		
+                say_title("Mirine:")		
+                say("")		
+                say("Oh no! I have asked others for help,")		
+                say("but nobody returned to me.")		
+                say("Please! This is the most valuable I own,")		
+                say("I will give it for reward. Please!")		
+                say("")		
+		----"12345678901234567890123456789012345678901234567890"|
+                say("The girl shows me something, that was packed very")		
+		say("carefully. The pommel ornaments")
+                say("seemed to belong to a very valuable sword.")		
+                say("")		
+                local s=select("Continue Mission", "Give Up")		
+                if 1==s then		
+                    say("")		
+                    say("It is not the reward,")		
+                    say("but I will stand the challenge.")		
+                    say("")		
+                elseif 2==s then		
+                    say("")		
+		    ----"12345678901234567890123456789012345678901234567890"|
+                    say("Nobody returned and and they may be all dead.")		
+                    say("The life is more important then all keepsakes.")		
+                    say("It would be senseless, to sacrifice more lifes.")		
+                    say("I am sorry.")		
+                    say("")		
+                    set_state(__FAILURE__)		
+                end		
+            end		
+        end		
+        when 20006.chat."Bring back the Uniform" with pc.count_item(30032)==1 begin		
+            say_title("Mirine:")		
+            say("")		
+	    ----"12345678901234567890123456789012345678901234567890"|	
+            say("Oh! It smells like my brother.")		
+            say("Thank you very much! Thank you! This is")		
+            say("the most valuable, that I own. I cannot use it.")		
+            say("Please take it for reward.")		
+            say("")		
+            say_reward("Mirines reward was accepted.")		
+		
+            pc.remove_item(30032)		
+            set_state(reward)		
+        end		
+    end		
+    state reward begin		
+        when letter begin		
+            send_letter("Mirines reward.")		
+        end		
+        when button begin		
+            say_title("Mirines reward.")		
+            say("")		
+	    ----"12345678901234567890123456789012345678901234567890"|	
+            say("You unwrap Mirines valuable reward")		
+            say("and find a sword with a wonderful ornamented")		
+	    say("pommel.")	
+            say("")		
+            wait()		
+            say("While you admire the wonderful weapon,")		
+            say("you discover, it is broken into two pieces.")		
+            say("")		
+            say("What?  What is that? What can I do?")		
+            say("I have to bring it to a Blacksmith.")		
+            say("")		
+            say_reward("You got a broken sword.")		
+            say_reward("Bring it to a Blacksmith")		
+            say("")		
+            set_state(repair)		
+        end		
+    end		
+    state repair begin		
+        when letter begin		
+            send_letter("The repair of the sword.")		
+		
+        end		
+        when button or info begin		
+            say_title("The repair of the sword.")		
+            say("")		
+	    ----"12345678901234567890123456789012345678901234567890"|	
+            say("The sword is the reward for bringing back Mirines")		
+	    say("keepsake. You don't throw it away and decided to")	
+	    say("bring it to a Blacksmith for repairs.")	
+            say("")		
+            say("")		
+        end		
+        when letter begin		
+            local v=find_npc_by_vnum(20016)		
+            if v!=0 then		
+                target.vid("__TARGET__", v, "The repair of the sword")		
+            end		
+        end		
+        when __TARGET__.target.click or 20016.chat."The repair" begin		
+            target.delete("__TARGET__")		
+		
+            say_title("Blacksmith:")		
+            say("")		
+	    ----"12345678901234567890123456789012345678901234567890"|	
+            say("Oh! That is a wonderfull sword!")		
+            say("I heared, you helped Mirine.")		
+            say("How magnificent! You are a honest man,")		
+            say("that is why the repair of the sword will be for")		
+	    say("free.")	
+            say("")		
+            say("")		
+            say("The Blacksmith's art formed a wonderful blade in ")		
+            say("less time.")		
+            say("")		
+            wait()		
+            say_title("Blacksmith:")		
+            say("")		
+            say("Here, take this one,honest friend!")		
+            say("")		
+            say("My heart beats strong, when I am taking the sword")		
+            say("from the Blacksmith's hands.")		
+            say("")		
+		
+            local r=number(1, 4)		
+            if 1==r then		
+		say_reward("You received a Silver Sword +5 from the Blacksmith.")
+                pc.give_item2(00065)		
+            elseif 2==r then		
+	        say_reward("You received an Orchid Sword +5 from the Blacksmith.")	
+                pc.give_item2(00075)		
+            elseif 3==r then		
+                say_reward("You received a Bastard Sword +5 from the Blacksmith.")		
+                pc.give_item2(00085)		
+            elseif 4==r then		
+		-----------"12345678901234567890123456789012345678901234567890"|
+                say_reward("You received a Barbarian Sword +5 from the Blacksmith.")
+                pc.give_item2(00095)		
+            end		
+            clear_letter()		
+            set_state(__COMPLETE__)		
+            q.done()		
+        end		
+    end		
+    state __COMPLETE__ begin		
+    end		
+    state __FAILURE__ begin		
+    end		
+end		

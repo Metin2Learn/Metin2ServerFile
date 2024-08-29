@@ -1,0 +1,61 @@
+quest horse_menu begin
+	state start begin
+		when 20030.click or 20101.click or 20102.click or 20103.click or 20104.click or 20105.click or 20106.click or 20107.click or 20108.click or 20109.click begin
+			if horse.is_mine() then
+				syschat("Your Horse HP is "..horse.get_health_pct().."% - Your Horse Stamina is: "..horse.get_stamina_pct().."%")
+				syschat("CTRL + B will send your horse back - CTRL + F will feed your horse - CTRL + H will mount/unmount your horse")
+			end
+		end
+			
+		when 20349.chat."Name your Horse" begin
+			local old_horse_name = horse.get_name() ;
+			if string.len(old_horse_name) == 0 then
+				say_title("Stable Boy:")
+				say("")
+				say("The horse has no name.")
+			else
+				say_title("Stable Boy:")
+				say("")
+				say("Current name of the horse is "..old_horse_name..".")
+			end
+					
+			say("Make a new name for your horse.")
+			say("")
+
+			local horse_name = input()
+
+			if string.len(horse_name) < 2 then
+				say_title("Stable Boy:")
+				say("")
+				say("The name is too short.")
+				say("")
+				return
+			elseif string.len(horse_name) > 12 then
+				say_title("Stable Boy:")
+				say("")
+				say("The name is too long.")
+				say("")
+				return
+			end
+					
+			local ret = horse.set_name(horse_name)
+
+			if ret == 0 then
+				say_title("Stable Boy:")
+				say("")
+				say("Currently, you don`t have a horse.")
+				say("")
+			elseif ret == 1 then
+				say_title("Stable Boy:")
+				say("")
+				say("You can`t use that name")
+				say("")
+			elseif ret == 2 then
+				say_title("Stable Boy:")
+				say("")
+				say("Your horse just got a new name.")
+				say("")
+			end
+		end
+	end
+end

@@ -1,0 +1,33 @@
+quest horse_exchange_ticket begin
+	state start begin
+		when 20349.chat."Voucher for a Horse Medal!" with pc.countitem("50005")>=1 begin
+			say_title("Stable Lad:")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"| 
+			say("This voucher is needed to receive a Horse Medal.")
+			say("Do you want to trade it for a Horse Medal?")
+			say("")
+			say("")
+			local b=select("Exchange", "Close")
+			if 1==b then
+				if pc.countitem("50005")>=1 then
+					pc.removeitem("50005", 1)
+					pc.give_item2("50050", 1)
+					say_title("Stable Lad:")
+					say("")
+					say("Here is your Horse Medal!")
+					say("")
+				end
+			elseif 2==b then
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+		
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

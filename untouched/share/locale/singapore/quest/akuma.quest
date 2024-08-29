@@ -1,0 +1,438 @@
+quest akuma begin 
+    state start begin 
+        when login or levelup or enter with pc.get_level() >= 75 begin 
+        	set_state(information)
+        end
+    end
+	
+    state information begin
+        when letter begin
+            local v=find_npc_by_vnum(20090) 
+            if 0==v then 
+            else 
+                target.vid("__TARGET__", v, "HeukYoung") 
+            end 
+            send_letter("Find Heuk-Young")  
+        end 
+	
+	when button or info begin 
+            say_title("Find Heuk-Young") 
+            say("") 
+            say("Heuk-Young is looking for you. You can find her")
+            say("at the entrance to the Heaven's Lair.") 
+            say("")
+        end    
+		
+        when __TARGET__.target.click or 20090.chat."Diary of a Legend" begin 
+        	target.delete("__TARGET__") 
+            say_title("Heuk-Young:") 
+            say("") 
+            say("Search for the legendary Akuma!") 
+            say("")
+            say("Akuma is most likely the strongest Sura who ever lived!") 
+            say("An almost invincible fighter who even challenged emperors!") 
+            say("I think Heaven's Lair is where Akuma's traces vanished")
+            say("many, many centuries ago.") 
+            say("")
+            say("Please look out for any hints that may indicate that he") 
+			say("indeed fell there!")
+            say("")
+            set_state(findskel) 
+        end 
+    end 
+     
+     
+    state findskel begin 
+        when letter begin 
+            send_letter("Diary of a Legend")             
+        end 
+		
+        when button or info begin 
+            say_title("Diary of a Legend") 
+            say("") 
+            say("Heuk-Young is seeking for the remains of the legendary hero")
+			say("Akuma. Help her by looking for traces in Heaven's Lair") 
+            say("that, though many years have passed, may indicate that")
+			say("he went and fell there.")
+            say("")
+        end 
+
+        when 30124.chat."Diary of a Legend" begin
+        	if pc.getqf("sura1")==0 then 
+				say_title("Diary of a Legend") 
+				say("")
+				say_item("Diary page",30181,"")
+				say("Apart from this skeleton lies a very old page.") 
+				say("Certainly there is more of them!") 
+				say("")
+				say("All of them tell about a legendary Sura called Akuma.") 
+				say("I wonder if this is the Akuma Heuk-Young was talking about?")
+				say("")
+				pc.give_item2(30181, 1) 
+				pc.setqf("sura1", 1)
+				wait()
+			if pc.getqf("sura1") == 1 and pc.getqf("sura2") == 1 and pc.getqf("sura3") == 1 and pc.getqf("sura4") == 1 and pc.getqf("sura5") == 1 then
+				say_title("Diary of a Legend")
+				say("")
+				say("I'm sure I have searched everywhere now and there aren't")
+				say("any more of these skeletons. However, some diary pages are")
+				say("still missing.")
+				say("")
+				say("There's 15 pages in this diary and I only have 5...")
+				say("")
+				say("Surely the domestic monsters have picked up some pages!")
+				say("")
+				say_reward("Find the monsters in this dungeon that are")
+				say_reward("keeping other parts of Akuma's Diary.")
+				say("")
+				set_state(huntgolem)
+			end
+			else
+				say_title("Diary of a Legend")
+				say("")
+				say("There is a sura skeleton but no page.")
+				say("I think I was here already...")
+				say("")
+				say_reward("Nothing can be found here anymore.")
+				say("")
+			end
+		end 
+		
+        when 30125.chat."Diary of a Legend" begin
+        	if pc.getqf("sura2")==0 then 
+				say_title("Diary of a Legend") 
+				say("")
+				say_item("Diary page",30181,"")
+				say("Apart from this skeleton lies a very old page.") 
+				say("Certainly there is more of them!") 
+				say("")
+				say("All of them tell about a legendary Sura called Akuma.") 
+				say("I wonder if this is the Akuma Heuk-Young was talking about?")
+				say("")
+				pc.give_item2(30181, 1) 
+				pc.setqf("sura2", 1)
+				wait()
+			if pc.getqf("sura1") == 1 and pc.getqf("sura2") == 1 and pc.getqf("sura3") == 1 and pc.getqf("sura4") == 1 and pc.getqf("sura5") == 1 then
+				say_title("Diary of a Legend")
+				say("")
+				say("I'm sure I have searched everywhere now and there aren't")
+				say("any more of these skeletons. However, some diary pages are")
+				say("still missing.")
+				say("")
+				say("There's 15 pages in this diary and I only have 5...")
+				say("")
+				say("Surely the domestic monsters have picked up some pages!")
+				say("")
+				say_reward("Find the monsters in this dungeon that are")
+				say_reward("keeping other parts of Akuma's Diary.")
+				say("")
+				set_state(huntgolem)
+			end
+			else
+				say_title("Diary of a Legend")
+				say("")
+				say("There is a sura skeleton but no page.")
+				say("I think I was here already...")
+				say("")
+				say_reward("Nothing can be found here anymore.")
+				say("")
+			end
+		end 
+		
+        when 30126.chat."Diary of a Legend" begin
+        	if pc.getqf("sura3")==0 then 
+				say_title("Diary of a Legend") 
+				say("")
+				say_item("Diary page",30181,"")
+				say("Apart from this skeleton lies a very old page.") 
+				say("Certainly there is more of them!") 
+				say("")
+				say("All of them tell about a legendary Sura called Akuma.") 
+				say("I wonder if this is the Akuma Heuk-Young was talking about?")
+				say("")
+				pc.give_item2(30181, 1) 
+				pc.setqf("sura3", 1)
+				wait()
+			if pc.getqf("sura1") == 1 and pc.getqf("sura2") == 1 and pc.getqf("sura3") == 1 and pc.getqf("sura4") == 1 and pc.getqf("sura5") == 1 then
+				say_title("Diary of a Legend")
+				say("")
+				say("I'm sure I have searched everywhere now and there aren't")
+				say("any more of these skeletons. However, some diary pages are")
+				say("still missing.")
+				say("")
+				say("There's 15 pages in this diary and I only have 5...")
+				say("")
+				say("Surely the domestic monsters have picked up some pages!")
+				say("")
+				say_reward("Find the monsters in this dungeon that are")
+				say_reward("keeping other parts of Akuma's Diary.")
+				say("")
+				set_state(huntgolem)
+			end
+			else
+				say_title("Diary of a Legend")
+				say("")
+				say("There is a sura skeleton but no page.")
+				say("I think I was here already...")
+				say("")
+				say_reward("Nothing can be found here anymore.")
+				say("")
+			end
+		end 
+		
+        when 30127.chat."Diary of a Legend" begin
+        	if pc.getqf("sura4")==0 then 
+				say_title("Diary of a Legend") 
+				say("")
+				say_item("Diary page",30181,"")
+				say("Apart from this skeleton lies a very old page.") 
+				say("Certainly there is more of them!") 
+				say("")
+				say("All of them tell about a legendary Sura called Akuma.") 
+				say("I wonder if this is the Akuma Heuk-Young was talking about?")
+				say("")
+				pc.give_item2(30181, 1) 
+				pc.setqf("sura4", 1)
+				wait()
+			if pc.getqf("sura1") == 1 and pc.getqf("sura2") == 1 and pc.getqf("sura3") == 1 and pc.getqf("sura4") == 1 and pc.getqf("sura5") == 1 then
+				say_title("Diary of a Legend")
+				say("")
+				say("I'm sure I have searched everywhere now and there aren't")
+				say("any more of these skeletons. However, some diary pages are")
+				say("still missing.")
+				say("")
+				say("There's 15 pages in this diary and I only have 5...")
+				say("")
+				say("Surely the domestic monsters have picked up some pages!")
+				say("")
+				say_reward("Find the monsters in this dungeon that are")
+				say_reward("keeping other parts of Akuma's Diary.")
+				say("")
+				set_state(huntgolem)
+			end
+			else
+				say_title("Diary of a Legend")
+				say("")
+				say("There is a sura skeleton but no page.")
+				say("I think I was here already...")
+				say("")
+				say_reward("Nothing can be found here anymore.")
+				say("")
+			end
+		end 
+		
+        when 30128.chat."Diary of a Legend" begin
+        	if pc.getqf("sura5")==0 then 
+				say_title("Diary of a Legend") 
+				say("")
+				say_item("Diary page",30181,"")
+				say("Apart from this skeleton lies a very old page.") 
+				say("Certainly there is more of them!") 
+				say("")
+				say("All of them tell about a legendary Sura called Akuma.") 
+				say("I wonder if this is the Akuma Heuk-Young was talking about?")
+				say("")
+				pc.give_item2(30181, 1) 
+				pc.setqf("sura5", 1)
+				wait()
+			if pc.getqf("sura1") == 1 and pc.getqf("sura2") == 1 and pc.getqf("sura3") == 1 and pc.getqf("sura4") == 1 and pc.getqf("sura5") == 1 then
+				say_title("Diary of a Legend")
+				say("")
+				say("I'm sure I have searched everywhere now and there aren't")
+				say("any more of these skeletons. However, some diary pages are")
+				say("still missing.")
+				say("")
+				say("There's 15 pages in this diary and I only have 5...")
+				say("")
+				say("Surely the domestic monsters have picked up some pages!")
+				say("")
+				say_reward("Find the monsters in this dungeon that are")
+				say_reward("keeping other parts of Akuma's Diary.")
+				say("")
+				set_state(huntgolem)
+			end
+			else
+				say_title("Diary of a Legend")
+				say("")
+				say("There is a sura skeleton but no page.")
+				say("I think I was here already...")
+				say("")
+				say_reward("Nothing can be found here anymore.")
+				say("")
+			end
+		end 
+    end 
+	
+	state huntgolem begin
+		when letter begin 
+			send_letter("Diary of a Legend")             
+		end 
+		
+		when button or info begin 	
+			if pc.count_item(30181) >= 15 then 
+				say_title("Diary of a Legend") 
+				say("") 
+				say("You found all the 15 Diary Pages of Akuma!") 
+				say("")
+				say("Head back to Heuk-Young and pass these to her") 
+				say("so she can complete her research.") 
+				say("")
+				set_state(backtoheuk)
+			else
+				say_title("Diary of a Legend")
+				say("")
+				say("Find which monsters in Heaven's Lair are")
+				say("keeping other parts of Akuma's Diary.")
+				say("")
+				say_reward("You currently have "..pc.count_item(30181).." pages of 15.")
+				say("")		    	
+			end
+		end 
+	
+		when 1137.kill begin 
+			local n = number(1,30) 
+			if n <= 1 then 
+				pc.give_item2(30181, 1)
+				if pc.count_item(30181) >= 15 then 
+					say_title("Diary of a Legend") 
+					say("") 
+					say("You found all the 15 Diary Pages of Akuma!") 
+					say("")
+					say("Head back to Heuk-Young and pass these to her") 
+					say("so she can complete her research.") 
+					say("")
+					set_state(backtoheuk)
+				end 
+			end 
+		end  
+	end
+    
+	state backtoheuk begin 
+		when letter begin 
+			send_letter("Diary of a Legend") 	 
+			local v=find_npc_by_vnum(20090) 
+			if 0==v then 
+			else 
+				target.vid("__TARGET1__", v, "HeukYoung") 
+			end 
+		end 
+
+		when button or info begin 
+			say_title("Diary of a Legend") 
+			say("") 
+			say("You found 15 Diary Pages of Akuma!") 
+			say("Head back to Heuk-Young and pass") 
+			say("these to them so she can complete") 
+			say("her research.")
+			say("")
+		end 
+			
+		when 20090.chat."Diary of a Legend" with pc.count_item(30181)>=15 begin  
+			target.delete("__TARGET1__") 	
+			say_title("Heuk-Young:") 
+			say("") 
+			say("Traces of Akuma? What? Diary Pages?") 
+			say("Sorry but I didnt count with this to happen") 
+			say("Thank you so much!") 
+			say("You shall be highly rewarded for these efforts!") 
+			say("") 
+			pc.remove_item(30181,15) 
+			wait() 
+			say_title("Heuk-Young:") 
+			say("") 
+			say_reward("80.000.000 EXP received") 
+			say_reward("3.000.000 Yang received") 
+			say_reward("Legendary Diary received") 
+			pc.give_exp2(80000000) 
+			pc.change_money(3000000) 
+			pc.give_item2(30182) 
+			wait() 
+			say_title("Heuk-Young:") 
+			say("") 
+			say("If you have no need for the Legendary") 
+			say("Diary you may consider selling it to Soon.") 
+			say("")
+			say("I bet he can make a nice offer for it.") 
+			say("") 
+			set_state(__COMPLETE__) 
+		end 
+	end 
+    
+    state __COMPLETE__ begin 
+	
+		when 20023.chat."Legendary Diary" with pc.count_item(30182)==1 begin 
+			if pc.getqf("offer") != 1 then
+				say_title("Soon:") 
+				say("") 
+				say("What?! The legendary diary?! Isn't this the diary") 
+				say("of the legendary Akuma? Where did you get") 
+				say("this from??") 
+				say("") 
+				say("...") 
+				say("Well never mind...") 
+				say("Can I have it? I will offer you a not so small") 
+				say("sum of Yang for it.") 
+				say("") 
+				local s=select("How much?", "I'd rather keep it") 
+				if s == 1 then 
+					say("Allright... I'll give you my top offer of") 
+					say("5.000.000 Yang. Is that fine?") 
+					say("")
+					local x=select("Sure", "That's not enough") 
+					if x == 1 then 
+						say("Thank you.") 
+						say("Here you have your 5.000.000 Yang!") 
+						say("")
+						pc.change_money(5000000) 
+						pc.remove_item(30182,1) 
+					else 
+						say("You're a tough bargainer... Let me see.")
+						say("")
+						say("How about 7.500.000 Yang?")
+						say("This is really my last offer so don't waste")
+						say("this opportunity!")
+						say("")
+						local y=select("I take it", "Not enough yet") 
+						if y == 1 then 
+							say("Thank you.") 
+							say("Here you have your 7.500.000 Yang!")
+							say("")
+							pc.change_money(7500000) 
+							pc.remove_item(30182,1) 
+						else 
+							say("Your greed went too far.") 
+							say("Better keep that Diary for yourself!") 
+							say("")
+							say("Goodbye!")
+							say("")
+							pc.setqf("offer",1)
+						end 
+					end 
+				else 
+					say("Allright...then keep it.") 
+					say("I can understand you.") 
+					say("This book is worth millions...")
+					say("")
+				end 
+			else
+				say_title("Soon:") 
+				say("") 
+				say("I can offer you 2.500.000 Yang for the Diary.") 
+				say("Take it or leave it!") 
+				say("") 
+				local s=select("Allright", "No thanks") 
+				if s == 1 then 
+					say("Thank you.") 
+					say("Here you have your 2.500.000 Yang!") 
+					say("")
+					pc.change_money(2500000) 
+					pc.remove_item(30182,1) 
+				else 
+					say("Allright...then keep it.") 
+					say("I will not raise my offer again.")
+					say("")
+				end 
+			end
+		end	
+	end 
+end  

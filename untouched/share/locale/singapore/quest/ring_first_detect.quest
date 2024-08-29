@@ -1,0 +1,481 @@
+-- [TEST_QUEST] --
+quest ring_first_detect begin
+	state destroy_step1_4 begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_4_say)
+			elseif pc.get_map_index()!=62 then
+				setstate(destroy_step1_4_go)
+			end
+		end
+	end
+	state destroy_step1_4_go begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_4_say)
+			end
+		end
+		when letter begin
+			send_letter("Go to Infernal Flame Field")
+		end
+		when button or info begin
+			say_title("Go to Infernal Flame Field")
+			say("Go to Infernal Flame Field and destroy the evil ring")
+		end
+	end
+	state destroy_step1_4_say begin
+		when letter begin
+			send_letter("The ring starts to talk")
+		end
+		when button or info begin
+			say_title("The ring starts to talk")
+			say("[WINDOW_SIZE width;360|height;320]The ring seems shocked as it watched flame soldiers getting defeated.
+[ENTER][ENTER]'Now I have to use my last hidden card.
+[ENTER]Don't blame me when you go to hell. If you had let me go
+[ENTER]None of this would happen.
+[ENTER]Yon won't even imagine what will happen next! HAHAHAHA'
+[ENTER][ENTER]Looks like it's bluffing, 
+[ENTER] I need to be prepared[ENTER][ENTER]")
+			setstate(destroy_step1_4_main)
+		end
+	end
+	state destroy_step1_4_main begin
+		when letter begin
+			target.pos("__TARGET__", 185, 710, 62, "")
+		end
+		when letter begin
+			send_letter("Defeat the flame king on the destination!")
+		end
+		when button or info begin
+			say_title("Defeat the flame king on the destination!")
+			say("The ring is doing final resistance. It's almost going into silence. But the flame king is very powerful creature. Please defeat the flame king and seal the ring forever[ENTER]and ever![ENTER][ENTER]")
+		end
+		when 2206.party_kill with npc.is_quest() begin
+			if pc.count_item("40003")>=1 then
+				setstate(destroy_step_end)
+			elseif pc.count_item("40003")<1 then
+				say("You have lost your ring on your travelling")
+				say("It cannot be proceed any more.")
+				set_state(__COMPLETE__)
+				q.done()
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			local v=mob.spawn(2206, 185, 710, 1, 1, 1)
+			target.npc("__TARGET_MOB__", v)
+			mob.spawn(2202, 185, 710, 1, 1, 12)
+			mob.spawn(2205, 185, 705, 1, 1, 3)
+			mob.spawn(2205, 180, 715, 1, 1, 3)
+			mob.spawn(2205, 190, 715, 1, 1, 3)
+		end
+	end
+	state destroy_step1_3 begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_3_say)
+			elseif pc.get_map_index()!=62 then
+				setstate(destroy_step1_3_go)
+			end
+		end
+	end
+	state destroy_step1_3_go begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_3_say)
+			end
+		end
+		when letter begin
+			send_letter("Go to Infernal Flame Field")
+		end
+		when button or info begin
+			say_title("Go to Infernal Flame Field")
+			say("Go to Infernal Flame Field and destroy the evil ring")
+		end
+	end
+	state destroy_step1_3_say begin
+		when letter begin
+			send_letter("The ring starts to talk")
+		end
+		when button or info begin
+			say_title("The ring starts to talk")
+			say("[WINDOW_SIZE width;360|height;320]The ring seems shocked as it watched fighting tigers getting defeated..[ENTER][ENTER]'This was only a beginning. I will send those I especially adore.[ENTER]Unleash! My flame soldiers![ENTER]HAHAHAHA'[ENTER][ENTER]")
+			setstate(destroy_step1_3_main)
+		end
+	end
+	state destroy_step1_3_main begin
+		when letter begin
+			target.pos("__TARGET__", 1010, 1155, 62, "")
+		end
+		when letter begin
+			send_letter("Defeat the flame soldiers on the destination!")
+		end
+		when button or info begin
+			say_title("Defeat the flame soldiers on the destination!")
+			say("The ring has weakened.[ENTER]But still controlling powerful monsters.[ENTER]If you defeat flame soldiers, the damage will be significant to the ring[ENTER]. Destroy the destination point.[ENTER][ENTER]")
+		end
+		when 2205.party_kill with npc.is_quest() begin
+			if pc.count_item("40003")>=1 then
+				setstate(destroy_step1_4)
+			elseif pc.count_item("40003")<1 then
+				say("You have lost your ring on your travelling")
+				say("It cannot be proceed any more.")
+				set_state(__COMPLETE__)
+				q.done()
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			local v=mob.spawn(2205, 1010, 1155, 1, 1, 1)
+			target.npc("__TARGET_MOB__", v)
+			mob.spawn(2202, 1010, 1155, 1, 1, 5)
+			mob.spawn(2204, 1010, 1150, 1, 1, 2)
+			mob.spawn(2204, 1005, 1160, 1, 1, 2)
+			mob.spawn(2204, 1015, 1160, 1, 1, 2)
+		end
+	end
+	state destroy_step1_2 begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_2_say)
+			elseif pc.get_map_index()!=62 then
+				setstate(destroy_step1_2_go)
+			end
+		end
+	end
+	state destroy_step1_2_go begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_2_say)
+			end
+		end
+		when letter begin
+			send_letter("Go to Infernal Flame Field")
+		end
+		when button or info begin
+			say_title("Go to Infernal Flame Field")
+			say("Go to Infernal Flame Field and destroy the evil ring")
+		end
+	end
+	state destroy_step1_2_say begin
+		when letter begin
+			send_letter("The ring starts to talk")
+		end
+		when button or info begin
+			say_title("The ring starts to talk")
+			say("[WINDOW_SIZE width;360|height;320]The ring seems shocked as it watches his minions dying[ENTER][ENTER]'hmm. Good. Better than I expected.[ENTER] Next time I will send someone stronger[ENTER]HAHAHA. Don't beg for you life when it's too late.[ENTER]You better run!'[ENTER][ENTER]I wanted to throw this noisy ring to it's minions[ENTER]But it might get the situation worse. So I'll just throw it [ENTER]inside of the volcano[ENTER]")
+			setstate(destroy_step1_2_main)
+		end
+	end
+	state destroy_step1_2_main begin
+		when letter begin
+			target.pos("__TARGET__", 615, 415, 62, "")
+		end
+		when letter begin
+			send_letter("Defeat the Fighting Tigers on the destination")
+		end
+		when button or info begin
+			say_title("Defeat the Fighting Tigers on the destination")
+			say("The ring has weakened. If you can defeat some more enemies[ENTER]the ring will become normal[ENTER].Defeat the Fighting Tigers on the destination![ENTER][ENTER]")
+		end
+		when 2204.party_kill with npc.is_quest() begin
+			if pc.count_item("40003")>=1 then
+				setstate(destroy_step1_3)
+			elseif pc.count_item("40003")<1 then
+				say("You have lost your ring on your travelling")
+				say("It cannot be proceed any more.")
+				set_state(__COMPLETE__)
+				q.done()
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			local v=mob.spawn(2204, 615, 415, 1, 1, 1)
+			target.npc("__TARGET_MOB__", v)
+			mob.spawn(2202, 615, 415, 1, 1, 4)
+			mob.spawn(2201, 615, 410, 1, 1, 3)
+			mob.spawn(2201, 610, 420, 1, 1, 3)
+			mob.spawn(2201, 610, 420, 1, 1, 3)
+		end
+	end
+	state destroy_step1_1 begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_1_say)
+			elseif pc.get_map_index()!=62 then
+				setstate(destroy_step1_1_go)
+			end
+		end
+	end
+	state destroy_step1_1_go begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_1_say)
+			end
+		end
+		when letter begin
+			send_letter("Go to Infernal Flame Field")
+		end
+		when button or info begin
+			say_title("Go to Infernal Flame Field")
+			say("Go to Infernal Flame Field and destroy the evil ring")
+		end
+	end
+	state destroy_step1_1_say begin
+		when letter begin
+			send_letter("The ring starts to talk")
+		end
+		when button or info begin
+			say_title("The ring starts to talk")
+			say("[WINDOW_SIZE width;340|height;320]When I entered Infernal flame field, The ring start to talk.[ENTER][ENTER]'Until here that damn old lady shut my mouth, [ENTER]... well..fine.The hot temperature of  Infernal flame field[ENTER]wormed me up. Haha[ENTER]Don't even think of get rid of me. [ENTER]Because this place like home to me. HAHAHAHA'[ENTER][ENTER]To make the ring silent, Destroy the source of it's power. Defeat the monsters on the destination![ENTER]")
+			setstate(destroy_step1_1_main)
+		end
+	end
+	state destroy_step1_1_main begin
+		when letter begin
+			target.pos("__TARGET__", 915, 815, 62, "")
+		end
+		when letter begin
+			send_letter("Defeat Fighting Tiger Minions on the destination")
+		end
+		when button or info begin
+			say_title("Defeat Fighting Tiger Minions on the destination")
+			say("To make the ring silent, Destroy the source of it's power. Defeat the monsters on the destination![ENTER]")
+		end
+		when 2203.party_kill with npc.is_quest() begin
+			if pc.count_item("40003")>=1 then
+				setstate(destroy_step1_2)
+			elseif pc.count_item("40003")<1 then
+				say("You have lost your ring on your travelling")
+				say("It cannot be proceed any more.")
+				set_state(__COMPLETE__)
+				q.done()
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			local v=mob.spawn(2203, 915, 815, 1, 1, 1)
+			target.npc("__TARGET_MOB__", v)
+			mob.spawn(2202, 915, 815, 1, 1, 3)
+			mob.spawn(2201, 915, 810, 1, 1, 3)
+			mob.spawn(2201, 910, 820, 1, 1, 3)
+			mob.spawn(2201, 920, 820, 1, 1, 3)
+		end
+	end
+	state start begin
+		when 9009.chat."That's a strange ring" with is_test_server() and pc.count_item("40001")>=1 and pc.get_level()>=55 begin
+			say("It reminds me")
+			say("When we're fishing, sometimes you get the fish which swallowed")
+			say("rings. My grandfather once")
+			say("caught something like that. That was also gold ring..")
+			say("like yours not like other ordinary gold rings")
+			wait()
+			say("I can still remember that when I accidentally")
+			say("drop it into a fireplace")
+			say("There were some letters engraved.")
+			say("I have showed it to my grandfather")
+			say("and I can't remember anymore.")
+			setstate(detect)
+		end
+	end
+	state detect begin
+		when 9009.chat."That's a strange ring" with pc.count_item("40001")>=1 begin
+			say("Do you want to throw it into fire?")
+			say("Who knows something interesting can be happen?")
+		end
+		when 12000.take with item.vnum==40001 and item.count>=1 begin
+			say("When I put this unknown ring to fireplace ...")
+			say("Strange words came out")
+			setstate(notify)
+		end
+	end
+	state notify begin
+		when letter begin
+			send_letter("Strange sentence of the ring")
+		end
+		when button or info begin
+			say_title("Strange sentence of the ring")
+			if pc.count_item("40001")>=1 then
+				pc.remove_item("40001", 1)
+				pc.give_item2("40003", 1)
+				say("RING OF THOR")
+				say("")
+				say("Ring of Thor...")
+				say("Feels like this ring has some power")
+				say("I want to put it in my finger")
+				setstate(check)
+			else
+				say("The ring disappeared suddenly")
+				set_state(start)
+				q.done()
+			end
+		end
+	end
+	state check begin
+		when letter begin
+			local v=find_npc_by_vnum(9009)
+			if v!=0 then target.vid("__TARGET__", v, "") end
+		end
+		when letter begin
+			send_letter("Ask fisher man")
+		end
+		when button or info begin
+			say_title("Ask fisherman")
+			say("Ask fisherman about the ring of Thor")
+			say("")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			if pc.count_item("40003")>=1 then
+				say("Strange sentence of the ring?")
+				say("Huh. What a strange thing. I see this again..")
+				say("Let me see. That old man went to.....")
+				say("the fortune teller... yeah..He went to that fortune teller old lady.")
+				say("")
+				setstate(order)
+			else
+				say("I can¡¯t see the ring?")
+				say("Strange.")
+				set_state(start)
+				q.done()
+			end
+		end
+	end
+	state order begin
+		when letter begin
+			local v=find_npc_by_vnum(9006)
+			if v!=0 then target.vid("__TARGET__", v, "") end
+		end
+		when letter begin
+			send_letter("Find the old lady")
+		end
+		when button or info begin
+			say_title("Go to the old lady")
+			say("Ask her about the ring with the strange")
+			say("word of it")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			if pc.count_item("40003")>=1 then
+				say("No! Why are you possessing such a ")
+				say("cursed thing! It came out to world again")
+				say("That is an evil ring. It attracts people")
+				say("and lead them destruction. It is an evil thing")
+				say("You have to destroy it!")
+				say("Go to Infernal flame field! ")
+				say("")
+				say("Do you want to accept the quest?")
+				local b=select("Accept", "Refuse")
+				if 1==b then
+					setstate(destroy_step1_1)
+				elseif 2==b then
+					say("That thing had to be destroyed!")
+					say("Be careful not to fall into it's temptation")
+					set_state(__COMPLETE__)
+					q.done()
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif (pc.get_job()==1 or pc.get_job()==3) then
+				say("What ring?")
+				say("Are you going to propose to this old lady? Hohoho")
+				say("I used to be a pretty lady")
+				say("When I was young, Lot's of young men proposed to me")
+				say("I met my husband there too.")
+				say("")
+				set_state(start)
+				q.done()
+			elseif (pc.get_job()==2 or pc.get_job()==4) then
+				say("What ring?")
+				say("This place is hard to see a ring")
+				say("Only some gold rings. Even when they propose")
+				say("They give earring to the bride")
+				say("HOHOHO.")
+				say("")
+				set_state(start)
+				q.done()
+			end
+		end
+	end
+	state destroy_step_end begin
+		when letter begin
+			target.pos("__TARGET__", 215, 800, 62, "")
+		end
+		when letter begin
+			send_letter("Defeat the evil boss of the ring")
+		end
+		when button or info begin
+			say_title("Defeat the evil boss of the ring")
+			say("Defeat the Flame King and his minions controlled by the ring")
+			say("Go throw the ring into the volcano")
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			setstate(last_test)
+		end
+	end
+	state last_test begin
+		when letter begin
+			send_letter("The ring starts to talk desperately")
+		end
+		when button or info begin
+			say_title("The ring starts to talk desperately")
+			say("Are you really going to throw me into that hot volcano?")
+			say("Then I have to be stuck in there")
+			say("for the eternity!")
+			say("I can offer you a great deal! If you let me go now")
+			say("I will make you invincible!")
+			say("")
+			say("Do you deal with the ring?")
+			local b=select("Deal", "Refuse")
+			if 1==b then
+				say("If you deal with the ring, all the progress will be gone for this quest")
+				say("Are you going to deal?")
+				say("")
+				local b=select("Yes", "No")
+				if 1==b then
+					setstate(failure)
+				elseif 2==b then
+					setstate(success)
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+				setstate(success)
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state failure begin
+		when letter begin
+			send_letter("Deal with the ring")
+		end
+		when button begin
+			say_title("Deal with the ring")
+			say("That's a really good idea. Now we're partners")
+			say("If you want to see me again, throw me into the fireplace")
+			say("")
+			set_state(__COMPLETE__)
+			q.done()
+		end
+	end
+	state success begin
+		when letter begin
+			send_letter("Accomplished destroying the ring")
+		end
+		when button begin
+			say_title("Accomplished destroying the ring")
+			say("When you throw the ring into the volcano")
+			say("it fell down with a scream.. Mission accomplished ")
+			say("")
+			set_state(__COMPLETE__)
+			q.done()
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end 

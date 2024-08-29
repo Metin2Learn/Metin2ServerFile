@@ -1,0 +1,255 @@
+quest skeleton_gem begin
+
+	state start begin
+
+		when levelup begin
+			
+			local lev = pc.getqf("current")
+
+			if lev == 0 then
+
+				lev = pc.level
+				
+			end 
+
+			if lev < locale.skeleton_gem.start_level_begin or lev > locale.skeleton_gem.start_level_begin then
+				
+				return
+					
+			end
+
+			setskin(NOWINDOW)
+			setstate(order)
+			makequestbutton(locale.skeleton_gem.START_find_peddler_label)
+			q.set_title(locale.skeleton_gem.START_find_peddler_label)
+			q.start()
+ 			pc.setqf("current", lev)
+ 
+	        end
+
+	end
+	
+	state order begin
+	
+		when login begin
+
+			setskin(NOWINDOW)
+			makequestbutton(locale.skeleton_gem.START_find_peddler_label)
+			q.set_title(locale.skeleton_gem.START_find_peddler_label)
+			q.start()
+
+		end
+
+		when button begin
+
+			say(locale.skeleton_gem.START_find_peddler_text)
+
+		end
+
+		when info begin
+
+			say(locale.skeleton_gem.START_find_peddler_text)
+
+		end
+
+		when peddler.chat.locale.skeleton_gem.talk_about_skeleton_gem begin
+		
+			local ORDER_say = locale.skeleton_gem.ORDER_say
+			local ORDER_accept = locale.skeleton_gem.ORDER_accept
+			local ORDER_refuse = locale.skeleton_gem.ORDER_refuse
+			local ORDER_accept_answer = locale.skeleton_gem.ORDER_accept_answer
+			local ORDER_refuse_answer = locale.skeleton_gem.ORDER_refuse_answer
+			
+			say(ORDER_say)
+			
+			local s=select(ORDER_accept, ORDER_refuse)
+
+			if 1==s then
+
+				say(ORDER_accept_answer)
+				say(locale.skeleton_gem.ORDER_get_skeleton_gem_text)
+
+				setstate(accept)
+				makequestbutton(locale.skeleton_gem.ORDER_get_skeleton_gem_label)
+				q.set_title(locale.skeleton_gem.ORDER_get_skeleton_gem_label)
+				pc.setqf("kill_count", 0)
+
+			else
+
+				say(ORDER_refuse_answer)
+
+			end
+
+		end
+	
+	end
+
+	state accept begin
+
+		when login begin
+
+			setskin(NOWINDOW)
+			makequestbutton(locale.skeleton_gem.ORDER_get_skeleton_gem_label)
+			q.set_title(locale.skeleton_gem.ORDER_get_skeleton_gem_label)
+			q.start()
+
+		end
+
+		when button begin
+
+			say(locale.skeleton_gem.ORDER_get_skeleton_gem_text)
+
+		end
+
+		when info begin
+
+			say(locale.skeleton_gem.ORDER_get_skeleton_gem_text)
+
+		end
+
+		when peddler.chat.locale.skeleton_gem.i_dont_have_the_skeleton_gem_yet begin
+
+			local ACCEPT_ask = locale.skeleton_gem.ACCEPT_ask
+
+			say(ACCEPT_ask)
+
+		end
+		
+		when skeleton_magician.kill begin
+
+			--Kill Demon shaman(Level 60) 
+			--skeleton_magician
+
+			local kill_count = pc.getqf("kill_count")
+			local success_label = locale.skeleton_gem.ACCEPT_success_info_label
+			local success_say = locale.skeleton_gem.ACCEPT_success_say
+			local failure_label = locale.skeleton_gem.ACCEPT_failure_info_label
+			local failure_say = locale.skeleton_gem.ACCEPT_failure_say
+
+			pc.setqf("kill_count", kill_count+1)
+
+			--chat("cur kill"..kill_count)
+			--chat("pc lv"..pc.level)
+			--chat("end lv"..locale.old_pirate.end_level)
+			--chat("dst kill"..locale.old_pirate.kill_count)
+			--chat("find"..pc.getqf("find"))
+
+			--chat("Found")
+
+			if pc.level>locale.skeleton_gem.end_level then
+
+				--chat("Exceeded Level")
+
+				if kill_count>locale.skeleton_gem.kill_count then
+
+					--chat("Exceeded Kill count")
+
+					say(failure_say)
+
+					setstate(failure)
+					makequestbutton(failure_label)
+					q.set_title(failure_label)
+
+				end
+
+			else
+
+				--chat("Applying Level")
+
+				if number(1, locale.skeleton_gem.kill_count)==1 then
+
+					--chat("Chance succed")
+					--chat("Obtained")
+
+					say(success_say)
+
+					setstate(success)
+					makequestbutton(success_label)
+					q.set_title(success_label)
+					
+				end
+
+			end			
+
+		end
+
+	end
+
+	state success begin
+	
+		when login begin
+
+			setskin(NOWINDOW)
+			makequestbutton(locale.skeleton_gem.ACCEPT_success_info_label)
+			q.set_title(locale.skeleton_gem.ACCEPT_success_info_label)
+			q.start()
+
+		end
+
+		when button begin
+
+			say(locale.skeleton_gem.ACCEPT_success_info_text)
+
+		end
+
+		when info begin
+
+			say(locale.skeleton_gem.ACCEPT_success_info_text)
+
+		end
+
+		when peddler.chat.locale.skeleton_gem.i_have_the_skeleton_gem begin
+
+			local SUCCESS_say = locale.skeleton_gem.SUCCESS_say
+
+			say(SUCCESS_say)
+			wait()
+			say(locale.QUEST_TEMP_REWARD)
+
+			setstate(complete)
+			q.done()
+
+		end
+
+	end
+	
+	state failure begin
+
+		when login begin
+
+			setskin(NOWINDOW)
+			makequestbutton(locale.skeleton_gem.ACCEPT_failure_info_label)
+			q.set_title(locale.skeleton_gem.ACCEPT_failure_info_label)
+			q.start()
+
+		end
+
+		when button begin
+
+			say(locale.skeleton_gem.ACCEPT_failure_info_text)
+
+		end
+
+		when info begin
+
+			say(locale.skeleton_gem.ACCEPT_failure_info_text)
+
+		end
+
+		when food_manager.chat.locale.skeleton_gem.i_dont_have_the_skeleton_gem_yet begin
+
+			say(locale.skeleton_gem.ORDER_too_late)
+			setstate(complete)
+			q.done()
+
+		end
+
+	end
+
+	state complete begin
+
+	end
+
+end
+	
+

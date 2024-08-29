@@ -1,0 +1,256 @@
+----------------------------------------------------
+-- Metin2 SG
+-- Level 61 Quest 
+----------------------------------------------------
+
+quest sg_lvl61 begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >=61 begin
+			 set_state(information)
+		end
+	end
+
+        state information begin
+                when letter begin
+                        local v=find_npc_by_vnum(20023)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Mr Soon")
+                        end
+                end
+
+                when __TARGET__.target.click or 20023.chat."Esoteric writings" begin
+                        target.delete("__TARGET__")
+			----"111111222222333333444444555555666666777777888888999999000000"
+                        say_title("Mr.Soon:")
+                        say("")
+                        say("Ohhh, it's you again!")
+			say("These days I have read the esoteric writings that you found")
+                        say("for me inside the Dark Temple.")
+                        say("I fear that something terrible could happen there soon.")
+                        say("")
+                        say("In the Curse Book it is written that the Dark Leader is")
+                        say("invoking the old magic in order to bring about chaos")
+                        say("and misfortune into the lands.")
+                        say("")
+                        wait()
+                        say_title("Mr.Soon:")
+                        say("")
+                        say("The magic from the Dark Temple is a terrible and mysterious")
+                        say("force. I think you should tell these news to the Captain.")
+                        say("It's very important to stop the Dark Leader before he harms")
+                        say("any of us.")
+                        say("")
+                        say("I think, that if the Captain sends some of his best men to")
+                        say("the Dark Temple, we can stop the evil.")
+                        say("Yes, that's what we should do.")
+                        say("")
+                        wait()
+                        say_title("Mr.Soon:")
+                        say("")
+                        say("Please, tell all I said to the Captain and ask him to act")
+                        say("accordingly against the Dark Leader before he gets a chance")
+                        say("to harm us.")
+                        say("")
+                        set_state(to_captain)
+                 end
+	end
+	state to_captain begin
+                when letter begin
+                        local v=find_npc_by_vnum(20355)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Captain")
+                        end
+                end	
+  		when __TARGET__.target.click or 20355.chat."Mr.Soon's request" begin
+                        target.delete("__TARGET__")
+                        ----"111111222222333333444444555555666666777777888888999999000000"
+                        say_title("Captain:")
+                        say("")
+                        say("What? The Dark Leader? Oh, it's again one of those fantastic")
+                        say("tales of Mr.Soon...")
+                        say("")
+                        say("Tell that bookworm that I have no time for his tales now.")
+                        say("")
+                        set_state(back_to_soon)
+		end
+                        
+	end
+	state back_to_soon begin
+                when letter begin
+                        local v=find_npc_by_vnum(20023)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Mr Soon")
+                        end
+                end
+
+                when __TARGET__.target.click or 20023.chat."The Dark Leader" begin
+                        target.delete("__TARGET__")
+                        ----"111111222222333333444444555555666666777777888888999999000000"
+                        say_title("Mr.Soon:")
+                        say("")
+                        say("So that's what the Captain said?")
+                        say("I know, I'm not very popular around here.")
+                        say("")
+                        say("But I really sense we are in danger if we just stand here")
+                        say("observing as the Dark Leader builds up his threat.")
+                        say("")
+                        say("Hmmm... what can I do?")
+                        say("")
+                        wait()
+                        say_title("Mr.Soon:")
+                        say("")
+                        local j = pc.get_job()
+                        if 1 == j then
+                        	say("Hmm.. Listen, you are a brave young ninja.")
+                        elseif 2 ==j then
+                        	say("Hmm.. Listen, you are a brave young sura.")
+                        elseif 3 == j then
+                        	say("Hmm.. Listen, you are a brave young mage.")
+                        else
+                        	say("Hmm.. Listen, you are a brave young warrior.")
+                        end
+						say("")
+                        say("I'm sure you can find the Dark Leader and slay her...")
+                        say("What do you think? I'll reward you!")
+						say("")
+			local s=select("Accept","Refuse")
+			if 2==s then
+				say_title("System:")
+				say("")
+				say("You really want to cancel the quest?")
+				say("")
+				local a=select("Yes","No")
+				if  2==a then
+					say_title("Mr. Soon:")
+					say("")
+					say("I'm glad you considered your decision.")
+					say("")
+					return
+				end
+				say_title("Mr. Soon:")
+				say("")
+				say("I tell you... the old magic can't be any good for us..")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+                        set_state(kill_leader)
+                 end
+	end
+	
+	state kill_leader begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Find the Dark Leader")
+			q.set_title("Defeat the Dark Leader.")
+			q.start()
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."Find the Dark Leader"..locale.NORMAL_COLOR)
+			say("")			
+			say("Find the Dark Leader in the Dark Temple and defeat her")
+			say("before she continues with her dark rituals.")
+			say("")
+		end
+		when 20023.chat."Find the Dark Leader" with pc.level >=61 begin
+			say_title("Mr Soon:")
+			say("")
+			say("What are you waiting for?")
+			say("")
+			say("The evil force is becoming stronger every minute.")
+			say("")
+			local s=select("On my way","I give up")
+			if 2==s then
+				say_title("Mr Soon:")
+				say("")
+				say("You really want to cancel the quest?")
+				say("")
+				local a=select("Yes","No")
+				if  2==a then
+					say_title("Mr. Soon:")
+					say("")
+					say("I'm glad you considered your decision.")
+					say("")
+					return
+				end
+				say_title("Mr. Soon:")
+				say("")
+				say("I tell you... the old magic can't be any good for us..")
+				say("You'll see what'll happen..")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title("Soon:")
+			say("")
+			say("We have no time to waste.")
+			say("")
+		end
+	
+		when 791.kill begin
+			say_pc_name()
+			say("")
+			say("What??! She has reincarnated into a stronger form...")
+			say("I'm not sure I'm ready for this yet.")
+			say("")
+			say("I better leave now.")
+			say("")
+			set_state(report_success)
+		end
+	end
+
+	state report_success begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Back to Soon")
+			q.set_title("You have defeated the Dark Leader.")
+			q.start()
+			local v = find_npc_by_vnum(20023)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "Go back to Soon")
+			end
+
+		end
+
+		when info or button begin
+			say_title("System:")
+			say("")
+			say("Go back to Mr. Soon and tell him what happened.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or	20023.chat."Report your victory" begin
+			target.delete("__TARGET__")
+			----"12345678901234567890123456789012345678901234567890"|
+			say("Oh! You really killed the Dark Leader?")
+			say("That's great news!")
+			say("")
+			say("What's that you talking about? Reincarnated?")
+			say("My books didn't say anything about this!")
+			say("Maybe we are not safe yet.")
+			say("")
+			say("Anyhow, here is the reward that you deserve.")
+			say("")
+			say_reward("Gained 250.000 Yang")
+			pc.change_money(250000)
+			
+			say_reward("Gained 7.000.000 EXP points")
+			pc.give_exp2(7000000)
+			set_quest_state("levelup","run")
+			say("")
+			
+			set_state(COMPLETE)
+			clear_letter()
+		end
+
+	end
+	state __GIVEUP__ begin
+	end
+	state COMPLETE begin
+	end
+end

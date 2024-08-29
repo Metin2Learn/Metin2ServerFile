@@ -1,0 +1,20 @@
+quest monster_chat begin
+	state start begin
+		when 20011.chat."GM: Monster Chat" with pc.is_gm() begin
+			say_title("Monster Chat")
+			say("")
+			say("Here you can announce a random line for the Monster")
+			say("Chat event. Do you want to proceed?")
+			say("")
+			local s = select("Announce","Cancel")
+			if s == 1 then
+				local mobs = {301,302,303,304,305,306,307,394,401,402,403,404,405,406,491,492,493,494,501,502,503,504,601,602,603,604,631,632,633,634,635,636,637,691,701,702,703,704,705,706,707,791,901,903,904,905,906,907,1001,1002,1003,1004,1035,1036,1037,1038,1039,1040,1041,1091,1093,1105,1106,1191,1301,1302,1303,1305,1901,2091,2092,2104,2105,2106,2107,2108,2191,2202,2204,2205,2206,2291,9005,20001,20002,20003,20041,20005,20006,20008,20009,20010,20011,20013,20014,20015,20016,20017,20018,20019,20020,20021,20022,20023,20024,20400,11000,11002,11004}
+				math.randomseed(math.random(get_time()))
+				local prob = math.random(1,table.getn(mobs))
+				local prob2 = math.random(1,table.getn(locale.monster_chat[mobs[prob]]))
+				notice_all("'"..locale.monster_chat[mobs[prob]][prob2].."'")
+				syschat("The mob announced is: "..mob_name(mobs[prob]))
+			end
+		end	
+	end
+end	

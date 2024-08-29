@@ -1,0 +1,236 @@
+----------------------------------------------------
+-- Metin2 SG
+-- Level 66 Quest 
+----------------------------------------------------
+
+quest sg_lvl66 begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >=66  begin
+			if tostring(get_quest_state("sg_lvl61")) == "-2074850193" then
+			 	set_state(information)
+			 end
+		end
+	end
+
+        state information begin
+                when letter begin
+                        local v=find_npc_by_vnum(20023)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Mr Soon")
+                        end
+                end
+
+                when __TARGET__.target.click or 20023.chat."We need to talk..." begin
+                        target.delete("__TARGET__")
+                        ----"12345678901234567890123456789012345678901234567890"|
+                        say_title("Mr.Soon:")
+                        say("")
+                        say("Ooh, I was hoping this nightmare would end...")
+                        say("")
+                        say("Uriel wants to talk with you about the Dark")
+                        say("leader that you killed in the Temple...")
+                        say("")
+                        say("Go talk to him please.")
+                        set_state(to_uriel)
+                 end
+	end
+	state to_uriel begin
+                when letter begin
+                        local v=find_npc_by_vnum(20011)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Uriel")
+                        end
+                end	
+  		when __TARGET__.target.click or 20355.chat."Mr.Soon sent me" begin
+                        target.delete("__TARGET__")
+                        ----"12345678901234567890123456789012345678901234567890"|
+                        say_title("Uriel:")
+                        say("")
+                        say("It was not wise of Mr.Soon to ask you to kill the")
+                        say("Leader of the Dark Temple...")
+                        say("Oh, well, I guess I did not tell you before.")
+                        say("")
+                        say("Hmmm... where is it... ah, yes... listen, here")
+                        say("is what the Esoteric Dogmas say...")
+                        say("In his mortal form, the Leader was no threat for")
+                        say("humans as long as they did not venture into the ")
+                        say("Temple.")
+                        wait()
+                        say_title("Uriel:")
+                        say("")
+                        say("But you destroyed his mortal form now and he has")
+                        say("reincarnated into a mightier evil Ghost.")
+                        say("")
+                        say("Listen... It is important that we don't let him")
+                        say("exist in his Ghost form. And you are the only man")
+                        say("in this village who dared to profane the Temple.")
+                        say("")
+                        say("For the good of this kingdom, you must go back to")
+                        say("the Dark Temple and slaughter the ghost of the")
+                        say("Dark Leader.")
+                        wait()
+                        say_title("Uriel:")
+                        say("")
+                        say("The ancient scripts say that the ghost of the Dark")
+                        say("leader can not be killed by normal means.")
+                        say("")
+                        say("It takes great skill and courage to do it. So I")
+                        say("will understand if you refuse to do this.")
+                        say("")
+			local s=select("Accept","Refuse")
+			if 2==s then
+				say("You really want to cancel the quest?")
+				say("")
+				local a=select("Yes","No")
+				if  2==a then
+					say_title("Uriel:")
+					say("")
+					say("I'm glad you consider your decision.")
+					say("")
+					return
+				end
+				say_title("Uriel:")
+				say("")
+				say("There is no man that can help us now. May the")
+				say("Dragon God save us...")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title("Uriel:")
+			say("")
+			say("No man can fight the Dark Ghost Leader with weapons.")
+			say("")
+			say("To dissolve his soul you need to use the power of")
+			say("transformation.")
+			say("")
+			say("To kill Dark Ghost you need a Polymorph Marble.")
+			say("Polymorph marbles give you the strenght of an")
+			say("inhuman creature.")
+			say("")
+			say_item("Polymorph Marble",70104,"")
+                        set_state(kill_leader)
+		end
+                        
+	end
+	
+	state kill_leader begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("The ghost of the Temple")
+			q.set_title("Defeat the ghost of the Dark Leader!")
+			q.start()
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."Find the Ghost Leader"..locale.NORMAL_COLOR)
+			say("")			
+			say("Find the ghost of the Leader in the Dark")
+			say("Temple and defeat him using a")
+			say("polymorph marble.")
+
+		end
+		when 20023.chat."Slaughter the Dark Ghost" with pc.level >=66 begin
+			say_title("Uriel:")
+			say("")
+			say("We cannot wait anymore.")
+			say("")
+			say("The evil force is becoming stronger every minute.")
+			say("")
+			say("Find a Polymorph marble and kill the")
+			say("Dark Ghost Leader.")
+			say("")
+			local s=select("On my way","Give up")
+			if 2==s then
+				say("You really want to cancel the quest?")
+				say("")
+				local a=select("Yes","No")
+				if  2==a then
+					say_title("Uriel:")
+					say("")
+					say("Head for the Temple as fast as possible.")
+					say("")
+					return
+				end
+				say_title("Uriel:")
+				say("")
+				say("Hmm, okay...")
+				say("")
+				say("I guess I should find someone else for this task.")
+				set_state(__GIVEUP__)
+				return
+			end
+			say_title("Uriel:")
+			say("")
+			say("We have no time to waste...")
+			say("")
+		end
+
+		when 792.kill with pc.is_polymorphed() begin
+			say("That's it! She is gone for real!")
+			say("")
+			say("Time to go back to Uriel.")
+			say("")
+			set_state(report_success)
+		end
+
+	end
+
+	state report_success begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("Back to Uriel")
+			q.set_title("You have defeated the Dark Ghost Leader.")
+			q.start()
+			local v = find_npc_by_vnum(20011)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "Go back to Uriel")
+			end
+
+		end
+
+		when info or button begin
+			say("Report your success to Uriel.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or	20011.chat."The Dark Ghost is no more" begin
+			target.delete("__TARGET__")
+			----"12345678901234567890123456789012345678901234567890"|
+			say_title("Uriel:")
+			say("")
+			say("I can't believe what I hear!")
+			say("You have really killed the Ghost Leader?")
+			say("")
+			say("Honestly, for a moment I thought you would")
+			say("never come back.")
+			say("I may have underestimated you after all.")
+			say("")
+			say("I will be always grateful to you.")
+			say("")
+			say_reward("Gained 500.000 Yang.")
+			pc.change_money(500000)
+			
+			say_reward("Gained 20.000.000 EXP points.")
+			pc.give_exp2(20000000)
+			say_item("You received Quest Potion",71035,"")
+           		pc.give_item2(71035)
+			set_quest_state("levelup","run")
+			say("")
+			
+			set_state(COMPLETE)
+			clear_letter()
+		end
+
+	end
+	state __GIVEUP__ begin
+	end
+	state COMPLETE begin
+		when 20011.chat."GM: Restart 66 quest" with pc.is_gm() begin
+			set_state(start)
+		end
+	end
+end

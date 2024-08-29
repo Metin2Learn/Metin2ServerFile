@@ -1,0 +1,57 @@
+quest renew_collect_reward begin
+	state start begin
+		when login with pc.get_level() > 91 begin
+			if pc.getqf("renewed") < 1 then
+				if tostring(get_quest_state("collect_quest_lv92")) == "557528158" then
+					affect.remove_collect(1, 1000)
+					affect.remove_collect(apply.DEF_GRADE_BONUS, 300)
+					affect.remove_collect(apply.ATT_GRADE_BONUS, 100)
+					send_letter("Regain Level 92 Collect Quest Reward")
+				end
+			end
+		end
+					
+		when button or info begin
+			s = select("Health +1000", "Defence +300", "Attack +100")
+			if s == 1 then
+				if pc.getf("collect_quest_lv94","block_id") == 1 or pc.getf("collect_quest_lv96","block_id") == 1 then
+					say_white("You can not pick the same reward twice.")
+					send_letter("Regain Level 92 Collect Quest Reward")
+					return;
+				else
+					affect.add_collect(1, 1000, 60*60*24*365*60)
+					pc.setf("collect_quest_lv92","block_id",1)
+					pc.setqf("renewed",1)
+					set_quest_state("collect_quest_lv92","__complete2__")
+					set_state(__complete__)
+				end
+			elseif s == 2 then
+				if pc.getf("collect_quest_lv94","block_id") == 2 or pc.getf("collect_quest_lv96","block_id") == 2 then
+					say_white("You can not pick the same reward twice.")
+					send_letter("Regain Level 92 Collect Quest Reward")
+					return;
+				else
+					affect.add_collect(apply.DEF_GRADE_BONUS, 300, 60*60*24*365*60)
+					pc.setf("collect_quest_lv92","block_id",2)
+					pc.setqf("renewed",1)
+					set_quest_state("collect_quest_lv92","__complete2__")
+					set_state(__complete__)
+				end
+			elseif s == 3 then
+				if pc.getf("collect_quest_lv94","block_id") == 3 or pc.getf("collect_quest_lv96","block_id") == 3 then
+					say_white("You can not pick the same reward twice.")
+					send_letter("Regain Level 92 Collect Quest Reward")
+					return;
+				else
+					affect.add_collect(apply.ATT_GRADE_BONUS, 100, 60*60*24*365*60)
+					pc.setf("collect_quest_lv92","block_id",3)
+					pc.setqf("renewed",1)
+					set_quest_state("collect_quest_lv92","__complete2__")
+					set_state(__complete__)
+				end
+			end
+		end
+	end
+	state __complete__ begin
+	end
+end

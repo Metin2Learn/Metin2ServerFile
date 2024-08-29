@@ -1,0 +1,76 @@
+quest guild_building_npc begin
+    state start begin
+        when 20044.click begin
+            if npc.get_guild() == pc.get_guild() then
+                ----"123456789012345678901234567890123456789012345678901234567890"|
+                say_title("Weapon Blacksmith:")
+                say("")
+                say("Oh, you are a member of my guild!")
+                say("")
+                say("Your chance of success will raise by 10% when you let me")
+                say("upgrade a weapon. And our members gain a 5 % reduction of")
+                say("the price as well. Hand me the weapon you want to have")
+		say("upgraded.")
+                say("")
+            else
+                ----"123456789012345678901234567890123456789012345678901234567890"|
+                say_title("Weapon Blacksmith:")
+                say("")
+                say("My name is Stanley, I am responsible for the upgrading of")
+                say("weapons. I surely can do a better job than the blacksmith")
+                say("in the village!")
+                say("")
+                say("When you come to me, you can rise your chance of success")
+                say("by 10 %! Just hand me the weapon you want upgraded.")
+                say("")
+            end
+        end
+        when 20045.click begin
+            if npc.get_guild() == pc.get_guild() then
+                ---                                                   l
+                say_title("Armour Blacksmith:")
+                say("")
+                say("Oh, you are a member of my guild!")
+                say("")
+                say("Your chance of success will raise by 10% when you let me")
+                say("upgrade an armour. And our members gain a 5 % reduction of")
+                say("the price as well. Just hand me the armour you want to")
+		say("have upgraded.")
+                say("")
+            else
+                say_title("Armour Blacksmith:")
+                say("")
+                say("My name is Stanton, I am responsible for the upgrading of")
+                say("armour. I surely can do a better job than the blacksmith")
+                say("in the village!")
+                say("")
+                say("When you come to me, you can rise your chance of success")
+                say("by 10 %! Just hand me the armour you want upgraded.")
+                say("")
+            end
+        end
+        when 20046.click begin
+            if npc.get_guild() == pc.get_guild() then
+                say_title("Accesory Designer:")
+                say("")
+                say("Oh, you are a member of my guild!")
+                say("")
+                say("Your chance of success will raise by 10% when you let me")
+                say("upgrade an accessory. And our members gain a 5 % reduction")
+                say("of the price as well. Just hand me the accesory you want")
+		say("to have upgraded.")
+                say("")
+            else
+                say_title("Accessory Designer:")
+                say("")
+                say("My name is Starbuck, and I am responsible for the upgrading")
+                say("of accessories. I surely can do a better job than that")
+                say("blacksmith in the village!")
+                say("")
+                say("When you come to me, you can rise your chance of success")
+                say("by 10 %! Just hand me the accessory you want upgraded.")
+                say("")
+            end
+        end
+    end
+end

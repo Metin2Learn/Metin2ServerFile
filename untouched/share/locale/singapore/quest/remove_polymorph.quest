@@ -1,0 +1,8 @@
+quest remove_polymorph begin
+    state start begin
+	when oldwoman.chat.locale.remove_polymorph_chat with pc.is_polymorphed() begin
+	    say(locale.remove_polymorph_msg)
+	    pc.remove_polymorph()
+	end
+    end
+end

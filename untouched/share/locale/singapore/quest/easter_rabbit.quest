@@ -1,0 +1,127 @@
+quest easter_rabbit begin
+	state start begin
+		when 30129.chat."An oval mission!" with pc.count_item(50180) == 0 and pc.count_item(50181) == 0 and game.get_event_flag("e_r") < 1 begin
+			say_title("Easter Rabbit:")
+			say("")
+			say("Thank you for helping me")
+			say("finding my easter eggs!")
+			say("")
+			say("Here take this basket and bring")
+			say("it back to me once you filled it!")
+			say("")
+			say_reward("Note: You need 1 egg from every of")
+			say_reward("the 20 types of eggs to fill it!")
+			say("")
+			wait()
+			pc.give_item2(50180,1)
+			if pc.get_level() < 41 and pc.count_item(50183) < 1 then
+				say_title("Easter Rabbit:")
+				say("")
+				say("Oh, you noble heart want to help me")
+				say("although you're still a weak warrior.")
+				say("")
+				say("Here I have something that might help you")
+				say("to track down my lost easter eggs, here!")
+				say("")
+				say_reward("Easter Spirit Gemstone received.")
+				say("")
+				wait()
+				say_title("Easter Rabbit:")
+				say("")
+				say("This gemstone allows you to hunt")
+				say("for easter eggs in your hometown")
+				say("and it will guide your way to find them.")
+				say("you only need to get close enough to them to")
+				say("pick them up - I wish you good luck!")
+				say("")
+				pc.give_item2(50183,1)
+			end
+		end
+		
+		when 30129.chat."I have filled a basket!" with pc.count_item(50181) == 1 and pc.count_item(50180) == 0 begin
+			pc.setqf("easter_basket",pc.getqf("easter_basket")+1)
+			say_title("Easter Rabbit:")
+			say("")
+			say("Thank you so much!")
+			say("For your kindness I have to reward you.")
+			say("Please return to me on the day of eastern!")
+			say("")
+			say("If you want to collect even more eggs for me,")
+			say("here is a new basket for you!")
+			say("")
+			say_reward("You have completed "..pc.getqf("easter_basket").." baskets now.")
+			say("")
+			pc.remove_item(50181,1)
+			pc.give_item2(50180,1)
+		end
+		
+		when 30129.chat."Happy Easter!" begin
+			if game.get_event_flag("e_r") == 1 and pc.getqf("easter_basket") > 0 then
+				say_title("Easter Rabbit:")
+				say("")
+				say("Hello my hero!")
+				say("For your great deed of finding")
+				say("my lost easter eggs I will")
+				say("reward you with the most beautiful")
+				say("egg that I've got!")
+				say("Here take it, it's my pleasure!")
+				say("")
+				say_reward("You received "..pc.getqf("easter_basket").." Golden Eggs!")
+				say("")
+				l = tonumber(pc.getqf("easter_basket"))
+				for i = 1,l,1 do
+					pc.give_item2(50182,1)
+				end
+				pc.setqf("easter_basket",0)
+				pc.remove_item(50180,pc.count_item(50180))
+				pc.remove_item(50181,pc.count_item(50181))
+				pc.remove_item(50183,pc.count_item(50183))
+			else
+				say_title("Easter Rabbit:")
+				say("")
+				say("Thanks for your help!")
+				say("With your courage we can rescue this")
+				say("years easter festival!")
+				say("")
+			end
+		end
+		
+		when 30129.take with item.get_vnum() >= 50160 and item.get_vnum() <= 50179 begin
+			local count = item.get_count()
+			local eggv = item.get_vnum()
+			local offer = 100000*count
+			say_title("Easter Rabbit:")
+			say("")
+			say("Do you really want to sell "..count.." "..item_name(eggv).."s?")
+			say("I give you "..offer.." Yang!")
+			say("")
+			local dcs = select("Yes","No")
+			if dcs == 1 then
+				item.remove()
+				pc.change_gold(100000*count)
+			end
+		end
+		
+		when 30129.take with item.vnum == 50180 begin
+			local count = pc.getf("easter_basket","50160") + pc.getf("easter_basket","50161") + pc.getf("easter_basket","50162") + pc.getf("easter_basket","50163") + pc.getf("easter_basket","50164") + 
+			pc.getf("easter_basket","50165") + pc.getf("easter_basket","50166") + pc.getf("easter_basket","50167") + pc.getf("easter_basket","50168") + pc.getf("easter_basket","50169") + 
+			pc.getf("easter_basket","50170") + pc.getf("easter_basket","50171") + pc.getf("easter_basket","50172") + pc.getf("easter_basket","50173") + pc.getf("easter_basket","50174") + 
+			pc.getf("easter_basket","50175") + pc.getf("easter_basket","50176") + pc.getf("easter_basket","50177") + pc.getf("easter_basket","50178") + pc.getf("easter_basket","50179")
+			local offer = 100000*count
+			say_title("Easter Rabbit:")
+			say("")
+			say("I see your basket is not really full.")
+			say("I can take it already if you want.")
+			say("I give you "..offer.." Yang.")
+			say("")
+			local dcs = select("Yes","No")
+			if dcs == 1 then
+				item.remove()
+				pc.change_gold(offer)
+				for i = 1,20,1 do
+					pc.setf("easter_basket",tostring(50159+i),0)
+				end
+			end
+		end
+	end
+end

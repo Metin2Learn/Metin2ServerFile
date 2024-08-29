@@ -1,0 +1,65 @@
+quest easterevent begin
+	state start begin
+		when login with game.get_event_flag("easterspawn") != 1 begin
+			clear_server_timer("easter_spawn", pc.get_map_index())
+		end
+		when login with game.get_event_flag("easterspawn") == 1 begin
+			if easterspawn == nil then
+				easterspawn = {}
+			end
+			if easterspawn[pc.get_map_index()] == nil then
+				easterspawn[pc.get_map_index()] = {started = false, last_spawn_time = 0}
+			end
+			if easterspawn[pc.get_map_index()].started == false then
+				easterspawn[pc.get_map_index()].started = true
+				easterspawn[pc.get_map_index()].last_spawn_time = 0
+				--notice_all("[TEST]starting easterspawn on mapindex "..tostring(pc.get_map_index()))
+				clear_server_timer("easter_spawn", pc.get_map_index())
+				server_loop_timer("easter_spawn", 60, pc.get_map_index())
+			end
+		end
+		when easter_spawn.server_timer begin
+			local mapindex = get_server_timer_arg()
+			if game.get_event_flag("easterspawn") == 1 and easterspawn[mapindex].last_spawn_time + 60*30 < get_global_time() then
+				easterspawn[mapindex].last_spawn_time = get_global_time()
+				--notice_all("[TEST]spawning easterspawn on mapindex "..tostring(mapindex))
+				easterevent.spawn_eggs(mapindex)
+			end
+		end
+
+		function spawn_eggs(mapindex)
+			local regen = {
+				[61] = "map_n_snowm_01.txt",
+				[62] = "metin2_map_n_flame_01.txt",
+				[64] = "map_n_threeway.txt",
+				[65] = "metin2_map_milgyo.txt",
+				[67] = "metin2_map_trent.txt",
+				[68] = "metin2_map_trent02.txt",
+				[69] = "metin2_map_WL_01.txt",
+				[70] = "metin2_map_nusluck01.txt",
+				[72] = "metin2_map_skipia_dungeon_01.txt",
+				[73] = "metin2_map_skipia_dungeon_02.txt",
+			}
+			if regen[mapindex] == nil then
+				return
+			end
+			regen_in_map(mapindex, "data/easterevent/easterspawn/"..regen[mapindex])
+		end
+		
+		
+		when 8042.kill or 8043.kill or 8044.kill or 8045.kill or 8046.kill or 8047.kill begin
+			local level = (npc.get_race() - 8042)*10 + 40
+			--chat("level = "..tostring(level).."; math.abs(pc.get_level() - level) = "..tostring(math.abs(pc.get_level() - level)))
+			if pc.get_level() - level > 10 then
+				return
+			end
+			local count = number(3, 5)
+			for i = 1, count, 1 do
+				game.drop_item_with_ownership(number(50160, 50179), 1)
+			end
+		end
+		
+
+		
+	end
+end

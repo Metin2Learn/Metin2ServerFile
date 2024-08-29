@@ -1,0 +1,223 @@
+quest mysterious_earthquakes begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >=70 begin
+			 set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			send_letter("Mysterious Earthquakes")
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "Uriel")
+			end
+		end
+					
+		when button or info begin
+			say_title("Earthquakes in Sahara Desert")
+			say("")
+			say("Uriel seems to be in big trouble!")
+			say("Hurry up and head to him to check")
+			say("if you can help him somehow!")
+			say("")
+			say("")
+		end
+
+		when __TARGET__.target.click or 20011.chat."The mysterious earthquakes" begin
+			target.delete("__TARGET__")
+			say_title("Earthquakes in Sahara Desert")
+			say("")
+			say("Hello brave adventurer!")
+			say("Nakajima told me while visiting Sahara Desert that he and")
+			say("his crew got in danger when approaching the Spider Dungeons")
+			say("due to a heavy earthquake. Following these books there have")
+			say("never been earthquakes like that in Sahara Desert for at")
+			say("least 20.000 Years!")
+			say("")
+			wait()
+			say_title("Earthquakes in Sahara Desert")
+			say("")
+			say("This is really strange... Maybe you want to go to Pung-Ho")
+			say("for me? He lives in the Spider Dungeons and is a very good")
+			say("friend of mine. I'm worried about him because of those")
+			say("earthquakes! I hope he did not get hurt!")
+			say("Just thinking about it makes me trember in fear!")
+			say("Please help me and check if he is allright.")
+			say("I will reward you for your work!")
+			say("")
+			local acceptq=select("Yes", "No")
+			if acceptq == 1 then
+				say_title(pc.get_name()..":")
+				say("")
+				say("I feel sorry for Uriel being so petrified.")		
+				say("I must help him!")
+				say("Sahara Desert here I come!")
+				say("")
+				say("")
+				say_reward("You received a passage.")
+				pc.give_item2(71095, 1)
+				set_state(accept)		
+			elseif acceptq == 2 then
+				say_title(pc.get_name()..":")
+				say("")
+				say("I don't want to get myself into danger.")		
+				say("I'm sorry but I can't do it.")
+				say("")
+				say("")
+				wait()
+			end		
+		end		
+	end	
+		
+	state accept begin
+		when letter begin
+			send_letter("The mysterious earthquakes")
+			local x=find_npc_by_vnum(20089)
+			if 0==x then
+			else
+				target.vid("__TARGET2__", x, "Pung-Ho")
+			end
+		end
+			
+		when button or info begin
+			say_title("The mysterious earthquakes in the Desert")
+			say("")
+			say("Go to the Spider Dungeons and check if")
+			say("Pung-Ho is allright.")
+			say("Afterwards, report his state to Uriel.")
+			say("")
+			wait()
+		end
+			
+		when 20011.chat."The earthquakes in Sahara Desert" begin		
+			say_title("Uriel:")		
+			say("")		
+			say("What? You already returned?")		
+			say("...")
+			say("")
+			say("Oh... you are too scared of the earthquakes")
+			say("and changed your mind?")
+			say("")
+			say_reward("Do you want to end the quest?")
+			say("")
+			local tooweak=select("Yes", "No")		
+			if tooweak == 2 then		
+				say_title("Uriel:")		
+				say("")				
+				say("Thank you for helping me, please hurry I am")
+				say("so scared something happened to him!")
+				say("")		
+				say("")		
+			else		
+				say_title("Uriel:")		
+				say("")				
+				say("I can understand your fears but it is a matter of")
+				say("life or death! There is nobody else I can rely")		
+				say("on this issue than you! You are my only hope!")
+				say("")		
+				local tooweak2=select("Allright I will do it!", "I am so sorry but I can't.")		
+				if tooweak2 == 1 then	
+					say_title("Uriel:")
+					say("")		
+					say("Thank you very much,")		
+					say("all good wishes for you!")		
+					say("")
+					say("")
+					wait()
+				elseif tooweak2 == 2 then
+					say_title(""..pc.get_name()..":")
+					say("")		
+					say("I have felt the impact of these earthquakes")
+					say("when I approached the Spider Dungeon...")
+					say("I am terribly sorry but it scares me too much")
+					say("")
+					say("Shame on me...")
+					say("")
+					say_reward("Quest failed.")
+					say("")		
+					set_state(__FAILURE__)		
+				end		
+			end		
+		end
+	
+		when __TARGET2__.target.click or 20089.chat."Pung-Ho are you allright?" begin
+			target.delete("__TARGET2__")
+			say_title("Pung-Ho:")
+			say("")
+			say("Hello, how can I help you?")
+			say("...")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("Ah, Uriel has sent you because he was worried about me?")
+			say("Hahaha, my good old Uriel! Tell him not to worry!")
+			say("The walls of this dungeon are rock solid!")
+			say("")
+			say("")
+			wait()
+			say_title("Pung-Ho:")
+			say("")
+			say("You wonder about the earthquakes?")
+			say("Well I can tell you about it!")
+			say("But before I tell you this story")
+			say("you better go back to Uriel and")
+			say("tell him I am allright!")
+			say("")
+			say("")
+			wait()
+			set_state(back_to_uriel)
+		end
+	end
+	
+	state back_to_uriel begin
+		when letter begin
+			send_letter("Head back to Uriel")
+			local u=find_npc_by_vnum(200811)
+			if 0==u then
+			else
+				target.vid("__TARGET3__", u, "Uriel")
+			end
+		end
+			
+		when button or info begin
+			say_title("Pung-Ho is allright!")
+			say("")
+			say("Head back to Uriel and tell him the good news!")
+			say("")
+			say("")
+		end
+			
+		when __TARGET__.target.click or 20011.chat."Report of Pung-Ho's state" begin
+			target.delete("__TARGET__")
+			say_title(""..pc.get_name()..":")
+			say("")
+			say("Fear no more Uriel!")
+			say("Pung-Ho is in his best shape.")
+			say("The Spider Dungeon is built secure!")
+			say("")
+			say("")
+			wait()
+			say_title("Uriel:")
+			say("")
+			say("What a relief!")
+			say("Thank you so much for helping me")
+			say("Here's a little reward for you!")
+			say("")
+			say_reward("1.000.000 Yang received.")
+			say_reward("Passage received.")
+			say("")
+			pc.change_money(1000000)
+			pc.give_item2(71095, 1)
+			clear_letter()
+			set_quest_state("valcon_war", "run")		
+			set_state(__COMPLETE__)
+			q.done()
+		end		
+	end		
+		
+	state __COMPLETE__ begin		
+	end		
+	
+	state __FAILURE__ begin		
+	end		
+end	

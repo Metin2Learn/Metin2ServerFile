@@ -1,0 +1,95 @@
+quest neutral_warp begin
+        state start begin
+                when 20009.chat."Hello!" begin
+                        ---                                                   l
+                        say_title("Old man")
+                        say("")
+                        say("Hello!")
+                        say("I know how you can get to other regions from here.")
+                        say("If you give me some Yang I can transport you")
+                        say("there.")
+
+                        local s = select("Transport.", "Do not transport.")
+
+                        if 2 == s then
+                                return
+                        end
+
+                        local cost = 1000
+                        say_title("Old man")
+                        say("")
+                        say("Where do you want to go?")
+                        say("It cost "..cost.."Yang.")
+                        say("")
+
+                        if pc.gold < cost then
+                                say("You do not have enough Yang!")
+                                return
+                        end
+
+                        local m = pc.get_map_index()
+                        local e = pc.empire
+
+                        if m == 1 or m == 3 then
+                                e = 1
+                        elseif m == 21 or m == 23 then
+                                e = 2
+                        elseif m == 41 or m == 43 then
+                                e = 3
+                        end
+
+                        if m == 1 or m == 21 or m == 41 then
+                                local s = select("Dragon Valley", "Ice Mountain", "Cancel")
+
+                                if 3 == s then
+                                        return
+                                end
+
+                                local warp = {
+                                        -- 64 map_n_threeway
+                                        {
+                                                { 402100, 673900 },
+                                                { 270400, 739900 },
+                                                { 321300, 808000 },
+                                        },
+                                        -- 61 map_n_snowm_01
+                                        {
+                                                { 434200, 290600 },
+                                                { 375200, 174900 },
+                                                { 491800, 173600 },
+                                        }
+                                }
+                                test_chat(warp[s][e][1]..warp[s][e][2])
+
+                                pc.warp(warp[s][e][1], warp[s][e][2])
+                                pc.changegold(-cost)
+
+                        elseif m == 3 or m == 23 or m == 43 then
+                                local s = select( "Sahara Desert","Infernal Flame Field", "cancel")
+
+                                if 3 == s then
+                                        return
+                                end
+
+                                local warp = {
+                                        -- 63 metin2_map_n_desert_01
+                                        {
+                                                { 217800, 627200 },
+                                                { 221900, 502700 },
+                                                { 344000, 502500 },
+                                        },
+                                        -- 62 metin2_map_n_flame_01
+                                        {
+                                                { 599400, 756300 },
+                                                { 597800, 622200 },
+                                                { 730700, 689800 },
+                                        },
+                                }
+                                test_chat(warp[s][e][1]..warp[s][e][2])
+
+                                pc.warp(warp[s][e][1], warp[s][e][2])
+                                pc.changegold(-cost)
+                        end
+                end -- end_of_when
+        end -- end_of_state
+end -- end_of_quest

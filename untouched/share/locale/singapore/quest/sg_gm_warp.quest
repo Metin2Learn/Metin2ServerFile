@@ -1,0 +1,37 @@
+quest sg_gm_warp begin
+        state start begin
+                when 20094.chat."GM map warp" with pc.is_gm() begin
+
+                        say_title("Hong-Hae:")
+                        say("")
+                        say("Where do you want to go?")
+                        say("")
+
+                                local s = select("GM map", "Duel Arena", "Giant Wasteland", "GM Island", "Cancel")
+
+                                if 5 == s then
+                                        return
+                                end
+
+                                local warp = {
+					{
+						{ 400000, 600000 },
+					},
+                                        {
+                                                { 844800, 500000 },
+                                        },
+                                      
+                                        {
+                                                { 819200, 716800 },
+                                        },
+                                        {
+                                        	{ 200000, 128000 },
+                                        },
+                                }
+                                test_chat(warp[s][1][1]..warp[s][1][2])
+
+                                pc.warp(warp[s][1][1], warp[s][1][2])
+
+                end -- end_of_when
+        end -- end_of_state
+end -- end_of_quest

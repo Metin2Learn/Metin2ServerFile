@@ -1,0 +1,135 @@
+quest wl_lv_62 begin
+	state start begin
+		when login or levelup with pc.get_level() >= 62 begin
+			set_state(information)
+		end
+	end
+	
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(33002)
+			if v != 0 then
+				target.vid("__TARGET__", v, "Cassim")
+			end
+			send_letter("Toxic Weaponry")
+		end
+		
+		when button or info begin
+			say_title("Toxic Weaponry")
+			say("")
+			say("Deep within the toxic Snake Field, theres")
+			say("supposedly a very rich merchant on the quest for")
+			say("booty. A message has been delivered to you that")
+			say("he knows of your heroic deeds and is asking for")
+			say("your help in his quest. There might be some good")
+			say("reward if you decide to help him!")
+			say("")
+			say_reward("Snake Field can be accessed from the south east")
+			say_reward("corner of the Yongbi-Desert.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 33002.chat."The Toxic Weaponry" begin
+			target.delete("__TARGET__")
+			say_title("Cassim:")
+			say("")
+			say("Hello my good soldier!")
+			say("I have heard of your heroic deeds and fights")
+			say("in the name of your kingdom.")
+			say("So... I'd love to ask you for a favor.")
+			say("This area is crowded with Snake Soldiers that")
+			say("slay down their enemies with their strong poison.")
+			say("")
+			wait()
+			say_title("Cassim:")
+			say("")
+			say("I have a special interest in the arrows that")
+			say("the Snake Archers use. Their poisonous tip")
+			say("would make for a good trade with the military.")
+			say("")
+			say("Of course I would reward you! So how about it?")
+			say("Get me 250 Snake Steel Arrows and you'll have my")
+			say("eternal gratitude!")
+			say("")
+			local init = select("Yes","Not now.")
+			if init == 1 then
+				say_title("Cassim:")
+				say("")
+				say("Thank you! I knew you would do it!")
+				say("You can get them from Venom Snake Archers here")
+				say("in this area!")
+				say("")
+				say_reward("If you are leader of a group, everyone can")
+				say_reward("help you acquire Snake Steel Arrows!")
+				set_state(hunt)
+			end
+		end
+	end
+	
+	state hunt begin
+		when letter begin
+			send_letter("The Toxic Weaponry")
+		end
+		
+		when button or info begin
+			say_title("The Toxic Weaponry")
+			say("")
+			say("Cassim asked you to obtain 250 Snake Steel Arrows")
+			say("from Snake Archers for his merchandise.")
+			say("You can get single arrows from Venom Snake Archers")
+			say("and multiple ones from defeating Vizto, the legendary")
+			say("snake warrior. It's suggested that you only attack")
+			say("Vizto with a strong party.")
+			say("")
+			say("Also, members of a party can help you acquire the")
+			say("Snake Steel Arrows if you are their leader.")
+		end
+		
+		when 2134.party_kill begin
+			pc.give_item2(90318,1)
+			if pc.count_item(90318) >= 250 then
+				set_state(report)
+			end
+		end
+	end
+	
+	state report begin
+		when letter begin
+			local v = find_npc_by_vnum(33002)
+			if v != 0 then
+				target.vid("__TARGET__", v, "Cassim")
+			end
+			send_letter("Toxic Weaponry")
+		end
+		
+		when button or info begin
+			say_title("The Toxic Weaponry")
+			say("")
+			say("You have all the arrows Cassim wanted!")
+			say("You should go and claim your reward!")
+			say("")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 33002.chat."The Toxic Weaponry" with pc.count_item(90318) >= 250 begin
+			target.delete("__TARGET__")
+			say_title("Cassim:")
+			say("")
+			say("Thank you so much!")
+			say("As a thank you, I'll give you a provision")
+			say("of my profit. Without you I could not make")
+			say("this deal at all!")
+			say("")
+			say_reward("You received 3.500.000 Yang.")
+			say("")
+			pc.change_gold(3500000)
+			pc.remove_item(90318,pc.count_item(90318))
+			set_quest_state("wl_lv_63","run")
+			set_state(__COMPLETE__)
+		end
+	end
+	
+	state __COMPLETE__ begin
+	end
+end
+	

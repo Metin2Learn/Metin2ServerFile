@@ -1,0 +1,254 @@
+
+quest npc_talk begin
+    state start begin
+        when 20354.click begin
+            say_title("Guardian of the City")
+            say("")
+            say("Greetings Soldier,")
+            ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("I am the guardian in charge of training new recruits for the")
+            say("military. It is my job to teach you basic hand-to-hand")
+            say("combat and show you how to survive in the worst of battles.")
+            say("You'll need to be in top physical condition before going out")
+            say("and facing the dangers this world can throw at you.")
+            say("")
+        end
+        when 20008.chat."Octavio's Resturant" begin
+            say_title("Octavio:")
+            say("")
+            say("Welcome! My name is Octavio. I have spent many of my younger")
+            ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("years traveling the world in search of the most exotic")
+            say("recipes. Now, my resturant is famous for our assortment of")
+            say("delicacies and fine cuisine. Stop in sometime and try our")
+	    say("world famous sushi. It will melt in your mouth!")
+            say("")
+            if math.random(2) == 1 then
+                wait()
+                say_pc_name()
+                say("")
+                say("Thanks, it smells amazing here. I'll be sure to drop by")
+                say("sometime.")
+                say("")
+
+            end
+            
+        end
+        when 20005.chat."Yonah the Potter" begin
+            say_title("Yonah:")
+            say("")
+            say("Hello there,")
+            say("")
+            ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("My name is Yonah. I am a potter maker. I can make just about")
+            say("anything out of glass, clay, or china. My biggest seller is")
+            say("the glass bottles used for potions. It takes a lot of skill")
+            say("and patience to craft a glass bottle that will not crack or")
+            say("break during transport. The only problem is getting all the")
+            say("materials I need to craft such excelent quality.")
+            wait()
+            say_title("Yonah:")
+            say("")
+            say("Many of the cargo wagons carrying supplies from the other")
+            say("village get ambushed and raided by the enemy nations before")
+	    say("they  can arrive here. Thankfully, some supplies do make it")
+	    say("here do to the help of the new recruits.")
+	    say("")
+        end
+        when 20017.chat."A Retired Warrior" begin
+            say_title("Yu-Hwan:")
+            say("")
+            say("Hello, would you like to hear a song?")
+            say("")
+            ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("My name is Yu-Hwan. I use to be a soldier, just like you. I")
+            say("fought in many battles and helped conquer many lands. I even")
+            say("became an advisor for the King, but that was many years ago.")
+            say("I've since left the military and have found peace here in")
+            say("this small village. I spend my days just strumming away and")
+            say("singing along to nature's song.")
+            say("")
+        end
+        when 20023.chat."The Bookworm" begin
+            say_title("Mr. Soon:")
+            say("")
+            say("Have you come to hear a story?")
+            say("")
+            say("My name is Mr. Soon. I'm also known as the 'Bookworm' from")
+            say("all the story books and novels I collect. I've always loved")
+            ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("reading since I was a boy. Stories of a strong handsome ")
+            say("knight, slaying a fire breathing dragon to save his fair")
+            say("haired princess, have always inspired me. I've never been")
+            say("good with a sword, so instead I sharpened my mind with rich")
+            say("stories filled with love, fear, and honor. If you ever want")
+            say("to hear a good story, I've got lots I can tell you.")
+            say("")
+        end
+
+        when 20020.chat."The Battle of Ice Mountain" begin
+            say_title("Betrayer Balso:")
+            say("")
+            say("Try not to get too close to me. I don't want you to get sick")
+            ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("too. I was a runaway at the Battle of Ice Mountain. The day")
+            say("that the metin stones appeared. Thousands of soldiers died")
+            say("on that day when metins rained from the sky. I was halfway")
+            say("down the mountain when I heard a large boom that sounded ")
+            say("like thunder. I turned back to see the metins falling and ")
+            say("the soldiers mutate into the plagued monsters they are ")
+	    say("today.")
+	    say("")
+
+            if math.random(2) == 1 then
+                wait()
+                say_pc_name()
+                say("")
+                say("Wait, did you say the plagued monsters in Ice Mountain")
+                say("use to be soldiers?")
+                say("")
+                wait()
+                say_title("Betrayer Balso:")
+                say("")
+                say("Yes, I knew some of them. That battle was suppose to be")
+                say("the end to this three-way war, but the Metin stones fell")
+                say("right before the battle was to commence. I was lucky to")
+                say("escape with just this rash, but I fear it will grow ")
+                say("worse in time. Perhaps this is my punishment for ")
+                say("running from battle?")
+                say("")
+            end
+        end
+
+        when 20011.chat."Words of Wisdom" begin
+            say_title("Uriel:")
+            say("")
+            say("Greetings young soldier,")
+	    ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("I can see much strength in you. Your commanders have taught")
+            say("you well in the way of a soldier. However, I see much")
+            say("confusion in your heart. A true soldier is a master of")
+            say("their body, mind, and heart. When you have brought balance")
+            say("to all three you will have the strength of the universe at")
+            say("your disposal. Take care young one. You have much to learn.")
+            say("")
+        end
+
+        when 20018.chat."The Metin Stone Plague" begin
+            say_title("Baek-Go:")
+            say("")
+            say("Hello, I am Doctor Baek-Go. Biologist Chaegirab and I have")
+	    ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("been hired by the Captain to find a cure for the metin stone")
+            say("plague that has been running rampant. Unfortunatley, our")
+            say("best medicines can only delay the plague for a little while.")
+            say("")
+            say("If we don't find a cure soon I fear the worst for our")
+            say("civilization. A head wound or a broken arm is easy to fix,")
+            say("but a virus of this strength is unheard of.")
+            say("")
+        end
+
+        when 20019.chat."A Hunter's Advice" begin
+            say_title("Yang-Shin:")
+            say("")
+	    ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("I've been encountering a lot of metin stones on my hunting")
+            say("trips. The animals I hunt have also become extremely")
+            say("agressive. Of course, a skilled hunter like me has no")
+            say("problem taking them out, but I caution any new recruits")
+            say("wanting to go out and practice hunting. Always travel with")
+            say("a friend or a hunting party. It's dangerous out there.")
+            say("")
+        end
+
+        when 20006.chat."A Broken Family" begin
+            say_title("Mirine:")
+            say("")
+	    ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("Since Mama has become sick, Big Brother has been away a lot")
+            say("in search of herbs that will make Mama well. Every time he")
+            say("leaves I pray to the Dragon Gods to keep him safe. We lost")
+            say("Papa in the war. I don't want to lose him too...")
+            say("")
+        end
+
+        when 20012.chat."Yu-Rang the Baker" begin
+            say_title("Yu-Rang:")
+            say("")
+	    ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("Hello there! My name is Yu-Rang. I sell lots of different")
+            say("types of cakes, cookies, and candies. The kids around here")
+            say("love them! I've always loved baking sweets. Octavio never")
+            say("understood my love for baking so I started my own bakery")
+            say("to show him how delicious sweets can be! Stop by sometime")
+            say("and try some of my rice cakes. They're to die for!")
+            say("")
+        end
+
+        when 20021.chat."Love and Loss" begin
+            say_title("Ariyoung:")
+            say("")
+	    ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("When my husband came back from a difficult battle. I was so")
+            say("relieved to see him alive. It had only been a few weeks")
+            say("after he returned when he was ambushed one night while on a")
+            say("walk through the forest. He was beaten and killed by the")
+            say("Black Wind rebels. Soldiers found his body hung in a tree")
+	    say("with a Black Wind bandana around his neck. How could they")
+	    say("take away my husband when I had just got him back?")
+        end
+        when 20003.chat."A Widowed Mother" begin
+            say_title("Ah-Yu:")
+            say("")
+            say("Oh, hush hush, my child. Mama is here. Don't cry.")
+            say("After my husband perished in the war, I have been left")
+            say("with raising my baby on my own. My husband never got to")
+            say("see his son be born. He has his fathers nose and dimples.")
+            say("")
+            say("I'm sure he is watching us from the other side...")
+        end
+        when 20002.chat."The Bookworm's Wife" begin
+            say_title("Aranyo:")
+            say("")
+            say("Hello, my name is Aranyo or Mrs. Soon. My husband is ")
+            say("Mr. Soon. You may have met him. He usually has his nose ")
+            say("crammed in a book. I am a Tailor. Ariyoung and I help in ")
+            say("creating the uniforms that the soldiers and recruits wear as")
+            say("well as supply the village with most of it's linen and")
+            say("thread. If you have a hole that needs patching, you know ")
+	    say("where to find me.")
+	    say("")
+        end
+        when 20010.chat."A Traveling Merchant" begin
+            say_title("Peddler:")
+            say("")
+            say("Hello there, you can call me The Peddler. I am a traveling ")
+            say("merchant. I collect and sell rare and valuable items from ")
+            say("all over the world. If you see something you like, you ")
+            say("better buy it while it's here now. Some of the items I sell ")
+            say("you only see once in a life time.")
+            say("")
+
+        end
+        when 20014.chat."A Sugary Delite" begin
+            say_title("Taurean:")
+            say("")
+            say("Yu-Rang makes some of the best rice cakes I've ever eaten!")
+            say("They're so good, but she's so mean! I took one lick, just ")
+            say("ONE lick, of icing on a cake and she went crazy on me! She")
+            say(" told me to never bother her shop again.")
+            say("I really miss those rice cakes though...")
+            say("")
+        end
+        when 20024.chat."A Strong Mage" begin
+            say_title("Harang:")
+            say("")
+            say("Hello, I'm Harang and I'm going to be the most powerful ")
+            say("Dragon Mage you have ever seen! Just you wait, not even the ")
+            say("demons of Demon Tower could face the heat of my Inferno!")
+            say("")
+
+        end
+    end
+end

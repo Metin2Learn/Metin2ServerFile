@@ -1,0 +1,378 @@
+quest horse_upgrade begin
+        state start begin
+                when 20349.chat."I would like to improve my horse" with horse.get_grade()==1 and horse.get_level()==10 begin
+                        if horse.is_dead() then
+                                say_title("Stable Lad:")
+                                say("")
+				----"123456789012345678901234567890123456789012345678901234567890"| 
+                                say("You cannot improve a dead horse! Go and get the Sujin")
+                                say("Dungeon Herb and I will revive your horse.")
+                                say("")
+                                say_item_vnum(50057)
+                                say("Then we can talk about improving your horse.")
+                                say("")
+                        elseif pc.level<=34 then
+                                say_title("Stable Lad:")
+                                say("")
+				----"123456789012345678901234567890123456789012345678901234567890"|
+                                say("Your level is too low to improve a horse. Only after")
+                                say("you have reached level 35 you can improve your horse,")
+                                say("so come back when you get that far.")
+                                say("")
+                        elseif horse.get_level()<=9 then
+                                say_title("Stable Lad:")
+                                say("")
+				----"123456789012345678901234567890123456789012345678901234567890"| 
+                                say("The level of your horse is too low to improve it.")
+                                say("")
+                                say("Go and train even further your horsemanship. When your")
+                                say("horse has reached level 10, you can come back again.")
+                                say("")
+                        elseif pc.countitem("50050")<1 then
+                                say_title("Stable Lad:")
+                                say("")
+				----"123456789012345678901234567890123456789012345678901234567890"| 
+                                say("If you want to improve your horse, you must pass a")
+                                say("suitability test.")
+                                say("")
+                                say("Like the last time, you need a Horse Medal for taking part")
+                                say("at this test. You can get them in the  Apes Dungeon.")
+                                say("")
+                                say_item_vnum(50050)
+                                say("Of course, the monkeys will not let you pass so easy.")
+                                say("")
+                                setstate(need_item50050)
+                        elseif pc.countitem("50051")<1 then
+                                say_title("Stable Lad:")
+                                say("")
+				----"123456789012345678901234567890123456789012345678901234567890"|
+                                say("I don't want to tell you this twice:")
+                                say("")
+                                say_item_vnum(50051)
+                                say("You have to carry your riding license with you if you")
+                                say("want to ride!")
+                                say("")
+                        elseif horse.get_level()==10 and not horse.is_dead() and pc.countitem("50050")>=1 and pc.level>=35 then
+                                say_title("Stable Lad:")
+                                say("")
+				----"123456789012345678901234567890123456789012345678901234567890"| 
+                                say("If you get the Armed Horse Book, you can attack your")
+				say("opponent from the back of a horse. I will test your")
+				say("combat experience and your horsemanship. Go to the desert")
+				say("and kill some Scorpion or Snake Archers.")
+				say("")
+                                say("You are allowed to go there with a group, but YOU")
+				say("must be the group leader.")
+                                say("")
+                                local b=select("Accept", "Decline")
+                                if 1==b then
+                                        if pc.countitem("50050")>=1 then
+                                                pc.removeitem("50050", 1)
+                                                setstate(test)
+                                        end
+                                elseif 2==b then
+                                        say("Ok, come again later.")
+                                else
+                                        say("UNKNOWN BUTTON ["..b.."]")
+                                end
+                        else
+                                say_title("Stable Lad:")
+                                say("")
+                                say("I think you cannot get the Armed Horse Book.")
+                                say("That is strange, I don't know why.")
+                                say("You should ask a Game Master what is going on.")
+                                say("")
+                        end
+                end
+        end
+        state need_item50050 begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Get a Horse Medal")
+                        q.set_title("Get a Horse Medal!")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Get a Horse Medal!")
+                        say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("You need a Horse Medal to start the Armed Horse Book Quest.")
+                        say("")
+                        say_item_vnum(50050)
+                        say("It can be found in the Ape Dungeons.")
+                        say("")
+                        setstate(start)
+                        q.done()
+                end
+        end
+        state test begin
+                when letter begin
+                        q.set_counter("Archers left", 50-pc.getqf("kill_count"))
+                end
+                when 2105.party_kill begin
+                        pc.setqf("kill_count", pc.getqf("kill_count")+1)
+                        q.set_counter("Archers remaining:", 50-pc.getqf("kill_count"))
+                        if get_time()>=pc.getqf("limit_time") then
+                                setstate(failure)
+                        end
+                end
+                when 2107.party_kill begin
+                        pc.setqf("kill_count", pc.getqf("kill_count")+1)
+                        q.set_counter("Archers remaining:", 50-pc.getqf("kill_count"))
+                        if get_time()>=pc.getqf("limit_time") then
+                                setstate(failure)
+                                q.done()
+                        end
+                end
+                when letter begin
+                        q.set_clock("Time left", pc.getqf("limit_time")-get_time())
+                end
+                when enter begin
+                        pc.setqf("limit_time", get_time()+30*60)
+                        pc.setqf("kill_count", 0)
+                end
+                when leave begin
+                        q.done()
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Armed horse test")
+                        q.set_title("Armed horse test")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Armed Horse test")
+                        say("")
+                        say("Kill 50 Scorpion or Snake Archers in 30 minutes")
+                        say("and then report to the Stable Boy.")
+                        say("")
+                        say("You can get the help of a party as long as you")
+			say("are the leader.")
+                        say("")
+                end
+                when 2105.party_kill with pc.getf("horse_upgrade","kill_count") >= 50 and pc.getf("horse_upgrade","limit_time")>=get_time() begin
+                        setstate(report)
+                end
+                when 2107.party_kill with pc.getf("horse_upgrade","kill_count") >= 50 and pc.getf("horse_upgrade","limit_time")>=get_time() begin
+                        setstate(report)
+                end
+                when 20349.chat."Progress of the Armed Horse Test" begin
+                        say_title("Stable Boy:")
+                        say("")
+                        say("Kill 50 Scorpion or Snake Archers in 30 minutes")
+                        say("and then report to the Stable Boy.")
+                        say("")
+                        say("You can get the help of a party as long as you")
+			say("are the leader.")
+                        say("")
+                        local b=select("Next", "Abort")
+                        if 1==b then
+                        elseif 2==b then
+                                say_title("Stable Lad:")
+                                say("")
+                                say("Are you sure you want to abort the mission?")
+                                say("")
+                                local b=select("Yes.", "It was just a joke!")
+                                if 1==b then
+                                        say_title("Stable Lad:")
+                                        say("")
+                                        say("Ok, Good luck next time.")
+                                        say("")
+                                        setstate(start)
+                                        q.done()
+                                elseif 2==b then
+                                        say_title("Stable Lad:")
+                                        say("")
+                                        say("You have no time for this!")
+                                        say("")
+                                        say("Go and kill as fast as possible 50 Scorpion or")
+                                        say("Snake Archers!")
+                                        say("")
+                                else
+                                        say("Unknown Button ["..b.."]")
+                                end
+                        else
+                                say("Unknown Button ["..b.."]")
+                        end
+                end
+        end
+        state report begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Back to the Stable Lad")
+                        q.set_title("Back to the Stable Lad")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Back to the Stable Lad")
+                        say("")
+                        say("Give the Stable Lad a report on the test results.")
+                        say("")
+                end
+                when 20349.chat."Armed horse quest report" with horse.get_grade()!=1 begin
+                        setstate(start)
+                        q.done()
+                end
+                when 20349.chat."Armed Horse Test results" with horse.get_grade()==1 begin
+                        say_title("Stable Lad:")
+                        say("")
+                        say("Well done.")
+                        say("If you want to improve your horse now, you have to")
+                        say("change your Horse Medal for an Armed Horse Book.")
+			say("")
+                        say("This will take a while. Why don't you come again")
+			say("later? By the way, you also need 500.000 Yang")
+                        say("for buying the Armed Horse Book.")
+                        say("")
+                        if is_test_server() then
+                                pc.setqf("make_time", get_time()+10)
+                        else
+                                pc.setqf("make_time", get_time()+4*60*60)
+                        end
+                        setstate(wait)
+                end
+        end
+        state wait begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Wait for the Armed Horse Book")
+                        q.set_title("Wait for the Armed Horse Book")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Wait for the Armed Horse Book")
+                        say("")
+                        say("Wait until the Stable Lad has produced the Armed Horse")
+                        say("Book. It should take around 4 hours.")
+                        say("")
+                end
+                when login with get_time()>=pc.getf("horse_upgrade","make_time") begin
+                        setstate(buy)
+                end
+                when 20349.chat."Improve your horse's status" with horse.get_grade()!=1 begin
+                        setstate(start)
+                        q.done()
+                end
+                when 20349.chat."Is the licence ready?" with horse.get_grade()==1 begin
+                        say_title("Stable Lad:")
+                        say("")
+                        say("I am sorry, but you have to wait a little bit")
+			say("longer. Oh, and don't forget:")
+			say("")
+                        say("You need 500.000 Yang for the Armed Horse Book.")
+                        say("")
+                end
+        end
+        state buy begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Go to the Stable Lad")
+                        q.set_title("Go to the Stable Lad")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Go to the Stable Lad")
+                        say("")
+                        say("Go to the Stable Lad and fetch the Armed Horse Book.")
+                        say("")
+                        say_item_vnum(50052)
+                        say("You need a Horse Medal and 500.000 Yang as well.")
+                        say("")
+                end
+                when 20349.chat."Improve your horse's status" with horse.get_grade()!=1 begin
+                        setstate(start)
+                        q.done()
+                end
+                when 20349.chat."Improve your horse's status" with horse.get_grade()==1 and horse.get_level()!=10 begin
+                        setstate(start)
+                        q.done()
+                end
+                when 20349.chat."The license is ready!" with horse.get_grade()==1 and horse.get_level()==10 begin
+                        say_title("Stable Lad:")
+                        ----"123456789012345678901234567890123456789012345678901234567890"| 
+                        say("")
+                        say("When you got the Armed Horse Book, you will be able to ride")
+                        say("faster and  attack while riding.")
+                        say("")
+                        say("It will be a tough ride. But this is how you must prepare")
+                        say("for the Military Horse Book..")
+                        say("")
+                        say("And don't forget you will need 500.000 Yang to improve")
+                        say("your horse's status.")
+                        say("")
+                        local b=select("Upgrade my horse", "Don't upgrade yet")
+                        if 1==b then
+                                if pc.money>=500000 then
+                                        if pc.countitem("50051")>=1 then
+                                                char_log(0, "HORSE_UPGRADE", "BEGIN")
+                                                pc.changemoney(-500000)
+                                                char_log(0, "HORSE_UPGRADE", "DEC money 500000")
+                                                pc.removeitem("50051", 1)
+                                                char_log(0, "HORSE_UPGRADE", "DEC 50051 1")
+                                                horse.unride()
+                                                horse.advance()
+                                                horse.ride()
+                                                char_log(0, "HORSE_UPGRADE", "INC horse_advance 1")
+                                                pc.give_item2("50052", 1)
+                                                char_log(0, "HORSE_UPGRADE", "INC 50052 1")
+                                                char_log(0, "HORSE_UPGRADE", "END")
+                                                say_title("Stable Lad:")
+                                                say("")
+                                                say("As I said earlier...")
+                                                say("")
+                                                say("When you own the Armed Horse Book , you can call your")
+                                                say("horse anywhere.")
+                                                say("")
+                                                say("But if you lose it, you will have to buy a new one.")
+                                                say("So look after it.")
+                                                say("")
+                                                setstate(start)
+                                                q.done()
+                                        else
+                                                say_title("Stable Lad:")
+                                                say("")
+                                                say("You need the Horse Sword for receiving")
+                                                say("the Armed Horse Book.")
+                                        end
+                                else
+                                        say_title("Stable Lad:")
+                                        say("")
+                                        say("You need 500.000 Yang to purchase the Armed")
+                                        say("Horse book. Come back when you got the Yang.")
+                                        say("")
+                                end
+                        else
+                                say_title("Stable Lad:")
+                                say("")
+                                say("Come again if you want to get the license.")
+                                say("")
+                        end
+                end
+        end
+        state failure begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton("Time up!")
+                        q.set_title("Time up!")
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Time up!")
+                        say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|                                           l
+                        say("Unfortunately, you have not managed to kill 50 Scorpion or")
+                        say("Snake Archers in time. Therefore your test has failed.")
+                        say("")
+                        say("If you want to try it again, get a new Horse Medal and")
+                        say("go back to the Stable Boy.")
+                        say("")
+                        setstate(start)
+                        q.done()
+                end
+        end
+        state __COMPLETE__ begin
+                when enter begin
+                        q.done()
+                end
+        end
+end

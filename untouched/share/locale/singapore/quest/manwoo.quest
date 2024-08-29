@@ -1,0 +1,38 @@
+quest minnow begin
+    state start begin
+    	when login with game.get_event_flag("Minnow") >0 begin
+		q.set_icon("scroll_open_blue.tga")
+		send_letter("*Mistery Box!")
+	end
+	when button or info begin
+		----"123456789012345678901234567890123456789012345678901234567890"|
+		addimage(20, 12, "minnow.tga")
+		say("")
+		say("")
+		say("")
+		say("")
+		say(color256(210, 210, 210).."During this event, you have the chance to exchange every")
+		say(game.get_event_flag("Minnow").." Minnows you fish for a Mistery Box at the Fisherman.")
+		say("")
+		say_item_vnum(27802)
+		say("Mistery Boxes can reward you anything from premium items")
+		say("to unpleasant surprises. Be careful!")
+		say("")
+	end
+        when 9009.chat."Mistery Box" with game.get_event_flag("Minnow")>0 and pc.countitem(27802) >= game.get_event_flag("Minnow") begin
+            local count = pc.countitem(27802)
+            local need = game.get_event_flag("Minnow")
+            say_title("Fisherman:")
+            say("")
+            say("I will exchange your minnows for a Mistery Box.")
+            say("")
+            say_item_vnum(50033)
+            say("Good Luck!")
+            say("")
+            pc.removeitem(27802, need)
+            pc.give_item2(50033, 1)
+
+            say("")
+        end
+    end
+end

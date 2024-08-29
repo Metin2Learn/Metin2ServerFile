@@ -1,0 +1,311 @@
+----------------------------------------------------
+--COLLECT QUEST_lv30
+--METIN2 Collecting Quest
+----------------------------------------------------
+quest collect_quest_lv30  begin
+	state start begin
+		when login or levelup with pc.level >= 30 begin
+			set_state(information)
+		end
+	end
+			
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20084)
+			if v != 0 then
+				target.vid("__TARGET__", v, "Biologist Chaegirab")
+			end
+			q.set_icon("scroll_open_green.tga")
+			send_letter("&Chaegirab's Study")
+		end
+					
+		when button or info begin
+			say_title("Chaegirab's Study")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("Biologist Chaegirab, the apprentice of Uriel is urgently")
+			say("looking for help.")
+			say("")
+			say("Hurry up and talk to him.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 20084.chat."I need your help." begin
+			target.delete("__TARGET__")
+			say_title("Biologist Chaegirab:")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("")
+			say("Oh!!! Please, help me...")
+			say("")
+			say("I collect informations about monsters in our kingdom, but")
+			say("I cannot handle it on my own... I wish I could collect it")
+			say("myself, but you can imagine I have problems with it as I am")
+			say("just a man of science.")
+			say("")
+			say("Please help me. Of course you will receive a good reward.")
+			say("")
+			wait()
+			say_title("Biologist Chaegirab:")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("I make examinations on the Orcs in the Dragon Valley. The")
+			say("tooth of the orcs is able to grind Iron.")
+			say("")
+			say("That's why they seem very interesting to me.")
+			say("")
+			say("My theory is we are related to the orcs. The Orc Tooth must")
+			say("be a key in the evolution.")
+			say("")
+			wait()
+			say_title("Biologist Chaegirab")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("Could you bring me a few Orc Tooth?")
+			say("")
+			say("But please only bring one at a time, so I have time to")
+			say("examine them properly. Good luck!")
+			say("")
+			set_state(go_to_disciple)
+			pc.setqf("duration",0)
+			pc.setqf("collect_count",0)
+			pc.setqf("drink_drug",0)
+		end
+	end
+			
+	state go_to_disciple begin
+		when letter begin
+			send_letter("&The Orc Teeth")
+		end
+					
+		when button or info begin
+			say_title("The Orc Teeth of the Dragon Valley.")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("")
+			say("The Biologist Chaegirab needs Teeth from the Orcs in Dragon")
+			say("Valley for his examination.")
+			say("")
+			say("Always bring one at a time, so he can examine them. You can")
+			say("bring an Orc Tooth every 2 hours.")
+			say("")
+			say_reward("You found "..pc.getqf("collect_count").." Orc Teeth so far.")
+			say("")
+		end
+					
+        	when 71035.use or 76020.use begin 
+			if get_time() < pc.getqf("duration") then
+				syschat("You can not use the Quest Potion yet.")
+				return
+			end
+			if pc.getqf("drink_drug")==1 then
+				syschat("You already used it.")
+				return
+			end
+			if pc.count_item(30006)==0 then
+				syschat("You can use the Quest Potion once you got an Orc Tooth.")
+				return
+			end
+			item.remove()
+			pc.setqf("drink_drug",1)
+		end
+		
+		when 20084.chat."GM: Skip Delay Quest lv30" with pc.count_item(30006) >0 and pc.is_gm() and get_time() <= pc.getqf("duration") begin
+			say(mob_name(20084))
+			say("You are GM, OK")
+			pc.setqf("duration", get_time()-1)
+			return
+		end
+		
+		when 20084.chat."The Teeth" with pc.count_item(30006) >0 begin
+			if get_time() > pc.getqf("duration") then
+				if  pc.count_item(30006) >0 then
+					say_title("Biologist Chaegirab")
+					---                                                   
+					say("")
+					say("Hello!! You brought me an Orc Tooth?")
+					say("I have to check it first...")
+					say("Give me a minute.")
+					say("")
+					pc.remove_item("30006",1)
+					pc.setqf("duration",get_time()+2*60*60) 
+					wait()
+					local pass_percent
+					if pc.getqf("drink_drug")==0 then
+						pass_percent=70
+					else
+						pass_percent=100
+					end
+					local s= number(1,100)
+					if s<= pass_percent  then
+						if pc.getqf("collect_count")< 9 then
+							local index =pc.getqf("collect_count")+1
+							pc.setqf("collect_count",index)
+							say_title("Biologist Chaegirab")
+							say("")
+							say("Ohhh!! You are the best...")
+							say("Please bring me "..10-pc.getqf("collect_count").. " more.")
+							say("I need that many to finish my examinations.")
+							say("I wish you good luck!")
+							say("")
+							pc.setqf("drink_drug",0)
+							return
+						end
+						say_title("Biologist Chaegirab:")
+						say("")
+						say("You have collected all the Orc Teeth!")
+						say("")
+						say("But now I need a special Soul Stone. It's called")
+						say("the Orc's Soul Stone . Can you find this for me?")
+						say("")
+						say("You can get it from the Orcs.")
+						say("")
+						pc.setqf("collect_count",0)
+						pc.setqf("drink_drug",0)
+						pc.setqf("duration",0)
+						set_state(key_item)
+						return
+					else
+						say_title("Chaegirab:")
+						say("")
+						say("Hum....unfortunately it is broken.")
+						say("I am sorry. I cannot use it..")
+						say("Please bring me another one, will you?")
+						say("")
+						pc.setqf("drink_drug",0)
+						return
+					end
+				else
+					say_title("Chaegirab:")
+					say("")
+					say("You don't have a "..item_name(30006).."!")
+					return
+				end
+			else
+				say_title("Chaegirab:")
+				say("")
+				---                                                   l
+				local hoursleft = math.floor((pc.getqf("duration")-get_time())/60/60)
+				say("I am terribly sorry....")
+				say("I have not analyzed the last tooth you gave me.")
+				say("I am very sorry... Can you give me that one")
+				say("in just another "..hoursleft.." hours?")
+				say("")
+				return
+			end
+		end
+	end
+			
+	state key_item begin
+		when letter begin
+			send_letter("&Chaegirab's Study")
+			if pc.count_item(30220)>0 then
+				local v = find_npc_by_vnum(20084)
+				if v != 0 then
+					target.vid("__TARGET__", v, "")
+				end
+			end
+		end
+		
+		when button or info begin
+			if pc.count_item(30220) >0 then
+				say_title("The Soul Stone")
+				say("")
+				---                                                   l
+				say_reward("Finally, you have found the Orc's Soul")
+				say_reward("Stone. Bring it to the Biologist.")
+				say_reward("He awaits you.")
+				say("")
+				return
+			end
+			say_title("The Special Stone")
+			say("")
+			---                                                   l
+			say("You have already collected the 10 Orc Teeth.")
+			say("For his examinations, the Biologist Chaegirab")
+			say("needs also the Orc's Soul Stone.")
+			say("")
+			say_item_vnum(30220)
+			say("Give the Biologist Chaegirab the stone when you")
+			say("find it.")
+			say("You can get it from "..mob_name(635)..", ")
+			say(""..mob_name(636).." and "..mob_name(637)..".")
+			say("")
+		end
+					
+		when 635.kill or 636.kill or 637.kill  begin
+			local s = number(1, 100)
+			if s == 1 and pc.count_item(30220)==0 then
+				pc.give_item2(30220, 1)
+				send_letter("&You found the Orc's Soul Stone!")
+			end
+		end
+					
+		when __TARGET__.target.click or 20084.chat."I got the Orc's Soul Stone" with pc.count_item(30220) > 0  begin
+			target.delete("__TARGET__")
+			if pc.count_item(30220) > 0 then 
+				say_title("Biologist Chaegirab")
+				---                                                   l
+				say("")
+				say("Ohh!!! I thank you so much!")
+				say("As reward, I will raise your inner strength ..")
+				say("This is a secret recipe, which contains the")
+				say("information about strength...")
+				say("Give it to Baek-Go. He will produce Strength")
+				say("Potion. Have fun!")
+				say("With your help I learned a lot about the Orcs.")
+				say("")
+				pc.remove_item(30220,1)
+				set_state(__reward)
+			else
+				say_title("Biologist Chaegirab")
+				say("You don't have a "..item_name(30220).."!")
+				say("")
+				return
+			end
+		end
+	end
+			
+	state __reward begin
+		when letter begin
+			send_letter("&The secret recipe")
+			local v = find_npc_by_vnum(20018)
+			if v != 0 then
+				target.vid("__TARGET__", v, "Baek-Go")
+			end
+		end
+	
+		when button or info begin
+			say_title("The reward of the Biologist")
+			---                                                   l
+			say("")
+			say("As reward for the Orc Tooth and Orc Soul Stone,")
+			say("Biologist Chaegirab gave you a recipe.")
+			say("Bring it to Baek-Go and he will create a")
+			say("special potion.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 20018.chat."The Secret Recipe"  begin
+			target.delete("__TARGET__")
+			say_title("Baek-Go:")
+			say("")
+			say("Let me have a look..")
+			say("So that's the recipe Chaegirab gave you?")
+			say("Hmm, increased movement speed. Not bad eh?")
+			say("Oh! Here you are, a Red Ebony box!!")
+			say("Here you are.")
+			say("")
+			-----------                                                   l
+			say_reward("As reward from Biologist Chaegirab's quest you")
+			say_reward("receive a +10 increase on moving speed.")
+			say("")
+			say_reward("This effect is not temporary, but permanent.")
+			affect.add_collect(apply.MOV_SPEED, 10, 60*60*24*365*60) -- 60Years
+			pc.give_item2(50109)
+			clear_letter()
+			set_quest_state("collect_quest_lv40", "run")
+			set_state(__complete)
+		end
+	end
+	state __complete begin
+	end
+end

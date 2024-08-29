@@ -1,0 +1,377 @@
+quest main_quest_lv66 begin
+	state start begin
+	end
+	state state_0 begin
+		when login or levelup or enter with pc.level >= 66 begin
+			set_state (state_1)
+		end
+	end
+	state state_1 begin
+		when letter begin
+			send_letter (locale.main_quest_lv66.title_1)
+			local v = find_npc_by_vnum (20011)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv66.title_1)
+			say (locale.main_quest_lv66.say_1)
+		end
+		when 20011.chat.locale.main_quest_lv66.title_1 begin
+			target.delete("__TARGET__")
+			say_title ( mob_name(20011))
+			say(locale.main_quest_lv66.say_2)
+		end
+		when 1091.kill begin
+		--	target.delete("__TARGET__")
+			set_state(state_2)
+		end
+	end
+	state state_2 begin
+		when letter begin
+			local v = find_npc_by_vnum (20011)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv66.title_1)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv66.title_1)
+			say (locale.main_quest_lv66.say_3)
+		end
+		when 20011.chat.locale.main_quest_lv66.title_1 begin
+			target.delete("__TARGET__")
+			say_title ( mob_name(20011))
+			say(locale.main_quest_lv66.say_4)
+			set_state(state_3)
+		end
+	end
+	state state_3 begin
+		when letter begin
+			local v = find_npc_by_vnum (20011)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv66.say_title_2)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv66.say_title_2)
+			say (locale.main_quest_lv66.say_5)
+		end
+		when 20011.chat.locale.main_quest_lv66.say_title_2 begin
+			target.delete("__TARGET__")
+			say_title ( mob_name(20011))
+			say(locale.main_quest_lv66.say_6)
+			wait()
+			say_title ( mob_name(20011))
+			say(locale.main_quest_lv66.say_7)
+			wait()
+			say_title ( mob_name(20011))
+			say(locale.main_quest_lv66.say_8)
+			wait()
+			say_title ( mob_name(20011))
+			say(locale.main_quest_lv66.say_9)					
+			wait()
+			say_title ( mob_name(20011))
+			say(locale.main_quest_lv66.say_10)
+			wait()
+			
+			say_title ("º¸»ó :")
+			say_reward(string.format (locale.main_quest_lv60.say_17, 7800000))
+			say_reward(string.format (locale.main_quest_lv60.say_19, item_name(72301).." ".."3"..locale.count_postfix))
+			say_reward(string.format (locale.main_quest_lv60.say_19, item_name(30046)))
+
+			pc.give_exp2(7800000)
+			
+			pc.give_item2(72301) -- Ãàº¹ÀÇ ¼­ * 3
+			pc.give_item2(72301) 
+			pc.give_item2(72301) 
+			pc.give_item2(30046) -- Àü°¥ÀÇ ²¿¸®
+			
+			set_state(state_4)
+		end
+	end
+	state state_4 begin
+		when letter begin
+			local v = find_npc_by_vnum (pc_find_square_guard_vid())
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv66.title_3)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv66.title_3)
+			say (locale.main_quest_lv66.say_11)
+		end
+		when 11000.chat.locale.main_quest_lv66.title_3 or
+				11002.chat.locale.main_quest_lv66.title_3 or
+				11004.chat.locale.main_quest_lv66.title_3 begin
+			target.delete("__TARGET__")
+			say_title (mob_name(11000))
+			say(locale.main_quest_lv66.say_12)
+			wait()
+			say(locale.main_quest_lv66.say_13)					
+			set_state(state_5)
+		end
+	end
+	state state_5 begin
+		when letter begin
+			local v = find_npc_by_vnum (20369)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv66.title_4)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv66.title_4)
+			say (locale.main_quest_lv66.say_11)
+		end
+		when 20369.chat.locale.main_quest_lv66.title_4 begin
+			target.delete("__TARGET__")
+			say_title (locale.main_quest_lv66.say_15)
+			say(locale.main_quest_lv66.say_16)
+			set_state(state_6)
+		end
+	end
+	state state_6 begin
+		when letter begin
+			local v = find_npc_by_vnum (20369)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv66.title_5)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv66.title_5)
+			say (locale.main_quest_lv66.say_17)
+		end
+		when 20369.chat.locale.main_quest_lv66.title_5 begin
+			target.delete("__TARGET__")
+			say_title (locale.main_quest_lv66.say_15)
+			say(locale.main_quest_lv66.say_18)	
+			wait()
+			say_title (pc.getname())
+			say(locale.main_quest_lv66.say_19)
+			wait()
+			say_title (locale.main_quest_lv66.say_15)
+			say(locale.main_quest_lv66.say_20)
+			wait()
+			say_title (pc.getname())
+			say(locale.main_quest_lv66.say_21)
+			wait()
+			say_title (locale.main_quest_lv66.say_15)
+			say(locale.main_quest_lv66.say_22)					
+			wait()
+			say_title (pc.getname())
+			say(locale.main_quest_lv66.say_23)
+			wait()
+			say_title (mob_name(20369))
+			say(locale.main_quest_lv66.say_24)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv66.say_26)					
+			set_state(state_7)
+		end
+	end
+	state state_7 begin
+		when letter begin
+			local v = find_npc_by_vnum (20369)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv66.title_6)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv66.title_6)
+			say (locale.main_quest_lv66.say_27)
+		end
+		when 20369.chat.locale.main_quest_lv66.title_6  begin
+			target.delete("__TARGET__")
+			say_title ( locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv66.say_28)					
+			wait()
+			say_title ( locale.main_quest_lv66.say_25)
+			say(string.format(locale.main_quest_lv66.say_29,item_name(30033)))	
+			wait()
+			say_title (pc.getname())
+			say(locale.main_quest_lv66.say_30)					
+			wait()
+			say_title ( locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv66.say_31)
+			set_state(state_8)
+		end
+	end
+	state state_8 begin
+		when enter begin
+			pc.setqf ("rgd_kill", 0)
+			pc.setqf ("state_8_start", get_global_time())
+			notice (string.format (locale.main_quest_lv66.say_32, 30))
+			timer ("rgd_kill_timer", 30 * 60 / 2)
+		end
+		when letter begin
+			send_letter (locale.main_quest_lv66.title_7)
+			local t = pc.getqf ("state_8_start") + 30 * 60 - get_global_time()
+			q.set_clock(locale.stash.enlarge_1_timer, t)
+			q.set_counter_name (mob_name (2313))
+			q.set_counter_value (200)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv66.title_7)
+			say (string.format(locale.main_quest_lv66.say_33, 200))
+			local t = pc.getqf ("state_8_start") + 30 * 60 - get_global_time()
+			if t < 0 then
+				say (locale.main_quest_lv66.say_34)
+			else
+				say (string.format (locale.main_quest_lv66.say_35, t / 60))
+			end
+		end
+		when 2313.party_kill begin
+			if pc.getqf("rgd_kill") >= 200 - 1 then
+				pc.give_item2 (31003, 1)
+				pc.setqf ("rgd_kill", 0)
+				q.set_counter_value (0)
+				set_state (state_9)
+			else 
+				pc.setqf ("rgd_kill", pc.getqf ("rgd_kill") + 1)
+				q.set_counter_value (200 - pc.getqf ("rgd_kill"))
+			end
+		end
+		when rgd_kill_timer.timer begin
+			local t = pc.getqf ("state_8_start") + 30 * 60 - get_global_time()
+			notice (string.format (locale.main_quest_lv66.say_35, t / 60))
+		end
+	end
+	state state_9 begin
+		when letter begin
+			local v = find_npc_by_vnum (20369)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv66.title_7)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv66.title_7)
+			say(locale.main_quest_lv66.say_36)
+		end
+		when 20369.chat.locale.main_quest_lv66.title_7 begin
+			target.delete("__TARGET__")
+			pc.remove_item (31003, 1)
+			if (pc.getqf ("state_8_start") + 30 * 60 - get_global_time()) >= 0 then
+				q.done()
+				say_title (locale.main_quest_lv66.say_25)
+				say(locale.main_quest_lv66.say_37)
+				wait()
+				say_title (locale.main_quest_lv66.say_25)
+				say(locale.main_quest_lv66.say_38)
+				wait()
+				say_title (locale.reward )
+				say_reward(string.format (locale.main_quest_lv60.say_17, 4000000))
+				say_reward(string.format (locale.main_quest_lv60.say_18, 200000))
+				say_reward(string.format (locale.main_quest_lv60.say_19, item_name(30033)))
+				say_reward(string.format (locale.main_quest_lv60.say_19, item_name(25040).." ".."3"..locale.count_postfix))
+				say_reward(string.format (locale.main_quest_lv60.say_19, item_name(72725)))
+
+				pc.give_exp2(4000000)
+				pc.change_money(200000)
+				
+				pc.give_item2(30033) -- ±úÁø »ç±â±×¸©
+				pc.give_item2(25040)
+				pc.give_item2(25040)
+				pc.give_item2(25040)
+				pc.give_item2(72725) -- »ê»Í³ª¹« 10
+
+			else
+			
+				say_title (locale.main_quest_lv66.say_25)
+				say(locale.main_quest_lv66.say_39)						
+				wait()
+				say_title (locale.main_quest_lv66.say_25)
+				say(locale.main_quest_lv66.say_40)
+				wait()
+
+				say_title (locale.reward )
+				say_reward(string.format (locale.main_quest_lv60.say_17, 2000000))
+				say_reward(string.format (locale.main_quest_lv60.say_18, 100000))
+				say_reward(string.format (locale.main_quest_lv60.say_19, item_name(25040)))
+				say_reward(string.format (locale.main_quest_lv60.say_19, item_name(72724)))
+
+				pc.give_exp2(2000000)
+				pc.change_money(100000)
+				
+				pc.give_item2(25040)
+				pc.give_item2(72724) -- »ê»Í³ª¹« 10
+				
+			end
+			set_state(state_10)
+		end
+	end
+	state state_10 begin
+		when letter begin
+			local v = find_npc_by_vnum (20370)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv66.title_8)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv66.title_8)
+			say (locale.main_quest_lv66.say_41)
+		end
+		when 20370.chat.locale.main_quest_lv66.title_8 begin
+			target.delete("__TARGET__")
+			say_title ( mob_name(20370))
+			say(locale.main_quest_lv66.say_42)
+			wait()
+			say_title ( pc.getname())
+			say(locale.main_quest_lv66.say_43)
+			wait()
+			say_title ( mob_name(20370))
+			say(locale.main_quest_lv66.say_44)					
+			wait()
+			say_title ( pc.getname())
+			say(locale.main_quest_lv66.say_45)
+			wait()
+			say_title ( mob_name(20370))
+			say(locale.main_quest_lv66.say_46)
+			wait()
+			say_title ( mob_name(20370))
+			say(locale.main_quest_lv66.say_47)	
+			set_state(state_11)
+		end
+	end
+	state state_11 begin
+		when letter begin
+			local v = find_npc_by_vnum (20369)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv66.title_9)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv66.title_9)
+			say (locale.main_quest_lv66.say_48)
+		end
+		when 20369.chat.locale.main_quest_lv66.title_9 begin
+			target.delete("__TARGET__")
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv66.say_49)
+			wait()
+			say_title ( pc.getname())
+			say(locale.main_quest_lv66.say_50)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv66.say_51)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv66.say_52)
+			wait()
+			say(locale.main_quest_lv66.say_53)
+			set_state(__COMPLETE__)
+			q.done()
+			set_quest_state ("main_quest_lv72", "state_0")
+		end
+	end	
+	state __COMPLETE__ begin
+	end
+end

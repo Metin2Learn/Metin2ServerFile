@@ -1,0 +1,373 @@
+quest ring_detect begin
+	state say_ring_of_ipkn begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("The ring talked to me")
+			q.set_title("The ring talked to me")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."The ring talked to me"..locale.NORMAL_COLOR)
+			say("You must be surprised to see talking ring?")
+			say("Well.. good. Do you want to have a deal?")
+			say("I want to go out of here. But to do that")
+			say("I need your help.")
+			say("That's nothing much. But if you do it for me")
+			say("I will reward you")
+			say("What do you say?")
+			say("")
+			local b=select("Listen to the ring", "Refuse")
+			if 1==b then
+				say("Good. Very good. Of course")
+				say("I want your Good/evil points. If you can give me[ENTER]I will make you invisible for one hour")
+				say("What a good deal. Isn't it?")
+				local b=select("Accept", "Refuse")
+				if 1==b then
+				elseif 2==b then
+					setstate(start)
+					q.done()
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+				say("Can you do this next time?")
+				say("why did you throw me into fire if you were going to refuse?")
+				say("Don't you think? Before the fire goes out")
+				say("think one more time")
+				say("")
+				if pc.getf("ring_first_detect", "__status")==ring_first_detect.complete then
+					say("Do you want to destroy the ring?")
+					local b=select("Yes", "No")
+					if 1==b then
+						if pc.getf("ring_destroy", "__status")!=ring_destroy.start then
+							say("You are already in the middle of the quest")
+							say("Go to Infernal Flame Field and destroy the ring !")
+						else
+							setstate(start)
+							q.done()
+						end
+					elseif 2==b then
+						setstate(start)
+						q.done()
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."The ring talked to me"..locale.NORMAL_COLOR)
+			say("You must be surprised to see talking ring?")
+			say("Well.. good. Do you want to have a deal?")
+			say("I want to go out of here. But to do that")
+			say("I need your help.")
+			say("That's nothing much. But if you do it for me")
+			say("I will reward you")
+			say("What do you say?")
+			say("")
+			local b=select("Listen to the ring", "Refuse")
+			if 1==b then
+				say("Good. Very good. Of course")
+				say("I want your Good/evil points. If you can give me[ENTER]I will make you invisible for one hour")
+				say("What a good deal. Isn't it?")
+				local b=select("Accept", "Refuse")
+				if 1==b then
+				elseif 2==b then
+					setstate(start)
+					q.done()
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+				say("Can you do this next time?")
+				say("why did you throw me into fire if you were going to refuse?")
+				say("Don't you think? Before the fire goes out")
+				say("think one more time")
+				say("")
+				if pc.getf("ring_first_detect", "__status")==ring_first_detect.complete then
+					say("Do you want to destroy the ring?")
+					local b=select("Yes", "No")
+					if 1==b then
+						if pc.getf("ring_destroy", "__status")!=ring_destroy.start then
+							say("You are already in the middle of the quest")
+							say("Go to Infernal flame field and destroy the ring !")
+						else
+							setstate(start)
+							q.done()
+						end
+					elseif 2==b then
+						setstate(start)
+						q.done()
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state say_ring_of_thor begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("The ring talked to me")
+			q.set_title("The ring talked to me")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."The ring talked to me"..locale.NORMAL_COLOR)
+			say("You must be surprised to see talking ring?")
+			say("Well.. good. Do you want to have a deal?")
+			say("I want to go out of here. But to do that")
+			say("I need your help.")
+			say("That's nothing much. But if you do it for me")
+			say("I will reward you")
+			say("What do you say?")
+			say("")
+			local b=select("Listen to the ring", "Refuse")
+			if 1==b then
+				say("Good. Very good. Of course")
+				say("I want your Good/evil points. If you can give me[ENTER]I will make you have bonus on duel  for an hour")
+				say("What a good deal. Isn't it?")
+				local b=select("Accept", "Refuse")
+				if 1==b then
+				elseif 2==b then
+					setstate(start)
+					q.done()
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+				say("Can you do this next time?")
+				say("why did you throw me into fire if you were going to refuse?")
+				say("Don't you think? Before the fire goes out")
+				say("think one more time")
+				say("")
+				if pc.getf("ring_first_detect", "__status")==ring_first_detect.complete then
+					say("Do you want to destroy the ring?")
+					local b=select("Yes", "No")
+					if 1==b then
+						if pc.getf("ring_destroy", "__status")!=ring_destroy.start then
+							say("You are already in the middle of the quest")
+							say("Go to Infernal Flame Field and destroy the ring !")
+						else
+							setstate(start)
+							q.done()
+						end
+					elseif 2==b then
+						setstate(start)
+						q.done()
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."The ring talked to me"..locale.NORMAL_COLOR)
+			say("You must be surprised to see talking ring?")
+			say("Well.. good. Do you want to have a deal?")
+			say("I want to go out of here. But to do that")
+			say("I need your help.")
+			say("That's nothing much. But if you do it for me")
+			say("I will reward you")
+			say("What do you say?")
+			say("")
+			local b=select("Listen to the ring", "Refuse")
+			if 1==b then
+				say("Good. Very good. Of course")
+				say("I want your Good/evil points. If you can give me[ENTER]I will make you have bonus on duel for an hour")
+				say("What a good deal. Isn't it?")
+				local b=select("Accept", "Refuse")
+
+				if 1==b then
+				elseif 2==b then
+					setstate(start)
+					q.done()
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+				say("Can you do this next time?")
+				say("why did you throw me into fire if you were going to refuse?")
+				say("Don't you think? Before the fire goes out")
+				say("think one more time")
+				say("")
+				if pc.getf("ring_first_detect", "__status")==ring_first_detect.complete then
+					say("Do you want to destroy the ring?")
+					local b=select("Yes", "No")
+					if 1==b then
+						if pc.getf("ring_destroy", "__status")!=ring_destroy.start then
+							say("You are already in the middle of the quest")
+							say("Go to Infernal flame field and destroy the ring !")
+						else
+							setstate(start)
+							q.done()
+						end
+					elseif 2==b then
+						setstate(start)
+						q.done()
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state say_ring_of_levi begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("The ring talked to me")
+			q.set_title("The ring talked to me")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."The ring talked to me"..locale.NORMAL_COLOR)
+			say("You must be surprised to see talking ring?")
+			say("Well.. good. Do you want to have a deal?")
+			say("I want to go out of here. But to do that")
+			say("I need your help.")
+			say("That's nothing much. But if you do it for me")
+			say("I will reward you")
+			say("What do you say?")
+			say("")
+			local b=select("Listen to the ring", "Refuse")
+			if 1==b then
+				say("Good. Very good. Of course")
+				say("I want your Good/evil points. If you can give me[ENTER]I will give you double EXP points for an hour")
+				say("What a good deal. Isn't it?")
+				local b=select("Accept", "Refuse")
+				if 1==b then
+				elseif 2==b then
+					setstate(start)
+					q.done()
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+				say("Can you do this next time?")
+				say("why did you throw me into fire if you were going to refuse?")
+				say("Don't you think? Before the fire goes out")
+				say("think one more time")
+				say("")
+				if pc.getf("ring_first_detect", "__status")==ring_first_detect.complete then
+					say("Do you want to destroy the ring?")
+					local b=select("Yes", "No")
+					if 1==b then
+						if pc.getf("ring_destroy", "__status")!=ring_destroy.start then
+							say("You are already in the middle of the quest")
+							say("Go to Infernal flame field and destroy the ring !")
+						else
+							setstate(start)
+							q.done()
+						end
+					elseif 2==b then
+						setstate(start)
+						q.done()
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."The ring talked to me"..locale.NORMAL_COLOR)
+			say("You must be surprised to see talking ring?")
+			say("Well.. good. Do you want to have a deal?")
+			say("I want to go out of here. But to do that")
+			say("I need your help.")
+			say("That's nothing much. But if you do it for me")
+			say("I will reward you")
+			say("What do you say?")
+			say("")
+			local b=select("Listen to the ring", "Refuse")
+			if 1==b then
+				say("Good. Very good. Of course")
+				say("I want your Good/evil points. If you can give me[ENTER]I will give you double EXP points for an hour")
+				say("What a good deal. Isn't it?")
+				local b=select("Accept", "Refuse")
+
+				elseif 2==b then
+					setstate(start)
+					q.done()
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+				say("Can you do this next time?")
+				say("why did you throw me into fire if you were going to refuse?")
+				say("Don't you think? Before the fire goes out")
+				say("think one more time")
+				say("")
+				if pc.getf("ring_first_detect", "__status")==ring_first_detect.complete then
+					say("Do you want to destroy the ring?")
+					local b=select("Yes", "No")
+					if 1==b then
+						if pc.getf("ring_destroy", "__status")!=ring_destroy.start then
+							say("You are already in the middle of the quest")
+							say("Go to Infernal flame field and destroy the ring !")
+						else
+							setstate(start)
+							q.done()
+						end
+					elseif 2==b then
+						setstate(start)
+						q.done()
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state start begin
+		when 12000.take with is_test_server() and item.vnum==40002 and item.count>=1 begin
+			setstate(say_ring_of_levi)
+		end
+		when 12000.take with is_test_server() and item.vnum==40003 and item.count>=1 begin
+			setstate(say_ring_of_thor)
+		end
+		when 12000.take with is_test_server() and item.vnum==40004 and item.count>=1 begin
+			setstate(say_ring_of_ipkn)
+		end
+		when 40002.use with is_test_server() begin
+			say("I was trying to wear the ring")
+			say("I fell it on the ground cause it was too cold")
+			say("Somehow this ring is trying to tell me ")
+			say("to put it back into the fire.")
+			say("")
+			say("I don¡¯t think it really did talked to me...")
+		end
+		when 40003.use with is_test_server() begin
+			say("I was trying to wear the ring")
+			say("I fell it on the ground cause it was too cold")
+			say("Somehow this ring is trying to tell me ")
+			say("to put it back into the fire.")
+			say("")
+			say("I don¡¯t think it really did talked to me...")
+		end
+		when 40004.use with is_test_server() begin
+			say("I was trying to wear the ring")
+			say("I fell it on the ground cause it was too cold")
+			say("Somehow this ring is trying to tell me ")
+			say("to put it back into the fire.")
+			say("")
+			say("I don¡¯t think it really did talked to me...")
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end 

@@ -1,0 +1,259 @@
+quest oxevent_manager begin
+        state start begin
+		when login with game.get_event_flag("oxevent_status") > 0 and pc.get_map_index() != 113 begin
+			q.set_icon("scroll_open_blue.tga")
+			send_letter("*OX event")
+		end
+		when button or info begin
+		        ----"123456789012345678901234567890123456789012345678901234567890"|
+			addimage(20, 12, "ox.tga")
+			say("")
+			say("")
+			say("")
+			say("")
+			say_title("The OX event")
+			say("")
+			say("Twice every week, the brightest minds in the three kingdoms")
+			say("gather at the Intelligence event. During this quiz, several")
+			say("questions about any subject will be displayed. Move to the")
+			say("O tile if you believe the statement is correct, or to the X")
+			say("tile if you believe it's not. Only the best will be awarded")
+			say("with a valuable Coffer of Wisdom!")
+			say("")
+		end
+                when 20011.chat."OX event" begin
+                        say_title("Uriel:")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("")
+                        say("Hey - You there!")
+                        say("")
+                        say("Yes, yes, exactly you - You look quite intelligent. We have")
+                        say("a contest running twice every week known as the OX event.")
+                        say("")
+                        say("There are great rewards if you win!")
+                        say("")
+                        say_item_vnum(50131)
+                        say("")
+                        wait()
+
+                        if game.get_event_flag("oxevent_status") == 0 then
+                        	----"123456789012345678901234567890123456789012345678901234567890"|
+                                say_title("Uriel:")
+                                say("")
+                                say("When the competition starts I can let you participate in")
+                                say("it, but you may simply watch it as well.")
+                                say("")
+                                say_blue("Level 20 is required to participate.")
+                                say("")
+                        elseif game.get_event_flag("oxevent_status") == 1 then
+                        	if pc.get_level() > 19 then
+					say_title("Uriel:")
+					say("")
+					say("Do you want to participate now?")
+					say("")
+					say("Of course you can also just watch and learn.")
+					say("")
+
+					local s = select("Participate", "Watch", "Cancel")
+
+					if s == 1 then
+						say_title("Uriel:")
+						say("")
+						say("Do you want to try it out?")
+						say("Okay - Let's start.")
+						say("")
+
+						wait()
+						if game.get_event_flag("oxevent_status") == 1 then
+							pc.warp(896500, 24600)
+						else
+							say("You are too late. OX event is already")
+							say("running!")
+							say("")
+						end
+					elseif s == 2 then
+						----"123456789012345678901234567890123456789012345678901234567890"|
+						say_title("Uriel:")
+						say("")
+						say("Watching?")
+						say("")
+						say("Okay - Then you can watch here. But remember that you can")
+						say("not leave until the competition is finished. Also be careful")
+						say("not to disturb other players - guards are watching!")
+						say("")
+
+						wait()
+
+						pc.warp(896300, 28900)
+					end
+				else
+					say_title("Uriel:")
+					say("")
+					say("You need to reach level 20 to participate.")
+					say("But you can just watch it if you wish.")
+					say("")
+					local s = select("Watch", "No thanks")
+					if s ==1 then
+						----"123456789012345678901234567890123456789012345678901234567890"|
+						say_title("Uriel:")
+						say("")
+						say("Watching then? Great - I say you can always learn something")
+						say("new! But try not to disturb the contestants.")
+						say("")
+
+						wait()
+
+						pc.warp(896300, 28900)
+					end
+				end
+                        elseif game.get_event_flag("oxevent_status") == 2 then
+                                say_title("Uriel:")
+                                say("")
+                                ----"123456789012345678901234567890123456789012345678901234567890"|
+                                say("I'm afraid the competition has already started.")
+                                say("")
+                                say("Soon a next competition might start, and you will of course")
+                                say("be informed. Meanwhile, do you wish to watch the current one?")
+                                say("")
+
+                                local s = select("Watch", "Cancel")
+                                if s == 1 then
+                                        say_title("Uriel:")
+                                        say("")
+                                        say("So, you will be watching? Nice.")
+                                        say("")
+                                        say("To watch it a couple of times will benefit you, if you")
+                                        say("are going to participate yourself later.")
+                                        say("")
+
+                                        wait()
+
+                                        pc.warp(896300, 28900)
+                                end
+                        end
+                end
+
+		when 20358.chat."OX event for GM" with pc.is_gm() begin
+
+			local stat = oxevent.get_status()
+
+			if stat == 0 then
+				say("now: OX Event Ends")
+				say("")
+
+				local s = select("Start Event", "End")
+
+				if s == 1 then
+					local v = oxevent.open()
+
+					if v == 0 then
+						say("Failed to load OX quiz, please check")
+						say("your files and try again.")
+						say("")
+						say("")
+					elseif v == 1 then
+						say("Load OX quiz successfully.")
+						say("Event starts!")
+						say("")
+
+						notice_all("OX event is starting in a few minutes.")
+						notice_all("Talk to Uriel to enter the challenge!")
+					else
+						say("OX Event Error")
+						say("")
+					end
+				end
+			elseif stat == 1 then
+					say("now: OX Event starts")
+					say("User count "..oxevent.get_attender().." players")
+					say("")
+
+					local s = select("Close sign up", "End")
+
+					if s == 1 then
+						oxevent.close()
+
+						say("Now the sign up is closed you can start quiz.")
+						say("")
+						say("")
+					end
+			elseif stat == 2 then
+					say("now: OX Event sign up is closed")
+					say("")
+
+					local s = select("Ask Question", "Restart the Event", "Close Event", "End")
+
+					if s == 1 then
+						local v = oxevent.quiz(1, 30)
+
+						if v == 0 then
+							say("Failed to start quiz")
+							say("")
+						elseif v == 1 then
+							say("Start quiz successfully")
+							say("")
+						else
+							say("OX Event Error")
+							say("")
+						end
+					elseif s == 2 then
+						oxevent.end_event()
+
+						notice_all("The next round of OX will start again shortly.")
+						notice_all("Participants will now be teleported to the city.")
+
+						say("OX Event Restart")
+						say("")
+					elseif s == 3 then
+						oxevent.end_event()
+
+						notice_all("The OX event is over.")
+						notice_all("Participants will now be teleported to the city.")
+
+						say("End OX Event")
+						say("")
+					end
+			elseif stat == 3 then
+					say("now: Loading quiz, please wait.")
+					say("")
+					say("")
+				else
+					say("now: Error")
+				end
+			end
+
+		when 20358.chat."Shut Down OX Event" with pc.is_gm() begin
+			say("Force to shut down OX Event might cause problem,")
+			say("are you sure you want to continue?")
+			say("")
+			say("")
+
+			local s = select("Yes", "No")
+
+			if s == 1 then
+				oxevent.end_event_force()
+
+				say("OX Event was forced to shut down")
+			end
+		end
+
+		when 20358.chat."Give OX event reward " with pc.is_gm() begin
+			--say("Reward winners. Please enter item ID.")
+			--say("")
+
+			--local item_vnum = input()
+
+			--say("Please enter the quantity.")
+			--say("")
+
+			--local item_count = input()
+			local item_vnum=50131
+			local item_count=1
+			oxevent.give_item(item_vnum, item_count)
+
+			say("You reward item to "..oxevent.get_attender().." players.")
+			say("")
+			notice_all(oxevent.get_attender().." players won a Coffer of Wisdom!")
+		end
+        end
+end

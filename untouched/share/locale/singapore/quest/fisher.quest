@@ -1,0 +1,100 @@
+quest fisher begin
+    state start begin
+                when 9009.chat."Use of the Shop" begin
+                    npc.open_shop()
+                        setskin(NOWINDOW)
+                end
+
+                when 9009.chat."Upgrading of the Fishing Rod" begin
+                        say_title("Fisher:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("So, you want to learn about the secrets of upgrading your")
+                        say("Fishing Rod? To be honest, there is no big secret about it.")
+                        say("")
+                        say("If you spend more time fishing, your Fishing Rod level will")
+                        say("increase. When your rod has reached the  maximum level,")
+                        say("bring it to me and I will try then to upgrade it.")
+                        say("")
+                        say("Good. Choose the Fishing Rod you want to have upgraded and")
+						say("give it to me.")
+                        say("")
+                end
+
+                when 9009.take with item.vnum < 27400 or item.vnum > 27590 begin
+                        say_title("Fisherman:")
+                        say("")
+                        say("I can only upgrade Fishing Rods.")
+                        say("")
+                end
+
+                when 9009.take with item.vnum == 27590 begin
+                        say_title("Fisherman:")
+                        say("")
+                        say("This Fishing Rod cannot be upgraded again.")
+                        say("")
+                end
+
+                when 9009.take with item.vnum >= 27400 and item.vnum < 27590 and item.get_socket(0)!= item.get_value(2) begin
+                        say_title("Fisherman:")
+                        say("")
+                        say("The level of this Fishing Rod is too low.")
+                        say("")
+                        say("I cannot upgrade it yet.")
+                        say("")
+                end
+
+                when 9009.take with item.vnum >= 27400 and item.vnum < 27590 and item.get_socket(0) == item.get_value(2) begin
+                        say_title("Fisherman:")
+                        say("")
+                        say("Do you want to upgrade this Fishing Rod?")
+                        say("Let me see ...")
+                        say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+                        say(string.format("The level of the Fishing Rod is %d.", item.get_value(0) / 10))
+                        say("")
+                        say("Hmm, I don't know if I am good enough to upgrade this")
+                        say("Fishing Rod. But shall I try?")
+                        say("")
+                        say("It's possible for the upgrade to fail and your Rod's level")
+                        say("could even be reduced. Shall I try nevertheless?")
+                        say("")
+
+                        local s = select("Yes", "No")
+
+                        if s == 1 then
+                                local f = __fish_real_refine_rod(item.get_cell())
+                                if f == 2 then
+                                        say_title("Fisherman:")
+                                        say("")
+                                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                                        say("Unfortunately I was not successful in upgrading your Fishing")
+                                        say("Rod, but it's level was not decreased either.")
+                                        say("")
+                                        say("You will recover it like it was. Perhaps it will be")
+					say("successfully upgraded next time!")
+                                        say("")
+                                elseif f == 1 then
+                                        say_title("Fisherman:")
+                                        say("")
+                                        say("Hey, perfect it worked!")
+                                        say("")
+                                        say("Here is your upgraded Fishing Rod!")
+                                        say("")
+                                else
+                                        say("Oh no! Damned! It has not worked!")
+                                        say("")
+                                        say("I am sorry. The Fishing Rod's level was reduced by one.")
+                                        say("")
+                                        say("I am sorry but I warned you.")
+                                        say("")
+                                end
+                        else
+                                say_title("Fisherman:")
+                                say("")
+                                say("Please return later on.")
+                                say("")
+                        end
+                end
+    end
+end

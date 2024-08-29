@@ -1,0 +1,23 @@
+quest classic_hairstyles begin
+	state start begin
+		when 20094.chat."Warrior Hairstyles" begin
+			setskin(NOWINDOW)
+			npc.open_shop(2002)
+		end
+		
+		when 20094.chat."Ninja Hairstyles" begin
+			setskin(NOWINDOW)
+			npc.open_shop(2001)
+		end
+		
+		when 20094.chat."Sura Hairstyles" begin
+			setskin(NOWINDOW)
+			npc.open_shop(2003)
+		end
+		
+		when 20094.chat."Mage Hairstyles" begin
+			setskin(NOWINDOW)
+			npc.open_shop(2000)
+		end
+	end
+end

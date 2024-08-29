@@ -1,0 +1,177 @@
+quest wl_lv_58 begin
+	state start begin
+		when login or levelup with pc.get_level() >= 58 begin
+			set_state(information)
+		end
+	end
+	
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(33005)
+			if v != 0 then
+				target.vid("__TARGET__", v, "Duban")
+			end
+			send_letter("The Source of Danger")
+		end
+		
+		when button or info begin
+			say_title("The Source of Danger")
+			say("")
+			say("Within the sandy Snake Field, a talented")
+			say("doctor is investigating the origin of venomous")
+			say("substances to find the perfect antidote.")
+			say("")
+			say("He has asked for brave warriors to help him")
+			say("in his research, maybe you can help him out?")
+			say("It's a matter of health after all!")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 33005.chat."The Source of Danger" begin
+			target.delete("__TARGET__")
+			say_title("Duban:")
+			say("")
+			say("Hello there! I am Duban and a passionate researcher")
+			say("and I am on a quest to find the ultimate antidote to")
+			say("cure poisoned soldiers! Would you be willing to help me")
+			say("in my studies?")
+			say("")
+			say("You will? Fantastic! Because I am in need of a strong")
+			say("fighter to deliver me a venemous Snake Gland!")
+			say("It's the source of their poison and a good sample")
+			say("would be the best for me to investigate!")
+			say("")
+			wait()
+			say_title("Duban:")
+			say("")
+			say("Once you slay a Venom Snake Archer and cut off his")
+			say("venomous gland you'll need to deliver it to me")
+			say("immediately! The sample needs to be utmost fresh to")
+			say("help me in my studies. You'll have no longer than")
+			say("2 minutes to bring it to me once you've obtained it!")
+			say("")
+			say("Do you think you can handle this?")
+			say("")
+			local init = select("Yes","Not now")
+			if init == 1 then
+				say_title("Duban:")
+				say("")
+				say("I appreciate your help!")
+				say("I will reward you if you bring me a fresh")
+				say("sample of a snake poison gland!")
+				say("")
+				say("May the dragon god bless you on your journey!")
+				say("")
+				say_reward("You can get samples from Venom Snake Swordman!")
+				say("")
+				set_state(hunt)
+			end
+		end
+	end
+	
+	state hunt begin
+		when letter begin
+			send_letter("The Source of Danger")
+		end
+		
+		when button or info begin
+			say_title("The Source of Danger")
+			say("")
+			say("The researcher Duban has asked you to bring him")
+			say("a fresh sample of a poisonous snake gland.")
+			say("Hunt down Venom Snake Swordsmen to obtain these but")
+			say("bear in mind, once you get it, that you only have")
+			say("two minutes to bring it back to Duban!")
+			say("")
+		end
+		
+		when 2133.kill begin
+			local chance = number(1,20)
+			if chance == 1 then
+				pc.give_item2(90320)
+				set_state(report)
+			end
+		end
+	end
+	
+	state report begin
+		when enter begin
+			say_title("You found a Snake Venom Gland!")
+			say("")
+			say("Hurry back to Duban!")
+			say("You only have 2 minutes to deliver the gland")
+			say("before it becomes useless to his researches!")
+			say("")
+			say_reward("Get to Duban within 2 minutes!")
+			say("")
+			send_letter("Hurry back to Duban!")
+			timer("return_gland",120)
+			pc.setqf("timer",get_time()+120)
+			local v = find_npc_by_vnum(33005)
+			if v != 0 then
+				target.vid("__TARGET__", v, "Duban")
+			end
+		end
+		
+		when return_gland.timer begin
+			set_state(retry)
+		end
+		
+		when button or info begin
+			say_title("The Source of Danger")
+			say("")
+			say("Bring the Snake Venom Gland quickly to Duban!")
+			say("Time Remaining: "..pc.getqf("timer").." seconds.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 33005.click begin
+			target.delete("__TARGET__")
+			set_state(success)
+		end
+	end
+	
+	state success begin
+		when enter begin
+			say_title("Duban:")
+			say("")
+			say("This is it! Thank you so much!")
+			say("")
+			say("With this I'll might be able to create new")
+			say("potions to create Antidotes and Toxines for")
+			say("the military. I will inform you if I find")
+			say("out something - thanks for your help!")
+			say("")
+			say_reward("8.000.000 EXP received.")
+			say_reward("REP Quest 'The Source of Danger' unlocked.")
+			say_reward("Duban's Potion Shop unlocked.")
+			set_quest_state("duban_pot_shop","run")
+			pc.setf("rep_wl_58","quest_level",1)
+			set_quest_state("rep_wl_58","run")
+			pc.remove_item(90320)
+			pc.give_exp2(8000000)
+			set_state(__COMPLETE__)
+		end
+	end
+	
+	state retry begin
+		when enter begin
+			send_letter("The Sample became too old")
+			pc.remove_item(90320,pc.count_item(90320))
+		end
+		
+		when button or info begin
+			say_title("The Source of Danger")
+			say("")
+			say("The sample became too old now and can't be used")
+			say("for Duban's research anymore. You have to get")
+			say("a new one!")
+			say("")
+			set_state(hunt)
+		end
+	end
+	
+	state __COMPLETE__ begin
+	end
+end
+			

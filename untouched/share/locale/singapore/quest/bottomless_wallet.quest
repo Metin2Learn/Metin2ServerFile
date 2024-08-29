@@ -1,0 +1,191 @@
+quest bottomless_wallet begin
+	state start begin
+	end
+	
+	state run begin
+		when enter begin
+			pc.setqf("gold_count",2500000)
+			pc.setqf("interest_time",get_time()+24*60*60)
+			pc.setqf("show_info",2)
+		end
+		
+		when login begin
+			if pc.getqf("interest_time") < get_time() then
+				if pc.getqf("gold_count") > 1999999999 then
+				else
+					local q = game.get_event_flag("interest_e"..tostring(pc.get_empire()))
+					local interest = math.floor(pc.getqf("gold_count")*(q/1000))
+					pc.setqf("gold_count",pc.getqf("gold_count")+interest)
+					pc.setqf("interest_time",get_time()+24*60*60)
+					if pc.getqf("show_info") == 2 then
+						syschat("You have received interest for your Bottomless Wallet.")
+						syschat("You'll receive the next interest 24 hours from now.")
+					end
+				end
+			end
+		end
+		
+		when 90323.use begin
+			while true do
+				say_title("The Bottomless Wallet")
+				say("")
+				say("Please chose an option:")
+				say("")
+				local opt = select("Add/Remove Yang from Balance","Show current Balance","Info Settings","Exit")
+				if opt == 1 then
+					while true do
+						say_title("The Bottomless Wallet")
+						say("")
+						say("Your current balance is: "..pc.getqf("gold_count").." Yang!")
+						say("")
+						say("Do you want to deposit or withdraw money?")
+						say("")
+						local dow = select("Deposit Yang","Withdraw Yang","Cancel")
+						if dow == 1 then
+							if pc.get_gold() < 1 then
+								syschat("ERROR! You do not have Yang to make a deposit.")
+								break
+							end
+							if pc.getqf("gold_count") > 1999999999 then
+								syschat("ERROR! You can not store more than 2 billion gold.")
+								break
+							end
+							while true do
+								say_title("The Bottomless Wallet")
+								say("")
+								say("You currently have "..pc.get_gold().." Yang.")
+								say("")
+								say("How much do you want to deposit?")
+								say("")
+								local depo = input()
+								if tonumber(depo) == nil then
+									say_title("The Bottomless Wallet")
+									say("")
+									say("ERROR! Please enter a number.")
+									say("")
+									say("")
+									wait()
+								elseif tonumber(depo) < 1 then
+									say_title("The Bottomless Wallet")
+									say("")
+									say("ERROR! Please enter a valid number.")
+									say("Valid numbers are positive and not decimal.")
+									say("")
+									wait()
+								else
+									local valid_depo = math.floor(depo)
+									if pc.get_money() < valid_depo then
+										say_title("The Bottomless Wallet")
+										say("")
+										say("ERROR! You do not have enough Yang.")
+										say("")
+										say("")
+										wait()
+									else
+										pc.change_money(-valid_depo)
+										pc.setqf("gold_count",pc.getqf("gold_count")+valid_depo)
+										say_title("The Bottomless Wallet")
+										say("")
+										say("Deposit successful!")
+										say("New Balance: "..pc.getqf("gold_count").." Yang!")
+										say("")
+										wait()
+										break
+									end
+								end
+							end
+							break
+						elseif dow == 2 then
+							if pc.getqf("gold_count") < 1 then
+								syschat("ERROR! You do not have Yang to make a withdraw.")
+								break
+							end
+							while true do
+								say_title("The Bottomless Wallet")
+								say("")
+								say("Your current Balance: "..pc.getqf("gold_count").." Yang")
+								say("")
+								say("How much do you want to withdraw?")
+								say("")
+								local wdraw = input()
+								if tonumber(wdraw) == nil then
+									say_title("The Bottomless Wallet")
+									say("")
+									say("ERROR! Please enter a number.")
+									say("")
+									say("")
+									wait()
+								elseif tonumber(wdraw) < 1 then
+									say_title("The Bottomless Wallet")
+									say("")
+									say("ERROR! Please enter a valid number.")
+									say("Valid numbers are positive and not decimal.")
+									say("")
+									wait()
+								else
+									local valid_wdraw = math.floor(wdraw)
+									if pc.getqf("gold_count") < valid_wdraw then
+										say_title("The Bottomless Wallet")
+										say("")
+										say("ERROR! You do not have enough Yang.")
+										say("")
+										say("")
+										wait()
+									elseif pc.get_money()+valid_wdraw > 1999999999 then
+										say_title("The Bottomless Wallet")
+										say("")
+										say("ERROR!")
+										say("You can not carry more than 2 billion")
+										say("Yang with you at a time.")
+										say("")
+										wait()
+									else
+										pc.change_money(valid_wdraw)
+										pc.setqf("gold_count",pc.getqf("gold_count")-valid_wdraw)
+										say_title("The Bottomless Wallet")
+										say("")
+										say("Withdrawal successful!")
+										say("New Balance: "..pc.getqf("gold_count").." Yang!")
+										say("")
+										wait()
+										break
+									end
+								end
+							end
+							break
+						else
+							break
+						end
+					end
+				elseif opt == 2 then
+					say_title("The Bottomless Wallet")
+					say("")
+					say("Your current Balance: "..pc.getqf("gold_count").." Yang.")
+					say("Current interest: "..(game.get_event_flag("interest_e"..tostring(pc.get_empire()))/10).." %")
+					say("")
+					if pc.getqf("interest_time")-get_time() > 0 then
+						say("Next interest in "..pc.getqf("interest_time")-get_time().." seconds.")
+					else
+						say("Next interest is available now.")
+					end
+					say("")
+					local back = select("Return to Menu")
+				elseif opt == 3 then
+					local status = {"deactivated","activated"}
+					say_title("The Bottomless Wallet")
+					say("")
+					say("Your current interest info setting: "..status[pc.getqf("show_info")].."")
+					say("")
+					local info = select("Display Info", "Don't Display Info")
+					if info == 1 then
+						pc.setqf("show_info",2)
+					else
+						pc.setqf("show_info",1)
+					end
+				else
+					break
+				end
+			end
+		end
+	end
+end

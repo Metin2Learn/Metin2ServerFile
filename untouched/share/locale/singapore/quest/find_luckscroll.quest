@@ -1,0 +1,172 @@
+quest find_luckscroll begin
+	state start begin
+		when 9003.chat."Listen to news" with is_test_server() and number(1, 3)==1 and pc.level>=16 and pc.level<=24 begin
+			say("Have you heard about the weapon shop dealer?")
+			say("He was so arrogant before")
+			say("But this time he went to deliver his weapons,")
+			say("White Oath Archer robbed all his money")
+			say("near the 2nd village")
+			say("Also the blessing scroll was robbed!!")
+			say("")
+			say("oh..no...~(天∩ 天~) oh...no...(~天 ∩天)~")
+			say("")
+			wait()
+			say("Even the funnier thing is that the weapon shop dealer was ")
+			say("telling that when he was in the military, he had beaten the white oath army.")
+			say("So that he can't tell this robbery to people and pretends")
+			say("like nothing happened.")
+			say("So the blessing scroll is going to be in the hand of")
+			say("some one who finds it first!")
+			say("But it's not going to be easy to find the scroll among those many")
+			say("White Oath Archers~ Hohoho")
+			say("")
+			say("Oh! Don't tell anyone that I told you this!")
+			say("")
+			setstate(order)
+		end
+	end
+	state order begin
+		when letter begin
+			send_letter("About the blessing scroll")
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."About the blessing scroll"..locale.NORMAL_COLOR)
+			say("The Blessing scroll is a rare item that allows the weapon not disappearing")
+			say("even though the upgrading failed. ")
+			say("If the weapon shop dealer gave up getting back the blessing scroll,")
+			say("one who finds it first is the owner. But considering general store owner's behaviour,")
+			say("everyone in the town will know if you can't find it")
+			say("in 30minutes")
+			say("Let's hurry")
+			say("")
+			local b=select("Challenge", "Give up")
+			if 1==b then
+				setstate(find)
+			elseif 2==b then
+				setstate(__COMPLETE__)
+				q.done()
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."About the blessing scroll"..locale.NORMAL_COLOR)
+			say("The Blessing scroll is a rare item that allows the weapon not disappearing")
+			say("even though the upgrading failed. ")
+			say("If the weapon shop dealer gave up getting back the blessing scroll, ")
+			say("one who finds it first is the owner. But considering general store owner's behaviour,")
+			say("everyone in the town will know if you can't find it")
+			say("in 30minutes")
+			say("Let's hurry")
+			say("")
+			local b=select("Challenge", "Give up")
+			if 1==b then
+				setstate(find)
+			elseif 2==b then
+				setstate(__COMPLETE__)
+				q.done()
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state find begin
+		when 302.kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+		end
+		when letter begin
+			q.set_clock("Time left", pc.getqf("limit_time")-get_time())
+		end
+		when enter begin
+			pc.setqf("limit_time", get_time()+30*60)
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			q.done()
+		end
+		when letter begin
+			send_letter("Find the blessing scroll from the white oath archers")
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."Find the blessing scroll from the white oath archers"..locale.NORMAL_COLOR)
+			say("Find the white oath archers who robbed the weapon shop dealer.")
+			say("Retrieve the blessing scroll")
+			say("")
+			say("but find it in 30 minutes before the words spread")
+			say("")
+			local b=select("Proceed", "Give up")
+			if 1==b then
+			elseif 2==b then
+				say("Are you sure you want to give the quest?")
+				local b=select("Yes", "I was just checking")
+				if 1==b then
+					say("If I think of the weapon shop dealers who lost the scroll,")
+					say("I can't do it. I give up!")
+					setstate(__COMPLETE__)
+					q.done()
+				elseif 2==b then
+					say("I can't give up like this!!")
+					say("It wasn't me....")
+					say("Let's find it before someone else finds it")
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."Find the blessing scroll from the white oath archers"..locale.NORMAL_COLOR)
+			say("Find the white oath archers who robbed the weapon shop dealer")
+			say("Retrieve the blessing scroll")
+			say("")
+			say("but find it in 30 minutes before the words spread")
+			say("")
+			local b=select("Proceed", "Give up")
+			if 1==b then
+			elseif 2==b then
+				say("Are you sure you want to give the quest?")
+				local b=select("Yes", "I was just checking")
+				if 1==b then
+					say("If I think of the weapon shop dealers who lost the scroll")
+					say("I can't do it. I give up!")
+					setstate(__COMPLETE__)
+					q.done()
+				elseif 2==b then
+					say("I can't give up like this!!")
+					say("It wasn't me?")
+					say("Let's find it before someone else finds it")
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 302.kill with pc.getf("find_luckscroll","limit_time")>=get_time() begin
+			setstate(reward)
+		end
+	end
+	state reward begin
+		when letter begin
+			send_letter("Obtained The blessing scroll")
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."Obtained Blessing scroll"..locale.NORMAL_COLOR)
+			say("I got the blessing scroll from the white oath archers")
+			say("Originally it's weapon shop dealer's,")
+			say("but sometimes I need to close my eyes.")
+			say("")
+			say("The Blessing scroll is a rare item that allows the weapon not disappearing")
+			say("even though the upgrading failed. ")
+			say("")
+			setstate(__COMPLETE__)
+			q.done()
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

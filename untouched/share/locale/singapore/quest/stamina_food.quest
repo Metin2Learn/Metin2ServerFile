@@ -1,0 +1,231 @@
+--food_manager
+--butcher
+--greenfrog_general
+
+quest stamina_food begin
+
+	state start begin
+
+		when butcher.chat.locale.stamina_food.butcher.talk begin
+
+			local START_say = locale.stamina_food.butcher.START_say
+			local START_say2 = locale.stamina_food.butcher.START_say2
+
+			say(START_say)
+			wait()
+			say(START_say2)
+
+		end
+
+		when food_manager.chat.locale.stamina_food.food_manager.talk_about_greeenfrog_soup with pc.level>=locale.stamina_food.start_level_begin and pc.level<=locale.stamina_food.start_level_end and number(1, locale.stamina_food.start_probability)==1 begin
+
+			local ORDER_say1 = locale.stamina_food.food_manager.ORDER_say
+			local ORDER_say2 = locale.stamina_food.food_manager.ORDER_say2
+			local ORDER_accept = locale.stamina_food.ORDER_accept
+			local ORDER_refuse = locale.stamina_food.ORDER_refuse
+			local ORDER_accept_answer = locale.stamina_food.ORDER_accept_answer
+			local ORDER_refuse_answer = locale.stamina_food.ORDER_refuse_answer
+
+			say(ORDER_say1) 
+			wait()
+			say(ORDER_say2)
+
+
+			local s=select(ORDER_accept, ORDER_refuse)
+			if 1==s then
+
+				say(ORDER_accept_answer)
+				say(locale.stamina_food.ORDER_get_greenfrog_general_meat_text)
+
+				setstate(accept)
+				makequestbutton(locale.stamina_food.ORDER_get_greenfrog_general_meat_label)
+				q.set_title(locale.stamina_food.ORDER_get_greenfrog_general_meat_label)
+				q.start()
+				pc.setqf("kill_count", 0)
+
+			else
+
+				say(ORDER_refuse_answer)
+
+			end
+
+		end
+
+	end
+
+	state accept begin
+
+		when login begin
+
+			setskin(NOWINDOW)
+			makequestbutton(locale.stamina_food.ORDER_get_greenfrog_general_meat_label)
+			q.set_title(locale.stamina_food.ORDER_get_greenfrog_general_meat_label)
+			q.start()
+
+		end
+
+		when button begin
+
+			say(locale.stamina_food.ORDER_get_greenfrog_general_meat_text)
+
+		end
+
+		when info begin
+
+			say(locale.stamina_food.ORDER_get_greenfrog_general_meat_text)
+
+		end
+
+		when food_manager.chat.locale.stamina_food.i_dont_have_the_greeenfrog_meat_yet begin
+
+			local ACCEPT_ask = locale.stamina_food.ACCEPT_ask
+
+			say(ACCEPT_ask)
+
+		end
+		
+		when greenfrog_general.kill begin
+
+			--Get Greenfrog_general(level 58) 
+			--greenfrog_general
+
+			local kill_count = pc.getqf("kill_count")
+			local success_label = locale.stamina_food.ACCEPT_success_info_label
+			local success_say = locale.stamina_food.ACCEPT_success_say
+			local failure_label = locale.stamina_food.ACCEPT_failure_info_label
+			local failure_say = locale.stamina_food.ACCEPT_failure_say
+
+			pc.setqf("kill_count", kill_count+1)
+
+			--chat("cur kill"..kill_count)
+			--chat("pc lv"..pc.level)
+			--chat("end lv"..locale.old_pirate.end_level)
+			--chat("dst kill"..locale.old_pirate.kill_count)
+			--chat("find"..pc.getqf("find"))
+
+			--chat("Found")
+
+			if pc.level>locale.stamina_food.end_level then
+
+				--chat("Exceeded level")
+
+				if kill_count>locale.stamina_food.kill_count then
+
+					--chat("Exceeded Kill nimber")
+
+					say(failure_say)
+
+					setstate(failure)
+					makequestbutton(failure_label)
+					q.set_title(failure_label)
+
+				end
+
+			else
+
+				--chat("Applying level")
+
+				if number(1, locale.stamina_food.kill_count)==1 then
+
+					--chat("Success")
+					--chat("Obtained")
+
+					say(success_say)
+
+					setstate(success)
+					makequestbutton(success_label)
+					q.set_title(success_label)
+					
+				end
+
+			end			
+
+		end
+
+	end
+
+	state success begin
+	
+		when login begin
+
+			setskin(NOWINDOW)
+			makequestbutton(locale.stamina_food.ACCEPT_success_info_label)
+			q.set_title(locale.stamina_food.ACCEPT_success_info_label)
+			q.start()
+
+		end
+
+		when button begin
+
+			say(locale.stamina_food.ACCEPT_success_info_text)
+
+		end
+
+		when info begin
+
+			say(locale.stamina_food.ACCEPT_success_info_text)
+
+		end
+
+		when food_manager.chat.locale.stamina_food.i_have_the_greenfrog_meat begin
+
+			local SUCCESS_say = locale.stamina_food.SUCCESS_say
+
+			say(SUCCESS_say)
+			wait()
+			say(locale.QUEST_TEMP_REWARD)
+
+			setstate(complete)
+			q.done()
+
+		end
+
+	end
+	
+	state failure begin
+
+		when login begin
+
+			setskin(NOWINDOW)
+			makequestbutton(locale.stamina_food.ACCEPT_failure_info_label)
+			q.set_title(locale.stamina_food.ACCEPT_failure_info_label)
+			q.start()
+
+		end
+
+		when button begin
+
+			say(locale.stamina_food.ACCEPT_failure_info_text)
+
+		end
+
+		when info begin
+
+			say(locale.stamina_food.ACCEPT_failure_info_text)
+
+		end
+
+		when food_manager.chat.locale.stamina_food.i_dont_have_the_greeenfrog_meat_yet begin
+
+			say(locale.stamina_food.ORDER_too_late)
+			setstate(complete)
+			q.done()
+
+		end
+
+	end
+
+	state complete begin
+
+		when food_manager.chat.locale.stamina_food.food_manager.talk begin
+
+			local COMPLETE_say = locale.stamina_food.COMPLETE_say
+			say(COMPLETE_say)
+
+		end
+
+	end
+
+end
+	
+

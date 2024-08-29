@@ -1,0 +1,494 @@
+quest xmas_2012 begin
+	state start begin
+		function has_santa()
+		   if game.get_event_flag("xmas_event_2012") < 1 then
+				return false
+			else
+				return true
+			end
+		end
+		
+		function is_xmas()
+			if game.get_event_flag("christmas_eve") < 1 then
+				return false
+			else
+				return true
+			end
+		end
+		
+		function gift()
+			local n = number (1,100)
+			if n <= 4 then
+				pc.give_item2(25100,1)
+			elseif n <= 8 then
+				pc.give_item2(71084,1)
+			elseif n <= 12 then
+				pc.give_item2(71085,1)
+			elseif n <= 16 then
+				pc.give_item2(71109,1)
+			elseif n <= 21 then
+				pc.give_item2(25040,1)
+			elseif n <= 26 then
+				pc.give_item2(71101,5)
+			elseif n <= 31 then
+				pc.give_item2(71107,1)
+			elseif n <= 40 then
+				pc.give_item2(50513,1)
+			elseif n <= 50 then
+				pc.changegold (2500000)
+			elseif n <= 61 then
+				pc.changegold (1500000)
+			elseif n <= 73 then
+				pc.changegold (1000000)
+			elseif n <= 86 then
+				pc.changegold (500000)
+			elseif n <= 90 then
+				local costume_items = {41137,41138,41139,41140,41141,41142,41143,41144,45075,45076,45077,45078,45079,45080}
+				local rand = number(1,14)
+				pc.give_item2(costume_items[rand])
+			else
+				pc.changegold (250000)
+			end
+		end
+		
+		
+		-- Quest Flag "event_state"
+		-- 0 = Uninitiated.
+		-- 1 = can accept first quest
+		-- 2 = first quest
+		-- 3 = first quest done, second available, resting state
+		-- 4 = second quest
+			
+		when login or enter with xmas_2012.has_santa() == true begin
+			q.set_icon("scroll_open_blue.tga")
+			send_letter("*It's Christmas Time!")
+			if pc.get_map_index() == 1 or pc.get_map_index() == 21 or pc.get_map_index() == 41 then
+				if find_npc_by_vnum(20384) == 0 then
+					if pc.get_map_index() == 1 then
+						mob.spawn(20384, 625, 676, 0, 0 )
+					elseif pc.get_map_index() == 21 then
+						mob.spawn(20384, 542, 551, 0, 0)
+					elseif pc.get_map_index() == 41 then
+						mob.spawn(20384, 442, 717, 0, 0)
+					end
+				end
+			end
+		end
+		
+		when button or info begin
+			if pc.getqf("state") == 2 then
+				say_title("The Lost Baby Reindeer")
+				say("")
+				say("Santa Clause has asked you to find a reindeer")
+				say("which went lost inside of the Ice Mountains.")
+				say("")
+				say("You should find her quickly, every second can decide")
+				say("between a christmas miracle or a christmas tragedy!")
+				say("")
+				say("Use the training whistle to call out for the reindeer!")
+				say("When you are in range it should react.")
+				say("")
+			else
+				say_title("It's Christmas Time!")
+				say("")
+				say("Season's greeting dear Metin2 SG player!")
+				say("It's Christmas Time and we have some special")
+				say("new quests and adventures for you!")
+				say("Santa is waiting in the northern end of")
+				say("the Ice Mountains - hurry to him!")
+				say("")
+				say_reward("A merry fest from your Metin2 SG Team!")
+				say("")
+			end
+		end
+	
+		when 20126.click begin
+			local selTab = {}
+			local pos = 1 
+			table.insert(selTab, pos, "Merry Christmas!")
+			pos = pos + 1
+			if pc.getqf("init_nog") != nil then
+				table.insert(selTab, pos, "A Christmas Meal")
+				pos = pos + 1
+			end
+			if pc.getqf("state") == 3 then
+				table.insert(selTab, pos, "The Sock Hunt")
+				pos = pos + 1
+			end
+			if pc.getqf("state") == 6 then
+				table.insert(selTab, pos, "The mother reindeer...")
+				pos = pos + 1
+			end
+			table.insert(selTab, pos, "Close")
+			
+			local s = select_table( selTab )
+			
+			if selTab[s] == "Merry Christmas!" then
+				say_title("Santa Clause:")
+				say("")
+				say("Ho ho ho! Merry Christmas young adventurer!")
+				say("")
+				if pc.get_level() < 30 then
+					return
+				end
+				if pc.getqf("state") > 2 then
+					say("Have you found a Stocking yet?")
+					say("")
+					say("Stockings now drop from monsters near your level.")
+					say("Once you find a stocking, you can take it to the")
+					say("Christmas Tree in your town. This will be the")
+					say("proof to me that you have dedicated yourself")
+					say("to the joy of Christmas! With great effort comes")
+					say("great reward and on Christmas Day you shall receive")
+					say("a present for your hard labor!")
+					say("Until then, enjoy the festivities!")
+					say("")
+				elseif pc.getqf("state") < 2 or pc.getqf("state") == nil then
+					say("I need to ask you a favour!")
+					say("It's very, very important!")
+					say("")
+					say("If you have time for me please talk to me.")
+					say("")
+					local init = select("Talk to Santa.","I have no time right now.")
+					if init == 1 then
+						say_title("Santa Clause:")
+						say("")
+						say("Season's Greeting young adventurer!")
+						say("I have a request to ask of you...")
+						say("One of my reindeers has ran off!")
+						say("")
+						say("The Elves have looked in all the stables, but they")
+						say("fear she may have wandered deep into the Ice Mountains!")
+						say("The Elves are too terrified to go look for her in fear")
+						say("that they will run into a Ninetails.")
+						say("")
+						wait()
+						say_title("Santa Clause:")
+						say("")
+						say("To make matter worse, she's just about to give birth to")
+						say("a baby reindeer!")
+						say("")
+						say("I would go by myself, but as you can see, I have a very")
+						say("large list to check through and many presents to deliver.")
+						say("")
+						say("Please, can you find my lost reindeer?")
+						say("It has been several hours now and I fear the worst for")
+						say("her safety.")
+						say("")
+						local init2 = select("Of course!","Sorry, I'm busy.")
+						if init2 == 1 then
+							say_title("Santa Clause:")
+							say("")
+							say("Oh, thank you so much!")
+							say("Please hurry, the sooner you find her, the better.")
+							say("Here, you can use this training whistle to call her.")
+							say("")
+							say_white("He hands you a whistle with christmas decoration on it...")
+							say("")
+							say("Blow the whistle while you search for her, if she hears it,")
+							say("she will come running. Also, be careful out there, those")
+							say("Ninetails are very ferocious around this season.")
+							say("")
+							say("May the Christmas Spirit aid you on your journey!")
+							say("")
+							pc.give_item2(90080,1)
+							pc.setqf("target",number(1,25))
+							pc.setqf("state",2)
+						else
+							say_title("Santa Clause:")
+							say("")
+							say("That is too bad...")
+							say("Maybe I can convince one of the Elves to find her.")
+							say("")
+							say("I am sorry to have bothered you.")
+							say("")
+						end
+					end
+				else
+					wait()
+					say_title("Santa Clause:")
+					say("")
+					say("Good luck on finding the mother reindeer!")
+					say("May the christmas spirit guide you on your journey!")
+					say("")
+				end
+				if pc.getqf("init_nog") < 1 then
+					pc.setqf("init_nog",1)
+					pc.setqf("first_nog",1)
+				end
+			elseif selTab[s] == "A Christmas Meal" then
+				if pc.getqf("first_nog") == 1 then
+					say_title("Santa Clause:")
+					say("")
+					say("Ho ho ho young hero!")
+					say("You look a bit cold around your ears!")
+					say("I guess you're not used to the cold winter times")
+					say("as I am ho ho ho.")
+					say("")
+					say("Here take this, this should warm you up!")
+					say("")
+					say_reward("Eggnog Pouch (x6) received.")
+					say("")
+					wait()
+					pc.give_item2(50216,6)
+					pc.setqf("last_nog_give_time", get_global_time())
+					pc.setqf("first_nog",0)
+					say_title("Santa Clause:")
+					say("")
+					say("It's a traditional drink that will heat you")
+					say("up in no time, ho ho ho!")
+					say("And it even raises your Attack and Movement Speed")
+					say("a little")
+					say("")
+					say("Come to me tomorrow if you need more.")
+					say("")
+				else
+					say_title("Santa Clause:")
+					say("")
+					say("Ho ho ho, here to warm your spirits up again?")
+					say("")
+					if get_global_time() - pc.getqf ("last_nog_give_time") >= 86400 then
+						say("Here you go! Enjoy!")
+						say("")
+						pc.setqf ("last_nog_give_time", get_global_time())
+						pc.give_item2(nog_pocket,6)
+					else
+						say("Please wait a bit more my dear friend!")
+						say("One day has not passed yet and I have to treat")
+						say("everyone fairly! Wait until it's your turn again!")
+						say("")
+					end
+				end
+			elseif selTab[s] == "The Sock Hunt" then
+				if pc.getqf("q_init") < 1 then
+					say_title("Santa Clause:")
+					say("")
+					say("Season's greeting young fighter!")
+					say("")
+					say("Thanks for achieving this christmas miracle, the baby")
+					say("is as healthy as it could be and strolls happily through")
+					say("the Ice Mountains! But that is not why I asked you here.")
+					say("I need a favour yet again from you. The stockings on the")
+					say("Christmas Tree have been stolen by monsters.")
+					say("")
+					wait()
+					say_title("Santa Clause:")
+					say("")
+					say("Would you mind tracking down Christmas Stockings")
+					say("and bring them back to your christmas tree?")
+					say("My baby reindeer can help you, in fact it would")
+					say("be impossible to do without it!")
+					say("")
+					say("After you've hunted the stockings bring them")
+					say("to the christmas tree - it might bless you for your deeds!")
+					say("")
+					say_reward("Important: The baby reindeer will be fatigued after 4 hours.")
+					say_reward("You'll need to wait for a day before the next hunt after.")
+					say("")
+					pc.give_item2_select(53007,1)
+					item.set_socket(0,get_global_time()+14400)
+					pc.setqf("last_reindeer_give_time", get_global_time())
+					pc.setqf("state",4)
+					pc.setqf("q_init",1)
+				else
+					if pc.count_item(53007) > 0 then
+						say_title("Santa Clause:")
+						say("")
+						say("Good luck on your sock hunt!")
+						say("May the christmas spirit guide you on your journey!")
+						say("")
+						return
+					end
+					if get_global_time() - pc.getqf("last_reindeer_give_time") < 86400 then
+						say_title("Santa Clause:")
+						say("")
+						say("The baby reindeer is still exhausted.")
+						say("Try again in a few more hours.")
+						say("")
+					else
+						say_title("Santa Clause:")
+						say("")
+						say("Ho ho ho young hero!")
+						say("The baby reindeer has fully regenerated again.")
+						say("So you may go hunt for four more hours today.")
+						say("Do you want to go on another sock hunt now?")
+						say("")
+						local a = select("Yes.","No.")
+						if a == 1 then
+							pc.give_item2_select(53007,1)
+							item.set_socket(0,get_global_time()+14400)
+							pc.setqf("last_reindeer_give_time", get_global_time())
+							pc.setqf("state",4)
+						end
+					end
+				end
+			elseif selTab[s] == "The mother reindeer..." then
+				local my_x = pc.get_local_x()
+				local my_y = pc.get_local_y()
+				say_title("Santa Clause:")
+				say("")
+				say("Ho ho ho! Why the sad face my friend?")
+				say("")
+				say("Ah it is you! Do you know what happened to")
+				say("the reindeer?")
+				say("")
+				say("A ha ho ho ho! There's no need to worry my friend,")
+				say("you've done exceptionally well! This emblem is our")
+				say("dearest mother reindeer and it's in great shape!")
+				say("Just hold on to the emblem and think of the reindeer.")
+				say("")
+				wait()
+				say_title("You focus your thoughts on what just happened...")
+				say("")
+				say_white("Suddenly, the mother reindeer appears near you -")
+				say_white("and she is as fit as ever!")
+				say("")
+				say("She will be safe now, so you don't need to worry anymore.")
+				say("As a sign of my gratitude, you shall spread the christmas")
+				say("spirit around the world by mounting up one of my adult")
+				say("reindeers - it will be of great asset to you!")
+				say("")
+				say_reward("2.500.000 Yang received.")
+				say_reward("Reindeer Mount (20 hours) received.")
+				say("")
+				wait()
+				pc.setqf("state",3)
+				pc.remove_item(90080)
+				pc.give_item2_select(71164,1)
+				pc.change_gold(2500000)
+				if game.get_event_flag("christmas_spawn") < 50 then
+					mob.spawn(34010,my_x-1,my_y-1,0,0)
+					say_title("Santa Clause:")
+					say("")
+					say("Ho ho ho.. what a brilliant little baby reindeer")
+					say("she has gotten!")
+					say("She must be a very lucky mother.")
+					say("Come back here on christmas eve and maybe you can")
+					say("play with the baby reindeer.")
+					say("")
+					game.set_event_flag("christmas_spawn",game.get_event_flag("christmas_spawn")+1)
+				end
+			else
+			end
+		end
+		
+		when kill with npc.is_pc() == false and pet.is_summon(34010) == true and xmas_2012.has_santa() == true begin
+			if pc.get_level() - get_mob_level[npc.get_race()] < 11 then
+				local chance = number(1,80)
+				if chance == 1 then
+					game.drop_item_with_ownership(50010,1)
+				end
+			end
+		end
+		
+		when 34010.chat."Pet the baby reindeers" with xmas_2012.is_xmas() == true begin
+			say_title("Pet the baby reindeer")
+			say("")
+			say("It seems to enjoy your warm hand on its skin.")
+			say("")
+			if pc.getqf("got_gold") < 4 and pc.getqf("state") > 2 then
+				say("As you turn your hand back it feels a little heavy.")
+				say("There's solid Yang inside your hand!")
+				local amount = number(100000,1000000)
+				say("")
+				say_reward("You received "..amount.." Yang.")
+				say("")
+				pc.change_gold(amount)
+				pc.setqf("got_gold",pc.getqf("got_gold")+1)
+			end
+		end
+		
+		when 71144.use begin
+			xmas_2012.gift()
+			item.remove()
+		end
+		
+		when 20384.chat."The Christmas Stockings" with pc.getf("xmas_2012","state") == 4 begin
+			local p = pc.count_item(50010)
+			pc.setqf("socks_count",pc.getqf("socks_count")+p)
+			local q = pc.getqf("socks_count")
+			pc.remove_item(50010,p)
+			say_title("You hang the socks on the tree..")
+			say("")
+			say("Good job, it works way better now.")
+			say("")
+			if q > 4 then
+				say("Hey... is this a present under the tree?")
+				say("It wasn't there before.. is it for me?")
+				say("")
+				say_reward("Christmas Gift Box received.")
+				say("")
+				pc.give_item2(71144,1)
+				pc.setqf("socks_count",pc.getqf("socks_count")-5)
+				pc.setqf("state",3)
+			else
+				say("Maybe I should gather more socks tomorrow.")
+				say("")
+				pc.setqf("state",3)
+			end
+		end
+			
+		when 90080.use with pc.getf("xmas_2012","state") == 2 begin
+			local reindeer_tab = {
+				{1437,1341},
+				{1267,1389},
+				{1248,1273},
+				{1437,1052},
+				{1283,916},
+				{1431,742},
+				{252,1427},
+				{146,1222},
+				{258,1268},
+				{131,1018},
+				{140,517},
+				{416,375},
+				{397,151},
+				{1377,410},
+				{1463,530},
+				{1183,157},
+				{992,660},
+				{1117,1012},
+				{449,991},
+				{419,1360},
+				{485,1345},
+				{577,1335},
+				{268,850},
+				{1257,671},
+				{1249,1013},
+			}
+			local my_x = pc.get_local_x()
+			local my_y = pc.get_local_y()
+			if pc.get_map_index() != 61 then
+				chat("You are not in the Ice Mountains - The baby reindeer has to be in there!")
+				return
+			elseif math.abs(my_x-reindeer_tab[pc.getqf("target")][1]) > 20 or math.abs(my_y-reindeer_tab[pc.getqf("target")][2]) > 20 then
+				chat("You blow the training whistle, but nobody reacts, the mother reindeer must be someplace else.")
+				return
+			else
+				chat("You see an animal frozen in the snow, it seems to be the lost mother reindeer!")
+				mob.spawn(20216,my_x+1, my_y+1,0,0)
+				pc.setqf("state",5)
+			end
+		end
+		
+		when 20216.chat."Pet the Reindeer" with pc.getf("xmas_2012","state") == 5 begin
+			say_title("As you start petting the reindeer...")
+			say("")
+			say("The reindeer is smiling, it tries to express")
+			say("that it feels okay but you can sense its pain.")
+			say("")
+			say("[DELAY value=200]. . .[/DELAY]")
+			say("")
+			wait()
+			npc.purge()
+			say("")
+			say_white("As you try to hold on to it, fearing the worst,")
+			say_white("it dissolves into a horde of glowing lights.")
+			say_white("There's an emblem on the ground - maybe you should")
+			say_white("bring this to Santa and tell him what happened.")
+			say("")
+			pc.setqf("state",6)
+		end
+	end
+end
+		

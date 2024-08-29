@@ -1,0 +1,67 @@
+---------------------------------
+--New player item event
+----------------------------------
+quest newmember_event begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >=0  begin
+			set_state( information )		
+		end
+	end
+	state information begin
+		
+		when __TARGET__.target.click  or 
+			20016.chat."New player event!" with pc.count_item(50116)> 0 begin
+				---                                                   l
+				say("Blacksmith")
+				say("")
+				say("Ah..well...")
+				say("The emperor decided to open the weaponary")
+				say("to help new guys like you")
+				say("It was to strengthen the national security by")
+				say("making you guys stronger")
+				say("Let me see your voucher...")
+				wait()
+				say("Blacksmith")
+				say("")
+				say("Hmm... this is correct...")
+				say("Here~! These are the nest armour and shield you can have..")
+				say("You can get only once...")
+				say("Good luck... then..")
+				say("")
+				say("")
+				pc.remove_item(50116)	
+			
+						
+				clear_letter()
+				set_state(__COMPLETE__)
+				
+				if pc.job == 0 then
+					pc.give_item2(9001,1)
+					pc.give_item2(9504,1)
+					say_reward("Nahan Armour+5+5 와 Long Sword+5를 받았습니다")	
+				elseif pc.job == 1 then
+
+					pc.give_item2(9002,1)
+					pc.give_item2(9502,1)
+					say_reward("Azure Suit+5 와 Dagger+5를 받았습니다")
+				elseif pc.job == 2 then
+
+					pc.give_item2(9003,1)
+					pc.give_item2(9501,1)
+					say_reward("Jinhon Armour+5 와 Sword+5 를 받았습니다")
+				elseif pc.job == 3 then
+					
+					pc.give_item2(9004,1)
+					pc.give_item2(9505,1)
+					say_reward("Azure Dress+5 와 Fan+5 를 받았습니다")
+				end	
+			end 
+
+
+	end
+	
+	state __COMPLETE__ begin
+	end
+		
+end 
+																		   

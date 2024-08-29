@@ -1,0 +1,43 @@
+quest find_noviceguide begin
+    state start begin
+	when 11000.chat."Where is city guard?" or 
+	    11002.chat."Where is city guard?" or 
+	    11004.chat."Where is cityguard?" with pc.level < 10 begin
+	    say("Square Guard:")
+	    say("This guy doesn't have any sense of direction!")
+	    say("I give you the marks! Follow the shining dots.")
+	    say("")
+	    say_reward("You can find the city guard by following the shining dots.")
+	    say("")
+	    set_state(find)
+	end
+    end
+    state find begin
+	when letter begin
+	    local v=find_npc_by_vnum(20354)
+	    if 0==v then
+	    else
+		target.vid("__TARGET__", v, "Finding the city guard")
+	    end
+	end
+	when letter begin
+	    send_letter("Finding the city guard")
+	end
+	when button or info begin
+	    say_title("Finding the city guard")
+	    say("You can find the city guard by following the shining dots.")
+	    say("")
+	end
+	when __TARGET__.target.click begin
+	    target.delete("__TARGET__")
+	    say("city guard:")
+	    say("You were lost while looking for me?")
+	    say("What a dumb guy!")
+	    say("")
+	    say("Can you infiltrate the enemy territory safely like that?")
+	    say("")
+	    clear_letter();
+	    set_state(start)
+	end
+    end
+end

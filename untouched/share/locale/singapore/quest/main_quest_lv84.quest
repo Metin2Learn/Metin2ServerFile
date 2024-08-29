@@ -1,0 +1,151 @@
+quest main_quest_lv84 begin
+	state start begin
+	end
+	state state_0 begin
+		when login or levelup or enter with pc.level >= 84 begin
+			set_state (state_1)
+		end
+	end
+	state state_1 begin
+		when letter begin
+			local v = find_npc_by_vnum (20369)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv84.title_1)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv84.title_1)
+			say (locale.main_quest_lv84.say_1)
+		end
+		when 20369.chat.locale.main_quest_lv84.title_1 begin
+			target.delete("__TARGET__")
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv84.say_2)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv84.say_3)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv84.say_4)
+			pc.give_item2(31008) 
+			set_state (state_4)
+		end
+		
+	end
+	state state_4 begin
+		when letter begin
+			send_letter(locale.main_quest_lv84.title_2)
+		end
+		when button or info begin 
+			say_title(locale.main_quest_lv84.title_2)
+			say(locale.main_quest_lv84.say_5)
+		end
+
+		when 31008.use with pc.get_map_index() >= 2160000 and pc.get_map_index() < 2170000 begin --and pc.getf("devilcatacomb_zone", "level") == 5 begin 
+			party.give_buff (303, POINT_ATT_SPEED, 20, 13, 1800, 0, true, true)
+			party.give_buff (303, POINT_MOV_SPEED, 20, 12, 1800, 0, true, true)
+			party.give_buff (303, POINT_CASTING_SPEED, 20, 0, 1800, 0, true, true)
+			party.give_buff (303, POINT_ATTBONUS_MONSTER, 30, 0, 1800, 0, true, true)
+			party.give_buff (303, POINT_MAX_HP_PCT, 10, 0, 1800, 0, true, true)
+			party.give_buff (303, POINT_MAX_SP_PCT, 10, 0, 1800, 0, true, true)
+
+			say(locale.main_quest_lv84.say_6)
+				
+		end
+
+		when 2591.kill begin
+			say_title(locale.reward)
+			say_reward(string.format (locale.main_quest_lv60.say_17, 63000000))
+			say_reward(string.format (locale.main_quest_lv60.say_19, item_name(71026).." ".."2"..locale.count_postfix))
+			say_reward(string.format (locale.main_quest_lv60.say_19, item_name(70051)))
+			say_reward(string.format (locale.main_quest_lv60.say_19, item_name(70050)))
+
+			pc.give_exp2(63000000)
+			pc.change_money(250000)
+
+			pc.give_item2(71026) -- ÇöÃ¶
+			pc.give_item2(71026) -- ÇöÃ¶
+			pc.give_item2(70051) -- ¼±¿ÕÀÇ Àå°©
+			pc.give_item2(70050) -- ¼±¿ÕÀÇ ÁõÇ¥ 
+
+			set_state(state_2)
+		end
+	end
+	state state_2 begin
+		when letter begin
+			local v = find_npc_by_vnum (20369)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv84.title_3)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv84.title_3)
+			say (locale.main_quest_lv84.say_7)
+		end
+		when 20369.chat.locale.main_quest_lv84.title_3 begin
+			target.delete("__TARGET__")
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv84.say_8)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv84.say_9)
+		end
+		when 2597.kill begin
+			say_reward(locale.main_quest_lv84.say_9_1)
+			say(locale.main_quest_lv84.say_10)
+			set_state(state_3)
+		end
+	end
+	state state_3 begin
+		when letter begin
+			local v = find_npc_by_vnum (20369)
+			if v != 0 then
+				target.vid ("__TARGET__",v,"")
+			end
+			send_letter (locale.main_quest_lv84.title_4)
+		end
+		when button or info begin
+			say_title (locale.main_quest_lv84.title_4)
+			say (locale.main_quest_lv84.say_11)
+		end
+		when 20369.chat.locale.main_quest_lv84.title_4 begin
+			target.delete("__TARGET__")
+			say_title (" ")
+			say(locale.main_quest_lv84.say_12)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv84.say_13)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv84.say_14)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv84.say_15)
+			wait()
+			say_title (locale.main_quest_lv66.say_25)
+			say(locale.main_quest_lv84.say_16)
+			wait()
+			say_title (locale.reward)
+			say_reward(string.format (locale.main_quest_lv60.say_17, 84000000))
+			say_reward(string.format (locale.main_quest_lv60.say_18, 250000))
+			say_reward(string.format (locale.main_quest_lv60.say_19, item_name(71025).." ".."2"..locale.count_postfix))
+			say_reward(string.format (locale.main_quest_lv60.say_19, item_name(70038)))
+			say_reward(string.format (locale.main_quest_lv60.say_19, item_name(71107)))
+
+			pc.give_exp2(84000000)
+			pc.change_money(250000)
+
+			pc.give_item2(71025) -- ¾ß°ø¼®
+			pc.give_item2(71025) -- ¾ß°ø¼® 
+			pc.give_item2(70038) -- ¿ë±âÀÇ ¸ÁÅä
+			pc.give_item2(71107) -- Ãµµµº¹¼ş¾Æ
+			set_state(__COMPLETE__)
+		end
+	end
+
+	state __COMPLETE__ begin
+	end
+end
+

@@ -1,0 +1,117 @@
+quest item_change_sex begin
+	state start begin
+		when 71048.use begin 
+			if pc.get_level() < 50 then 
+				say_title("Gender Change Scroll!")
+				say_reward("Only the characters above level 50 can have gender change.")
+				say("")
+				say("Level is too low to have gender change.")
+				say("Please reach level 50")
+				say("Before you try again")
+				say("")
+				return;
+			end
+			
+			if pc.is_engaged() then
+				say_title("Unable to use Gender Change Scroll!")
+				say_reward("Only single character can have gender change.")
+				say("")
+
+				----"12345678901234567890123456789012345678901234567890"|
+				say("If you're married, you have to divorce")
+				say("before you change gender.")
+				say("")
+				return;
+			end
+
+			if pc.is_married() then
+				say_title("Unable to use Gender Change Scroll!")
+				say_reward("Only single character can have gender change.")
+				say("")
+
+				----"12345678901234567890123456789012345678901234567890"|
+				say("You have to divorce before you change gender.")
+				say("")
+				return;
+			end
+
+			if pc.is_polymorphed() then
+				say_title("Unable to use Gender Change Scroll!")
+				say_reward("Transformed character can't change gender.")
+				say("")
+
+				say("Transformed character can't change gender.")
+				say("")
+				return
+			end
+
+			if get_time() < pc.getqf("next_time") then
+				say_title("Unable to use Gender Change Scroll!")
+				say_reward("Gender Change items can be used once in 3 days.")
+				say("")	
+				----"12345678901234567890123456789012345678901234567890"|
+				say("Next available time:")
+				say("")
+
+				if pc.is_gm() then
+					say(string.format("    %s", time_to_str(pc.getqf("next_time"))))
+					say("")
+					say("GM can reset time for tesing")
+					local s = select("Yes", "NO")
+					if s == 1 then
+						say("Gender change time has been reset")
+						pc.setqf("next_time", 0)
+					end
+				end
+				return;
+
+			end
+
+			say("Gender Change Scroll:")
+			say("")
+			say("With this Scroll you can change your gender..")
+			say("")
+			say("Once used you have to wait 3 days until you can use another.")
+			wait()
+
+			say("Gender Change Scroll:")
+			say("")
+			say("After usage you have to log out and in again, for the changes")
+			say("to take effect.")
+			say("")
+			say("Now it's time to decide.")
+			say("Would you like to change your gender?")
+			say("")
+			local s=select(
+				"I want to change.",
+				"I don't want to change..")
+			if 1==s then
+				say("Gender Change Scroll:")
+				say("")
+				say("Your health and mana will stay the same")
+				say("Only your appearance will change.")
+				say("")
+				say_reward("New gender will apply after you log in next time")
+				say("")
+
+				pc.remove_item("71048",1)
+				pc.setqf("next_time", get_time() + 86400 * 3)
+
+				pc.change_sex()
+
+				local m_sex = pc.get_sex()
+
+				if m_sex == 0 then
+				    char_log(0, "CHANGE_SEX", "F -> M")
+				else
+				    char_log(0, "CHANGE_SEX", "M -> F")
+				end
+
+			elseif 2==s then
+				say("If you hesitate this, please don't do it.")
+				say("")
+			end
+		end
+	end
+end		
+

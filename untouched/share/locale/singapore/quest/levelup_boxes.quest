@@ -1,0 +1,45 @@
+quest levelup_boxes begin
+	state start begin
+		when login begin
+			pc.give_item2(90082)
+			set_state(run)
+		end
+	end
+	
+	state run begin
+		when 90082.use or 90083.use or 90084.use or 90085.use or 90086.use or 90087.use or 90088.use or 90089.use begin
+			local weapon = 16
+			if pc.job == 3 then
+				weapon = 7006
+			elseif pc.job == 1 then
+				weapon = 1006
+			end
+			local box_num = item.vnum-90081
+			local rewards = {
+				{1,4,90083,1,weapon,1,27001,10,72701,1},
+				{10,4,90084,1,27103,10,27001,10,90101,1},
+				{20,5,90085,1,27104,20,90100,1,90101,1,76006,1},
+				{30,6,90086,1,76006,1,76023,1,76024,1,90101,1,90108,1},
+				{40,10,90087,1,76006,1,76021,1,76023,1,76024,1,76011,1,76024,1,72701,1,90101,1,90108,2},
+				{50,10,90088,1,76019,5,76022,1,90106,1,90105,1,76016,1,76020,1,90101,1,90100,1,90108,3},
+				{60,8,90089,1,27105,10,90105,2,90108,4,76016,1,90106,2,76020,1,90101,1},
+				{70,9,90105,3,90106,3,90108,5,90100,1,90100,1,90107,1,76020,1,72701,1,90101},
+				{nil},
+				{nil},
+				}
+				
+			if rewards[box_num][1] == nil then
+				syschat("The seal on this chest is too strong. No matter what you do, it won't budge.")
+			elseif pc.get_level() < rewards[box_num][1] then
+				syschat("Your Level does not suffice to open this box.")
+			elseif pc.get_empty_inventory_count() < rewards[box_num][2] then
+				syschat("You do not have enough free inventory space to open this box.")
+			else
+				for i = 1,rewards[box_num][2],1 do
+					pc.give_item2(rewards[box_num][3+2*(i-1)],rewards[box_num][4+2*(i-1)])
+				end
+				item.remove()
+			end
+		end
+	end
+end

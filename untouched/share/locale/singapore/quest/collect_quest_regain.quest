@@ -1,0 +1,203 @@
+quest collect_quest_regain begin
+	state start begin
+		when login with pc.level >= 92 begin
+			if tostring(get_quest_state("collect_quest_lv92")) == "557528158" or tostring(get_quest_state("collect_quest_lv92")) == "1918565466" then
+				pc.setqf("able_92",1)
+				pc.setqf("change",1)
+				if tostring(get_quest_state("collect_quest_lv92")) == "557528158" or tostring(get_quest_state("collect_quest_lv94")) == "1918565466" then
+					pc.setqf("able_94",1)
+					pc.setqf("change",2)
+					if tostring(get_quest_state("collect_quest_lv92")) == "557528158" or tostring(get_quest_state("collect_quest_lv96")) == "1918565466" then
+						pc.setqf("able_96",1)
+						pc.setqf("change",3)
+					end
+				end
+				set_state( regain )
+			else
+				set_state( complete )
+			end
+		end
+	end
+
+	state regain begin
+		when login with pc.level >= 92 begin
+			if pc.getqf("change") == 1 then
+				if pc.getqf("renew_92") == 1 then
+					set_state(complete)
+				end
+			elseif pc.getqf("change") == 2 then
+				if pc.getqf("renew_92") == 1 and pc.getqf("renew_94") == 1 then
+					set_state(complete)
+				end
+			elseif pc.getqf("change") == 3 then
+				if pc.getqf("renew_92") == 1 and pc.getqf("renew_94") == 1 and pc.getqf("renew_96") == 1 then
+					set_state(complete)
+				end
+			end
+		end
+	
+		when 20091.chat."Regain Lv92 Reward" begin
+			if pc.getqf("renew_92") <1 and pc.getqf("able_92") == 1 then
+				say_title("Seon-Pyeong:")
+				say("")
+				say("As I promised, I will change one of your rewards")
+				say("")
+
+				local selTab = {}
+				local pos = 1 
+
+				if tostring(get_quest_state("collect_quest_lv92")) == "557528158" or tostring(get_quest_state("collect_quest_lv92")) == "1918565466" and pc.getqf("renew_92") < 1 then	
+					table.insert(selTab, pos, "Red sky gem reward")
+					pos = pos + 1
+				end
+
+				local s = select_table( selTab )
+
+				if selTab[s] == "Red sky gem reward" then
+				s = select("Health +1000","Defence +300","Attack +100")
+					if 1== s then
+						if pc.getf("collect_quest_lv94","block_id") == 1 or pc.getf("collect_quest_lv96","block_id") == 1 then
+							say_white("You can not pick the same reward twice.")
+							return;
+						else
+							affect.add_collect(1, 1000, 60*60*24*365*60) --hp+3000  hp is 1 
+							pc.setf("collect_quest_lv92","block_id",1)
+							pc.setqf("renew_92",1)
+						end
+					elseif 2== s then
+						if pc.getf("collect_quest_lv94","block_id") == 2 or pc.getf("collect_quest_lv96","block_id") == 2 then
+							say_white("You can not pick the same reward twice.")
+							return;
+						else
+							affect.add_collect(apply.DEF_GRADE_BONUS, 300, 60*60*24*365*60) 
+							pc.setf("collect_quest_lv92","block_id",2)
+							pc.setqf("renew_92",1)
+						end
+					else 
+						if pc.getf("collect_quest_lv94","block_id") == 3 or pc.getf("collect_quest_lv96","block_id") == 3 then
+							say_white("You can not pick the same reward twice.")
+							return;
+						else
+							affect.add_collect(apply.ATT_GRADE_BONUS,100,60*60*24*365*60)--60years
+							pc.setf("collect_quest_lv92","block_id",3)
+							pc.setqf("renew_92",1)
+						end
+					end
+				end
+			else
+				say_title("Seon-Pyeong:")
+				say("You can not change this quest reward.")
+			end
+		end
+		
+		when 20091.chat."Regain Lv94 Reward" begin
+			if pc.getqf("renew_94") <1 and pc.getqf("able_94") == 1 then
+				say_title("Seon-Pyeong:")
+				say("")
+				say("As I promised, I will change one of your rewards")
+				say("")
+	
+				local selTab = {}
+					local pos = 1 
+					
+				if tostring(get_quest_state("collect_quest_lv94")) == "557528158" or tostring(get_quest_state("collect_quest_lv94")) == "1918565466" and pc.getqf("renew_94") < 1 then	
+					table.insert(selTab, pos, "White sky gem reward")
+					pos = pos + 1
+				end
+				
+				local s = select_table( selTab )
+
+				if selTab[s] == "White sky gem reward" then
+					s = select("Health +1500","Defence +500","Attack +200")
+					if 1== s then
+						if pc.getf("collect_quest_lv92","block_id") == 1 or pc.getf("collect_quest_lv96","block_id") == 1 then
+							say_white("You can not pick the same reward twice.")
+							return;
+						else
+							affect.add_collect(1, 1500, 60*60*24*365*60) --hp+3000  hp is 1 
+							pc.setf("collect_quest_lv94","block_id",1)
+							pc.setqf("renew_94",1)
+						end
+					elseif 2== s then
+						if pc.getf("collect_quest_lv92","block_id") == 2 or pc.getf("collect_quest_lv96","block_id") == 2 then
+							say_white("You can not pick the same reward twice.")
+							return;
+						else
+							affect.add_collect(apply.DEF_GRADE_BONUS, 500, 60*60*24*365*60) 
+							pc.setf("collect_quest_lv94","block_id",2)
+							pc.setqf("renew_94",1)
+						end
+					else 
+						if pc.getf("collect_quest_lv92","block_id") == 3 or pc.getf("collect_quest_lv96","block_id") == 3 then
+							say_white("You can not pick the same reward twice.")
+							return;
+						else
+							affect.add_collect(apply.ATT_GRADE_BONUS,200,60*60*24*365*60)--60years
+							pc.setf("collect_quest_lv94","block_id",3)
+							pc.setqf("renew_94",1)
+						end
+					end
+				end
+			else
+				say_title("Seon-Pyeong:")
+				say("You can not change this quest reward.")
+			end
+		end
+	
+		when 20091.chat."Regain Lv96 Reward" begin
+			if pc.getqf("renew_96") <1 and pc.getqf("able_96") == 1 then
+				say_title("Seon-Pyeong:")
+				say("")
+				say("As I promised, I will change one of your rewards")
+				say("")
+
+				local selTab = {}
+				local pos = 1 
+					
+				if tostring(get_quest_state("collect_quest_lv96")) == "557528158" or tostring(get_quest_state("collect_quest_lv96")) == "1918565466" then	
+					table.insert(selTab, pos, "Blue sky gem reward")
+					pos = pos + 1
+				end
+				
+				local s = select_table( selTab )
+				
+				if selTab[s] == "Blue sky gem reward" then
+					s = select("Health +3000","Defence +700","Attack +300")
+					if 1== s then
+						if pc.getf("collect_quest_lv92","block_id") == 1 or pc.getf("collect_quest_lv94","block_id") == 1 then
+							say_white("You can not pick the same reward twice.")
+							return;
+						else
+							affect.add_collect(1, 3000, 60*60*24*365*60) --hp+3000  hp is 1 
+							pc.setf("collect_quest_lv96","block_id",1)
+							pc.setqf("renew_96",1)
+						end
+					elseif 2== s then
+						if pc.getf("collect_quest_lv92","block_id") == 2 or pc.getf("collect_quest_lv94","block_id") == 2 then
+							say_white("You can not pick the same reward twice.")
+							return;
+						else
+							affect.add_collect(apply.DEF_GRADE_BONUS, 700, 60*60*24*365*60) 
+							pc.setf("collect_quest_lv96","block_id",2)
+							pc.setqf("renew_96",1)
+						end
+					else 
+						if pc.getf("collect_quest_lv92","block_id") == 3 or pc.getf("collect_quest_lv94","block_id") == 3 then
+							say_white("You can not pick the same reward twice.")
+							return;
+						else
+							affect.add_collect(apply.ATT_GRADE_BONUS,300,60*60*24*365*60)--60years
+							pc.setf("collect_quest_lv96","block_id",3)
+							pc.setqf("renew_96",1)
+						end
+					end
+				end
+			else
+				say_title("Seon-Pyeong:")
+				say("You can not change this quest reward.")
+			end
+		end
+	end
+	state complete begin
+	end
+end

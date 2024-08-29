@@ -1,0 +1,87 @@
+----------------------------------------------
+-- File: trading_offer.quest
+-- Autor: Paylasici
+----------------------------------------------
+quest trading_offer begin
+    state start begin
+		function get_trading_offer_random_item(randomItemTable)
+			item_table =
+			{
+				['TRADING_OFFER_ITEM_A'] = {
+												30003, 30004, 30005, 30007, 30009, 30011, 30014, 30016, 30017, 30018, 30019,
+												30021, 30022, 30023, 30028, 30030, 30032, 30023, 30028, 30030, 30032, 30033,
+												30034, 30035, 30037, 30038, 30041, 30042, 30048, 30049, 30051, 30053, 30055,
+												30058, 30059, 30060, 30069, 30071, 30072, 30073, 30074, 30075, 30076, 30077,
+												30078, 30086, 30089, 30090, 30092, 27990
+											},
+
+				['TRADING_OFFER_ITEM_B'] = {
+												30005, 30006, 30008, 30015, 30021, 30025, 30030, 30039, 30040, 30045, 30046,
+												30050, 30052, 30056, 30057, 30059, 30060, 30061, 30067, 30071, 30075, 30078,
+												30079, 30080, 30081, 30083, 30085, 30087, 30088, 30091, 30193
+											},
+			}
+			randomItemTable = tostring(randomItemTable)
+
+			return item_table[randomItemTable]
+		end
+
+		when login begin
+			if game.get_event_flag('trading_offer_time') < get_time() then
+				local trading_offer_item_a = trading_offer.get_trading_offer_random_item('TRADING_OFFER_ITEM_A')
+				local trading_offer_item_b = trading_offer.get_trading_offer_random_item('TRADING_OFFER_ITEM_B')
+
+				game.set_event_flag('trading_offer_time', get_time()+(60*60*24))
+				game.set_event_flag('trading_offer_item_a', trading_offer_item_a[number(0, 44)])
+				game.set_event_flag('trading_offer_item_b', trading_offer_item_b[number(0, 31)])
+			end
+		end
+
+		when 20010.chat."Todays Trading Offer" begin
+			if game.get_event_flag('trading_offer_time') < get_time() then
+				local trading_offer_item_a = trading_offer.get_trading_offer_random_item('TRADING_OFFER_ITEM_A')
+				local trading_offer_item_b = trading_offer.get_trading_offer_random_item('TRADING_OFFER_ITEM_B')
+
+				game.set_event_flag('trading_offer_time', get_time()+(60*60*24))
+				game.set_event_flag('trading_offer_item_a', trading_offer_item_a[number(0, 44)])
+				game.set_event_flag('trading_offer_item_b', trading_offer_item_b[number(0, 31)])
+			end
+
+			if game.get_event_flag('trading_offer_item_a') and game.get_event_flag('trading_offer_item_b') != nil then
+				local trading_offer_item_a = tonumber(game.get_event_flag('trading_offer_item_a'))
+				local trading_offer_item_b = tonumber(game.get_event_flag('trading_offer_item_b'))
+
+				say_title("Peddler:[ENTER]")
+				say("Hello "..pc.get_name()..", I have a special offer for you today.[ENTER]")
+				say("Wanted:")
+				say_item_vnum(trading_offer_item_a)
+				say("Offer:")
+				say_item_vnum(trading_offer_item_b)
+
+				if pc.count_item(game.get_event_flag('trading_offer_item_a')) > 0 then
+					wait()
+					say_title("Peddler:[ENTER]")
+					say("You would like to trade?")
+
+					local buffer = select("Yes, trade all.", "Yes, I want.", locale.cancel)
+
+					if buffer == 1 then
+						pc.give_item2(game.get_event_flag('trading_offer_item_b'), pc.count_item(game.get_event_flag('trading_offer_item_a')))
+						pc.remove_item(game.get_event_flag('trading_offer_item_a'), pc.count_item(game.get_event_flag('trading_offer_item_a')))
+					elseif buffer == 2 then
+						pc.give_item2(game.get_event_flag('trading_offer_item_b'), 1)
+						pc.remove_item(game.get_event_flag('trading_offer_item_a'), 1)
+					else
+						return
+					end
+				else
+					return
+				end
+			else
+				say_title("Peddler:[ENTER]")
+				say("Hello "..pc.get_name()..", unfortunately there is today no")
+				say("trading offer available. Please come later back.")
+			end
+		end
+    end
+end

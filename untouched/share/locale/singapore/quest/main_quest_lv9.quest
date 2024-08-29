@@ -1,0 +1,65 @@
+quest main_quest_lv9 begin
+        state start begin
+        end
+        state run begin
+                when login or levelup or enter with pc.get_level() >= 9 begin
+                        set_state( gototeacher )
+                end
+        end
+        state gototeacher begin
+                when letter begin
+                	send_letter("Talk to the City Guard.")
+                        local v=find_npc_by_vnum(20354)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find the City Guard.")
+                        end
+                end
+                when button or info begin
+                	----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("Talk to the City Guard.")
+                        say("")
+                        say("He will introduce you to the Captain who has a new")
+                        say("assignment for you. As a reward for the assignment you")
+                        say("will get some Yang and Experience points.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        say_title("City Guard:")
+                        say("")
+                        say("I think you are ready for some harder assignments. They")
+                        say("will not be as easy as they have been. You have to work")
+                        say("hard for the future of our kingdom")
+                        say("")
+                        say("You will fight lots of battles. You may sometimes suffer,")
+                        say("but always be attentive.")
+                        say("")
+                        say("You have finished your assignments so far.")
+                        say("As a reward for your efforts you deserve a prize.")
+                        say("I hope you will find it useful.")
+                        say("")
+                        wait()
+                        say_title("City Guard:")
+                        say("")
+                        say("From now on the Captain will guide you.")
+                        say("")
+                        say("He will supervise you in the future and will give you some")
+                        say("assignments. Gather some more experience and then report")
+                        say("to him. Good luck!")
+                        say("")
+                        say_title("Reward:")
+                        say("")
+                        say_reward("Experience points: 7.000")
+                        say_reward("Yang: 9.500")
+                        say("")
+                        pc.give_exp2( 7000 )
+                        pc.change_money( 9500 )
+                        clear_letter()
+                        set_state( __COMPLETE__ )
+                        set_quest_state("main_quest_lv10", "run")
+                end
+        end
+        state __COMPLETE__ begin
+        end
+end

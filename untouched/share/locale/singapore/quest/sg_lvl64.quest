@@ -1,0 +1,52 @@
+----------------------------------------------------
+-- Metin2 SG
+-- Level 64 Quest 
+----------------------------------------------------
+
+quest sg_lvl64 begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >=64  begin
+			set_state(information)
+
+		end
+	end
+
+        state information begin
+                when letter begin
+                        local v=find_npc_by_vnum(20023)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Mr Soon")
+                        end
+                end
+
+                when __TARGET__.target.click or 20023.chat."We need to talk..." begin
+                        target.delete("__TARGET__")
+                        ----"12345678901234567890123456789012345678901234567890"|
+                        say_title("Hong-Hae:")
+                        say("")
+                        local j = pc.get_job()
+                        if 1 == j then
+                        	say("So you are that ninja everyone talks about.")
+                        elseif 2 ==j then
+                        	say("So you are that sura everyone talks about.")
+                        elseif 3 == j then
+                        	say("So you are that mage everyone talks about.")
+                        else
+                        	say("So you are that warrior everyone talks about.")
+                        end
+                        say("")
+                        say("Mmmh... I am a lady and I'm not sure I should be")
+                        say("talking to a commoner like you.")
+                        say("")
+                        say("But I must confess all those stories I heard")
+                        say("incited my curiosity.")
+                        say("")
+                        wait()
+                        say_title("Hong-Hae:")
+                        say("")
+                        say(npc.kill
+                        
+                        set_state(to_uriel)
+                 end
+	end

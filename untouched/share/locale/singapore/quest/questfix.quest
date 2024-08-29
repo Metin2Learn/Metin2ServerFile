@@ -1,0 +1,12 @@
+quest questfix begin
+  	state start begin
+  		when login begin
+   			if tostring(get_quest_state("main_quest_lv30")) == "668443392" then
+   				if pc.getf("main_quest_lv32","__status") == main_quest_lv32.start then
+    					set_quest_state("main_quest_lv32","run")
+   			 		syschat("Level 32 quest fixed.")
+				end
+			end
+ 		end
+	end
+end

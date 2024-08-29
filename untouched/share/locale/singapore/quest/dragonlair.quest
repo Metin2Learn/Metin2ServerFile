@@ -1,0 +1,191 @@
+----------------------------------------------------
+-- Dragonroom Quest
+----------------------------------------------------
+quest dragontemple begin
+    state start begin
+
+        when 30121.chat."I want to kill the dragon" with pc.get_map_index() == 73 and game.get_event_flag("dragontemple_open") == 1 begin
+			if get_time() > game.get_event_flag("blockentry") and game.get_event_flag("blockentry") > 1 then
+				game.set_event_flag("dragontemple_block",1)
+				game.set_event_flag("blockentry", 0)
+			end
+			
+			if get_time() > game.get_event_flag("reopen") and game.get_event_flag("reopen") > 1 then
+				game.set_event_flag("dragontemple_used",0)
+				game.set_event_flag("dragontemple_block",0)
+				game.set_event_flag("reopen", 0)
+			end
+			
+			if game.get_event_flag("reopen")-get_time() < 0 then
+				dragontime = 1
+			else
+				dragontime = game.get_event_flag("reopen")-get_time()
+			end
+			
+            if game.get_event_flag("dragontemple_used") == 1 and game.get_event_flag("empire") == pc.get_empire() then
+                if game.get_event_flag("dragontemple_block") == 1 then
+                    say_title(mob_name(30121))
+                    say("")
+                    say("Currently you can't go into the Dragon's Lair.")
+					say("Please come back later.")
+					say("")
+					say("Time Remaining: "..dragontime.." seconds.")
+					say("")
+                    return;
+                end
+                
+                say_title(mob_name(30121))
+                say("")
+                say("I'm sorry, but the Dragon's Lair is currently")
+				say("reserved.")
+                say("If you have the password to access it,")
+                say("please enter it now...")
+                local password = input()
+                if game.get_event_flag("dragontemple_password") == tonumber(password) then
+                    say_title(""..mob_name(30121).."")
+                    say("")
+                    say("The password is correct!")
+                    say("I'll lead you to the chamber.")
+                    wait()
+                    say_title(""..mob_name(30121).."")
+                    say("")
+                    say("If you want, I can lead you into the")
+                    say("Dragon's Lair right now.")
+                    say("Just hand me over 3 of these:")
+                    say("")
+                    say_item_vnum(30179)
+                   
+                    local s = select("Please take them and let me in!", "Cancel")
+                    if s == 1 then
+                        if pc.count_item(30179) >= 3 then
+                            pc.remove_item(30179,3)
+                            pc.warp(844000, 1066900,(207*10000))
+							pc.setqf("payment", 1)
+                        else
+                            say("You only have "..pc.count_item(30179).." of 3 needed")
+                            say("")
+                            say_item_vnum(30179)
+                        end
+                    else
+                        return
+                    end
+                else
+                    say_title(""..mob_name(30121).."")
+                    say("")
+                    say("The password is not correct!")
+                    return
+                end
+            elseif pc.has_guild() and game.get_event_flag("dragontemple_used") == 0 then
+                say_title(""..mob_name(30121).."")
+                say("")
+                say("So you want to fight against the dragon?")
+                say("Please give me a password to enter the")
+                say("Dragon's Lair (only numeric) so I can protect it.")
+                say("You can tell this password to your friends")
+                say("to help you and enter the Dragon's Lair.")
+                say("Please tell the password to me.")
+                local password = tonumber(input(""))
+                game.set_event_flag("dragontemple_password",password)
+                say_title(""..mob_name(30121).."")
+                say("")
+                say("If you want, I can lead you into the")
+                say("Dragon's Lair right now.")
+                say("Just hand me over 3 of these:")
+				say_item_vnum(30179)
+				say("")
+				say_reward("Please reminder, people who want to join you only")
+				say_reward("have 5 minutes before entrance locks down!")
+                say("")
+                
+                local s = select("Please take them and let me in!", "Cancel")
+                if s == 1 then
+                    if pc.count_item(30179) >= 3 then
+						empire = pc.get_empire()
+                        pc.remove_item(30179,3)
+                        DragonLair.startRaid(207)
+                        game.set_event_flag("dragontemple_used",1)
+						game.set_event_flag("empire",empire)
+						game.set_event_flag("metinkills", 0)
+						game.set_event_flag("reopen", get_time()+60*60)
+                        game.set_event_flag("blockentry", get_time()+5*60)
+						pc.setqf("payment", 1)
+                    else
+                        say("You only have "..pc.count_item(30179).." of 3 needed")
+                        say("")
+                        say_item_vnum(30179)
+                        say("")
+                        return
+                    end
+                elseif s==2 then
+                    return                                
+                end
+            elseif not pc.has_guild() then
+                say_title(""..mob_name(30121).."")
+                say("")
+                say("You need to be a member of a guild")
+                say("to fight against the dragon.")
+			elseif game.get_event_flag("empire") > pc.get_empire() or game.get_event_flag("empire") < pc.get_empire() then
+				say_title(""..mob_name(30121).."")
+				say("")
+				say("Sorry but the Dragon Lair is currently")
+				say("occupied by another kingdom so you can not join")
+            end
+        end
+		
+		when login with pc.get_map_index() >= (207*10000) and pc.get_map_index() <= (208*10000) begin
+			if pc.getqf("payment") < 1 then
+				if pc.count_item(30179) >= 3 then
+					pc.remove_item(30179,3)
+				else
+					pc.warp(181800,1220863)
+					send_letter("You have been banished from Dragon's Lair")
+				end
+			else
+				pc.setqf("payment", 0)
+			end
+		end
+        
+		when button or info begin
+			say_title("Dragon's Lair")
+			say("")
+			say("You did not have enough Dragon God's Symbols")
+			say("to enter the chamber.")
+			say("Therefore you have been kicked out of it.")
+			say("")
+			say("You require 3 Dragon God's Symbols to enter")
+			say_item_vnum(30179)
+			say("")
+			say_reward("You can join again if you get 3 Dragon God's Symbol")
+		end
+		
+		when 8031.kill or 8032.kill or 8033.kill or 8034.kill begin
+			game.set_event_flag("metinkills", game.get_event_flag("metinkills")+1)
+			if game.get_event_flag("metinkills") == 3 then
+				game.set_event_flag("metinkills", 3)
+				metin = {
+				{8031, 8032, 8033, 8034},
+				}
+				n = number(1,4)
+				x = number(155,185)
+				y = number(155,185)
+				mob.spawn(tonumber(metin[1][n]), x, y, 1, 0, 1)
+			end
+		end
+		
+        when 2493.kill with pc.get_map_index() >= (207*10000) and pc.get_map_index() <= (208*10000) begin
+			local drop = number(1,10)
+			if drop <= 3 then
+				game.drop_item(71123)
+			elseif drop >= 4 and drop <= 8 then
+				game.drop_item(71129)
+			elseif drop >= 9 then
+				game.drop_item(71123)
+				game.drop_item(71129)
+			end
+			game.set_event_flag("reopen", get_time()+30*60)
+			notice_all("The group of "..pc.get_name().." has successfully slained the Aqua Dragon!")
+			game.set_event_flag("metinkills", 0)
+			game.set_event_flag("dragontemple_block",1)
+        end
+    end
+end  

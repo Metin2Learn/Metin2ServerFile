@@ -1,0 +1,70 @@
+quest spider_nest begin
+	state start begin
+	
+	when 2094.kill begin
+	
+		game.drop_item_with_ownership(30327, 1)
+		notice_in_map("The Spider King is dead! Use now the Arachnid Whistle to summon the Baroness")
+		
+	end
+	
+	when 30327.use with pc.getx() >= 827 and pc.get_map_index() == 193 and pc.getx() <= 937 and pc.gety() >= 6127 and  pc.gety() <= 6257 begin
+	
+		pc.remove_item(30327, 1)
+		mob.spawn(2095,400,566,0,0)
+		mob.spawn(2095,400,594,0,0)
+		mob.spawn(2095,362,600,0,0)
+		mob.spawn(2095,337,599,0,0)
+		mob.spawn(2095,335,581,0,0)
+		mob.spawn(2095,344,562,0,0)
+		mob.spawn(2095,364,588,0,0)
+		mob.spawn(2095,379,562,0,0)
+		mob.spawn(2095,368,525,0,0)
+			
+			
+			local kingVid = mob.spawn(2092,367,588,0,0)
+			game.set_event_flag("king_vid",kingVid)
+			game.set_event_flag("remain_egg",9)
+			
+	end
+		
+		
+	when 2095.kill begin
+	
+		local kingVid = game.get_event_flag("king_vid")
+		local remain_egg = game.get_event_flag("remain_egg"..get_channel_id())
+			
+			if remain_egg > 0 then
+
+				remain_egg = remain_egg - 1
+				game.set_event_flag("remain_egg"..get_channel_id(), remain_egg)
+				
+			end
+			
+			 npc.set_vid_attack_mul(kingVid, 10/(remain_egg + 1))
+			 
+			 npc.set_vid_damage_mul(kingVid, 10/(remain_egg + 1))
+			 
+	end
+		
+		
+	when 2092.kill begin
+		
+		notice_in_map("The Spider Baroness has been defeated! Congratulations, brave players")
+		server_timer("spider_dead_timer", 180)
+		game.drop_item_with_ownership(90309, 1)
+		game.set_event_flag("spider_dead"..get_channel_id(), 1)
+			
+	end
+		
+	when spider_dead_timer.server_timer begin
+	
+		warp_all_in_area_to_area(82700, 612700, 93700,625700, 69100, 614800, 69100, 614800)
+		game.set_event_flag("spider_lair_ongoing_"..get_channel_id(), 0)
+		game.set_event_flag("spider_lair_leader_"..get_channel_id(), 0)
+		game.set_event_flag("spider_dead"..get_channel_id(),0)
+		purge_area(82700, 612700, 93700,625700)
+		
+		end
+	end
+end	

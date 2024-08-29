@@ -1,0 +1,115 @@
+quest guild_war_bet begin
+        state start begin
+                when
+                        guild_war_observer1.chat."Guild War-Bet" or
+                        guild_war_observer2.chat."Guild War-Bet" or
+                        guild_war_observer3.chat."Guild War-Bet" begin
+                        guild.get_reserve_war_table returns
+                        {     1        2               3           4
+                        { id, presume_winner, presume_loser, handicap },
+                        }
+                        local info_counter = pc.getqf("Info")
+
+                        if info_counter < 3 then
+                                say_title("The Guild War-Bet.")
+                                say("")
+                                ----"12345678901234567890123456789012345678901234567890"|
+                                say("Buy a Betting Lot for your empire.")
+                                say("1 At every guild war, there will be an announcement")
+                                say("of the possible projection for the victorious guild")
+                                say("")
+                                say("2. You can buy a Betting Lot, and give your tip")
+                                say("which guild will win and if the guild reaches the ")
+                                say("announced projection or not.")
+                                say("")
+                                say("3. The possibilities for choosing a bet are")
+                                say("controlled by the Betting Booth and when the war")
+				say("ends you are informed if you have won or lost.")
+                                say("* 10% of the profit is paid to the empire.")
+                                pc.setqf("Info", info_counter + 1)
+                                wait()
+                        end
+
+                        local g = guild.get_reserve_war_table()
+                        local gname_table = {}
+
+                        table.foreachi(g,
+                        function(n, p)
+                                gname_table[n] = guild.get_name(p[2]).." against "..guild.get_name(p[3])
+                        end)
+
+                        if table.getn(g) == 0 then
+                                -- no currently war
+                                say_title("Battle Administrator:")
+                                say("")
+                                say("There is no guild war in the moment, you could bet on.")
+                                say("")
+                        else
+                                gname_table[table.getn(g)+1] = "Abbort"
+                                say_title("Battle Administrator:")
+                                say("")
+				----"12345678901234567890123456789012345678901234567890"|
+                                say("For which guild war you want to buy a Betting Lot?")
+
+                                local s = select_table(gname_table)
+
+                                if s != table.getn(gname_table) then
+                                        if guild.is_bet(g[s][1]) then
+                                                say_title("Battle Administrator:")
+                                                say("")
+                                                say("On my list stands, you already have a Betting Lot")
+                                                say("for this guild war.")
+                                                say("You can only buy one Lot per war.")
+                                        else
+                                                local name1 = guild.get_name(g[s][2])
+                                                local name2 = guild.get_name(g[s][3])
+
+                                                say_title("Battle Administrator:")
+                                                say("")
+                                                say("The guild with the name")
+                                                say(name1.." "..name2.."with "..g[s][4].."seems to be victorious.")
+                                                say("On which guild you want to bet?")
+                                                say(name1.."It is to be foreseen, that guild"..name2..""..g[s][4].."will be victorious.[ENTER][ENTER]On which guild you want to bet?")
+                                                local guild_s = select(name1, name2, "Abbort")
+
+                                                if guild_s != 3 then
+                                                        local bet_guild = g[s][guild_s+1]
+
+                                                        say_title("Battle Administrator:")
+                                                        say("")
+                                                        say("Hmm ... A good choice! Waht is you option?")
+
+                                                        local price_button_table = {}
+
+                                                        table.foreachi(guild_war_bet_price_table,
+                                                        function(n, p)
+                                                                price_button_table[n] = p.."Yang"
+                                                        end)
+
+                                                        price_button_table[table.getn(price_button_table)+1] =  "Abbort"
+
+                                                        local price_idx = select_table(price_button_table)
+
+                                                        if price_idx != table.getn(price_button_table) then -- ? ??? ?? ??? ???
+                                                                if pc.gold < guild_war_bet_price_table[price_idx] then
+                                                                        say_title("Battle Administrator:")
+                                                                        say("")
+                                                                        say("You do not have enough Yang!")
+                                                                        say("")
+                                                                else
+                                                                        say_title("Battle Administrator:")
+                                                                        say("")
+                                                                        pc.changegold(-guild_war_bet_price_table[price_idx])
+                                                                        guild.war_bet(g[s][1], bet_guild, guild_war_bet_price_table[price_idx])
+                                                                        say("Everything is ready. If you have chosen right,")
+                                                                        say("The Yang will be paid and given to you, ")
+                                                                        say("when the guild war is over. Good luck!")
+                                                                end
+                                                        end
+                                                end -- if guild_s != 3
+                                        end -- if guild.is_bet(g[s][1])
+                                end -- if s != table.getn(gname_table)
+                        end
+                end
+        end
+end

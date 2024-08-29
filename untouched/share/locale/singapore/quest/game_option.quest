@@ -1,0 +1,47 @@
+quest game_option begin
+	state start begin
+		when login begin
+			local val = 0
+			local msg = "Blocked function: "
+
+			if pc.getqf("block_exchange") == 1 then
+				msg = msg.."Trade "
+				val = val + 1
+			end
+
+			if pc.getqf("block_guild_invite") == 1 then
+				val = val + 4
+				msg = msg.."Guild "
+			end
+
+			if pc.getqf("block_messenger_invite") == 1 then
+				msg = msg.."Messenger "
+				val = val + 16
+			end
+
+			if pc.getqf("block_party_invite") == 1 then
+				msg = msg.."Party invitation "
+				val = val + 2
+			end
+
+			if pc.getqf("block_party_request") == 1 then
+				msg = msg.."Party Joining "
+				val = val + 32
+			end
+
+			if pc.getqf("block_whisper") == 1 then
+				msg = msg.."Short message "
+				val = val + 8
+			end
+
+			if val != 0 then
+				syschat(msg)
+			end
+
+			pc.send_block_mode(val)
+
+			local mapindex = pc.get_map_index()
+			cmdchat("QuestGetMapIndex "..pc.get_map_index())
+		end
+	end
+end

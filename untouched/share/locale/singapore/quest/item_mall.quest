@@ -1,0 +1,8 @@
+quest item_mall begin
+        state start begin
+            when 9010.chat."Use of the Item Mall" with is_test_server() begin
+                    setskin(NOWINDOW)
+                cmdchat("Item Stock Mall")
+            end
+        end
+end

@@ -1,0 +1,179 @@
+----------------------------------------------
+-- File: guild_housing.quest
+-- Autor: Paylasici
+----------------------------------------------
+quest guild_housing begin
+	state start begin
+		function get_gh_state()
+			local str1 = 'gh_state_'
+			local str2 = guild.get_name(pc.get_guild())
+			local output = str1..str2
+			return output
+		end
+
+		function get_gh_map_position(mapName)
+			gh_map_position =
+			{
+				['GUILD_HOUSING_MAP_01'] = {250, 805700, 17200}
+			}
+			mapName = tostring(mapName)
+
+			return gh_map_position[mapName]
+		end
+
+		function get_gh_map_index()
+			local str1 = 'gh_map_index_'
+			local str2 = guild.get_name(pc.get_guild())
+			local output = str1..str2
+			return output
+		end
+
+		function get_gh_locked()
+			local str1 = 'gh_map_locked_'
+			local str2 = guild.get_name(pc.get_guild())
+			local output = str1..str2
+			return output
+		end
+
+		when login begin
+			if is_test_server() then
+				if pc.has_guild() then
+					if game.get_event_flag(guild_housing.get_gh_locked()) == 1 then
+						cmdchat('GuildHousingState 2')
+					else
+						cmdchat('GuildHousingState '..game.get_event_flag(guild_housing.get_gh_state()))
+					end
+
+					if pc.get_map_index() >= (250*10000) and pc.get_map_index() < (256*10000) then
+						if pc.is_guild_master() then
+							if pc.getf('guild_housing', 'move_map_index') == 1 then
+								pc.setf('guild_housing', 'move_map_index', 0)
+								game.set_event_flag(guild_housing.get_gh_state(), 1)
+								game.set_event_flag(guild_housing.get_gh_map_index(), pc.get_map_index())
+								cmdchat('GuildHousingState 1')
+
+								local message = "Guild[S]House[S]activated."
+								cmdchat('QuestMessage '..message)
+							end
+						end
+					end
+				end
+			else
+				local message = "The[S]Guild[S]House[S]is[S]under[S]construction.[S]Please[S]try[S]it[S]later."
+				cmdchat('QuestMessage '..message)
+			end
+		end
+
+		when letter begin
+			cmdchat("QuestGetQID "..q.getcurrentquestindex())
+		end
+
+		when button or info begin
+			if is_test_server() then
+				local choice = q.get_input()
+
+				if choice == tostring('ACTIVATE') then
+					if pc.is_guild_master() then
+						if game.get_event_flag(guild_housing.get_gh_state()) == 0 then
+							local teleport_buffer = guild_housing.get_gh_map_position('GUILD_HOUSING_MAP_01')
+
+							if teleport_buffer != nil then
+								mapIndex = teleport_buffer[1]
+								x = teleport_buffer[2]
+								y = teleport_buffer[3]
+								pc.setf('guild_housing', 'move_map_index', 1)
+								loop_timer('teleport', 1)
+							end
+						else
+							cmdchat('GuildHousingState 1')
+
+							local message = "You[S]can\'t[S]activate[S]it.[S]The[S]Guild[S]House[S]is[S]already[S]activated."
+							cmdchat('QuestMessage '..message)
+						end
+					else
+						local message = "You[S]can\'t[S]activate[S]it.[S]You[S]are[S]not[S]the[S]Guild[S]Leader."
+						cmdchat('QuestMessage '..message)
+					end
+
+				elseif choice == tostring('LOCK') then
+					if pc.is_guild_master() then
+						if game.get_event_flag(guild_housing.get_gh_state()) == 1 then
+							if game.get_event_flag(guild_housing.get_gh_locked()) == 0 then
+								game.set_event_flag(guild_housing.get_gh_locked(), 1)
+								cmdchat('GuildHousingState 2')
+
+								local message = "Guild[S]House[S]locked.[S]Nobody[S]can[S]enter[S]it[S]now."
+								cmdchat('QuestMessage '..message)
+							else
+								cmdchat('GuildHousingState 2')
+
+								local message = "You[S]can\'t[S]lock it.[S]The[S]Guild[S]House[S]is[S]already[S]locked."
+								cmdchat('QuestMessage '..message)
+							end
+						else
+							local message = "You[S]can\'t[S]lock it.[S]The[S]Guild[S]House[S]is[S]not[S]activated."
+							cmdchat('QuestMessage '..message)
+						end
+					else
+						local message = "You[S]can\'t[S]lock[S]it.[S]You[S]are[S]not[S]the[S]Guild[S]Leader."
+						cmdchat('QuestMessage '..message)
+					end
+
+				elseif choice == tostring('UNLOCK') then
+					if pc.is_guild_master() then
+						if game.get_event_flag(guild_housing.get_gh_state()) == 1 then
+							if game.get_event_flag(guild_housing.get_gh_locked()) == 1 then
+								game.set_event_flag(guild_housing.get_gh_locked(), 0)
+								cmdchat('GuildHousingState 1')
+
+								local message = "Guild[S]House[S]unlocked.[S]Everybody[S]can[S]enter[S]it[S]now."
+								cmdchat('QuestMessage '..message)
+							else
+								cmdchat('GuildHousingState 1')
+
+								local message = "You[S]can\'t[S]unlock[S]it.[S]The[S]Guild[S]House[S]is[S]already[S]unlocked."
+								cmdchat('QuestMessage '..message)
+							end
+						else
+							local message = "You[S]can\'t[S]unlock it.[S]The[S]Guild[S]House[S]is[S]not[S]activated."
+							cmdchat('QuestMessage '..message)
+						end
+					else
+						local message = "You[S]can\'t[S]unlock[S]it.[S]You[S]are[S]not[S]the[S]Guild[S]Leader."
+						cmdchat('QuestMessage '..message)
+					end
+
+				elseif choice == tostring('ENTER') then
+					if pc.has_guild() then
+						if game.get_event_flag(guild_housing.get_gh_state()) == 1 then
+							if game.get_event_flag(guild_housing.get_gh_locked()) == 0 then
+								local teleport_buffer = guild_housing.get_gh_map_position('GUILD_HOUSING_MAP_01')
+
+								local x_enter = teleport_buffer[2]
+								local y_enter = teleport_buffer[3]
+
+								pc.warp(x_enter, y_enter, game.get_event_flag(guild_housing.get_gh_map_index()))
+							else
+								local message = "You[S]can\'t[S]enter.[S]The[S]Guild[S]House[S]is[S]locked."
+								cmdchat('QuestMessage '..message)
+							end
+						else
+							local message = "You[S]can\'t[S]enter[S]it.[S]The[S]Guild[S]House[S]is[S]not[S]activated."
+							cmdchat('QuestMessage '..message)
+						end
+					else
+						local message = "You[S]can\'t[S]enter[S]it.[S]You[S]are[S]not[S]in[S]a[S]Guild."
+						cmdchat('QuestMessage '..message)
+					end
+				end
+			else
+				local message = "The[S]Guild[S]House[S]is[S]under[S]construction.[S]Please[S]try[S]it[S]later."
+				cmdchat('QuestMessage '..message)
+			end
+		end
+
+		when teleport.timer begin
+			d.new_jump(mapIndex, x, y)
+		end
+	end
+end

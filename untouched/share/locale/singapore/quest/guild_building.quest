@@ -1,0 +1,96 @@
+quest guild_building begin
+    state start begin
+        when 20040.click begin
+            say_title("Property Administrator:")
+                say("")
+		----"123456789012345678901234567890123456789012345678901234567890"|
+                say("I am the Property Administrator and responsible for selling")
+                say("the property. Before the monsters occupied the land in the")
+                say("middle of the continent, we had no shortages of land and all")
+                say("people were satisfied. Now I am only selling the land to")
+		say("the guild leaders, which use it as the guilds land.")
+		say("")
+                say("Do you want to buy the property?")
+                say("")
+
+            local s = select(locale.yes, locale.no)
+
+            if s == 1 then
+                if not pc.is_guild_master() then
+                    say_title("Property Administrator:")
+                        say("")
+                        say("I already told you, I cannot sell the property to everybody.")
+                        say("")
+                        say("I hope you understand.")
+                        say("")
+                elseif building.has_land(pc.get_guild()) then
+                   	 say_title("Property Administrator:")
+                        say("")
+                        say("A guild, that already owns a property,")
+                        say("cannot buy another one.")
+                        say("")
+                else
+                    local land_id = building.get_land_id(pc.get_map_index(), pc.get_x()*100, pc.get_y()*100)
+
+                    if land_id == 0 then
+                        say_title("Property Administrator:")
+                        say("")
+                        say("There was a process error.")
+                    else
+                        local price, owner, guild_level_limit = building.get_land_info(land_id)
+                        say_title("Property Administrator:")
+                        say("")
+                        say("To buy this property,the guilds level has to be "..guild_level_limit.."")
+                        say("and the price is "..price..locale.gold..".")
+
+                        if guild.level(pc.get_guild()) < guild_level_limit then
+                            	say("")
+                                say("Your guild has not reached the needed level yet.")
+                                say("I am sorry.")
+                                say("")
+                        else
+				say("")
+                                say("Do you want to pay the property with Yang?")
+                                say("")
+
+                            	s = select(locale.yes, locale.no)
+
+                            	if s == 1 then
+                                	local price, owner, guild_level_limit = building.get_land_info(land_id)
+
+                                	if owner!= 0 then
+                                		say_title("Property Administrator:")
+						say("")
+						say("This property was already sold to")
+						say("another guild. I am sorry.")
+						say("")
+                                	elseif pc.gold < price then
+                                		say_title("Property Administrator:")
+						say("")
+                                        	say("I am only the Property Administrator, I cannot retrench")
+                                        	say("the price. Please bring me more Yang.")
+                                	else
+                                    		pc.changegold(-price)
+                                    		building.set_land_owner(land_id, pc.get_guild())
+                                    		notice_all("The "..guild.name(pc.get_guild()).." guild has acquired a property!")
+                                	end
+                            else
+                                say_title("Property Administrator:")
+                            	say("")
+                                say("Come again when you decided what to do.")
+                                say("")
+                                say("Who comes first, purchases first.")
+                                say("")
+                            end
+                        end
+                    end
+                end
+            else
+            say_title("Property Administrator:")
+                    say("")
+                    say("Come again, when you decided what to do.")
+                    say("Who comes first, purchases first.")
+            end
+        end
+    end
+end

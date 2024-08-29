@@ -1,0 +1,547 @@
+----------------------------------
+--        	Main Quest LV47
+--	The Pages of the Secret Book
+----------------------------------
+
+
+quest main_quest_lv47 begin
+        state start begin
+        end
+        state run begin
+                when login or levelup with pc.get_level() >= 47 begin
+                        set_state( information )
+                end
+        end
+
+        state information begin
+                when letter begin
+                        send_letter("The pages of the secret book.")
+
+                        local v=find_npc_by_vnum(20011)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find the wise Uriel")
+                        end
+                end
+                when button or info begin
+                        ----"12345678901234567890123456789012345678901234567890"|
+                        say_title("The 5th page of the secret book")
+                        say("")
+                        say("Last time with a level of 40, you found")
+                        say("the 5th page of the secret book from the ")
+                        say("Bestial Captain. You should deliver it")
+                        say("quickly to Uriel.")
+                        say("")
+                end
+                when __TARGET__.target.click or
+                        20011.chat."The 5th page of the secret book." begin
+                        target.delete("__TARGET__")
+                        ---                                                   l
+                        say_title("Uriel:")
+                        say("")
+                        say("You found the fifth page, great.")
+                        say("Let me see it and I will try to decipher it.")
+                        say("")
+                        wait()
+                        say_title("The fifth page:")
+                        say("")
+                        -----------"12345678901234567890123456789012345678901234567890"|
+                        say_reward("Cao Cao with his cavalry has arrived in Taejo")
+                        say_reward("and he stays there for a while.")
+                        say_reward("There were many small meteorites and the chaos,")
+                        say_reward("from the meteorites with the evil dwelling in it,")
+                        say_reward("has caused the huge empire to be divided into")
+                        say_reward("three small empires. And worse is, not")
+                        say_reward("that the 3 empires are fighting the evil together,")
+                        say_reward("they bitterly are fighting with each other.")
+                        say_reward("The Dragon God with his power is at the moment")
+                        say_reward("supporting the strongest empire and that cause")
+                        say_reward("the empires to become more hateful towards")
+                        say_reward("each other and the meteorite is further spreading")
+                        say_reward("the disasters.")
+                        say("")
+                        wait()
+                        say_title("Uriel")
+                        say("")
+                        ---                                                   l
+                        ---"12345678901234567890123456789012345678901234567890"|
+                        say("Here the page ends. One thing is sure,")
+                        say("someone else makes the same investigations like us,")
+                        say("That's why we shouldn't wait too long")
+                        say("to find the rest of the pages. Who knows what")
+                        say("kind of secrets from the story we will figure out.")
+                        say("Try to find further pages, ")
+                        say("maybe you will find some in Spider Cave,")
+                        say("as Cao Cao was also searching for an")
+                        say("evil energy. Who knows maybe the evil place")
+                        say("is in Spider Cave. ")
+                        say("When you find some news, return to me.")
+                        say("I'm already impatience. Ah, I forgot that, ")
+                        say("here is your reward for the 5th page.")
+                        say("You needed to wait long for it. Ha. Ha.")
+                           say("")
+                        wait()
+                        say_title("Reward:")
+                        say("")
+                        say_reward("Experience points: 2.500.000")
+                        pc.give_exp2(2500000)
+                        say_reward("Yang: 475.000")
+                        pc.change_money(4750000)
+                        say_reward("You received Exorcism Scroll.")
+                        pc.give_item2(71001)
+                        pc.remove_item(30150)
+                        set_state( survey )
+
+                end
+        end
+
+        state survey begin
+                when letter begin
+                        send_letter("The 6th page")
+
+                        local v=find_npc_by_vnum(20362)
+
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find the wise Uriel")
+                        end
+                end
+                when button or info begin
+                        ----"12345678901234567890123456789012345678901234567890"|
+                        say_title("The page in Spiderdungeon")
+                        say("")
+                        say("Uriel thinks that further information of")
+                        say("the secret magic can be found in the Spider Cave")
+                        say("Maybe there we also find a")
+                        say("monument like in Honobo Dungeon. ")
+                        say("")
+                        say("Through Sahara Desert you can arrive to")
+			say("Spider Cave")
+                        say("")
+                end
+                when __TARGET__.target.click or
+                        20362.chat."The Mok Monument" begin
+                        target.delete("__TARGET__")
+
+                        say("You found the page, return to Uriel")
+                        say("with it.")
+                        pc.give_item2(30150)
+                        set_state( gototeacher2 )
+                end
+        end
+
+        state gototeacher2 begin
+                when letter begin
+                        send_letter("The 6th Page")
+
+                        local v=find_npc_by_vnum(20011)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find the wise Uriel")
+                        end
+                end
+                when button or info begin
+                        say_title("You found the sixth page")
+                        say("")
+                        say("You found sixth page in Spider Cave")
+                        say("Deliver it to Uriel the wise.")
+                        say("")
+                end
+                when __TARGET__.target.click or
+                        20011.chat."The sixth page" begin
+                        target.delete("__TARGET__")
+                        ---                                                   l
+                        say_title("Uriel:")
+                        say("")
+                        say("How was the Spider Cave?")
+                        say("Did you find the sixth page?")
+                        say("That's great!!")
+                        say("Let's see what kind of information")
+                        say("we get from the sixth page.")
+                        say("Yeah, good that you found the page")
+                        say("all the time I hear that other people are")
+                        say("also searching for the secret")
+                        say("They seem to be some very important information,")
+                        say("since so many people are searching for it.")
+                        say("")
+                        wait()
+                        say_title("Uriel:")
+                        say("")
+                        say("Oh, this page is very difficult to read")
+                        say("I would need some longer time for it. ")
+                        say("The content seems to be very important")
+                        say("maybe we figure out more if the secret")
+                        say("magic can be helpful.")
+                        say("The secret magic is forbidden and that's")
+                        say("not without a reason.")
+                        say("")
+                           wait()
+                        say_title("Uriel:")
+                        say("")
+                        say("I need more time to decipher")
+                        say("this page. Meanwhile you can go to")
+                        say("the musician Yu-Hwan. I heard he has")
+                        say("some interesting information for our research")
+                           say("Meanwhile I will research the 6th page.")
+                        say("closer. But your reward for the sixth page")
+                        say("you will of course get now.")
+                        say("")
+                        wait()
+                        say_title("Reward:")
+                        say("")
+                        say_reward("Experience points: 3.000.000")
+                        pc.give_exp2(3000000)
+
+                        say_reward("Yang: 500.000")
+                        pc.change_money(500000)
+
+                        say_reward("Items: Bonus Adder")
+                        pc.give_item2(71085)
+
+                        pc.remove_item(30150)
+
+                        set_state(gotomusician)
+
+                end
+        end
+
+        state gotomusician begin
+                when letter begin
+                        send_letter("The secret forces")
+                        local v=find_npc_by_vnum(20017)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find the musician Yu-Hwan")
+                        end
+                end
+
+                when button or info begin
+                        say_title("Find the musician Yu-Hwan!")
+                        say("")
+                        say("A stranger has given some information about ")
+                        say("the forbidden magic to the musician Yu-Hwan.")
+                        say("Find the musician Yu-Hwan and ask him")
+                        say("about the information. ")
+                        say("")
+                end
+
+                when __TARGET__.target.click or
+                        20017.chat."The secret powers?" begin
+                        target.delete("__TARGET__")
+                        say_title("Yu-Hwan:")
+                        say("")
+                        say("I don't care at all, I enjoy the life ")
+                        say("course it is transitory ")
+                        say("Ah, it's you again.")
+                        say("A day ago, the wise Uriel asked me ")
+                        say("if I could ask around. ")
+                        say("In all empires there are people ")
+                        say("who are searching for something. ")
+                        say("I don't know their reason for their searching. ")
+                        say("but it seems to be very important and you")
+                        say("should be informed, so you are ")
+                        say("better prepared for that what is coming. ")
+                        say("")
+                        wait()
+                        say_title("Yu-Hwan:")
+                        say("")
+                        say("Only with this war you feel fear ")
+                        say("You should always be prepared for the strength of")
+                        say("your enemy. Recently there are ")
+                        say("some information you can  ")
+                        say("overhear. So, I heard that the")
+                        say("Desert Outlaws have stolen some important")
+                        say("things, that might have a huge value ")
+                        say("for us. ")
+                        say("Maybe you should see if you can beat it")
+                        say("out of them.")
+                        say("")
+                        wait()
+                        say_title("Yu-Hwan:")
+                        say("")
+                        say("The Desert Outlaws are dangerous beasts. ")
+                        say("So be aware, but I think it will")
+                        say("pays of if you beat them up ")
+                        say("Good luck! ")
+                        say("")
+                        set_state(his_advice)
+                end
+        end
+
+        state his_advice begin
+                when letter begin
+                        send_letter("The Desert Outlaws")
+                end
+
+                when button or info begin
+                        say_title("Seaching for the secret information.")
+                        ---                                                  l
+                        say("")
+                        say("Uriel said that the information about the ")
+                        say("magic might be very important. The ")
+                        say("musician told us that the further information ")
+                        say("could be found by the Desert Outlaws. We ")
+                        say("should go ahead and kill some ")
+                        say("Desert Outlaw.")
+                        say("")
+                end
+
+                when 2108.kill begin
+                        local s = number(1, 100)
+                        if s <= 5 and pc.count_item("30150")==0 then
+                                pc.give_item2(30150, 1)
+                                set_state(gotomusician1)
+                        end
+                end
+        end
+
+
+        state gotomusician1 begin
+                when letter begin
+                        send_letter("The 7th page")
+                        local v=find_npc_by_vnum(20017)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Searching for the musician Yu-Hwan")
+                        end
+                end
+
+                when button or info begin
+                        say_title("The 7th page")
+
+                        say("")
+                        ---                                                  l
+                        say("The musician Yu-Hwan gave us the information ")
+                           say("that we could find the 7th page of the ")
+                        say("secret book by the Desert Outlaws. ")
+                        say("We should go to him and tell him ")
+                        say("that the information was very important.")
+                        say("")
+                end
+
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        say_title("Yu-Hwan:")
+                        say("")
+                        say("You eyes are as beautiful as")
+                        say("mountains lake lalalala....")
+                        say("Ah .. you.")
+                        say("Could you get the information ")
+                        say("from the Desert Outlaws? ")
+                        say("What, this is only an old paper...")
+                        say("I can't do anything with that, you should")
+                        say("bring it to Uriel the wise, he might know ")
+                        say("what to do with it.")
+                        say("Greetings from me...")
+                        q.done()
+
+                        set_state(gototeacher)
+                end
+        end
+
+        state gototeacher begin
+                when letter begin
+                        send_letter("The 7th page of the secret book")
+
+                        local v=find_npc_by_vnum(20011)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Go to Uriel")
+                        end
+                end
+                when button or info begin
+                        say_title("The 7th page of the book.")
+                        say("")
+                        say("For being able to decipher the ")
+                        say("old page you should go to Uriel.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        ---                                                   l
+                        say_title("Uriel:")
+                        say("")
+                        say("That's good news.")
+                        say("The deciphering of the 6th page is already")
+                        say("done ")
+                        say("What?")
+                        say("You found another one, hey, you are great! ")
+                        say("I can't follow with the deciphering ")
+                        say("Let's see. Oh!? ")
+                        say("In this language? Where did you get it from? ")
+                        say("From the type of writing and language manner, ")
+                        say("the characters is that which is used in the ")
+                        say("imperial family.")
+                        say("")
+                        wait()
+                        say_title("Uriel:")
+                        say("")
+                        say("Since this characters are used by few ")
+                        say("people and also used very rarely, ")
+                        say("it is difficult to decipher... ")
+                        say("The suspicious strangers that got ")
+                        say("robbed by the Desert Outlaws were ")
+                        say("apparently also using those characters! ")
+                        say("What is their goal? ")
+                        say("Ha Ha!")
+                        say("We are falling deeper in this.")
+                        say("If it keeps going this way, we need")
+                        say("to take care, so we don't miss any important ")
+                        say("points.")
+                        say("")
+                        wait()
+                        say_title("Uriel:")
+                        say("")
+                        say("I think that before I start on the new ")
+                        say("page, I should first tell you what ")
+                        say("is says on the 6th page ")
+                        say("")
+                        wait()
+                        -----------                                                  l
+                        say_title("the 6th page:")
+                        say("")
+                        say_reward("... Even in Spider Cave, we investigated")
+                        say_reward("the magic and it's not successful.")
+                        say_reward("What else do we need?")
+                        say_reward("After the discussion with the other Shamans,")
+                        say_reward("we realized that the sacrifice that")
+                        say_reward("is needed for the magic, needs to be a lot")
+                        say_reward("bigger. The secret magic must be ")
+                        say_reward("very powerful")
+                        say("")
+                        say_reward("But we don't have any time left. We need as fast")
+                        say_reward("as possible to complete it. For the first sacrifice")
+                        say_reward("for the magic, we need a Snake Swordman,")
+                        say_reward("that we can find in the desert")
+                        wait()
+                        say_title("Uriel:")
+                        say("")
+                        ---                                                  l
+                        say("Since humans not can be used as")
+                        say("sacrifice they decided to use")
+                        say("Snake Swordman ")
+                        say("We need to follow their Trace. You should")
+                        say("go to the desert and kill some")
+                        say("Snake Swordman and Snake Archer.")
+                        say("Who knows what we can find there")
+                        say("")
+                        wait()
+                        say_title("Reward:")
+                        say("")
+                        say_reward("Experience points: 3.500.000")
+                        pc.give_exp2(3500000)
+
+                        say_reward("Yang: 555.000")
+                        pc.change_money(555000)
+                        pc.remove_item(30150)
+                        set_state( survey2)
+
+                end
+        end
+
+        -- Filling the half-corpse
+        state survey2 begin
+                when letter begin
+                        send_letter("Kill the Snake Swordman")
+
+                end
+                when button or info begin
+                        say_title("Kill the Snake Swordman.")
+                        say("")
+                        say("For the sacrifice to the forbidden Magic,")
+                        say("the secret strangers needed ")
+                           say("corpses from the Snake Swordman.  ")
+                           say("To not lose the track we should ")
+                        say("also kill some of them and then see ")
+                        say("what kind of information we get. These")
+                        say("we should return to Uriel as ")
+                        say("fast as possible. ")
+                end
+
+                ---Snake Swordman || Snake Archer
+                when 2106.kill or 2107.kill begin
+                        local s = number(1, 100)
+                        if s <= 5 and pc.count_item("30150")==0 then
+                                pc.give_item2(30150, 1)
+                                set_state( gototeacher3 )
+                        end
+                 end
+        end
+
+
+        state gototeacher3 begin
+                when letter begin
+                        send_letter("The 8th page")
+
+                        local v=find_npc_by_vnum(20011)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Go to the wise Uriel")
+                        end
+                end
+                when button or info begin
+                        say_title("The 8th page")
+                        say("")
+                        say("For deciphering of the 8th page ")
+                           say("we should go to the wise Uriel.")
+                        say("")
+                end
+                when __TARGET__.target.click or
+                        20011.chat."The 8th page" begin
+                        target.delete("__TARGET__")
+
+                        say_title("Uriel:")
+                        say("")
+                        say("That's the 8th page.")
+                           say("Since it is very short, I will decipher it right away")
+                        say("")
+                        wait()
+                        say_title("The 8th page:")
+                        say("")
+                        say_reward("The materials for the sacrifice has been found.")
+                           say_reward("It's nice that we could get the")
+                           say_reward("necessary materials that fast.")
+                           say_reward("Next we will search for the bell")
+                        say_reward("in the Dark Temple. ")
+                           say_reward("We are on the way. ")
+                        say("")
+                        wait()
+                        say_title("Uriel:")
+                        say("")
+                        say("They probably went to the Dark Temple")
+                        say("and they are searching for further material ")
+                        say("for the secret magic. ")
+                        say("There are lot of proud and Esoteric Fanatics. ")
+                        say("It was a hard journey for you! ")
+                        say("That's why you should rest yourself.")
+                        say("Come later again, then I will ")
+                        say("give you a further assignment. ")
+                        say("We don't need to solve it at once ")
+                        say("and I need some time to ")
+                        say("decipher the pages.")
+                        say("The reward for the 8th page ")
+                        say("you of course will get. ")
+                           say("")
+                        wait()
+                        say_title("Reward:")
+                        say("")
+                        say_reward("Experience points: 4.000.000")
+                        say_reward("Yang:  585.000")
+                        say_reward("Furthermore: you got 20 Bravery Capes.")
+                        say_reward("Tip: For the next assignment you need")
+                        say_reward("at least level 50.")
+                        say("")
+
+                        pc.give_exp2(4000000)
+                        pc.change_money(585000)
+                        pc.give_item2(70038, 20)
+                        pc.remove_item(30150)
+
+                        clear_letter()
+                        set_state(__COMPLETE__)
+                        set_quest_state("main_quest_lv50", "run")
+                end
+        end
+        state __COMPLETE__ begin
+        end
+end

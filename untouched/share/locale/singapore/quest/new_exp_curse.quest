@@ -1,0 +1,42 @@
+quest exp_curse begin
+	state start begin
+		when 70001.use begin
+			if is_test_server() then
+				pc.setqf("limit_time",get_time()+60)
+			else
+				pc.setqf("limit_time",get_time()+60*60*24*30)
+			end
+			pc.setqf("lastexp",pc.get_exp())
+			syschat("You are under the curse of the goddess. You will gain no experience.")
+			item.remove()
+			set_state(use)
+		end
+	end
+	
+	state use begin
+		when 70001.use begin
+			syschat("The curse of the Goddess is already active.")
+		end
+		
+		when levelup begin
+			syschat("The Curse has vanished.")
+		    set_state(start)
+		end
+		
+		when kill or party_kill begin
+			local current = pc.get_exp()
+			if current < pc.getqf("lastexp") then
+				pc.setqf("lastexp",current)
+			end
+			if not npc.is_pc() then
+				if get_time() > pc.getqf("limit_time") then
+					syschat("The curse of the Goddess has expired. You will gain Experience again.")
+					set_state(start)
+				else
+					local dif = pc.get_exp()-pc.getqf("lastexp")
+					pc.give_exp2(-dif)
+				end
+			end
+		end
+	end
+end

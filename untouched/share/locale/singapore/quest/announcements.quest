@@ -1,0 +1,16 @@
+quest announcements begin
+	state start begin
+		when levelup with not pc.is_gm() begin
+			lv_announce = {60,70,80,85,90,95,100,105}
+			local i = 1
+			while i < 9 do
+				if pc.get_level() == lv_announce[i] then
+					notice_all(""..pc.get_name().." has achieved Level "..lv_announce[i].."! - Congratulations!")
+					break
+				else
+					i = i+1
+				end
+			end
+		end
+	end
+end

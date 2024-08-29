@@ -1,0 +1,177 @@
+quest couple_ring begin		
+    state start begin		
+        when 9006.chat."Revenge the Ring Trader" with pc.get_level()>=25 begin		
+		----"123456789012345678901234567890123456789012345678901234567890"|
+            	say_title("Old woman:")		
+            	say("")		
+            	say("You have grown up, do you want to proof your bravery?")		
+            	say("Hmm, do you know Jin Hee?")
+            	say("")
+            	say("Once there was a Ring Trader in our village who sold rings")
+            	say("to couples in love. Jin Hee killed the trader, because he")
+            	say("hates couples in love. ")		
+            	say("")
+            	say("Could you avenge the Ring Trader and kill 20 Jin Hees?")		
+            	say("")		
+		
+            local s=select("Of course I do.","No, she is too strong.")		
+		
+            if s==1 then		
+                say_title("Old woman:")		
+                say("")		
+                ----"123456789012345678901234567890123456789012345678901234567890"|
+                say("Then do it and kill 20 of them!")	
+                say("")
+                say("Jin-Hees are sneaky and can rarely be seen. So be careful!")		
+                say("")		
+                set_state(kill)		
+            elseif s==2 then		
+                say_title("Old woman:")		
+                say("")		
+                say("Hmm, what a shame, but nothing I could do about it.")	
+                say("")
+                say("Oh well, the consequence of unreasonable bravery is death.")		
+                say("So be careful!")		
+                say("")		
+            end		
+        end		
+    end		
+    state kill begin		
+        when enter begin		
+            pc.setqf("kill_count", 0)		
+        end		
+        when leave begin		
+            pc.setqf("kill_count", 0)		
+            q.done()		
+        end		
+        when letter begin		
+            q.set_counter("Remaining Jin-Hees", couple_ring.get_rest_count());		
+        end		
+        when 394.kill begin		
+            local kill_count=pc.getqf("kill_count")+1		
+            pc.setqf("kill_count", kill_count)		
+            q.set_counter("Remaining Jin-Hees", couple_ring.get_rest_count());		
+		
+            if couple_ring.is_completed() then		
+                say_title("You defeated all of the Jin Hees.")		
+                say("")		
+                say("I think the Ring Trader was avenged adequately.")		
+                say("")		
+                ----"123456789012345678901234567890123456789012345678901234567890"|
+                say("I will tell the Old Woman that the mission was a success")		
+                say("")		
+                set_state(report)		
+            end		
+        end		
+        function get_rest_count()		
+            return 20-pc.getqf("kill_count")		
+        end		
+        function is_completed()		
+                return pc.getqf("kill_count")>=20		
+        end		
+		
+        when letter begin		
+            send_letter("Defeat the Jin Hees")		
+        end		
+        when button or info begin		
+            say_title("Information:")		
+            say("")
+            ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("Defeat 20 Jin Hees, the White Oath specialists, to avenge")
+            say("the death of the Ring Trader!")		
+            say("")		
+            say_reward(string.format("Number of Jin Hees left: %d", couple_ring.get_rest_count()))		
+            say("")		
+        end		
+        when 9006.chat."Revenge for the Ringtrader" begin		
+            say_title("Old woman:")		
+            say("")		
+            say("Oh, you have defeated the Jin Hees?")		
+            say("")
+            ----"123456789012345678901234567890123456789012345678901234567890"|
+            say("Oh well, I think you have not fullfilled the mission yet.")		
+            say("Tell me if it is too difficult.")		
+            say("")		
+            local s=select("Next","Abbort")		
+            if s==1 then		
+                say_title("Old woman:")		
+                say("")		
+		say("The Ring Traders family wants revenge for his death!")
+		----"123456789012345678901234567890123456789012345678901234567890"|
+                say("If you can mitigate their pain through a little effort,")		
+		say("then do it please.")
+                say("")		
+            else		
+                say_title("Old woman:")		
+                say("")		
+                ----"123456789012345678901234567890123456789012345678901234567890"|
+                say("What a pity, that you don't want to avenge the Ring Traders'")
+                say("death. Hmm, of course you also like being alive. As you")
+                say("wish! Every life has its own worth.")
+                say("")		
+                wait()		
+                say_title("Information:")		
+                say("")		
+                say("You could see something in the old womans hands")		
+                say("when she turned around. It was a shiny object.")		
+                say("")		
+                say("It seemed to be a worthy stone.")		
+                say("")		
+                local s = select("Continue the Mission", "Abort")		
+                if s==1 then		
+                say_title("Old woman:")		
+                say("")		
+                say("I am not interested in valuable stones.")	
+                say("")
+                ----"123456789012345678901234567890123456789012345678901234567890"|
+                say("I want the Ring Traders death to be avenged for his familiy.")
+                say("Good that you have reconsidered to fullfill the mission.")		
+                say("")		
+                elseif s==2 then		
+                say_title("Old woman:")		
+                say("")		
+                say("I feel sorry for the Ring trader family.")	
+                say("")
+                say("It's such a pity that you don't accept the challenge.")		
+                say("")		
+                set_state(start)		
+                    q.done()		
+                end		
+            end		
+        end		
+    end		
+    state report begin		
+        when letter begin		
+            send_letter("Return to the old lady.")		
+        end		
+        when button or info begin		
+            say_title("Information:")		
+            say("")		
+            say("Return to the old lady and tell her that you avenged")		
+            say("the Ring Trader death by killing the Jin Hees.")		
+            say("")		
+        end		
+        when 9006.chat."You have defeated the Jin Hees!" begin		
+            say_title("Old woman:")		
+            say("")		
+            ----"123456789012345678901234567890123456789012345678901234567890"|
+	    say("You have defeated all Jin Hees. Well done! The Ring Trader")
+	    say("in heaven now should be satisfied.")		
+	    say("")
+            say("This is the ring he entrusted me. It shall be yours. This")
+            say("is your reward for the avenge of his death. I am sure he")		
+            say("would want it like this.")		
+            say("")		
+            say_item("The Couple's Ring", 70301, "is needed for marriages.")		
+            pc.give_item2(70301)		
+            set_state(start)		
+            q.done()		
+        end		
+    end		
+    state __COMPLETE__ begin	
+    	when login begin
+    		set_state(start)
+    	end
+    end		
+
+end		

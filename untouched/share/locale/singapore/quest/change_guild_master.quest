@@ -1,0 +1,105 @@
+quest change_guild_master begin
+	state start begin
+		function change_master( name , level_limit , time_resign_limit , time_be_other_leader , time_be_other_member , iscacheitem )
+			local ret = guild.change_master_with_limit( name , level_limit , time_resign_limit , time_be_other_leader , time_be_other_member, iscacheitem)
+			local result = false
+
+			if ret == 0 then
+				say_title("System:")
+				say("")
+				say("You have entered wrong name.")
+				say("")
+			elseif ret == 1 then
+				say_title("System:")
+				say("")
+				say("Only guild master can use the item.")
+				say("")
+			elseif ret == 2 then
+				say_title("System:")
+				say("")
+				say("Can not find the guild member.")
+				say("")
+			elseif ret == 3 then
+				say_title("System:")
+				say("")
+				say("You have successfully gave guild master position.")
+				say("")
+				result = true
+			elseif ret == 4 then
+				say_title("System:")
+				say("")
+				say("You are not in the guild.")
+				say("")
+			elseif ret == 5 then
+				say_title("System:")
+				say("")
+				say("The candidate character is not online.")
+				say("")
+			elseif ret == 6 then
+				say_title("System:")
+				say("")
+				say("Not enough level to become the guild master.")
+				say("")
+			elseif ret == 7 then
+				say_title("System:")
+				say("")
+				say("He's too early to become a leader.")
+				say("")
+			end
+
+			return result
+		end
+		
+		
+		when 71099.use begin
+			if pc.is_guild_master() == false then
+				say_title("System:")
+				say("")
+				say("Only the guild master can use this item.")
+				say("")
+				return
+			end
+			
+			say_title("System:")
+			say("")
+			say("please enter the candidate;s name.")
+			say("")
+
+			local s = input()
+
+			if s == pc.name then
+				say_title("System:")
+				say("")
+				say("You cannot enter your name.")
+				say("")
+				return
+			elseif s == "" then
+				say_title("System:")
+				say("")
+				say("Please enter name.")
+				say("")
+				return
+			end
+
+			if not pc.is_near_vid( find_pc_by_name( s ) , 10 ) then
+				say_title("System:")
+				say("")
+				say("The candidate must be near you.")
+				say("")
+				return
+			end
+
+			if change_guild_master.change_master( s , 40 , 0 , 0 , 0 ,true) == true then
+				pc.remove_item(71099)
+			elseif ret == 5 then
+			elseif ret == 6 then
+				say_title("")
+				say("")
+				say("Not enough level to become the guild master")
+			end
+
+			end
+
+		end
+end
+

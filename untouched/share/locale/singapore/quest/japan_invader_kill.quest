@@ -1,0 +1,197 @@
+quest japan_invader_kill begin
+        state start begin
+                when login with game.get_event_flag("815event")>0 begin
+                        local v=find_npc_by_vnum(20005)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Yonah")
+                        end
+                end        	
+                when 20005.chat."Pirate Tanaka" with pc.get_level()>=15 and game.get_event_flag("815event")>0 begin
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        target.delete("__TARGET__")
+                        say_title("Yonah:")
+                        say("")
+                        say("How shall I continue, what can I do?")
+                        say("")
+                        say("If I catch him, I have no more worries. However, he is so")
+						say("quick that no one can catch him. Very difficult!")
+						say("")
+                        say("Humph. What should I do?")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("What do you worry about?")
+                        wait()
+                        say_title("Yonah:")
+                        say("")
+                        say("Everywhere at the moment a savage appears in the empire")
+						say("and spreads rumours about the Yongbi Desert. Because he")
+						say("is very quick, no one can catch him and bring the rumours")
+						say("to a silence. Insecurity will weaken us.")
+                        say("")
+                        wait()
+                        say_pc_name()
+                        say("")
+                        say("Which rumors??")
+                        wait()
+                        say_title("Yonah:")
+                        say("")
+                        say("The land is divided into three parts and fighting")
+			say("continuously! To survive this war we need all areas")
+			say("and resources which rightfully belong to us.")
+			say("")
+			say("The Yongbi Desert and its raw materials belong to us.")
+			say("")
+			say("But the damn savage is claiming that it belongs to him")
+			say("and this unnerves our fighters.")
+                        say("")
+                        wait()
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("Yonah:")
+                        say("")
+                        say("Perhaps you are the right one to help us? The damned savage")
+                        say("spreads these rumours in the whole empire and creates doubts")
+                        say("about our claim. Kill him and make him be quiet! If you bring")
+			say("me the proof that you killed him I will reward you richly!")
+                        say("")
+                        local b=select("I will kill him", "I am not a very fast runner")
+                        if 1==b then
+                                say_title("Yonah:")
+                                say("")
+                                say("Ohh Thank you very much! His name is Tanaka.")
+                                say("")
+                                say("In the moment he is in the village laying in the Yongbi")
+                                say("Desert. Bring me his ear as sign of proof of his death!")
+                                say("")
+                                set_state(accept)
+                        elseif 2==b then
+                                say_title("Yonah:")
+                                say("")
+                                say("Hmm. I see to you it makes no difference to whom")
+				say("the Yongbi Desert belongs.")
+                                say("")
+                        end
+                end
+        end
+        state accept begin
+	       when login with game.get_event_flag("815event") == 0 begin
+		       setstate(start)
+                end 
+                when letter begin
+                        send_letter("Catch Pirate Tanaka")
+                end
+                when button or info begin
+                        ----"12345678901234567890123456789012345678901234567890"|
+                        say_title("Catch the Pirate Tanaka!!")
+                        say("")
+                        say("Tanaka spreads rumours in the empire. Kill him!")
+                        say("")
+                        say_reward("Kill Tanaka and bring Yonah his ear.")
+                        say("")
+                end
+                when 20005.chat."Catch Tanaka" with pc.count_item(30202)==0 begin
+                        say_title("Yonah:")
+                        say("")
+                        say("Tanaka runs very fast. With heavy armour, it is")
+                        say("impossible for me to catch him.")
+                        say("Ah, what is going on?")
+                        say("")
+                        local s=select("Next", "Abort")
+                        if 1==s then
+                        elseif 2==s then
+                                say_title("Yonah:")
+                                say("Do you really want to stop here.....")
+                                say("Hmm, you cannot do it...")
+                                say("However, I appreciate for your troubles.")
+                                say("")
+                                local s=select("End the mission", "Continue")
+                                if 1==s then
+                                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                                        say_pc_name()
+                                        say("")
+                                        say("With my level I was not able to catch Tanaka.")
+                                        say("I give up.")
+                                        say("")
+                                        say_title("Yonah:")
+                                        say("")
+                                        say("Ok, thank you...")
+                                        q.done()
+                                        set_state(failure)
+                                elseif 2==s then
+                                        say_pc_name()
+                                        say("Hmm, I did not expect a reward yet.")
+                                        say("I will still succeed in killing Tanaka.")
+                                        say("I will try further to kill him.")
+                                        say("Please don't appreciate too early.")
+                                        say("")
+                                end
+                        end
+                end
+
+                when 2135.kill  begin
+                        local s = number(1, 100)
+                        if s <= 1 and pc.count_item("30202")==0  then
+                                pc.give_item2("30202", 1)
+
+                                if pc.count_item("300202")>0 then
+                                        local v = find_npc_by_vnum(20005)
+                                        if v != 0 then
+                                                target.vid("__TARGET__", v, "You got the ear")
+                                        end
+                                end
+                        end
+
+        	end
+
+                when __TARGET__.target.click or
+                20005.chat."Give Yonah the ear of Tanaka" with pc.count_item(30202)>=1 begin
+                        target.delete("__TARGET__")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("Yonah:")
+                        say("")
+                        say("Oh, you have killed Tanaka? Really? Heroes despaired from")
+			say("all four corners of the earth for this task and you have")
+			say("done it? Yes it has to be like you said, you have the proof.")
+			say("Does the ear also really belong to Tanaka? Let me have a")
+			say("look... Hmm. Certainly it is, no doubt it is very small,")
+			say("but it is Tanaka's ear. Accept my gratitude. I would like")
+			say("to give you this.")
+			say("")
+                        say("It will be very useful for you.")
+                        say("")
+
+
+                        pc.remove_item(30202)
+
+                        local r=number(1, 4)
+                        if 1==r then
+                                say_reward("You received a Green Bonus Changer from Yonah.")
+                                pc.give_item2(71151)
+                        elseif 2==r then
+                                say_reward("You received a Green Bonus Adder from Yonah.")
+                                pc.give_item2(71152)
+                        elseif 3==r then
+                                say_reward("You received an Exp Ring of 1 hour from Yonah.")
+                                pc.give_item2(70005)
+						elseif 4==r then
+                                say_reward("You received a Quest Potion from Yonah.")
+                                pc.give_item2(71035)		
+                        end
+
+                        set_state(start)
+                        q.done()
+                end
+        end
+        state complete begin
+        	when login begin
+        		set_state(start)
+        	end
+        end
+        state failure begin
+        	when login begin
+        		set_state(start)
+        	end
+        end
+end

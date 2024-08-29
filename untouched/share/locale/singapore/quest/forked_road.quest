@@ -1,0 +1,179 @@
+quest forked_road begin
+    state start begin
+		when login with forked.isforkedmapindex( pc.get_map_index() ) == true begin
+			if game.get_event_flag("threeway_war") == 0 then
+				warp_to_village()
+			else
+				local noticeShow = false
+
+				if forked.is_registered_user() == false then
+					forked.register_user()
+					forked.setdeadcount()
+					pc.remove_item(50089)
+					noticeShow = true
+				end
+
+				if forked.getdeadcount() <= 0 then
+					warp_to_village()
+				elseif true == noticeShow then
+					if forked.issungzimapindex( pc.get_map_index() ) == true then
+						say( locale.forked_condition2 )
+						say( locale.NOTICE_COLOR..locale.forked_rule_sungzi )
+					else
+						say( locale.forked_condition )
+						say( locale.NOTICE_COLOR..locale.forked_rule )
+						say_item_vnum(50089)
+                                end
+                        end
+                end
+        end
+        when 11001.chat.locale.forked_man_chat or 11003.chat.locale.forked_man_chat or 11005.chat.locale.forked_man_chat begin
+			if game.get_event_flag("threeway_war") == 0 then
+                        say(locale.forked_man_say_cant)
+                        say("")
+            else
+                        say(locale.forked_man_say)
+						local s = select(locale.forked_enter,locale.forked_no_enter)
+                        if s == 1 then
+					local limit = math.min(game.get_event_flag("threeway_war_level"), 30)
+
+					if pc.get_level() < limit then
+						say("In order to join Nation War, your level must be over "..limit.."")	
+						return
+					end
+
+					local canJoin = false
+
+					if (pc.getempire() == 1 and game.get_event_flag("threeway_war_open_gate1" ) != 0) or
+						(pc.getempire() == 2 and game.get_event_flag("threeway_war_open_gate2" ) != 0) or
+						(pc.getempire() == 3 and game.get_event_flag("threeway_war_open_gate3" ) != 0) then
+						canJoin = true
+					else
+						say( locale.forked_man_say_you_cant2 )
+					end
+
+					if true == canJoin then
+						pc.warp( forked.get_pass_start_pos() )
+					else    ----"12345678901234567890123456789012345678901234567890"|
+						say("You cannot join Nation War after the gate to the")
+						say("Sanctuary has been opened.")
+						say("")
+						say("Pray for our kingdom to conquer Holy land!!")
+						end
+                        end
+                end
+        end
+        
+		when 1306.kill with forked.isforkedmapindex(pc.get_map_index()) == true begin
+			game.drop_item(50089, 1)
+		----"12345678901234567890123456789012345678901234567890"|
+		say("If the Ancient Gate is opened with the Seal, all")
+		say("the players will be teleported into the Sanctuary.")
+		say("")
+        end
+
+		when 1902.kill with forked.issungzimapindex(pc.get_map_index()) == true begin
+			if 0 == game.get_event_flag("threeway_war") then
+				return
+			end
+
+			local remainBossCount = game.get_event_flag("threeway_war_boss_count") - 1
+
+			game.set_event_flag("threeway_war_boss_count", remainBossCount)
+
+			if remainBossCount > 1 then
+				return
+        end
+
+			game.set_event_flag("threeway_war", 0)
+			
+			notice_all("The winner of the Nation War is "..locale.empire_names[pc.get_empire()])
+
+			warp_all_to_village(forked.getsungzimapindex(), 30)
+			warp_all_to_village(forked.getpassmapindexbyempire(1), 30)
+			warp_all_to_village(forked.getpassmapindexbyempire(2), 30)
+			warp_all_to_village(forked.getpassmapindexbyempire(3), 30)
+		end
+
+        when 20081.take with item.vnum == 50089 begin
+			say_in_map(pc.get_map_index(), locale.forked_open_gate)
+                npc.purge()
+                item.remove()
+
+                forked.initkillcount()
+
+                if pc.getempire() == 1 then
+				game.set_event_flag("threeway_war_open_gate1", 0)
+                        notice_all(locale.empire_names[1].." empire enters the Sanctuary." )
+                elseif pc.getempire() == 2 then
+				game.set_event_flag("threeway_war_open_gate2", 0)
+                    notice_all(locale.empire_names[2].." empire enters the Sanctuary." )
+                elseif pc.getempire() == 3 then
+				game.set_event_flag("threeway_war_open_gate3", 0)
+                        notice_all(locale.empire_names[3].." empire enters the Sanctuary." )
+                else
+                        say(locale.forked_man_say_you_cant2 )
+                end
+
+			local x, y = forked.get_sungzi_start_pos()
+			forked.warp_all_in_map( pc.get_map_index(), forked.getsungzimapindex(), x, y, 10)
+        end
+
+        when 11001.chat."GM: Nation War" or 11003.chat."GM: Nation War" or 11005.chat."GM: Nation War" with pc.is_gm() begin
+           local s = select( "Start the Nation War" , "End the Nation War" , "Cancel");
+
+			if s == 1 then
+				-- 기존에 있던 몹을 모두 죽인다
+				forked.purge_all_monsters()
+
+				-- 초기화
+				forked.initforked()
+
+				-- 시작 플래그 설정
+				game.set_event_flag("threeway_war", 1)
+
+				-- 삼거리 전투 킬 제한 설정
+				game.set_event_flag("threeway_war_dead_count", 50)	-- 부활 가능 수
+
+				if true == is_test_server() then
+					game.set_event_flag("threeway_war_kill_count", 5)	-- PC 몇 명 죽이면 순위 먹여 탈락시킬 것인가
+				else
+					game.set_event_flag("threeway_war_kill_count", 100)	-- PC 몇 명 죽이면 순위 먹여 탈락시킬 것인가
+				end
+
+				game.set_event_flag("threeway_war_boss_count", 5)	-- 최종 보스 몇 마리 소환할 것인가
+
+				-- 삼거리 입구 열고/닫기 설정
+				game.set_event_flag("threeway_war_open_gate1", 1)
+				game.set_event_flag("threeway_war_open_gate2", 1)
+				game.set_event_flag("threeway_war_open_gate3", 1)
+				say("Nation War has started.")
+				say("")
+
+				wait()
+
+				-- 몬스터 새롭게 리젠
+				regen_in_map( forked.getpassmapindexbyempire(1), forked.getpasspathbyempire(1) .."regen00.txt" )
+				regen_in_map( forked.getpassmapindexbyempire(1), forked.getpasspathbyempire(1) .."npc00.txt" )
+				regen_in_map( forked.getpassmapindexbyempire(2), forked.getpasspathbyempire(2) .."regen00.txt" )
+				regen_in_map( forked.getpassmapindexbyempire(2), forked.getpasspathbyempire(2) .."npc00.txt" )
+				regen_in_map( forked.getpassmapindexbyempire(3), forked.getpasspathbyempire(3) .."regen00.txt" )
+				regen_in_map( forked.getpassmapindexbyempire(3), forked.getpasspathbyempire(3) .."npc00.txt" )
+
+				notice_all("Nation War has started!")
+				notice_all("Talk to the Archer Guardian to join. Level 30 is required.")
+
+			elseif 2 == s then
+				game.set_event_flag("threeway_war", 0)
+
+				notice_all("Ending Nation War")
+				forked.purge_all_monsters()
+
+				warp_all_to_village(forked.getsungzimapindex(), 1)
+				warp_all_to_village(forked.getpassmapindexbyempire(1), 1)
+				warp_all_to_village(forked.getpassmapindexbyempire(2), 1)
+				warp_all_to_village(forked.getpassmapindexbyempire(3), 1)
+                end
+        end
+        end
+		end

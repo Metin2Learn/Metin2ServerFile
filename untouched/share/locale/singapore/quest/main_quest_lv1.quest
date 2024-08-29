@@ -1,0 +1,125 @@
+quest main_quest_lv1 begin
+	state start begin
+		when login or levelup with pc.get_level() == 1 begin
+			set_state( gotoinfomation )
+		end
+	end
+			
+	state gotoinfomation begin
+		when letter begin
+			send_letter("Letter From the Council")
+		end
+	
+		when button or info begin
+			say_title("Letter From the Council")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("Dear Community,")
+			say("")
+			say("Due to the recent plague of the Metin stones, all able")
+			say("bodied citizens must report to the City Guard for")
+			say("enrollment in the military service. New recruits are")
+			say("guaranteed pay, free medical attention, and guild housing.")
+			say("")
+			say("You can expect to learn close combat training with a weapon")
+			say("as well as specialization in a martial art of your")
+			say("choice. Speak with the City Guard to learn more.")
+			say("")
+			wait()
+			say_title("Letter From the Council")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("A word of caution goes out to the local farmers and hunters,")
+			say("the wildlife population has become increasingly aggressive.")
+			say("")
+			say("There have been many missing reports of children and amateur")
+			say("hunters since the metin plague has broke out. Be sure to")
+			say("carry a weapon with you at all times, especially if you plan")
+			say("to head into the forest.")
+			say("")
+			wait()
+			say_title("Letter From the Council")
+			say("")
+			say("If you come across a metin stone, smash it into pieces.")
+			say("")
+			say("This is the only way we know that will keep the plague from")
+			say("spreading until we can find a more permanent solution.")
+			say("")
+			say("Until then, stay vigilant and cautious.")
+			say("")
+			say("Sincerely,")
+			say("")
+			say("The City Council of Defense")
+			say("")
+			set_state( gototeacher )
+		end
+	end
+
+	state gototeacher begin
+		when letter begin
+			local v=find_npc_by_vnum(20354)
+			if v!=0 then
+				target.vid("__TARGET__", v, mob_name(20354))
+			end
+		end
+
+		when button or info begin
+			say_title("Report to the City Guard")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("")
+			say("Due to the recent plague of the metin stones, all ")
+			say("able-bodied citizens must report to the City Guard to enroll")
+			say(" for millitary training. Report to the City Guard for more ")
+			say("information.")
+			say("   ")
+			say_reward("You can find the City Guard by opening up the Area Map and ")
+			say_reward("locating the blinking circle on the map. You can open the ")
+			say_reward("Area Map by pressing 'M' on your keyboard.")
+			say("")
+		end
+			
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say_title("City Guard:")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("Greetings Citizen,")
+			say("")
+			say("Have you come to join the military training? Good. Before")
+			say("you begin, I need you to sign this agreement. By signing")
+			say("this you are vowing allegiance to the Nation. It is also")
+			say("proof to the City Council that you are a member of the")
+			say("militia. Please sign your name below.")
+			say("")
+			while true do
+				local name = input()
+				if name == tostring(pc.get_name()) then
+					break
+				else
+					say_title("City Guard:")
+					say("")
+					----"123456789012345678901234567890123456789012345678901234567890"|
+					say("You must sign with your name to join the ranks. Please")
+					say("input your name before continuing.")
+					say("")
+				end
+			end
+			say_title("City Guard:")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("Welcome to the militia, recruit. I will be your commander")
+			say("until you are trained enough to enter into real combat.")
+			say("")
+			say("For now, let's get started on basic training. I hope you're")
+			say("ready to start using that weapon of yours.")
+			say("")
+			clear_letter()
+			set_quest_state("find_squareguard","find")
+			set_quest_state("main_quest_lv2","run")
+			set_state(__COMPLETE__)
+		end
+	end
+	
+	state __COMPLETE__ begin
+    	end
+end

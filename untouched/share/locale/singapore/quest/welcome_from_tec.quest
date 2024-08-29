@@ -1,0 +1,193 @@
+quest welcome_from_tec begin
+	state start begin
+		when login begin
+			send_letter("Adventurer's primer")
+		end
+	
+		when button or info begin
+			say_title("Welcome from TEC")
+			say("")
+			say("Please choose your language.")
+			local choose_lang = select("English", "Deutsch", "Italiano", "Polski", "Español", "Do not show this message again")
+			
+			if choose_lang == 1 then
+				----"123456789012345678901234567890123456789012345678901234567890"|
+				addimage(20, 12, "sgbanner.tga")
+				say("")
+				say("")
+				say("")
+				say("")
+				say_title("Warmest welcome from TEC Interactive")
+				say("")
+				say("Hello adventurer!")
+				say("")
+				say("TEC Interactive gives you a warm welcome to Metin2 Singapore!")
+				say("Do not hesitate to contact a GM if you need support and")
+				say("please respect our rules.")
+				say("")
+				wait()
+				addimage(20, 12, "sgbanner.tga")
+				say("")
+				say("")
+				say("")
+				say("")
+				say("1) Use of Hack, Bots and Bug Exploits is forbidden.")
+				say("2) Use only english when writing in call chat.")
+				say("3) Do not insult or harass other players.")
+				say("4) Do not steal monsters or drops from players belonging")
+				say("   to your own kingdom.")
+				say("")
+				say_reward("Thanks in advance and enjoy your time with us!")
+				say("")
+		
+			elseif choose_lang == 2 then
+				addimage(20, 12, "sgbanner.tga")
+				say("")
+				say("")
+				say("")
+				say("")
+				say_title("Herzliches Willkommen von TEC Interactive")
+				say("")
+				say("Hallo Abenteurer!")
+				say("TEC Interactive heißt dich herzlich auf")
+				say("Metin2 SG willkommen! Zögere nicht einen GM")
+				say("zu kontaktieren wenn du Support benötigst!")
+				say("")
+				wait()
+				addimage(20, 12, "sgbanner.tga")
+				say("")
+				say("")
+				say("")
+				say("")
+				say("Doch halte dich bitte an unsere Regeln die lauten:")
+				say("")
+				say("- Hacken und Bugmissbrauch sind strikt verboten")
+				say("- Im Rufchat darf nur Englisch benutzt werden")
+				say("- Beleidige und Belästige andere Spieler nicht")
+				say("- Metin- und Mobklau bei Spielern der gleichen")
+				say("  Nation ist verboten. = Kill Steal")
+				say("")
+				say_reward("Danke im Vorraus und geniess die Zeit mit uns!")
+				local ok_letter2 = select("OK")
+				
+				if ok_letter2 == 1 then
+					clear_letter()
+				end
+			
+			elseif choose_lang == 3 then
+				addimage(20, 12, "sgbanner.tga")
+				say("")
+				say("")
+				say("")
+				say("")
+				say_title("Un caloroso benvenuto dalla TEC Interactive")
+				say("")
+				say("Benvenuto avventuriero!")
+				say("La TEC Interactive ti da un")
+				say("caloroso benvenuto su Metin2 SG!")
+				say("Non esitare a contattare un GM se hai bisogno di")
+				say("aiuto!")
+				say("")
+				wait()
+				addimage(20, 12, "sgbanner.tga")
+				say("")
+				say("")
+				say("")
+				say("")
+				say("Ma per favore rispetta le nostre regole:")
+				say("")
+				say("- Non è consentito l'uso di Hack, Bot e l'uso di Bug")
+				say("- Usa solo l'inglese quando scrivi nella chat pubblica")
+				say("- Non insultare o infastidire gli altri player")
+				say("- Rubare i mostri e i Metin dai player dello stesso regno")
+				say("  è proibito")
+				say("")
+				say_reward("Grazie in anticipo e gustati il tuo tempo con noi!")
+				local ok_letter3 = select("OK")
+				
+				if ok_letter3 == 1 then
+					clear_letter()
+				end
+			
+			elseif choose_lang == 4 then
+				addimage(20, 12, "sgbanner.tga")
+				say("")
+				say("")
+				say("")
+				say_title("TEC INTERACTIVE ma zaszczyt goraco Cie powitac")
+				say("")
+				say("Witaj Podrózniku!")
+				say("")
+				say("TEC INTERACTIVE wita Cie cieplo w")
+				say("swiecie Metin2 SG!")
+				say("")
+				say("W razie problemów nie wahaj sie")
+				say("kontaktowac z Mistrzem Gry (GMem).")           
+				say("")
+				wait()
+				addimage(20, 12, "sgbanner.tga")
+				say("")
+				say("")
+				say("")
+				say("Pamietaj, ze na naszym serwerze")
+				say("obowiazuja nastepujace zasady:")
+				say("- Uzywanie Hacków, Botów Bugów konczy sie perm banem")
+				say("- Nasz serwer jest anglojezyczny, wiec komunikuj sie z")
+				say("  innymi graczami w tym jezyku")
+				say("- Nie obrazaj, nie oszukuj oraz nie przesladuj innych graczy")
+				say("- Kradziez potworów oraz metinów graczom z tego samego")
+				say("  królestwa jest zabroniona")
+				say("")
+				say_reward("Dziekujemy za to ze jestescie z nami")
+				say_reward("i zyczymy milej zabawy")
+				local ok_letter4 = select("OK")
+				
+				if ok_letter4 == 1 then
+					clear_letter()
+				end
+				
+			elseif choose_lang == 5 then
+				addimage(20, 12, "sgbanner.tga")
+				say("")
+				say("")
+				say("")
+				say("")
+				say_title("Una calurosa bienvenida de TEC Interactive")
+				say("")
+				say("¡Hola aventurero!")
+				say("¡TEC Interactive te da una calurosa bienvenida a Metin2 SG!")
+				say("No dudes en contactar con un GM si necesitas ayuda pero")
+				say("por favor respeta nuestras normas.")
+				say("")
+				wait()
+				addimage(20, 12, "sgbanner.tga")
+				say("")
+				say("")
+				say("")
+				say("")
+				say("- El uso de Hack, Bots y aprovecharse de bugs del juego")
+				say("  está prohibido terminantemente.")
+				say("- Solo se puede utilizar inglés en el chat general.")
+				say("- No insultes o acoses a otros jugadores.")
+				say("- Robar monstruos o metines de jugadores del propio reino")
+				say("  está prohibido.")
+				say("")
+				say_reward("¡Gracias de antemano y disfruta de tu tiempo")
+				say_reward("con nosotros!")
+				local ok_letter5 = select("OK")
+				
+				if ok_letter5 == 1 then
+					clear_letter()
+				end
+			
+			elseif choose_lang == 6 then
+				clear_letter()
+				set_state(__complete)
+			end
+		end
+	end
+	state __complete begin
+	end
+					
+end	
+		

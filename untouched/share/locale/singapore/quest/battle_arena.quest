@@ -1,0 +1,87 @@
+quest battle_arena begin
+	state start begin
+		when 20020.chat."To defeat the monsters~" begin
+			say(mob_name(20020))
+			say("")
+
+			if pc.is_dead() == true then
+				say("Holy!! Dead man is talking!!")
+				say("")
+				return
+			end
+
+			local map_index = game.get_event_flag("battle_arena")
+
+			if map_index == 190 or map_index == 191 or map_index == 192 then
+				local gogo = true
+				if map_index == 190 then
+					if pc.get_map_index() != 3 then
+						gogo = false
+					end
+				elseif map_index == 191 then
+					if pc.get_map_index() != 23 then
+						gogo = false
+					end
+				elseif map_index == 192 then
+					if pc.get_map_index() != 43 then
+						gogo = false
+					end
+				end
+
+				if gogo == false then
+					say("I've heard the news that the monsters attacked other kingdom's castles.")
+					say("It's unable to go there from here.")
+					say("")
+					return
+				end
+
+				say("In the castle of kingdom far away")
+				say("there are so many Boss mobs ")
+				say("We can be rich if we kill all those mobs")
+				say("Do you want to try?")
+				say("")
+
+				local s = select("Participate", "Cancel")
+
+				if s == 1 then
+					local can_enter = false ;
+					
+					if pc.get_premium_remain_sec(PREMIUM_EXP) > 0 then
+						can_enter = true ;
+					else
+						if pc.count_item(71095) > 0 then
+							can_enter = true ;
+							pc.remove_item(71095)
+						end
+					end
+
+					if can_enter == true then
+						say(mob_name(20020))
+						say("haha, Are you joining?")
+						say("Then I'll let you go.")
+						say("")
+
+						if map_index == 190 then
+							pc.warp(668000,261000)
+						elseif map_index == 191 then
+							pc.warp(719100,260400)
+						elseif map_index == 192 then
+							pc.warp(772400,261800)
+						end
+					else
+						say(mob_name(20020))
+						say("Darn!! You can't pass if you do not have the pass")
+						say("")
+						return
+					end
+				end
+			else
+				say("The monsters have already occupied the entrance way")
+				say("It's too dangerous to move to that location. ")
+				say("I wish people in the castle are safe")
+				say("")
+			end
+		end --w
+	end --s
+end --q
+

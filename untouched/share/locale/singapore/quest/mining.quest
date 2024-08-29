@@ -1,0 +1,103 @@
+quest mining begin
+        state start begin
+                when 20015.chat."Mining" begin
+                        setskin(NOWINDOW)
+                        npc.open_shop()
+                end
+
+                when 20015.take with item.vnum >= 29101 and item.vnum < 29200 and item.get_socket(0) < item.get_value(2) begin
+			----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("Deokbae:")
+                        say("")
+                        ---                                                   l
+                        say("Your Pickaxe can't be improved yet. Work harder!")
+                        say("")
+                end
+                when 20015.take with item.vnum >= 29101 and item.vnum < 29200 and item.get_socket(0) >= item.get_value(2) begin
+                        say_title("Deokbae:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("So you want to improve your pickaxe?")
+                        say("Let's see ...")
+                        say("")
+                        say("The level of your pickaxe is ".. item.get_level().. ".")
+                        say("")
+
+                        if item.get_value(3) == 100 then
+                        say_title("Deokbae:")
+                        	say("")
+                                say("Do you want to improve it?")
+                                say("")
+                        else
+                        say_title("Deokbae:")
+                        say("")
+                                ---                                                   l
+                                say("There's a chance of " .. (100-item.get_value(3)).."% that the") 
+                                say("upgrade fails. If this happens, the level of your pickaxe")
+                                say("will be reduced.")
+                                say("")
+                                say("Do you still want to improve it?")
+                                say("")
+                        end
+
+                        local s = select("Yes","No")
+                        if s == 2 then
+                        	say_title("Deokbae:")
+                        	say("")
+                                say("Come again when you make up your mind.")
+                                say("")
+                                return
+                        end
+
+                        local f = __refine_pick(item.get_cell())
+                        if f == 2 then
+                        	say_title("Deokbae:")
+                        	say("")
+                                ---                                                   l
+                                say("The pickaxe couldn't be improved because of a")
+                                say("problem. You get it back. Try it again later.")
+                                say("")
+
+                        elseif f == 1 then
+                        say_title("Deokbae:")
+                        	say("")
+                                say("Here is your pickaxe with a new level!")
+                                say("")
+                        else
+                        say_title("Deokbae:")
+                        say("")
+                                ---                                                   l
+                                say("Oh no, I made a mistake. ")
+                                say("Sorry. Unfortunately it lost a level.")
+                                say("")
+                        end
+                end
+
+                when 20047.click or
+                        20048.click or
+                        20049.click or
+                        20050.click or
+                        20051.click or
+                        20052.click or
+                        20053.click or
+                        20054.click or
+                        20055.click or
+                        20056.click or
+                        20057.click or
+                        20058.click or
+                        20059.click or
+                        30301.click or
+                        30302.click or
+                        30303.click or
+                        30304.click or
+                        30305.click begin
+
+                        if pc.is_mount() != true then
+                        	if game.get_event_flag("labor_day") > 0 then
+                                	char_log(0, "MINING", "Log for Labor Day")
+                                end
+                                pc.mining()
+                        end
+                end
+        end
+end

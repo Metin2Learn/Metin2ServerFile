@@ -1,0 +1,53 @@
+quest cube begin
+	state start begin
+		when 20018.chat."Making Potions?" with pc.level >= 15 begin
+			say_title("Baek-go:")
+			say("")
+			say("Hey!")
+			say("Are you interested in making potions by any chance?")
+			say("Recently Biologist Chaegirab did a lot of research")
+			say("to create many new potions with different effects.")
+			say("Do you want to try it out?")
+			wait()
+			setskin(NOWINDOW)
+			command("cube open")
+			-- say("Come anytime when you need, I will make them for you")
+		end
+
+
+		when 20017.chat."Kingdom's Potion recipe" with pc.level >= 30 begin
+			say_title("Yu-Hwan:")
+			say("")
+			----"111111222222333333444444555555666666777777888888999999000000"
+			say("These days recipes for potion are spread across the nation!")
+			say("Wow! You seem to have grown up quite a bit!")
+			say("I will show you something that you have never seen before!")
+			say("Do you want to try it out?")
+			wait()
+			setskin(NOWINDOW)
+			command("cube open")
+
+		end
+
+
+		when 20022.chat."Secret Recipe of Family potion"  with pc.level >=45 begin
+			say_title("David:")
+			say("")
+			say("I have finally found the secret recipe, hahaha!")
+			----"111111222222333333444444555555666666777777888888999999000000"
+			say("Now I might become the best expert about potion mixing")
+			say("in this kingdom!")
+			say("I don't fear Uriel anymore.")
+			say("I'm going to be rich, AHAHAHAHA!")
+			say("")
+			say("Do you want to learn my new skills?")
+			wait()
+			setskin(NOWINDOW)
+			command("cube open")
+
+		end
+
+
+			
+end
+end

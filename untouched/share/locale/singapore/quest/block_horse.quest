@@ -1,0 +1,22 @@
+---- quest block horse in maps:
+---- Dojang/Sungzi/Guild war
+---- non tested.
+
+quest block_horse begin
+	state start begin
+		when 50051.use or 50052.use or 50053.use with pc.get_map_index() == 26 or pc.get_map_index() == 114 or pc.get_map_index() == 121 or pc.get_map_index() == 125 or pc.get_map_index() == 110 or pc.get_map_index() == 111 begin
+			syschat("Sorry, can't call the horse in this map")
+		end
+		
+		when login with pc.get_map_index() == 26 or pc.get_map_index() == 114 or pc.get_map_index() == 121 or pc.get_map_index() == 125 or pc.get_map_index() == 110 or pc.get_map_index() == 111 begin
+			if pc.is_mount() then
+				pc.unmount()
+				horse.unsummon()
+				syschat("Sorry, can't have the horse or another mount in this map")
+			else
+				horse.unsummon()
+				syschat("Sorry, can't have the horse or another mount in this map")
+			end
+		end
+	end
+end

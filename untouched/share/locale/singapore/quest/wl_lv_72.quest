@@ -1,0 +1,128 @@
+quest wl_lv_72 begin
+	state start begin
+		when login or levelup with pc.get_level() >= 72 begin
+			set_state(information)
+		end
+	end
+	
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(33005)
+			if v != 0 then
+				target.vid("__TARGET__", v, "Duban")
+			end
+			send_letter("The Stone Tortoise")
+		end
+		
+		when button or info begin
+			say_title("The Stone Tortoise")
+			say("")
+			say("The Desert Medic Duban has been asking")
+			say("for you. It seems like he needs your help.")
+			say("You should pay him a visit in the Snake Field")
+			say("and see if you can help him!")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 33005.chat."The Stone Tortoise" begin
+			target.delete("__TARGET__")
+			say_title("Duban:")
+			say("")
+			say("Hello there brave fighter!")
+			say("I need your help...")
+			say("")
+			say("I have produced various medicines but they are not")
+			say("worth more than water if not applied properly.")
+			say("I used the carapace of a mighty Stone Tortoise")
+			say("but it broke reciently - and I really need a new one!")
+			say("")
+			wait()
+			say_title("Duban:")
+			say("")
+			say("I know it's quite the favour to ask but its in the")
+			say("name of health! I would reward you royally if you")
+			say("could retrieve another Stone Tortoise Carapace for me!")
+			say("")
+			say("Will you do me that favour?")
+			say("")
+			local init = select("I will do it!","I can't right now.")
+			if init == 1 then
+				say_title("Duban:")
+				say("")
+				say("Thank you so much!")
+				say("I will wait for you here, may the")
+				say("Dragon God bless you on your journey!")
+				say("")
+				say_reward("You can retrieve the Carapace in a group if")
+				say_reward("you are the party leader.")
+				say("")
+				set_state(hunt)
+			end
+		end
+	end
+	
+	state hunt begin
+		when letter begin
+			send_letter("The Stone Tortoise")
+		end
+		
+		when button or info begin
+			say_title("Retrieve the Stone Tortoise Carapace")
+			say("")
+			say("Duban has asked of you to get a carapace")
+			say("from the Stone Tortoise. This mighty enemy")
+			say("will require a strong party to be defeated.")
+			say("")
+			say("You can retrieve the carapace in a group")
+			say("if you are the leader of a party.")
+		end
+		
+		when 2192.party_kill begin
+			pc.give_item2(90322,1)
+			set_state(report)
+		end
+	end
+	
+	state report begin
+		when letter begin
+			local v = find_npc_by_vnum(33005)
+			if v != 0 then
+				target.vid("__TARGET__", v, "Duban")
+			end
+			send_letter("The Stone Tortoise")
+		end
+		
+		when button or info begin
+			say_title("The Stone Tortoise")
+			say("")
+			say("You've obtained the carapace of a Stone Tortoise!")
+			say("You should bring it back to Duban immediately and")
+			say("claim your reward!")
+			say("")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 33002.chat."The Stone Tortoise" with pc.count_item(90322) begin
+			target.delete("__TARGET__")
+			say_title("Duban:")
+			say("")
+			say("This is perfect!")
+			say("Thank you so much, now I can finally")
+			say("apply my medicine properly to people")
+			say("in need! You've done a great job in helping")
+			say("me to make us live a healthier life!")
+			say("")
+			say("Here, take this as a sign of my gratitude!")
+			say("")
+			say_reward("13.500.000 EXP received.")
+			say_reward("10 Doctor's Codes received.")
+			pc.remove_item(90322,pc.count_item(90322))
+			pc.give_exp2(13500000)
+			pc.give_item2(90313,10)
+			set_state(__COMPLETE__)
+		end
+	end
+	
+	state __COMPLETE__ begin
+	end
+end

@@ -1,0 +1,198 @@
+quest main_quest_lv3 begin
+        state start begin
+        end
+        state run begin
+                when login or levelup or enter with pc.get_level() >= 3 begin
+                        set_state( gototeacher )
+                end
+                when 20354.chat."Do you have an assignment for me?" begin
+                        say_title("City Guard:")
+                        say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("I have no further assignments for you at this time. Come ")
+			say("back to me later after you've practiced more with your ")
+			say("weapon. I suggest patroling the city outskirts and slaying")
+                        say("any Wild Dogs you see.")
+			say("")
+                end
+        end
+        state gototeacher begin
+                when letter begin
+                        send_letter("The City Guard: New Assignment")
+                        local v=find_npc_by_vnum(20354)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Go to the City Guard")
+                        end
+                end
+                when button or info begin
+                        say_title("The City Guard: New Assignment")
+                        say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Dear recruit,")
+			say("I have a new assignment that will be perfect for you. When ")
+                        say("you have time, visit me and I will begin you on your next ")
+                        say("mission.")
+			say("")
+			say("Sincerely, the City Guard")
+			say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        say_title("City Guard:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Salute recruit,")
+                        say("")
+			say("Good to see you. I can tell you've been out wrestling with ")
+                        say("boars. You have mud and scrapes all over you. For your next")
+                        say("mission I want you to go assist the General Store's ")
+                        say("shopkeeper. Don't worry too much, this mission will be easy.")
+                        say("")
+                        wait()
+                        say_title("City Guard:")
+                        say("")
+                        say("Anything the shopkeeper asks should be well within your")
+                        say("abilities.")
+                        say("")
+                        say("Plus, while you're there, you can learn a few things about")
+                        say("potions. These days, you can't go anywhere without those!")
+                        say("You can find the General Store shopkeeper near the town's")
+                        say("circle. You better hurry, she's been waiting some time")
+			say("now for assistance.")
+			say("")
+                        wait()
+                        set_state( gotogood )
+                end
+        end
+
+        state gotogood begin
+                when letter begin
+                        local v=find_npc_by_vnum(9003)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Assisting the Shopkeeper")
+                        end
+                end
+                when letter begin
+                        send_letter("Assisting the Shopkeeper")
+                end
+                when button or info begin
+                        say_title("Assisting the Shopkeeper")
+                        say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("For your second assignment, the City Guard has asked you to ")
+                        say("visit the General Store shopkeeper to assist her with any ")
+                        say("problems. Speak with the General Store shopkeeper to")
+                        say(" see how you can be of service.")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                	----"123456789012345678901234567890123456789012345678901234567890"|
+                        target.delete("__TARGET__")
+                        say_title("General Store Shopkeeper:")
+                        say("")
+                        say("Hello, you must be the help I asked for from the City")
+			say("Guard. Thank you for coming. ")
+			say("")
+			say("My name is Kim, I am an herbalist specialized in crafting")
+			say("potions. From the herbs I collect, I can make many different")
+			say("potions to heal physical wounds or replenish lost energy.")
+			say("")
+			say("If you are going out into the deep forest, I suggest")
+			say("stocking up. They can save you from the brink of death!")
+			say("")
+                        wait()
+                        say_title("General Store Shopkeeper:")
+                        say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("Anyway, enough about potions, I have an errand for you to")
+                        say("run. My father left his checkbook here when he visited for")
+                        say("lunch. Could you be a dear and take it back to him? He")
+                        say("needs his checkbook to keep track of his armour sells.")
+			say("He can't run his shop without it.")
+			say("")
+			say("My father is the Armour Shop Dealer. You can find him near ")
+                        say("the town's center.")
+                        say("")
+                        say_item("Checkbook", 50902, "")
+                        say("")
+			pc.give_item2( 50902, 1 )
+                        set_state( gotodefend )
+                end
+        end
+
+        state gotodefend begin
+                when letter begin
+                        local v=find_npc_by_vnum(9002)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Deliver the Checkbook")
+                        end
+                end
+                when letter begin
+                        send_letter("Deliver the Checkbook.")
+                end
+                when button or info begin
+                        say_title("Deliver the book.")
+						----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("The Armour Shop Dealer had left his checkbook at the General")
+                        say(" Store. Kim, the General Store shopkeeper, has asked you to ")
+                        say("return it to him. Take the checkbook to the Armour Shop ")
+                        say("Dealer. You can find him near the town's circle.")
+                        say("")
+                        say("")
+                        say_item("Checkbook", 50902, "")
+                        say("")
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("Armour Shop Dealer:")
+                        say("")
+                        say("Hello there! What can I do for you today, young recruit?")
+                        say("What's that? My daughter sent you? Oh! My checkbook! I was")
+                        say("looking all over for the blasted thing. Thank you so much")
+                        say("for bringing it to me. You know what they say about old age,")
+                        say("the mind is the first to go! Haha!")
+                        say("")
+                        wait()
+                        say_title("Armor Shop Dealer:")
+                        say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("My name is Sam, for over 30 years I've been crafting the ")
+                        say("sturdiest of armours and shields for the soldiers fighting ")
+                        say("in battle.")
+                        say("")
+                        say("You can trust that any armour you buy from me will protect")
+                        say("you from any attack, human or beast. It takes a lot of")
+                        say("strength and determination to craft such armours from fire.")
+                        say("")
+                        wait()
+                        say("Even in my old age, my strength is still at it's fullest!")
+                        say("")
+                        say("If you ever need any new armour equipment, you know where")
+                        say("to find me. Thanks again for the checkbook. Here is a")
+                        say("little reward for your trouble.")
+                        say("")
+                        wait()
+                        say_title("Reward:")
+                        say("")
+                        say_reward("Experience points: 550" )
+                        say_reward("Yang: 5.300")
+                        say_reward(string.format("Object: %s amount: %d", item_name(27004), 10))
+                        say("")
+
+                        pc.give_exp2( 550 )
+                        pc.change_money( 5300 )
+                        pc.give_item2( 27004 ,10 )
+			pc.remove_item(50902,1)
+
+                        clear_letter()
+                        set_state(__COMPLETE__)
+                        set_quest_state("main_quest_lv6","run")
+                end
+        end
+        state __COMPLETE__ begin
+        end
+end

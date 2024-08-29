@@ -1,0 +1,147 @@
+quest find_senior_soldier begin
+    state start begin
+        when 20300.chat."Search for an experienced soldier" or 20301.chat."Search for an experienced soldier" or 20302.chat."Search for an experienced soldier" or 20303.chat."Search for an experienced soldier" or 20304.chat."Search for an experienced soldier" or 20305.chat."Search for an experienced soldier" or 20306.chat."Search for an experienced soldier" or 20307.chat."Search for a experienced soldier" or 20320.chat."Search for an experienced soldier" or 20321.chat."Search for an experienced soldier" or 20322.chat."Search for an experienced soldier" or 20323.chat."Search for an experienced soldier" or 20324.chat."Search for an experienced soldier" or 20325.chat."Search for an experienced soldier" or 20326.chat."Search for an experienced soldier" or 20327.chat."Search for an experienced soldier" or 20340.chat."Search for an experienced soldier" or 20341.chat."Search for an experienced soldier" or 20342.chat."Search for an experienced soldier" or 20343.chat."Search for an experienced soldier" or 20344.chat."Search for an experienced soldier" or 20345.chat."Search for an experienced soldier" or 20346.chat."Search for an experienced soldier" or 20347.chat."Search for an experienced soldier" with pc_is_novice() and npc_is_same_empire() and npc_is_same_job() and pc.get_level()<=10 begin
+            if not next_time_is_now() then
+                ----"12345678901234567890123456789012345678901234567890"|
+                say_title("Skill Teacher:")
+                say("")
+                say("You can find a experienced soldier")
+                say("only once an hour.")
+                say("We apologize for the delay.")
+            else
+				say_title("Me:")
+				say("")
+                say("I would like to know more about skills before I make up my")
+                say("mind about which doctrine is the best for me..")
+                say("")
+                say("The teacher thinks a moment and replies...")
+                say("")
+                wait()
+                say_title("Skill Teacher:")
+                say("")
+				----"123456789012345678901234567890123456789012345678901234567890"| 
+                say("It is more effective, to see how the skills work on your own")
+                say("instead of listening to my description.")
+                say("You trust more in the things you see with your own eyes.")
+                say("")
+                say("I will give you a letter containing the location of an")
+                say("experienced soldier.")
+                say("")
+                find_senior_soldier.save_target_cond()
+                next_time_set(time_hour_to_sec(1), 10)
+                set_state(find)
+            end
+        end
+    end
+	
+    state failure begin
+        when letter begin
+            send_letter("No experienced Soldier")
+        end
+        when button or info begin
+            say_title("Information:")
+            say("")
+            say_reward("I am so sorry but there are no experienced soldiers")
+            say_reward("available at the moment.")
+            say_reward("Please try again later.")
+			say("")
+            say_reward("Your attempt to find an experienced soldier")
+            say_reward("was not successful.")
+            say("")
+            restart_quest()
+        end
+    end
+    state find begin
+        when letter begin
+            local v=find_senior_soldier.find_target()
+            test_chat("Sucht_Ziel"..v)
+            if v==0 then
+                set_state(failure)
+            else
+                target.vid("__TARGET__", v, "Search for an experienced soldier")
+                send_letter("Search for an experienced soldier")
+            end
+        end
+        when button or info begin
+            -----------"12345678901234567890123456789012345678901234567890"|
+            say_title("Imformation:")
+            say("")
+            say_reward("Go to the location of the experienced soldier, ")
+            say_reward("which is marked on your mini map.")
+            say("")
+        end
+        when __TARGET__.target.die begin
+            ----------"12345678901234567890123456789012345678901234567890"|
+            say_title("Task Information:")
+            say("")
+            say_reward("Suddenly there is a blast of wind.")
+            say_reward("The letter containing the location of the")
+            say_reward("experienced soldier is blown away!")
+            say("")
+            say_reward("Your attempt, to find the experienced soldier,")
+            say_reward("was not successful.")
+            say("")
+            restart_quest()
+        end
+        when __TARGET__.target.click begin
+            ----------"12345678901234567890123456789012345678901234567890"|
+            say_title("Experienced soldier located.")
+            say("")
+            say_reward("The letter given to you by the skill")
+	    say_reward("teacher begins to burn.")
+            say_reward("As it burns to ash and falls from your hands,")
+            say_reward("a warm feeling floods your body.")
+            say("")
+            target.delete("__TARGET__")
+            find_senior_soldier.clear_target_cond()
+            set_state(reward)
+        end
+    end
+    state reward begin
+        when letter begin
+            send_letter("The experienced soldier has blessed you!")
+        end
+        when button begin
+            ----------"12345678901234567890123456789012345678901234567890"|
+            say_title("The blessing!")
+            say("")
+            say("The letter containing the information about the location")
+            say("of the experienced soldier, is able to bless the")
+	    say("new adventurer, if they can locate the experienced soldier.")
+            say("")
+
+            local funcList={
+                function() find_senior_soldier.apply_affect("You receive +100 points to your maximum Life points.", apply.MAX_HP, 100) end,
+                function() find_senior_soldier.apply_affect("You receive +50 points on your maximum Life points.", apply.HP_REGEN, 50) end,
+                function() find_senior_soldier.apply_affect("You receive +5 points to your strength ability score.", apply.STR, 5) end,
+                function() find_senior_soldier.apply_affect("You receive +5 points to your stamina ability score.", apply.CON, 5) end,
+                function() find_senior_soldier.apply_affect("You receive +10 points critical hit chance.", apply.CRITICAL_PCT, 10) end,
+                function() find_senior_soldier.apply_affect("You receive +10 points to your attack speed.", apply.ATT_SPEED, 10) end,
+                function() find_senior_soldier.apply_affect("You receive +10 bonus points against animals.", apply.ATTBONUS_ANIMAL, 10) end,
+            }
+            table_get_random_item(funcList)()
+            restart_quest()
+        end
+    end
+    state __FUNC__ begin
+        function clear_target_cond()
+            pc.setqf("Ziel_Beding", 0)
+        end
+        function save_target_cond()
+            test_chat("npc.job="..npc_get_job())
+            pc.setqf("Ziel_Beding", npc_get_job())
+        end
+        function find_target()
+            return find_pc_cond(5, 100, pc.getqf("Ziel_Beding"))
+        end
+        function apply_affect(name, type, value)
+            say_title("Information")
+            say("")
+            say_reward(name)
+            say_reward("The effect lasts for 5 minutes.")
+            say("")
+            affect.add(type, value, 5*60)
+        end
+
+    end
+end

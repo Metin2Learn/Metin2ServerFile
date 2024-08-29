@@ -1,0 +1,207 @@
+quest rep_wl_58 begin
+	state start begin
+	end
+	
+	state run begin
+		when login or enter begin
+			send_letter("REP - The Source of Danger")
+		end
+		
+		when button or info begin
+			say_title("REP - The Source of Danger")
+			say("")
+			say("You've unlocked a new repeatable quest!")
+			say("Talk to the Desert Medic Duban for further")
+			say("information!")
+			say("")
+			say("You only receive this reminder once, so keep")
+			say("in mind you have this REP Quest available from")
+			say("here on out!")
+			say("")
+			pc.setqf("quest_points",1)
+			pc.setqf("quest_level",1)
+			pc.setqf("quest_wait",1)
+			set_state(standby)
+		end
+	end
+	
+	state standby begin
+		when 33005.chat."REP - The Source of Danger" begin
+			say_title("REP Quest Menu")
+			say("")
+			say("Please chose an Option!")
+			say("")
+			local opt = select("Start 'The Source of Danger' Quest","Information on the REP Quest","My Quest Level and Points","Cancel")
+			if opt == 1 then
+				if pc.getqf("quest_wait") < get_time() then
+					local get_amount = {20,20,30,40}
+					local get_chance = {30,20,10,5}
+					pc.setqf("amount",get_amount[pc.getqf("quest_level")])
+					pc.setqf("chance",get_amount[pc.getqf("quest_level")])
+					set_state(hunt)
+				else
+					say_title("REP - The Source of Danger")
+					say("")
+					say("You can not do the quest right now.")
+					say("Wait Time: "..(pc.getqf("quest_wait")-get_time()).." seconds.")
+					say("")
+					say("")
+				end
+			elseif opt == 2 then
+				say_title("Duban:")
+				say("")
+				say("Thanks for the Snake Venom Gland!")
+				say("It helped my studies a lot, but to produce")
+				say("antidotes and toxines I need Snake Venom Teeth!")
+				say("So in case you want to get some for me just tell.")
+				say("I will reward you for your troubles!")
+				say("")
+			elseif opt == 3 then
+				local get_amount = {20,20,30,40}
+				local rew_table = {
+				{1,1,2,3},
+				{50000,125000,200000,300000},
+				}
+				say_title("REP - The Source of Danger")
+				say("")
+				say("Your current REP-Quest Level: "..rep_q_level[pc.getqf("quest_level")]..".")
+				say("Your current REP-Quest Points: "..pc.getqf("quest_points").." Points.")
+				say("")
+				if pc.getqf("quest_wait") < get_time() then
+				say("Quest Status: The quest is available right now.")
+				else
+				say("Quest Status: Unavailable for "..pc.getqf("quest_wait")-get_time().." seconds.")
+				end
+				say("")
+				say("Items per Quest: "..get_amount[pc.getqf("quest_level")].." Venom Snake Teeth.")
+				say("")
+				say("- Current Rewards per Quest -")
+				say("Doctors Code x"..rew_table[1][pc.getqf("quest_level")].."")
+				say(""..rew_table[2][pc.getqf("quest_level")].." Yang.")
+				say("")
+			end
+		end
+	end
+	
+	state hunt begin
+		when letter begin
+			send_letter("REP - The Source of Danger")
+		end
+		
+		when 33005.chat."REP - The Source of Danger" begin
+			say_title("REP Quest Menu")
+			say("")
+			say("Please chose an Option!")
+			say("")
+			local opt = select("Information on the REP Quest","My Quest Level and Points","Cancel")
+			if opt == 1 then
+				say_title("Duban:")
+				say("")
+				say("Thanks for the Snake Venom Gland!")
+				say("It helped my studies a lot, but to produce")
+				say("antidotes and toxines I need Snake Venom Teeth!")
+				say("So in case you want to get some for me just tell.")
+				say("I will reward you for your troubles!")
+				say("")
+			elseif opt == 2 then
+				local rew_table = {
+				{1,1,2,3},
+				{50000,125000,200000,300000},
+				}
+				say_title("REP - The Source of Danger")
+				say("")
+				say("Your current REP-Quest Level: "..rep_q_level[pc.getqf("quest_level")]..".")
+				say("Your current REP-Quest Points:"..pc.getqf("quest_points").." Points.")
+				say("")
+				if pc.getqf("quest_wait") < get_time() then
+				say("Quest Status: The quest is available right now.")
+				else
+				say("Quest Status: Unavailable for "..pc.getqf("quest_wait")-get_time().." seconds.")
+				end
+				say("")
+				say("Items per Quest: "..get_amount[pc.getqf("quest_level")].." Venom Snake Teeth.")
+				say("")
+				say("- Current Rewards per Quest -")
+				say("Doctors Code x"..rew_table[1][pc.getqf("quest_level")].."")
+				say(""..rew_table[2][pc.getqf("quest_level")].." Yang.")
+				say("")
+			end
+		end
+		
+		when button or info begin
+			say_title("REP - The Source of Danger")
+			say("")
+			say("Duban needs Snake Venom Teeth for his antidote")
+			say("and toxine production. You can obtain them from")
+			say("Venom Snake Swordsmen and Venom Snake Archers in")
+			say("the Snake Field.")
+			say("")
+			say_reward("You need "..pc.getqf("amount").." Snake Teeth for Duban.")
+			say("")
+		end
+			
+		when 2133.kill or 2134.kill begin
+			local chance = number(1,100)
+			if pc.getqf("chance") <= chance then
+				pc.give_item2(90321,1)
+			end
+			if pc.count_item(90321) >= pc.getqf("amount") then
+				set_state(report)
+			end
+		end
+	end
+			
+	state report begin
+		when letter begin
+			send_letter("Return to Duban")
+		end
+		
+		when button or info begin
+			say_title("REP - The Source of Danger")
+			say("")
+			say("You have all Snake Teeth Duban needs.")
+			say("Head back to him to claim your reward!")
+			say("")
+			say("")
+		end
+		
+		when 33005.chat."I have all Snake Teeth" begin
+			if pc.count_item(90321) < pc.getqf("amount") then
+				say_title("Duban:")
+				say("")
+				say("You don't have enough Snake Teeth I'm sorry.")
+				say("")
+				say("")
+			else
+				local q = {7200,3600,3600,1800}
+				local rew_table = {
+					{1,1,2,3},
+					{50000,125000,200000,300000},
+					}
+				say_title("Duban:")
+				say("")
+				say("Thank you very much!")
+				say("Here's your reward!")
+				say("")
+				say_reward(""..rew_table[1][pc.getqf("quest_level")].." Doctor's Code(s) received.")
+				say_reward(""..rew_table[2][pc.getqf("quest_level")].." Yang received.")
+				pc.remove_item(90321,pc.count_item(90321))
+				pc.give_item2(90313,rew_table[1][pc.getqf("quest_level")])
+				pc.change_gold(rew_table[2][pc.getqf("quest_level")])
+				pc.setqf("quest_points",pc.getqf("quest_points")+pc.getqf("amount"))
+				pc.setqf("quest_wait",get_time()+q[pc.getqf("quest_level")])
+				if pc.getqf("quest_points") >= 200 and pc.getqf("quest_points") <= 599 and pc.getqf("quest_level") < 2 then
+					pc.setqf("quest_level",2)
+					syschat("You've raised your REP Quest Level for 'The Source of Danger' Quest!")
+				elseif pc.getqf("quest_points") >= 600 and pc.getqf("quest_points") <= 2099 and pc.getqf("quest_level") < 3 then
+					pc.setqf("quest_level",3)
+					syschat("You've raised your REP Quest Level for 'The Source of Danger' Quest!")
+				elseif pc.getqf("quest_points") >= 2100 and pc.getqf("quest_level") < 4 then
+					pc.setqf("quest_level",3)
+					syschat("You've perfected the 'The Source of Danger' REP Quest!")
+				end
+				set_state(standby)
+			end
+		end
+	end
+end

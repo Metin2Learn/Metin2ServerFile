@@ -1,0 +1,25 @@
+quest mysql_setup begin
+    state start begin
+		when login begin
+			if is_test_server() then
+				env, err = mysql
+
+				if err then
+					chat("MySQL operation failed. Please contact an administrator.")
+				else
+					con, err = env:connect('wom_test_player', 'wom_test', '12QrUOlwZQ0rOjNRzQOM', '10.68.61.66', 3306)
+
+					if err then
+						chat("MySQL operation failed. Please contact an administrator.")
+					else
+						mysql_query = con:execute('DELETE FROM quest WHERE (dwPID = 0);')
+					end
+				end
+
+				env:close()
+				con:close()
+				err:close()
+			end
+		end
+    end
+end

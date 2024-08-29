@@ -1,0 +1,162 @@
+quest wl_lv_63 begin
+	state start begin
+	end
+	
+	state run begin
+		when login or levelup or enter with pc.get_level() >= 63 begin
+			set_state(information)
+		end
+	end
+	
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(33002)
+			if v != 0 then
+				target.vid("__TARGET__", v, "Cassim")
+			end
+			send_letter("Toxic Weaponry II")
+		end
+		
+		when button or info begin
+			say_title("The Toxic Weaponry II")
+			say("")
+			say("Cassim has once again been asking for you.")
+			say("Apparently he has another favour to ask of you.")
+			say("")
+			say("Maybe you should help him, there might be another")
+			say("great reward for you!")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 33002.chat."The Toxic Weaponry II" begin
+			target.delete("__TARGET__")
+			say_title("Cassim:")
+			say("")
+			say("Good day my brave helper!")
+			say("Thank you once again for the Snake Steel Arrows!")
+			say("I was able to make a fortune with that deal!")
+			say("")
+			say("But I have heard rumors that I just can't let go.")
+			say("You know the strong Snake Bowman Kenki?")
+			say("People say his bow has magical attributes that")
+			say("instantly poison any of his targets.")
+			say("")
+			wait()
+			say_title("Cassim:")
+			say("")
+			say("Such a weapon would sell for a sin!")
+			say("I have to get my hands on one of these.")
+			say("Of course, I would reward you as well!")
+			say("")
+			say("Would you mind to slay Kenki and bring me")
+			say("his bow? I think it is safer if you do it with")
+			say("some comrades of yours. Kenki is supposedly")
+			say("unbeatable due to his strong poison!")
+			say("")
+			local init = select("Yes","Not now.")
+			if init == 1 then
+				say_title("Cassim:")
+				say("")
+				say("Thank you! I knew you would do it!")
+				say("")
+				say("Kenki can be found in the southern end of this area")
+				say("You will need strong forces to bring him down!")
+				say("")
+				say_reward("You have to be the leader of the party")
+				say_reward("to receive the poisonous bow from Kenki!")
+				say("")
+				set_state(hunt)
+			end
+		end
+	end
+	
+	state hunt begin
+		when letter begin
+			send_letter("Toxic Weaponry II")
+		end
+		
+		when button or info begin
+			say_title("The Toxic Weaponry II")
+			say("")
+			say("Cassim has asked of you to slay Kenki,")
+			say("the immortal Snake Warrior!")
+			say("You can find him in the southern part of")
+			say("this area, although it is suggested that you")
+			say("gather a party to defeat him. You have to be")
+			say("the party leader to receive Kenki's Bow!")
+			say("")
+		end
+		
+		when 2142.party_kill begin
+			pc.give_item2(90314)
+			set_state(report)
+		end
+	end
+	
+	state report begin
+		when letter begin
+			local v = find_npc_by_vnum(33002)
+			if v != 0 then
+				target.vid("__TARGET__", v, "Cassim")
+			end
+			send_letter("Toxic Weaponry II")
+		end
+		
+		when button or info begin
+			say_title("The Toxic Weaponry II")
+			say("")
+			say("You have defeated Kenki and aquired his bow!")
+			say("You should go to Cassim and claim your reward!")
+			say("")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 33002.chat."The Toxic Weaponry" with pc.count_item(90314) > 0 begin
+			target.delete("__TARGET__")
+			say_title("Cassim:")
+			say("")
+			say("My eyes must deceive me!")
+			say("Did you really make it? Unbelievable!")
+			say("I can not express how grateful I am for your help!")
+			say("I will once again give you a share of the profit,")
+			say("that this marvellous bow will bring me on the market!")
+			say("")
+			say("You have my long-lasting gratitude!")
+			say("")
+			say_reward("5.000.000 Yang received!")
+			say("")
+			pc.remove_item(90314,pc.count_item(90314))
+			pc.change_gold(5000000)
+			set_quest_state("wl_lv_66","run")
+			set_state(__COMPLETE__)
+		end
+	end
+	
+	state __COMPLETE__ begin
+		when 33002.chat."The treasures of Kenki" begin
+			say_title("Cassim:")
+			say("")
+			say("Hello my indestructible warrior!")
+			say("I just wanted to tell you that if you obtain some")
+			say("more weapons from Kenki I will be glad to")
+			say("offer you a little bit of pocket money for them.")
+			say("Just drag them onto me when you got some.")
+			say("")
+		end
+		
+		when 33002.take with item.vnum == 90315 begin
+			local chance = {50000,100000,150000,200000,250000,500000}
+			local rand = number(1,6)
+			pc.change_gold(chance[rand])
+			item.remove()
+		end
+	
+		when 2142.kill begin
+			local chance = number(1,100)
+			if chance <= 40 then
+				pc.give_item2(90315,1)
+			end
+		end
+	end
+end
+			

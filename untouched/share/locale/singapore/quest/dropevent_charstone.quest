@@ -1,0 +1,395 @@
+--------------------------------------------------
+-- JAPAN COLLECT EVENT
+
+-- METIN2 .NETMARBLE
+----------------------------------------------------
+
+quest dropevent_charstone begin
+	state start begin
+		when login with game.get_event_flag("drop_char_stone")  begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20005)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "Yonah")
+			end
+		end
+
+		when __TARGET__.target.click or
+	      20005.chat."Emerald collecting event"	begin
+			target.delete("__TARGET__")
+
+			say("Yonah :")
+			---                                                   l
+			say("Have you heard about the white folks ")
+			say("like milk? A few days ago, those guys came in giant ships")
+			say("and wanted to buy all the emerald potteries")
+			say("in this city. Those potteries are worth a lot ")
+			say("in their country! This is jack pot!!")
+			say("")
+			say("But I have no idea where to get all the emerald")
+			say("")
+			
+			local s=select("What is emerald?","It must be hard to fine. Good luck")
+			if 2==s then
+				say("Do you want to give up the quest?")
+				
+				local a=select("Yes","No")
+				if 2==a then
+					say("Yonah:")
+					say("If you feel like to take the offer, find me")
+					return
+				end
+				
+				say("Yonah:")
+				say("Missed such a great chance.")
+				say("well...Good bye")
+				set_state(__GIVEUP__)
+				return
+			end	
+
+			say("Yonah :")
+			---                                                   l
+			say("Ah!! Emerald? ")
+			say("Young kids might not know that well about it?") 
+			say("They are blue and clear stones...It's not so expensive")
+			say("Do you see this picture?")
+			say_item_vnum(number(30210, 30219))
+			say("Those merchants might buy also from other countries as well")
+			say("Suppliers are all out stock.")
+			say("")
+			local s= select("Where I can buy emeralds?","That's too bad..I will see you later")
+			if 2==s then
+				say("Do you want to give up the quest?")
+				local a=select("Yes","No")
+				if 2==a then
+					say("Yonah:")
+					say("You seems too busy now")
+					say("Stop by next time~")
+					say("But There isn't chance always")
+					say("")
+					return
+				end
+				say("Yonah:")
+				say("Missed such a great chance.")
+				say("Well... too bad....")
+				say("See you")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end	
+			say("Yonah:")
+			---                                                   l
+			say("Well. If I know where it is, I would go")
+			say("Right away. Huh Huh Huh. Uriel might know")
+			say("Where it is. That old man knows everything.")
+			say("You must sell it to me if you ever find some")
+			say("I will pay you good")
+			say("")
+			say("Hurry up before all the merchants are leaving!")
+			say("")
+			say_reward("Ask Uriel where to find emerald stones")
+			say("")
+			
+			set_state(to_ulduji)
+		end	
+	end
+
+	state to_ulduji begin
+		when letter begin
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "Go to Uriel")
+			end
+		end
+		when letter begin
+			send_letter("Emerald Collection: Find Uriel")
+		end
+		when info or button begin
+			say_title("Emerald Collection: Find Uriel")
+			---                                                   l
+			say("The merchants across the ocean ordered")
+			say("big amount of emerald potteries to Yonah.")
+			say("Ask Uriel where emerald can be found")
+			say("")
+		end
+
+		when 20005.chat."Where can I find emerald?" begin
+			say("Yonah:")
+			---                                                   l
+			say("Well. If I know where it is, I would go")
+			say("right away. Huh Huh Huh. Uriel might know")
+			say("where it is. That old man knows everything.")
+			say("You must sell it to me if you ever find some")
+			say("I will pay you good")
+			say("")
+			say("Hurry up before all the merchants are leaving!")
+			say("")
+		end
+
+		when __TARGET__.target.click or 20011.chat."What is emerald?" begin
+			target.delete("__TARGET__")
+			say("Uriel:")
+			---                                                   l
+			say("Ahem~ Emerald...")
+			say("Very nice blue coloured Gem.") 
+			say_item_vnum(number(30210, 30219))
+			say("If I tell you how emerald is created, well...this land has")
+			say("lots of copper. When monsoon season, the waters from copper")
+			say("is consumed by monsters and that will combine with natrium in salt......")
+			say("")
+			wait()
+			say("Uriel:")
+			---                                                   l
+			say("Hey! You better listen when old man talks!")
+			say("")
+			local s= select("Thanks for the explanation. Where can I find?","Ah..please, excuse me.")
+			if 2==s then
+				say("Do you want to give up the quest?")
+				local a=select("Yes","No")
+				if 2==a then
+					say("Uriel:")
+					say("Woo woo!")
+					say("You are not going to heat everything?")
+					say("if you miss it, you can come again..~")
+					say("")
+					return
+				end
+				say("Uriel:")
+				say("What!")
+				say("Are you just leaving like this?")
+				say("well..then someone else can take the chance..")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end	
+			say("Uriel:")
+			---                                                   l
+			say("No wonder you don't know what is going on! You")
+			say("missed my precious lecture!")
+			say("You seem busy, so I will make it short. Every")
+			say("creature drinks water. And chloride copper will")
+			say("will combine with the calciums in the body...")
+			say("")
+			local s= select("So I just get the monsters")
+			if 1==s then	
+				say("Uriel:")
+				---                                                   l
+				say("Killing monsters is not important to live this world")
+				say("Hey! you should listen more!")
+				say("")
+				       ---                                                   l
+				say_reward("You can get emerald from every monsters.")
+				say_reward("Higher level monster have higher chance of")
+				say_reward("dropping emerald.")
+				say("")
+
+				set_state(hunt_for_stone)
+			end
+		end
+	end
+
+	state hunt_for_stone begin
+		when letter begin
+			send_letter("Collecting Emerald: Get emerald")
+		end
+		when letter begin
+			local v=find_npc_by_vnum(20005)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "Collecting Emerald")
+			end
+		end
+
+		when info or button begin
+			say_title("Collecting Emerald: Get emerald")
+			---                                                   l
+			say("In overseas, Pottery made out of emerald")
+			say("is one of the hottest items these days.")
+			say("Yonah who got big order of high class emerald")
+			say("started this event to supply emerald.")
+			say_item_vnum(number(30210, 30219))
+			say("")
+			say_reward("Drops every monster kill.")
+			say_reward("Higher chance of dropping for higher level monster kill")
+			say_reward("No drop when monster level is 10 level lower.")
+			say("")
+		end
+
+		when 20011.chat."What is emerald?" begin
+			say("Uriel:")
+			---                                                   l
+			say("It is clear and blue gem. You can get it")
+			say("after only monsoon season. Some special ones have ")
+			say("letters written inside of it.")
+			say("")
+			say_reward("There are emeralds inside some letters written ")
+			say_reward("M E T I N has the best prices overseas.")
+			say_reward("interesting, huh?")
+			say("")
+			say("Hey, Don't sleep while I'm talking!")
+			say("")
+		end
+		when __TARGET__.target.click or 
+			20005.chat."Collecting Emerald" begin
+			say("Yonah :")
+			---                                                   l
+			say("The merchants across the ocean ordered")
+			say("Big amount of emerald potteries to Yonah")
+			say("I will pay you good.")
+			say_item_vnum(number(30210, 30219))
+			say("")
+
+			local x = pc.count_item(30210)
+			local a = pc.count_item(30211)
+			local b = pc.count_item(30212)
+			local e = pc.count_item(30213)
+			local i = pc.count_item(30214)
+			local l = pc.count_item(30215)
+			local m = pc.count_item(30216)
+			local n = pc.count_item(30217)
+			local r = pc.count_item(30218)
+			local t = pc.count_item(30219)
+			local sum = x + a + b + e + i + l + m + n + r + t
+
+			if sum == 0 then
+				return
+			end
+
+			wait()
+
+			say("Yonah :")
+			say("Ah, Do you already have it? Let me see~") 
+			say("")
+
+			if sum > 0 and sum < 6 then
+				---                                                   l
+				say("Hmmmm..No, I need some more. According to the order")
+				say("You need to arrange the letter in orders..")
+				say("")
+				say_reward("The order is M E T I N")
+				say("")
+				say("A bit too hard?")
+				say("Those guys have weird taste..")
+				say("")
+				return
+			end
+
+			local metin = m > 0 and e > 0 and  t > 0 and i > 0 and n > 0 
+			local netmarble = n >0 and  e > 1 and t > 0 and m > 0  and a > 0  and r > 0 and b > 0 and l > 0
+
+			local success = number(1, 100) <= 15 
+
+			local s = select("M E T I N 2", "N E T M A R B L E", "Close")
+			if 3 == s then
+				return
+			end
+
+			if 1 == s then
+				if not metin then
+					say("Yonah :")
+					---                                                   l
+					say("I can't make M E T I N 2.")
+					say("According to the order, only two words can be possible.")
+					say("")
+					say_reward("One is  M E T I N 2,")
+					say_reward("The other one is N E T M A R B L E.")
+					say("")
+					say("A bit hard? But I know you can do it!")
+					say("")
+					return
+				end
+
+				say("Yonah :")
+				---                                                   l
+				say("Wow. Thank you so much for collecting stones.")
+				say("Let me see...M... E... T... I... N...")
+				say("Good, good. You got it right.")
+				say("")
+				wait()
+				if not success then
+					say("Yonah :")
+					---                                                   l
+					say("Hmmm.. But there are cracks when I see it closely.")
+					say("I can't sell this, I will take this time, but.")
+					say("Get me some better ones.")
+					say("This item is fragile, so bring them carefully!")
+					say("")
+					say_reward("M E T I N 2 or")
+					say_reward("N E T M A R B L E pieces must be collected!")
+					say("")
+					say_reward("")
+					return
+				end
+
+				say_title("M E T I N 2 Highest class emerald collected!!")
+				---                                                   l
+				say("Yonah:")
+				say("Oh! What a rare emerald stone!")
+				say("You got the jackpot! So here is your reward!")
+				say("I will see you again.")
+				say("")
+				say_reward("Got Fishing Pole +8 and Minnow 200.")
+				say("")
+
+			elseif 2 == s then
+				if not metin then
+					say("Yonah :")
+					---                                                   l
+					say("I can't arrange letters N E T M A R B L E.")
+					say("According to the order, only two words can be possible.")
+					say("")
+					say_reward("One is  M E T I N 2,")
+					say_reward("The other one is  N E T M A R B L E .")
+					say("")
+					say("A bit hard? But I know you can do it!")
+					say("")
+					return
+				end
+
+				say_title("N E T M A R B L E Highest class emerald collected!!")
+				say("Yonah :")
+				---                                                   l
+				say("Wow. Thank you so much for collecting stones.")
+				say("Let me see N.. E.. T... M.. A.. R.. B.. L.. E...")
+				say("This must be hard to collect all... Excellent!")
+				say("")
+				wait()
+
+				if not success then
+					say("Yonah :")
+					---                                                   l
+					say("Hmmm.. But there are cracks when I see it closely?")
+					say("I can't sell this, I will take this time, but")
+					say("Get me some better ones.")
+					say("This item is fragile, so bring them carefully!")
+					say("")
+					say_reward("M E T I N 2 or")
+					say_reward("N E T M A R B L E pieces must be collected!")
+					say("")
+					return
+				end
+
+				say("Yonah :")
+				---                                                   l
+				say("Oh! What a rare emerald stone!")
+				say("This must be hard to collect all... Excellent!")
+				say("Bigger rewards for bigger task")
+				say("I will see you again.")
+				say("")
+				say_reward("You've got 5 Bless ingScrolls.")
+				say("")
+			end
+		end	
+	end
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+	end
+end

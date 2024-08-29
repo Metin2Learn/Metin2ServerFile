@@ -1,0 +1,118 @@
+quest christmas_tree begin
+    state start begin
+	when xmas_tree.click begin
+	    local SOCK_VNUM = 50010
+	    local SOCK2_VNUM = 71111 
+		
+	    say(locale.christmas_tree.greet)
+	    local s = select(locale.christmas_tree.sel_intro_event,locale.christmas_tree.sel_put_sock,"Merry Christmas!", locale.christmas_tree.sel_no_need)
+	    if s==2 then
+		-- Hanging Christmas Socks
+		if pc.level >= 10 then
+			if pc.count_item(50010) > 0 then
+				if pc.getqf("socks_given") < 200 then
+					local count = pc.count_item(50010)
+					local given = pc.getqf("socks_given")
+					local to_give = math.min(count,200-given)
+					say_title("Christmas Tree:")
+					say("")
+					----"123456789012345678901234567890123456789012345678901234567890"
+					say("Ho-ho-hello little hero!")
+					say("As I see you brought me some Christmas Socks!")
+					say("Hang them on my branches and you will feel the blessing")
+					say("of the christmas spirit!")
+					say("")
+					wait()
+					pc.setqf("socks_given",given+to_give)
+					pc.remove_item(50010,to_give)
+					say_title("Christmas Tree:")
+					say("")
+					say("Thank you very much, you now have hung up")
+					say(""..pc.getqf("socks_given").." socks on my tree!")
+					say("Return to me on the day of Christmas")
+					say("and I shall thank you for this deed!")
+					say("")
+				else
+					say_title("Christmas Tree.")
+					say("")
+					----"123456789012345678901234567890123456789012345678901234567890"
+					say("Ho ho ho, you have already given 200 Christmas Socks to me!")
+					say("")
+					say("I am pleased with this, prepare yourself")
+					say("for a big gift from me on the day of christmas")
+					say("")
+					say_reward("You can not hang more than 200 Socks to the tree.")
+					say("")
+				end
+			else
+				say_title("Christmas Tree:")
+				say("")
+				say("You have no socks with you which")
+				say("you could hang into my branches.")
+				say("")
+			end
+		else
+		    say(locale.christmas_tree.under_level_10)
+		end
+	    elseif s==3 then
+			if game.get_event_flag("c_p") < 1 then
+				say_title("Christmas Tree:")
+				say("")
+				say("It's not the day of christmas yet.")
+				say("I know its hard to wait for it but")
+				say("you know that you have to!")
+				say("")
+				say_reward("The gift can only be collected on 25th of December")
+				say("")
+			else
+				if pc.getqf("c_p_received") < 1 then
+					local p = pc.getqf("socks_given")
+					say_title("Christmas Tree:")
+					say("")
+					say("Ho ho ho!")
+					say("Merry Christmas to you!")
+					say("You have collected "..pc.getqf("socks_given").." socks.")
+					say("")
+					if p > 0 then
+						say("Here take this gift as my thank you!")
+						say("I wish you and your family a merry christmas!")
+						say("")
+					else
+						say("If you did not hang any socks on my tree.")
+						say("You will not be blessed with a gift today.")
+					end
+					if p < 1 then
+						syschat("You haven't collected any socks yet. You received no reward.")
+					elseif p > 0 and p < 61 then
+						pc.give_item2(10100,1)
+						pc.setqf("c_p_received",1)
+					elseif p > 60 and p < 121 then
+						pc.give_item2(10101,1)
+						pc.setqf("c_p_received",1)
+					elseif p > 120 and p < 200 then
+						pc.give_item2(10102,1)
+						pc.setqf("c_p_received",1)
+					else
+						pc.give_item2(10103,1)
+						pc.setqf("c_p_received",1)
+					end
+				else
+					say_title("Christmas Tree:")
+					say("")
+					say("You received your Christmas Gift already.")
+					say("Do not forget Christmas is not only about")
+					say("getting presents but spending a lovely")
+					say("time with family and friends!")
+					say("")
+				end
+			end
+		elseif s==4 then
+		-- When you answered you don¡¯t need anything
+ 		say(locale.christmas_tree.greet2)
+	    elseif s==1 then
+		-- Instruction for event
+		say(locale.christmas_tree.intro_msg)
+	    end
+	end
+    end
+end

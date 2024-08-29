@@ -1,0 +1,46 @@
+-------------------------------------
+--Metin2 Premium Zone Pass Quest Ymir Sucks.
+------------------------------------
+quest spider_dungeon_1floor begin
+	state start begin
+		when 20088.chat."Entry Inspection" begin
+			say_title("Chuk-Sal:")
+			say("")
+			say("Oh, I seldom seen men who dare to explore these caves.")
+			say("I am the protector of the magic seal, so evil creatures")
+			say("may never pass and threaten us.")
+			say("")
+			say("First, let me see your documents.")
+			say("")
+			wait()
+			if pc.count_item(76019)>0 then
+				say_title("Chuk-Sal:")
+				say("")
+				say("I see. You are authorized to enter.")
+				say("")
+				say("Please follow me.")	
+				say("")
+				pc.remove_item(76019)
+				wait()
+				pc.warp(704100, 464100)
+			elseif pc.count_item(71095)>0 then
+				say_title("Chuk-Sal:")
+				say("")
+				say("I see. You are authorized to enter.")
+				say("")
+				say("Please follow me.")	
+				say("")
+				pc.remove_item(71095)
+				wait()
+				pc.warp(704100, 464100)			
+			else			
+				say_title("Chuk-Sal:")
+				say("")
+				say("You need a Passage. I cannot let you in if")
+				say("you don't have one.")
+				say("")
+				say_item("Passage",71095,"")
+			end
+		end
+	end
+end

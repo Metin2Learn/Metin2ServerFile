@@ -1,0 +1,99 @@
+quest siege begin
+	state start begin
+		when login with game.get_event_flag("siege_war") > 0 begin
+			q.set_icon("scroll_open_blue.tga")
+			set_state(run)
+		end
+	end
+	state run begin
+		when letter begin
+			if game.get_event_flag("siege_war") > 0 then
+				local empire = pc.get_empire()
+				send_letter("*Siege War")
+				if game.get_event_flag("siege_war") != 4 and pc.get_level() > 59 then
+					local gate_vnum = 20096 + empire
+					local v=find_npc_by_vnum(gate_vnum)
+					if v != 0 then
+						target.vid("__TARGET2__", v, mob_name(gate_vnum))
+					elseif game.get_event_flag("siege_war") == empire and (pc.get_map_index() < 181 or pc.get_map_index() > 183) then
+						local w=find_npc_by_vnum(9012)
+						if w != 0 then
+							target.vid("__TARGET__", w, mob_name(9012))
+						end
+					end
+				end
+			else
+				set_state(start)
+			end
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			if game.get_event_flag("siege_war") == pc.get_empire() and pc.get_level() > 59 then
+				local name, pid, date, money = mgmt.monarch_state(pc.get_empire())
+				----"123456789012345678901234567890123456789012345678901234567890"| 
+				say_title("Teleporter:")
+				say("")
+				say("Our monarch "..name.." has given instructions to take")
+				say("every citizen of age to the Castle.")
+				say("")
+				say("Are you ready for the battle then?")
+				say("")
+				local main_set = select("Yes","No")
+				if main_set == 2 then
+					say_title("Teleporter:")
+					say("")
+					say("Then go pick up your weapons and hurry up.")
+					say("")
+					say(locale.empire_names[pc.get_empire()].." needs you.")
+					say("")
+				else
+				    	local empire_castle = 	{
+						{975200, 133000},
+						{977200, 185000},
+						{923900, 183600},
+					}
+					pc.warp(empire_castle[pc.get_empire()][1], empire_castle[pc.get_empire()][2])
+				end
+			end
+		end
+		when button or info begin
+			addimage(20, 12, "siegewar.tga")
+			say("")
+			say("")
+			say("")
+			say_title("")
+			if game.get_event_flag("siege_war") > 0 then
+				if game.get_event_flag("siege_war") == 4 then
+					----"123456789012345678901234567890123456789012345678901234567890"|
+					say("Hear me, "..locale.empire_names[pc.get_empire()].."ns! One of the three castles")
+					say("will soon fall under siege.")
+					say("")
+					say("When the time is ripe, the castle to be attacked will")
+					say("be announced. Get your weapons ready!")
+
+				elseif game.get_event_flag("siege_war") == pc.get_empire() then
+					say(locale.empire_names[pc.get_empire()].."ns! Our castle is being attacked!")
+					say("")
+					say("Head to the Teleporter inmediately and help defend the Fire")
+					say("Signals. After 30 minutes, we will be allowed to destroy")
+					say("them ourselves. This is our only chance to win!")
+				else
+					say(locale.empire_names[pc.get_empire()].."ns! Head inmediately to the "..locale.empire_names[game.get_event_flag("siege_war")].."n castle")
+					say("and lay siege to it!")
+					say("")
+					say("You can access enemy castles from the Teleport Gates found")
+					say("in every common map. Our objective is to destroy more Fire")
+					say("Signals than our enemies.")
+				end
+				say("")
+				say_reward("The winning kingdom will obtain a bonus.")
+				say("")
+			else
+				say("Siege War has already ended.")
+				say("")
+				set_state(start)
+			end
+		end
+	end  --s
+end --q
+

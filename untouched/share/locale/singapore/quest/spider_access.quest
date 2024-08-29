@@ -1,0 +1,155 @@
+quest spider_access begin
+	state start begin	
+		
+	when 30130.chat."The Spider Baroness Nest" begin
+			say_title(mob_name(30130))
+			say("")
+			say("Ok, I see you are ready to enter the nest of the Baronest")
+			say("but I must tell you that in order to go there you must")
+			say("go in a group, and the leader of the party needs to have")
+			say("an Arachnid Key and he has to be the first to talk to me")
+			say("")
+			
+		local go = select ("Ok, let's go" , "Maybe later")
+
+			if go == 1 then
+			
+				if game.get_event_flag("spider_lair_ongoing_"..pc.get_channel_id()) == 1 then
+				
+					say_title(mob_name(30130))
+					say("")
+					say("In this moment, the entrance to the nest is activated")
+					say("so you will be teleported to the map")
+					say("")
+					wait()
+			
+				local starttime = game.get_event_flag("spider_lair_start_time_"..pc.get_channel_id())
+				local current_time = get_global_time()
+				
+				--1.1해당 파티에 속해있다.
+				if party.get_leader_pid() == game.get_event_flag("spider_lair_leader_"..pc.get_channel_id()) then
+				
+					if  starttime +  300 >= current_time and party.get_leader_pid() == game.get_event_flag("spider_lair_leader_"..get_channel_id()) and game.get_event_flag("spider_lair_ongoing_"..get_channel_id()) == 1 then
+					
+						say_title(mob_name(30130))
+						say("")
+						say("It is the time... I hope you'll be able to kill")
+						say("the Baroness and help us overcome this hard situation")
+						say("")
+						say_reward("Kill the Spider Baroness with your group")
+						say("")
+						pc.warp(88100,614700)
+						pc.setqf("firstIn",1)
+						pc.setqf("retry_limit_time", starttime + 1200 + 3600)
+						return
+					else
+						say_title(mob_name(30130))
+						say("")
+						say("I'm sorry, You can't enter the dungeon in this moment")
+						return
+					end
+				else
+					say_title(mob_name(30130))
+					say("")
+					say("I'm sorry but you can't enter the nest in this moment, wait: "..pc.getqf("spider_lair_end_time_")..pc.get_channel_id()	 - get_global_time().."mins.")
+					say("")
+					return
+				end	
+			--2. 재도전 제한 시간에 걸리나?
+			elseif  pc.getqf("retry_limit_time") > get_global_time() then
+				say("I'm sorry but you can't enter the nest in this moment, wait these minutes: "..pc.getqf("retry_limit_time") - get_global_time())
+				return
+			--3. 리더다.
+			elseif party.is_leader() then
+				say_title(mob_name(30130))
+				say("")
+				say("I see in your eyes that you're ready to go to the nest")
+				say("of the terrible Baroness. I'll take you there")
+				say("and the members of your group must follow you")
+				say("")
+				if pc.count_item(30324) > 0 then
+					say("I see you've got the Arachnid Key")
+					say("do you want to go to the nest of the spiders?")
+					say("")
+					
+				local warp = select("Yes","No")
+				
+					if warp == 1 then
+						
+						pc.warp(88100,614700)
+						
+						pc.remove_item(30324, 1)
+						mob.spawn(2094,369,551,0,0)
+						
+						--값 설정.
+						game.set_event_flag("spider_lair_ongoing_"..pc.get_channel_id(), 1)
+						game.set_event_flag("spider_lair_start_time_"..pc.get_channel_id(), get_global_time())
+						game.set_event_flag("spider_lair_end_time_"..pc.get_channel_id(), get_global_time()+1200)
+						game.set_event_flag("spider_lair_leader_"..pc.get_channel_id(), party.get_leader_pid())
+						pc.setqf("retry_limit_time", get_global_time() + 1200 + 3600 )
+						pc.setqf("firstIn",1)
+						
+						
+						server_timer("spider_end_timer", 1800)
+						
+						
+					end
+					return
+				else
+					say("")
+					say("I'm sorry but you need an Arachnid Key like this to enter")
+					say_item_vnum(30324)
+					say("")
+					return
+				end
+			else --리더 아니다.
+				say_title(mob_name(20011))
+				say("")
+				say("It looks like you're not in a party or")
+				say("your leader hasn't entered the nest yet")
+				say("")
+				return
+				end	
+			end
+		end
+		
+	when spider_end_timer.server_timer begin
+	
+		warp_all_in_area_to_area(82700, 612700, 93700,625700, 69100, 614800, 69100, 614800)
+		game.set_event_flag("spider_lair_ongoing_"..get_channel_id(),0)
+		game.set_event_flag("spider_lair_leader_"..get_channel_id(), 0)
+		game.set_event_flag("spider_dead"..get_channel_id(),0)
+		purge_area(82700, 612700, 93700,625700)
+			
+	end
+		
+	when login begin 
+	
+		if pc.getqf("firstIn") == 1  and party.get_leader_pid() == game.get_event_flag("spider_lair_leader_"..get_channel_id()) then
+		
+			pc.setqf("firstIn",0)
+			
+		elseif pc.getx() >= 827 and pc.getx() <= 937 and pc.gety() >= 6127 and  pc.gety() <= 6257 then
+			
+			pc.warp(95900,571000)
+			pc.remove_item(30327, 1)
+				
+		else
+			
+			pc.remove_item(30327, 1)
+			local limit = pc.getqf("retry_limit_time")
+			local access_limit_time = 3600
+				
+				if limit > ( get_global_time() + access_limit_time ) then
+					limit = ( get_global_time() + access_limit_time )
+				end
+				pc.setqf("retry_limit_time", limit )
+				
+			local duration = limit - get_global_time()
+				
+		end
+	end	
+		
+		
+	end
+end		

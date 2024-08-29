@@ -1,0 +1,352 @@
+quest his_daughters_wedding begin
+	state start begin
+		when login or enter or levelup with pc.get_level() >= 18 and pc.get_level() <= 23 begin
+			set_state(information)
+		end
+	end
+	
+	state information begin
+		when letter begin
+			send_letter("His daughter's wedding")
+			local v=find_npc_by_vnum(20008)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "Octavio")
+			end
+		end
+		
+		when button or info begin
+			say_title("His daughter's wedding:")
+			say("")
+			say("Octavio is looking for you!")
+			say("")
+			say("Go over there and see if you can help him.")
+			say("")
+			wait()
+		end
+		
+		when __TARGET__.target.click or 20008.chat."His daughter's wedding" begin
+			target.delete("__TARGET__")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say_title("Octavio:")
+			say("")
+			say("Hello adventurer!")
+			say("")
+			say("I am so over the moon, my daughter is finally about to")
+			say("get married!!")
+			say("")
+			say("I need the most beautiful bouquet on earth for such")
+			say("a special event!")
+			say("")
+			wait()
+			say_title("Octavio:")
+			say("")
+			say("The old lady knows how to create a gorgeous bouquet but")
+			say("I'm too busy preparing the wedding dish!")
+			say("")
+			say("Could you go to her and bring me such a bouquet?")
+			say("")
+			say("I will reward you!")
+			say("")
+			local accept=select("Yes, I'll do it", "No, I'm busy")
+			if accept == 1 then
+				say_title("Octavio:")
+				say("")
+				say("Thank you so much! You are my hero!")
+				say("")
+				wait()
+				set_state(getbouquet)
+			elseif accept == 2 then
+				say_title("His daughter's wedding")
+				say("")
+				say("You really want to cancel this assignment?")
+				say("")
+				local abort=select("Yes", "No")
+				if abort == 1 then
+					say_title("Octavio:")
+					say("")
+					say("If my reward cannot convince you there's nothing")
+					say("to say anymore. Goodbye!")
+					say("")
+					set_state(failure)
+				end
+			end
+		end
+	end
+		
+	state getbouquet begin
+		when letter begin
+			send_letter("His daughter's wedding")
+			local w=find_npc_by_vnum(9006)
+			if 0==w then
+			else
+				target.vid("__TARGET1__", w, "Old Lady")
+			end
+		end
+		
+		when button or info begin
+			say_title("The gorgeous flower bouquet")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("Octavio has send you to the old lady to find out more about")
+			say("her most beautiful flower bouquet.")
+			say("")
+			say("Ask her if she can create one for Octavio.")
+			say("")
+		end
+		
+		when __TARGET1__.target.click or 9006.chat."His daughter's wedding" begin
+			target.delete("__TARGET1__")
+			say_title("Old Lady:")
+			say("")
+			say("Hello, how can I help you?")
+			say("")
+			say("A flower bouquet for a wedding? How lovely!")
+			say("")
+			say("I feel honored Octavio asks me for such an important task.")
+			say("Sure I will help but there are some preparations necessary.")
+			say("")
+			wait()
+			say_title("Old Lady:")
+			say("")
+			say("I need freshly picked flowers for the best bouquet:")
+			say("")
+			say_reward("- 1x Odorous Rose")
+			say_reward("- 1x Fragant Primrose")
+			say_reward("- 1x Scented Sunflower")
+			say("")
+			say("To make a wonderful bouquet.")
+			say("")
+			wait()
+			say_title("Old Lady:")
+			say("")
+			say("Animals pick these flowers to show their love to their")
+			say("partners. If you hunt some you might find them.")
+			say("")
+			say("Unfortunately the are only found in the "..areaname[pc.get_empire()][3].." area")
+			say("and it's dangerous for an old lady to go there.")
+			say("")
+			say("Bring me those three flowers and I will create the")
+			say("bouquet for Octavio!")
+			say("")
+			set_state(gatherflower1)
+		end
+	end
+	
+	state gatherflower1 begin
+		when letter begin
+			send_letter("The odorous rose")
+		end
+		
+		when button or info begin
+			say_title("His daughter's wedding:")
+			say("")
+			say("In order to create the best flower bouquet for Octavio's")
+			say("daughters wedding, the old lady needs an odorous rose.")
+			say("")
+			say_item_vnum(30169)
+			say_reward("You can get it from Cursed Wild Boar in the "..areaname[pc.get_empire()][3].." Area.")
+			say("")
+		end
+		
+		when 137.kill begin
+			local drop=number(1,10)
+			if drop == 1 and pc.count_item(30169) ==0 then
+				pc.give_item2(30169, 1)
+				say_title("The odorous rose")
+				say("")
+				say("You've found the odorous rose!")
+				say("Next you need a fragant primrose.")
+				say("")
+				say_item_vnum(30170)
+				say("")
+				set_state(gatherflower2)
+			end
+		end
+	end
+	
+	state gatherflower2 begin
+		when letter begin
+			send_letter("The fragant primrose")
+		end
+		
+		when button or info begin
+			say_title("His daughter's wedding:")
+			say("")
+			say("In order to create the best flower bouquet for Octavio's")
+			say("daughters wedding, the old lady needs a fragant primrose.")
+			say("")
+			say_item_vnum(30170)
+			say_reward("You can get it from Cursed Grizzly Bear in the "..areaname[pc.get_empire()][3].." Area.")
+			say("")
+		end
+		
+		when 140.kill begin
+			local drop=number(1,10)
+			if drop == 1 and pc.count_item(30170) ==0 then
+				pc.give_item2(30170, 1)
+				say_title("The fragant primrose")
+				say("")
+				say("You've found the fragant primrose!")
+				say("Next you need a scented sunflower.")
+				say("")
+				say_item_vnum(30171)
+				say("")
+				set_state(gatherflower3)
+			end
+		end
+	end
+		
+	state gatherflower3 begin
+		when letter begin
+			send_letter("The scented sunflower")
+		end
+		
+		when button or info begin
+			say_title("His daughters wedding:")
+			say("")
+			say("In order to create the best flower bouquet for Octavio's")
+			say("daughters wedding, the old lady needs a scented sunflower.")
+			say("")
+			say_item_vnum(30171)
+			say_reward("Get it from Cursed Tigers in the "..areaname[pc.get_empire()][3].." Area.")
+			say("")
+		end
+		
+		when 143.kill begin
+			local drop=number(1,8)
+			if drop == 1 and pc.count_item(30171) ==0 then
+				pc.give_item2(30171, 1)
+				say_title("The scented sunflower")
+				say("")
+				say("You've found all flowers")
+				say("")
+				say("Let's bring them to the old lady!")
+				say("")
+				set_state(makebouquet)
+			end
+		end
+	end
+	
+	state makebouquet begin
+		when letter begin
+			send_letter("You collected all flowers")
+			local x=find_npc_by_vnum(9006)
+			if 0==x then
+			else
+				target.vid("__TARGET2__", x, "Old Lady")
+			end
+		end
+		
+		when button or info begin
+			say_title("His daughter's wedding")
+			say("")
+			say("You collected all flowers the old lady needs to")
+			say("create her best flower bouquet.")
+			say("")
+			say("Bring these flowers to her!")
+			say("")
+		end
+		
+		when __TARGET2__.target.click or 9006.chat."His daughter's wedding" begin
+			target.delete("__TARGET2__")
+			if pc.count_item(30169) >= 1 and pc.count_item(30170) >= 1 and pc.count_item(30171) >= 1 then
+				say_title("Old Lady:")
+				say("")
+				say("Brilliant job! Hold on just a second...")
+				setdelay(300)
+				say("")
+				resetdelay()
+				say("Done! Here! Bring it to Octavio!")
+				say("")
+				say("His daughter should get that flower bouquet at")
+				say("its freshest state.")
+				say("")
+				if pc.get_sex() == 0 then
+					gender = "man"
+				else
+					gender = "woman"
+				end
+				say("You're a grown up "..gender.." now. Who knows, maybe the")
+				say("next one is for your wedding! Haha")
+				say("")
+				wait()
+				say_title("Information:")
+				say("")
+				----"123456789012345678901234567890123456789012345678901234567890"|
+				say("After you become level 25, you can get married to a partner")
+				say("of the opposite sex. Getting married allows you to teleport")
+				say("to your partner at any time.")
+				say("")
+				say("Also, when you fill up your Love Points, you can use special")
+				say("Couple Items which increase both partners' abilities.")
+				say("")
+
+				pc.remove_item(30169, 1)
+				pc.remove_item(30170, 1)
+				pc.remove_item(30171, 1)
+				pc.give_item2(30172, 1)
+				set_state(reportsuccess)
+			else
+				say_title("Old Lady:")
+				say("")
+				say("I can't make a bouquet if you don't bring me a Rose,")
+				say("Primrose and Sunflower.")
+				say("")
+			end
+		end
+	end
+	
+	state reportsuccess begin
+		when letter begin
+			send_letter("His daughter's wedding")
+			local y=find_npc_by_vnum(20008)
+			if 0==y then
+			else
+				target.vid("__TARGET3__", y, "Octavio")
+			end
+		end
+		
+		when button or info begin
+			say_title("His daughter's wedding")
+			say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+			say("You finally have the finished flower bouquet in your hands.")
+			say("")
+			say_item_vnum(30172)
+			say("")
+			say("Bring it to Octavio in the "..areaname[pc.get_empire()][1].." city quickly!")
+			say("")
+		end
+		
+		when __TARGET3__.target.click or 20008.chat."His daughters wedding" begin
+			target.delete("__TARGET3__")
+			if pc.count_item(30172) >= 1 then
+				say_title("Octavio:")
+				say("")
+				say("I don't believe my eyes!")
+				say("")
+				say("This flower bouquet is just perfect!")
+				say("")
+				say("Thank you so so much! Here, take this, You deserved it!")
+				say("")
+				say_reward("40.000 Experience Points received.")
+				say_reward("30.000 Yang received.")
+				say_reward("Item: Gold Treasure Box+, Gold Key")
+				say("")
+				pc.remove_item(30172, 1)
+				pc.give_exp2( 40000 )
+				pc.give_item2(50012,1)
+				pc.give_item2(50008,1)
+                		pc.change_money( 30000 )
+                		clear_letter()
+				set_state(complete)
+				
+			end
+		end
+	end
+	state complete begin
+	end
+	state failure begin
+	end
+end

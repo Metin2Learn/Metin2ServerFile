@@ -1,0 +1,153 @@
+----------------------------------
+-- Main Quest LV27
+-- Destroy the Metin Stones----------------------------------
+quest main_quest_lv27 begin
+        state start begin
+        end
+        state run begin
+                when login or levelup or enter begin
+                        if pc.get_level() >= 27 then
+                                setstate( gotoboss )
+                        end
+                end
+        end
+        state gotoboss begin
+                when letter begin
+                        local v=find_npc_by_vnum(20355)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find the Captain.")
+                        end
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton( "Destroy The Metin Stones!" )
+                        q.set_title( "Destroy The Metin Stones!" )
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Destroy The Metin Stones!")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("The destruction caused by the Metin Stones is growing")
+                        say("larger. We need to put a solution to this.")
+                        say("")
+                        say("Go to the Captain.")
+                        say("")
+
+                end
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("Captain:")
+                        say("")
+                        say("I heard that you have worked very hard. The people are")
+                        say("talking about your good work.")
+                        say("")
+                        say("Thanks to me, we found the right place for you!")
+                        say("")
+                        say("Don't get upset! I was only joking! Hahaha.")
+                        say("I know that you are very talented.")
+                        say("")
+                        say("The Metin Stones are spreading. That means big trouble!")
+                        wait()
+                        say_title("Captain:")
+                        say("")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say("While the Metin Stones are spreading, the people are")
+                        say("suffering. That means we have to destroy the Metin Stones.")
+                        say("")
+                        say("I have to wonder if the Shamans prediction about the")
+                        say("revival of the Dragon Lord is right.")
+                        say("")
+                        say("Let me know when you have destroyed a Metin Stone.")
+                        wait()
+                        say_title("Assignment:")
+                        say("")
+                        say("The Metin Stone kind that you have to destroy is called")
+                        say("Metin of Black. Find it!")
+                        say("")
+                        setstate( killmetinstone )
+                        q.done()
+                end
+        end
+
+        state killmetinstone begin
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton( "Destroy the Metin Stones!" )
+                        q.set_title( "Destroy the Metin Stones!" )
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Destroy the Metin Stones!")
+                        say("")
+                        say("Destroy Metin of Black.")
+                        say("")
+                end
+                when 8005.kill begin
+                        say_title("Destroy the Metin Stones!")
+                        say("")
+                        say("You have destroyed one Metin of Black.")
+                        say("Return to the Captain and talk to him.")
+                        say("")
+                        setstate(gotoboss2)
+                        q.done()
+                end
+        end
+        state gotoboss2 begin
+                when letter begin
+                        local v=find_npc_by_vnum(20355)
+                        if 0==v then
+                        else
+                                target.vid("__TARGET__", v, "Find the Captain.")
+                        end
+                end
+                when letter begin
+                        setskin(NOWINDOW)
+                        makequestbutton( "Metin Stone destroyed!" )
+                        q.set_title( "Talk to the Captain." )
+                        q.start()
+                end
+                when button or info begin
+                        say_title("Metin Stone destroyed!")
+                        say("")
+                        say("Talk to the Captain.")
+                        say("")
+                end
+
+                when __TARGET__.target.click begin
+                        target.delete("__TARGET__")
+                        ----"123456789012345678901234567890123456789012345678901234567890"|
+                        say_title("Captain:")
+                        say("")
+                        say("Did you destroy the Metin Stone?")
+                        say("")
+                        say("Thank you! The village is secure!")
+                        say("")
+                        say("Where could the Stones come from? There is really no")
+                        say("information about them. Even with all the problems they")
+                        say("cause. I heard that Uriel the Wise is investigating the")
+                        say("Metin Stones, but I don't know what he has discovered.")
+                        say("")
+                        say("You have done a great job.")
+                        say("")
+                        wait()
+                        say_title("Assignment reward:")
+                        say("")
+                        say_reward("Experience points: 300.000" )
+                        say_reward("Yang:  65.000")
+                  	say_reward("Item: Green Bonus Adder")
+                        say("")
+                        pc.give_exp2( 300000 )
+                        pc.change_money( 65000 )
+			pc.give_item2(71152)
+                        q.done()
+                        clear_letter()
+                        set_state(__COMPLETE__)
+                        set_quest_state("main_quest_lv30","run")
+                end
+        end
+        state __COMPLETE__ begin
+        end
+end

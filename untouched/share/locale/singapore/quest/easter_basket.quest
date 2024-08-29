@@ -1,0 +1,359 @@
+quest easter_basket begin
+	state start begin
+		when 50180.use begin
+			if pc.getqf("50160") == 1 and pc.getqf("50161") == 1 and pc.getqf("50162") == 1 and pc.getqf("50163") == 1 and pc.getqf("50164") == 1 and 
+			pc.getqf("50165") == 1 and pc.getqf("50166") == 1 and pc.getqf("50167") == 1 and pc.getqf("50168") == 1 and pc.getqf("50169") == 1 and 
+			pc.getqf("50170") == 1 and pc.getqf("50171") == 1 and pc.getqf("50172") == 1 and pc.getqf("50173") == 1 and pc.getqf("50174") == 1 and 
+			pc.getqf("50175") == 1 and pc.getqf("50176") == 1 and pc.getqf("50177") == 1 and pc.getqf("50178") == 1 and pc.getqf("50179") == 1 then
+				pc.remove_item(50180,1)
+				pc.give_item2(50181,1)
+				pc.setqf("50160",0)
+				pc.setqf("50161",0)
+				pc.setqf("50162",0)
+				pc.setqf("50163",0)
+				pc.setqf("50164",0)
+				pc.setqf("50165",0)
+				pc.setqf("50166",0)
+				pc.setqf("50167",0)
+				pc.setqf("50168",0)
+				pc.setqf("50169",0)
+				pc.setqf("50170",0)
+				pc.setqf("50171",0)
+				pc.setqf("50172",0)
+				pc.setqf("50173",0)
+				pc.setqf("50174",0)
+				pc.setqf("50175",0)
+				pc.setqf("50176",0)
+				pc.setqf("50177",0)
+				pc.setqf("50178",0)
+				pc.setqf("50179",0)
+				say_title("You achieved a full basket!")
+				say("")
+				say_reward("Your Easter Basket is full of eggs.")
+				say_reward("Give this basket to the Easter Rabbit,")
+				say_reward("to receive his blessing on the day of Eastern")
+				say("")
+			else
+				say_title("Your Easter Basket")
+				say("")
+				say_reward("You currently collected the following eggs:")
+				say("")
+				say_white("Spring Egg: "..easter_basket.eggstatus(50160).."")
+				say_white("Autumn King's Egg: "..easter_basket.eggstatus(50161).."")
+				say_white("Rainbow Egg: "..easter_basket.eggstatus(50162).."")
+				say_white("Paradise Egg: "..easter_basket.eggstatus(50163).."")
+				say_white("Love Egg: "..easter_basket.eggstatus(50164).."")
+				say_white("Forrest Egg: "..easter_basket.eggstatus(50165).."")
+				say_white("Celestial Egg: "..easter_basket.eggstatus(50166).."")
+				say_white("Sea Rose Egg: "..easter_basket.eggstatus(50167).."")
+				say_white("Chocolate Egg: "..easter_basket.eggstatus(50168).."")
+				say_white("Bubblegum Egg: "..easter_basket.eggstatus(50169).."")
+				say_white("")
+				wait()
+				say_title("Your Easter Basket")
+				say("")
+				say_reward("You currently collected the following eggs:")
+				say("")
+				say_white("Honeyriver Egg: "..easter_basket.eggstatus(50170).."")
+				say_white("Galactic Egg: "..easter_basket.eggstatus(50171).."")
+				say_white("Antique Egg: "..easter_basket.eggstatus(50172).."")
+				say_white("Psycho Egg: "..easter_basket.eggstatus(50173).."")
+				say_white("Wave Egg: "..easter_basket.eggstatus(50174).."")
+				say_white("Forrest Star Egg: "..easter_basket.eggstatus(50175).."")
+				say_white("Flowerrain Egg: "..easter_basket.eggstatus(50176).."")
+				say_white("Heaven's Egg: "..easter_basket.eggstatus(50177).."")
+				say_white("Fitness Egg: "..easter_basket.eggstatus(50178).."")
+				say_white("Glacial Egg: "..easter_basket.eggstatus(50179).."")
+				say("")
+			end
+		end
+		
+		function eggstatus(vnum)
+			if pc.getqf(tostring(vnum)) == 1 then
+				return "Collected!"
+			else
+				return "Missing!"
+			end
+		end
+		
+		when 50160.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50160") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Spring Egg into your basket.")
+			pc.setqf("50160",1)
+			pc.remove_item(50160,1)
+		end
+		
+		when 50161.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50161") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put an Autumn King's Egg into your basket.")
+			pc.setqf("50161",1)
+			pc.remove_item(50161,1)
+		end
+		
+		when 50162.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50162") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Rainbow Egg into your basket.")
+			pc.setqf("50162",1)
+			pc.remove_item(50162,1)
+		end
+		
+		when 50163.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50163") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Paradise Egg into your basket.")
+			pc.setqf("50163",1)
+			pc.remove_item(50163,1)
+		end
+		
+		when 50164.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50164") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Love Egg into your basket.")
+			pc.setqf("50164",1)
+			pc.remove_item(50164,1)
+		end
+		
+		when 50165.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50165") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Forest Egg into your basket.")
+			pc.setqf("50165",1)
+			pc.remove_item(50165,1)
+		end
+		
+		when 50166.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50166") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Celestial Egg into your basket.")
+			pc.setqf("50166",1)
+			pc.remove_item(50166,1)
+		end
+		
+		when 50167.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50167") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Sea Rose Egg into your basket.")
+			pc.setqf("50167",1)
+			pc.remove_item(50167,1)
+		end
+		
+		when 50168.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50168") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Chocolate Egg into your basket.")
+			pc.setqf("50168",1)
+			pc.remove_item(50168,1)
+		end
+		
+		when 50169.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50169") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Bubblegum Egg into your basket.")
+			pc.setqf("50169",1)
+			pc.remove_item(50169,1)
+		end
+		
+		when 50170.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50170") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Honeyriver Egg into your basket.")
+			pc.setqf("50170",1)
+			pc.remove_item(50170,1)
+		end
+		
+		when 50171.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50171") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Galactic Egg into your basket.")
+			pc.setqf("50171",1)
+			pc.remove_item(50171,1)
+		end
+		
+		when 50172.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50172") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Antique Egg into your basket.")
+			pc.setqf("50172",1)
+			pc.remove_item(50172,1)
+		end
+		
+		when 50173.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50173") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Psycho Egg into your basket.")
+			pc.setqf("50173",1)
+			pc.remove_item(50173,1)
+		end
+		
+		when 50174.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50174") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Wave Egg into your basket.")
+			pc.setqf("50174",1)
+			pc.remove_item(50174,1)
+		end
+		
+		when 50175.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50175") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Forest Star Egg into your basket.")
+			pc.setqf("50175",1)
+			pc.remove_item(50175,1)
+		end
+		
+		when 50176.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50176") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Flower Rain Egg into your basket.")
+			pc.setqf("50176",1)
+			pc.remove_item(50176,1)
+		end
+		
+		when 50177.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50177") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Heaven's Egg into your basket.")
+			pc.setqf("50177",1)
+			pc.remove_item(50177,1)
+		end
+		
+		when 50178.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50178") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Fitness Egg into your basket.")
+			pc.setqf("50178",1)
+			pc.remove_item(50178,1)
+		end
+		
+		when 50179.use begin
+			if pc.count_item(50180) < 1 then
+				syschat("You need an easter basket to put this egg into.")
+				return;
+			end
+			if pc.getqf("50179") == 1 then
+				syschat("You have already collected this egg.")
+				return;
+			end
+			syschat("You have put a Glacial Egg into your basket.")
+			pc.setqf("50179",1)
+			pc.remove_item(50179,1)
+		end
+	end
+end	

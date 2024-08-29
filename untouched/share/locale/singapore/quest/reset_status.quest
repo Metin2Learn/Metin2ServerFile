@@ -1,0 +1,37 @@
+quest reset_status begin
+	state start begin
+		when 71103.use or 71104.use or 71105.use or 71106.use begin
+			local name = { "Health", "Intelligence", "Strength", "Dexterity" }
+			local idx = item.get_vnum() - 71103
+			local func = { pc.get_ht, pc.get_iq, pc.get_st, pc.get_dx }
+
+			if func[idx+1]() == 1 then
+				say(name[idx+1].." is 1 now.")
+				say(name[idx+1].." can not be reset.")
+				say("")
+				return
+			end
+
+			say(name[idx+1].." is set to 1.")
+			say("Rest of the points can be returned ")
+			say("to traning points.")
+			say("")
+			say("Do you want to proceed?")
+			say("")
+
+			local s = select("Reset", "Cancel")
+
+			if s == 1 then
+				if pc.reset_status( idx ) == true then
+					say("Reset completed.")
+					say("")
+
+					pc.remove_item(item.get_vnum())
+				else
+					say("Reset cancelled.")
+					say("")
+				end
+			end
+		end
+	end
+end

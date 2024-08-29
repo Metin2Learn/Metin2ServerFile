@@ -1,0 +1,161 @@
+quest yuhwan_findspiderstring begin
+	state start begin
+		when yuhwan.chat.locale.yuhwan.start_yuhwan_chat begin
+			say(locale.yuhwan.start_yuhwan_say)
+		end
+		when weapon_shop.chat.locale.yuhwan.start_weapon_shop_chat with pc.level>=locale.yuhwan.start_level_begin and pc.level<=locale.yuhwan.start_level_end and number(1, locale.yuhwan.start_probability)==1 begin
+			say(locale.yuhwan.start_weapon_shop_say)
+			setstate(order)
+
+			makequestbutton(locale.yuhwan.find_label)
+			q.set_title(locale.yuhwan.find_label)
+			q.start()
+		end
+	end
+	state order begin
+		when login begin
+			setskin(NOWINDOW)
+			makequestbutton(locale.yuhwan.find_label)
+			q.set_title(locale.yuhwan.find_label)
+			q.start()
+		end
+		when button begin
+			say(locale.yuhwan.find_text)
+		end
+		when info begin
+			say(locale.yuhwan.find_text)
+		end
+		when yuhwan.chat.locale.yuhwan.order_yuhwan_chat with pc.level<=locale.yuhwan.end_level begin
+			say(locale.yuhwan.order_yuhwan_say1)
+			wait()
+			say(locale.yuhwan.order_yuhwan_say2)
+			wait()
+			say(locale.yuhwan.order_yuhwan_say3)
+
+			local s=select(locale.yuhwan.order_accept, locale.yuhwan.order_refuse)
+			if 1==s then
+				say(locale.yuhwan.order_accept_answer)
+				say(locale.yuhwan.kill_text)
+
+				setstate(accept)
+
+				makequestbutton(locale.yuhwan.kill_label)
+				q.set_title(locale.yuhwan.kill_label)
+			else
+				say(locale.yuhwan.order_refuse_answer)
+			end
+		end
+		when yuhwan.chat.locale.yuhwan.too_late_chat with pc.level>locale.yuhwan.end_level begin
+			say(locale.yuhwan.too_late_say)
+			setstate(complete)
+		end
+
+	end
+	state accept begin
+		when login begin
+			setskin(NOWINDOW)
+			makequestbutton(locale.yuhwan.kill_label)
+			q.set_title(locale.yuhwan.kill_label)
+			q.start()
+		end
+		when button begin
+			say(locale.yuhwan.kill_text)
+		end
+		when info begin
+			say(locale.yuhwan.kill_text)
+		end
+
+		when yuhwan.chat.locale.yuhwan.accept_chat begin
+			say(locale.yuhwan.accept_say)
+		end
+		when jipgae_geomi.kill begin
+
+			local kill_count=pc.getqf("kill_count")
+			pc.setqf("kill_count", kill_count+1)
+
+			--chat("cur kill"..kill_count)
+			--chat("pc lv"..pc.level)
+			--chat("end lv"..locale.yuhwan.end_level)
+			--chat("dst kill"..locale.yuhwan.kill_count)
+			--chat("find"..pc.getqf("find"))
+			--chat("item name"..locale.yuhwan.event_item)
+			--chat("item count"..pc.countitem(locale.yuhwan.event_item))
+
+			local end_level=locale.yuhwan.end_level
+			local dst_kill_count=locale.yuhwan.kill_count
+
+			if pc.level>end_level then
+				--chat("Exceeded level")
+				if kill_count>dst_kill_count then
+					--chat("Exceeded kill number")
+					say(locale.yuhwan.giveup_say)
+					setstate(failure)
+					makequestbutton(locale.yuhwan.failure_info_label)
+					q.set_title(locale.yuhwan.failure_info_label)
+				end
+			else
+				--chat("Applying level")
+				if number(1, dst_kill_count)==1 then
+					--chat("Success")
+					--chat("Obtained")
+					say(locale.yuhwan.pickup_say)
+					setstate(success)
+					makequestbutton(locale.yuhwan.success_info_label)
+					q.set_title(locale.yuhwan.success_info_label)
+				end
+			end
+		end
+
+	end
+	state failure begin
+		when login begin
+			setskin(NOWINDOW)
+			makequestbutton(locale.yuhwan.failure_info_label)
+			q.set_title(locale.yuhwan.failure_info_label)
+			q.start()
+		end
+		when button begin
+			say(locale.yuhwan.failure_info_text)
+		end
+		when info begin
+			say(locale.yuhwan.failure_info_text)
+		end
+		when yuhwan.chat.locale.yuhwan.failure_chat begin
+			say(locale.yuhwan.failure_say)
+			setstate(complete)
+			q.done()
+		end
+	end
+	state success begin
+		when login begin
+			setskin(NOWINDOW)
+			makequestbutton(locale.yuhwan.success_info_label)
+			q.set_title(locale.yuhwan.success_info_label)
+			q.start()
+		end
+		when button begin
+			say(locale.yuhwan.success_info_text)
+		end
+		when info begin
+			say(locale.yuhwan.success_info_text)
+		end
+		when yuhwan.chat.locale.yuhwan.success_chat begin
+			say(locale.yuhwan.success_say1)
+			wait()
+			say(locale.yuhwan.success_say2)
+			wait()
+			say(locale.yuhwan.success_say3)
+			wait()
+			say(locale.QUEST_TEMP_REWARD)
+			setstate(complete)
+			q.done()
+		end
+	end
+	state complete  begin
+		when yuhwan.chat.locale.yuhwan.complete_chat begin
+			say(locale.yuhwan.complete_say)
+			setstate(complete)
+		end
+	end
+end
+	

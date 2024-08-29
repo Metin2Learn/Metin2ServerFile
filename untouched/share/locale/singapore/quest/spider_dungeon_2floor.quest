@@ -1,0 +1,39 @@
+-------------------------------------
+--Metin 2 Spoder Dungeon  pass from 2nd floor to 1st floorquest
+------------------------------------
+quest spider_dungeon_2floor begin
+	state start begin
+		when login or levelup with pc.level >0 begin
+			set_state(to_spider_2floor)
+		end
+	end
+		
+	state to_spider_2floor begin
+		when 20089.chat."To the 1st floor of the spider dungeon!" begin
+			say("")
+			say("Pung-Ho:")
+			say("Greetings!")
+			say("I am the guide for")
+			say("2nd floor and 1st floor")
+			say("Do you want to go to 1st floor?")
+			say("")
+			local a= select("Go","Cancel")
+			if 1==a then
+				say("")
+				say("Pung-Ho:")
+				say("Good!")
+				say("Have fun with spiders on the 1st floor!")
+				wait()
+				pc.warp(91700, 525300)
+				return
+			end
+			say("")
+			say("Pung-Ho:")
+			say("Let me know when you change your mind")
+			say("")
+		end
+			
+
+	end
+
+end

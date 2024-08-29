@@ -1,0 +1,293 @@
+quest fireandice begin      
+    state start begin  
+		when login or levelup or enter with pc.level >= 80 begin 
+			set_state(information)
+		end
+    end
+   
+   state information begin
+    	when letter begin    
+            local v=find_npc_by_vnum(20023)  
+            if 0==v then  
+            else  
+                target.vid("__TARGET__", v, "Soon")  
+            end  
+            send_letter("Fire and Ice")  
+        end 
+
+        when button or info begin 
+            say_title("Fire and Ice") 
+            say("") 
+            say("Soon is looking for you and requires your help!") 
+            say("He said it is very very important and very urgent!") 
+            say("You should better hurry up!") 
+            say("") 
+            say_reward("Go to Soon!") 
+            say("") 
+        end  
+
+        when 20023.chat."Fire and Ice" or __TARGET__.target.click begin  
+            	target.delete("__TARGET__")
+            	say_title("Mr.Soon:")  
+            	say("")  
+		say("Hey, finally you are here!") 
+		say("")
+		say("I've been searching for you a long time...") 
+		say("")
+		say("Well, lets come down to business; I need your help.")  
+		wait()
+		say_title("Mr.Soon:")
+		say("")
+		say("After you sold me the legendary diary I've encountered")  
+		say("a hint towards something very important. I need you to")
+		say("accomplish a few tasks for me. A sort of ritual.")
+		say("")
+		say("First, we shall to transform this wooden mask into") 
+		say("magic ash for me by fighting the Flame Ghosts!")  
+		say("")  
+            pc.give_item2(30183, 1)  
+              
+            set_state(kill)  
+        end  
+    end 
+
+    state kill begin 
+        when letter begin  
+            send_letter("Fire and Ice")              
+        end  
+		
+        when button or info begin  
+            say_title("Fire and Ice")  
+            say("")
+            say("Soon has given you the task to burn this wooden mask and")  
+            say("turn it into magic ashes! To achieve that, you have to")  
+            say("kill Flame Ghosts and try to burn it in their last flames!")  
+            say("") 
+            say_reward("Kill Flame Ghosts to burn the wooden mask!") 
+			say("")			
+        end 
+		
+        when 2202.kill begin  
+            local n = number(1,30)  
+            if n <= 1 then 
+                pc.remove_item(30183,1)  
+                pc.give_item2(30184, 1)  
+		say_title("Fire and Ice")  
+		say("")
+		say("The mask has completely burned up and turned into ashes!")  
+		say("Return to Soon and await your next task!")  
+		say("") 
+		say_reward("Return to Soon!")   
+		set_state(backtosoon)  
+            end  
+        end          
+    end  
+
+    state backtosoon begin  
+        when letter begin  
+            send_letter("Fire and Ice")  
+            local v=find_npc_by_vnum(20023)  
+            if 0==v then  
+            else  
+                target.vid("__TARGET1__", v, "Soon")  
+            end  
+        end  
+		
+        when button or info begin  
+            say_title("Fire and Ice")  
+            say("")  
+            say("You've got magic ashes!")  
+            say("Return to Soon now to pass them over.")  
+            say("") 
+            say_reward("Return to Soon!")  
+			say("")
+        end
+		
+        when __TARGET1__.target.click or 20023.chat."Fire and Ice" with pc.count_item(30184)>=1 begin   
+            target.delete("__TARGET1__")  
+            say_title("Mr.Soon:")  
+            say("")  
+            say("Ahh as I expected!")  
+            say("You've got the magic ashes!")  
+            say("Give them to me so I can analyse it.")    
+            say("") 
+            wait() 
+            say_title("Mr.Soon:")  
+            say("")  
+            say("Looks good!")  
+            say("However, I need 10 Lumps of Ice as well!")  
+            say("Head to Ice Mountain and slain Yetis!")  
+            say("")
+            say_reward("Go and kill Yetis until you have 10 Lumps of Ice!") 
+			say("")			
+            pc.remove_item(30184,1)
+            set_state(kill2)
+        end 
+    end
+    
+    state kill2 begin 
+		when letter begin  
+            send_letter("Fire and Ice")              
+        end  
+		
+        when button or info begin  
+            say_title("Fire and Ice")  
+            say("")  
+            say("After giving Soon the magic ashes he asked of you to visit")  
+            say("the Ice Mountain and kill Yetis in order to obtain")  
+            say("10 Lumps of Ice which he requires for his studies.")
+			say("")
+            say_reward("Go and kill Yetis until you have 10 Lumps of Ice!")
+			say("")
+        end 
+		
+        when 1106.kill begin  
+            local n = number(1,25)  
+            if n == 1 then  
+                pc.give_item2(30146, 1)  
+		if pc.count_item(30146) >= 10 then 
+			say_title("Fire and Ice")  
+			say("")  
+			say("Magnificent!")  
+			say("You got the 10 Lumps of Ice!") 
+			say("Head back to Soon and bring them to him!")
+			say("") 
+			say_reward("Head back to Soon!")   
+			set_state(backtosoon2)  
+		end  
+            end  
+        end          
+    end 
+
+     state backtosoon2 begin  
+        when letter begin  
+            send_letter("Fire and Ice")  
+            local v=find_npc_by_vnum(20023)  
+            if 0==v then  
+            else  
+                target.vid("__TARGET2__", v, "Soon")  
+            end
+        end  
+		
+        when button or info begin   
+            say_title("Fire and Ice")  
+            say("")
+			----"123456789012345678901234567890123456789012345678901234567890"|
+            say("You've retrieved the 10 Lumps of Ice!")
+			say("You should hurry back to Soon and ask him if theres anything")
+			say("more he needs from you.")
+            say("") 
+            say_reward("Head back to Soon!")
+			say("")
+        end 
+		
+        when __TARGET2__.target.click or 20023.chat."Fire and Ice" with pc.count_item(30146)>9 begin   
+            target.delete("__TARGET2__") 
+            say_title("Soon:")  
+            say("")  
+            say("You got the Lumps of Ice? Sweet.")  
+            say("You are a really tough warrior!")  
+            say("Let me investigate these Lumps of Ice quickly.")  
+            say("") 
+            wait() 
+            say_title("Soon:")  
+            say("")
+            say("I've mixed the magic ashes with the Lumps of Ice and they")  
+            say("turned into this odd black substance - it still looks a bit")  
+            say("like ice but it is as black as the night itself.")
+			say("")
+            say("Legend says you need to sacrifice this dark ice in a shrine")  
+            say("that is located within the Heaven's Lair.")  
+            say("") 
+            say("That would be the ideal task for you!")  
+            say("")
+            say_reward("Head to Heaven's Lair and put the ice in the Dark Shrine!")
+		say("")
+            pc.remove_item(30146,10)
+            pc.give_item2(30185, 1)  
+            set_state(gotoschrein) 
+        end  
+    end 
+
+     state gotoschrein begin  
+        when letter begin  
+            send_letter("Fire and Ice")  
+            local v=find_npc_by_vnum(30123)  
+            if 0==v then  
+            else  
+                target.vid("__TARGET3__", v, "Dark Shrine")  
+            end
+        end
+		
+        when button or info begin   
+            say_title("Fire and Ice")  
+            say("")  
+            say("You're almost done with the assignment handed to you")  
+            say("by Soon. You have to use the Dark Ice on the Dark Shrine")   
+		say("located in the dephts of the Heaven's Lair now.")
+            say("") 
+            say_reward("You can find the shrine in the centre of the Lair.")
+            say("")
+        end 
+		
+        when __TARGET3__.target.click or 30123.chat."Melt the Dark Ice" with pc.count_item(30185)>0 begin   
+            target.delete("__TARGET3__") 
+		say_white("You step closer towards the shrine that emits pure darkness.")
+            	say("")  
+            	say("You really want to sacrifice this dark ice?!")
+		setdelay(200)
+		say("...")
+		resetdelay()
+		say("Come on, let's do it!")
+		say("")
+            pc.remove_item(30185,1) 
+            set_state(backtosoon3) 
+        end  
+    end 
+
+     state backtosoon3 begin  
+        when letter begin  
+            send_letter("Fire and Ice")  
+            local v=find_npc_by_vnum(20023)  
+            if 0==v then  
+            else  
+                target.vid("__TARGET4__", v, "Soon")  
+            end  
+        end  
+		
+        when button or info begin   
+            say_title("Fire and Ice")  
+            say("")
+            say("As the ice vanishes, a cloud of thin, black smoke emerges")
+            say("from the bottom of the shrine - the sacrifice has been made.")  
+            say("")
+            say("Return to Soon to let him know the news!")  
+            say("") 
+            say_reward("Head back to Soon.") 
+        end 
+		
+        when __TARGET4__.target.click or 20023.chat."Fire and Ice" begin 
+            target.delete("__TARGET4__") 
+            say_title("Mr.Soon:")  
+            say("")  
+            say("The Dark Shrine?!")
+            say("This...this is unbelievable!")  
+            say("Hold on a moment please...")
+            say("You really did it and sacrificed the dark ice in the Shrine") 
+            say("Please accept this gift as a proof of my admiration for your")     
+            say("bravery.")
+            say("")
+            say_reward("90.000.000 EXP received.")  
+            say_reward("3.000.000 Yang received.") 
+            pc.give_exp2(90000000)  
+            pc.change_money(3000000)  
+            q.done()
+            set_state(COMPLETE)
+        end  
+    end 
+	state COMPLETE begin
+                when enter begin
+                        q.done()
+                end
+	end
+end  
