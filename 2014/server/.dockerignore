@@ -1,0 +1,18 @@
+# CMake
+cmake-build-debug/
+cmake-build-release/
+
+# Dockerfile (in order to allow changes without rebuilding)
+Dockerfile
+
+# Git files
+.gitignore
+.gitkeep
+
+# Compiled quests
+gamefiles/locale/english/quest/object/
+gamefiles/locale/english/quest/pre_qc/
+gamefiles/locale/english/quest/qc
+
+# Test folder
+test/
