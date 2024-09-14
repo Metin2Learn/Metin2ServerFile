@@ -1,0 +1,186 @@
+quest find_squareguard begin
+	state start begin
+	end
+
+	state run begin
+		when login with pc.level<=5 begin
+			set_state(find)
+		end
+	end
+	state find begin
+		when letter begin
+			if pc.get_empire()==1 then
+				find_npc_vnum = 11000
+			elseif pc.get_empire()==2 then
+				find_npc_vnum = 11002
+			elseif pc.get_empire()==3 then
+				find_npc_vnum = 11004
+			end
+
+			local v=find_npc_by_vnum(find_npc_vnum)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找戰魂")
+			end
+		end
+		when letter begin
+			send_letter("去找戰魂")
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 去找戰魂"..locale.NORMAL_COLOR)
+			say("移動到城市的礦場的中間")
+			say("跟戰魂對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 去找戰魂"..locale.NORMAL_COLOR)
+			say("移動到城市的礦場的中間")
+			say("跟戰魂對話")
+
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say("你新來的初心者吧!")
+			say("我給你200兩, 你可以幫我買血瓶?")
+			say("我必須站在這裡一整天, 所以沒方法買得到. ")
+			say("")
+			say("在雜貨商店可以買血瓶.")
+			local b=select("好的", "拒絕")
+			if 1==b then
+				say("從戰魂收到 200 兩.")
+				say("- 身上帶錢的話, 在商店可以買物品. ")
+				say("-  雜貨商店買藥水物品. ")
+				pc.changemoney(200)
+				set_state(buy)
+			elseif 2==b then
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state buy begin
+		when letter begin
+			local v=find_npc_by_vnum(9003)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "")
+			end
+		end
+		when letter begin
+			send_letter("去買血瓶")
+		end
+		when button or info begin
+			say(locale.NOTICE_COLOR.." 去買血瓶"..locale.NORMAL_COLOR)
+			say("從雜貨商店買血瓶後,")
+			say("交給戰魂. ")
+		end
+		when 11000.chat."在哪裡可以買血瓶?" begin
+			say("在雜貨商店可以買血瓶")
+			say("去小型地圖上標示的雜貨店的")
+			say("主人的位置")
+		end
+		when 11002.chat." 在哪裡可以買血瓶?" begin
+			say("在雜貨商店可以買血瓶")
+			say("去小型地圖上標示的雜貨店的")
+			say("主人的位置")
+
+		end
+		when 11004.chat." 在哪裡可以買血瓶?" begin
+			say("在雜貨商店可以買血瓶")
+			say("去小型地圖上標示的雜貨店的")
+			say("主人的位置")
+
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say("你好, 你是初心者吧.")
+			say("你來這裏幫戰魂的忙吧.")
+			say("你一個好人. 我很快找給你. ")
+			say("[DELAY value=300]... 我放在哪裡呢 ... [/DELAY]")
+			say("找到了. 血瓶就是有生命力恢復效果的物品. ")
+			say("")
+			wait()
+			say("嗯~ 你是初心者, 你會常常來這裡. ")
+			say("所以今天我特別給你免費血瓶.")
+			say("那希望常常見到你")
+			say("")
+			say("從雜貨店主人收到血瓶(小) ")
+			say("- 生命力恢復的時候使用血瓶 ")
+			pc.give_item2("27001", 5)
+			set_state(deliver)
+		end
+	end
+	state deliver begin
+		when letter begin
+			if pc.get_empire()==1 then
+				find_npc_vnum = 11000
+			elseif pc.get_empire()==2 then
+				find_npc_vnum = 11002
+			elseif pc.get_empire()==3 then
+				find_npc_vnum = 11004
+			end
+
+			local v=find_npc_by_vnum(find_npc_vnum)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找戰魂")
+			end
+
+
+
+
+
+		end
+		when letter begin
+			send_letter("回去找戰魂")
+		end
+		when button or info begin
+			say(locale.NOTICE_COLOR.." 回去找戰魂"..locale.NORMAL_COLOR)
+			say("回去找戰魂, 交還血瓶.")
+		end
+		when __TARGET__.target.click with pc.countitem("27001")<1 begin
+			target.delete("__TARGET__")
+			say("你說血瓶已經賣完了?")
+			say("哎呀 ~怎麼會事. 哪沒方法")
+			say("你拿去剩下的錢吧")
+			say("剛才職業教官找你")
+			say("你去找他吧")
+			set_quest_state("find_skillteacher", "find")
+			set_state(__COMPLETE__)
+		end
+		when __TARGET__.target.click with pc.countitem("27001")>=1 begin
+			target.delete("__TARGET__")
+			say("嗯~ 我等你 我應該怎麼表示我對你的感謝呢! 呵呵")
+			say("這是我的任務,我不會離開廣場")
+			say("你問我? 我的任務是什麼?")
+			say("簡單說, 在這個廣場中心站著, ")
+			say("如果有人需要幫忙,我會幫助那些人")
+			say("有時候玩家從怪物逃走回來的時候, 我會保護他們.")
+			say("但是主要任務是, 保護在這個城市的公會")
+			say("將來你有興趣的話, 你可以來找我")
+			wait()
+			say("剛才職業教官找你")
+			say("你去找他吧")
+			say("")
+			say("阿~ 差點忘記了!")
+			say("這是為了表示我的感謝, 給你一個裝飾品")
+			say("剩下的錢, 你拿去吧!")
+			say("那~ 再見了")
+			if pc.countitem("27001")>=1 then
+				pc.removeitem("27001", 1)
+				local r=number(1, 3)
+				if r==1 then
+					pc.give_item2("14000", 1)
+				elseif r==2 then
+					pc.give_item2("16000", 1)
+				elseif r==3 then
+					pc.give_item2("17000", 1)
+				end
+			end
+			set_quest_state("find_skillteacher", "find")
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end

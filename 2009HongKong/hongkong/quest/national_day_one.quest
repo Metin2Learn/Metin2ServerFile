@@ -1,0 +1,163 @@
+quest national_day_one begin
+	state start begin
+  	when login begin
+			pc.setqf("running_counter",1)
+			set_state(start_chat)
+		end
+	end
+	state start_chat begin
+  	when 20023.chat."金色的麥穗" with pc.get_level()>=33 and game.get_event_flag("national_day")==1 begin
+		 	say_title("金色的麥穗")
+		 	say("我這裏有一顆神奇的麥穗")
+		  say("需要你完成幾個小任務，感興趣嗎？")
+			say("當然，你也可以選擇一樣神秘的禮物。")
+			say("第一步是殺50只五狼鬼爪")
+			say("")
+			local b=select("接受","暫時沒精力")
+			if 1==b then
+				pc.setqf("killed_counter",0)
+				set_state(first_step)		
+		 	elseif 2==b then
+		   	set_state(start_chat)
+			end
+		end
+	end
+	state first_step begin
+	  when letter begin
+		  send_letter("斬殺五狼鬼爪")
+		  q.set_counter("剩餘五狼鬼爪", 50-pc.getqf("killed_counter"))
+		end
+	  when button begin	
+	  	say_title("第一步")
+	  	say("50只五狼鬼爪斬殺")
+	  	say(string.format("剩餘五狼鬼爪:%d", 50-pc.getqf("killed_counter")))
+	  	say("下一步是斬殺50只密宗扇兵")
+			say("")
+		end	
+		when info begin	
+	  	say_title("第一步")
+	  	say("50只五狼鬼爪斬殺")
+	  	say(string.format("剩餘五狼鬼爪:%d", 50-pc.getqf("killed_counter")))
+			say("下一步是斬殺50只密宗扇兵")
+			say("")
+		end
+		when 502.kill begin
+			pc.setqf("killed_counter",pc.getqf("killed_counter")+1)
+			q.set_counter("剩餘五狼鬼爪", 50-pc.getqf("killed_counter"))
+			if pc.getqf("killed_counter")==50 then
+				pc.setqf("killed_counter",0)
+				set_state(second_step)
+				q.done()
+			end
+		end
+	end
+	state second_step begin
+	  when letter begin
+		  send_letter("斬殺密宗扇兵")
+		  q.set_counter("剩餘密宗扇兵", 50-pc.getqf("killed_counter"))
+		end
+	  when button begin	
+	  	say_title("第二步")
+			say("50只密宗扇兵斬殺")
+			say(string.format("剩餘密宗扇兵:%d", 50-pc.getqf("killed_counter")))
+			say("下一步是斬殺50只蜘蛛")
+			say("")
+		end	
+		when info begin	
+	  	say_title("第二步")
+	  	say("50只密宗扇兵斬殺")
+	  	say(string.format("剩餘密宗扇兵:%d", 50-pc.getqf("killed_counter")))
+			say("下一步是斬殺50只蜘蛛")
+			say("")
+		end
+		when 701.kill begin
+			pc.setqf("killed_counter",pc.getqf("killed_counter")+1)
+			q.set_counter("剩餘密宗扇兵", 50-pc.getqf("killed_counter"))
+			if pc.getqf("killed_counter")==50 then
+				pc.setqf("killed_counter",0)
+				set_state(third_step)
+				q.done()
+			end
+		end
+	end
+	state third_step begin
+	  when letter begin
+		  send_letter("斬殺蜘蛛")
+		  q.set_counter("剩餘蜘蛛", 50-pc.getqf("killed_counter"))
+		end
+	  when button begin	
+	  	say_title("第三步")
+			say("50只蜘蛛斬殺")
+			say(string.format("剩餘蜘蛛:%d", 50-pc.getqf("killed_counter")))
+			say("任務完成後,你就可以去領獎了!")
+			say("")
+		end	
+		when info begin	
+	  	say_title("第三步")
+	  	say("50只蜘蛛斬殺")
+	  	say(string.format("剩餘蜘蛛:%d", 50-pc.getqf("killed_counter")))
+			say("任務完成後,你就可以去領獎了!")
+			say("")
+		end
+		when 2001.kill begin
+			pc.setqf("killed_counter",pc.getqf("killed_counter")+1)
+			q.set_counter("剩餘蜘蛛", 50-pc.getqf("killed_counter"))
+			if pc.getqf("killed_counter")==50 then
+				set_state(task_accomplished)
+				q.done()
+			end
+		end
+	end		
+	state task_accomplished begin
+	  when letter begin
+		  send_letter("任務完成")
+		end
+		when button begin
+			say_title("任務完成")
+			say("你已經成功斬殺了:")
+			say("50只五狼鬼爪")
+			say("50只密宗扇兵")
+			say("50只蜘蛛")
+			say("完成了任務,回去找書蟲拿獎品吧!")
+			say("")
+			set_state(get_award)
+			q.done()			
+		end
+		when info begin
+			say_title("任務完成")
+			say("你已經成功斬殺了:")
+			say("50只五狼鬼爪")
+			say("50只密宗扇兵")
+			say("50只蜘蛛")
+			say("完成了任務,回去找書蟲拿獎品吧!")
+			say("")		
+			set_state(get_award)	
+			q.done()
+		end
+	end
+	state get_award begin
+  	when 20023.chat."領取獎品" begin
+  	  say("你要大麥還是要玄鐵1個？")
+		  say("只能選一個哦!")
+			say("大麥可以找雜貨店老闆兌換禮物的!")
+			say("")
+			local b=select("大麥","玄鐵")
+			if 1==b then
+			  pc.give_item2(30000,1)
+			elseif 2==b then
+		   	pc.give_item2(25041,1)
+			end
+			pc.setqf("running_counter",pc.getqf("running_counter")+1)
+			if pc.getqf("running_counter")<=3 then
+				set_state(start_chat)
+			else
+				set_state(_COMPLETE_)
+			end
+		end
+	end
+	state _COMPLETE_ begin
+		when enter begin
+			q.done()
+		end
+	end	
+end

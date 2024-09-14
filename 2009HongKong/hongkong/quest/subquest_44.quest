@@ -1,0 +1,359 @@
+--------------------------------------------------
+-- SUB QUEST 
+-- LV 37
+-- 小強 圓圓 尋找沙漠蜘蛛的鈴鐺
+----------------------------------------------------
+
+quest subquest_44 begin
+	state start begin
+		when login or  levelup with pc.level >= 37 and pc.level <= 39 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20012)
+			if v!= 0 then
+				target.vid("__TARGET__", v, "小強 圓圓 尋找沙漠蜘蛛的鈴鐺")
+			end
+		end
+
+		
+		when __TARGET__.target.click or
+			20012.chat."向蜘蛛脖子掛鈴鐺" with pc.level >= 37 begin
+			target.delete("__TARGET__")
+			say("圓圓:")
+			say("如果不忙聽我講話嗎?")
+			say("我跟我的朋友小強打賭了")
+			say("那傢伙虧他是男孩，太膽小了，所以我取笑他")
+			say("他突然生氣，要跟我打賭. ")
+			say("所以就賭 ")
+			say("給沙漠的蜘蛛掛上鈴鐺. .")
+			say("可是我自己去確認，太危險")
+			say("那傢伙又說已經掛上了")
+			say("無法相信他.")
+			say("")
+			wait()
+			say("圓圓:")
+			say("雖然懷疑朋友是不好的,")
+			say("但是怎麼想，那膽小鬼能掛上了嗎")
+			say("你看起來很厲害")
+			say("能幫我確認嗎?")
+			say("")
+			local s=select("接收", "拒絕")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if 2==a then
+					say("圓圓:")
+					say("怎麼?")
+					say("如果現在忙..")
+					say("那下次有空的時候再來吧..")
+					return
+				end
+				say("圓圓:")
+				say("是嗎? 害怕嗎?")
+				say("個子比我高很多，還害怕~膽小鬼~~~")
+				say("要找別人幫忙了")
+				say("吃PP吧你，嘻嘻，趕緊跑 ")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("圓圓:")
+			say("那個可惡的怪物從影悲沙漠出來")
+			say("非常厲害，要殺死後才能確認.")
+			say("那拜託了.")
+			say("")
+			set_state(go_to_desert)
+			pc.setqf("kill_count", 0)
+		end
+    end
+	
+    state go_to_desert begin
+		when letter begin
+		    send_letter("尋找掛鈴鐺的沙漠蜘蛛")
+		end
+		when button or info begin
+			say_title("尋找掛鈴鐺的沙漠蜘蛛")
+			say("")
+			say("根據圓圓的話，她的朋友小強說 ")
+			say("給沙漠蜘蛛掛上了鈴鐺")
+			say("但是她認為小強在說謊 ")
+			say("尋找掛鈴鐺的沙漠蜘蛛!")
+			say("沙漠蜘蛛是指居住在沙漠的")
+			say(""..mob_name(2051).."，"..mob_name(2052).."，"..mob_name(2053).."，"..mob_name(2055).."，"..mob_name(2054).."")	
+			say("")
+		end
+		
+		when 20012.click begin
+			say("有? 還是沒有? 快點打聽吧.")
+			say("應該沒有，小強是膽小鬼~")
+			say("")
+		end
+
+
+
+		when 2051.kill or 2052.kill or 2053.kill or 2054.kill or  2055.kill begin
+			local cur_kill_count=pc.getqf("kill_count")+1
+			pc.setqf("kill_count", cur_kill_count)
+
+			if cur_kill_count>=number(10, 50) then
+				set_state(fail_find_bell)
+			end
+		end
+	end
+	state fail_find_bell begin
+		when letter begin
+			send_letter("尋找掛鈴鐺的沙漠蜘蛛失敗!")
+		end
+		
+		when info or  button begin
+			say_title("尋找掛鈴鐺的沙漠蜘蛛失敗!")
+			say("我現在在幹什麼呢?")
+			say("這麼辛苦，還不知道出現不出現呢")
+			say("尋找掛鈴鐺的蜘蛛，還不如找那個叫小強的傢伙")
+			say("叫他開口更好")
+			set_state(go_to_boy)
+		end
+	end
+	
+    state go_to_boy begin
+		when letter begin
+		  send_letter("尋找小強!")
+		  
+		  local v = find_npc_by_vnum(20014)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "去找小強")
+			end
+
+		end
+		when button or info begin
+			say_title("尋找小強!")
+			say("尋找引起所有事件的元兇小強")
+			say("找出事件始末的真相!")
+			say("")
+		end
+	
+		when __TARGET__.target.click or
+			20014.chat."你是小強嗎!" begin
+			target.delete("__TARGET__")
+			say("小強:")
+			say("啊!! 你知道我和圓圓打賭了?")
+			say("那家伙…還叫別人確認…")
+			say("那麼不相信我了嗎.")
+			say("其實，沒能掛上.")
+			say("到了附近就發瘋地撲來")
+			say("真的不行啊")
+			say("")
+			wait()
+			say("小強:")
+			say("其實不好意思說沒能掛上,")
+			say("還有男孩子的自尊的嘛!")
+			say("都來到這裡了說沒能掛上，我就一生被圓圓取笑")
+			say("你看起來很強,")
+			say("拜託了，不要告訴圓圓")
+			say("請替我掛上鈴鐺可以嗎?")
+			say("")
+			wait()
+			say("小強:")
+			say("你是知道的吧.")
+			say("那個怪物很危險，全村人都知道")
+			say("聽說被那個怪物害死的人也很多.")
+			say("拜託了!")
+			say("")
+			local s=select("接收請求", "斷然拒絕")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a= select("是","否")
+				if 2==a then
+					say("小強:")
+					say("看你現在猶豫..")
+					say("不會是想向圓圓")
+					say("說出一切的吧?") 
+					say("雖然有些危險..請考慮一下")
+					say("請接收我的請求..")
+					return
+				end
+				say("小強:")
+				say("沒辦法啊 .")
+				say("現在圓圓可能連話都不想跟我說了吧.")
+				say("")
+				set_state(report_yourang)
+				return
+			end
+			say("小強:")
+			say("啊 我的眼裡果然沒錯.")
+			say("就知道您是親切的人! 那拜託了")
+			say("")
+			set_state(attach_bell)
+		end
+    end
+	
+    state report_yourang begin
+		
+		when letter begin
+		   send_letter("回到圓圓那裡")
+			
+		   local v=find_npc_by_vnum(20012)
+			if v!=0 then
+				target.vid("__TARGET__", v, "回到圓圓那裡")
+			end
+
+		end
+		when button or info begin
+			say_title("回到圓圓那里")
+			say("回到圓圓那裡，報告")
+			say("小強說謊的事情. ")
+			say("")
+		end
+		
+		when 20014.chat."有關圓圓的故事" begin
+			say("小強:")
+			say("現在圓圓可能連話都不想跟我說了吧.")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20012.chat."說小強的謊話" begin
+			target.delete("__TARGET__")
+			say("圓圓:")
+			say("什麼? 那個傢伙果然說了謊.")
+			say("那傢伙說謊比沒能掛上鈴鐺")
+			say("更壞! 要和小強斷交!")
+			say("10年的友情就這樣裂開了.")
+			say("真是對小強太失望了.")
+			say("")
+			say_reward("作為確認給沙漠蜘蛛掛鈴鐺的與否的報酬")
+			say_reward("獲得經驗值 350000")
+			pc.give_exp2(350000)
+		 set_quest_state("levelup","run")	
+			
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+	
+    state attach_bell begin
+		when letter begin
+		    send_letter("給沙漠蜘蛛掛上鈴鐺!")
+		end
+	
+		when button or info begin
+			say_title("給沙漠蜘蛛掛上鈴鐺!")
+			say("")
+			say("抓沙漠蜘蛛  ")
+			say("掛上鈴鐺.")
+			say("")
+		end
+		when 20014.chat."有關掛鈴鐺的故事" begin
+			say("小強:")
+			say("掛鈴鐺了嗎?")
+			say("還沒掛上阿?")
+			say("不要被圓圓發現.")
+			say("")
+		end
+
+		when 2001.kill or 2002.kill or 2003.kill or 2004.kill or  2005.kill  begin
+			local cur_kill_count=pc.getqf("kill_count")+1
+			pc.setqf("kill_count", cur_kill_count)
+
+			if cur_kill_count>=number(10, 50) then
+				say("雖然艱難，成功地給沙漠蜘蛛掛上鈴鐺")
+				set_state(report_girl_lie)
+			end
+		end
+
+	end
+    state report_girl_lie begin
+		when letter begin
+			send_letter("回到圓圓那裡")
+			
+			local v=find_npc_by_vnum(20012)
+			if v!=0 then
+				target.vid("__TARGET__", v, "回到圓圓那裡")
+			end
+
+		end
+	
+		when button or info begin
+			say_title("回到圓圓那裡")
+			say("")
+			say("雖然艱難，但是給沙漠蜘蛛掛上鈴鐺了")
+			say("現在回到圓圓那裡說謊")
+			say("說小強給沙漠蜘蛛掛上了鈴鐺.")
+			say("")
+		end
+		
+		when 20014.chat."關於鈴鐺的故事" begin
+			say("小強:")
+			say("掛上鈴鐺了嗎?")
+			say("啊! 是吧. 謝謝了.")
+			say("不要讓圓圓看出來，好好跟她說.")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20012.chat."說小強掛上鈴鐺了" begin
+			target.delete("__TARGET__")
+			say("圓圓:")
+			say("甚麼? 小強那傢伙掛上了鈴鐺? ")
+			say("噢，那家伙成為真正的男子漢了!")
+			say("果然是我的朋友. 真是謝謝了.")
+			say("是我不該懷疑. 這是報酬")
+			say("")
+			
+			set_state(report_boy_lie)
+		end
+	end
+    state report_boy_lie begin
+		when letter begin
+			send_letter("回到小強那裡")
+			local v=find_npc_by_vnum(20014)
+			if v!=0 then
+				target.vid("__TARGET__", v, "回到小強那裡.")
+			end
+		end
+		
+		when button or info begin
+			say_title("回到小強那裡")
+			say("")
+			say("回到小強那裡，告訴他")
+			say("向圓圓說了")
+			say("沙漠蜘蛛掛上了鈴鐺.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20014.chat." 說沙漠蜘蛛事件有了好的結果." begin
+			target.delete("__TARGET__")
+			say("小強:")
+			say("真謝謝.")
+			say("現在我可以不受圓圓的欺負了.")
+			say("請致死保守這個秘密，一定。")
+			say("這是報酬.")
+			say("")
+			say_reward("作為保守秘密的報酬從小強那裡")
+			
+			say_reward("獲得經驗值 700000 ")
+			pc.give_exp2(700000)
+			set_quest_state("levelup","run")
+			pc.give_item2(50721,10)
+			pc.give_item2(50722,10)
+			say_reward("獲得了草藥物品")
+			
+			say_reward	("獲得了" ..item_name(50011).."")
+			pc.give_item2(50011,5)
+			pc.setqf("kill_count", 0)
+	
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+    end
+    state __COMPLETE__ begin
+	end	
+    state __GIVEUP__ begin
+    end
+end
+

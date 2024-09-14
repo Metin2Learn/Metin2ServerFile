@@ -1,0 +1,416 @@
+----------------------------------------------------
+-- SUB QUEST
+-- LV 20
+-- 剷除"..mob_name(396).."
+----------------------------------------------------
+
+quest subquest_15 begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >= 23  and pc.get_level() <= 28 begin
+			set_state( information )
+		end
+	end
+
+	state information begin
+		when letter begin
+					
+			local vnum=0
+
+			if pc.get_empire() == 1 then
+				vnum=11000
+			elseif pc.get_empire() == 2 then
+				vnum=11002
+			elseif pc.get_empire() == 3 then
+				vnum=11004
+			end
+
+			local v = find_npc_by_vnum(vnum)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "分支任務15 剷除"..mob_name(396).."")
+			end
+		end
+
+				
+		when __TARGET__.target.click or
+			11000.chat."哈哈~ 這出現了大事" with pc.level >= 23 begin
+			target.delete("__TARGET__")
+
+			say("戰魂 :")
+			say("哈哈~ 這出現了大事, ")
+			say("以前你幫我們剷除白蓮黨的白蓮魅影")
+			say("但是白蓮黨的行動還是沒有停止")
+			say("看上去比以前更嚴重. ")
+			say("")
+			wait()
+
+			say("戰魂 :")
+			say("根據資料除了白蓮黨的白蓮魅影以外,")
+			say("由"..mob_name(396).."統領著.")
+			say("白蓮魅影被剷除之後, 他們要報仇")
+			say("所以他們的行動開始越來越嚴重. ")
+			say("")
+			wait()
+
+			say("戰魂 :")
+			say("為了停止他們的行動我們需要剷除"..mob_name(396)..".")
+			say("出了他其他呢, 不太強的手下")
+			say("......")
+			say("你幫我們剷除白蓮黨的"..mob_name(396)..", 好嗎?")
+			say("我們的命運就在你的手上!")
+			say("")
+			local s=select("接受","拒絕")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("戰魂:")
+					say("哈...您現在不方便的話, 下次再來好嗎?")
+					say("好像您這麼有能力的人很難找…")
+					return
+				end
+				say("戰魂:")
+				say("您做不到嗎?  那好的…")
+				say("祝您好運")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("戰魂:")
+			say("我早知道您會試試.")
+			say("如果你幫我們剷除"..mob_name(396).."的話, ")
+			say("別的手下我們可以自己解決")	
+			say("祝您好運")
+			set_state(hunt_eunjung)
+		end	
+
+		when __TARGET__.target.click or
+			11002.chat."哈哈~ 這出現了大事" with pc.level >= 20 begin
+			target.delete("__TARGET__")
+			say("戰魂:")
+			say("哈哈~ 這出現了大事, ")
+			say("以前你幫我們剷除白蓮黨的白蓮魅影")
+			say("但是白蓮黨的行動還是沒有停止")
+			say("看上去比以前更嚴重.")
+			say("")
+			wait()
+
+			say("戰魂:")
+			say("根據資料除了白蓮黨的白蓮魅影以外, ")
+			say("由"..mob_name(396).."統領著.")
+			say("白蓮魅影被剷除之後, 他們要報仇")
+			say("所以他們的行動開始越來越嚴重.")
+			say("")
+			wait()
+
+			say("戰魂:")
+			say("為了停止他們的行動我們需要剷除"..mob_name(396)..".")
+			say("出了他其他呢, 不太強的手下")
+			say("......")
+			say("你幫我們剷除白蓮黨的"..mob_name(396)..", 好嗎")
+			say("我們的命運就在你的手上!")
+			say("")
+		
+			local s=select("接受","拒絕")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("戰魂:")
+					say("哈...您現在不方便的話, 下次再來好嗎?")
+					say("好像您這麼有能力的人很難找…")
+					return
+				end
+				say("戰魂:")
+				say("您做不到嗎?  那好的…")
+				say("祝您好運")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("戰魂:")
+			say("我早知道您會試試.")
+			say("如果你幫我們剷除"..mob_name(396).."的話, ")
+			say("別的手下我們可以自己解決")	
+			say("祝您好運")
+			set_state(hunt_eunjung)
+
+		end	
+
+		when __TARGET__.target.click or
+			11004.chat."哈哈~ 這出現了大事" with pc.level >= 20 begin
+			target.delete("__TARGET__")
+
+
+			say("戰魂 :")
+			say("哈哈~ 這出現了大事, ")
+			say("以前你幫我們剷除白蓮黨的白蓮魅影")
+			say("但是白蓮黨的行動還是沒有停止")
+			say("看上去比以前更嚴重.")
+			say("")
+			wait()
+
+			say("戰魂 :")
+			say("根據資料除了白蓮黨的白蓮魅影以外,")
+			say("由"..mob_name(396).."統領著.")
+			say("白蓮魅影被剷除之後, 他們要報仇")
+			say("所以他們的行動開始越來越嚴重.")
+			say("")
+			wait()
+
+			say("戰魂 :")
+			say("為了停止他們的行動我們需要剷除"..mob_name(396)..".")
+			say("出了他其他呢, 不太強的手下")
+			say("......")
+			say("你幫我們剷除白蓮黨的"..mob_name(396)..", 好嗎")
+			say("我們的命運就在你的手上!")
+			say("")
+			local s=select("接受","拒絕")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("戰魂:")
+					say("哈...您現在不方便的話, 下次再來好嗎?")
+					say("好像您這麼有能力的人很難找…")
+					say("")
+					return
+				end
+				say("戰魂:")
+				say("您做不到嗎?  那好的…")
+				say("祝您好運")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("戰魂:")
+			say("我早知道您會試試.")
+			say("如果你幫我們剷除"..mob_name(396).."的話, ")
+			say("別的手下我們可以自己解決")	
+			say("祝您好運")
+			set_state(hunt_eunjung)
+		end
+	end
+	state hunt_eunjung begin
+		when letter begin
+			send_letter("剷除"..mob_name(396).."")
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."剷除"..mob_name(396)..""..locale.NORMAL_COLOR)
+			say("現在去剷除")
+			say("帶來很多麻煩的"..mob_name(396).."")
+			say("")
+		end
+		when 11004.chat."這出現了大事" with pc.level >= 20 begin
+			say("您產除了"..mob_name(396).."嗎? ")
+			local s=select("再試試","放棄")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("戰魂:")
+					say(""..mob_name(396).."是不太簡單的對手…")
+					say("您休息後, 再試試嗎?")
+					say("")
+					return
+				end
+				say("戰魂")
+				say("您也想放棄, 它應該很強的對手吧")
+				say("那再見 ~")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("戰魂:")
+			say("您是有真勇氣的人.")
+			say("我們的命運就在你的手上. 求求您!")
+			say("")
+		end
+		
+		when 11000.chat."這出現了大事" with pc.level >= 20 begin
+			say("你產除了"..mob_name(396).."嗎?")
+			local s=select("再試試","放棄")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("戰魂:")
+					say(""..mob_name(396).."是不太簡單的對手…")
+					say("您休息後, 再試試嗎?")
+					say("")
+					return
+				end
+				say("戰魂")
+				say("您也想放棄, 它應該很強的對手吧")
+				say("那再見 ~")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("戰魂:")
+			say("您是有真勇氣的人.")
+			say("我們的命運就在你的手上. 求求您!")
+			say("")
+		end
+
+		when 11002.chat."這出現了大事" with pc.level >= 20 begin
+			say("你產除了"..mob_name(396).."嗎?")
+			local s=select("再試試","放棄")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("戰魂:")
+					say(""..mob_name(396).."是不太簡單的對手…")
+					say("您休息後, 再試試嗎?")
+					say("")
+					return
+				end
+				say("戰魂")
+				say("您也想放棄, 它應該很強的對手吧")
+				say("那再見 ~")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("戰魂:")
+			say("您是有真勇氣的人.")
+			say("我們的命運就在你的手上. 求求您!")
+			say("")
+		end
+
+	
+	
+		when 396.kill begin
+			set_state(hunt_reward)
+		end
+	end
+
+	state hunt_reward begin
+		when letter begin
+			send_letter("剷除完成"..mob_name(396).."")
+		end
+		
+		when  letter begin
+			local vnum=0
+
+			if pc.get_empire() == 1 then
+				vnum=11000
+			elseif pc.get_empire() == 2 then
+				vnum=11002
+			elseif pc.get_empire() == 3 then
+				vnum=11004
+			end
+
+			local v = find_npc_by_vnum(vnum)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "剷除"..mob_name(396).."結果報告")
+			end
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."剷除"..mob_name(396)..""..locale.NORMAL_COLOR)
+			say("回去找戰魂之後")
+			say("報告他關於"..mob_name(396).."的事情")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			11000.chat."你做的真好" begin
+			target.delete("__TARGET__")
+			say("戰魂 :")
+			say("你做的真好, 非常好啊!")
+			say("你的能力是我想像之上,")
+			say("我們不敢剷除白蓮黨的首領")
+			say("你只有一個人就可以剷除2個.")
+			say("")
+			wait()
+
+			say("戰魂 :")
+			say("我真是很佩服你.")
+			say("你太辛苦了, 所以我們準備了一些報酬. ")
+			say("我現在給你將來也努力保護城市的和平.")
+			say("你是我們的英雄!")
+			say("")
+
+			pc.give_exp2(150000)
+			 set_quest_state("levelup","run")
+			pc.change_money(25000)
+			pc.give_item2("30017", 1)
+
+			say_reward("獲得經驗值 150000.")
+			say_reward("獲得金錢 25000 兩.")
+			say_reward("獲得 簪子.")
+			say("")
+
+			set_state(__COMPLETE__)
+		end
+
+		when __TARGET__.target.click or
+			11002.chat."你做的真好" begin
+			target.delete("__TARGET__")
+			say("戰魂 :")
+			say("你做的真好, 非常好啊!")
+			say("你的能力是我想像之上,")
+			say("我們不敢剷除白蓮黨的首領")
+			say("你只有一個人就可以剷除2個.")
+			say("")
+			wait()
+
+			say("戰魂 :")
+			say("我真是很佩服你.")
+			say("你太辛苦了, 所以我們準備了一些報酬. ")
+			say("我現在給你將來也努力保護城市的和平.")
+			say("你是我們的英雄!")
+			say("")
+
+			pc.give_exp2(150000)
+			set_quest_state("levelup","run")
+			pc.change_money(25000)
+			pc.give_item2("30017", 1)
+
+			say_reward("獲得經驗值 150000.")
+			say_reward("獲得金錢 25000 兩.")
+			say_reward("獲得 簪子.")
+			say("")
+
+			set_state(__COMPLETE__)
+		end
+
+		when __TARGET__.target.click or
+			11004.chat."你做的真好" begin
+			target.delete("__TARGET__")
+			say("戰魂 :")
+			say("你做的真好, 非常好啊!")
+			say("你的能力是我想像之上,")
+			say("我們不敢剷除白蓮黨的首領")
+			say("你只有一個人就可以剷除2個.")
+			say("")
+			wait()
+
+			say("戰魂 :")
+			say("我真是很佩服你.")
+			say("你太辛苦了, 所以我們準備了一些報酬. ")
+			say("我現在給你將來也努力保護城市的和平.")
+			say("你是我們的英雄!")
+			say("")
+
+			pc.give_exp2(150000)
+			set_quest_state("levelup","run")
+			pc.change_money(25000)
+			pc.give_item2("30017", 1)
+
+			say_reward("獲得經驗值 150000.")
+			say_reward("獲得金錢 25000 兩.")
+			say_reward("獲得 簪子.")
+			say("")
+			
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+	end
+end

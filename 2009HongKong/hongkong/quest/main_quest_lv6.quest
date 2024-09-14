@@ -1,0 +1,210 @@
+quest main_quest_lv6 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup  or enter with pc.get_level() >= 6 begin
+			setstate( gototeacher )		
+		end
+	end
+	state gototeacher begin
+		when letter begin
+			local v=find_npc_by_vnum(20354)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "王鐵匠的要求")
+			end
+		end
+		when letter begin
+			send_letter("王鐵匠的要求1")
+		end
+		when button or info begin
+			say_title("王鐵匠的要求1")
+			---                                                   l
+			say("請你去找新兵教官.")
+			say("看上去他收到了王鐵匠的要求.")
+			say("任務完成後可以獲得 金錢, 經驗值, ")
+			say("灰狼的毛+ ")
+			say_item_vnum(30070)
+			say("")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say_title("王鐵匠的要求1")
+			---                                                   l
+			say("新兵教官:")
+			say("初心者你過來這裡吧")
+			say("不要在城市裡走來走去")
+			say("你需要多些修煉")
+			say("然後你才可以繼續生存!")
+			say("")
+			wait()
+			say("新兵教官:")
+			say("去找王鐵匠.")
+			say("剛才王鐵匠問我")
+			say("他需要處理有些事情")
+			say("王鐵匠這個人的性格很著急")
+			say("快點去找他吧!" )
+			say("")	
+			wait()
+			say_reward("任務完成後可以獲得報酬 ")
+			say_reward("經驗值".."1300" )
+			say_reward("物品 "..item_name(30070))
+			say_item_vnum(30070)
+			say("")
+
+			set_state( gotosmith )
+		end
+	end
+
+
+	state gotosmith begin
+		when letter begin
+			local v=find_npc_by_vnum(20016)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找王鐵匠")
+			end
+		end
+		when letter begin
+			send_letter("王鐵匠的要求1")
+		end
+		when button or info begin
+			say_title("王鐵匠的要求1")
+			---                                                   l
+			say("聽新兵教官的話, 去找王鐵匠")
+			say("幫他的忙")
+			say("")
+		end
+
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say("王鐵匠:")
+			---                                                   l
+			say("你是誰阿!")
+			say("我現在很忙不要來煩我!")
+			say("教官阿! 他叫你來找我嗎?")
+			say("看上去你是新來的, 你可以做得到嗎?")
+			say("可以啦~ 這不是很難的事情, 你快點去做吧.")
+			say("")
+			wait()
+			say("王鐵匠:")
+			say("其實倉庫老人應該給我豬鼻子")
+			say("他什麼消息也沒有.")
+			say("你去找倉庫老人, 拿豬鼻子給我吧.!")
+			say_item_vnum(30003)
+			say("")
+			set_state( gotowarehousekeeper )
+
+		end
+	end
+	state gotowarehousekeeper begin
+		when letter begin
+			local v=find_npc_by_vnum(9005)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找倉庫老人")
+			end
+		end
+		when letter begin
+			send_letter("請你去找倉庫老人")
+		end
+		when button or info begin
+			say_title("請你去找倉庫老人")
+			---                                                   l
+			say("聽新兵教官的話,")
+			say("去找王鐵匠")
+			say("他要求把豬鼻子從倉庫老人拿過來")
+			say_item_vnum(30003)
+			say("")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say("倉庫老人:")
+			---                                                   l
+			say("歡迎光臨, 我是這個城市倉庫管理員.")
+			say("如果你有太多東西的話")
+			say("你可以使用倉庫, 阿~")
+			say("")
+			wait()
+			say("你今天來這裡不是因為倉庫, 而是因為豬鼻子")
+			say("而是因為豬鼻子.")
+			say_item_vnum(30003)
+			say("不好意思因為我老了")
+			say("很多事情都忘記了哈哈哈.")
+			say("我給你豬鼻子快點給王鐵匠.")
+			say("再見.")
+			set_state( gotosmith2 )
+		end
+	end
+	state gotosmith2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20016)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找王鐵匠")
+			end
+		end
+		when letter begin
+			send_letter("回去找王鐵匠")
+		end
+		when button or info begin
+			say_title("回去找王鐵匠")
+			---                                                   l
+			say("從倉庫老人拿到的豬鼻子")
+			say("交還給王鐵匠.")
+			say_item_vnum(30003)
+			say("")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say("王鐵匠:" )
+			---                                                   l
+			say("比我的想像你來的快啊")
+			say("好啊好啊, 你做得好.")
+			say("我告訴你一件好的事情.")
+			say("")
+			wait()
+			say("王鐵匠:" )
+			say("你知道什麼是製煉嗎?")
+			say("你是新來的所以你不太清楚吧")
+			say("如果你給我你的裝備和付錢的話")
+			say("我會幫你製煉你的裝備")
+			say("然後你的裝備會變強一些.")
+			say("")
+			wait()
+			say("王鐵匠:" )
+			say("到+3的時候只需要付錢")
+			say("但是從+4每個物品都需要額外的物品協助" )
+			say("現在你拿過來的是豬鼻子")
+			say("就是初級製煉需要的物品")
+			say("但是製煉中會破壞")
+			say("所以要小心.")
+			say("你想製煉物品的話, 隨時來找我吧")
+			say("我會幫你做很好的武器!")
+			say("")	
+			wait()
+			say_title("報酬")
+			say_reward("經驗值 ".." 1300" )
+			say_reward("物品 "..item_name(30070))
+			say_item_vnum(30070)
+			say("")
+
+			pc.give_exp2(1300)
+			set_quest_state("levelup","run")
+			pc.give_item2(30070 , 1) 
+
+			clear_letter()
+			set_state( __COMPLETE__ )
+			set_quest_state("main_quest_lv7", "run")
+
+		end
+	end
+	state __COMPLETE__ begin
+	end
+
+end
+

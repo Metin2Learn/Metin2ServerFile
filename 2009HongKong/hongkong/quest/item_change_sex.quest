@@ -1,0 +1,113 @@
+quest item_change_sex begin
+	state start begin
+		when 71048.use begin 
+			if pc.get_level() < 50 then 
+				say_title("無法使用轉性秘笈！")
+				say_reward("只有50等級或以上角色才能轉換性別。")
+				say("")
+				say("您的等級太低，仍未能轉換性別。")
+				say("請提升您的經驗值至50等級，然後再作嘗試。")
+				say("")
+				return;
+			end
+			
+			if pc.is_engaged() then
+				say_title("無法使用轉性秘笈！")
+				say_reward("只有未婚的角色才能轉換性別。")
+				say("")
+
+				----"12345678901234567890123456789012345678901234567890"|
+				say("若您正在結婚，請於婚禮結束後離婚才轉換性別。")
+				say("")
+				return;
+			end
+
+			if pc.is_married() then
+				say_title("無法使用轉性秘笈！")
+				say_reward("只有未婚的角色才能轉換性別。")
+				say("")
+
+				----"12345678901234567890123456789012345678901234567890"|
+				say("若您已經結婚，請先離婚才轉換性別。")
+				say("")
+				return;
+			end
+
+			if pc.is_polymorphed() then
+				say_title("無法使用轉性秘笈！")
+				say_reward("只有未幻化的角色才能轉換性別。")
+				say("")
+
+				say("請先解除幻化狀態才轉換性別。")
+				say("")
+				return
+			end
+
+			if get_time() < pc.getqf("next_time") then
+				say_title("無法使用轉性秘笈！")
+				say_reward("轉性秘笈只能每三天使用一次。")
+				say("")	
+				----"12345678901234567890123456789012345678901234567890"|
+				say("下次使用時間：")
+				say("")
+
+				if pc.is_gm() then
+					say(string.format("    %s", time_to_str(pc.getqf("next_time"))))
+					say("")
+					say("GM可以為了測試而馬上重新設定時間。")
+					local s = select("設定", "不設定")
+					if s == 1 then
+						say("轉換性別時間已經初始化")
+						pc.setqf("next_time", 0)
+					end
+				end
+				return;
+
+			end
+
+			say("轉性秘笈：")
+			say("轉性秘笈是改變您的性別的秘笈。")
+			say("")
+			say("使用後，會改變您的性別。")
+			say("改變後的性別在三天內都不能再改變。")
+			wait()
+
+			say("轉性秘笈：")
+			say("而使用轉性秘笈之後，您必須重新登入遊戲，")
+			say("才會變成新的性別。")
+			say("現在您要作出抉擇。")
+			say("是否要放棄現有的性別，然後轉換成另一性別？")
+			say("")
+			local s=select(
+				"我要轉換性別。",
+				"我不要轉換性別。")
+			if 1==s then
+				say("轉性秘笈：")
+				say("您擁有的所有武功和知識都會保留，")
+				say("改變的只是您的身體。")
+				say("")
+				say_reward("重新登入遊戲，新的性別便會生效。")
+				say("")
+
+				pc.remove_item("71048",1)
+				pc.setqf("next_time", get_time() + 86400 * 3)
+
+				pc.change_sex()
+
+				local m_sex = pc.get_sex()
+
+				if m_sex == 0 then
+				    char_log(0, "CHANGE_SEX", "F -> M")
+				else
+				    char_log(0, "CHANGE_SEX", "M -> F")
+				end
+
+			elseif 2==s then
+				say("仍在猶豫的話，還是不轉換比較好。")
+			end
+		end
+	end
+end		
+
+
+

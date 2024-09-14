@@ -1,0 +1,224 @@
+quest deliver_potion_to_fishman begin
+	state case_start begin
+		when 9005.chat."收到任務" with number(1, 10)==1 and pc.level>=5 and pc.level<=8 begin
+			say("哎呀~ ")
+			say("他怎麼可以忘記帶呢...")
+			local b=select("聽取對話", "不理會他")
+			if 1==b then
+				say("每次漁夫去釣魚的時候都回帶3個血瓶")
+				say("身上帶有紅色的東西的話.")
+				say("這樣可以保護人們阻擋災難. ")
+				say("剛剛漁夫[民先生]過來倉庫忘記帶血瓶")
+				say("如果你有空的話, 可以幫我")
+				say("交給他.")
+				say("")
+				local b=select("同意", "拒絕")
+				if 1==b then
+					pc.give_item2("27002", 3)
+					setstate(deliver)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state deliver begin
+		when letter begin
+			local v=find_npc_by_vnum(9009)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("去找漁夫")
+			q.set_title("去找漁夫")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 去找漁夫"..locale.NORMAL_COLOR)
+			say("去找漁夫")
+			say("將3個血瓶交給他.")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."去找漁夫"..locale.NORMAL_COLOR)
+			say("去找漁夫")
+			say("將3個血瓶交給他.")
+		end
+		when __TARGET__.target.click with pc.countitem("27002")<3 begin
+			say("我一直在找, 但是找不到血瓶")
+			say("我明明記得早上已經把血瓶放到身上了...")
+		end
+		when __TARGET__.target.click with pc.countitem("27002")>=3 begin
+			target.delete("__TARGET__")
+			say("我一直在找, 但是找不到血瓶")
+			say("我明明記得早上已經把血瓶放到身上了...")
+			say("")
+			say("你來這裡為了倉庫老人的委託")
+			say("阿! 我忘記帶我的血瓶,")
+			say("我很快就要出海")
+			say("時間快要到了,謝謝你.")
+			say("我怎麼表示我的感謝呢...")
+			wait()
+			say("還好我現在有燒鯽魚, 我會給你")
+			say("什麼? 你想知道我的後面這個是什麼嗎?")
+			say("昨天我釣魚的時候拿到了一個被水草抱的武器, ")
+			say("如果你喜歡的話, 你可以拿回去")
+			say("好的")
+			local b=select("收到一個被水草抱的武器", "燒鯽魚")
+			if 1==b then
+				setstate(reward_weapon)
+			elseif 2==b then
+				setstate(reward_fish)
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state reward_weapon begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("獲得掉在水里的武器 ")
+			q.set_title("獲得掉在水里的武器 ")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 獲得掉在水里的武器 "..locale.NORMAL_COLOR)
+			say("您收到漁夫釣魚時拿到的武器")
+			say("把水草清理乾淨後, 看一看武器")
+			say("好像還可以使用的武器  ")
+			say("")
+			if pc.job==0 then
+				local r=number(1, 10)
+				if r==1 then
+					pc.give_item2("00011", 1)
+				elseif r==2 then
+					pc.give_item2("00021", 1)
+				elseif r==3 then
+					pc.give_item2("00031", 1)
+				elseif r==4 then
+					pc.give_item2("00041", 1)
+				elseif r==5 then
+					pc.give_item2("00051", 1)
+				elseif r==6 then
+					pc.give_item2("03001", 1)
+				elseif r==7 then
+					pc.give_item2("03011", 1)
+				elseif r==8 then
+					pc.give_item2("03021", 1)
+				elseif r==9 then
+					pc.give_item2("03031", 1)
+				elseif r==10 then
+					pc.give_item2("03041", 1)
+				end
+			elseif pc.job==1 then
+				local r=number(1, 15)
+				if r==1 then
+					pc.give_item2("00011", 1)
+				elseif r==2 then
+					pc.give_item2("00021", 1)
+				elseif r==3 then
+					pc.give_item2("00031", 1)
+				elseif r==4 then
+					pc.give_item2("00041", 1)
+				elseif r==5 then
+					pc.give_item2("00051", 1)
+				elseif r==6 then
+					pc.give_item2("01001", 1)
+				elseif r==7 then
+					pc.give_item2("04001", 1)
+				elseif r==8 then
+					pc.give_item2("01011", 1)
+				elseif r==9 then
+					pc.give_item2("04011", 1)
+				elseif r==10 then
+					pc.give_item2("01021", 1)
+				elseif r==11 then
+					pc.give_item2("02001", 1)
+				elseif r==12 then
+					pc.give_item2("02011", 1)
+				elseif r==13 then
+					pc.give_item2("02021", 1)
+				elseif r==14 then
+					pc.give_item2("02031", 1)
+				elseif r==15 then
+					pc.give_item2("2041", 1)
+				end
+			elseif pc.job==2 then
+				local r=number(1, 11)
+				if r==1 then
+					pc.give_item2("00011", 1)
+				elseif r==2 then
+					pc.give_item2("00021", 1)
+				elseif r==3 then
+					pc.give_item2("00031", 1)
+				elseif r==4 then
+					pc.give_item2("00041", 1)
+				elseif r==5 then
+					pc.give_item2("00051", 1)
+				elseif r==6 then
+					pc.give_item2("00012", 1)
+				elseif r==7 then
+					pc.give_item2("00022", 1)
+				elseif r==8 then
+					pc.give_item2("00032", 1)
+				elseif r==9 then
+					pc.give_item2("00042", 1)
+				elseif r==10 then
+					pc.give_item2("00052", 1)
+				elseif r==11 then
+					pc.give_item2("00051", 1)
+				end
+			elseif pc.job==3 then
+				local r=number(1, 8)
+				if r==1 then
+					pc.give_item2("05001", 1)
+				elseif r==2 then
+					pc.give_item2("05011", 1)
+				elseif r==3 then
+					pc.give_item2("05021", 1)
+				elseif r==4 then
+					pc.give_item2("07001", 1)
+				elseif r==5 then
+					pc.give_item2("07011", 1)
+				elseif r==6 then
+					pc.give_item2("07021", 1)
+				elseif r==7 then
+					pc.give_item2("07031", 1)
+				elseif r==8 then
+					pc.give_item2("07041", 1)
+				end
+			end
+			setstate(__COMPLETE__)
+			q.done()
+		end
+	end
+	state reward_fish begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("獲得燒鯽魚")
+			q.set_title("獲得燒鯽魚")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 獲得燒鯽魚"..locale.NORMAL_COLOR)
+			say("您收到燒鯽魚")
+			say("燒鯽魚有生命力恢復的效果")
+			say("")
+			say("")
+			pc.give_item2("27863", number(10, 20))
+			setstate(__COMPLETE__)
+			q.done()
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

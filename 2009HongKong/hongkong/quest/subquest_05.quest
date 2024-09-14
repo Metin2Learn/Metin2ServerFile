@@ -1,0 +1,226 @@
+----------------------------------------------------
+-- SUB QUEST
+-- LV 10
+-- 書蟲的請求
+----------------------------------------------------
+
+quest subquest_5 begin
+	state start begin
+		when login or levelup with pc.level >= 10 and pc.level <= 15 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+						
+			local v = find_npc_by_vnum(20023)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "分支任務5 書蟲的請求")
+			end
+		end
+
+				
+		when __TARGET__.target.click or
+			20023.chat."書蟲的請求" with pc.level >= 10 begin
+			target.delete("__TARGET__")
+			say("書蟲 :")
+			say("春眠不覺曉, 處處聞啼鳥...")
+			say("嚇死我了~ 您是誰啊!")
+			say("我在看書的時候千萬不要打擾我!")
+			say("請留步~ 可以過來一下嗎")
+			say("我剛才對您發脾氣了, 很抱歉.")
+			say("我看書的時候, 有些地方不太明白的話,")
+			say("我有點疑惑, 所以對您生氣的事情不好意思.")
+			say("")
+
+			wait()
+
+			say("書蟲 :")
+			say("我正在研究神女所使用的武器: 扇子")
+			say("但是我不太清楚哪種扇子是好的扇子.")
+			say("我沒有辦法研究哪麼所種類的扇子.")
+			say("我覺得對這個部份, 老學究應該很清楚")
+			say("您去找他問問好嗎, 我想知道的扇子的種類就是")
+			say("剎鳳扇, 飄香扇, 玄武扇, 清水扇, 逍遙扇.")
+			say("對老學究問清楚這些扇子攻擊力高低的順序.")
+			say("")
+			local s=select("接受.","拒絕.")
+			if 2==s then
+				say("您想放棄任務嗎? ")
+				local a=select("是","不是")
+					if  2==a then
+						say("書蟲:")
+						say("阿 ~ 怎麼解決疑惑呢 ~")
+						say("知道了~ 下次再來吧. ")
+						return
+					end
+				say("書蟲:")
+				say("阿 ~ 怎麼解決疑惑呢 ~")
+				say("知道了~ 路上小心. ")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("書蟲:")
+			say("謝謝了. 謝謝 ~")
+			say("我在這裡一邊看書一邊等您. ")
+			say("")
+			set_state(ask_to)
+
+		end
+	end
+
+	state ask_to begin
+		when info or button begin
+			say(locale.NOTICE_COLOR.." 想知道…"..locale.NORMAL_COLOR)
+			say("去找老學究問問扇子攻擊力高低的順序.")
+			say("")
+		end
+
+		when letter begin
+			send_letter("去找老學究問問扇子攻擊力高低的順序.")
+
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v," 去找老學究問問")
+			end
+
+		end
+
+		when __TARGET__.target.click or
+			20011.chat." 高級扇子的順序" begin
+			target.delete("__TARGET__")
+			say("老學究 :")
+			say("嗯~ 有什麼事情嗎?")
+			say("阿~ 書蟲叫您過來找我?")
+			say("唉呀~ 他天天一直看書,")
+			say("但是我感覺他沒有什麼特別的知識.")
+			say("每次打擾我~ 唉~.")
+			say("看看有什麼問題?")
+			say("")
+			wait()
+
+			say("扇子的攻擊力順序那是很簡單的事情.")
+			say("書蟲想知道的順序就是")
+			say("剎鳳扇 - 飄香扇 - 玄武扇 - 清水扇 - 逍遙扇.")
+			say("這應該夠了吧?")
+			say("")
+
+			set_state(return_to)
+		end
+	end
+
+	state return_to begin
+		when letter begin
+			send_letter("回去找書蟲告訴他答案.")
+		 
+			local v=find_npc_by_vnum(20023)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v," 回去找書蟲")
+			end
+		
+		end
+		
+		when info or button begin
+			say(locale.NOTICE_COLOR.." 想知道…"..locale.NORMAL_COLOR)
+			say("回去找書蟲告訴他答案.")
+			say("")
+		end
+
+		when __TARGET__.target.click or
+			20023.chat." 扇子的順序…" begin
+			target.delete("__TARGET__")
+			say("書蟲 :")
+			say("嗯~ 老學究給您答案了嗎?")
+			say("")
+
+			local s = select(
+							"清水扇 - 飄香扇 - 玄武扇 - 剎鳳扇 - 逍遙扇",
+							"剎鳳扇 - 飄香扇 - 玄武扇 - 清水扇 - 逍遙扇",
+							"剎鳳扇 - 逍遙扇 - 玄武扇 - 清水扇 - 飄香扇",
+							"阿~ 我忘記了")
+
+
+			if s == 2 then
+				say("書蟲 :")
+				say("謝謝您了.")
+				say("唉呀~ 我現在才可以重新開始研究!")
+				say("謝謝阿~ 謝謝!")
+				say("")
+
+				pc.give_exp2(6000)
+				 set_quest_state("levelup","run")
+				pc.change_money(2000)
+
+				say_reward("獲得經驗值 6000.")
+				say_reward("獲得金錢 2000 兩.")
+				say("")
+				clear_letter()
+				set_state(__COMPLETE__)
+			
+			elseif s==4 then
+				say("書蟲 :")
+				say("您真的忘記了嗎??")
+				say("")
+				local s=select("再試試","放棄.")
+				if 2==s then
+					say("您想放棄任務嗎?")
+					local a=select("是","不是")
+						if  2==a then
+							say("書蟲:")
+							say("知道了! 您好像很忙.")
+							say("下次再來吧.")
+							return
+						end	
+					say("書蟲:")
+					say("阿 ~ 誰幫我解決這個疑惑呢 …")
+					say("那再見了.")
+					say("")
+					set_state(__GIVEUP__)
+				end
+				say("書蟲:")
+				say("謝謝了, 謝謝.")
+				say("您再辛苦吧 ! ")
+				say("")
+				set_state(ask_to)
+		
+		
+
+			else
+				say("書蟲 :")
+				say("嗯 ~ 因該不對吧… 您幫我在去問問好嗎? ")
+				say("")
+				local s=select("好的, 再試試.","放棄.")
+				if 2==s then
+					say("您想放棄任務嗎?")
+					local a=select("是","不是")
+						if  2==a then
+							say("書蟲:")
+							say("知道了! 您好像很忙")
+							say("下次再來吧.")
+							return
+						end	
+					say("書蟲:")
+					say("阿 ~ 誰幫我解決這個疑惑呢 …")
+					say("那再見了.")
+					say("")
+					set_state(__GIVEUP__)
+				end
+				say("書蟲:")
+				say("謝謝了, 謝謝.")
+				say("您再辛苦吧.")
+				say("")
+				set_state(ask_to)
+			end
+		end
+	end
+ 
+	state __GIVEUP__ begin
+	end	
+	state __COMPLETE__ begin
+	end
+end

@@ -1,0 +1,547 @@
+quest horse_levelup begin
+	state training1 begin
+		when letter begin
+			q.set_counter("剩餘黑風左護法數量", 5-pc.getqf("kill_count"))
+		end
+		when 492.kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+			q.set_counter("剩餘黑風左護法數量", 5-pc.getqf("kill_count"))
+		end
+		when enter begin
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			q.done()
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("剷除黑風左護法")
+			q.set_title("剷除黑風左護法")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."剷除黑風左護法"..locale.NORMAL_COLOR)
+			say("騎著馬剷除黑風左護法")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."剷除黑風左護法"..locale.NORMAL_COLOR)
+			say("騎著馬剷除黑風左護法")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when 492.kill with pc.getf("horse_levelup","kill_count") >= 5 begin
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training2 begin
+		when letter begin
+			q.set_counter("剩餘黑風寨主數量", 5-pc.getqf("kill_count"))
+		end
+		when 494.kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+			q.set_counter("剩餘黑風寨主數量", 5-pc.getqf("kill_count"))
+		end
+		when enter begin
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			q.done()
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("剷除黑風寨主")
+			q.set_title("剷除黑風寨主")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."剷除黑風寨主"..locale.NORMAL_COLOR)
+			say("騎著馬剷除黑風寨主")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."剷除黑風寨主"..locale.NORMAL_COLOR)
+			say("騎著馬剷除黑風寨主")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when 494.kill with pc.getf("horse_levelup","kill_count") >= 5 begin
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training3 begin
+		when letter begin
+			q.set_counter("剩餘鬼族將軍數量", 10-pc.getqf("kill_count"))
+		end
+		when 635.kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+			q.set_counter("剩餘鬼族將軍數量", 10-pc.getqf("kill_count"))
+		end
+		when enter begin
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			q.done()
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("剷除鬼族將軍")
+			q.set_title("剷除鬼族將軍")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."剷除鬼族將軍"..locale.NORMAL_COLOR)
+			say("騎著馬剷除鬼族將軍")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."剷除鬼族將軍"..locale.NORMAL_COLOR)
+			say("騎著馬剷除鬼族將軍")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when 635.kill with pc.getf("horse_levelup","kill_count") >= 10 begin
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training4 begin
+		when letter begin
+			q.set_counter("剩餘鬼族屠刀數量", 10-pc.getqf("kill_count"))
+		end
+		when 636.kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+			q.set_counter("剩餘鬼族屠刀數量", 10-pc.getqf("kill_count"))
+		end
+		when enter begin
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			q.done()
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("剷除鬼族屠刀")
+			q.set_title("剷除鬼族屠刀")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."剷除鬼族屠刀"..locale.NORMAL_COLOR)
+			say("騎著馬剷除鬼族屠刀")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."剷除鬼族屠刀"..locale.NORMAL_COLOR)
+			say("騎著馬剷除鬼族屠刀")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when 636.kill with pc.getf("horse_levelup","kill_count") >= 10 begin
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training5 begin
+		when letter begin
+			q.set_counter("剩餘秘宗困囚靈數量", 10-pc.getqf("kill_count"))
+		end
+		when 706.kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+			q.set_counter("剩餘秘宗困囚靈數量", 10-pc.getqf("kill_count"))
+		end
+		when enter begin
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			q.done()
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("剷除秘宗困囚靈")
+			q.set_title("剷除秘宗困囚靈")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."剷除秘宗困囚靈"..locale.NORMAL_COLOR)
+			say("騎著馬剷除秘宗困囚靈")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."剷除秘宗困囚靈"..locale.NORMAL_COLOR)
+			say("騎著馬剷除秘宗困囚靈")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when 706.kill with pc.getf("horse_levelup","kill_count") >= 10 begin
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training6 begin
+		when letter begin
+			q.set_counter("剩餘狼毒蜘蛛數量", 10-pc.getqf("kill_count"))
+		end
+		when 2034.kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+			q.set_counter("剩餘狼毒蜘蛛數量", 10-pc.getqf("kill_count"))
+		end
+		when enter begin
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			q.done()
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("剷除狼毒蜘蛛")
+			q.set_title("剷除狼毒蜘蛛")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."剷除狼毒蜘蛛"..locale.NORMAL_COLOR)
+			say("騎著馬剷除狼毒蜘蛛")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."剷除狼毒蜘蛛"..locale.NORMAL_COLOR)
+			say("騎著馬剷除狼毒蜘蛛")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when 2034.kill with pc.getf("horse_levelup","kill_count") >= 10 begin
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training7 begin
+		when letter begin
+			q.set_counter("剩餘裁決者數量", 20-pc.getqf("kill_count"))
+		end
+		when 2108.kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+			q.set_counter("剩餘裁決者數量", 20-pc.getqf("kill_count"))
+		end
+		when enter begin
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			q.done()
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("剷除裁決者")
+			q.set_title("剷除裁決者")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."剷除裁決者"..locale.NORMAL_COLOR)
+			say("騎著馬剷除裁決者")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."剷除裁決者"..locale.NORMAL_COLOR)
+			say("騎著馬剷除裁決者")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when 2108.kill with pc.getf("horse_levelup","kill_count") >= 20 begin
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training8 begin
+		when letter begin
+			q.set_counter("剩餘冰雕魔數量", 10-pc.getqf("kill_count"))
+		end
+		when 1107.kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+			q.set_counter("剩餘冰雕魔數量", 10-pc.getqf("kill_count"))
+		end
+		when enter begin
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			q.done()
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("剷除冰雕魔")
+			q.set_title("剷除冰雕魔")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."剷除冰雕魔"..locale.NORMAL_COLOR)
+			say("騎著馬剷除冰雕魔")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."剷除冰雕魔"..locale.NORMAL_COLOR)
+			say("騎著馬剷除冰雕魔")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when 1107.kill with pc.getf("horse_levelup","kill_count") >= 10 begin
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training9 begin
+		when letter begin
+			q.set_counter("剩餘焰赤虎數量", 20-pc.getqf("kill_count"))
+		end
+		when 2203.kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+			q.set_counter("剩餘焰赤虎數量", 20-pc.getqf("kill_count"))
+		end
+		when enter begin
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			q.done()
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("剷除焰赤虎")
+			q.set_title("剷除焰赤虎")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."剷除焰赤虎"..locale.NORMAL_COLOR)
+			say("騎著馬剷除焰赤虎")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."剷除焰赤虎"..locale.NORMAL_COLOR)
+			say("騎著馬剷除焰赤虎")
+			say("戰鬥過程中下馬，任務將失敗")
+			say("")
+		end
+		when 2203.kill with pc.getf("horse_levelup","kill_count") >= 20 begin
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state start begin
+		when 20349.chat."想修練騎乘戰鬥" with horse.get_grade()==2 begin
+			if horse.get_level()==20 then
+				say("你現在的騎乘戰鬥已經很熟練了")
+				say("不用再修練，祝賀你")
+				say("趕緊升級至良駒吧")
+				say("")
+			elseif pc.countitem("50050")<1 then
+				say("修練是需要神駿魂的")
+				say("結果會記錄在神駿魂")
+				say("")
+				setstate(need_item50050)
+			elseif get_time()<pc.getqf("next_time") then
+				say("馬匹也是需要休息的")
+				say("明天再來吧")
+				say("")
+			elseif horse.get_stamina_pct()<=10 then
+				say("看你的馬匹已經很疲憊了")
+				say("讓它休息一會再繼續吧")
+				say("")
+			elseif horse.get_health_pct()<=10 then
+				say("看你的馬匹在餓肚子")
+				say("先添飽它的肚子再繼續吧")
+				say("")
+			elseif horse.is_riding()==0 then
+				say("騎著馬跟我談談")
+			elseif (horse.get_level()>=11 and horse.get_level()<=19) then
+				say("騎乘戰鬥可不像騎著馬亂跑那麼簡單")
+				say("要練成騎乘戰鬥，沒有什麼捷徑")
+				say("要勤奮地騎著馬殺怪才可以")
+				say("來，開始吧。")
+				say("只要下馬，就認為放棄此次修練機會")
+				say("小心謹慎哦，還有，神駿魂要隨身攜帶")
+				say("那裏記載著您每天的成果")
+				if is_test_server() then
+					pc.setqf("next_time", get_time()+10)
+				else
+					pc.setqf("next_time", get_time()+number(16, 32)*60*60)
+				end
+				if horse.get_level()==11 then
+					setstate(training1)
+				elseif horse.get_level()==12 then
+					setstate(training2)
+				elseif horse.get_level()==13 then
+					setstate(training3)
+				elseif horse.get_level()==14 then
+					setstate(training4)
+				elseif horse.get_level()==15 then
+					setstate(training5)
+				elseif horse.get_level()==16 then
+					setstate(training6)
+				elseif horse.get_level()==17 then
+					setstate(training7)
+				elseif horse.get_level()==18 then
+					setstate(training8)
+				elseif horse.get_level()==19 then
+					setstate(training9)
+				end
+			end
+		end
+	end
+	state need_item50050 begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("拿神駿魂過來")
+			q.set_title("拿神駿魂過來")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."拿神駿魂過來"..locale.NORMAL_COLOR)
+			say("接受騎乘戰鬥任務")
+			say("是需要神駿魂的，可以在獼猴地牢獲得")
+			setstate(start)
+			q.done()
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."拿神駿魂過來"..locale.NORMAL_COLOR)
+			say("接受騎乘戰鬥任務")
+			say("是需要神駿魂的，可以在獼猴地牢獲得")
+			setstate(start)
+			q.done()
+		end
+	end
+	state failure begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎乘戰鬥任務失敗")
+			q.set_title("騎乘戰鬥任務失敗")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎乘戰鬥任務失敗"..locale.NORMAL_COLOR)
+			say("太遺憾了，在任務過程中發現您想作弊")
+			say("此次任務算失敗")
+			setstate(start)
+			q.done()
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎乘戰鬥任務失敗"..locale.NORMAL_COLOR)
+			say("太遺憾了，在任務過程中發現您想作弊")
+			say("此次任務算失敗")
+			setstate(start)
+			q.done()
+		end
+	end
+	state report begin
+		when letter begin
+			local v=find_npc_by_vnum(20349)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("伯樂的飛鴿傳書")
+			q.set_title("伯樂的飛鴿傳書")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."伯樂的飛鴿傳書"..locale.NORMAL_COLOR)
+			say("回到我這裏來可以")
+			say("查看此次任務是否成功")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."伯樂的飛鴿傳書"..locale.NORMAL_COLOR)
+			say("回到我這裏來可以")
+			say("查看此次任務是否成功")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say("怎麼樣，還順利吧")
+			say("明天將有新的任務等著你")
+			say("今天的修練結果已經給您寫到神駿魂上了")
+			say("請再確認一下")
+			setstate(reward)
+			q.done()
+		end
+	end
+	state reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("查看騎乘戰鬥結果")
+			q.set_title("查看騎乘戰鬥結果")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."查看騎乘戰鬥結果"..locale.NORMAL_COLOR)
+			if horse.get_level()<=10 then
+				say("您的馬匹太小，無法修練騎乘戰鬥")
+			elseif horse.get_level()>=20 then
+				say("您的馬匹現在可以升級成良駒了")
+			elseif (horse.get_level()>=11 and horse.get_level()<=19) then
+				local s=number(1, 2)
+				if 1>=s then -- 50.00% (1/2)
+					say("很遺憾騎乘戰鬥修練失敗")
+					say("")
+					say("可以到伯樂那裏重新接受任務")
+					pc.setqf("next_time", 0)
+				elseif 2>=s then -- 50.00% (1/2)
+					say("修練騎乘戰鬥成功")
+					if pc.countitem("50050")>=1 then
+						char_log(0, "HORSE_ADVANCE", "BEGIN")
+						pc.removeitem("50050", 1)
+						char_log(0, "HORSE_ADVANCE", "DEC 50050 1")
+						horse.unride()
+						horse.advance()
+						horse.ride()
+						char_log(0, "HORSE_ADVANCE", "INC horse_advance 1")
+						char_log(0, "HORSE_ADVANCE", "END")
+						say("馬匹已經升級到 "..(horse.get_level()).."等級了")
+						say("")
+						if horse.get_level()==20 then
+							say("到伯樂那裏，可以將馬匹升級至成年馬")
+							say("祝賀你")
+							pc.setqf("next_time", 0)
+						else
+							say("20級以上的馬匹才可以升級成良駒")
+							say("不要著急哦")
+						end
+					else
+						say("因為沒有神駿魂，無法知道結果")
+					end
+				end
+			end
+			setstate(start)
+			q.done()
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

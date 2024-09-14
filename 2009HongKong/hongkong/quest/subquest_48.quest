@@ -1,0 +1,283 @@
+--------------------------------------------------
+-- SUB QUEST
+-- LV  58
+--見情報人員
+----------------------------------------------------
+
+quest subquest_48  begin
+	state start begin
+		when login or levelup with pc.level >= 58 and pc.level <= 60 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "警備隊長")
+			end
+		end
+
+		when __TARGET__.target.click or
+			20355.chat."他國的間諜"  begin
+			target.delete("__TARGET__")
+			say("警備隊長:")
+			say("最近與他國的關係緊張化")
+			say("情報越來越重要")
+			say("暗中查看對方的陣營並掌握戰力")
+			say("才能提早應對")
+			say("所以我們也向他國派情報人員")
+			say("進行各種各樣的間諜活動.")
+			say("")
+			wait()
+			say("警備隊長:")
+			say("像樂師一樣")
+			say("他們也裝扮成一般人潛入在其他國家.")
+			say("這次要秘密地接近他們")
+			say("收集最近的情報...")
+			say("間諜們為了不受懷疑")
+			say("在離第1城市較遠的地方裝扮成漁夫")
+			say("不要讓敵人發現，去見情報人員吧. ")
+			say("")
+		
+			local r=select("接收", "拒絕")
+			if 2==r then
+				say("放棄任務嗎")
+				local a=select("是" ,"否")
+				if 2==a then
+					say("警備隊長:")
+					say("還沒準備好去其他城市子嗎?")
+					say("下次再來吧")
+					say("")
+					return
+				end
+				say("警備隊長")
+				say("不知道是什麼原因")
+				say("一直都很活躍的你")
+				say("突然拒絕..很是意外..")
+				say("知道了..")
+				say("再見..")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("警備隊長:")
+			say("就是!")
+			say("早知道你會接受")
+			say("回來再見吧")
+			say("")
+			set_state(go_to_otherland)
+				
+		end
+	end
+	state go_to_otherland begin
+		when letter begin
+			send_letter("見情報人員")
+		
+		end
+
+		function is_other_vil() 
+			local empire = pc.get_empire()
+			local map_num= pc.get_map_index()
+
+			local is_village = 0
+
+			if empire == 1 and map_num == 41 then is_village = 1 end
+			if empire == 2 and map_num ==  1 then is_village = 1 end
+			if empire == 3 and map_num == 21 then is_village = 1 end
+			return is_village
+		end
+		
+		when info or button begin
+			local empire = pc.get_empire()
+			
+			if empire==1 then
+				say(locale.NOTICE_COLOR.."尋找他國的間諜"..locale.NORMAL_COLOR)
+				say("")
+				say("在進勞國的平武邑城有")
+				say("裝扮成漁夫的情報人員.")
+				say("他們秘密地收集其他國家的情報.")
+				say("接近情報人員取得")
+				say("對方國家的情報.")
+				say("接到情報後向警備隊長報告")
+				say("")
+		
+			elseif  empire ==2 then  
+				say(locale.NOTICE_COLOR.." 尋找他國的間諜"..locale.NORMAL_COLOR)
+				say("")
+				say("在新受國的永安邑城有")
+				say("裝扮成漁夫的情報人員.")
+				say("他們秘密地收集其他國家的情報.")
+				say("接近情報人員取得")
+				say("對方國家的情報.")
+				say("接到情報後向警備隊長報告")
+				say("")
+	
+			elseif  empire ==3 then  
+				say(locale.NOTICE_COLOR.." 尋找他國的間諜"..locale.NORMAL_COLOR)
+				say("")
+				say("在天調國的潮安邑城有")
+				say("裝扮成漁夫的情報人員.")
+				say("他們秘密地收集其他國家的情報.")
+				say("接近情報人員取得")
+				say("對方國家的情報.")
+				say("接到情報後向警備隊長報告")
+				say("")
+
+			end
+	end
+			
+
+
+		when __TARGET__.target.click or
+			 9009.chat."什麼事?"  with subquest_48.is_other_vil() ==1  begin
+			 target.delete("__TARGET__")
+			 say("漁夫:")
+			 say("來找悠閒釣魚的我什麼事啊?")
+			 say("是啊，是啊....")
+			 say("想到接線人要來了")
+			 say("就是你啊.")
+			 say("為了躲著敵人來到這裡辛苦了.")
+			 say("我也為了不暴露身份")
+			 say("很辛苦.")
+			 say("")
+			 wait()
+			 say("漁夫:")
+			 say("這麼老遠過來了，得馬上給你情報")
+			 say("我們在一起久了")
+			 say("只會引來懷疑，沒有什麼好處.")
+			 say("這是整理的最近情報.")
+			 say("馬上交給警備隊長.")
+			 say("這是我的小禮物，接收吧..")
+			 say("祝你好運")
+			 wait()
+			 say_pc_name()
+			 say("以好奇的心")
+			 say("打開漁夫給的袋子看...")
+			 wait("")
+			 local r=number(1,4)
+			 if 1==r then
+				 say_pc_name()
+				 say("噢~") 
+				 say("是烤鰻魚!")
+				 say("")
+				 say_item_vnum(27870)
+				 say_reward("獲得3條烤鰻魚")
+				 pc.give_item2(27870,3)
+			elseif 2==r then
+				say_pc_name()
+				say("噢~") 
+				say("是烤彩虹魚!")
+				say("")
+				say_item_vnum(27871)
+				say_reward("獲得3條烤彩虹魚")
+				pc.give_item2(27871,3)
+			elseif 3==r then
+				say_pc_name()
+				say("噢~") 
+				say("是烤河豚魚!")
+				say("")
+				 say_item_vnum(27872)
+				say_reward("獲得 3條河豚魚")
+				pc.give_item2(27872,3)
+			elseif 4==r then
+				say_pc_name()
+				say("噢~") 
+				say("烤赤目魚!")
+				say("")
+				say_item_vnum(27873)
+				say_reward("獲得 3條烤赤目魚")
+				pc.give_item2(27873,3)
+			end	
+		set_state(back_to_boss)
+
+		end
+	end
+state back_to_boss begin
+	when letter begin
+		send_letter("回到警備隊長那裡")
+			
+			if subquest_48.is_my_vil()==1  then
+				local v=find_npc_by_vnum(20355)
+				if 0==v then
+				else
+					target.vid("__TARGET__", v, "警備隊長")
+				end
+			end
+
+		end
+		when info or button begin
+			local empire = pc.get_empire()
+			
+			if empire==1 then  --新受
+				say(locale.NOTICE_COLOR.." 尋找他國的間諜"..locale.NORMAL_COLOR)
+				say("從進勞國的平武邑城裝扮成漁夫的")
+				say("情報人員那裡獲得了進勞國的情報")
+				say("現在要回去本國永安邑城")
+				say("向警備隊長報告")
+				say("")
+						
+			elseif  empire ==2 then --–天調
+				say(locale.NOTICE_COLOR.." 尋找他國的間諜"..locale.NORMAL_COLOR)
+				say("從新受國的永安邑城裝扮成漁夫的")
+				say("情報人員那裡獲得了新受國的情報")
+				say("現在要回去本國潮安邑城")
+				say("向警備隊長報告")
+				say("")
+
+			elseif  empire ==3 then  --進勞
+				say(locale.NOTICE_COLOR.." 尋找他國的間諜"..locale.NORMAL_COLOR)
+				say("從天調國的潮安邑城裝扮成漁夫的")
+				say("情報人員那裡獲得了天調國的情報")
+				say("現在要回去本國平武邑城")
+				say("向警備隊長報告")
+				say("")
+			end
+			
+		end
+
+			function is_my_vil() 
+			local empire = pc.get_empire()
+			local map_num= pc.get_map_index()
+
+			local is_village = 0
+
+			if empire == 1 and map_num == 1 then is_village = 1 end
+			if empire == 2 and map_num == 21 then is_village = 1 end
+			if empire == 3 and map_num == 41 then is_village = 1 end
+			return is_village
+		end
+
+
+
+		when __TARGET__.target.click or
+			 20355.chat."平安回來了"  with subquest_48.is_my_vil() ==1 begin
+			 target.delete("__TARGET__")
+			 say("警備隊長:")
+			 say("這就是那個資料啊.")
+			 say("艱難的任務，你辛苦了.")
+		 	 say("現在掌握到的敵人的動向")
+			 say("可以做好應對對策了.")
+			 say("那下次任務之前好好休息吧.")
+			 say("")
+			
+			 say_reward("獲得50000兩")
+			 pc.change_money(50000)
+			 
+			 say_reward("獲得經驗值 5500000")
+		     pc.give_exp2(5500000)
+			 set_quest_state("levelup","run")
+			 clear_letter()
+		    set_state(__COMPLETE__)
+		end
+	end
+	
+	state __GIVEUP__ begin
+	end
+	
+	state __COMPLETE__ begin
+	end
+end
+

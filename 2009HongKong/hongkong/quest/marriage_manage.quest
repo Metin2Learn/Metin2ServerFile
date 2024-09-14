@@ -1,0 +1,702 @@
+quest marriage_manage begin
+	state start begin
+		when oldwoman.chat."我想舉行婚禮" with not pc.is_engaged_or_married() begin
+			if not npc.lock() then
+				say("現在我正在舉行別人的婚禮")
+				say("請您稍後再來找我好嗎?")
+				return
+			end
+			if pc.level < 25 then
+				say("神秘老人:")
+				say("看上去您現在結婚, 時間還太早...")
+				say("您的年紀太小, 所以現在無法取得結婚任務")
+				say("年輕人結婚之後, 會很容易離婚")
+				say("為了不讓年輕人結婚, 所以我決定不舉行年輕人的婚禮, ")
+				say("您還是回去吧, 等您經歷多些事情之後再來吧")
+				say("")
+				say_reward("結婚任務之可以在25級以後才可以進行.")
+				say("")
+				npc.unlock()
+				return
+			end
+
+			local m_ring_num = pc.countitem(70301)
+			local m_has_ring = m_ring_num > 0
+			if not m_has_ring then
+				say("神秘老人:")
+				say("您連定情信物也沒有, 您怎麼結婚呢..")
+				say("")
+				say_item("定情信物", 70301, "")
+				say_reward("為了結婚您必須要擁有定情信物.")
+				say("")
+				npc.unlock()
+
+				return
+			end
+
+			local m_sex = pc.get_sex()
+			if not marriage_manage.is_equip_wedding_dress() then
+				say("神秘老人:")
+				say("您穿這普通的衣服, 怎麼結婚呢?")
+				say("結婚是人生中最大的事情, ")
+				say("您需要講究一下服裝")
+				say("")
+
+				if m_sex==0 then
+					say_item("禮服", marriage_manage.get_wedding_dress(pc.get_job()), "")
+					say_reward("為了結婚您必須穿")
+					say_reward("禮服")
+				else
+					say_item("婚紗", marriage_manage.get_wedding_dress(pc.get_job()), "")
+					say_reward("為了結婚, 您必須穿")
+					say_reward("婚紗")
+				end
+				say("")
+				npc.unlock()
+				return
+			end
+
+			local NEED_MONEY = 1000000
+			if pc.get_money() < NEED_MONEY then
+				say("神秘老人:")
+				say("結婚是人生最大的事情所以需要很多錢.")
+				say("現在您身上帶的錢不夠")
+				say("請您帶了足夠的金錢後再來找我")
+				say("結婚, 人生裏只會有一次, 100萬兩您覺得貴嗎?")
+				say("")
+				say_reward(string.format("結婚費用需要 %d萬兩", NEED_MONEY/10000))
+				say("")
+				npc.unlock()
+				return
+			end
+
+			say("神秘老人:")
+			say("現在您長大了, 所以您可以結婚.")
+			say("成長的好, 您現在要跟誰結婚阿?")
+			say("")
+			say_reward("請輸入對方的名字")
+
+			local sname = input()
+			if sname == "" then
+				say("神秘老人:")
+				say("您太緊張, 不會輸入對方的名字嗎? 請再次輸入")
+				say("")
+				npc.unlock()
+				return
+			end
+
+			local u_vid = find_pc_by_name(sname)
+			local m_vid = pc.get_vid()
+			if u_vid == 0 then
+				say("神秘老人:")
+				say("您怎麼不知道您對象的名字呢...")
+				say("唉唷~ 您快點重新查查您輸入的名字對不對")
+				say("")
+				say_reward(string.format("%s 並不在線", sname))
+				say("")
+				npc.unlock()
+				return
+			end
+
+			if not npc.is_near_vid(u_vid, 10) then
+				say("神秘老人:")
+				say("您的對象必須在您的旁邊")
+				say("我才可以幫您舉行婚禮..")
+				say("您一定要叫您的對象站在您的身邊~")
+				say("")
+				say_reward(string.format("%s 跟您的距離太遠.", sname))
+				say("")
+				npc.unlock()
+				return
+			end
+
+			local old = pc.select(u_vid)
+			local u_level = pc.get_level()
+			local u_job = pc.get_job()
+			local u_sex = pc.get_sex()
+			local u_name = pc.name
+			local u_gold = pc.get_money()
+			local u_married = pc.is_married()
+			local u_has_ring = pc.countitem(70301) > 0
+			local u_wear = marriage_manage.is_equip_wedding_dress()
+			pc.select(old)
+			local m_level = pc.get_level()
+
+			if u_vid == m_vid then
+				say("神秘老人:")
+				say("不是您的名字")
+				say("")
+				say_reward("請輸入您對象的名字.")
+				say("")
+				npc.unlock()
+				return
+			end
+
+			if u_sex == m_sex then
+				say("神秘老人:")
+				say("不好意思, 我不能讓同性結婚.")
+				say("")
+				say_reward("無法與同性結婚.")
+				say("")
+				npc.unlock()
+				return
+			end
+
+			if u_married then
+				say("神秘老人:")
+				say("您知不知道他已經結婚了?")
+				say("您應該不知道吧")
+				say("您還是去找其他還沒結婚的人吧.")
+				say("")
+				say_reward(string.format("%s 已經結婚了.", sname))
+				say("")
+				npc.unlock()
+				return
+			end
+
+			if u_level < 25 then
+				say("神秘老人:")
+				say("無法跟太年輕的人結婚.")
+				say("結婚需要2個成人才可以結婚.")
+				say("")
+				say_reward("對象的等級25級才可以結婚.")
+				say("")
+				npc.unlock()
+				return
+			end
+
+			if m_level - u_level > 15 or u_level - m_level > 15 then
+				say("神秘老人:")
+				say("等級相差太大的人結婚, 結婚之後會很辛苦.")
+				say("他們2個人並不太合適")
+				say("我不會讓您們結婚.")
+				say("")
+				say_reward("跟對象等級相差15級以上的話, 無法結婚.")
+				say("")
+				npc.unlock()
+				return
+			end
+
+			if not u_has_ring then
+				if m_ring_num >= 2 then
+					say("神秘老人:")
+					say("為了結婚, 要配戴定情信物.")
+					say("請將定情信物交給您的對象.")
+				else
+					say("神秘老人:")
+					say("這個是人生中最重要的事情")
+					say("您們都需要配戴定情信物")
+					say("")
+				end
+
+				say_item("定情信物", 70301, "")
+				say_reward("為了結婚, ")
+				say_reward("對象也必須配戴定情信物.")
+				say("")
+				npc.unlock()
+				return
+			end
+
+			if not u_wear then
+				say("神秘老人:")
+				say("您的對象還沒有準備, 您的結婚必須的衣服還沒有準備")
+				say("如果只有您一個人穿了結婚裝")
+				say("您會不好意思的")
+				say("")
+				if u_sex==0 then
+					say_item("禮服", marriage_manage.get_wedding_dress(u_job), "")
+					say_reward("為了結婚, 必須穿著")
+					say_reward("禮服")
+				else
+					say_item("婚紗", marriage_manage.get_wedding_dress(u_job), "")
+					say_reward("為了結婚, 必須穿著")
+					say_reward("婚紗")
+				end
+				say("")
+				npc.unlock()
+				return
+			end
+
+
+			local ok_sign = confirm(  u_vid, "您想跟"..pc.name.. "結婚嗎?", 30)
+			if ok_sign == CONFIRM_OK then
+				local m_name = pc.name
+				if pc.get_gold()>=NEED_MONEY then
+					pc.change_gold(-NEED_MONEY)
+
+					pc.removeitem(70301, 1)
+					pc.give_item2(70302, 1)
+					local old = pc.select(u_vid)
+					pc.removeitem(70301, 1)
+					pc.give_item2(70302, 1)
+					pc.select(old)
+
+					say("神秘老人:")
+					say("我們現在已經準備好了, 可以進行婚禮")
+					say("為了表示我對您們愛情的祝福,我會把您們傳送到愛島")
+					say("我祝福您們")
+					say("白頭到老")
+					say("")
+					say_reward("等下自動移動到愛島.")
+					say("")
+					wait()
+					setskin(NOWINDOW)
+					marriage.engage_to(u_vid)
+				end
+			else
+				say("神秘老人:")
+				say("您的對象不想跟您結婚.")
+				say("您跟他好好談談吧.")
+				say("")
+				say_reward("對象拒絕跟您結婚")
+			end
+			say("")
+			npc.unlock()
+		end
+		-- ?? ???? ???? ??? ??
+
+		when oldwoman.chat."移動到舉行婚禮的地方" with pc.is_engaged() begin
+			say("神秘老人:")
+			say("您也想去愛情島參觀朋友的婚禮嗎?留在這裏做什麼?")
+			say("您的朋友正等您為他們道賀呢, 我幫您移動到愛島.")
+			say("")
+			wait()
+			setskin(NOWINDOW)
+			marriage.warp_to_my_marriage_map()
+		end
+
+
+		when 9011.chat."承認這次的婚禮" with pc.is_engaged() and marriage.in_my_wedding() begin
+			if not npc.lock() then
+				say("結婚主持:")
+				say("您的對象現在正在跟我對話, 請稍後?")
+				say("")
+				return
+			end
+			say("結婚主持:")
+			say("您好")
+			say("為了舉辦您們的婚禮, 我會在這裏等您們的")
+			say("請在下面空白的位子上")
+			say("請輸入對方的名字.")
+
+			local sname = input()
+			local u_vid = find_pc_by_name(sname)
+			local m_vid = pc.get_vid()
+
+			if u_vid == 0 then
+				say("結婚主持:")
+				say("喔! 這個名字並不是我們帝國的名單裡面")
+				say("能不能再查查您所輸入的名字是否正確")
+				say("")
+				say_reward(string.format("%s 並不在線", sname))
+				say("")
+				npc.unlock()
+				return
+			end
+
+			if not npc.is_near_vid(u_vid, 10) then
+				say("結婚主持:")
+				say("您可以叫您的對象來您的身邊")
+				say("我們需要查查他的身分")
+				say("")
+				say("")
+				say_reward(string.format("%s 需要移動到與您的身旁.", sname))
+				say("")
+				npc.unlock()
+				return
+			end
+
+			if u_vid == m_vid then
+				say("結婚主持:")
+				say("請勿輸入自己的名字")
+				say("")
+				say_reward("您必須輸入對象的名字")
+				say("")
+				npc.unlock()
+				return
+			end
+
+			if u_vid != marriage.find_married_vid() then
+				say("結婚主持:")
+				say("您所輸入的名字不相同.")
+				say("請您查查好嗎?")
+				say("")
+				npc.unlock()
+				return
+			end
+
+			local ok_sign = confirm(u_vid, "您想跟"..pc.name.. "結婚嗎?", 30)
+			if ok_sign != CONFIRM_OK then
+				say("結婚主持:")
+				say("您的對象看上去很害怕結婚.")
+				say("您們還是再好好談談吧")
+				say("")
+				npc.unlock()
+				return
+			end
+			say("結婚主持:")
+			say("您們的婚禮已經圓滿結束")
+			say("")
+			marriage.set_to_marriage()
+
+			-- 2005.04.12.??? ?? ?? ??
+			-----------------------------------------------
+			-- say("這是我們為您婚禮")
+			-- say("準備的禮物")
+			-- marriage_manage.give_wedding_gift()
+			-- old = pc.select(u_vid)
+			-- marriage_manage.give_wedding_gift()
+			-- pc.select(old)	
+			say("")
+			say_reward("婚禮已經圓滿結束了")
+			say("")
+			npc.unlock()
+		end
+
+		function give_wedding_gift()
+			local male_item = {71072, 71073, 71074}
+			local female_item = {71069, 71070, 71071} 
+			if pc.get_sex() == MALE then
+				pc.give_item2(male_item[number(1, 3)], 1)
+			else
+				pc.give_item2(female_item[number(1, 3)], 1)
+			end
+		end
+
+		-- ??? ???? ?? ????? ?? ??
+		-- ?? pc.is_married() and marriage.in_my_wedding()
+
+		-- ??? ?? ??? ??? ?? ????
+		when 9011.chat."結婚進行曲 開始播放" with 
+			(pc.is_engaged() or pc.is_married()) and 
+			marriage.in_my_wedding() and
+			not marriage.wedding_is_playing_music() begin
+			marriage.wedding_music(true, "wedding.mp3")
+			setskin(NOWINDOW)
+		end
+		when 9011.chat." 結婚進行曲 停止播放" with 
+			(pc.is_engaged() or pc.is_married()) and 
+			marriage.in_my_wedding() and
+			marriage.wedding_is_playing_music() begin
+			marriage.wedding_music(false, "default")
+			setskin(NOWINDOW)
+		end
+		when 9011.chat."更改為夜晚狀態" with 
+			pc.is_married() and 
+			marriage.in_my_wedding() begin
+			marriage.wedding_dark(true)
+			setskin(NOWINDOW)
+		end
+
+		when 9011.chat."更改為下雪狀態" with pc.is_married() and marriage.in_my_wedding() begin
+			marriage.wedding_snow(true)
+			setskin(NOWINDOW)
+		end
+
+		when 9011.chat."婚禮已經完滿結束" with pc.is_married() and marriage.in_my_wedding() begin
+			if not npc.lock() then
+				say("結婚主持:")
+				say("現在我會跟您的對象對話, 稍後再跟您談好嗎?")
+				say("")
+				return
+			end
+
+			say("結婚主持:")
+			say("您想結束婚禮嗎?")
+			say("")
+			local s = select("是的","不是")
+			if s == 1 then
+				local u_vid = marriage.find_married_vid()
+				if u_vid == 0 then
+					say("結婚主持")
+					say("為了完成婚禮, 您必須徵求對方的同意.")
+					say("現在您的對象不在線~")
+					say("無法完成婚禮")
+					say("")
+					npc.unlock()
+					return
+				end
+				say("結婚主持:")
+				say("需要對方的同意, 完成婚禮之後所有人會離開愛情島")
+				say("正在等候答覆.")
+				say("")
+				local ok_sign = confirm(u_vid, "您想完成婚禮嗎?", 30)
+				if ok_sign == CONFIRM_OK then
+					marriage.end_wedding() -- ??? ???? ??? ??.
+				else
+					say("結婚主持:")
+					say("對方拒絕了.")
+					say("")
+				end
+
+			end
+
+				npc.unlock()
+		end
+
+		-- ??? ???? ???? ??? ??
+		when 	11000.chat."同意離婚" or
+			11002.chat." 同意離婚" or
+			11004.chat." 同意離婚" with pc.is_married() begin
+
+			if not marriage_manage.check_divorce_time() then
+				return
+			end
+
+			local u_vid = marriage.find_married_vid()
+			if u_vid == 0 or not npc.is_near_vid(u_vid, 10) then
+				say("戰魂:")
+				say("您沒有對象的話, 無法離婚")
+				say("離婚是很嚴重的事情")
+				say("您們必須同時過來")
+				say("")
+				return
+			end
+
+			say("戰魂:")
+			say("同意離婚的時候需要50萬.")
+			say("還有需要對象的同意.")
+			say("您想同意離婚嗎?")
+			say("")
+
+			local MONEY_NEED_FOR_ONE = 500000
+			local s = select("同意.", "不同意.")
+
+			if s == 1 then
+				local m_enough_money = pc.gold > MONEY_NEED_FOR_ONE
+				local m_have_ring = pc.countitem(70302) > 0
+
+				local old = pc.select(u_vid)
+				local u_enough_money = pc.gold > MONEY_NEED_FOR_ONE
+				local u_have_ring = pc.countitem(70302) > 0
+				pc.select(old)
+
+				if not m_have_ring then
+					say("要帶結婚戒指.")
+					return;
+				end
+				if not u_have_ring then
+					say("對方也必須配戴結婚戒指.")
+					return;
+				end
+
+				if not m_enough_money then
+					say("戰魂:")
+					say("為了離婚, 您們所帶的金錢並不足夠.")
+					say("")
+					say_reward(string.format("為了離婚, 各各都需要付出 %d萬兩的費用", MONEY_NEED_FOR_ONE/10000))
+					say("")
+					return;
+				end
+				if not u_enough_money then
+					say("戰魂:")
+					say("您的對象的錢不足夠.")
+					say("")
+					say_reward("為了離婚每個人都必須付出50萬兩")
+					say("")
+					return;
+				end
+
+				say("離婚是很痛苦的事情, 您真的想離婚嗎?.")
+				say("")
+				say("真的嗎? 您真的想離婚嗎?")
+				say("")
+
+				local c=select("是.", "不是.")
+				if 2 == c then
+					say_pc_name()
+					say("我改變我的想法, 我不想離婚.")
+					say("")
+					wait()
+					say("戰魂:")
+					say("講得好.")
+					say("您們2個人一起回去好好享受您們的人生吧.")
+					say("")
+					say_reward("離婚取消了.")
+					say("")
+					return
+				end
+
+				local ok_sign = confirm(u_vid, pc.name.."要求離婚?", 30)
+				if ok_sign == CONFIRM_OK then
+
+					local m_enough_money = pc.gold > MONEY_NEED_FOR_ONE
+					local m_have_ring = pc.countitem(70302) > 0
+
+					local old = pc.select(u_vid)
+					local u_enough_money = pc.gold > MONEY_NEED_FOR_ONE
+					local u_have_ring = pc.countitem(70302) > 0
+					pc.select(old)
+
+					if m_have_ring and m_enough_money and u_have_ring and u_enough_money then
+						pc.removeitem(70302, 1)
+						pc.change_money(-MONEY_NEED_FOR_ONE)
+
+						local old = pc.select(u_vid)
+						pc.removeitem(70302, 1)
+						pc.change_money(-MONEY_NEED_FOR_ONE)
+						pc.select(old)
+
+						say("戰魂:")
+						say("離婚成功了.")
+						say("現在您們已經成功離婚了.")
+						say("您們2個人不喜歡對方, 我也沒有辦法.")
+						say("")
+						say_reward("離婚成功了")
+						say("")
+						marriage.remove()
+					else
+						say("戰魂:")
+						say("離婚途中發生錯誤, 無法離婚")
+						say("下次再來吧")
+						say("")
+						say_reward("離婚取消了.")
+						say("")
+					end
+				else
+					say("戰魂:")
+					say("對方不同意跟您離婚")
+					say("您們先再商量一下再過來吧")
+					say("")
+					say_reward("離婚已經取消.")
+					say("")
+				end
+			end
+		end
+
+		when 	11000.chat."刪除結婚戒指" or
+			11002.chat." 刪除結婚戒指" or
+			11004.chat." 刪除結婚戒指" with 
+			not pc.is_married() 	and 
+			pc.count_item(70302)>0
+			begin
+			say("戰魂:")
+			say("很快會忘記您們不好的回憶")
+			say("")
+			say_reward("刪除結婚戒指成功")
+			pc.remove_item(70302)
+		end
+
+		when 	11000.chat." 單方離婚" or
+			11002.chat." 單方離婚" or
+			11004.chat." 單方離婚" with pc.is_married() begin
+
+			if not marriage_manage.check_divorce_time() then
+				return
+			end
+
+			say("戰魂:")
+			say("您想單方面提出離婚, 需要付出100萬兩")
+			say("您想跟現在的伴侶離婚嗎?")
+			say("")
+
+			local s = select("是的.", "不是.")
+
+			local NEED_MONEY = 1000000
+			if s == 2 then
+				return
+			end
+
+			if pc.money < NEED_MONEY then
+				say("戰魂:")
+				say("您的金錢不足")
+				say("離婚跟結婚一樣, 需要大量的金錢")
+				say("您好好考慮一下再來吧")
+				say("")
+				return
+			end
+
+			say("戰魂:")
+			say("您真的需要離婚嗎? 您還是好好考慮一下吧")
+			local c = select("是的,我要離婚.", "不是, 我考慮一下.")
+
+			if c == 2 then
+				say("戰魂:")
+				say("需要考慮這是好的, 您好好享受您們的生活吧.")
+				say("每一個人的想法都不一樣")
+				say("有時候會不太合適, 但是您們努力的話應該會有好的結果.")
+				say("")
+				say_reward("單方離婚取消了")
+				say("")
+				return
+			end
+
+			pc.removeitem(70302, 1)
+			pc.change_gold(-NEED_MONEY)
+
+			marriage.remove()
+
+			say("戰魂:")
+			say("既然您們這麼不喜歡對方, 那您們還是離婚吧.")
+			say("現在您已經是單身, 我希望您會變得開心些.")
+			say("")
+			say_reward("單方離婚成功了.")
+			say("")
+		end
+
+		-- ??? ?? ??
+		when oldwoman.chat."查看結婚列表" with not pc.is_engaged() begin
+			local t = marriage.get_wedding_list()
+			if table.getn(t) == 0 then
+				say("現在沒有婚禮進行.")
+				say("")
+			else
+				-- chat(table.getn(t))
+				local wedding_names = {}
+				table.foreachi(t, function(n, p) wedding_names[n] = p[3].."跟 "..p[4].."的婚禮" end)
+				wedding_names[table.getn(t)+1] = locale.confirm
+				local s = select_table(wedding_names)
+
+				if s != table.getn(wedding_names) then
+					marriage.join_wedding(t[s][1], t[s][2])
+				end
+			end
+		end
+		when 9011.click with not pc.is_engaged() and not pc.is_married() begin
+			say("結婚主持:")
+			say("大家都來這裏祝福他們的婚禮!")
+			say("請大家祝福這對新人")
+			say("")
+		end
+
+		function check_divorce_time()
+
+			local DIVORCE_LIMIT_TIME = 86400
+
+			if is_test_server() then
+				DIVORCE_LIMIT_TIME = 60
+			end
+
+			if marriage.get_married_time() < DIVORCE_LIMIT_TIME then 
+				say("戰魂:")
+				say("您們才剛剛結婚就要離婚!!!")
+				say("您們還是好好考慮清楚吧")
+				say("")
+				return false
+			end
+
+			return true
+		end
+
+		-- ?? ??? ?? ???? ??? ??
+		-- ?? ?? : pc.is_engaged_or_married()
+		function is_equip_wedding_dress()
+			local a = pc.get_armor()
+			return a >= 11901 and a <= 11904
+		end
+		function get_wedding_dress(pc_job)
+			if 0==pc_job then
+				return 11901
+			elseif 1==pc_job then
+				return 11903
+			elseif 2==pc_job then
+				return 11902
+			elseif 3==pc_job then
+				return 11904
+			else
+				return 0;
+			end
+		end
+	end
+end
+

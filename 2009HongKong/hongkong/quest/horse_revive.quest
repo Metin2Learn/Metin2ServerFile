@@ -1,0 +1,87 @@
+quest horse_revive begin
+	state start begin
+		when 20349.chat."想挽救愛馬" with horse.get_grade()==3 and horse.is_dead() and pc.countitem("50059")<1 begin
+			say("到上仙洞，拿來那裏的仙草，就可以醫好它")
+			say("但有邪惡的獼猴在守著仙草，很多人有去無回")
+			say("聽說獼猴會把偷仙草的人抓起來")
+			say("把他也變成猴子")
+			if pc.countitem("50058")>=1 then
+				say("你現在擁有的中仙洞仙草只能救活成年馬")
+			elseif pc.countitem("50057")>=1 then
+				say("你現在擁有的下仙洞仙草只能救活幼馬")
+			end
+		end
+		when 20349.chat."想挽救愛馬" with horse.get_grade()==3 and horse.is_dead() and pc.countitem("50059")>=1 begin
+			say("這是上仙洞的仙草，使用這個可以救活你那可愛的馬匹..")
+			say("先把馬匹召喚出來")
+			wait()
+			say("給馬匹服用仙草後不一會")
+			say("[DELAY value=400]. . .[/DELAY]")
+			horse.summon()
+			wait()
+			say("看，你的馬起來了")
+			say("以後可不要再讓它餓著了")
+			if pc.countitem("50059")>=1 then
+				pc.removeitem("50059", 1)
+				horse.revive()
+			end
+		end
+		when 20349.chat."想挽救愛馬" with horse.get_grade()==2 and horse.is_dead() and pc.countitem("50058")<1 begin
+			say("到中仙洞把洞裏的仙草拿來，就可以醫好它")
+			say("但有邪惡的獼猴在守著仙草，很多人有去無回")
+			say("聽說獼猴會把偷仙草的人抓起來")
+			say("把他也變成猴子")
+			if pc.countitem("50059")>=1 then
+				say("你現在擁有的上仙洞仙草只能救活良駒")
+			elseif pc.countitem("50057")>=1 then
+				say("你現在擁有的下仙洞仙草只能救活幼馬")
+			end
+		end
+		when 20349.chat."想挽救愛馬" with horse.get_grade()==2 and horse.is_dead() and pc.countitem("50058")>=1 begin
+			say("這是中仙洞的仙草，使用這個可以救活你那可愛的馬匹.")
+			say("先把馬匹召喚出來")
+			wait()
+			say("給馬匹服用仙草後不一會")
+			say("[DELAY value=400]. . .[/DELAY]")
+			horse.summon()
+			wait()
+			say("看，你的馬起來了")
+			say("以後可不要再讓它餓著了")
+			if pc.countitem("50058")>=1 then
+				pc.removeitem("50058", 1)
+				horse.revive()
+			end
+		end
+		when 20349.chat."想挽救愛馬" with horse.get_grade()==1 and horse.is_dead() and pc.countitem("50057")<1 begin
+			say("到下仙洞把洞裏的仙草拿來，就可以醫好它")
+			say("但有邪惡的獼猴在守著仙草，很多人有去無回")
+			say("聽說獼猴會把偷仙草的人抓起來")
+			say("把他也變成猴子")
+			if pc.countitem("50059")>=1 then
+				say("你現在擁有的上仙洞仙草只能救活良駒")
+			elseif pc.countitem("50057")>=1 then
+				say("你現在擁有的中仙洞仙草只能救活成年馬")
+			end
+		end
+		when 20349.chat."想挽救愛馬" with horse.get_grade()==1 and horse.is_dead() and pc.countitem("50057")>=1 begin
+			say("這是下仙洞的仙草，使用這個可以救活你那可愛的馬匹")
+			say("先把馬匹召喚出來")
+			wait()
+			say("給馬匹服用仙草後不一會")
+			say("[DELAY value=400]. . .[/DELAY]")
+			horse.summon()
+			wait()
+			say("看，你的馬起來了")
+			say("以後可不要再讓它餓著了")
+			if pc.countitem("50057")>=1 then
+				pc.removeitem("50057", 1)
+				horse.revive()
+			end
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

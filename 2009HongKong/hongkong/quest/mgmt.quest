@@ -1,0 +1,70 @@
+quest system_management begin
+	state start begin
+		when 20358.chat."帝國現況" with pc.is_gm() begin
+			local s_name, s_pid, s_date, s_money = mgmt.monarch_state(1)
+			local c_name, c_pid, c_date, c_money = mgmt.monarch_state(2)
+			local j_name, j_pid, j_date, j_money = mgmt.monarch_state(3)
+
+			say("帝國現況")
+			say("")
+
+			say("新受國")
+			say(string.format("   君主：%s(%d)    當選日期：%s", s_name, s_pid, s_date))
+			say(              "   國庫："..s_money)
+			say("")
+
+			say("天調國")
+			say(string.format("   君主：%s(%d)    當選日期：%s", c_name, c_pid, c_date))
+			say(              "   國庫："..c_money)
+			say("")
+
+			say("進勞國")
+			say(string.format("   君主：%s(%d)    當選日期：%s", j_name, j_pid, j_date))
+			say(              "   國庫："..j_money)
+			say("")
+		end
+
+		when 20358.chat."君主交替" with pc.is_gm() begin
+			say("請選擇要交替君主的國家。")
+			say("")
+
+			local s = select("新受國", "天調國", "進勞國", "取消")
+
+			if s != 4 then
+				say("請輸入新君主的 PID。")
+
+				local pid = input()
+
+				say("您剛才輸入了 "..pid)
+				say("這個 PID 是否正確？")
+				say("")
+
+				local q = select("是", "否")
+
+				if q == 1 then
+					local n
+					if s == 1 then
+						n = "新受國"
+					elseif s == 2 then
+						n = "天調國"
+					elseif s == 3 then
+						n = "進勞國"
+					end
+
+					say(n.." 的君主更換成 "..pid.." 。")
+					say("是否要進行更換？")
+					say("")
+
+					q = select("是", "否")
+
+					if q == 1 then
+						say("君主已被交替。")
+						say("")
+
+						mgmt.monarch_change_lord(s, pid)
+					end
+				end
+			end
+		end
+	end
+end

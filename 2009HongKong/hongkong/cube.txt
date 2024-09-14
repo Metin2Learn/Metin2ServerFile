@@ -1,0 +1,259 @@
+#복숭아꽃진액		
+section		
+	npc	20018	
+	item	50721	1
+	reward	50801	1
+	percent	100	
+end		
+		
+#도라지진액		
+section		
+	npc	20018	
+	item	50722	1
+	reward	50802	1
+	percent	100	
+end		
+		
+#감꽃진액		
+section		
+	npc	20018	
+	item	50723	1
+	reward	50803	100
+	percent	100	
+end		
+		
+#가시오가피진액		
+section		
+	npc	20018	
+	item	50724	1
+	reward	50804	100
+	percent	100	
+end		
+		
+#복숭아꽃진액		
+section		
+	npc	20017	
+	item	50721	1
+	reward	50801	1
+	percent	100	
+end		
+		
+#도라지진액		
+section		
+npc	20017	
+item	50722	1
+reward	50802	1
+percent	100	
+end		
+		
+#감꽃진액		
+section		
+npc	20017	
+item	50723	1
+reward	50803	100
+percent	100	
+end		
+		
+#가시오가피진액		
+section		
+npc	20017	
+item	50724	1
+reward	50804	100
+percent	100	
+end		
+		
+#활심액진액		
+section		
+npc	20017	
+item	50801	1
+item	50725	1
+reward	50813	1
+percent	100	
+end		
+		
+#피독수		
+section		
+npc	20017	
+item	50802	1
+item	50725	1
+reward	50814	1
+percent	100	
+end		
+		
+#보환수		
+section		
+npc	20017	
+item	50803	100
+item	50726	1
+reward	50815	100
+percent	100	
+end		
+		
+#영보수		
+section		
+npc	20017	
+item	50804	100
+item	50726	1
+reward	50816	100
+percent	100	
+end		
+		
+		
+#복숭아꽃진액		
+section		
+npc	20022	
+item	50721	1
+reward	50801	1
+percent	100	
+end		
+		
+#도라지진액		
+section		
+npc	20022	
+item	50722	1
+reward	50802	1
+percent	100	
+end		
+		
+#감꽃진액		
+section		
+npc	20022	
+item	50723	1
+reward	50803	100
+percent	100	
+end		
+		
+#가시오가피진액		
+section		
+npc	20022	
+item	50724	1
+reward	50804	100
+percent	100	
+end		
+		
+#활심액진액		
+section		
+npc	20022	
+item	50801	1
+item	50725	1
+reward	50813	1
+percent	100	
+end		
+		
+#피독수		
+section		
+npc	20022	
+item	50802	1
+item	50725	1
+reward	50814	1
+percent	100	
+end		
+		
+#보환수		
+section		
+npc	20022	
+item	50803	100
+item	50726	1
+reward	50815	100
+percent	100	
+end		
+		
+#영보수		
+section		
+npc	20022	
+item	50804	100
+item	50726	1
+reward	50816	100
+percent	100	
+end		
+		
+		
+#진활심액진액		
+section		
+npc	20022	
+item	50813	1
+item	50727	1
+reward	50817	1
+percent	100	
+end		
+
+#진피독수		
+section		
+npc	20022	
+item	50814	1
+item	50727	1
+reward	50818	1
+percent	100	
+end		
+
+#진보환수		
+section		
+npc	20022	
+item	50815	100
+item	50728	1
+reward	50819	1
+percent	100	
+end		
+		
+#진영보수		
+section		
+npc	20022	
+item	50816	100
+item	50728	1
+reward	50820	1
+percent	100	
+end		
+
+#적상액
+section		
+npc	20022	
+item	50901	10	
+item	50814	20
+reward	50821	10
+percent	100	
+end		
+
+#홍상액
+section		
+npc	20022	
+item	50901	10	
+item	50813	20
+reward	50822	10
+percent	100	
+end		
+
+#황상액
+section		
+npc	20022	
+item	50901	10	
+item	50820	20
+reward	50823	10
+percent	100	
+end		
+
+#녹상액
+section		
+npc	20022	
+item	50901	10	
+item	50819	20
+reward	50824	10
+percent	100	
+end		
+
+#청상액
+section		
+npc	20022	
+item	50901	10	
+item	50817	20
+reward	50825	10
+percent	100	
+end		
+
+#백상액
+section		
+npc	20022
+item	50901	10	
+item	50818	20
+reward	50826	10
+percent	100	
+end

@@ -1,0 +1,329 @@
+quest horse_upgrade begin
+	state start begin
+		when 20349.chat."想讓馬匹成長" with horse.get_grade()==1 and horse.get_level()==10 begin
+			if horse.is_dead() then
+				say("這麼馬虎呢？您的馬匹都死了，怎麼讓它成長")
+				say("先拿來下仙洞仙草，救活它再說吧")
+				say("照我說的做")
+			elseif pc.level<=34 then
+				say("太可惜了，這麼好的馬匹因為主人等級的不足，無法成長")
+				say("先提升你的等級吧，35級以後再過來")
+			elseif horse.get_level()<=9 then
+				say("現有馬的等級還無法成長成下一階段的馬匹")
+				say("快去提升馬匹的等級")
+				say("等馬匹10級以後再過來")
+			elseif pc.countitem("50050")<1 then
+				say("馬想成長，主人先通過考驗才可以")
+				say("上次來的時候已經告訴您了")
+				say("接受此任務需要拿一個神駿魂才可以")
+				say("到猴妖地牢可以獲得.")
+				say("當然，那些猴子可不是好惹的")
+				say("到縣城的下仙洞找找吧")
+				say("")
+				setstate(need_item50050)
+			elseif pc.countitem("50051")<1 then
+				say("已經說了很多遍了，想騎馬的人竟然把")
+				say("馬牌不帶在身上，成何體統!")
+			elseif horse.get_level()==10 and not horse.is_dead() and pc.countitem("50050")>=1 and pc.level>=35 then
+				say("有了駿馬圖可以進行騎乘戰鬥")
+				say("看看你是否有騎乘戰鬥的能力")
+				say("和耐力，")
+				say("到影悲沙漠，消滅蠍人弓箭手再回來")
+				say("可以跟朋友一起組隊來完成，看誰願意幫你")
+				say("記住，你應該是隊長才可以")
+				say("")
+				local b=select("接受", "拒絕")
+				if 1==b then
+					if pc.countitem("50050")>=1 then
+						pc.removeitem("50050", 1)
+						setstate(test)
+					end
+				elseif 2==b then
+					say("改變主意了還可以再過來")
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("您無法修練駿馬圖")
+				say("您的資訊有錯誤,")
+				say("請及時與遊戲運維公司聯繫")
+			end
+		end
+	end
+	state need_item50050 begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("拿神駿魂過來")
+			q.set_title("拿神駿魂過來")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."拿神駿魂過來"..locale.NORMAL_COLOR)
+			say("完成駿馬圖任務需要神駿魂")
+			say("可以在獼猴地牢裏獲得")
+			setstate(start)
+			q.done()
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."拿神駿魂過來"..locale.NORMAL_COLOR)
+			say("完成駿馬圖任務需要神駿魂")
+			say("可以在獼猴地牢裏獲得")
+			setstate(start)
+			q.done()
+		end
+	end
+	state test begin
+		when letter begin
+			q.set_counter("剩餘蠍人弓箭手", 100-pc.getqf("kill_count"))
+		end
+		when 2105.party_kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+			q.set_counter("剩餘蠍人弓箭手", 100-pc.getqf("kill_count"))
+			if get_time()>=pc.getqf("limit_time") then
+				setstate(failure)
+			end
+		end
+		when 2107.party_kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+			q.set_counter("剩餘半獸弓箭手", 100-pc.getqf("kill_count"))
+			if get_time()>=pc.getqf("limit_time") then
+				setstate(failure)
+				q.done()
+			end
+		end
+		when letter begin
+			q.set_clock("剩餘時間", pc.getqf("limit_time")-get_time())
+		end
+		when enter begin
+			pc.setqf("limit_time", get_time()+30*60)
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			q.done()
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("駿馬圖資格考驗")
+			q.set_title("駿馬圖資格考驗")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."駿馬圖資格考驗"..locale.NORMAL_COLOR)
+			say("30分鐘內消滅蠍人弓箭手（或半獸弓箭手）100只")
+			say("然後報告給伯樂結果")
+			say("")
+			say("允許組隊完成，但要求您為組隊隊長")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."駿馬圖資格考驗"..locale.NORMAL_COLOR)
+			say("30分鐘內消滅蠍人弓箭手（或半獸弓箭手）100只")
+			say("然後報告給伯樂結果")
+			say("")
+			say("允許組隊完成，但要求您為組隊隊長")
+		end
+		when 2105.party_kill with pc.getqf("kill_count") >= 100 and pc.getqf("kill_count") >= 100 and pc.getqf("limit_time")>=get_time() begin
+			setstate(report)
+		end
+		when 2107.party_kill with pc.getqf("kill_count") >= 100 and pc.getqf("kill_count") >= 100 and pc.getqf("limit_time")>=get_time() begin
+			setstate(report)
+		end
+		when 20349.chat."查看目前狀況" begin
+			say("30分鐘內消滅蠍人弓箭手（或半獸弓箭手）100只")
+			say("後回來報告伯樂!")
+			say("")
+			say("當然，可以得到朋友的幫助")
+			local b=select("接受", "放棄")
+			if 1==b then
+			elseif 2==b then
+				say("真的要中途放棄此次機會嗎？")
+				local b=select("是的", "開玩笑")
+				if 1==b then
+					say("祝你下次有好運")
+					setstate(start)
+					q.done()
+				elseif 2==b then
+					say("現在沒有時間在這裏閒聊")
+					say("快去消滅蠍人弓箭手（或半獸弓箭手）")
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state report begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("伯樂的飛鴿傳書")
+			q.set_title("伯樂的飛鴿傳書")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."伯樂的飛鴿傳書"..locale.NORMAL_COLOR)
+			say("告訴伯樂順利剷除蠍人弓箭手的好消息")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."伯樂的飛鴿傳書"..locale.NORMAL_COLOR)
+			say("告訴伯樂順利剷除蠍人弓箭手的好消息")
+		end
+		when 20349.chat."HORSE QUEST STATE REPAIR" with horse.get_grade()!=1 begin
+			setstate(start)
+			q.done()
+		end
+		when 20349.chat."報告任務" with horse.get_grade()==1 begin
+			say("祝賀你順利完成任務.")
+			say("想把幼馬升級至成年馬")
+			say("需要把馬牌換成駿馬圖")
+			say("但需要一定的時間，明天再過來吧")
+			say("交換費用為50萬兩，明天來的時候一起帶來吧")
+			if is_test_server() then
+				pc.setqf("make_time", get_time()+10)
+			else
+				pc.setqf("make_time", get_time()+number(8, 16)*60*60)
+			end
+			setstate(wait)
+		end
+	end
+	state wait begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("駿馬圖發放等待中")
+			q.set_title("駿馬圖發放等待中")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."駿馬圖發放等待中"..locale.NORMAL_COLOR)
+			say("等駿馬圖做好後")
+			say("再找伯樂談談")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."駿馬圖發放等待中"..locale.NORMAL_COLOR)
+			say("等駿馬圖做好後")
+			say("再找伯樂談談")
+		end
+		when login with get_time()>=pc.getqf("make_time") begin
+			setstate(buy)
+		end
+		when 20349.chat."HORSE UPGRADE QUEST STATE REPAIR" with horse.get_grade()!=1 begin
+			setstate(start)
+			q.done()
+		end
+		when 20349.chat."駿馬圖做好了嗎?" with horse.get_grade()==1 begin
+			say("快了，但還得等一會才行")
+			say("提醒你一下，不要忘了帶50萬兩金幣")
+			say("呵呵")
+		end
+	end
+	state buy begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("找伯樂談談")
+			q.set_title("找伯樂談談")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."找伯樂談談"..locale.NORMAL_COLOR)
+			say("到伯樂那裏獲得駿馬圖")
+			say("發放駿馬圖，需要拿來馬牌和50萬兩金幣")
+			say("不是很貴哦")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."找伯樂談談"..locale.NORMAL_COLOR)
+			say("到伯樂那裏獲得駿馬圖")
+			say("發放駿馬圖，需要拿來馬牌和50萬兩金幣")
+			say("不是很貴哦")
+		end
+		when 20349.chat."HORSE UPGRADE QUEST STATE REPAIR" with horse.get_grade()!=1 begin
+			setstate(start)
+			q.done()
+		end
+		when 20349.chat."HORSE UPGRADE QUEST STATE REPAIR" with horse.get_grade()==1 and horse.get_level()!=10 begin
+			setstate(start)
+			q.done()
+		end
+		when 20349.chat."駿馬圖終於做好了!" with horse.get_grade()==1 and horse.get_level()==10 begin
+			say("成年馬將跑得更快，還可以騎乘戰鬥")
+			say("但騎馬技能還不能使用")
+			say("有了百駿圖就可以使用炫耀無比的騎馬技能")
+			say("現在需要你支付50萬兩金幣，想好了嗎？")
+			local b=select("購買", "放棄購買", "放棄駿馬圖")
+			if 1==b then
+				if pc.money>=500000 then
+					if pc.countitem("50051")>=1 then
+						char_log(0, "HORSE_UPGRADE", "BEGIN")
+						pc.changemoney(-500000)
+						char_log(0, "HORSE_UPGRADE", "DEC money 500000")
+						pc.removeitem("50051", 1)
+						char_log(0, "HORSE_UPGRADE", "DEC 50051 1")
+						horse.unride()
+						horse.advance()
+						horse.ride()
+						char_log(0, "HORSE_UPGRADE", "INC horse_advance 1")
+						pc.give_item2("50052", 1)
+						char_log(0, "HORSE_UPGRADE", "INC 50052 1")
+						char_log(0, "HORSE_UPGRADE", "END")
+						say("有了駿馬圖，可以在任何地方")
+						say("召喚馬匹，跟馬牌的使用方法一樣哦")
+						say("丟失後補發需要一定的金幣")
+						say("妥善保管吧")
+						setstate(start)
+						q.done()
+					else
+						say("換取駿馬圖需要持有馬牌")
+					end
+				else
+					say("換取駿馬圖需要50萬兩金幣")
+				end
+			elseif 2==b then
+				say("改變主意還可以再過來")
+			elseif 3==b then
+				say("真的要放棄駿馬圖嗎?")
+				say("在這個階段放棄的話，以後還想獲得需要重新做任務才可以")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+					q.done()
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state failure begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("時間已過!")
+			q.set_title("時間已過!")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."時間已過!"..locale.NORMAL_COLOR)
+			say("沒有在30分鐘內完成剷除100只蠍人弓箭手（或半獸弓箭手）的任務")
+			say("很遺憾,駿馬圖任務失敗!")
+			say("")
+			say("還有機會,可以再次拿著神駿魂到伯樂那裏")
+			say("重新接受挑戰.")
+			setstate(start)
+			q.done()
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."時間已過!"..locale.NORMAL_COLOR)
+			say("沒有在30分鐘內完成剷除100只蠍人弓箭手（或半獸弓箭手）的任務")
+			say("很遺憾,駿馬圖任務失敗!")
+			say("")
+			say("還有機會,可以再次拿著神駿魂到伯樂那裏")
+			say("重新接受挑戰.")
+			setstate(start)
+			q.done()
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

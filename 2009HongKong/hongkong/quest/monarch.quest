@@ -1,0 +1,135 @@
+quest monarch begin
+	state start begin
+
+		when electionman1.chat."GM: 君主選舉設定" or  electionman2.chat."GM: 君主選舉設定" or electionman3.chat."GM: 君主選舉設定" with pc.is_gm()  begin
+	
+			if game.get_event_flag( "monarch" ) == 1 then 
+				say("這裡是設定是否結束君主選舉的地方.")
+				say("要結束君主選舉嗎?")
+				local s = select("要結束.","不要結束." )
+
+				if s == 1 then
+					game.set_event_flag( "monarch",0 )
+				end
+			else
+				say("這裡是設定是否開始君主選舉的地方.")
+				say("要開始君主選舉嗎?")
+				local s = select("要開始.","不要開始." )
+
+				if s == 1 then
+					game.set_event_flag( "monarch",1 )
+				end
+
+			end
+			
+		end
+		
+		when electionman1.chat."GM: 君主投票設定" or  electionman2.chat."GM: 君主投票設定" or electionman3.chat."GM: 君主投票設定" with pc.is_gm()  begin
+	
+			if game.get_event_flag( "monarch_elect" ) == 1 then 
+				say("這裡是設定是否結束君主投票的地方.")
+				say("要結束君主投票嗎?")
+				local s = select("要結束.","不要結束." )
+
+				if s == 1 then
+					game.set_event_flag( "monarch_elect",0 )
+				end
+			else
+				say("這裡是設定是否開始君主投票的地方.")
+				say("要開始君主投票嗎?")
+				local s = select("要開始.","不要開始." )
+
+				if s == 1 then
+					game.set_event_flag( "monarch_elect",1 )
+				end
+
+			end
+			
+		end
+	
+
+		when electionman1.chat."進行君主投票" or electionman2.chat."進行君主投票" or electionman3.chat."進行君主投票"  begin
+		
+
+			if  game.get_event_flag( "monarch_elect" ) != 1 then
+				
+				
+				say("還未到投票時間.")
+				say("請您稍後再來.")
+				return 	
+			end
+			local g = oh.candidacy_list() 
+			local gname_table = {}
+
+			table.foreachi(g,
+			function(n, p) 
+				gname_table[n] = n.."."..oh.candidacy_name(n-1)
+			end)
+
+			if table.getn(g) == 0 then
+				-- no currently war
+				say("仍未有任何候選人." )
+			else
+				gname_table[table.getn(g)+1] = locale.cancel
+				say("這裡是投票給君主候選人的地方.")
+				say("當選者將會在一定時間內領導國家,")
+				say("請您考慮清楚才投票.")
+				say("投票只有一次機會.")
+				say("請在以下的候選人當中挑選一位.")
+				wait()
+				local s = select_table(gname_table)
+
+				if s == table.getn(gname_table) then
+					return;
+				else
+					ret = oh.election( s -1 )
+					
+					say("您投了 "..oh.candidacy_name(s-1).." 一票.")
+				end
+			end	
+		end
+		when electionman1.chat."參加君主選舉" or electionman2.chat."參加君主選舉" or electionman3.chat."參加君主選舉"  begin
+	    
+			if  game.get_event_flag( "monarch" ) != 1 then
+				say ("若要參加君主選舉, 您須符合以下條件:")
+				say ("")
+				say_reward(" 1. 參選費 1億兩")
+				say_reward(" 2. 公會會長, 副會長")
+				say_reward(" 3. 等級 50以上" )
+				
+				say("")
+				say("不過, 現在還未到參選時間.")
+				say("請您稍後再來.")
+				return 	
+			end
+			say ("您要參加君主選舉." )
+			say ("若要參加君主選舉, 您須符合以下條件:")
+			say ("")
+			say_reward(" 1. 參選費 1億兩")
+			say_reward(" 2. 公會會長, 副會長")
+			say_reward(" 3. 等級 50以上" )
+
+			say ("")
+			say ("決定要參選嗎?")
+
+		    local s = select("要參選.","不要參選." )
+
+			local NEED_MONEY = 100000000
+
+			if s == 1 then
+				if oh.candidacycount() >= 8 then
+					say("對不起. 由於候選人太多,")
+					say("您無法參選.")
+					say("請您在下次選舉時參選.")
+					return 
+				end
+				if pc.get_gold() >= NEED_MONEY and pc.get_level() >= 50 and oh.isguildmaster() == 1 then 
+
+					pc.change_gold(-NEED_MONEY);
+					oh.candidacy();
+				end
+			end
+		end
+	end
+end
+

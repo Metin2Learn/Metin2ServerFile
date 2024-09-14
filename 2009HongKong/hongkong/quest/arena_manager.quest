@@ -1,0 +1,149 @@
+quest arena_manager begin
+	state start begin
+		when 20017.chat."對戰" begin
+			if game.get_event_flag("arena_close") > 0 then
+				say("因為激烈的戰鬥,大練場受到了嚴重的破壞.")
+				say("")
+				return
+			end
+
+			if not npc.lock() then
+				say("現在有別的玩家在登記對戰.")
+				say("")
+				return
+			end
+
+			local useMinLevel = game.get_event_flag("arena_use_min_level")
+
+			if useMinLevel == 0 then
+				useMinLevel = 25 ;
+			end
+
+			if pc.get_level() < useMinLevel then
+				say("等級"..useMinLevel.."以下的玩家無法申請對戰")
+				say("")
+				npc.unlock()
+				return
+			else
+
+				say("請輸入對方的名字.")
+				say("")
+
+				local sname = input()
+
+				if sname == "" then
+					say("你想申請對戰嗎?")
+					npc.unlock()
+					return
+				else
+					say(sname.." 向對方申請對戰.")
+					say("")
+
+					local opp_vid = find_pc_by_name(sname)
+
+					if opp_vid == 0 then
+						say(sname.." 對方為離線狀態.")
+						say("")
+						npc.unlock()
+						return
+					elseif opp_vid == pc.get_vid() then
+						say("你想跟自己對戰嗎?")
+						say("")
+						npc.unlock()
+						return
+					end
+
+					local old = pc.select(opp_vid)
+					local opp_level = pc.get_level()
+					pc.select(old)
+
+					if opp_level < useMinLevel then
+						say("對方的等級"..useMinLevel.."不足.")
+						say("")
+						npc.unlock()
+						return
+					end
+					if not npc.is_near_vid(opp_vid, 10) then
+						say("如果想申請對戰,請靠近對手")
+						say(sname.."需要在你範圍內.")
+						say("")
+						npc.unlock()
+						return ;
+					end
+
+					local a = arena.is_in_arena(opp_vid)
+					if a == 0 then
+						say(sname.."正在與其他玩家對戰.")
+						say("")
+						npc.unlock()
+						return ;
+					end
+
+					local agree = confirm(opp_vid, pc.name.."你是否接受對戰?", 30)
+					if agree != CONFIRM_OK then
+						say(sname.."拒絕你的對戰邀請.")
+						say("")
+						npc.unlock()
+						return
+					end
+
+					s = arena.start_duel(sname, 3)
+			
+					if s == 0 then
+						say("出現了錯誤.")
+						say("是否需要再次接受對戰邀請?")
+						say("")
+					elseif s == 2 then
+						say("對方在與其他玩家對戰.")
+						say("")
+					elseif s == 3 then
+						say("現在所有的大練場均在使用.")
+						say("請稍後再次嘗試邀請.")
+						say("")
+					end
+				end
+			end
+			npc.unlock()
+		end
+
+		when 20017.chat."觀戰" begin
+			local g = arena.get_duel_list()
+			local arena_name = {}
+			local arena_observer = {}
+
+			table.foreachi(g,
+				function(n, p)
+					arena_name[n] = p[1].." vs "..p[2]
+					arena_observer[n] = { p[3], p[4], p[5] }
+				end
+			)
+
+			table.insert(arena_name, "關閉")
+			table.insert(arena_observer, 0)
+
+			local count = table.getn(g)
+			if count == 0 then
+				say("現在沒有對戰進行中.")
+				say("")
+				return ;
+			else
+				say("現在"..count.."個對戰進行當中.")
+				say("")
+				wait()
+			end
+
+			if table.getn(g) != 0 then
+				local s = select_table(arena_name)
+
+				if table.getn(arena_observer) == s then
+					return ;
+				end
+
+				if table.getn(arena_observer) >= s then
+					arena.add_observer(arena_observer[s][1], arena_observer[s][2], arena_observer[s][3])
+				end
+			end
+		end
+	end
+end
+

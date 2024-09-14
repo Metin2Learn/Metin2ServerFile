@@ -1,0 +1,237 @@
+-- -----------------------------------------------------------------
+-- SUBquest
+--LV 30
+-- 劉嫂和書蟲
+--------------------------------------------------------------------
+quest subquest_18 begin
+	state start begin
+		when login or levelup with pc.level >= 10 and pc.level <=12  begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20002)
+			if 0!=v then
+			target.vid("__TARGET__", v, "劉嫂-書蟲任務")
+			end
+		end
+		when __TARGET__.target.click or
+			20002.chat."這個人又躲到哪裡去了?"  begin
+			target.delete("__TARGET__")
+			say("劉嫂:")
+			say("別提了，不是丈夫，而是冤家")
+			say("這個書生丈夫")
+			say("糊口都難，每天就知道看書")
+			say("是我瞎了眼")
+			say("嫁給了這個書生.")
+			say("")
+
+			local s=select(
+				"我幫你找找看嗎?",
+				"哦，不容易呀，但是我還有別的事要忙")
+
+			if 2==s then
+				say("放棄任務嗎?")
+				local a= select("是","不是")
+				if 2==a then
+					say("要做的東西很多，整天躲起來看書..")
+					say("下次有空再來吧")
+					say("")
+					return
+				end
+				say("很多東西要做，到底躲到哪裡去了呢?")
+				say("讓我找到了決不…真是傷心啊.")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("劉嫂:")
+			say("幫我找是嗎?")
+			say("那真是謝謝了.")
+			say("是個穿得寒磣的書生")
+			say("看到了就告訴一聲吧，這個城市裡長相那樣的人")
+			say("也就只有他，可能躲在沒有人的地方")
+			say("朗誦詩吧，如果說我在找，會逃跑的")
+			say("不要讓他覺察到")
+			say("一定!")
+			say("")
+			set_state(find_soonyougil)
+
+		end
+	end
+	state find_soonyougil begin
+		when letter begin
+			send_letter("找書蟲")
+			
+			local v=find_npc_by_vnum(20023)
+			if 0!=v then
+				target.vid("__TARGET2_", v, "劉嫂-書蟲 任務")
+			end
+
+		end
+		when button or info begin
+			say_title("找書蟲")
+			say("尋找在人煙稀少的地方悠閒地走動著朗誦詩的") 
+			say("穿得寒磣的男人，點擊他.")
+			say("")
+		end
+		when 20002.chat."這個人到底躲哪去了?"  begin
+			say("劉嫂:")
+			say("躲到哪裡去了呢.")
+			say("最近越來越有了訣竅")
+			say("不容易找到。")
+			say("可能要按雜貨店老闆說的，買個鈴鐺掛上")
+		end
+		when  __TARGET2__target.click or
+			20023.chat."發現書蟲"  begin
+			target.delete("__TARGET2_")
+			say_title("發現書蟲!")
+			say("聽到了太平的朗誦詩的聲音")
+			say("找過去，果然是穿得寒磣的男人")
+			say("在走動.")
+			say("")
+			say("看來這個人就是劉嫂的丈夫!")
+			say("")
+			say("為了向劉嫂報告，悄悄轉身的瞬間")
+			say("有人抓住了我的肩膀")
+			say("")
+			wait()
+			say("第一次見的旅客.")
+			say("是不是我老婆派過來的?")
+			say("")
+			say("哎呀! 被發現了，怎麼回答好呢?")
+			local s=select(
+				"哈哈. 是路過的行人.",
+				"哦.. 其實是."
+			)
+			if 1==s then
+				say("書蟲:")
+				say("是嗎，見到你很高興. 哈哈.")
+				say("天氣真好?")
+				say("有感觸深的書嗎?")
+				say("我最近在看吳子書")
+				say("有機會看看吧")
+				say("")
+				set_state(report_true)
+			elseif 2==s then
+				say("書蟲:")
+				say("呵，果然猜對了.")
+				say("最近老婆總是嘮叨")
+				say("沒有辦法再屋子裡好好看書")
+				say("不理解男人的理想")
+				say("反正被發現了，我要轉移地方了")
+				say("你就睜一隻眼閉一隻眼吧")
+				say("怎樣?")
+				say("我會表達心意的")
+				say("")
+				set_state(report_false)
+			end
+		end
+	end
+	state report_false begin
+		when letter begin
+			send_letter("回到劉嫂那裡")
+			local v=find_npc_by_vnum(20002)
+			if v!=0 then
+				target.npc("__TARGET__", v, "回到劉嫂那裡")
+			end
+		end
+		when button or info begin
+			say_title("回到劉嫂那裡")
+			say("回到劉嫂那裡說")
+			say("沒有找到書蟲了.")
+		end
+
+		when __TARGET__.target.click or
+			20002.chat."書蟲的行蹤" begin
+			target.delete("__TARGET__")
+			say("劉嫂:")
+			say("不知道我丈夫在哪裡?")
+			say("秘密偵察也失敗了，到底躲到哪裡了呢?")
+			say("哎喲，忙死了，我這是什麼命啊.")
+			say("")
+			set_state(come_back)	
+		end
+	end
+	state come_back begin
+		when letter begin
+			send_letter("回到書蟲那裡")
+			local v=find_npc_by_vnum(20023)
+			if v!=0 then
+				target.npc("__TARGET__", v, "回到書蟲那裡")
+			end
+		end
+		when button or info begin
+			say_title("回到書蟲那裡")
+			say("告訴書蟲") 
+			say("回去向他妻子瞎編了.")
+		end
+		when __TARGET__.target.click or
+			20023.chat."您來了" begin
+		   	target.delete("__TARGET__")
+			say("書蟲:")
+			say("您才來啊!")
+			say("談得好嗎? 真是我生命的恩人")
+			say("")
+			say_reward("獲得經驗值 7000 ")
+			pc.give_exp2(7000)
+			set_quest_state("levelup","run")	
+
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+
+	state report_true begin
+		when letter begin
+			send_letter("回到劉嫂那裡")
+			local v=find_npc_by_vnum(20002)
+			if v!=0 then
+				target.npc("__TARGET__", v, "回到劉嫂那裡")
+			end
+		end
+		
+		when button or info begin
+			say_title("回到劉嫂那裡")
+			say("告訴她") 
+			say("書蟲的位置")
+			say("")
+		end
+		when 20023.chat."別人看起來悠悠自適" begin 
+			say("書蟲:")
+			say("別人開起來是悠悠自適")
+			say("但是一直在擔心被夫人發現")
+			say("真是頭痛之事.")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20002.chat."書蟲的位置" begin
+			target.delete("__TARGET__")
+			say("找到丈夫的位置了?")
+			say("真是謝謝阿! 或許會覺察到什麼")
+			say("逃跑也難說，得趕緊去看看")
+			say("這次抓到的話.. ")
+			say("")
+			say("對了，您辛苦了，將給你 ")
+			say("小小的報答.")
+			
+			say_reward("獲得經驗值 7000 ")
+			pc.give_exp2(7000)
+			
+		
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+				
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+
+end

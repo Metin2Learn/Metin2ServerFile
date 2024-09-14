@@ -1,0 +1,163 @@
+quest guild_manage begin
+    state start begin
+	when guild_man1.chat."GM: 確認可以再加入的日期" or 
+	    guild_man2.chat."GM: 確認可以再加入的日期" or
+	    guild_man3.chat."GM: 確認可以再加入的日期" 
+	    with pc.is_gm() begin
+
+	    say("請輸入, 你想確認使用者的名字.")
+	    local u_name = input()
+	    local u_vid=find_pc_by_name(u_name)
+
+	    if u_vid==0 then 
+		say_title("在你的附近這位使用者並不存在. ")
+		say(u_name)
+		return
+	    end
+
+	    local old_vid = pc.select(u_vid)
+	    u_withdrawTime=pc.getqf("new_withdraw_time")
+	    u_disbandTime=pc.getqf("new_disband_time")
+	    pc.select(old_vid)
+
+	    withdrawDelay=game.get_event_flag("guild_withdraw_delay")
+	    disbandDelay=game.get_event_flag("guild_disband_delay")
+
+	    say_title("確認可以再加入的日期")
+
+	    if u_withdrawTime>0 then
+		say("脫離  時間: "..time_to_str(u_withdrawTime))
+		say("(等待  時間: "..withdrawDelay.." 日)")
+		say("")
+	    end
+
+	    if u_disbandTime>0 then
+		say("解散 時間: "..time_to_str(u_disbandTime))
+		say("(等待 時間: "..disbandDelay.." 日)")
+		say("")
+	    end
+
+	    local retryTime1 = u_withdrawTime + withdrawDelay*86400
+	    local retryTime2 = u_disbandTime + disbandDelay*86400
+	
+	    local retryTime = 0
+	    if retryTime1 > retryTime2 then 
+		retryTime = retryTime1
+	     else 
+	 	retryTime = retryTime2 
+	    end
+
+	    local curTime = get_time()
+	    if curTime < retryTime then
+		say("重新設定 時間: "..time_to_str(retryTime))
+		say("(剩下 : "..((retryTime-curTime)/3600).."時間)")
+		say("")
+
+		if is_test_server() then
+		    local s=select("重新設定", "關閉")
+		    if s==1 then
+			local old_vid = pc.select(u_vid)
+			local curTime=get_time()
+			pc.setqf("new_withdraw_time", curTime-withdrawDelay*86400)
+			pc.setqf("new_disband_time", curTime-disbandDelay*86400)
+			pc.select(old_vid)
+		    end
+		end
+	    else
+		say("現在可以加入");
+		say("")
+	    end
+	end
+	when 	guild_man1.chat."GM: 查看公會相關變數" or 
+		guild_man2.chat."GM: 查看公會相關變數" or
+		guild_man3.chat."GM: 查看公會相關變數" 
+	    	with pc.is_gm() begin
+
+	    test_chat("pc.has_guild: "..bool_to_str(pc.has_guild()))
+	    test_chat("pc.is_guildmaster: "..bool_to_str(pc.isguildmaster()))
+	    test_chat("pc.empire: "..pc.empire)
+	    test_chat("npc.empire: "..npc.empire)
+	end
+	when guild_man1.chat.locale.guild.withdraw or 
+	    guild_man2.chat.locale.guild.withdraw or 
+	    guild_man3.chat.locale.guild.withdraw 
+	    with pc.hasguild() and not pc.isguildmaster() and (pc.is_gm() or npc.empire == pc.empire) begin
+	    -- ??
+	    say(locale.guild.withdraw_confirm)
+	    local s = select(locale.guild.yes, locale.guild.no)
+	    if s==1 then
+		say(locale.guild.withdraw_msg)
+		pc.remove_from_guild()
+		pc.setqf("new_withdraw_time",get_global_time())
+	    end
+	end
+
+	when guild_man1.chat.locale.guild.disband or 
+	    guild_man2.chat.locale.guild.disband or 
+	    guild_man3.chat.locale.guild.disband 
+	    with pc.hasguild() and pc.isguildmaster() and (pc.is_gm() or npc.empire == pc.empire) begin
+	    -- ??
+	    say(locale.guild.disband_confirm)
+	    local s = select(locale.guild.yes, locale.guild.no)
+	    if s==1 then
+		say(locale.guild.disband_msg)
+		pc.destroy_guild()
+		pc.setqf("new_disband_time",get_global_time())
+		pc.setqf("new_withdraw_time",get_global_time())
+	    end
+	end
+
+	when guild_man1.chat." 建立公會" or 
+	    guild_man2.chat." 建立公會" or 
+	    guild_man3.chat." 建立公會" 
+	    with (pc.is_gm() or npc.empire == pc.empire) begin
+	    local level_limit;
+	    local guild_create_item
+
+	    if get_locale() == "euckr" then
+		level_limit = 40
+		guild_create_item = false
+	    else
+		level_limit = 30
+		guild_create_item = false 
+	    end
+		
+	    if pc.hasguild() then
+		return
+	    end
+	    if game.get_event_flag("guild_withdraw_delay")*86400 > 
+		get_global_time() - pc.getqf("new_withdraw_time") then
+
+		say(string.format("脫離後, %d天以內 無法再建立其他的公會.", game.get_event_flag("guild_withdraw_delay")))
+		return
+	    end
+
+	    if game.get_event_flag("guild_disband_delay")*86400 > 
+		get_global_time() - pc.getqf("new_disband_time") then
+		
+		say(string.format("你已經解散公會了! %d 天以內, 無法建立其他的公會.", game.get_event_flag("guild_disband_delay")))
+		return
+	    end
+
+	    say(locale.guild.create_confirm)
+	    local s = select(locale.guild.yes, locale.guild.no)
+	    if s == 2 then
+		return
+	    end
+
+	    if pc.level >= level_limit then
+		if pc.gold >= 200000 then
+		    if not guild_create_item or pc.countitem(guild_create_item)>0 then
+			game.request_make_guild()
+		    else
+			say(locale.guild.no_guild_create_item)
+		    end
+		else
+		    say(locale.guild.create_not_enough_money)
+		end
+	    else
+		say(locale.guild.not_enough_leadership)
+	    end
+	end
+    end
+end

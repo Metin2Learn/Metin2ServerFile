@@ -1,0 +1,388 @@
+----------------------------------------------------
+-- SUB QUEST
+-- LV 11
+-- 防禦器訂單
+----------------------------------------------------
+
+quest subquest_6 begin
+	state start begin
+		when login  or levelup with pc.level >= 11 and pc.level <= 16 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			
+			local v = find_npc_by_vnum(9002)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "分支任務6 防禦器訂單")
+			end
+		end
+
+				
+		when __TARGET__.target.click or
+			9002.chat." 防禦器訂單" with pc.level >= 11 begin
+			target.delete("__TARGET__")
+
+			say("防禦店老闆:")
+			say("您可以幫我的忙嗎?")
+			say("以前因為我的女兒麻煩你了.")
+			say("這次我有一個請求.")
+			say("我要求在城市的王鐵匠做一個防禦器")
+			say("他還沒有給我消息.")
+			say("您去找找他問一下好嗎.")
+			say("")
+			local s=select("接受.","拒絕.")
+			if 2==s then
+				say("您想放棄任務嗎??")
+				local a=select("是","不是")
+				if  2==a then
+					say("防禦店老闆 :")
+					say("您覺得很難做得到嗎?")
+					say("那好的, 下次再來吧.")
+					return
+				end
+				say("好的~ 一路順風")
+				say("阿 ~ 王鐵匠到底什麼時候會給我消息呢 !")
+				set_state(__GIVEUP__)
+				return
+			end	
+			say("防禦店老闆:")
+			say("謝謝")
+			say("麻煩您 ~")
+			say("")
+			set_state(ask_blacksmith)
+		end
+	end
+	state ask_blacksmith begin
+		when info or button begin
+			say(locale.NOTICE_COLOR.."防禦器訂單"..locale.NORMAL_COLOR)
+			say("關於防禦店老闆的防禦器訂單")
+			say("去問問王鐵匠.")
+			say("")			
+		end
+
+		when letter begin
+			send_letter("去問問王鐵匠.")
+			
+			local v=find_npc_by_vnum(20016)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v,"去問問王鐵匠")
+			end
+		
+		end
+
+		when __TARGET__.target.click or
+			20016.chat." 防禦店老闆的防禦器" begin
+			target.delete("__TARGET__")
+			
+			say("王鐵匠 :")
+			say("什麼啊~ 為什麼總是有人來打擾我?")
+			say("阿! 防禦店來闆叫您來這裡吧.")
+			say("阿~ 那個老頭太著急了吧.")
+			say("我不是不想做,")
+			say("而是我沒有材料, 所以不能製作!")
+			say("您來的正好, 您去尋找材料好嗎.")
+			say("為了製作防禦器我需要鐵礦石, 皮革, 石炭.")
+			say("鐵礦石在老學究的身上, 皮革在孫老闆的身上, 石炭在製陶人的身上")
+			say("可以獲得.")
+			say("我快點完成, 讓防禦店老闆開心吧.")
+			say("")
+			
+			local s=select("接受.","拒絕.")
+			if 2==s then
+				say("您想放棄任務嗎??")
+				local a=select("是","不是")
+				if  2==a then
+					say("王鐵匠 :")
+					say("您覺得材料太多了吧 !")
+					say("那好的 ~ 下次再見了.")
+					return
+				end
+				say("王鐵匠 :")
+				say("您覺得材料太多了吧 !")
+				say("這樣啊 ~ 我應該自己去找材料 … ")
+				say("那再見了.")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("王鐵匠 :")
+			say("辛苦您 ~")
+			say("我會讓防禦店老闆開心 ~ ")
+			say("")
+			set_state(to_get_material) 
+		end	
+
+	end
+
+
+	state to_get_material begin
+		when letter begin
+			send_letter("找到材料給王鐵匠.")
+		end
+
+		when button or info begin
+			say(locale.NOTICE_COLOR.."防禦器訂單"..locale.NORMAL_COLOR)
+			say("找到材料給王鐵匠.")
+			say("鐵礦石 – 需要從飢餓幼狼取回被偷走的老學究書籍.")
+			say("皮革 – 取得孫老版做菜的材料熊膽 .")
+			say("石炭 – 取得陶瓷的材料粘土給製陶人.")
+			say("")
+		end
+
+	
+		when 20011.chat."請給我鐵礦石" with pc.getf("subquest_6","ironore_done") == 0 begin
+			target.delete("__TARGET2__")
+			if pc.count_item(30132) >= 1 then
+				pc.setqf("ironore_done", 1)
+				pc.remove_item("30132", 1)
+
+				say("老學究 :")
+				say("謝謝, 因為您的幫助, 我繼續做研究.")
+				say("現在我給您鐵礦石好好使用吧.")
+				say("")
+				if  pc.getqf("ironore_done") == 1 and pc.getqf("leather_done") == 1 and pc.getqf("coal_done") == 1 then 
+					set_state(back_to_blacksmith)
+				end
+				return
+			end
+			say("老學究 :")
+				say("您想取得鐵礦石嗎?")
+				say("我可以給您, 但是...")
+				say("最近飢餓幼狼攻擊我的時候, ")
+				say("因為逃走我丟了我的書.")
+				say("我猜飢餓幼狼叼走了我的書")
+				say("如果您找到我的書.")
+				say("我可以給您鐵礦石.")
+			say("")
+			say_item_vnum("30132")
+			say("")
+		end
+		when 20011.chat."請給我鐵礦石" with pc.getf("subquest_6","ironore_done")==1 begin
+				target.delete("__TARGET2__")
+				say("您說什麼...")
+				say("我剛才已經給您了…")
+				say("您忘記了嗎?")
+				say("")
+		end	
+		when 20008.chat."請給我皮革" with pc.getf("subquest_6","leather_done") == 0 begin
+			target.delete("__TARGET1__")
+			if pc.count_item(60001) >= 1 then
+				pc.setqf("leather_done", 1)
+				pc.remove_item("60001", 1)
+				
+				say("孫老闆 :")
+				say("嗯~ 謝謝您")
+				say("因為你的幫忙, 我的料理會更容易一些")
+				say("我跟您答應過的皮革")
+				say("")
+				if  pc.getqf("ironore_done") == 1 and pc.getqf("leather_done") == 1 and pc.getqf("coal_done") == 1 then 
+
+					set_state(back_to_blacksmith)
+				end
+				return
+			end	
+			say("孫老闆 :")
+			say("嗯嗯~ 我可以給您皮革")
+			say("世界上沒有免費的東西~嗯嗯")
+			say("如果您幫我拿到熊膽的話, 我可以給您皮革")
+			say("最近我常常要使用熊膽")
+			say("所以那材料每次不足")
+			say("嗯嗯~ 如果您不想的話, 那算了吧")
+			say("")
+			say_item_vnum("60001")
+			say("")
+		end	
+		when 20008.chat."請給我皮革" with pc.getqf("leather_done")==1 begin
+				target.delete("__TARGET1__")
+				say("我剛才給您了.")
+				say("您應該忘記了吧 !")
+				say("我不能再給您. ")
+				say("")
+		end	
+
+
+		when 20005.chat."請給我石炭" with pc.getf("subquest_6","coal_done") == 0 begin
+			if pc.count_item(30044) >= 1 then
+				pc.setqf("coal_done", 1)
+				pc.remove_item("30044", 1)
+
+				say("製陶人 :")
+				say("謝謝了, 你的能力應該很好.")
+				say("阿~ 現在我給你石炭.")
+				say("")
+				if  pc.getqf("ironore_done") == 1 and pc.getqf("leather_done") == 1 and pc.getqf("coal_done") == 1 then 
+					set_state(back_to_blacksmith)
+				
+				end
+				return
+			end
+			say("製陶人 :")
+			say("有什麼事嗎?")
+			say("我們之前好像已經見過了.")
+			say("你要找石炭嗎? 我這裡有很多石炭.")
+			say("但是我不會免費給你.")
+			say("如果你幫我做一件事情的話, 我會給你石炭.")
+			say("最近製作陶瓷的時候, 需要的粘土不足")
+			wait()
+			say("如果沒有粘土的話, 不能製作陶瓷.")
+			say("你可以幫我找多一些粘土.")
+			say("你可以從飢餓野豬首領拿到粘土.")
+			say("飢餓野豬首領不是那麼簡單的對手, 你要小心哦.")
+			say("麻煩你了.")
+			say_item_vnum("30044")
+		end
+		when 20005.chat."請給我石炭" with pc.getqf("coal_done")==1 begin
+				target.delete("__TARGET3__")
+				say("什麼?")
+				say("我剛才給您了吧 !")
+				say("")
+		end	
+
+
+		when 171.kill  begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30132")==0  then
+				pc.give_item2("30132", 1)
+			end
+		end
+				
+		
+		when 180.kill  begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("60001")==0  then
+				pc.give_item2("60001", 1)
+			end
+		end
+
+		when 179.kill  begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30044")==0  then
+				pc.give_item2("30044", 1)
+			end
+		end
+
+		when 20016.chat."取得材料" begin
+			if pc.getqf("ironore_done") != 1 then
+				say("王鐵匠 :")
+				say("你還沒有得到鐵礦石嗎?")
+				say("去找老學究吧.")
+				say("")
+				return
+			end	
+
+			if pc.getqf("leather_done") != 1 then
+				say("王鐵匠 :")
+				say("你還沒有得到皮革嗎?")
+				say("去找孫老闆.")
+				say("")
+				return
+			end	
+			if pc.getqf("coal_done") != 1 then
+				say("王鐵匠 :")
+				say("你還沒有得到石炭嗎")
+				say("去找製陶人.")
+				say("")
+				return
+				
+			end
+		end
+	end	
+	state back_to_blacksmith begin
+		when letter begin
+			send_letter("尋找材料完成")
+			
+			local v=find_npc_by_vnum(20016)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v," 回去找王鐵匠")
+			end
+		end
+		
+		when info or button begin
+			say(locale.NOTICE_COLOR.."防禦器訂單"..locale.NORMAL_COLOR)
+			say("")
+			say("尋找材料完成")
+			say("回去找王鐵匠")
+			say("")
+		end	
+		
+		when __TARGET__.target.click or
+			20016.chat."取得材料" with pc.getqf("ironore_done") == 1 and pc.getqf("leather_done") == 1 and pc.getqf("coal_done") == 1 begin
+				say("王鐵匠 :")
+				say("什麼? 您已經拿到材料了嗎?")
+				say("哈哈哈 做的好, 謝謝你了.")
+				say("因為你的幫忙, 我會給防禦店老闆的物品.")
+				say("嗯~ 這是個好消息, 您可以幫我跟防禦店老闆說一說.")
+				say("")
+				set_state(resource_complete)
+		end
+	end
+	state resource_complete begin
+		when info or button begin
+			say(locale.NOTICE_COLOR.."防禦器訂單"..locale.NORMAL_COLOR)
+			say("報告防禦店老闆現在的結果.")
+			say("")
+		end
+
+		when letter begin
+			send_letter("報告防禦店老闆現在的結果.")
+		    
+			local v=find_npc_by_vnum(9002)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v," 去找防禦店老闆")
+			end
+		end	
+				
+				
+		when __TARGET__.target.click or
+			9002.chat."王鐵匠的查看的結果" begin
+			target.delete("__TARGET__")
+			say("防禦店老闆 :")
+			say("嗯~ 王鐵匠跟您說很快寄給我物品了吧.")
+			say("我知道了, 這是給您的報酬.")
+			say("")
+
+			pc.give_exp2(26000)
+			set_quest_state("levelup","run")
+			pc.change_money(5000)
+
+			pc.give_item2("30003", 1)
+
+			say_reward("獲得經驗值 26000.")
+			say_reward("獲得金錢5000兩.")
+			say_reward("獲得 豬鼻子.")
+		
+			clear_letter()	
+			set_state(__COMPLETE__)
+
+			if pc.job == 0 then
+				pc.give_item2("11223", 1)
+				say_reward("獲得赤金甲+3.")
+			elseif pc.job == 1 then
+				pc.give_item2("11423", 1)
+				say_reward("獲得金羽衣+3.")
+			elseif pc.job == 2 then
+				pc.give_item2("11623", 1)
+				say_reward("獲得金絲鎧+3.")
+			elseif pc.job == 3 then
+				pc.give_item2("11823", 1)
+				say_reward("獲得金綾衫+3.")
+
+			end
+			pc.setqf("ironore_done",0)
+			pc.setqf("leather_done" ,0)
+			pc.setqf("coal_done",0)
+		end
+	end
+
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+	end
+end
+

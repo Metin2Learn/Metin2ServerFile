@@ -1,0 +1,302 @@
+----------------------------------------------------
+-- SUB QUEST
+-- LV 15
+-- 月餅?!
+----------------------------------------------------
+
+quest subquest_8 begin
+	state start begin
+		when login or levelup with pc.level >= 15 and pc.level <= 20 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+						
+			local v = find_npc_by_vnum(20003)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "分支任務8 月餅?!")
+			end
+		end
+
+				
+		when __TARGET__.target.click or
+			20003.chat."月餅?!" with pc.level >= 15 begin
+			target.delete("__TARGET__")
+
+			say("蓮嫂 :")
+			say("不好意思 , 你可以幫我嗎.")
+			say("你也見到我的孩子不斷在哭")
+			say("我要找辦法讓他安靜下來")
+			say("唉呀~ 我不知道應該怎麼做才好.")
+			say("他第一次給她吃過的時候, ")
+			say("她很快安靜下來")
+			say("你知道怎麼才可以拿到月餅呢?")
+			say("從西方過來的武器店老闆會知道")
+			say("你去找他問問關於月餅的事情.")
+			say("")
+
+			local s=select("接受.","拒絕.")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("蓮嫂:")
+					say("您說你很忙…")
+					say("那好的, 下次再來吧. ")
+					say("唉呀 ~ 不要哭 ~ 我的孩子.")
+					return
+				end
+				say("那知道了.")
+				say("路上小心 ~")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("蓮嫂:")
+			say("您說可以幫我的忙嗎?")
+			say("謝謝^^")
+			say("")
+			set_state(ask_for_ricecake)
+
+		end
+	end
+
+	state ask_for_ricecake begin
+		when letter begin
+			send_letter("月餅?!")
+		
+			local v=find_npc_by_vnum(9001)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v,"去找武器店老闆")
+			end
+
+		end	
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."月餅?!"..locale.NORMAL_COLOR)
+			say("去問問武器店老闆關於月餅的事情.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			9001.chat." 請給我月餅" begin
+			target.delete("__TARGET__")
+			say("武器店老闆 :")
+			say("嗯? 月餅? 那到底是在哪可以使用的東西呢?")
+			say("這是我認識的武器名字嗎? 我不太清楚...")
+			say("阿! 原來是吃的.")
+			say("吃的東西~ 你可以去問問孫老闆.")
+			say("他對料理非常清楚的專家.")
+			say("")
+
+			set_state(ask_for_ricecake2)
+		end
+	end
+
+	state ask_for_ricecake2 begin
+		when letter begin
+			send_letter("月餅?!")
+		
+			local v= find_npc_by_vnum(20008)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v," 去找孫老闆孫老闆")
+			end
+
+		end	
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."月餅?!"..locale.NORMAL_COLOR)
+			say("去問問孫老闆關於月餅的事情.")
+			say("")
+		end
+
+		when __TARGET__.target.click or
+			20008.chat." 請給我月餅" begin
+			target.delete("__TARGET__")
+			say("孫老闆 :")
+			say("哈哈~ 月餅有鬆軟的外皮, ")
+			say("還有甜美的餡料.")
+			say("你說那個吃的東西嗎?")
+			say("這是我以前吃過幾次的.")
+			say("阿~ 我覺得你去找賣月餅的圓圓的話")
+			say("可以取得月餅.")
+			say("")
+			local s=select("再試試","放棄.")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("孫老闆:")
+					say("您沒有空的話, 那算了吧.")
+					say("下次有空的時候, 再來吧.")
+					return
+				end	
+				say("孫老闆:")
+				say("您覺得很難做得到嗎?")
+				say("知道了~ 路上小心.")
+				set_state(__GIVEUP__)
+				return
+			end
+				
+			say("孫老闆:")
+			say("您是真的個好人.")
+			say("路上小心")
+			set_state(ask_for_ricecake3)
+		end
+	end
+
+	state ask_for_ricecake3 begin
+		when letter begin
+			send_letter("月餅?!")
+		
+			local v=find_npc_by_vnum(20012)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v,"去找圓圓")
+			end
+
+		end	
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."月餅?!"..locale.NORMAL_COLOR)
+			say("去找圓圓問問月餅的事情")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20012.chat." 請給我月餅" begin
+			target.delete("__TARGET__")
+			say("武器店老闆 :")
+			say("嗯? 月餅? 那到底是在哪可以使用的東西呢?")
+			say("這是我認識的武器名字嗎? 我不太清楚...")
+			say("阿! 原來是吃的.")
+			say("吃的東西~ 你可以去問問孫老闆.")
+			say("他對料理非常清楚的專家.")
+			say("")
+
+			set_state(ask_for_ricecake4)
+		end
+	end
+
+	state ask_for_ricecake4 begin
+		when letter begin
+			send_letter("月餅?!")
+		
+			local v=find_npc_by_vnum(20014)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v,"去找小強")
+			end
+
+		end	
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."月餅?!"..locale.NORMAL_COLOR)
+			say("為了取得月餅去勸諭小強")
+			say("")
+		end
+	
+		
+		when __TARGET__.target.click or
+			20014.chat."你為什麼欺負圓圓呢?!" begin
+			target.delete("__TARGET__")
+			say("小強 :")
+			say("阿? 賣月餅的女孩子嘛?")
+			say("我跟她只是開玩笑的,")
+			say("阿~ 不是我欺負她!")
+			say("我感覺有點悶, 還有她賣月餅的時候太辛苦")
+			say("所以我只跟他開玩笑而已.")
+			say("我沒什麼壞意這樣做...")
+			say("下次 我不會這樣做的, 我保證.")
+
+
+			set_state(report_to_girl)
+		end
+	end
+
+	state report_to_girl begin
+		when letter begin
+			send_letter("月餅?!")
+
+			local v=find_npc_by_vnum(20012)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v,"獲得圓圓的月餅 ")
+			end
+
+		end	
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."月餅?!"..locale.NORMAL_COLOR)
+			say("獲得圓圓的月餅")
+			say("")
+		end
+	   
+	
+		when __TARGET__.target.click or
+			20012.chat."請給我月餅" begin
+			target.delete("__TARGET__")
+			say("圓圓 :")
+			say("哈哈哈~ 你勸諭小強了吧?")
+			say("謝謝你了.")
+			say("阿~ 我給你月餅.")
+			say("我不知道你在哪裡使用, 請你慢用.")
+			say("")
+
+			set_state(reward_go)
+		end
+	end
+
+	state reward_go begin
+		when letter begin
+			send_letter("月餅?!")
+
+			local v=find_npc_by_vnum(20003)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v,"交還月餅給蓮嫂")
+			end
+
+		end	
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."月餅?!"..locale.NORMAL_COLOR)
+			say("交還月餅給蓮嫂")
+			say("")
+		end	
+
+		when __TARGET__target.click or
+			20003.chat." 這月餅…" begin
+			target.delete("__TARGET__")
+			say("蓮嫂 :")
+			say("唉呀~ 你總於找到了月餅, 謝謝你了!")
+			say("我的孩子不要再哭, 吃些好吃的月餅吧.")
+			say("因為你的幫忙我的孩子安靜下來了.")
+			say("非常感謝你")
+
+			pc.give_exp2(26000)
+			set_quest_state("levelup","run")
+			pc.change_money(10000)
+
+			say_reward("獲得經驗值 26000.")
+			say_reward("獲得金錢 10000 兩.")
+			say("")
+
+			pc.give_item2(50721,2)
+			pc.give_item2(50722,2)
+			say_reward("獲得了草藥物品")
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+	state __GIVEUP__ begin
+	end
+	
+	state __COMPLETE__ begin
+	end
+end

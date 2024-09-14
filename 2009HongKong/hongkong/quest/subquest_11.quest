@@ -1,0 +1,195 @@
+----------------------------------------------------
+-- SUB QUEST
+-- LV 19
+-- 請幫忙尋找我的哥哥 Part1
+----------------------------------------------------
+
+quest subquest_11 begin
+	state start begin
+		when login or  levelup with pc.level >= 19 and pc.level <= 24 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20006)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "份支任務6 請幫忙尋找我的哥哥")
+			end
+		end
+
+		
+		when __TARGET__.target.click or
+			20006.chat." 請幫忙尋找我的哥哥" with pc.level >= 19 begin
+			target.delete("__TARGET__")
+
+			say("小虹 :")
+			say("不好意思, 你可以幫我一個忙嗎?")
+			say("我的哥哥出去間已經很久而且沒有消息, ")
+			say("到現在沒有回家.")
+			say("沒有哥哥, 我很不安...")
+			say("你可以幫我找我的哥哥嗎.")
+			wait()
+			say("哥哥他跟我說他去旁邊的城市")
+			say("跟樂師會面.")
+			say("你去找樂師的話")
+			say("你可以知道我哥哥的消息.")
+			say("求求你.")
+			say("")
+
+			local s=select("接受.","拒絕.")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+					if  2==a then
+						say("小虹:")
+						say("我什麼時候可以找到我哥哥呢 嗚嗚~")
+						say("如果您有空的話, ")
+						say("再來找我好嗎?")
+						say("那再見了.")
+						return
+					end
+					say("小虹:")
+					say("我什麼時候可以找到我哥哥呢 嗚嗚~")
+					say("我知道了~ 再見.")
+					set_state(__GIVEUP__)
+					return
+				end
+				say("小虹:")
+				say("您可以幫我的忙嗎? ")
+				say("我終於會找到我哥哥.")
+				say("謝謝您.")
+				say("")
+				set_state(find_brother)
+
+		end
+	end
+
+	state find_brother begin
+		when letter begin
+			send_letter("請幫忙尋找我的哥哥")
+			
+			local v= find_npc_by_vnum(20017)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v,"向樂師詢問有關小虹哥哥的消息")
+			end
+				
+		end	
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."請幫忙尋找我的哥哥"..locale.NORMAL_COLOR)
+			say("向樂師詢問有關小虹哥哥的消息")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20017.chat." 您看過小虹的哥哥嗎?" begin
+			target.delete("__TARGET__")
+			say("樂師:")
+			say("玫瑰阿玫瑰~ 我愛你~ 玫瑰阿玫瑰. . . .")
+			say("嗯? 你找我有什麼事嗎? 小虹的哥哥?")
+			say("他跟我聊了一會, 然後他說他發現很珍貴的草藥")
+			say("所以他去山上找...")
+			say("以後的事情我也不太清楚.")
+			say("在這個城市的獵人他常常去山上")
+			say("你可以問問他們.")
+			say("玫瑰阿玫瑰~ 我愛你~ 玫瑰阿玫瑰~")
+			say("")
+
+			set_state(ask_to_hunter)
+		end
+	end
+
+	state ask_to_hunter begin
+		when letter begin
+			send_letter("請幫忙尋找我的哥哥")
+			
+			local v= find_npc_by_vnum(20019)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v," 去找獵人問問小虹哥哥的消息.")
+			end
+
+		end	
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."請幫忙尋找我的哥哥"..locale.NORMAL_COLOR)
+			say("去找獵人問問小虹哥哥的消息.")
+			say("")
+		end
+		
+		when  __TARGET__.target.click or
+			20019.chat." 你看過小虹的哥哥嗎?" begin
+			target.delete("__TARGET__")
+			say("獵人:")
+			say("最近世上的情況很亂, 所以狩獵動物也不簡單.")
+			say("嗯?小虹的哥哥?")
+			say("他在山很認真挖草藥 ?")
+			say("發現了很好的草藥, 所以他很開心 .")
+			say("他做這麼認真的理由就是")
+			say("想好好照顧她的妹妹, 她是個一個很好人.")
+			say("我剛剛見到他了, 他因該幾天之後就可以回家")
+			say("")
+	
+			set_state(back_to)
+		end
+	end
+
+	state back_to begin
+		when letter begin
+			send_letter("請幫忙尋找我的哥哥")
+			
+			local v= find_npc_by_vnum(20006)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v,"去找小虹告訴他哥哥的消息.")
+			end
+
+		end	
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."請幫忙尋找我的哥哥"..locale.NORMAL_COLOR)
+			say("去找小虹告訴他哥哥的消息.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or 
+			20006.chat."哥哥的消息" begin
+			target.delete("__TARGET__")
+			say("小虹 :")
+			say("阿! 哥哥寄給了我一封信.")
+			say("他要拿到很多好草藥後, 才會回家.")
+			say("這次他需要比較長時間.")
+			say("不好意思. 我給你太多麻煩...")
+			say("這不是很好的東西, 但是我這是我表示對你的感謝.")
+			say("謝謝你的幫忙.")
+			say("")
+
+			pc.give_exp2(122000)
+			set_quest_state("levelup","run")
+			
+			say_reward("獲得了草藥物品")
+			pc.give_item2(50724,2)
+			pc.give_item2(50723,2)
+
+			pc.change_money(5000)
+
+			say_reward("獲得經驗值 122000")
+			say_reward("獲得金錢 5000 兩.")
+			say("")
+
+			clear_letter()		
+			set_state(__COMPLETE__)
+		end
+	end
+	
+	state __GIVEUP__ begin
+	end
+	
+	state __COMPLETE__ begin
+	end
+end

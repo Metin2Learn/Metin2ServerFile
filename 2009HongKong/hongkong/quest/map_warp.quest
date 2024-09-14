@@ -1,0 +1,226 @@
+-- ?? ???? ??
+quest map_warp begin
+	state start begin
+		when 9012.chat."你想移動嗎?"  begin
+			say("空間移動術師: ")
+			say("誠實的感覺真好..")
+			say("你有什麼事嗎?")
+			say("你應該想去一個地方吧")
+			say("最近惡魂的力量越來越強, 時空間座標出現了問題")
+			say("無法使用以前的傳送卷和超級記憶卷..")
+
+			say("嗯.. 你想移動嗎?")
+
+			local main_set = select("是","不是")
+			if main_set == 2 then
+				return
+			end
+			
+			if pc.get_level() <= 10 then
+				say("嗯..現在的你的能力, ")
+				say("你不能抵禦空間變化的衝擊..")
+				say("等級到10級的話, ")
+				say("才可以抵禦空間變化的衝擊.")
+				say("")
+				return
+			end
+
+			local map = pc.get_map_index()
+			local empire = pc.get_empire()
+			local level = pc.get_level()
+			local cost = math.floor(level / 5) * 1000
+
+			-- ?? ????
+			if cost < 1000 then
+				cost = 1000
+			end
+
+			say("空間移動術師: ")
+			say("你想移動到哪裡?")
+			say_reward(string.format("移動費用是 %d 兩", cost))
+			say("")
+
+			-- ?? ?? ???? ?? ?? (? ?? 1,2 ??)
+			if map == 1 or map == 3 or map == 21 or map == 23 or map == 41 or map == 43 then
+
+				local guild_map_names = {
+					"中浪縣",
+					"臥龍縣",
+					"藏龍谷",
+				}
+
+				guild_map_name = guild_map_names[empire]
+				local empire_castle={
+					"新受城",
+					"天調城",
+					"進勞城",
+				}
+				empire_castle =empire_castle[empire]
+				local sub_set = 0
+				if level < 60 then -- 60?? : ?????, ???, ????, ???
+					sub_set = select(guild_map_name, "昇龍谷", "影悲沙漠", "舒寒山", empire_castle,"關閉")
+					if sub_set == 6 then -- ??
+						return
+					end
+
+				else -- 61?? : ????, ???, ????, ????
+					sub_set = select(guild_map_name, "昇龍谷", "影悲沙漠", "舒寒山",  empire_castle,"其次")
+					if sub_set == 6 then -- ??
+						say("空間移動術師: ")
+						say("這裡是等級60 級以上, 才可以進入的地圖")
+						say_reward(string.format("但是, 移動費用是 %d 兩", cost))
+						say("")
+						sub_set = select("閻魔火地", "邪鬼塔", "之前", "關閉") + 5
+						if sub_set == 9 then -- ??
+							return
+						end
+						if sub_set == 8 then -- ??
+							say("空間移動術師: ")
+							say("你快說你想去哪裡")
+												 ---                                                   l
+							say_reward(string.format("移動費用是 %d 兩", cost))
+							say_reward("你快說吧! 到底你想去哪裡?")
+							say("")
+							sub_set = select(guild_map_name, "昇龍谷", "影悲沙漠", "舒寒山",  empire_castle,"其次")
+							if sub_set == 6 then -- ??
+								say("空間移動術師: ")
+								---                                                   l
+								say("我剛才跟你說過了...")
+								say("這裡是60 等級以上, 才可以移動的地圖.")
+								say("你想不想移動?")
+								say("你不想移動的話, 快離開吧. 你想移動嗎?")
+								say("還有~ ")
+								say("")
+								say_reward(string.format("移動費用是 %d 兩", cost))
+								say("")
+								sub_set = select("閻魔火地", "邪鬼塔", "關閉") + 5
+								if sub_set == 8 then -- ??
+									return
+								end
+							end
+						end
+					end
+				end
+
+				if pc.gold < cost then
+					say("空間移動術師:")
+					say("我也想幫你免費移動")
+					say("但是我要養我的家人.")
+					say("所以我必須要收移動費")
+					say("世界上任何的事情都需要付錢吧.")
+					say_reward(string.format("移動費用是 %d 兩", cost))
+					say("")
+					return
+				end
+
+				pc.changegold(-cost)
+
+				local warp = {
+                    -- guild_map
+                    {
+                        { 128500, 1000 },
+                        { 179500, 1000 },
+                        { 271800, 13000 },
+                    },
+                    -- 64 map_n_threeway
+                    {
+                        { 402100, 673900 },
+                        { 270400, 739900 },
+                        { 321300, 808000 },
+                    },
+                    -- 63 metin2_map_n_desert_01
+                    {
+                        { 217800, 627200 },
+                        { 221900, 502700 },
+                        { 344000, 502500 },
+                    },
+                    -- 61 map_n_snowm_01
+                    {
+                        { 434200, 290600 },
+                        { 375200, 174900 },
+                        { 491800, 173600 },
+                    },
+					{--empire_castle
+						{975200, 133000},
+						{977200, 185000},
+						{923900, 183600},
+					
+					} ,
+                    -- 62 metin2_map_n_flame_01
+                    {
+                        { 599400, 756300 },
+                        { 597800, 622200 },
+                        { 730700, 689800 },
+                    },
+                    -- devil_tower
+                    {
+                        { 590500, 110500 },
+                        { 590500, 110500 },
+                        { 590500, 110500 },
+                    },
+				}
+				test_chat(warp[sub_set][empire][1]..warp[sub_set][empire][2])
+				say("空間移動術師:")
+				say("我現在就傳送你.")
+				say("但是你移動到戰將的中間..")
+				say("你要保重...再見..")
+				wait()
+				pc.warp(warp[sub_set][empire][1], warp[sub_set][empire][2])
+			
+
+			else -- ? ?? 1,2 ? ??? ?????? ? ?? 1,2 ? ??? ?? ??	
+				local sub_set2 = 3
+
+				--sub_set2 = select(locale.vileage1_name[empire], locale.vileage2_name[empire], locale.cancel)
+				if empire==1 then    
+					sub_set2 = select("永安邑城","資陽縣" , locale.cancel)
+				elseif  empire ==2 then  
+					sub_set2 = select("潮安邑城","福鼎縣" , locale.cancel)
+				elseif  empire ==3 then 
+					sub_set2 = select("平武邑城","薄羅縣" , locale.cancel)
+				end	
+				if sub_set2 != 3 then
+					if pc.gold < cost then
+						say("空間移動術師:")
+						say("我也想幫你免費移動")
+						say("但是我要養我的家人.")
+						say("所以我必須要收移動費")
+						say("世界上任何的事情都需要付錢吧.")
+						say_reward(string.format("移動費用是 %d 兩", cost))
+						say("")
+					else
+						if sub_set2 == 1 then
+							say("空間移動術師:")
+							say("我現在就傳送你.")
+							wait()
+
+							if empire == 1 then
+								pc.warp(474300,954800)
+							elseif empire == 2 then
+								pc.warp(63800,166400)
+							elseif empire == 3 then
+								pc.warp(959900,269200)
+							end	
+						elseif sub_set2 == 2 then
+							say("空間移動術師:")
+							say("我現在就傳送你.")
+							say("")
+							say("")
+							wait()
+							if empire == 1 then
+								pc.warp(353100,882900)
+							elseif empire == 2 then
+								pc.warp(145500,240000)
+							elseif empire == 3 then
+								pc.warp(863900,246000)
+							end	
+						end
+
+						pc.changegold(-cost)
+					end
+				end
+			end
+		end -- end_of_chat
+ 	end -- end_of_state
+end -- end_of_quest
+

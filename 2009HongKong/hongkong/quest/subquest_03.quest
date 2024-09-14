@@ -1,0 +1,175 @@
+----------------------------------------------------
+-- SUB QUEST
+-- LV 8
+-- 尋找藥的材料
+----------------------------------------------------
+
+quest subquest_3 begin
+	state start begin
+		when login or levelup with pc.level >= 8 and pc.level <= 13 begin
+			set_state(information)
+		end	
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20018)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "尋找藥的材料")
+			end
+		end
+	
+		when __TARGET__.target.click or
+			20018.chat." 你可以幫我好嗎?" begin
+			target.delete("__TARGET__")
+			say("醫生:")
+			---                                                   l
+			say("你可以幫我好嗎?")
+			say("惡運石掉下來之後,")
+			say("不知道殭屍菌開始發生的原因.")
+			say("很多醫生正在很認真研究")
+			say("現在要的材料不夠, 所以有時候不能治療人.")
+			say("城市的附近, 出現很多兇猛動物.")
+			say("所以我們沒有辦法找到藥的材料... ")
+			say("")
+			wait()
+			say("醫生 :")
+			say("你可以幫我們找到藥的材料嗎.")
+			say("你是士兵, 應該沒有問題吧?")
+			say("需要的藥的材料, 可以從飢餓青狼取得到")
+			say("飢餓青狼的肝臟.")
+			say_item_vnum(30029)
+			wait()
+			say("請你找飢餓青狼的肝臟一個")
+			say("之後向我報告.")
+			say("")
+
+			local s=select("接受.","拒絕.")
+			if 2 == s then
+				say("您想放棄任務嗎?")
+
+				local a=select("是","不是")
+				if  2==a then
+					say("醫生:")
+					say("怎麼也好. 下次再來吧.")
+					return
+				end			
+
+				say("醫生:")
+				say("路上小心.")
+				set_state(__GIVEUP__)
+				return
+			end
+
+			say("醫生")
+			say("謝謝你.. 我不能忘記您的恩惠. ")
+			say("")
+			set_state(hunt_for_wolf)
+
+		end
+	end
+
+	state hunt_for_wolf begin
+		when letter begin
+			send_letter("尋找藥的材料")
+		end
+		when button or info begin
+			say_title("尋找藥的材料")
+			---                                                   l
+			say("惡運石掉下來了之後, 常常發生殭屍菌的問題")
+			say("為了治療殭屍菌需要飢餓青狼的肝臟")
+			say("取得飢餓青狼的肝臟之後交還給醫生")
+			say_item_vnum(30029)
+			say("")
+		end
+
+		when 174.kill begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30029")==0 then
+				pc.give_item2("30029", 1)
+				send_letter("獲得飢餓青狼的肝臟")	
+				local v = find_npc_by_vnum(20018)
+
+				if v != 0 then
+					target.vid("__TARGET__", v, "回去找醫生")
+				end
+			end
+	
+
+		end
+		
+	
+    	when 20018.chat." 為了獲得飢餓青狼的肝臟" with pc.count_item(30029) == 0 begin
+			say("醫生:")
+			---                                                   l
+			say("我們沒有看見飢餓青狼怎麼拿到肝臟呢")
+			say("首先我們一定要剷除飢餓青狼")
+			say_item_vnum(30029)
+			say("殺死動物是很殘忍的事情")
+			say("但是, 為了製作藥, 我們需要肝臟.")
+			say("")
+
+			local s=select("再試試.","放棄.")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("醫生:")
+					say("現在對付灰狼會比較難.")
+					say("但是, 您努力修練的話, 可以做得到.")
+					say("家有 !")
+					return
+				end	
+				say("醫生:")
+				say("您做不到嗎?")
+				say("知道了~ 路上小心.")
+				set_state(__GIVEUP__)
+				return
+			end
+				
+			say("醫生:")
+			say("現在您的能力的話, 您可以對付飢餓青狼. ")
+			say("拜託您. ")
+			
+		 end
+
+		
+		when __TARGET__.target.click or
+			20018.chat."取得藥的材料" with pc.count_item(30029) > 0 begin
+
+			target.delete("__TARGET__")
+
+			say("醫生 :")
+			say("謝謝~ 因為你的幫助!")
+			say_item_vnum(30029)
+			say("我們可以救很多病人的病.")
+			say("")
+			wait()
+			say("醫生 :")
+			say("這是我對你感謝, 拿去吧.")
+			say_item_vnum(30027)
+			say("")
+
+			say_title("報酬")
+			say_reward("經驗值 3000")
+			say_reward("金錢 5000 兩")
+			say_reward("物品 灰狼毛")
+			say("")
+
+			pc.remove_item(30029)
+			pc.give_exp2(3000)
+			set_quest_state("levelup","run")
+			pc.change_money(5000)
+			pc.give_item2("30027", 1)
+
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+	end
+end
+

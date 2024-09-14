@@ -1,0 +1,168 @@
+----------------------------------
+--	Main Quest LV2
+--	第一訓練 	
+----------------------------------
+
+quest main_quest_lv2 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter with pc.get_level() >= 2 begin
+			setstate( gototeacher )
+		end
+		when 20354.chat." 你在做什麼?" with pc.get_level() < 2 begin
+			say("新兵教官:")
+			say("你還是等級1 , 快去取得多經驗值吧?")
+			say("到等級2的時候, 再來找我吧 ")
+			say("")
+		end
+	end
+	state gototeacher begin
+		when letter begin
+			send_letter("新兵教官的信")
+
+			local v=find_npc_by_vnum(20354)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找新兵教官")
+			end
+		end
+		when button or info begin
+			say_title("新兵教官的信 ")
+			say("看你收到了這封信, 你已經取得 等級2 級.")
+			say("恭喜你! 我會給你第一訓練, 你來找我吧!")
+			say("")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say_title("第一訓練")
+			say("")
+			say("新兵教官:")
+			---                                                   l
+			say("你的動作還很慢, 現在你會使用劍嗎? ")
+			say("現在你的能力, 你會對付發瘋的動物")
+			say("首先, 我測試你的基礎能.")
+			say("為了測試你的基礎能力")
+			say("請你去城市的附近, 剷除 10隻幼狼")
+			say("之後再來找我.")
+			say("")
+			wait()
+			say("新兵教官 :")
+			say("幼狼是很簡單的對手, 所以很快剷除它們後, 回來吧.")
+			say("如果, 你做不到這麼簡單的事情, 你很難生存在這個環境!")
+			say("不要浪費時間, 快去吧!")
+			say("")
+			say_reward("任務完成時候, 可以獲得報酬")
+			say_reward("經驗值 250" )
+			say_reward("金錢1000 兩")
+			say_reward("物品"..item_name(27001).." 50 個" )
+			say("")
+			set_state( killdog )	
+
+			pc.setqf("state", 0)
+			q.set_counter("剩下 幼狼 數量", 0)
+		end
+
+	end
+
+	state killdog begin
+		when letter begin
+			send_letter("第一訓練")
+		end
+		when button or info begin
+			say_title("第一訓練")
+			say("剷除 10隻幼狼")
+			say("")
+
+			say_reward( "現在剷除幼狼".." "..pc.getqf("state").."隻")
+			say("")
+		end
+		when 101.kill begin
+			local count = pc.getqf("state") + 1
+
+			if count <= 10 then
+				pc.setqf("state", count)
+				q.set_counter("剩下的幼狼數量", 10 - count)
+
+				if count == 10 then
+					say_title("完成第一訓練")
+					say("成功剷除10隻幼狼. 回去報告新兵教官.")
+					set_state(gototeacher2)
+				end
+			end
+		end
+		when 20354.chat."關於 第一任務" with pc.getf("main_quest_lv2","state") < 10 begin
+			say("新兵教官 :")
+			say("如果, 你怕只剷除 10隻幼狼的事情")
+			say("不能說你是ㄧ個軍人?")
+			say("")
+
+			if pc.is_gm() then
+				wait()
+				say("管理員任務:")
+				say("你想結束這個任務嗎?")
+				local s = select("是", "不是")
+				if s == 1 then
+					set_state(gototeacher2)
+				end
+			end
+		end
+		when 20354.chat."關於第一個任務" with pc.getf("main_quest_lv2","state") >= 10 begin
+			say("新兵教官 :")
+			say("你什麼時候可以完成任務?")
+			say("你是不是做了一些非法的事情?")
+			say("怎麼也好, 下次升級的時候再來吧")
+			say("")
+			set_state(gototeacher2)
+		end
+	end
+	state gototeacher2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20354)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找教官")
+			end
+		end
+		when letter begin
+			send_letter("完成第一個訓練任務")
+		end
+		when button or info begin
+			say_title("完成第一個訓練任務")
+			say("完成剷除10隻幼狼. 回去報告新兵教官.")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say("新兵教官 :")
+			say("你做的好,")
+			say("但是這樣的事情什麼人都可以做到的.")
+			say("我訓練新兵的時候,")
+			say("我做的比現在更難. ")
+			say("這是藥水跟金錢,")
+			say("使用這個好好努力吧.")
+			say("我會再找你,")
+			say("再見了.")
+			say("")
+
+			say_reward("經驗值 250" )
+			say_reward("金錢 1000 兩")
+			say_reward("物品 "..item_name(27001).." 50 個" )
+
+			pc.give_exp2( 250 )
+			set_quest_state("levelup","run")
+			pc.change_money( 1000 )
+			pc.give_item2( 27001 ,50 ) 
+
+			clear_letter()
+			set_state( __COMPLETE__ )
+			set_quest_state("main_quest_lv3", "run")
+
+			pc.setqf("state", 0) --– 如果再設定任務變數的話,  DB 負荷可以下降. 
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end
+

@@ -1,0 +1,217 @@
+----------------------------------------------------
+-- SUB QUEST
+-- LV 18
+--  請你找繡花鞋
+----------------------------------------------------
+
+quest subquest_10 begin
+	state start begin
+		when login or levelup with pc.level >= 18 and pc.level <= 23 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+		
+			local v = find_npc_by_vnum(9003)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "分支任務6 請你找繡花鞋")
+			end
+		end
+
+			
+		when __TARGET__.target.click or
+			9003.chat."請你找繡花鞋" with pc.level >= 18 begin
+			target.delete("__TARGET__")
+
+			say("雜貨店老闆 :")
+			say("不好意思, 你聽聽我的話好嗎")
+			say("我突然有點著急的事情, 所以我離開商店的時候")
+			say("我最喜歡的繡花鞋不見了.")
+			say("那是我爸爸送給我的生日禮物")
+			say("氣死我了,應該怎麼辦呢.")
+			say("我不能離開我的商店")
+			say("你可以幫我找找好嗎?")
+			say("我有點懷疑王鐵匠, 你可以幫我看看好嗎.")
+			say("")
+		  	local s=select("接受.","拒絕.")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("雜貨店老闆:")
+					say("下次有機會的話, 再來找我吧.")
+					say("再見.")
+					return
+				end
+				say("雜貨店老闆:")
+				say("那是我最喜歡的繡花鞋…")
+				say("怎麼也好, 下次見.")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("雜貨店老闆:")
+			say("您說~ 您可以幫我的忙嗎?")
+			say("謝謝您^^")
+			say("")
+			set_state(go_to_blacksmith)
+		
+		end
+	end
+
+	state go_to_blacksmith begin
+		when letter begin
+			send_letter("請你找繡花鞋")
+			
+			local v = find_npc_by_vnum(20016)
+
+			if v == 0 then
+			else
+				target.vid("__TARGET__", v, "去找王鐵匠問問關於繡花鞋的事情")
+			end
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.." 請你找繡花鞋"..locale.NORMAL_COLOR)
+			say("去找王鐵匠問問關於繡花鞋的事情")
+			say_item_vnum("30133")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20016.chat." 請給我繡花鞋" begin
+			target.delete("__TARGET__")
+			say("王鐵匠 :")
+			say("你說什麼? 我偷了繡花鞋?")
+			say("哈哈哈~ 你們覺得我是這樣的人嗎!")
+			say("我一直在這裡認真工作!")
+			say("阿~ 我剛才看過武器店老闆")
+			say("在雜貨店走來走去!")
+			say("")
+
+			set_state(ask_to_weaponshop)
+		end
+	end
+
+	state ask_to_weaponshop begin
+		when letter begin
+			send_letter("請你找繡花鞋")
+		
+			local v= find_npc_by_vnum(9001)
+			if v == 0 then
+			else
+				target.vid("__TARGET__", v, "去找武器店老闆問問關於繡花鞋的事情")
+			end
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."請你找繡花鞋"..locale.NORMAL_COLOR)
+			say("去找武器店老闆問問關於繡花鞋的事情")
+			say_item_vnum("30133")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			9001.chat."請給我繡花鞋." begin
+			target.delete("__TARGET__")
+			say("武器店老闆 :")
+			say("阿? 我偷了雜貨店老闆的繡花鞋?")
+			say("不不不..我不會做那樣的事情, 我真沒有做過~!")
+			say("阿~ 那是. . .我只去那邊...")
+			say("只想看看雜貨店老闆!")
+			say("但是她不在, 只看過有些"..mob_name(352).."經過")
+			say("所以我趕他們走.")
+			say("我覺得就是他們偷走了繡花鞋.")
+			say("")
+
+			set_state(hunt_for_shoes)
+		end
+	end
+
+	state hunt_for_shoes begin
+		when letter begin
+			send_letter("請你找繡花鞋")
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."請你找繡花鞋"..locale.NORMAL_COLOR)
+			say("從"..mob_name(352).."取得繡花鞋!")
+			say_item_vnum("30133")
+			say("")
+		end
+		
+		when 352.kill begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30133")==0  then
+				pc.give_item2("30133", 1)
+				
+				local v=find_npc_by_vnum(9003)
+				if 0== v then
+				else
+					target.vid("__TARGET__",v,"交還繡花鞋給雜貨店老闆")
+				end
+			end
+		
+		end
+		
+		when __TARGET__target.click or
+			9003.chat." 這繡花鞋.." begin
+			target.delete("__TARGET__")
+			if pc.count_item("30133") >= 1 then
+				say("雜貨店老闆 :")
+				say("謝謝你.")
+				say("我找到我很寶貴的東西.")
+				say("我每次都來麻煩你.")
+				say("所以非常感謝.")
+				say("")
+
+				pc.remove_item("30133", 1)
+
+				pc.give_exp2(60000)
+				 set_quest_state("levelup","run")
+				
+				pc.give_item2("30034", 1)
+
+				say_reward("獲得經驗值 60000.")
+				say_reward("獲得 白色紮.")
+				say("")
+
+				set_state(__COMPLETE__)
+			else
+				say("雜貨店老闆 :")
+				say("你還是找不到我的繡花鞋碼..")
+				say("拜託你")
+				say_item_vnum("30133")
+				say("")
+				say("")
+				local s=select("再試試.","放棄.")
+				if 2==s then
+					say("您想放棄任務嗎?")
+					local a=select("是","不是")
+					if  2==a then
+						say("雜貨店老闆:")
+						say(""..mob_name(352).."…不簡單的對手把…")
+						say("休息以後, 再試試吧.")
+						set_state(information)
+						return
+					end
+					say("雜貨店老闆:")
+					say("阿..到底我的繡花鞋在那裡呀…")
+					say("知道了, 那再見了.")
+					set_state(__GIVEUP__)
+					return
+				end
+				say("雜貨店老闆:")
+				say("謝謝您… 一切順風.")
+				say("")
+			end	
+		end
+	end
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+	end
+end

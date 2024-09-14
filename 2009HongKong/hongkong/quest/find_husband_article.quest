@@ -1,0 +1,110 @@
+quest find_husband_article begin
+    state start begin
+	when 20003.chat."取得任務" with pc.get_level()>=25 and pc.get_level()<=27 begin
+	    say("蓮嫂:")
+	    say("好孩子不要難過, 乖~")
+	    say("今天媽媽也是很難過, 你一直哭的話, 媽媽會生氣的喔!")
+	    say("不要再哭!")
+	    wait()
+	    say_pc_name()
+	    say("每天見到你都是很開心, 但是今天為什麼那麼難過啊?")
+	    wait()
+	    say("蓮嫂:")
+	    say("今天很難過, 人不會每天都是開心的.")
+	    say("我的老公在生前一直給我很多的麻煩, 但是現在他已經死了,")
+	    say("現在只留下了一個孩子和一些獎章.")
+	    wait()
+	    say("蓮嫂:")
+	    say("我出去工作的時候, 有人偷了那個獎章.")
+	    say("我鄰居跟我說, 那個小偷就是五狼兵.")
+	    say("如果我沒有孩子的話, 我一定會去把那個獎章拿回來.")
+	    say("")
+	    say("你可以幫我把獎章拿回來嗎?")
+	    say("")
+	    local b=select("好的", "抱歉~ 我很忙")
+	    if 1==b then
+		say("蓮嫂:")
+		say("你看上去不是很強, 你可以幫我拿回來嗎?")
+		say("如果你可以幫到我的話, 我會很感謝你.")
+		say("3個獎章為一組")
+		say("")
+		set_state(accept)
+	    elseif 2==b then
+		say("蓮嫂:")
+		say("看來你是一個很怕死的人")
+		say("見到五狼兵的時候一定會逃走, 再見了.")
+		say("")
+	    end
+	end
+    end
+    state accept begin
+	when letter begin
+	    send_letter("去找蓮嫂老公的獎章!")
+	end
+	when button or info begin
+	    say_title("去找蓮嫂老公的獎章!")
+	    say("去找蓮嫂老公的獎章")
+	    say("交還蓮嫂老公的獎章")
+	    say("")
+	    say_reward("拿到3個獎章後交還給蓮嫂.")
+	    say_reward("(獲得獎章數量 : "..pc.count_item(30041).." )")
+	    say("")
+	end
+	when 20003.chat."尋問有關蓮嫂老公的獎章" with pc.count_item(30041)==0 begin
+	    say("蓮嫂:")
+	    say("五狼兵會有我老公的獎章")
+	    say("誰知道他已經賣出去了...")
+	    say("因為那個獎章十分好")
+	    say("")
+	    say("是否需要繼續這個任務?")
+	    local s=select("進行", "放棄")
+	    if 1==s then
+	    elseif 2==s then
+		say("蓮嫂:")
+		say("看上去你很弱, 所以我對你沒有什麼期待")
+		say("那也沒有辦法了, 我只好自己去找.")
+		say("")
+		say("你真的想放棄這個任務?")
+		local s=select("是的", "不是")
+		if 1==s then
+		    say("你放棄了尋找蓮嫂老公獎章的任務")
+		    q.done()
+		    set_state(giveup)
+		elseif 2==s then
+		    say_pc_name()
+		    say("呵呵. 你這位夫人怎麼一直說我很弱")
+		    say("你等著~ 我一定會把你老公的獎章!")
+		    say("")
+		end
+	    end
+	end
+	when 20003.chat."交還蓮嫂老公的獎章" with pc.count_item(30041)>0 begin
+	    if pc.count_item(30041)<3 then
+		say("蓮嫂:")
+		say("雖然很感謝你... ")
+		say("但是我老公的獎章是3個一組. ")
+		say("你已經開始幫我開始找其他獎章嗎?")
+		say("如果這樣的話, 我會很感謝你的.")
+		say("")
+	    else
+		say("蓮嫂:")
+		say("唉唷~ 你怎麼這樣成功!")
+		say("嗯~ 你比你的樣子強得多")
+		say("這個就是我賣的白色紮, 新的新的.")
+		say("")
+		say_reward("這就是你任務的報酬, 獲得白色紮")
+		say_reward("你完成了這個任務!")
+		say("")
+		pc.remove_item(30041, 3)
+		pc.give_item2(30034)
+		q.done()
+		set_state(complete)
+	    end
+	end
+    end
+    state giveup begin
+    end
+    state complete begin
+    end
+end
+

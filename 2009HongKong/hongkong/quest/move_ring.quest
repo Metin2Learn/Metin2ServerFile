@@ -1,0 +1,54 @@
+quest move_ring begin
+	state start begin
+		when 80009.use begin 
+			if get_time() < pc.getqf("next_time") then
+				say_title("無法使用移動戒指！")
+				say("")
+				say_reward("移動戒指只能每小時使用一次！")
+				say("")	
+				say("")
+
+				if pc.is_gm() then
+					say("下次使用時間：")
+					say("")
+					say(string.format("    %s", time_to_str(pc.getqf("next_time"))))
+					say("")
+					say("GM可以為了測試而馬上重新設定時間。")
+					local s = select("設定", "不設定")
+					if s == 1 then
+						say("使用時間已經初始化")
+						say("")
+						pc.setqf("next_time", 0)
+					end
+				end
+				return;
+			end
+
+			say("移動戒指：")
+			say("使用後，會移至城市的中心！")
+			say("")
+			wait()
+
+			local s=select(
+				"要使用",
+				"不要使用")
+			if 1==s then
+				local empire = pc.get_empire()
+
+				if empire == 1 then
+					pc.warp(474300,954800)
+				elseif empire == 2 then
+					pc.warp(63800,166400)
+				elseif empire == 3 then
+					pc.warp(959900,269200)
+				end
+				
+				pc.setqf("next_time", get_time() + 3600)
+			elseif 2==s then
+				say("還是需要時才使用比較好！")
+				say("")
+			end
+		end
+	end
+end		
+

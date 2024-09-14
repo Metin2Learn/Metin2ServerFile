@@ -1,0 +1,279 @@
+quest notify_shopmeeting begin
+	state start begin
+		when 9005.chat."收到任務" with pc.level<=4 begin
+			say("今天商人們有一個會議, ")
+			say("如果有空的話")
+			say("你幫我問問雜貨店. 武器店. 防禦店老闆")
+			say("他們是否要參加這個會議")
+			local b=select("好的", "你想給我多少報酬")
+			if 1==b then
+				setstate(accept)
+			elseif 2==b then
+				say("呵呵~ 你的很精打細算的人")
+				say("不太難的事情, 所以500兩怎麼樣?")
+				local b=select("好的", "拒絕")
+				if 1==b then
+					setstate(accept)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state accept begin
+		when letter begin
+			local v=find_npc_by_vnum(9001)
+			if 0==v then
+			else
+				target.vid("target1", v, "")
+			end
+			local v=find_npc_by_vnum(9002)
+			if 0==v then
+			else
+				target.vid("target2", v, "")
+			end
+			local v=find_npc_by_vnum(9003)
+			if 0==v then
+			else
+				target.vid("target3", v, "")
+			end
+		end
+		when leave begin
+			target.delete("target1")
+			target.delete("target2")
+			target.delete("target3")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("去找商人們")
+			q.set_title("去找商人們")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 去找商人們"..locale.NORMAL_COLOR)
+			say("為了倉庫老人的請求, 去找商人們")
+			say("問問商人們是否參加這次的會議")
+			say("")
+			say("參加會議的列表")
+			say("")
+			if pc.getqf("target1")==11 then
+				say("武器商店老闆 : 參加(o) 不參加( )")
+			elseif pc.getqf("target1")==10 then
+				say("武器商店老闆: 參加( ) 不參加(o)")
+			elseif pc.getqf("target1")==0 then
+				say("武器商店老闆: 參加( ) 不參加( )")
+			end
+			if pc.getqf("target2")==11 then
+				say("防禦商店老闆: 參加(o) 不參加( )")
+			elseif pc.getqf("target2")==10 then
+				say("防禦商店老闆: 參加( ) 不參加(o)")
+			elseif pc.getqf("target2")==0 then
+				say("防禦商店老闆: 參加( ) 不參加( )")
+			end
+			if pc.getqf("target3")==11 then
+				say("雜貨商店老闆: 參加(o) 不參加( )")
+			elseif pc.getqf("target3")==10 then
+				say("雜貨商店老闆: 參加( ) 不參加(o)")
+			elseif pc.getqf("target3")==0 then
+				say("雜貨商店老闆: 參加( ) 不參加( )")
+			end
+			say("")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."去找商人們"..locale.NORMAL_COLOR)
+			say("為了倉庫老人的請求, 去找商人們")
+			say("問問商人們是否參加這次的會議")
+			say("")
+			say("參加會議的列表")
+			say("")
+			if pc.getqf("target1")==11 then
+				say("武器商店老闆 : 參加(o) 不參加( )")
+			elseif pc.getqf("target1")==10 then
+				say("武器商店老闆: 參加( ) 不參加(o)")
+			elseif pc.getqf("target1")==0 then
+				say("武器商店老闆: 參加( ) 不參加( )")
+			end
+			if pc.getqf("target2")==11 then
+				say("防禦商店老闆: 參加(o) 不參加( )")
+			elseif pc.getqf("target2")==10 then
+				say("防禦商店老闆: 參加( ) 不參加(o)")
+			elseif pc.getqf("target2")==0 then
+				say("防禦商店老闆: 參加( ) 不參加( )")
+			end
+			if pc.getqf("target3")==11 then
+				say("雜貨商店老闆: 參加(o) 不參加( )")
+			elseif pc.getqf("target3")==10 then
+				say("雜貨商店老闆: 參加( ) 不參加(o)")
+			elseif pc.getqf("target3")==0 then
+				say("雜貨商店老闆: 參加( ) 不參加( )")
+			end
+			say("")
+		end
+		when 9005.chat."查看商人會任務列表" begin
+			say("問問武器商店老闆, 防禦商店老闆, 雜貨商店老闆")
+			say("他們是否要參加這個會議")
+			say("")
+			local b=select("進行", "放棄")
+			if 1==b then
+			elseif 2==b then
+				say("嗯~ 你的能力不足")
+				say("我會去找其他人")
+				setstate(__COMPLETE__)
+				q.done()
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when target1.target.click begin
+			target.delete("target1")
+			local s=number(1, 2)
+			if 1>=s then -- 50.00% (1/2)
+				say("商人會阿...")
+				say("什麼時候要開始舉行這個會議呢. 等一下我先看看")
+				say("嗯, 應該沒有問題.")
+				say("跟倉庫老闆說我會參加.")
+				pc.setqf("target1", 11)
+				if pc.getqf("target1")!=0 then
+					if pc.getqf("target2")!=0 then
+						if pc.getqf("target3")!=0 then
+							setstate(report)
+						end
+					end
+				end
+			elseif 2>=s then -- 50.00% (1/2)
+				say("商人會阿...")
+				say("什麼時候要開始舉行這個會議呢. 等一下我先看看")
+				say("阿!! 今天我已經跟砍材人他約好了, 一起吃晚飯!")
+				say("幫我跟倉庫老人說我不參加.")
+				pc.setqf("target1", 10)
+				if pc.getqf("target1")!=0 then
+					if pc.getqf("target2")!=0 then
+						if pc.getqf("target3")!=0 then
+							setstate(report)
+						end
+					end
+				end
+			end
+		end
+		when target2.target.click begin
+			target.delete("target2")
+			local s=number(1, 2)
+			if 1>=s then -- 50.00% (1/2)
+				say("倉庫老人成了商人會長之後")
+				say("他常常舉行商人會")
+				say("商人的數量也不多, 如果我不去的話, 他們應該不會高興")
+				say("幫我通知倉庫老人, 我會參加")
+				pc.setqf("target2", 11)
+				if pc.getqf("target1")!=0 then
+					if pc.getqf("target2")!=0 then
+						if pc.getqf("target3")!=0 then
+							setstate(report)
+						end
+					end
+				end
+			elseif 2>=s then -- 50.00% (1/2)
+				say("倉庫老人成了商人會長之後")
+				say("他常常舉行商人會")
+				say("今天我的老婆跟我說, 想我早點回去, 所以我不去了")
+				say("不好意思, 幫我跟倉庫老人說, 我不參加了")
+				pc.setqf("target2", 10)
+				if pc.getqf("target1")!=0 then
+					if pc.getqf("target2")!=0 then
+						if pc.getqf("target3")!=0 then
+							setstate(report)
+						end
+					end
+				end
+			end
+		end
+		when target3.target.click begin
+			target.delete("target3")
+			local s=number(1, 2)
+			if 1>=s then -- 50.00% (1/2)
+				say("商人會阿?")
+				say("最近怎麼天天都開會呢")
+				say("如果不去的話")
+				say("禮貌上應該不太好吧")
+				say("通知他, 我會參加")
+				pc.setqf("target3", 11)
+				if pc.getqf("target1")!=0 then
+					if pc.getqf("target2")!=0 then
+						if pc.getqf("target3")!=0 then
+							setstate(report)
+						end
+					end
+				end
+			elseif 2>=s then -- 50.00% (1/2)
+				say("商人會阿?")
+				say("最近怎麼天天都開會呢")
+				say("哎呀! 怎麼辦阿, 我今天跟艾麗恩")
+				say("一起去算命")
+				say("我不好意思, 請幫我跟倉庫老闆我不參加")
+				pc.setqf("target3", 10)
+				if pc.getqf("target1")!=0 then
+					if pc.getqf("target2")!=0 then
+						if pc.getqf("target3")!=0 then
+							setstate(report)
+						end
+					end
+				end
+			end
+		end
+	end
+	state report begin
+		when letter begin
+			local v=find_npc_by_vnum(9005)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("回去找倉庫老人")
+			q.set_title("回去找倉庫老人")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 回去找倉庫老人"..locale.NORMAL_COLOR)
+			say("去找倉庫老人, 然後報告商人們是否參加商人會")
+			say("之後會得到報酬")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."回去找倉庫老人"..locale.NORMAL_COLOR)
+			say("去找倉庫老人, 然後報告商人們是否參加商人會")
+			say("之後會得到報酬")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			if pc.getqf("target1")==11 and pc.getqf("target2")==11 and pc.getqf("target3")==11 then
+				say("呵呵呵, 他們都要參加嗎?")
+				say("今天可真開心, 所以給你1000兩")
+				say("下次有事情的話我再叫你吧")
+				say("")
+				say("從倉庫老人獲得1000兩")
+				say("")
+				pc.changemoney(1000)
+			else
+				say("呵呵! 這真是太好了. ")
+				say("下次有事情的話我再叫你吧")
+				say("嗯, 我已經答應過會給你報酬")
+				say("")
+				say("從倉庫老人獲得500兩")
+				say("")
+				pc.changemoney(500)
+			end
+			set_quest_state("deliver_potion_to_fishman", "case_start")
+			setstate(__COMPLETE__)
+			q.done()
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

@@ -1,0 +1,211 @@
+----------------------------------------------------
+-- SUB QUEST 
+-- LV  33 
+--	新的防禦具
+----------------------------------------------------
+
+quest subquest_31 begin 
+	state start begin
+		when login or levelup or enter with pc.get_level() >=34  and pc.get_level() <= 36 begin
+			set_state( information )
+		end
+	end
+
+	state information begin
+		when letter begin
+					
+			local v = find_npc_by_vnum(20016)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "去找王鐵匠")
+			end
+		end
+
+				
+		when __TARGET__.target.click or
+			20016.chat."王鐵匠的新的發明" with pc.level >= 34 begin
+			target.delete("__TARGET__")
+
+			say("王鐵匠 :")
+			say("我找你有點事")
+			say("上次製作新武器時多謝你的幫助.")
+			say("所以還請你再幫一個忙.")
+			say("我想製作新的防禦器具.")
+			say("製作了新的武器，那還得製作新的防禦器具")
+			say("不就剛好匹配了嗎?")
+			say("")
+			wait()
+			say("王鐵匠:")
+			say("所以這次也要找")
+			say("新的材料!! 就是這個意思.")
+			say("別不樂意的表情啊.")
+			say("你也該得到些好處了吧.")
+			say("要付出才能得到成果!")
+			say("這次需要銅原石，珍珠片，瑪瑙木 ")
+			say("各100個.")
+			say("上次找過一次了，應該充分有要領了吧?")
+			say("那趕緊去找回來吧")
+			say("")
+			local s=select("接收.","拒絕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("王鐵匠 :")
+					say("猶豫什麼呢..")
+					say("如果改變主意了，再來吧")
+					return
+				end
+				say("王鐵匠 :")
+				say("礦石好找")
+				say("在礦脈採集就可以了...")
+				say("就這樣拒絕我的請求..")
+				say("那沒辦法啊..再見..")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("王鐵匠 :")
+			say("噢~")
+			say("是吧?")
+			say("真是好人啊")
+			say("這次會好好報酬")
+			set_state(to_gain_material)
+		end	
+	end
+
+	state to_gain_material begin
+
+		when letter begin
+			send_letter("取防禦器具材料")
+
+			local copper =pc.count_item(50604)
+			local pearl=pc.count_item(50609)
+			local ebony=pc.count_item(50608)
+			
+			if	copper>=100  or  pearl>=100 or  ebony>=100 then
+				send_letter("取到防禦器具材料了")
+
+				local v = find_npc_by_vnum(20016)
+
+				if v != 0 then
+				target.vid("__TARGET__", v, "去王鐵匠那裡")
+				end
+				return
+			end
+	
+		end
+
+		when info or button begin
+			local copper =pc.count_item(50604)
+			local pearl=pc.count_item(50609)
+			local ebony=pc.count_item(50608)
+			
+			if	copper>=100  or  pearl>=100 or  ebony>=100 then
+				say(locale.NOTICE_COLOR.." 取到防禦器具材料了"..locale.NORMAL_COLOR)
+				say("取到了王鐵匠製作防禦器具的")
+				say("所有的材料")
+				say("拿給王鐵匠吧")
+				say("")
+				return
+			end
+			say(locale.NOTICE_COLOR.." 取防禦器具材料三"..locale.NORMAL_COLOR)
+			say("王鐵匠請求幫忙找")
+			say("製作新的防禦器具的材料.")
+			say("需要的材料是 銅原石，珍珠片，瑪瑙木 ")
+			say("各100個.")
+			say("可通過鋤頭及生活技能採取原石 ")
+			say("礦脈在地圖上隨意地出現")
+			say("要好好留意.")
+			say("如果採取原石困難，可通過和別人的交換或")
+			say("買賣而取得.")
+			say("")
+		end
+
+		when 20016.chat."新的防禦器具.."  begin
+			target.delete("__TARGET__")
+			
+			local copper =pc.count_item(50604)
+			local pearl=pc.count_item(50609)
+			local ebony=pc.count_item(50608)
+			
+
+			
+			if	copper<100  or  pearl<100 or  ebony<100 then
+
+				say("王鐵匠 :")
+				say("還缺材料")
+				say("")	
+				say("")
+
+				local s=select("重新挑戰.","拒絕.")
+				if 2==s then
+					say("放棄任務 嗎?")
+					local a=select("是","否")
+					if  2==a then
+						say("王鐵匠 :")
+						say("原石不好收集嗎?")
+						say("幸運屬於努力的人")
+						say("休息一會兒再挑戰如何?")
+						say("")
+						return
+					end
+					say("王鐵匠 :")
+					say("我的新防禦器具的開發事業就這樣垮了呀")
+					say("是個革新的注意")
+					say("可惜呀 ， 可惜.")
+					say("")
+					set_state(__GIVEUP__)
+					return
+				end
+				say("王鐵匠 :")
+				say("要努力採取!")
+				say("採到為止!!!")
+				say("拜託了~")	
+				say("")
+		end	
+		if copper>=100  and pearl>=100 and ebony>=100 then
+			say("王鐵匠:")
+			say("辛苦了")
+			say("你的材料探索很出色阿")
+			say("把這個作為報酬給你吧~")
+		
+			say_reward("獲得經驗值 200000 ")
+			pc.give_exp2(200000)
+			 set_quest_state("levelup","run")
+			
+			pc.remove_item(50604,100)
+			pc.remove_item(50609,100)
+			pc.remove_item(50608,100)
+			
+
+				if pc.job == 0 then
+					pc.give_item2(11233, 1)
+					say_reward("獲得 震虎甲+3")
+				elseif pc.job == 1 then
+					pc.give_item2(11433, 1)
+					say_reward("獲得 飛虎衣+3.")
+				elseif pc.job == 2 then
+					pc.give_item2(11633, 1)
+					say_reward("獲得 白虎鎧+3.")
+				elseif pc.job == 3 then
+					pc.give_item2(11833, 1)
+					say_reward("獲得 虎魅衫+3")
+				end	
+			
+			
+			clear_letter()
+			set_state(__COMPLETE__)	
+			end
+
+			
+		end	
+	end
+state __GIVEUP__ begin
+end
+state __COMPLETE__ begin
+	when enter begin
+		q.done()
+	end
+end
+end
+

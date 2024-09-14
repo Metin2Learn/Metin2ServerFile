@@ -1,0 +1,205 @@
+----------------------------------------------------
+-- SUB QUEST
+-- LV 9
+-- 我的朋友砍材人最近怎麼樣?
+----------------------------------------------------
+
+quest subquest_4 begin
+	state start begin
+		when login or levelup  with pc.level >= 9 and pc.level <= 14 begin
+			set_state(information)
+		end	
+
+	end	
+
+	state information begin
+		when letter begin
+			
+			local v = find_npc_by_vnum(20016)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "分支任務4 我的朋友砍材人最近怎麼樣?")
+			end
+		end
+
+		
+		when __TARGET__.target.click or 
+			20016.chat." 我的朋友砍材人最近怎麼樣?" with pc.level >= 9 begin
+			target.delete("__TARGET__")
+
+			say("王鐵匠 :")
+			say("喂~ 初心者~ 我有個要求.")
+			say("你知道其他城市的砍材人嗎? ")
+			say("砍材人, 他是我的好朋友")
+			say("他的性格, 我不會怎麼說")
+			say("但是他是非常認真的砍材人.")
+			say("")
+			wait()
+
+			say("但是最近我還沒見到他.")
+			say("所以我想寄給他一封信")
+			say("最近城市的旁邊不太安全, 你路上要小心!")
+			say("好好保管我的信!")
+			say_item_vnum(30131)
+			wait()
+
+			say("阿! 你應該不知道旁邊的城市在哪.")
+			say("去旁邊的城市的方式是, 按M之後看小地圖")
+			say("藍色的點就會顯示城市的名字")
+			say("那個位子你可以移動到那個城市,")
+			say("千萬不是傳送老人, 一定要記得!")
+			say("")
+			local s=select("接受.","拒絕.")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+					if  2==a then
+						say("王鐵匠:")
+						say("下次再來吧. ") 
+						return
+					end		
+				say("王鐵匠:")
+				say("知道了, 我問其他人吧. ~")
+				return
+				set_state(__GIVEUP__)
+			end
+			
+			say("王鐵匠:")
+			say("城市的旁邊不太安全")
+			say("你路上要小心! 謝謝了.")
+			pc.give_item2("30131", 1)
+			say_item_vnum(30131)
+			set_state(deliver_letter)
+
+		end
+	end
+
+	state deliver_letter begin
+		when info or button begin
+			say(locale.NOTICE_COLOR.."你最近好嗎.."..locale.NORMAL_COLOR)
+			say("給砍材人, 王鐵匠的信.")
+			say_item_vnum("30131")
+			say("")
+		end
+
+		when letter begin
+			send_letter("給砍材人, 王鐵匠的信.")
+
+			local v=find_npc_by_vnum(20015)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v," 去找砍材人")
+			end 
+		end	
+		
+		
+
+		when __TARGET__.target.click or
+			20015.chat."王鐵匠的信" begin
+			if pc.count_item(30131) >= 1 then
+				target.delete("__TARGET__")
+				
+				say("砍材人:")
+				say("歡迎光臨, 我們有非常好的鋤頭, 你想找什麼?")
+				say("哦? 你不是找鋤頭, 你找我?")
+				say("阿! 其他城市的王鐵匠想找我.")
+				say("看起來我是砍材人, 但是我賣鋤頭還有")
+				say("其他很多不同種類的道具") 
+				say("所以我要求他製作道具的時候, 我們變成朋友.")
+				say("")
+				wait()
+
+				say("唉呀~ 找時間我要跟他一起喝酒")
+				say("怎麼也好, 你拿給我信, 謝謝你了.")
+				say("跟王鐵匠說我最近很好.")
+				say("")
+
+				pc.remove_item("30131", 1)
+
+				set_state(return_to)
+
+			else
+				say("砍材人:")
+				say("你說王鐵匠的信??")
+				say("阿~ 很久沒有見到他了..信在哪裡啊?")
+				say("你不會忘記了吧?!")
+				say("")
+				local s=select("再去找王鐵匠","放棄.")
+				if 2==s then
+					say("您想放棄任務嗎?")
+					
+					local a=select("是","不是")
+					if 2==a then
+						say("砍材人:")
+						say("下次再來吧.")
+						say("謝謝了.")
+						say("")
+						return
+					end	
+					say("砍材人:")
+					say("我很想知道信的內容, 但是我不能抓住您…")
+					say("路上小心~")
+					set_state(__GIVEUP__)
+					return
+				end
+				say("砍材人:")
+				say("您真的可以再做得到嗎? ")
+				say("請您這次千萬不要忘記.")
+				say("謝謝.")
+				say("")
+				set_state(information)
+
+		end
+	end
+	end
+
+	state return_to begin
+		when info or button begin
+			say(locale.NOTICE_COLOR.." 最近好嗎.."..locale.NORMAL_COLOR)
+			say("給砍材人, 王鐵匠的信")
+			say("回去找王鐵匠獲得報酬.")
+			say("")
+		end
+
+		when letter begin
+			send_letter("回去找王鐵匠獲得報酬.")
+
+			local v=find_npc_by_vnum(20016)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v," 回去找王鐵匠")
+			end
+			
+		end
+
+		when 20016.chat." 完成送信" begin
+			target.delete("__TARGET__")
+			say("王鐵匠 :")
+			say("好啊! 砍材人最近的情況好嗎?")
+			say("哈哈哈! 他的很害羞的性格, 應該一樣吧.")
+			say("謝謝你了.")
+			say("我會給你一些報酬")
+			say("會幫助現在的你.")
+			say("謝謝你了!")
+			say("")
+
+			pc.give_exp2(4000)
+			set_quest_state("levelup","run")
+			pc.change_money(3000)
+
+			say_reward("獲得經驗值 4000")
+			say_reward("獲得 3000 兩")
+			say("")
+			
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+	
+	state __GIVEUP__ begin
+
+	end
+	
+	state __COMPLETE__ begin
+	end
+end

@@ -1,0 +1,118 @@
+quest find_senior_soldier begin
+    state start begin
+	when 20300.chat." 去找上司" or 20301.chat." 去找上司" or 20302.chat." 去找上司" or 20303.chat."去找上司" or 20304.chat."去找上司" or 20305.chat."去找上司" or 20306.chat."去找上司" or 20307.chat."去找上司" or 20320.chat."去找上司" or 20321.chat."去找上司" or 20322.chat."去找上司" or 20323.chat."去找上司" or 20324.chat."去找上司" or 20325.chat."去找上司" or 20326.chat."去找上司" or 20327.chat."去找上司" or 20340.chat."去找上司" or 20341.chat."去找上司" or 20342.chat."去找上司" or 20343.chat."去找上司" or 20344.chat."去找上司" or 20345.chat."去找上司" or 20346.chat."去找上司" or 20347.chat."去找上司" with pc_is_novice() and npc_is_same_empire() and npc_is_same_job() and pc.get_level()<=10 begin
+	    if not next_time_is_now() then
+		say("去找上司的任務")
+		say("1小時只可以做1次")
+		say("很抱歉, 給你帶來不便")
+	    else
+		say("我想知道我要進入軍隊的")
+		say("資料")
+		say("")
+		say("聽了我的問題後軍職教官想了一下")
+		say("然後回答我")
+		wait()
+		say("我覺得你自己去看")
+		say("比我說十次更好.")
+		say("你知道 百聞不如一見 吧?")
+		say("")
+		say("我給你一封信~ ")
+		say("告訴你上司在哪")
+		find_senior_soldier.save_target_cond()
+		next_time_set(time_hour_to_sec(1), 10)
+		set_state(find)
+	    end
+	end
+    end
+    state failure begin
+	when letter begin
+	    send_letter("無法找到上司")
+	end
+	when button or info begin
+	    say("很抱歉,現在上司不在")
+	    say("請你下次再來")
+	    say("")
+	    say("找到上司的任務失敗了")
+	    restart_quest()
+	end
+    end
+    state find begin
+	when letter begin
+	    local v=find_senior_soldier.find_target()
+	    test_chat("find_target"..v)
+	    if v==0 then 
+		set_state(failure)
+	    else
+		target.vid("__TARGET__", v, "去找上司") 
+		send_letter("去找上司")
+	    end
+	end
+	when button or info begin
+	    say_title("去找上司")
+	    say("去找小型地圖上所顯示的上司位置")
+	end
+	when __TARGET__.target.die begin
+	    say("突然有颱風")
+	    say("他手上的那封信,")
+	    say("好像鳥一樣")
+	    say("飛走了")
+	    say("")
+	    say("找到上司的任務失敗了")
+	    restart_quest()
+	end
+	when __TARGET__.target.click begin
+	    say_title("找到了上司")
+	    say("那時候, 教官給我的那封信, 突然燒著了, 變成了灰塵")
+	    say("感覺到身體裡面有一股暖流")
+	    say("")
+	    say("")
+	    target.delete("__TARGET__")
+	    find_senior_soldier.clear_target_cond()
+	    set_state(reward)
+	end
+    end
+    state reward begin
+	when letter begin
+	    send_letter("獲得上司的祝福!")
+	end
+	when button begin
+	    say_title("獲得上司的祝福!")
+	    say("表示上司的位置的那封信 ")
+	    say("初心者見上司的時候, 會給予祝福的效果.")
+	    say("")
+
+	    local funcList={
+		function() find_senior_soldier.apply_affect("獲得最大生命力 +100 效果.", apply.MAX_HP, 100) end,
+		function() find_senior_soldier.apply_affect("獲得最大生命力 +50 效果.", apply.HP_REGEN, 50) end,
+		function() find_senior_soldier.apply_affect("獲得力量 +5 效果.", apply.STR, 5) end,
+		function() find_senior_soldier.apply_affect("獲得體力 +5 效果.", apply.CON, 5) end,
+		function() find_senior_soldier.apply_affect("獲得致命打擊 +5 效果.", apply.CRITICAL_PCT, 10) end,
+		function() find_senior_soldier.apply_affect("獲得攻擊速度 +10 效果.", apply.ATT_SPEED, 10) end,
+		function() find_senior_soldier.apply_affect("獲得動物攻擊效果 +10 效果.", apply.ATTBONUS_ANIMAL, 10) end,
+	    }	
+	    table_get_random_item(funcList)()
+
+	    say("")
+	    say("發行處 : 每各軍職教官")
+	    restart_quest()
+	end
+    end
+    state __FUNC__ begin
+	function clear_target_cond()
+	    pc.setqf("target_cond", 0)
+	end
+	function save_target_cond()
+	    test_chat("npc.job="..npc_get_job())
+	    pc.setqf("target_cond", npc_get_job())
+	end
+	function find_target()
+	    return find_pc_cond(5, 100, pc.getqf("target_cond"))
+	end
+	function apply_affect(name, type, value)
+	    say_reward(name)
+	    say_reward("效果可以持續 5分鐘")
+	    affect.add(type, value, 5*60)
+	end
+
+    end
+end

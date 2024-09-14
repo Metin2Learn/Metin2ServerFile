@@ -1,0 +1,203 @@
+----------------------------------------------------
+-- SUB QUEST 
+-- LV  40 
+-- 抓捕黑風黨頭目 
+----------------------------------------------------
+
+quest subquest_34 begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >=40  and pc.get_level() <= 42 begin
+			set_state( information )
+		end
+	end
+
+	state information begin
+		when letter begin
+					
+			local v = find_npc_by_vnum(20355)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "去警備隊長那裡")
+			end
+		end
+
+				
+		when __TARGET__.target.click or
+			20355.chat."抓捕黑風黨頭目" with pc.level >= 40  begin
+			target.delete("__TARGET__")
+
+			say("警備隊長 :")
+			say("你上次處治的黑風黨傢伙們")
+			say("最近不安分.")
+			say("反而更倡狂，各方面遇到困難了")
+			say("為了確實地打壓這些傢伙要把黑風頭目")
+			say(""..mob_name(454).."，"..mob_name(455).."，"..mob_name(456).."處治才行.")
+			say("")
+			wait()
+			say("警備隊長:")
+			say("頭目被擊垮了")
+			say("小兵們自然會垮掉")
+			say("雖然辛苦，幫忙把黑風黨"..mob_name(454).."，"..mob_name(455).."，"..mob_name(456).."等")
+			say("處治掉.")
+			say("處治了那些傢伙")
+			say("就不會再為黑風黨的事情苦惱了.")
+			say("那祝你好運")
+			say("")
+			local s=select("接收.","拒絕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("警備隊長:")
+					say("如果這次困難，那下次再來吧")
+					say("沒有比你能幹的人了..")
+					return
+				end
+				say("警備隊長:")
+				say("不能做是嗎?..")
+				say("那怎麼抓黑風黨頭目呢...")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("警備隊長:")
+			say("早就知道你會挑戰")
+			say("抓捕了頭目，那些傢伙就沒辦法了吧")
+			say("祝你幸運")	
+			say("")
+			set_state(bye_blackwind)
+		end	
+	end
+	state bye_blackwind begin
+		when letter begin
+			send_letter("抓捕黑風黨頭目")
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.." 抓捕黑風黨頭目"..locale.NORMAL_COLOR)
+			say("抓捕現在引起各種事端的")
+			say("黑風黨頭目")
+			say("它們各自叫"..mob_name(454)..","..mob_name(455).."，"..mob_name(456).." ")
+			
+		end
+		when 11004.chat." 抓捕黑風黨頭目" with pc.level >=32 begin
+			say("果然 抓到了嗎?")
+			local s=select("重新挑戰","放棄")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否::")
+				if  2==a then
+					say("警備隊長:")
+					say("它們不是好對付的對手...")
+					say("更何況是頭目...")
+					say("休息一會兒再挑戰嗎?")
+					return
+				end
+				say("警備隊長")
+				say("連你都放棄，看來是很強大的勢力")
+				say("再見~")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("警備隊長:")
+			say("果然很勇敢")
+			say("相信黑風黨勢力可以由你來打壓了")
+			say("")
+		end
+		
+		                  ----------------------------黑風黨頭目 npc號碼 
+	
+		when 454.kill begin
+			pc.setqf("kill_m1",1)
+				
+			if	pc.getqf("kill_m1")==1	and	pc.getqf("kill_m2")==1 and	pc.getqf("kill_m3")==1	then
+				set_state(hunt_reward)
+			end
+			return
+		end
+		when 455.kill begin
+				pc.setqf("kill_m2",1)
+			
+				if	pc.getqf("kill_m1")==1	and	pc.getqf("kill_m2")==1 and	pc.getqf("kill_m3")==1	then
+					set_state(hunt_reward)
+				end
+				return
+
+		end
+
+		when 456.kill begin
+			pc.setqf("kill_m3",1)
+			
+			if	pc.getqf("kill_m1")==1	and	pc.getqf("kill_m2")==1 and	pc.getqf("kill_m3")==1	then
+				set_state(hunt_reward)
+			end
+			return
+				
+		end
+	
+			
+	end
+	
+	state hunt_reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("抓到了黑風黨頭目")
+			q.set_title("抓到了黑風黨頭目")
+			q.start()
+		
+			local v = find_npc_by_vnum(20355)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "向警備隊長報告結果")
+			end
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.." 抓到了黑風黨頭目"..locale.NORMAL_COLOR)
+			say("向警備隊長報告")
+			say("有關掃蕩黑風黨頭目")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20355.chat." 抓捕黑風黨頭目" begin
+			target.delete("__TARGET__")
+			say("警備隊長:")
+			say("你做的很漂亮 ")
+			say("現在沒有了幹部的黑風黨變成了烏合之眾,")
+			say("剩下的由我們來處理了.")
+			say("之前因黑風黨們很是頭痛")
+			say("托你的福少了很多麻煩")
+			say("這是給你的獎賞.")
+			say("以後也加油!")
+			say("")
+			say_reward("獲得" ..item_name(71001).."")
+			pc.give_item2(71001)
+			pc.give_item2(71001)
+			pc.give_item2(71001)
+			
+			say_reward("獲得經驗值 1000000 ")
+			pc.give_exp2(1000000)
+			set_quest_state("levelup","run")
+
+			say_reward("獲得 25000 兩")
+			pc.change_money(25000)
+			
+			say_reward("獲得了草藥物品")
+			pc.give_item2(50725,5)
+			pc.give_item2(50727,5)
+
+			set_state(THEEND)
+			clear_letter()	
+
+			pc.setqf("kill_m1",0)
+			pc.setqf("kill_m2",0)
+			pc.setqf("kill_m3",0)
+		end
+
+		end
+	state __GIVEUP__ begin
+	end
+	state THEEND begin
+	end
+end
+

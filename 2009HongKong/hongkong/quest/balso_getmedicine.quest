@@ -1,0 +1,379 @@
+quest balso_getmedicine begin
+
+	state start begin
+
+		when old_pirate.chat.locale.old_pirate.talk begin
+
+			local START_say = locale.old_pirate.START_say
+
+			say(START_say)
+
+		end
+
+		when etc_shop.chat.locale.old_pirate.etc_shop_talk_about_old_pirate with pc.level>=locale.old_pirate.start_level_begin and pc.level<=locale.old_pirate.start_level_end and number(1, locale.old_pirate.start_probability)==1 begin
+
+			local START_say1 = locale.old_pirate.etc_shop_START_say
+			local START_say2 = locale.old_pirate.etc_shop_START_say2
+
+			say(START_say1) 
+			wait()
+			say(START_say2)
+
+			say(locale.old_pirate.START_find_old_pirate_text)
+
+			setstate(order)
+			makequestbutton(locale.old_pirate.START_find_old_pirate_label)
+			q.set_title(locale.old_pirate.START_find_old_pirate_label)
+			q.start()
+
+		end
+
+	end
+
+	state order begin
+
+		when login begin
+
+			setskin(NOWINDOW)
+			makequestbutton(locale.old_pirate.START_find_old_pirate_label)
+			q.set_title(locale.old_pirate.START_find_old_pirate_label)
+			q.start()
+
+		end
+
+		when button begin
+
+			say(locale.old_pirate.START_find_old_pirate_text)
+
+		end
+
+		when info begin
+
+			say(locale.old_pirate.START_find_old_pirate_text)
+
+		end
+
+		when old_pirate.chat.locale.old_pirate.talk_about_medicine with pc.level<=locale.old_pirate.end_level begin
+
+			local ORDER_say1 = locale.old_pirate.ORDER_say1
+			local ORDER_say2 = locale.old_pirate.ORDER_say2
+			local ORDER_accept = locale.old_pirate.ORDER_accept
+			local ORDER_refuse = locale.old_pirate.ORDER_refuse
+			local ORDER_accept_answer = locale.old_pirate.ORDER_accept_answer
+			local ORDER_refuse_answer = locale.old_pirate.ORDER_refuse_answer
+
+			say(ORDER_say1)
+			wait()
+			say(ORDER_say2)
+
+			local s=select(ORDER_accept, ORDER_refuse)
+			if 1==s then
+
+				say(ORDER_accept_answer)
+				say(locale.old_pirate.ORDER_find_medicine_text)
+
+				setstate(accept)
+				makequestbutton(locale.old_pirate.ORDER_find_medicine_label)
+				q.set_title(locale.old_pirate.ORDER_find_medicine_label)
+
+			else
+
+				say(ORDER_refuse_answer)
+
+			end
+
+		end
+
+		when old_pirate.chat.locale.old_pirate.do_you_get_the_medicine with pc.level>locale.old_pirate.end_level begin
+
+			say(locale.old_pirate.ORDER_too_late)
+			setstate(complete)
+			q.done()
+
+		end
+
+	end
+
+	state accept begin
+
+		when login begin
+
+			setskin(NOWINDOW)
+			makequestbutton(locale.old_pirate.ORDER_find_medicine_label)
+			q.set_title(locale.old_pirate.ORDER_find_medicine_label)
+			q.start()
+
+		end
+
+		when button begin
+
+			say(locale.old_pirate.ORDER_find_medicine_text)
+
+		end
+
+		when info begin
+
+			say(locale.old_pirate.ORDER_find_medicine_text)
+
+		end
+
+		when old_pirate.chat.locale.old_pirate.do_you_get_the_medicine begin
+
+			local ACCEPT_ask = locale.old_pirate.ACCEPT_ask
+
+			say(ACCEPT_ask)
+
+		end
+		
+		when baekgo.chat.locale.old_pirate.baekgo_talk_about_old_pirate begin
+		
+			say(locale.old_pirate.BAEKGO_START_say)
+			wait()
+			say(locale.old_pirate.BAEKGO_START_say2)
+			wait()
+			say(locale.old_pirate.BAEKGO_START_say3)
+			say(locale.old_pirate.BAEKGO_ORDER_find_virus_text)
+			
+			setstate(baekgo_accept)
+			makequestbutton(locale.old_pirate.BAEKGO_ORDER_find_virus_label)
+			q.set_title(locale.old_pirate.BAEKGO_ORDER_find_virus_label)
+			pc.setqf("kill_count", 0)
+		
+		end
+
+	end
+
+	state baekgo_accept begin
+
+		when login begin
+
+			setskin(NOWINDOW)
+			makequestbutton(locale.old_pirate.BAEKGO_ORDER_find_virus_label)
+			q.set_title(locale.old_pirate.BAEKGO_ORDER_find_virus_label)
+			q.start()
+
+		end
+
+		when button begin
+
+			say(locale.old_pirate.BAEKGO_ORDER_find_virus_text)
+
+		end
+
+		when info begin
+
+			say(locale.old_pirate.BAEKGO_ORDER_find_virus_text)
+
+		end
+
+		when old_pirate.chat.locale.old_pirate.do_you_get_the_medicine begin
+
+			local ACCEPT_ask = locale.old_pirate.ACCEPT_ask
+
+			say(ACCEPT_ask)
+
+		end
+		
+		when baekgo.chat.locale.old_pirate.baekgo_do_you_get_the_virus begin
+
+			local BAEKGO_ACCEPT_ask = locale.old_pirate.BAEKGO_ACCEPT_ask
+			
+			say(BAEKGO_ACCEPT_ask)
+
+		end
+		
+		when misterious_diseased_infector.kill begin
+
+			--?????(?? 53) ? ??
+			--?????? ?? ??? misterious_diseased_infector
+
+			local kill_count = pc.getqf("kill_count")
+			local success_label = locale.old_pirate.BAEKGO_ACCEPT_success_info_label
+			local success_say = locale.old_pirate.BAEKGO_ACCEPT_success_say
+			local failure_label = locale.old_pirate.BAEKGO_ACCEPT_failure_info_label
+			local failure_say = locale.old_pirate.BAEKGO_ACCEPT_failure_say
+
+			pc.setqf("kill_count", kill_count+1)
+
+			--chat("cur kill"..kill_count)
+			--chat("pc lv"..pc.level)
+			--chat("end lv"..locale.old_pirate.end_level)
+			--chat("dst kill"..locale.old_pirate.kill_count)
+			--chat("find"..pc.getqf("find"))
+
+			--chat("找到了")
+
+			if pc.level>locale.old_pirate.end_level then
+
+				--chat("等級超過")
+
+				if kill_count>locale.old_pirate.kill_count then
+
+					--chat("殺死目標數量超過")
+
+					say(failure_say)
+
+					setstate(failure)
+					makequestbutton(failure_label)
+					q.set_title(failure_label)
+
+				end
+
+			else
+
+				--chat("應用等級")
+
+				if number(1, locale.old_pirate.kill_count)==1 then
+
+					--chat("確率成功")
+					--chat("獲得")
+
+					say(success_say)
+
+					setstate(baekgo_success)
+					makequestbutton(success_label)
+					q.set_title(success_label)
+					
+				end
+
+			end			
+
+		end
+
+	end
+	
+	state baekgo_success begin
+	
+		when login begin
+
+			setskin(NOWINDOW)
+			makequestbutton(locale.old_pirate.BAEKGO_ACCEPT_success_info_label)
+			q.set_title(locale.old_pirate.BAEKGO_ACCEPT_success_info_label)
+			q.start()
+
+		end
+
+		when button begin
+
+			say(locale.old_pirate.BAEKGO_ACCEPT_success_info_text)
+
+		end
+
+		when info begin
+
+			say(locale.old_pirate.BAEKGO_ACCEPT_success_info_text)
+
+		end
+
+		when old_pirate.chat.locale.old_pirate.do_you_get_the_medicine begin
+			say(locale.old_pirate.ACCEPT_ask)
+
+		end
+		
+		when baekgo.chat.locale.old_pirate.baekgo_iv_got_the_virus begin
+
+			say(locale.old_pirate.BAEKGO_SUCCESS_say)
+			say(locale.old_pirate.ACCEPT_success_info_text)
+
+			setstate(success)
+			makequestbutton(locale.old_pirate.ACCEPT_success_info_label)
+			q.set_title(locale.old_pirate.ACCEPT_success_info_label)
+
+		end
+
+	end
+	
+	state success begin
+
+		when login begin
+
+			setskin(NOWINDOW)
+			makequestbutton(locale.old_pirate.ACCEPT_success_info_label)
+			q.set_title(locale.old_pirate.ACCEPT_success_info_label)
+			q.start()
+
+		end
+
+		when button begin
+
+			say(locale.old_pirate.ACCEPT_success_info_text)
+
+		end
+
+		when info begin
+
+			say(locale.old_pirate.ACCEPT_success_info_text)
+
+		end
+
+		when old_pirate.chat.locale.old_pirate.do_you_mean_this_medicine begin
+
+			local SUCCESS_thanks = locale.old_pirate.SUCCESS_thanks
+
+			say(SUCCESS_thanks)
+			wait()
+			say(locale.QUEST_TEMP_REWARD)
+
+			setstate(complete)
+			q.done()
+
+		end
+
+	end
+
+	state failure begin
+
+		when login begin
+
+			setskin(NOWINDOW)
+			makequestbutton(locale.old_pirate.ACCEPT_failure_info_label)
+			q.set_title(locale.old_pirate.ACCEPT_failure_info_label)
+			q.start()
+
+		end
+
+		when button begin
+
+			say(locale.old_pirate.ACCEPT_failure_info_text)
+
+		end
+
+		when info begin
+
+			say(locale.old_pirate.ACCEPT_failure_info_text)
+
+		end
+
+		when old_pirate.chat.locale.old_pirate.do_you_get_the_medicine begin
+
+			say(locale.old_pirate.ORDER_too_late)
+			setstate(complete)
+			q.done()
+
+		end
+
+		when baekgo.chat.locale.old_pirate.baekgo_do_you_get_the_virus begin
+
+			say(locale.old_pirate.BAEKGO_ORDER_too_late)
+			setstate(complete)
+			q.done()
+
+		end
+
+	end
+
+	state complete begin
+
+		when old_pirate.chat.locale.old_pirate.talk begin
+
+			local COMPLETE_say = locale.old_pirate.COMPLETE_say
+			say(COMPLETE_say)
+
+		end
+
+	end
+
+end
+	
+
+

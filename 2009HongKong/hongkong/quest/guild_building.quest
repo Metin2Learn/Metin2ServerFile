@@ -1,0 +1,61 @@
+quest guild_building begin
+    state start begin
+	when 20040.click begin
+	    say("我是賣土地的官員, 以前土地很豐富, 所以每個人都很放鬆[ENTER]"..
+	        "但是現在大陸中間有太多的怪物[ENTER]"..
+		"所以現在土地很不足, 所以現在人們都很憂慮..[ENTER]"..
+		"[ENTER]"..
+		"所以我只會將土地賣給公會長[ENTER]"..
+		"[ENTER]"..
+		"你想購買這塊土地嗎?[ENTER]")
+
+	    local s = select(locale.yes, locale.no)
+
+	    if s == 1 then
+		if not pc.is_guild_master() then
+		    say("我剛才跟你說, 土地不能任何人隨便買.[ENTER]"..
+		        "請見諒.")
+		elseif building.has_land(pc.get_guild()) then
+		    say("如果公會已經擁有土地的話, 無法再次購買其他土地.")
+		else
+		    local land_id = building.get_land_id(pc.get_map_index(), pc.get_x()*100, pc.get_y()*100)
+
+		    if land_id == 0 then
+			say("任務錯誤.")
+		    else
+			local price, owner, guild_level_limit = building.get_land_info(land_id)
+			say("如果想買這塊土地的話, 公會的等級必須為 "..guild_level_limit.."以上[ENTER]"..
+			    "價錢是"..price..locale.gold.."兩.[ENTER]")
+
+			if guild.level(pc.get_guild()) < guild_level_limit then
+			    say("但是你的公會等級不足[ENTER]不好意思.[ENTER]")
+			else
+			    say("你想付錢買土地嗎?")
+
+			    s = select(locale.yes, locale.no)
+
+			    if s == 1 then
+				local price, owner, guild_level_limit = building.get_land_info(land_id)
+
+				if owner != 0 then
+				    say("已經有其他公會購買了這塊土地.. 真的很可惜阿...")
+				elseif pc.gold < price then
+				    say("我只是一個官員, 所以不能給你優惠, 請帶備足夠的金錢.")
+				else
+				    pc.changegold(-price)
+				    building.set_land_owner(land_id, pc.get_guild())
+				    notice(guild.name(pc.get_guild()).."公會買土地成功!!")
+				end
+			    else
+				say("如果你想買的話, 可以再來找我.[ENTER]誰先購買誰就是這塊土地的主人..")
+			    end
+			end
+		    end
+		end
+	    else
+		say("如果你想買的話, 可以再來找我.[ENTER]誰先購買誰就是這塊土地的主人..")
+	    end
+	end
+    end
+end
+

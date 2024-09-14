@@ -1,0 +1,181 @@
+quest find_luckscroll begin
+	state start begin
+		when 9003.chat."聽取消息" with is_test_server() and number(1, 3)==1 and pc.level>=16 and pc.level<=24 begin
+			say("聽取武器商人的消息")
+			say("平時他這麼有自信")
+			say("但是這次他去交貨的時候,")
+			say("第2村落附近, 他遇到白蓮射手")
+			say("他的東西全部都給白蓮射手槍走了")
+			say("永恆的鑄件也在物品裡面!")
+			say("")
+			say("怎麼辦了阿 怎麼辦了阿")
+			say("")
+			wait()
+			say("好笑的是武器商人在軍隊的時候,")
+			say("他說謊, 以前有跟白蓮射手戰鬥過.")
+			say("所以這次他被白蓮射手的事情")
+			say("不能跟別人說")
+			say("所以他裝沒有事情發生")
+			say("如果有人找到永恆鑄件的話, 那就是他的.")
+			say("但是從白蓮射手找到永恆鑄件")
+			say("並不是一件簡單的事情~ 呵呵呵")
+			say("")
+			say("不要告訴其他人, 我有跟你說過這些話!")
+			say("")
+			setstate(order)
+		end
+	end
+	state order begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("關於永恆鑄件")
+			q.set_title("關於永恆鑄件")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 關於永恆鑄件"..locale.NORMAL_COLOR)
+			say("永恆鑄件就是珍貴的物品")
+			say("改良武器失敗的時候保護武器不消失.")
+			say("武器商人放棄找到永恆鑄件的話")
+			say("誰先找到, 這樣物品就是屬於他的")
+			say("但是雜貨店老闆的口才太厲害, 所以如果30分鐘以內找不到的話")
+			say("這樣全村的人都會知道這件事情的.")
+			say("快點去找吧!")
+			say("")
+			local b=select("接受", "放棄")
+			if 1==b then
+				setstate(find)
+			elseif 2==b then
+				setstate(__COMPLETE__)
+				q.done()
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 關於永恆鑄件"..locale.NORMAL_COLOR)
+			say("永恆鑄件就是珍貴的物品")
+			say("改良武器失敗的時候保護武器不消失.")
+			say("武器商人放棄找到永恆鑄件的話")
+			say("誰先找到, 這樣物品就是屬於他的")
+			say("但是雜貨店老闆的口才太厲害, 所以如果30分鐘以內找不到的話")
+			say("這樣全村的人都會知道這件事情的.")
+			say("快點去找吧!")
+                                          say("")
+			local b=select("接受", "放棄")
+			if 1==b then
+				setstate(find)
+			elseif 2==b then
+				setstate(__COMPLETE__)
+				q.done()
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state find begin
+		when 302.kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+		end
+		when letter begin
+			q.set_clock("剩餘時間", pc.getqf("limit_time")-get_time())
+		end
+		when enter begin
+			pc.setqf("limit_time", get_time()+30*60)
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			q.done()
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("從白蓮射手身上尋找永恒鑄件.")
+			q.set_title("從白蓮射手身上尋找永恒鑄件.")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."白蓮射手身上尋找永恒鑄件."..locale.NORMAL_COLOR)
+			say("去找白蓮射手")
+			say("取得永恆鑄件")
+			say("")
+			say("但是,30分鐘以內一定要找取得這樣物品")
+			say("")
+			local b=select("進行", "放棄")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想放棄這個任務嗎?")
+				local b=select("放棄", "不放棄")
+				if 1==b then
+					say("我想~ 被偷的武器商人現在的心情…")
+					say("我不應該這樣做, 我決定放棄!")
+					setstate(__COMPLETE__)
+					q.done()
+				elseif 2==b then
+					say("我的面前有永恆鑄件, ")
+					say("那我怎麼會放棄呢!!")
+					say("在被人找到之前, 我一定要找到")
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."從白蓮射手上找永恆鑄件"..locale.NORMAL_COLOR)
+			say("去找白蓮射手")
+			say("取得永恆鑄件")
+			say("")
+			say("但是,30分鐘以內一定要找取得這樣物品")
+			say("")
+			local b=select("進行", "放棄")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想放棄這個任務嗎?")
+				local b=select("放棄", "不放棄")
+				if 1==b then
+					say("我想~ 被偷的武器商人現在的心情…")
+					say("我不應該這樣做, 我決定放棄!")
+					setstate(__COMPLETE__)
+					q.done()
+				elseif 2==b then
+					say("我的面前有永恆鑄件, ")
+					say("那我怎麼會放棄呢!!")
+					say("在被人找到之前, 我一定要找到")
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 302.kill with pc.getf("find_luckscroll","limit_time")>=get_time() begin
+			setstate(reward)
+		end
+	end
+	state reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("獲得永恆鑄件")
+			q.set_title("獲得永恆鑄件")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 獲得永恆鑄件"..locale.NORMAL_COLOR)
+			say("從白蓮射手身上拿到的永恆鑄件")
+			say("本來屬於武器商人的東西, 但是")
+			say("有時候, 不理會也好")
+			say("")
+			say("永恆鑄件就是珍貴的物品")
+			say("改良武器失敗的時候保護武器不消失")
+			say("")
+			setstate(__COMPLETE__)
+			q.done()
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

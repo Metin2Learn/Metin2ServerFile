@@ -1,0 +1,348 @@
+----------------------------------------------------
+-- SUB QUEST 
+-- LV 55
+-- 給老海盜送藥 
+----------------------------------------------------
+
+quest subquest_39 begin 
+	state start begin
+		when login or levelup or enter with pc.level >= 55 and pc.level <= 57 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20020)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "給老海盜送藥")
+			end
+		end
+
+		
+		when __TARGET__.target.click or
+			20020.chat." 給老海盜送藥" with pc.level >= 55 begin
+			target.delete("__TARGET__")
+
+			say("背叛者老海盜 :") 
+			say("上次多謝你取來僵屍菌.")
+			say("但是 又有問題......")
+			say("過了一段時間，病也沒好起來.")
+			say("反而感覺更惡化了.")
+			say("咳嗽! 看來民間療法是")
+			say("有限的.")
+			say("")
+			wait()
+			say("老海盜:")
+			say("據我知道，鄰村有一名醫生")
+			say("給他說我的病情")
+			say("取來正規的處方，可以嗎?")
+			say("如你知道，我是不能從這個村子除去的人")
+			say("再次拜託你了.")
+			say("上次也很感謝...")
+			say("這次，再請你幫忙.")
+			say("")
+			local s=select("接收.","拒絕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("老海盜 :")
+					say("那下次想起來時再來吧")
+					return
+				end
+				say("老海盜 :")
+				say("難道就這樣拖著病活下去嗎..")
+				say("一路順風")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("老海盜 :")
+			say("謝謝.. 保重身體 ")
+			say("")
+			set_state(ask_to_backgo)
+		
+
+		
+		end
+	end
+
+	state ask_to_backgo begin
+		when info or button begin
+			say(locale.NOTICE_COLOR.."老海盜的病症"..locale.NORMAL_COLOR)
+			say("")
+			say("老海盜的病情更加惡化了.")
+			say("為了解決這個問題")
+			say("需要在第1程式醫生的幫助.")
+			say("向醫生說明老海盜的病症")
+			say("聽解決方法")
+			say("")			
+		end
+
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("去找醫生")
+			q.set_title("去找醫生.")
+			q.start()
+			
+			local v=find_npc_by_vnum("20018")
+			if 0== v then
+			else
+				target.vid("__TARGET__",v,"去找醫生")
+			end
+		end
+
+		when __TARGET__.target.click or 
+			20018.chat."關於老海盜的病情" begin
+			target.delete("__TARGET__")	
+			say("醫生 : ")
+			say("噢，是你啊，有什麼事嗎?")
+			say("哦，有這樣症狀的病人啊?")
+			say("知道之前接收過甚麼治療嗎?")
+			say("甚麼?! 好笨啊，吃了感染菌了呀??")
+			say("嗤嗤...")
+			say("用散漫的民間療法治療疾病")
+			say("真的是很危險的事情啊!")
+			say("")
+			wait()
+			say("醫生:")
+			say("雖然可以提高免疫力")
+			say("但是身體本身就很差的時候，會弄壞身體的.")
+			say("不知道因為什麼想法")
+			say("選擇了那樣危險的方法.")
+			say("為了治療這樣的患者")
+			say("仙草是最好的藥材.")
+			say("仙草可以幫助解毒")
+			say("並恢復元氣.")
+			wait()
+			say("醫生:")
+			say("但是仙草不好採取.")
+			say("可能下仙洞的叫移山大聖的")
+			say("猴子會有這個藥草")
+			say("那傢伙把仙草當零食吃.")
+			say("如果找來仙草")
+			say("我就幫你製作成藥.")
+			say("")
+			local b=select("我去取回來", "不能去!")
+			if 2==b then
+				say("放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("醫生 :")
+					say("那下次想起來的時候再來吧")
+					say("病的人多")
+					say("去取僵屍治療劑的人卻少...")
+					say("")
+					return
+				end	
+				say("醫生 : ")
+				say("真是不關心民生啊")
+				say("我看錯人了")
+				say("帝國的明天怎麼辦呢~")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end 
+
+			say("醫生 :")
+			say("噢 謝謝了!! 快去取回下仙洞仙草吧")
+		    say("雖然有些難，但是取仙草是關乎民生的事情。")
+			say("拜託了")
+			say("")
+			set_state(hunt_monkey_首領)
+
+			end
+		end
+			
+	state hunt_monkey_首領 begin
+		when letter begin
+			if pc.count_item(50057)>0 then
+				setskin(NOWINDOW)
+				makequestbutton("取到下仙洞仙草了")
+				q.set_title("取到下仙洞仙草了")
+				q.start()
+			
+				local v=find_npc_by_vnum("20018")
+				if 0== v then
+				else
+					target.vid("__TARGET__",v,"去醫生那裡")
+				end
+
+				return
+			end
+			setskin(NOWINDOW)
+			makequestbutton("取下仙洞仙草")
+			q.set_title("取下仙洞仙草")
+			q.start()
+		end
+		when button or info begin
+			if pc.count_item(50057)>0 then
+				say_title("取到下仙洞仙草了")
+				say("")
+				say("為了治療老海盜的病")
+				say("把下仙洞仙草")
+				say("拿給醫生，取藥")
+				say("")
+				return
+			end
+			say_title("取下仙洞仙草")
+			say("")
+			say("為了治療老海盜的病")
+			say("需要仙草.")
+			say("仙草可以從在下仙洞居住的")
+			say("叫移山大聖的猴子首領那裡")
+			say("取到")
+			say_item_vnum(50057)
+			say("")
+		end
+		when __TARGET__.target.click or 
+			20018.chat."下仙洞仙草.." with pc.count_item(50057) ==0 begin
+			say("醫生 :")
+			say("不知什麼時候開始在大陸開始流行的一種疫病")
+			say("我們也不清楚其原因")
+			say("但是根据學會的報告")
+			say("可以利用下仙洞仙草治療...")
+			say("你為什麼想知道?!")
+			say("")
+			local s=select("不是，只是對仙草好奇", "下仙洞實在..")
+			if 2==s then
+				say("醫生 : ")
+				say("要放棄了嗎.....")
+				say("你的體力有限是吧...")
+				say("這怎麼辦，要快點取到仙草才能...")
+				say("")
+				say("忽然看到他的手裡有個閃爍的寶物")
+				local s=select("放棄任務", "繼續進行")
+				if 1==s then
+					say_pc_name()
+					say("以我的能力實在無法找仙草.")	
+					say("我要放棄")
+					wait()
+					say("醫生 : ")
+					say("不關心被疫病受苦的老百姓阿")
+					say("你自己吃好喝好吧")
+					say("")
+					set_state(__GIVEUP__)
+					return
+				end
+				say_pc_name()
+				say("絕對不是為了報酬")
+				say("只是因愛國之心.... ")
+				say("改變要放棄的想法， ")
+				say("重新挑戰.")
+				say("再強調，絕對不是為了報酬")
+				say("")
+				return
+			end
+			say("醫生:")
+			say("好，快去快回吧..")
+			say("")
+			return	
+		end
+		
+		when 5161.kill begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("50057")==0 then
+				pc.give_item2(50057, 1)
+				
+			end
+		end
+
+
+		when __TARGET__.target.click or
+			20018.chat."下仙洞仙草.." with pc.count_item(50057)>=1 begin
+			target.delete("__TARGET__")
+
+			say("醫生 :")
+			say("噢，真的找到下仙洞仙草了...")
+			say("用這個可以戰勝僵屍疫病")
+			say("等一下，現在就製作僵屍治療劑.")
+			say("辛苦你了..")
+			say("")
+			wait()
+			say("醫生 :")
+			say("僵屍治療劑做好了..")
+			say("快去給那位患者吧")
+			say("我祝他快點好起來，請轉達我的祝願")
+			say("還有，今後沒有正確的醫學知識")
+			say("要從醫生那裡確診")
+			say("")
+			pc.remove_item("50057",1)
+			pc.give_item2("30152",1)
+			set_state(go_to_patient)
+		end
+	end
+
+	state go_to_patient begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("給老海盜僵屍治療劑")
+			q.set_title("給老海盜僵屍治療劑")
+			q.start()
+			
+			local v=find_npc_by_vnum(20020)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v," 把僵屍治療劑交給老海盜")
+			end
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."老海盜的僵屍治療劑"..locale.NORMAL_COLOR)
+			say("把僵屍治療劑交給老海盜")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20020.chat."僵屍治療劑拿來了" with pc.count_item(30152)>=1  begin
+			target.delete("__TARGET__")
+			say("老海盜 :")
+			say("找到新藥了?")
+			say("噢，製作要得過程中還有了那些事情啊.")
+			say("給你添很多麻煩，真是過意不去.")
+			say("民間療法也不能相信了.")
+			say("我吃了這個就打起精神了.")
+			say("你肯幫我這個不起眼的人，真是謝謝.")
+			say("現在身體好了")
+			say("怎樣都要努力活下去. 這是我的誠意，收下吧.")
+			say("以後我成功了，大大地謝禮. ")
+			say("")
+			pc.remove_item("30152",1)
+			say_reward("收到  65000兩 ")
+			pc.change_money(65000)
+
+			say_reward("收到經驗值  4000000 ")
+			pc.give_exp2(4000000)
+			set_quest_state("levelup","run")
+			pc.give_item2(50727,5)
+			pc.give_item2(50724,10)
+			say_reward("獲得了草藥物品")
+			
+			say_reward("獲得了" ..item_name(70102).."")
+			say_reward("獲得了" ..item_name(70049).."")
+			pc.give_item2(70102)
+			pc.give_item2(70102)
+			pc.give_item2(70102)
+			pc.give_item2(70102)
+			pc.give_item2(70102)
+			
+			pc.give_item2(70049)
+				
+			clear_letter()	
+			set_state(COMPLETE)
+			return
+				
+		end
+	
+	end
+	state __GIVEUP__ begin
+	end
+	
+	state COMPLETE begin
+		when enter begin
+			q.done()
+		end
+	end
+end

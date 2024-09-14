@@ -1,0 +1,49 @@
+quest guild_building_npc begin
+    state start begin
+	when 20044.click begin
+	    if npc.get_guild() == pc.get_guild() then
+		say("阿! 歡迎光臨!")
+		say("我改良物品, 成功率比一般鐵匠高10%.")
+		say("如果你是公會成員還會特別有5%的優惠.")
+		say("給我您想改良的武器!")
+	    else
+		say("我是負責武器改良的鐵匠!")
+		say("我比在城市裡的王鐵匠實力更好!")
+		say("我改良物品, 成功率比一般鐵匠高10%.")
+		say("如果您給我武器的話, 我會幫您改良.")
+	    end
+	end
+	when 20045.click begin
+	    if npc.get_guild() == pc.get_guild() then
+		say("阿! 歡迎光臨!")
+		say("我改良物品, 成功率比一般鐵匠高10%.")
+		say("公會成員會特別有5%的優惠.")
+		say("")
+		say("我會改良盔甲,盾牌跟頭盔.")
+		say("給我您想改良的防具!")
+	    else
+		say("我是負責防禦器改良的鐵匠!")
+		say("我會改良盔甲,盾牌跟頭盔.")
+		say("")
+		say("我比在城市裡的王鐵匠實力更好!")
+		say("我改良物品, 成功率比一般鐵匠高10%.")
+		say("給我您想改良的防具!")
+	    end
+	end
+	when 20046.click begin
+	    if npc.get_guild() == pc.get_guild() then
+		say("阿! 歡迎光臨!")
+		say("如果我改良物品的話, 會上升10%成功率.")
+		say("公會成員會特別有5%的優惠.")
+		say("")
+		say("我會改良首飾、耳環、項鍊還有鞋子.")
+		say("給我您想改良的裝飾品!")
+	    else
+		say("我是負責首飾改良的鐵匠!")
+		say("我比在城市裡的王鐵匠實力更好!")
+		say("我改良物品, 成功率比一般鐵匠高10%.")
+		say("給我您想改良的防具!")
+	    end
+	end
+    end
+end

@@ -1,0 +1,55 @@
+quest hair_shop begin
+	state start begin
+		when 20021.chat."有關頭髮的故事" with pc.get_part(PART_HAIR) >= 1001 begin
+			say("艾麗恩:")
+			say("唉唷~ 你的髮型很漂亮~")
+			say("但是以前的髮型比較好看比較適合你嗎?")
+			say("怎麼樣? 你想不想更改為之前的髮型?")
+			say("需要50萬兩")
+			say("")
+			say("")
+
+			local a = select("好的~ 我要更改為之前的髮型", "很抱歉,不需要")
+			if a == 1 then
+				if pc.money >= 500000 then
+					pc.changemoney(-500000)
+					say("艾麗恩:")
+					say("你決定的非常好")
+					say("可以等等我?")
+					say("")
+					wait()
+					say("喀嚓 喀嚓")
+					say("唰唰 唰唰")
+					say("喀嚓 喀嚓")
+					say("唰唰 唰唰")
+					say("")
+					wait()
+					say("艾麗恩:")
+					say("恩~ 看上去不太好..")
+					say("")
+					wait()
+					say("艾麗恩:")
+					say("恩~ 現在完成了")
+					say("你應該會非常喜歡現在這個髮型的")
+					say("")
+					pc.set_part(PART_HAIR, 0)
+				else
+					say("艾麗恩:")
+					say("喔~ 看樣子,你現在沒有錢喔~..")
+					say("需要50萬兩.. .. ..50萬兩.")
+					say("")
+					wait()
+					q.done()
+				end
+			elseif a == 2 then
+				say("艾麗恩:")
+				say("我會給你很好看的髮型,你不需要那就算了吧")
+				say("")
+				say("")
+			else
+				say("UNKNOWN BUTTON ["..a.."]")
+			end
+		end
+	end
+end
+

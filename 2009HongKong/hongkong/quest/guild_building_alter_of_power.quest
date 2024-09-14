@@ -1,0 +1,120 @@
+quest alter_of_power begin
+	state start begin
+		when 20077.click with npc.get_guild() == pc.get_guild() and pc.is_guild_master() begin
+			say("我是守護力量祭壇的人.")
+			say("力量祭壇可以增加公會會員的數量.")
+			say("公會的力量越來越強的話 ")
+			say("你可以建更強的力量祭壇.")
+			say("這樣的話, 你會得到多一些的會員.")
+			say("")
+
+			if pc.getqf("build_level") == 0 then
+				pc.setqf("build_level", guild.level(pc.get_guild()))
+			end
+
+			wait()
+
+			say("嗯~ 你的公會...")
+
+			if pc.getqf("build_level") < guild.level(pc.get_guild()) or guild.level(pc.get_guild()) >= 20 then
+
+				say("到現在, 你已經拿到了很大的力量.")
+				say("你想改變到更強的祭壇嗎?")
+				say("為了改變需要一些物品.")
+				say("")
+				say_reward("2500萬兩")
+				say_reward("硝石10個")
+				say_reward("合板15個")
+				say_reward("圓木10個")
+				say("")
+
+				local s = select("改變", "不改變")
+
+				if s == 1 then
+					if pc.count_item(90010) >= 10 and pc.count_item(90012) >= 15 and pc.count_item(90011) >= 10 and pc.get_gold() >= 25000000 then
+						say("現在我要改變成新的祭壇")
+						building.reconstruct(14062)
+						pc.setqf("build_level", guild.level(pc.get_guild()))
+						char_log(0, "GUILD_BUILDING", "alter_of_power 14062 constructed")
+
+						pc.change_gold(-25000000)
+						pc.remove_item("90010", 10)
+						pc.remove_item("90011", 10)
+						pc.remove_item("90012", 15)
+					else
+						say("為了建設祭壇需要材料跟金錢.")
+						say("但是你們的金錢跟材料不足.")
+						say("")
+					end
+				elseif s == 2 then
+					say("下次再來找我吧.")
+					say("")
+				end
+			else
+				say("你們需要更多的力量.")
+				say("")
+			end
+		end
+
+		when 20078.click with npc.get_guild() == pc.get_guild() and pc.is_guild_master() begin
+			say("公會的等級越高, 你們可以建設更強的祭壇")
+			say("等級越高, 力量越強.")
+			say("")
+
+			wait()
+
+			say("嗯~ 你們的公會...")
+
+			if pc.getqf("build_level") < guild.level(pc.get_guild()) or guild.level(pc.get_guild()) >= 20 then
+				say("喔~ 你們的力量已經很強了!")
+				say("現在改變到最強的祭壇.")
+				say("為了改變需要一些物品.")
+				say("")
+				say_reward("3000萬兩")
+				say_reward("硝石15個")
+				say_reward("合板20個")
+				say_reward("圓木20個")
+				say("")
+
+				local s = select("改變", "不改變")
+
+				if s == 1 then
+					if pc.count_item(90010) >= 15 and pc.count_item(90012) >= 20 and pc.count_item(90011) >= 20 and pc.get_gold() >= 30000000 then
+						say("現在我要改變成新的祭壇.")
+						say("這是最高等級的祭壇.")
+						say("")
+						building.reconstruct(14063)
+						pc.setqf("build_level", guild.level(pc.get_guild()))
+						char_log(0, "GUILD_BUILDING", "alter_of_power 14063 constructed")
+
+						pc.change_gold(-30000000)
+						pc.remove_item("90010", 15)
+						pc.remove_item("90011", 20)
+						pc.remove_item("90012", 20)
+					else
+						say("為了建設祭壇需要材料跟金錢.")
+						say("但是你們的金錢跟材料不足.")
+						say("")
+					end
+				elseif s == 2 then
+					say("下次再來找我吧")
+					say("")
+				end
+			end
+		end
+
+		when 20079.click with npc.get_guild() == pc.get_guild() and pc.is_guild_master() begin
+			say("公會的力量已經是最高了.")
+			say("現在不必再改變祭壇.")
+			say("")
+		end
+
+		when 20077.click or 20078.click or 20079.click with npc.get_guild() == pc.get_guild() and pc.is_guild_master() != true begin
+			say("力量祭壇是")
+			say("會增加公會員的數量.")
+			say("")
+		end
+	end
+end
+
+

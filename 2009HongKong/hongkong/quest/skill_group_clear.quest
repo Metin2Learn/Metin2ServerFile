@@ -1,0 +1,43 @@
+quest skill_group_clear begin
+	state start begin
+		when 71002.use begin
+			if pc.get_skill_group() == 0 then
+				say("你還沒有選擇職業.")
+				say("請先選擇職業.")
+				say("")
+				return
+			end
+
+			say("這個文件是職業初級化書.")
+			say("初級化後從職業教官可以拿到新職業.")
+			say("已經初級化的職業無法修復.")
+			say("")
+
+			say("你想初級化職業嗎?")
+			say("")
+
+			local s = select("是", "不是")
+
+			if s == 1 then
+				say("現在習得技能也是都要初級化. ")
+				say("已經初級化的職業無法修復")
+				say("")
+				
+				say("你想初級化職業嗎?")
+				s = select("是", "不是")
+	
+				if s == 1 then
+					pc.setqf("clear", 1)
+					pc.clear_skill()
+					pc.set_skill_group(0)
+					char_log(0, "SKILL_GROUP_CLEAR", "Clear Skill and skill_group By scroll(71002)")
+					say("職業初級化成功.")
+					say("")
+					pc.remove_item(71002)
+				end
+			end
+		end
+	end
+end
+
+

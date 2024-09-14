@@ -1,0 +1,377 @@
+quest ring_detect begin
+	state say_ring_of_ipkn begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("戒指開始說話")
+			q.set_title("戒指跟我說話")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 戒指跟我說話"..locale.NORMAL_COLOR)
+			say("戒指會說話, 你應該很吃驚吧?")
+			say("你想不想跟我買呢?")
+			say("我想離開這裡, 但是我的能力不夠")
+			say("所以我需要你的幫忙.")
+			say("非常簡單的一件事情")
+			say("如果你幫我的話, 我會給你很好的報酬")
+			say("怎麼樣?")
+			say("")
+			local b=select("聽一聽較較一的內容", "拒絕")
+			if 1==b then
+				say("好的好的, 你應該這樣做的")
+				say("我需要你的善惡值, 你給我的話[ENTER]我可以幫你變成透明狀態1小時")
+				say("怎麼樣, 很吃驚的交吧?")
+				local b=select("同意", "拒絕")
+				if 1==b then
+				elseif 2==b then
+					setstate(start)
+					q.done()
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+				say("你下次還會這樣拒絕我嗎?")
+				say("如果你想拒絕的話, 你可以嘗試把我放到火裡面")
+				say("在火熄滅之前, 你好好考慮一下")
+				say("是否要幫我")
+				say("")
+				if pc.getf("ring_first_detect", "__status")==ring_first_detect.complete then
+					say("你想破壞戒指嗎?")
+					local b=select("是的", "不是的")
+					if 1==b then
+						if pc.getf("ring_destroy", "__status")!=ring_destroy.start then
+							say("已經在執行破壞戒指的任務")
+							say("快點去 閻魔火地 破壞戒指!")
+						else
+							setstate(start)
+							q.done()
+						end
+					elseif 2==b then
+						setstate(start)
+						q.done()
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+					say(locale.NOTICE_COLOR.." 戒指跟我說話"..locale.NORMAL_COLOR)
+			say("戒指會說話, 你應該很吃驚吧?")
+			say("你想不想跟我買呢?")
+			say("我想離開這裡, 但是我的能力不夠")
+			say("所以我需要你的幫忙.")
+			say("非常簡單的一件事情")
+			say("如果你幫我的話, 我會給你很好的報酬")
+			say("怎麼樣?")
+			say("")
+			local b=select("聽一聽較較一的內容", "拒絕")
+			if 1==b then
+				say("好的好的, 你應該這樣做的")
+				say("我需要你的善惡值, 你給我的話[ENTER]我可以幫你變成透明狀態1小時")
+				say("怎麼樣, 很吃驚的交吧?")
+				local b=select("同意", "拒絕")
+				if 1==b then
+				elseif 2==b then
+					setstate(start)
+					q.done()
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+				say("你下次還會這樣拒絕我嗎?")
+				say("如果你想拒絕的話, 你可以嘗試把我放到火裡面")
+				say("在火熄滅之前, 你好好考慮一下")
+				say("是否要幫我")
+				say("")
+				if pc.getf("ring_first_detect", "__status")==ring_first_detect.complete then
+					say("你想破壞戒指嗎?")
+					local b=select("是的", "不是的")
+					if 1==b then
+						if pc.getf("ring_destroy", "__status")!=ring_destroy.start then
+							say("已經在執行破壞戒指的任務")
+							say("快點去 閻魔火地 破壞戒指!")
+
+						else
+							setstate(start)
+							q.done()
+						end
+					elseif 2==b then
+						setstate(start)
+						q.done()
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state say_ring_of_thor begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("戒指開始說話")
+			q.set_title("戒指跟我說話")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 戒指跟我說話"..locale.NORMAL_COLOR)
+			say("戒指會說話, 你應該很吃驚吧?")
+			say("你想不想跟我買呢?")
+			say("我想離開這裡, 但是我的能力不夠")
+			say("所以我需要你的幫忙.")
+			say("非常簡單的一件事情")
+			say("如果你幫我的話, 我會給你很好的報酬")
+			say("怎麼樣?")
+			say("")
+			local b=select("聽一聽較較一的內容", "拒絕")
+			if 1==b then
+				say("好的好的, 你應該這樣做的")
+				say("我需要你的善惡值, 你給我的話[ENTER]我可以幫你變成透明狀態1小時")
+				say("怎麼樣, 很吃驚的交吧?")
+				local b=select("同意", "拒絕")
+				if 1==b then
+				elseif 2==b then
+					setstate(start)
+					q.done()
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+				say("你下次還會這樣拒絕我嗎?")
+				say("如果你想拒絕的話, 你可以嘗試把我放到火裡面")
+				say("在火熄滅之前, 你好好考慮一下")
+				say("是否要幫我")
+				say("")
+				if pc.getf("ring_first_detect", "__status")==ring_first_detect.complete then
+					say("你想破壞戒指嗎?")
+					local b=select("是的", "不是的")
+					if 1==b then
+						if pc.getf("ring_destroy", "__status")!=ring_destroy.start then
+							say("已經在執行破壞戒指的任務")
+							say("快點去 閻魔火地 破壞戒指!")
+
+						else
+							setstate(start)
+							q.done()
+						end
+					elseif 2==b then
+						setstate(start)
+						q.done()
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 戒指跟我說話"..locale.NORMAL_COLOR)
+			say("戒指會說話, 你應該很吃驚吧?")
+			say("你想不想跟我買呢?")
+			say("我想離開這裡, 但是我的能力不夠")
+			say("所以我需要你的幫忙.")
+			say("非常簡單的一件事情")
+			say("如果你幫我的話, 我會給你很好的報酬")
+			say("怎麼樣?")
+			say("")
+			local b=select("聽一聽較較一的內容", "拒絕")
+			if 1==b then
+				say("好的好的, 你應該這樣做的")
+				say("我需要你的善惡值, 你給我的話[ENTER]我可以幫你變成透明狀態1小時")
+				say("怎麼樣, 很吃驚的交吧?")
+				local b=select("同意", "拒絕")
+				if 1==b then
+				elseif 2==b then
+					setstate(start)
+					q.done()
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+				say("你下次還會這樣拒絕我嗎?")
+				say("如果你想拒絕的話, 你可以嘗試把我放到火裡面")
+				say("在火熄滅之前, 你好好考慮一下")
+				say("是否要幫我")
+				say("")
+				if pc.getf("ring_first_detect", "__status")==ring_first_detect.complete then
+					say("你想破壞戒指嗎?")
+					local b=select("是的", "不是的")
+					if 1==b then
+						if pc.getf("ring_destroy", "__status")!=ring_destroy.start then
+							say("已經在執行破壞戒指的任務")
+							say("快點去 閻魔火地 破壞戒指!")
+
+						else
+							setstate(start)
+							q.done()
+						end
+					elseif 2==b then
+						setstate(start)
+						q.done()
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state say_ring_of_levi begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("戒指開始說話")
+			q.set_title("戒指跟我說話")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 戒指跟我說話"..locale.NORMAL_COLOR)
+			say("戒指會說話, 你應該很吃驚吧?")
+			say("你想不想跟我買呢?")
+			say("我想離開這裡, 但是我的能力不夠")
+			say("所以我需要你的幫忙.")
+			say("非常簡單的一件事情")
+			say("如果你幫我的話, 我會給你很好的報酬")
+			say("怎麼樣?")
+			say("")
+			local b=select("聽一聽較較一的內容", "拒絕")
+			if 1==b then
+				say("好的好的, 你應該這樣做的")
+				say("我需要你的善惡值, 你給我的話[ENTER]我可以幫你變成透明狀態1小時")
+				say("怎麼樣, 很吃驚的交吧?")
+				local b=select("同意", "拒絕")
+				if 1==b then
+				elseif 2==b then
+					setstate(start)
+					q.done()
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+				say("你下次還會這樣拒絕我嗎?")
+				say("如果你想拒絕的話, 你可以嘗試把我放到火裡面")
+				say("在火熄滅之前, 你好好考慮一下")
+				say("是否要幫我")
+				say("")
+				if pc.getf("ring_first_detect", "__status")==ring_first_detect.complete then
+					say("你想破壞戒指嗎?")
+					local b=select("是的", "不是的")
+					if 1==b then
+						if pc.getf("ring_destroy", "__status")!=ring_destroy.start then
+							say("已經在執行破壞戒指的任務")
+							say("快點去 閻魔火地 破壞戒指!")
+
+						else
+							setstate(start)
+							q.done()
+						end
+					elseif 2==b then
+						setstate(start)
+						q.done()
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 戒指跟我說話"..locale.NORMAL_COLOR)
+			say("戒指會說話, 你應該很吃驚吧?")
+			say("你想不想跟我買呢?")
+			say("我想離開這裡, 但是我的能力不夠")
+			say("所以我需要你的幫忙.")
+			say("非常簡單的一件事情")
+			say("如果你幫我的話, 我會給你很好的報酬")
+			say("怎麼樣?")
+			say("")
+			local b=select("聽一聽較較一的內容", "拒絕")
+			if 1==b then
+				say("好的好的, 你應該這樣做的")
+				say("我需要你的善惡值, 你給我的話[ENTER]我可以幫你變成透明狀態1小時")
+				say("怎麼樣, 很吃驚的交吧?")
+				local b=select("同意", "拒絕")
+				if 1==b then
+				elseif 2==b then
+					setstate(start)
+					q.done()
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+				say("你下次還會這樣拒絕我嗎?")
+				say("如果你想拒絕的話, 你可以嘗試把我放到火裡面")
+				say("在火熄滅之前, 你好好考慮一下")
+				say("是否要幫我")
+				say("")
+				if pc.getf("ring_first_detect", "__status")==ring_first_detect.complete then
+					say("你想破壞戒指嗎?")
+					local b=select("是的", "不是的")
+					if 1==b then
+						if pc.getf("ring_destroy", "__status")!=ring_destroy.start then
+							say("已經在執行破壞戒指的任務")
+							say("快點去 閻魔火地 破壞戒指!")
+
+						else
+							setstate(start)
+							q.done()
+						end
+					elseif 2==b then
+						setstate(start)
+						q.done()
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state start begin
+		when 12000.take with is_test_server() and item.vnum==40002 and item.count>=1 begin
+			setstate(say_ring_of_levi)
+		end
+		when 12000.take with is_test_server() and item.vnum==40003 and item.count>=1 begin
+			setstate(say_ring_of_thor)
+		end
+		when 12000.take with is_test_server() and item.vnum==40004 and item.count>=1 begin
+			setstate(say_ring_of_ipkn)
+		end
+		when 40002.use with is_test_server() begin
+			say("我想戴上戒指")
+			say("但是太冷了, 所以把戒指掉了在地上")
+			say("這個戒指好像在跟我說, ")
+			say("把它放進去火裏.")
+			say("")
+			say("當然戒指不會跟我說, 但是我感覺到了...")
+		end
+		when 40003.use with is_test_server() begin
+			say("我想戴上戒指")
+			say("但是太冷了, 所以把戒指掉了在地上")
+			say("這個戒指好像在跟我說, ")
+			say("把它放進去火裏.")
+			say("")
+			say("當然戒指不會跟我說, 但是我感覺到了...")
+		end
+		when 40004.use with is_test_server() begin
+			say("我想戴上戒指")
+			say("但是太冷了, 所以把戒指掉了在地上")
+			say("這個戒指好像在跟我說, ")
+			say("把它放進去火裏.")
+			say("")
+			say("當然戒指不會跟我說, 但是我感覺到了...")
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

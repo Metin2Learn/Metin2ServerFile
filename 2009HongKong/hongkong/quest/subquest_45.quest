@@ -1,0 +1,229 @@
+------------------------------------------
+--SUB QUEST
+--LV 60
+--什麼是秘宗?
+-----------------------------------------
+quest subquest_45 begin 
+	state start begin
+		when login or levelup with pc.level >= 60  and pc.level <= 62  begin
+			set_state(enter)
+		end
+	end
+
+	state enter  begin
+		when letter begin
+			local v=find_npc_by_vnum(20023)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "書蟲")
+			end
+		end
+
+		when __TARGET__.target.click or
+		 20023.chat."最近秘宗的動向.." begin
+			target.delete("__TARGET__")
+			say("書蟲 :")
+			say("最近秘宗的動向可疑.")
+			say("以前就是追求神秘的古代咒文而危險的群體")
+			say("最近好像在到處")
+			say("展開活動.")
+			say("關於秘宗，我都不能輕易地接近")
+			say("最近秘宗的可疑動向")
+			say("明顯增多 ")
+			say("要好好研究.")
+			say("")
+			wait()
+			say("書蟲:")
+			say("為了研究需要更多的証據...")
+			say("到秘宗寺院可以找到,")
+			say("有秘宗教理，秘宗順應符，和詛咒書完整版.")
+			say("這三種是秘宗家伙們的")
+			say("必需品.")
+			say("找來這些物品，我就可以研究秘宗了 ")
+			say("我也不能只看書")
+			say("偶爾也要為別人活.")
+			say("不要用奇怪的眼神看我")
+			say("快去秘宗寺院吧!")	
+			say("")
+			
+			local s=select("好!","不願意" )
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("書蟲:")
+					say("你幫個忙吧，嗯?")
+					say("如果現在忙，下次來也可以...")
+					say("那我等著了~")
+					say("")
+					return
+				end
+				say("書蟲 :")
+				say("你幫個忙吧，恩?")
+				say("就那樣走了~~~~")
+				say("那請誰幫忙呢..")
+				say("嗤..")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+					
+			say("書蟲 :")
+			say("謝謝! 那就信你了.")
+			say("")
+			set_state(WHAT_IS_MILGYO)
+			
+		end
+
+	end
+			
+
+	state WHAT_IS_MILGYO begin
+
+		when letter begin
+
+		send_letter("什麼是秘宗?")
+
+			if pc.count_item("30147")>=1 and	 pc.count_item("30148")>=1  and  pc.count_item("30164") >=1 then
+				local v=find_npc_by_vnum(20023)
+				if 0!= v then
+					target.vid("__TARGET__",v,"書蟲")
+				end 
+			end
+
+		end
+
+		when info or  button begin
+
+			if pc.count_item("30147")>=1 and	 pc.count_item("30148")>=1  and  pc.count_item("30164") >=1 then
+				say(locale.NOTICE_COLOR.."抓到"..mob_name(777).."!".. locale.NORMAL_COLOR)
+				say("")
+				say("為了研究最近增加的秘宗的可疑的動向")
+				say("取得")
+				say("秘宗教理，秘宗順應符，和詛咒書完整版")
+				say("把這些帶給書蟲")
+				say("")
+				return
+			end
+				
+			say(locale.NOTICE_COLOR.."抓捕"..mob_name(777).."!".. locale.NORMAL_COLOR)
+			say("")
+			say("最近秘宗的可疑的動向在增加.")
+			say("為了確切地知道他們的目的 ")
+			say("需要書蟲的研究.")
+			say("書蟲說有秘宗使用的三個物品")
+			say("就可以進行研究.")
+			say("取研究所需要的秘宗教理，秘宗順應符，和詛咒書完整版")
+			say("交給書蟲.")
+			say("這些物品到"..mob_name(777).."那裏")
+			say("就可以得到.")
+			say("")
+
+
+		end
+
+		when 777.kill  begin
+		
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30147")==0  then
+				pc.give_item2(30147, 1)-- 秘宗教理      
+				return
+			end	
+			
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30148")==0  then
+				pc.give_item2(30148, 1) -----------秘宗順應符-
+				return
+			end
+			
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30164")==0  then
+				pc.give_item2(30164, 1) -----------詛咒書完整版-
+				return
+			end
+			
+		end
+
+			
+		when __TARGET__.target.click or 
+			20023.chat."秘宗!"   begin
+			if pc.count_item("30147")>0 and pc.count_item("30148")>0  and  pc.count_item("30164")>0 then
+				target.delete("__TARGET__")
+				say("書蟲:")
+				say("辛苦你了")
+				say("那就慢慢看")
+				say("這些傢伙做些什麼.")
+				say("簡單說真是危險的傢伙.")
+				say("崇拜從古代傳下來的")
+				say("邪惡的神 .")
+				say("具體的內容還不知道，但是可以肯定")
+				say("利用了邪惡的氣息.")
+				wait()
+				say("書蟲:")
+				say("為了引起世界的混亂")
+				say("好像在進行各種各樣的...")
+				say("更詳細的事項要翻看其他的書 .")
+				say("不知道以後這些傢伙將展開些什麼事")
+				say("你也要小心.")
+				say("那我要再去看書.")
+				say("")
+				pc.remove_item("30148",1)
+				pc.remove_item("30147",1)
+				pc.remove_item("30164",1)
+				
+				say_reward("獲得經驗值  7000000 ")
+				pc.give_exp2(7000000)
+			    set_quest_state("levelup","run")
+					   
+				say_reward("獲得兵法六統")
+				pc.give_item2(70003)
+
+				say_reward("獲得70000兩")
+				pc.change_money(70000)
+				
+				pc.give_item2(50728,5)
+				pc.give_item2(50722,10)
+				say_reward("獲得了草藥物品")
+				
+				clear_letter()
+				set_state(COMPLETE)
+
+
+				
+				return
+			else		
+				say("書蟲 :")
+				say("啊，你...")
+				say("還沒找到嗎!")
+				say("接了事，要迅速行動阿")
+				say("這麼慢，到底什麼時候才能完成呢!")
+
+
+				local s=select("重新挑戰","放棄" )
+				if 2==s then
+					say("書蟲 :")
+					say("已經有別人取回來幾個了.")
+					say("不用你費心地去取了.") 
+					set_state(__GIVEUP__)
+					return
+				end
+						
+				say("書蟲 :")
+				say("謝謝! 那就信你了.")
+
+			end
+
+
+		end
+
+	end
+
+
+	state __GIVEUP__ begin
+	end
+	state COMPLETE begin
+	end	
+end
+	
+
+

@@ -1,0 +1,308 @@
+--------------------------------------
+--SUB QUEST
+--LV 31
+--年輕商人任務
+-------------------------------------
+quest subquest_25 begin
+	state start begin
+		when login or levelup with pc.level >= 31  and pc.level <= 33 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20022)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "年輕商人")
+			end
+		end
+
+		when __TARGET__.target.click or
+		 20022.chat."對我來說太漂亮的艾麗恩" begin
+			target.delete("__TARGET__")
+			say("年輕商人:")
+			say("你知道")
+			say("鄰村叫艾麗恩的小姐嗎?")
+			say("不，已經結了婚，不是小姐了.")
+			say("當然，現在是寡婦 ，所以沒有關係了.")
+			say("我一直以來都在愛慕那位小姐")
+			say("但是那位小姐很早就結婚了.")
+			say("所以我只能跺著地後悔.")
+			say("")
+			wait()
+			say("年輕商人:")
+			say("但是因為她的丈夫在戰場死 ")
+			say("漂亮的她這麼年輕就成了寡婦了.")
+			say("雖然她結過婚...")
+			say("現在也不晚，想向她轉達我的心意!!")
+			say("有個不好意思的請求")
+			say("希望你能幫忙.")
+			say("")
+			wait()
+			say("年輕商人:")
+			say("女人喜歡帥氣的男人呢? 還是漂亮的衣服?")
+			say("首先要知道她喜歡甚麼")
+			say("才好接近....")
+			say("希望幫我打探艾麗恩")
+			say("喜歡甚麼.")
+			say("你知道不能對她")
+			say("提起我的吧")
+			say("那拜託了，我不會忘記這個恩，會報答的")
+			say("")
+			set_state(to_hear_about_her)
+			
+		end
+	end
+	
+	state to_hear_about_her begin	
+		when letter begin
+			setskin(NOWINDOW)
+			q.set_title("去找艾麗恩")
+			q.start()
+			makequestbutton("去找艾麗恩")
+			
+			local v=find_npc_by_vnum(20021)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找艾麗恩")
+			end
+
+		end
+		
+		when info or button begin
+			say(locale.NOTICE_COLOR.." 去找艾麗恩"..locale.NORMAL_COLOR)
+			say("")
+			say("年輕商人單戀成為寡婦的艾麗恩.")
+			say("為了轉達年輕商人的心意")
+			say("要了解艾麗恩到底喜歡甚麼.")
+			say("到艾麗恩那裡小心地問")
+			say("她喜歡什麼.")
+		end
+		
+		when  __TARGET__.target.click or
+			20021.chat."問我喜歡什麼?" begin
+			target.delete("__TARGET__")
+			say("艾麗恩:")
+			say("因戰爭過早失去丈夫")
+			say("最近感覺很孤獨.")
+			say("嗯? 怎麼樣心情會好起來?")
+			say("以前喜歡丈夫採來的小無名花.")
+			wait()
+			say("艾麗恩:")
+			say("在離村子較遠的地方才能採到的無名花")
+			say("丈夫經常冒著危險")
+			say("採來給我.")
+			say("現在丈夫沒有了，不能看到那個無名花...")
+			say("這種時候真是想念丈夫.")
+			say("哎呀，看我講些什麼")
+			say("提些沒用的話.")
+			say("剛才講的話，就當作沒聽到.")
+			say("")
+			
+			set_state(order)
+
+	
+		end
+	end
+	state order begin
+		when letter begin
+			setskin(NOWINDOW)
+			q.set_title("去找年輕商人")
+			q.start()
+			makequestbutton("去找年輕商人")
+			
+			local v=find_npc_by_vnum(20022)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找年輕商人")
+			end
+
+		end
+		when info or button begin
+			say(locale.NOTICE_COLOR.." 去找年輕商人"..locale.NORMAL_COLOR)
+			say("")
+			say("去找年輕商人")
+			say("告訴他艾麗恩喜歡什麼")
+		end
+
+		when __TARGET__.target.click or
+			20022.chat."給她無名花"  begin
+			target.delete("__TARGET__")
+			say("")
+			say("年輕商人:")
+			say("艾麗恩喜歡什麼呢?")
+			say("沒有提過我的事吧?")
+			say("噢，喜歡丈夫以前採來給她的無名花?")
+			say("離村子較遠，我親自去")
+			say("比較困難.")
+			say("加上那裡有")
+			say("白虎、老虎等凶惡的動物出現...")
+			wait()
+			say("年輕商人:")
+			say("你幫我吧!")
+			say(" 既然已經幫一次了，你來幫我解決")
+			say("不就你也好；我也好嗎.")
+			say("甚麼? 說我講奇怪的話?")
+			say("呵呵! 你怎麼這麼不理解")
+			say("為了心愛的人而苦惱的男人的心呢!")
+			say("就幫這次吧")
+			say("我將謝厚禮!!")
+			say("")
+			local s=select("接收.","拒絕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+					if  2==a then
+						say("年輕商人:")
+						say("啊~")
+						say("怎麼給艾麗恩採無名花呢?")
+						say("改變主意了再來吧")
+						return
+					end
+					say("年輕商人:")
+					say("你沒有單戀過嗎?")
+					say("怎麼不理解我的心呢...")
+					say("想念的人啊...")
+					set_state(__GIVEUP__)
+					return
+				end
+				say("年輕商人:")
+				say("謝謝")
+				say("保重身體，一定要把無名花採回來")
+				set_state(find_flower)
+			end
+
+
+	end
+
+	state find_flower begin
+		when letter begin
+			setskin(NOWINDOW)
+			q.set_title("去採無名花" )
+			q.start()
+			makequestbutton("去採無名花")
+		
+			local v=find_npc_by_vnum(20358)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "無名花")
+			end
+
+
+		end
+		when info or  button begin
+			say(locale.NOTICE_COLOR.. "去採無名花"..locale.NORMAL_COLOR)
+			say("")
+			say("為了讓年輕商人給艾麗恩表達心意")
+			say("採來無名花.")
+			say("在白虎和老虎居住的")
+			say("1地圖的角落處，可以採到無名花.")
+
+		end
+		when 20022.chat. "還沒有採到無名花." begin
+			say("年輕商人 :")
+			say("噢，這樣..")
+			say("本來想今天向她表達心意的..")
+			say("打開她的心扉真是不容易呀")
+			say("可愛的人 艾麗恩~ ")
+		
+			local s=select("重新挑戰","放棄")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+					if  2==a then
+						say("年輕商人:")
+						say("啊....")
+						say("也許會改變主意")
+						say("那我等著了..")
+						say("拜託一定幫我成全愛情吧")
+						return
+					end
+					say("年輕商人:")
+					say("我的傷心愛情就這樣結束了嗎?")
+					say("艾麗恩~~~~~~~")
+					set_state(__GIVEUP__)
+					return
+				end
+				say("年輕商人:")
+				say("謝謝")
+				say("理解我的心")
+				say("分明你也會陷入愛情了吧")
+				say("")
+
+
+
+		end	
+
+
+		when __TARGET__.target.click or
+			20358.chat."是艾麗恩喜歡的無名花" with pc.getf("subquest_25","flower_done")==0 begin    
+				target.delete("__TARGET__")
+				say("這個花好像是艾麗恩說的無名花")
+				pc.give_item2(30153, 1)                                                    
+				set_state(go_to_reward)
+			end
+			
+	end
+
+	state go_to_reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			q.set_title("採到無名花了" )
+			q.start()
+			makequestbutton("採到無名花了")
+			
+			local v=find_npc_by_vnum(20022)
+			if 0 == v then
+				else
+					target.vid("__TARGET__",v,"去找年輕商人")
+			end 
+
+		end
+		when info or  button begin
+			say(locale.NOTICE_COLOR.. "採到無名花了"..locale.NORMAL_COLOR)
+			say("給單戀艾麗恩的年輕商人")
+			say("把無名花帶過去")
+
+		end
+
+		when __TARGET__.target.click or 
+			20022.chat."這個 無名花.." with pc.count_item(30153) > 0 begin      
+			target.delete("__TARGET__")
+			say("年輕商人:")
+			say("噢，這就是那個花啊.")
+			say("現在可以堂堂正正地向艾麗恩")
+			say("表達我的心意了.")
+			say("不，現在是不是還太早...")
+			say("反正能向她")
+			say("表達些我的心意")
+			say("謝謝你幫我.")
+			say("這是獎賞，你辛苦了!")
+			pc.remove_item(30153,1)
+			
+			say_reward("獲得經驗值 400000 ")
+			pc.give_exp2(400000)
+			 set_quest_state("levelup","run")
+			
+			pc.give_item2(50721,10)
+			pc.give_item2(50723,10)
+			say_reward("獲得了草藥物品")
+			
+			say_reward("獲得了" ..item_name(50513).."")
+			pc.give_item2(50513)
+			pc.give_item2(50513)
+			pc.give_item2(50513)
+			clear_letter()
+			set_state(__COMPLETE__)
+
+		end
+	end
+
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+	end
+end
+

@@ -1,0 +1,45 @@
+quest dragon_boat_festival begin
+    state start begin
+	when 20041.chat."GM: 端午節活動" with pc.is_gm() begin
+	    local value=game.get_event_flag("dragon_boat_drop")
+	    say_title("粽子概率")
+	    say(string.format("概率改變為1/%d -> ", value))
+	    local v=tonumber(input())
+	    if v<300 then
+	        say("300以下的數值不可以設定")
+
+	        if not is_test_server() then
+		    return
+	    	end
+
+	    	say("可以在測試伺服器內可以使用")
+	    end
+
+	    say(string.format("概率改變為1/%d -> 1/%d", value, v))
+	    local s=select("確定", "取消")
+	    if s==1 then
+	    	say("變更完成")
+	    	game.set_event_flag("dragon_boat_drop", v)
+	    else
+	    	say("取消完成")
+	    end
+	end
+	when 20041.chat."GM: 端午節活動開始" with pc.is_gm() and game.get_event_flag("dragon_boat_drop")==0 begin
+		say("端午節需要開始了嗎?")
+		local s=select("開始", "關閉")
+		if s==1 then
+		    local default_value=1000;
+		    game.set_event_flag("dragon_boat_drop", default_value)
+		    say(string.format("粽子概率 : 1/%d", default_value))
+		end
+	end
+	when 20041.chat."GM: 端午節活動停止" with pc.is_gm() and game.get_event_flag("dragon_boat_drop")!=0 begin
+		say("端午節活動需要停止嗎?")
+		local s=select("停止", "關閉")
+		if s==1 then
+		    game.set_event_flag("dragon_boat_drop", 0)
+		end
+	end
+    end
+end
+

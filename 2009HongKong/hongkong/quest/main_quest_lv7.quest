@@ -1,0 +1,184 @@
+----------------------------------
+-- Main quest LV7
+-- 王鐵匠的要求2
+----------------------------------
+
+
+quest main_quest_lv7 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter with pc.get_level() >= 7 begin
+			set_state( gotosmith )		
+		end
+	end
+	state gotosmith begin
+		when letter begin
+			local v=find_npc_by_vnum(20016)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "王鐵匠的要求 2")
+			end
+		end
+		when letter begin
+			send_letter("王鐵匠的要求 2")
+		end
+		when button or info begin
+			say_title("王鐵匠的要求 2")
+	    	---                                                   l
+			say("去找王鐵匠")
+		   	say("他正在人幫他帶些東西給漁夫.")
+			say("")
+			say_reward("任務完成後可以得到報酬")
+			say_item_vnum("免費製煉卷一次", 30131, "")
+			say("")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+	    	---                                                   l
+			say("王鐵匠:")
+			say("喂~ 初心者~ 你過來這裡! 我跟你要求一件事情")
+		   	say("我一般不會對其他人要求,")
+		   	say("但是我會相信你, 所以要求你.")
+			say("這是你的榮幸!")
+			say("")
+			wait()
+
+   			say("阿~ 我為了漁夫製作了釣魚的物品")
+			say("但是我現在很忙, ")
+			say("所以我不會親自拿給他.")
+			say("請你把這個釣魚物品給漁夫好嗎.")
+			say_item("魚杆+10", 27490, "")
+			wait()
+
+   			say("漁夫應該在河的附近. ")
+			say("你完成這個任務之後, 再找我的話 ")
+			say("我可以幫你免費製煉.")
+   			say("這應該夠了吧 ! 快點去, 然後回來找我!")
+			setstate( gotofisher )
+			q.done()
+		end
+	end
+
+
+	state gotofisher begin
+		when letter begin
+			send_letter("去找漁夫")
+		end
+		when button or info begin
+			say_title("去找漁夫")
+	    	---                                                   l
+			say("王鐵匠為了漁夫製作釣魚物品.")
+			say("去找漁夫然後交還給他.")
+			say_item("魚杆+10", 27490, "")
+			say("")
+		end
+		when 20016.chat."你給他魚杆了嗎?" begin
+			say("王鐵匠:")
+			say("你給他魚杆了嗎?")
+			say("什麼? 還沒有給嗎! 快點去給他吧")
+			say("漁夫應該就在河邊!")
+			say("")
+		end
+		when 9009.chat."交還魚杆"  begin
+			say("漁夫:")
+			say("釣魚就是我的人生樂趣")
+			say("王鐵匠終於給我魚杆")
+			say("跟他說我已經收到了, 謝謝他.")
+			say("你對釣魚熟悉嗎?")
+			say("")
+			wait()
+			say("漁夫:")
+	    	---                                                   l
+			say("生活技能上學習釣魚的話")
+			say("使用魚杆跟魚餌. ")
+			say("可以釣到小鯉魚, 鯽魚, 兗魚, 鯰魚.")
+			say("這種類的魚, 對身體健康很好, ")
+			say("有時還可能得到很珍貴的寶物")
+			say("下次有機會的時候, 你一定要試試. ")
+			say("")
+			wait()
+
+			say("漁夫:")
+			say("阿~ 這個是我收到物品的收條.")
+			say("那你路上小心, 再見~!")
+			say_item("釣魚物品收條", 30131, "")
+			say("")
+			set_state( gotosmith2 )
+		end
+	end
+	state gotosmith2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20016)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "回去找王鐵匠")
+			end
+		end
+		when letter begin
+			send_letter("回去找王鐵匠")
+		end
+		when button or info begin
+			say_title("回去找王鐵匠")
+	    	---                                                   l
+			say("王鐵匠他製作的釣魚物品")
+			say("完成了交還給漁夫.")
+			say("帶漁夫給我的收條回去找王鐵匠")
+			say("取得報酬.")
+			say_item("釣魚物品收條", 30131, "")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+		
+			pc.setqf("refine_chance",1)
+			say("王鐵匠:")
+	    	---                                                   l
+			say("你跟魚夫見面了嗎?")
+			say("我晚一點寄給他釣魚物品. ")
+			say("原因不是我忘記了!")
+			say("最近太忙, 所以晚點寄給他.")
+			say("好的, 我現在可以幫你製煉你的一個裝備")
+			say("你想製煉什麼裝備呢?")	
+			say("")
+			say_reward("任務完成後可以獲得報酬")
+			say_item("免費製煉卷 一次", 30131, "")
+			
+			set_quest_state("main_quest_lv9", "run")
+			set_state(refine)
+		end
+	end
+	state refine begin
+		when login with pc.getf("main_quest_lv7","refine_chance") == 0 begin
+			clear_letter()
+			set_state( __COMPLETE__ )
+		end
+		when letter begin
+			send_letter("免費製煉卷 一次 ")	
+		end
+		when button or info begin
+			if pc.getqf("refine_chance") > 0 then
+				say_title("免費製煉卷 一次")	
+				---                                                   l
+				say("這是不需要錢和物品就可以")
+				say("免費製煉一次裝備的文件,你想製煉的物品,")
+				say("放到王鐵匠的上面製煉窗會打開.")
+				say_item("免費製煉卷 一次", 30131, "")
+				say("")	
+				say_title("注意事項")
+				say_reward("1) 在物品欄看不見.")
+				say_reward("2) 不能保證100% 製煉成功.")
+				say("")	
+			else
+				say_title("免費製煉卷 一次: 已經使用了")	
+				say("你已經使用過免費製煉卷")
+				say("下次再使用.")
+				say("")	
+				clear_letter()
+				set_state( __COMPLETE__ )
+			end
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end
+

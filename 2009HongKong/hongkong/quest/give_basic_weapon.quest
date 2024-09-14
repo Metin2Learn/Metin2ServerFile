@@ -1,0 +1,24 @@
+quest give_basic_weapon begin
+	state start begin
+		when login begin
+			if pc.getqf("basic_weapon") == 0 then
+				pc.setqf("basic_weapon", 1)
+
+				local item = 10
+
+				if pc.job == 1 then
+					item = 1000
+				elseif pc.job == 3 then
+					item = 7000
+				end
+
+				if pc.countitem(item) == 0 and pc.weapon != item then
+					pc.give_item2(item)
+					pc.give_item2(27001,5 )
+				--	pc.give_item2(22000, 5)
+				
+				end
+			end
+		end
+    end
+end

@@ -1,0 +1,207 @@
+----------------------------------------------------
+-- SUB QUEST 
+-- LV  33 
+--	新的武器
+----------------------------------------------------
+
+quest subquest_30 begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >=33  and pc.get_level() <= 35 begin
+			set_state( information )
+		end
+	end
+
+	state information begin
+		when letter begin
+					
+			local v = find_npc_by_vnum(20016)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "去王鐵匠那裡")
+			end
+		end
+
+				
+		when __TARGET__.target.click or
+			20016.chat."開發新的武器!!" with pc.level >= 33 begin
+			target.delete("__TARGET__")
+			say("王鐵匠 :")
+			say("嘿，對呀，叫你呢. 呵呵呵.")
+			say("現在已經不是新手了，成為堂堂正正的士兵了.")
+			say("這都多虧我給你各種各樣的任務的吧.")
+			say("哈哈哈. 都是為你好的")
+			say("所以讓你很受苦.")
+			say("我現在很認真地請你幫個忙.")
+			say("")
+			wait()
+			say("王鐵匠 :")
+			say("想做新的武器")
+			say("但不容易收集材料.")
+			say("我自己不能到處去找材料")
+			say("你幫我一次找齊材料吧.")
+			say("完成武器後")
+			say("我挑一個不錯的給你.")
+			say("")
+			wait()
+			say("王鐵匠 :")
+			say("這次製作武器所需要的材料是")
+			say("金原石，瑪瑙木 ，銀原石各100個.")
+			say("可能你會覺得數量多")
+			say("利用生活技能採礦的話，一次可以 採取多個")
+			say("很快就可以收集完.")
+			say("如果難收集到，也可以通過和其他人的交換收集")
+			say("拜託了! ")
+			say("")
+			local s=select("接收.","拒絕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("王鐵匠 :")
+					say("這不是很急的，如果改變了主意")
+					say("下次再來吧")
+					return
+				end
+				say("王鐵匠 :")
+				say("我的新武器事業要垮掉了")
+				say("是個革新的注意..")
+				say("可惜啊，可惜..")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("王鐵匠 :")
+			say("噢~")
+			say("是吧?")
+			say("真是好人啊")	
+			say("")
+			set_state(to_gain_material)
+		end	
+	end
+
+	state to_gain_material begin
+
+		when letter begin
+			send_letter("王鐵匠的新武器")
+
+			local gold=pc.count_item(50606)
+			local silver=pc.count_item(50605)
+			local ebony=pc.count_item(50608)
+
+			if	gold>=100  and silver>=100 and ebony>=100 then
+				local v = find_npc_by_vnum(20016)
+
+				if v != 0 then
+					target.vid("__TARGET__", v, "去王鐵匠那裡")
+				end
+				return
+			end
+			
+		end
+
+		when info or button begin
+			local gold=pc.count_item(50606)
+			local silver=pc.count_item(50605)
+			local ebony=pc.count_item(50608)
+
+			if	gold>=100  and silver>=100 and ebony>=100 then
+				say(locale.NOTICE_COLOR.."找到武器材料了"..locale.NORMAL_COLOR)
+				say("找到了王鐵匠製作武器所需要的")
+				say("所有的材料.")
+				say("拿給王鐵匠")
+				say("")
+				return
+			end
+
+			say(locale.NOTICE_COLOR.."找武器材料"..locale.NORMAL_COLOR)
+			say("")
+			say("王鐵匠要求幫忙找製作新武器的材料")
+			say("所需要的材料是")
+			say("金原石，瑪瑙木 ，銀原石 各100個.")
+			say("可以通過鋤頭和生活技能採礦取得")
+			say("材料會在地圖的各個地方隨意地出現")
+			say("仔細察看. 如果原石不好找")
+			say("也可以跟其他人進行交換或買賣取得.")
+		end
+
+		when 20016.chat."新武器材料.."  begin
+			target.delete("__TARGET__")
+			
+			local gold=pc.count_item(50606)
+			local silver=pc.count_item(50605)
+			local ebony=pc.count_item(50608)
+
+			
+			if	gold<100  or silver<100 or  ebony<100 then
+
+				say("王鐵匠 :")
+				say("還缺些材料吧?")
+				say("")	
+				say("")
+
+				local s=select("重新挑戰.","放棄.")
+				if 2==s then
+					say("放棄任務嗎 ?")
+					local a=select("是","否")
+					if  2==a then
+						say("王鐵匠 :")
+						say("收集原石難嗎?")
+						say("幸運屬於努力的人")
+						say("休息一會再挑戰如何?")
+						return
+					end
+					say("王鐵匠 :")
+					say("我的新武器事業要垮掉了")
+					say("是個革新的注意..")
+					say("可惜啊，可惜..")
+					set_state(__GIVEUP__)
+					return
+				end
+				say("王鐵匠 :")
+				say("要認真採集!")
+				say("採到為止!!!")
+				say("拜託了~")
+				return
+		end	
+			
+		if	gold>=100  and silver>=100 and ebony>=100 then
+
+			say("王鐵匠:")
+			say("噢，這麼快找齊了材料了.")
+			say("哈哈! 我還是很有眼光的!")
+			say("謝謝了，等一下吧.")
+			say("有了材料，製作起來很快!")
+			wait()
+			say("王鐵匠:")
+			say("好了.")
+			say("果然我的手藝讓我都驚訝.")
+			say("這是給你的武器.")
+			say("是新的武器，好好用吧!")	
+			say("")	
+			pc.remove_item(50606,100)
+			pc.remove_item(50605,100)
+			pc.remove_item(50608,100)
+		
+			say_reward("獲得經驗值 200000 ")
+			pc.give_exp2(200000)
+			 set_quest_state("levelup","run")		
+				if pc.job == 4 then
+					pc.give_item2(07053, 1)
+					say_reward("獲得 清水扇+3.")
+					return
+				end
+				pc.give_item2(00063, 1)
+				say_reward("獲得 銀劍+3.")
+			
+			
+			clear_letter()
+			set_state(__COMPLETE__)	
+		end
+			
+		end	
+	end
+state __GIVEUP__ begin
+end
+state __COMPLETE__ begin
+end
+end
+

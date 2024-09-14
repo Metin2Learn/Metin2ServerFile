@@ -1,0 +1,284 @@
+----------------------------------------------------
+-- SUB QUEST
+-- LV 21
+-- 製作武器
+----------------------------------------------------
+
+quest subquest_13 begin
+	state start begin
+		when login  or levelup with pc.level >= 21 and pc.level <= 26 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(9001)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "分支任務13 製作武器")
+			end
+		end
+
+	
+		when __TARGET__.target.click or
+			9001.chat."製作武器" with pc.level >= 21 begin
+			target.delete("__TARGET__")
+
+			say("武器店老闆:")
+			say("唉~ 我有一件事情跟你說.")
+			say("這次我想製作新的武器")
+			say("但是很難取得材料.")
+			say("我要做太多事情, 所以我不能離開這裡,")
+			say("你可以幫我找材料嗎?")
+			wait()
+			say("我需要材料是: 鐵礦石, 布, 寶石, 銅.")
+			say("鐵礦石可以從老學究取得, 布可以從艾麗恩取得")
+			say("寶石可以從惡運石取得,")
+			say("銅可以從採礦中取得.")
+			say("你取得所有材料的時候, 跟我說說好嗎?")
+			say("當然我會給你一些報酬.")
+			say("")
+
+			local s=select("接受","拒絕.")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("武器店老闆:")
+					say("怎麼也好")
+					say("下次再見了")
+					return
+				end
+				say("武器店老闆:")
+				say("您想放棄, 那好的")
+				say("再見了~ 祝您好運")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("武器店老闆:")
+			say("哦~ 您可以做得到嗎??")
+			say("武器完成之後, 我可以給你一個好的武器.")
+			say("祝您好運")	
+			say("")
+			set_state(get_weapon)
+		
+		end
+	end
+
+	state get_weapon begin
+		when letter begin
+			send_letter("製作武器")
+			if	pc.getqf("iron_done") == 0  then
+				local v=find_npc_by_vnum(20011)
+				if 0==v then
+				else
+					target.vid("__TARGET1__",v,"去找老學究")
+				end
+			end	
+			if	pc.getqf("cloth_done") == 0 or pc.getqf("cloth_done")==2  then 
+				local v=find_npc_by_vnum(20021)
+				if 0==v then
+				else
+					target.vid("__TARGET2__",v,"去找艾麗恩")
+				end
+			end		
+			
+			if pc.getqf("cloth_done")== 1 then
+				local v=find_npc_by_vnum(20003)
+				if 0==v then
+				else
+					target.vid("__TARGET7__",v,"蓮嫂")
+				end
+			end	
+
+		end
+		
+
+		when info or button begin
+
+			say(locale.NOTICE_COLOR.."製作武器.."..locale.NORMAL_COLOR)
+			say("")
+			say("去幫武器店老闆的忙")
+			say("鐵礦石可以從 老學究 取得")
+			say("布可以從 艾麗恩 取得")
+			say("寶石可以從 惡運石 取得")
+			say("銅可以從 採礦 中取得")		
+			say("")
+			if pc.getqf("iron_done")==2 then
+				say("現在完成老學究的要求.")
+			end	
+			if pc.getqf("cloth_done")==3 then
+				say("*現在完成艾麗恩的要求.")
+			end	
+		end
+		when 20011.chat."請給我鐵礦石" with pc.getf("subquest_13","iron_done")==0 begin
+				target.delete("__TARGET1__")
+				say("老學究:")
+				say("什麼? 又叫我給你鐵礦石?")
+				say("你在這裡保管鐵礦石嗎?")
+				say("你怎麼每次問我給你鐵礦石呢!")
+				say("如果你幫我忙的話, 我可以給你鐵礦石.")
+				say("")
+				wait()
+				say("這次"..mob_name(172).."偷走我的包裹.")
+				say("我為了生存我不斷的跑, 所以丟了")
+				say("包裹有很多重要的資料.")
+				say("如果沒有資料的話, 我們不能研究關於惡運石.")
+				say("請你幫我找我的包裹.")
+				say_item_vnum("30134")
+				say("")
+				pc.setqf("iron_done",1)
+				
+			end	
+			when 20011.chat."請給我鐵礦石" with pc.getf("subquest_13","iron_done")==1 begin
+				target.delete("__TARGET1__")
+				if  pc.count_item("30134") >= 1  then
+					say("老學究:")
+					say("謝謝了!")
+					say("好像我每次給你太多麻煩.")
+					say("給你鐵礦石, 好好使用吧.")
+					say("[該物品不會顯示於背包]")
+					pc.setqf("iron_done", 2)
+					pc.remove_item("30134", 1)
+					return
+
+				else 
+					say("老學究:")
+					say("您還沒有找到了吧.")
+					say(""..mob_name(172).."偷走我的包裹")
+					say("您快點去找吧~")
+					say("")
+					return
+				end
+			end
+			when 20011.chat." 請給我鐵礦石" with pc.getf("subquest_13","iron_done")==2 begin
+				target.delete("__TARGET1__")
+				say("老學究:")
+				say("我剛才已經給了..")
+				say("您忘記了嗎?")
+				say("")
+			end	
+				
+			when 172.kill  begin 
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30134")==0  then
+				pc.give_item2("30134", 1)
+			end
+		end
+
+	
+		when 20021.chat."請給我布"  begin
+			target.delete("__TARGET2__")
+			if pc.getqf("cloth_done") == 0 then
+				say("艾麗恩 :")
+				say("你在找布嗎? ")
+				say("如果你幫我寄給我朋友: 蓮嫂一封信的話.")
+				say("我可以給你布")
+				say("我們是很好朋友, 但是很久沒見她.")
+				say("這是很簡單的事情, 我相信你會很快做得到")
+				say("哈哈哈~ 你回來的時候我會給你布.")
+				say("蓮嫂在第一城市.")
+				say("")
+				pc.setqf("cloth_done", 1)
+			elseif pc.getqf("cloth_done") == 1  then
+				say("艾麗恩:")
+				say("您還找不到蓮嫂嗎?")
+				say("蓮嫂在旁邊的城市")
+				say("請您找她好嗎?")
+				say("")
+				
+			elseif	pc.getqf("cloth_done") == 2  then 	
+		
+				say("艾麗恩 :")
+				say("蓮嫂跟你說了些什麼?")
+				say("阿~ 她說她的身體很好, 生活也很快樂.")
+				say("快點看看她的信裡面都寫了些什麼呢")
+				say("最近沒有蓮嫂所以沒人跟我聊天.")
+				say("所以很悶很無聊, 我差點忘寄了你需要布.")
+				say("我現在給你布, 拿去好好使用吧.")
+				say("[該物品不會顯示於背包]")
+				say("")
+				pc.setqf("cloth_done", 3)
+			else 
+				say("我剛才給你了吧")
+
+			end
+		end	
+			 
+		when 20003.chat."艾麗恩的信" with pc.getf("subquest_13","cloth_done") == 1 begin
+			target.delete("__TARGET7__")
+			say("蓮嫂 :")
+			say("你說~ 艾麗恩寄給我信嗎?")
+			say("聽到他的消息, 我很高興.")
+			say("以前我們常常見面, 一起聊天")
+			say("最近很難見面她...")
+			say("等一下, 我想寄給她回應.")
+			say("這是我的回應.")
+			say("還有跟她說, 我的生活很好.")
+			say("")
+			pc.setqf("cloth_done",2)
+		end
+
+		when 9001.chat."取得材料完成" with pc.getf("subquest_13","cloth_done") == 3 and pc.getqf("iron_done") == 2  and pc.count_item(50604)> 0 begin
+			for i = 280,284 do 
+				local x =i*100+30
+				local y =i*100+43
+			
+				for k=x,y do
+					if pc.count_item(k) > 0  then
+						pc.setqf("young_suk_done",1 )
+						remove = k
+						break
+					end
+				end
+			end
+			if pc.getqf("young_suk_done")==1    then
+				say("武器店老闆 :")
+				say("辛苦你了, 你的能力很好.")
+				say("你這麼快就找到了呢, 現在開始做武器,")
+				say("這是我第一次製作的武器,")
+				say("我不知道你會不會喜歡")
+				say("但是我做的很認真, 你好好使用吧!")
+				say("")
+
+				pc.remove_item(remove, 1)
+				pc.remove_item("50604", 1)
+			
+				pc.give_exp2(122000)
+				 set_quest_state("levelup","run")
+				say_reward("獲得經驗值 122000.")
+				
+				clear_letter()
+				set_state(__THEEND__)
+
+				if pc.job == 0 then
+					pc.give_item2("53", 1)
+					say_reward("獲得齒牙刀+3.")
+				elseif pc.job == 1 then
+					pc.give_item2("1023", 1)
+					say_reward("獲得牙刀+3.")
+				elseif pc.job == 2 then
+					pc.give_item2("53", 1)
+					say_reward("獲得齒牙刀+3.")
+				elseif pc.job == 3 then
+					pc.give_item2("7043", 1)
+					say_reward("獲得孔雀扇+3.")
+				end	
+				pc.setqf("young_suk_done",0)
+				pc.setqf("cloth_done",0)
+				pc.setqf("iron_done",0)
+
+			else 
+				say("沒有寶石~")
+				say("寶石可以從惡運石取得")
+			
+			end
+		end	
+	end
+	state __GIVEUP__ begin
+	end
+	state __THEEND__ begin
+	end
+end	

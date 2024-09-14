@@ -1,0 +1,198 @@
+quest ariyeong_findhusband begin
+	state start begin
+		when 20021.chat."丈夫的故事" begin
+			say("艾麗恩:")
+			say("預定丈夫回到家的日子已經過了很久,但是還是沒有見到丈夫的蹤影.")
+			say("難道丈夫發生了什麼事情嗎……")
+			say("")
+			say("我知道我的丈夫會安全回來的,但是我很著急")
+			say("我感到很不安")
+		end
+		when 9003.chat." 艾麗恩的故事" with number(1, 3)==1 and (pc.level>=25 and pc.level<=27) begin
+			say("雜貨店老闆:[ENTER]……原來是這樣.  [ENTER]她還沒有知道這個消息.[ENTER]其實她的丈夫不會再回到她的身邊.[ENTER] [ENTER]做完買賣回城的途中,[ENTER]黑風黨抓住了她的丈夫…….[ENTER]")
+			wait()
+			say("雜貨店老闆 :[ENTER]如果艾麗恩收到這個消息的話[ENTER]一定會很擔心他會出現什麼事情 [ENTER]她們之間十分恩愛...[ENTER]")
+			setstate(find)
+		end
+	end
+	state find begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("去找 艾麗恩")
+			q.set_title("去找 艾麗恩")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 去找 艾麗恩"..locale.NORMAL_COLOR)
+			say("告訴艾麗恩她丈夫已經死亡的事情")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 去找 艾麗恩"..locale.NORMAL_COLOR)
+			say("告訴艾麗恩她丈夫已經死亡的事情")
+		end
+		when 20021.chat." 告訴艾麗恩她丈夫已經死亡" begin
+			if pc.level>=31 then
+				say("黑風黨護法攻擊您的丈夫的時候...[ENTER]還好的到了其他的幫助 [ENTER]我們會拿到您丈夫的遺物. 謝謝您的照顧[ENTER]")
+				setstate(complete)
+				q.done()
+			elseif pc.level<=30 then
+				say("艾麗恩 :[ENTER]您剛剛在說什麼?![ENTER]他 他……他 給黑風黨殺死了嗎?! [ENTER]喔! 不要 不要~ 他死了!!!嗚~~~ [ENTER]這一切都不是真的……! [ENTER] 嗚嗚嗚 [ENTER]")
+				wait()
+				say("艾麗恩 :[ENTER]可以幫我把丈夫的遺物找回來嗎? 求求您[ENTER]只要是他的東西都可以[ENTER]請幫我找回來. 黑風黨護法應該有我丈夫的遺物 [ENTER]求求您.[ENTER]")
+				local b=select("好的 請相信我", "不好意思 這個任務對於我來說太難了")
+				if 1==b then
+					say("艾麗恩 :[ENTER]嗚~ 我應該怎麼來表示我對您的感謝……[ENTER]請幫我把丈夫的遺物找出來吧[ENTER]")
+					setstate(hunt)
+				elseif 2==b then
+					say("艾麗恩:[ENTER] 嗚嗚嗚嗚嗚嗚嗚嗚.[ENTER]")
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+	end
+	state hunt begin
+		when 493.kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+			if pc.getqf("kill_count")>=3 and pc.level>=31 then
+				setstate(giveup)
+			elseif pc.level<=30 then
+				if number(1, 3)==1 then
+					setstate(discover)
+				end
+			end
+		end
+		when enter begin
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			q.done()
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("殺死黑風黨護法")
+			q.set_title("殺死黑風黨護法")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 殺死黑風黨護法"..locale.NORMAL_COLOR)
+			say("黑風黨護法跟他的手下 ")
+			say("殺死他們, 找艾麗恩丈夫的遺物")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 殺死黑風黨護法"..locale.NORMAL_COLOR)
+			say("黑風黨護法跟他的手下")
+			say("殺死他們, 找艾麗恩丈夫的遺物")
+		end
+		when 20021.chat." 丈夫的故事" begin
+			say("艾麗恩 :[ENTER] ? 您找到我丈夫的線索馬? [ENTER] 嗚嗚. 他是我人生中的所有.[ENTER]我知道這事情很危險, 但是求求您幫幫我. [ENTER]")
+		end
+	end
+	state discover begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("發現艾麗恩的結婚戒指!")
+			q.set_title("發現艾麗恩的結婚戒指!")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 發現艾麗恩的結婚戒指!"..locale.NORMAL_COLOR)
+			say("請您回去城市環給艾麗恩的[ENTER] 結婚戒指. [ENTER]")
+			setstate(success)
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 發現艾麗恩的結婚戒指!"..locale.NORMAL_COLOR)
+			say("請您回去城市環給艾麗恩的[ENTER] 結婚戒指.[ENTER]")
+			setstate(success)
+		end
+	end
+	state success begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("還給艾麗恩的結婚戒指")
+			q.set_title("還給艾麗恩的結婚戒指")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 還給艾麗恩的結婚戒指"..locale.NORMAL_COLOR)
+			say("請您回去城市還給艾麗恩的[ENTER] 結婚戒指.[ENTER]")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 還給艾麗恩的結婚戒指"..locale.NORMAL_COLOR)
+			say("請您回去城市還給艾麗恩的[ENTER] 結婚戒指. [ENTER]")
+		end
+		when 20021.chat." 給她艾麗恩的結婚戒指" begin
+			say("艾麗恩 :[ENTER]這個戒指就是… 我們的結婚戒指… 謝謝您.[ENTER]現在我的丈夫, 他可以安心了. [ENTER]要把這封信件都埋在這片土地上 [ENTER]丈夫離開了我,現在我每天起來都要獨自照顧我們的孩子,但是,[ENTER]很幸運地,他保護了我們的結婚戒指…[ENTER]我感到很幸運,很感謝您… 謝謝您 [ENTER]")
+			setstate(reward)
+		end
+	end
+	state reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("艾麗恩任務完成!")
+			q.set_title("艾麗恩任務完成!")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 艾麗恩任務完成!"..locale.NORMAL_COLOR)
+			say("因為很多人聽過您幫艾麗恩的消息")
+			say("您收到人民的尊敬. ")
+			say("")
+			say("獲得經驗值 30000!")
+			say("")
+			pc.give_exp2(30000)
+			set_quest_state("levelup", "run")
+			setstate(complete)
+			q.done()
+		end
+	end
+	state giveup begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("艾麗恩任務失敗")
+			q.set_title("艾麗恩任務失敗")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 艾麗恩任務失敗"..locale.NORMAL_COLOR)
+			say("無法取得遺物[ENTER]現在返回城市[ENTER]我應該怎麼跟艾麗恩說呢.[ENTER]")
+			setstate(failure)
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 艾麗恩任務失敗"..locale.NORMAL_COLOR)
+			say("無法取得遺物[ENTER]現在返回城市[ENTER]我應該怎麼跟艾麗恩說呢.[ENTER]")
+			setstate(failure)
+		end
+	end
+	state failure begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("回去找艾麗恩")
+			q.set_title("回去找艾麗恩")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 回去找艾麗恩"..locale.NORMAL_COLOR)
+			say("回去城市跟艾麗恩說[ENTER]找不到他丈夫的遺物[ENTER]")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 回去找艾麗恩"..locale.NORMAL_COLOR)
+			say("回去城市跟艾麗恩說[ENTER]找不到他丈夫的遺物[ENTER]")
+		end
+		when 20021.chat."您找到遺物了嗎?" begin
+			say("艾麗恩 :[ENTER]命運.[ENTER]多虧了大家的幫助那到丈夫的[ENTER]遺物,謝謝幫忙.[ENTER]")
+			setstate(complete)
+			q.done()
+		end
+	end
+	state complete begin
+		when 20021.chat." 丈夫的故事" begin
+			say("艾麗恩:[ENTER]為了我的孩子,我要好好生活.[ENTER]為了我的孩子….[ENTER]")
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

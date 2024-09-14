@@ -1,0 +1,385 @@
+quest kill_straydog begin
+	state start begin
+		when 20008.chat."麻煩的幼狼!!" with number(1, 10)==1 and pc.level>=25 begin
+			say("唉唷~ 你來了, 不好意思.")
+			say("我很擔心最近幼狼的數量越來越多")
+			say("他們常常進入我們的食堂, 打翻我們的東西")
+			say("搗亂之後就會跑走")
+			say("我們的城市剛剛形成的時候,")
+			say("很多旅行者來我們的城市, 所以交易很繁榮")
+			say("幼狼的數量也並不是太多...")
+			local b=select("如果打死幼狼的時候, 給他們獎金怎麼樣?", "你很辛苦了")
+			if 1==b then
+				say("哈哈! 這可真是個好主意")
+				say("我想現在開始準備.")
+				say("我準備好之後會給大家一封信")
+			elseif 2==b then
+				say("我的頭髮開始越來越少,")
+				say("因為幼狼的問題, 讓我的問題越來越嚴重了")
+				say("哎呀, 這可怎麼辦阿")
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state recv begin
+		when login with number(1, 10)==1 and pc.level>=25 and pc.level<=35 begin
+			setstate(join)
+		end
+		when 20008.chat."打幼狼大會埻被成怎麼樣阿?" begin
+			say("以前聽你的建議之後, 我現在已經好好準備了")
+			say("唉唷, 但是這個不是我的本行, 所以不是太容易.")
+			say("我完成之後就會寄給你一封信")
+		end
+	end
+	state join begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("打幼狼大會邀請信")
+			q.set_title("打幼狼大會邀請信")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 打幼狼大會邀請信"..locale.NORMAL_COLOR)
+			say("最早打1000隻幼狼的人,")
+			say("會得到獎金")
+			say("")
+			say("    第一名 : 300000 兩 (30分鐘以內成功)")
+			say("    第二名 : 100000 兩 (40分鐘以內成功)")
+			say("    第三名 :	 50000 兩 (50分鐘以內成功)")
+			say("")
+			say("                 - 食堂主人孫老闆-")
+			say("")
+			say("你想參加食堂主人孫老闆舉行的打幼狼大會?")
+			local b=select("觀看紀錄", "參加", "不參加")
+			if 1==b then
+				if pc.getqf("best_time")==0 then
+					say("以前參加過的紀錄沒有")
+				else
+					say("打1000隻幼狼")
+					say("")
+					say("最短完成時間 "..(math.floor(pc.getqf("best_time")/60)).." 分")
+					say("以前完成時間 "..(math.floor(pc.getqf("prev_time")/60)).." 分")
+				end
+			elseif 2==b then
+				setstate(desc)
+			elseif 3==b then
+				setstate(start)
+				q.done()
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 打幼狼大會邀請信"..locale.NORMAL_COLOR)
+			say("最早打1000隻幼狼的人,")
+			say("會得到獎金")
+			say("")
+			say("    第一名 : 300000 兩 (30分鐘以內成功)")
+			say("    第二名 : 100000 兩 (40分鐘以內成功)")
+			say("    第三名 :	 50000 兩 (50分鐘以內成功)")
+			say("")
+			say("                 - 食堂主人孫老闆-")
+			say("")
+			say("你想參加食堂主人孫老闆舉行的打幼狼大會?")
+			local b=select("觀看紀錄", "參加", "不參加")
+			if 1==b then
+				if pc.getqf("best_time")==0 then
+					say("以前參加過的紀錄沒有")
+				else
+					say("打1000隻幼狼")
+					say("")
+					say("最短完成時間 "..(math.floor(pc.getqf("best_time")/60)).." 分")
+					say("以前完成時間"..(math.floor(pc.getqf("prev_time")/60)).." 分")
+				end
+			elseif 2==b then
+				setstate(desc)
+			elseif 3==b then
+				setstate(start)
+				q.done()
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state desc begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("打幼狼大會說明")
+			q.set_title("打幼狼大會說明")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."打幼狼大會說明"..locale.NORMAL_COLOR)
+			say("方法很簡單!")
+			say("只要最短時間內打1000隻幼狼,")
+			say("如果你超過之前的最短時間, 會發生特別獎勵活動")
+			say("請盡量發揮你的本能!")
+			say("")
+			say("但是挑戰的次數之有3次!")
+			say("")
+			say("按[開始]之後, 開始計算你的時間")
+			say("")
+			local b=select("開始", "保留", "放棄")
+			if 1==b then
+				pc.setqf("life", 2)
+				setstate(game)
+			elseif 2==b then
+			elseif 3==b then
+				setstate(start)
+				q.done()
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."打幼狼大會說明"..locale.NORMAL_COLOR)
+			say("方法很簡單!")
+			say("只要最短時間內打1000隻幼狼,")
+			say("如果你超過之前的最短時間, 會發生特別獎勵活動")
+			say("請盡量發揮你的本能!")
+			say("")
+			say("但是挑戰的次數之有3次!")
+			say("")
+			say("按[開始]之後, 開始計算你的時間")
+			say("")
+			local b=select("開始", "保留", "放棄")
+			if 1==b then
+				pc.setqf("life", 2)
+				setstate(game)
+			elseif 2==b then
+			elseif 3==b then
+				setstate(start)
+				q.done()
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state game begin
+		when 101.party_kill begin
+			pc.setqf("kill_count", pc.getqf("kill_count")+1)
+			q.set_counter("剩下的幼狼", 1000-pc.getqf("kill_count"))
+		end
+		when enter begin
+			pc.setqf("start_time", get_time())
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			q.done()
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("去打1000隻幼狼!")
+			q.set_title("去打1000隻幼狼!")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 去打1000隻幼狼!"..locale.NORMAL_COLOR)
+			say("最短時間內, 完成殺死1000隻幼狼後")
+			say("向孫老闆報告的話, 他會給你獎金, 但是要看你的等級而定")
+			say("")
+			say("殺死的數量 "..(pc.getqf("kill_count")).."")
+			say("所使用的時間 "..(math.floor((get_time()-pc.getqf("start_time"))/60)).."")
+			say("")
+			say("(剩下的機會 "..(pc.getqf("life"))..")")
+			local b=select("進行", "再挑戰", "停止")
+			if 1==b then
+			elseif 2==b then
+				if pc.getqf("life")>0 then
+					say("再挑戰的話, 現在的紀錄, 要消失")
+					say("你真的要再挑戰嗎?")
+					say("")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(game)
+						q.done()
+					elseif 2==b then
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("這次是你的最後機會!")
+				end
+			elseif 3==b then
+				say("你真的要結束幼狼的任務嗎?")
+				say("")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+					q.done()
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 去打1000隻幼狼!"..locale.NORMAL_COLOR)
+			say("最短時間內, 完成殺死1000隻幼狼後")
+			say("向孫老闆報告的話, 他會給你獎金, 但是要看你的等級而定")
+			say("")
+			say("殺死的數量 "..(pc.getqf("kill_count")).."")
+			say("所使用的時間 "..(math.floor((get_time()-pc.getqf("start_time"))/60)).."")
+			say("")
+			say("(剩下的機會 "..(pc.getqf("life"))..")")
+			local b=select("進行", "再挑戰", "停止")
+			if 1==b then
+			elseif 2==b then
+				if pc.getqf("life")>0 then
+				say("再挑戰的話, 現在的紀錄, 要消失")
+					say("你真的要再挑戰嗎?")
+					say("")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(game)
+						q.done()
+					elseif 2==b then
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("這次是你的最後機會!")
+				end
+			elseif 3==b then
+				say("你真的要結束幼狼的任務嗎?")
+				say("")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+					q.done()
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 101.party_kill with pc.getf("kill_straydog","kill_count") >= 1000 begin
+			pc.setqf("game_time", (get_time()-pc.getqf("start_time")))
+			setstate(report)
+		end
+	end
+	state report begin
+		when letter begin
+			local v=find_npc_by_vnum(20008)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("打1000隻幼狼成功!")
+			q.set_title("打1000隻幼狼成功!")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 打1000隻幼狼成功!"..locale.NORMAL_COLOR)
+			say("殺死幼狼"..(pc.getqf("kill_count")).."隻成功")
+			say("回去跟孫老闆報告結果")
+			say("")
+			say("所使用的時間"..(math.floor(pc.getqf("game_time")/60)).."")
+			say("")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 打1000隻幼狼成功!"..locale.NORMAL_COLOR)
+			say("殺死幼狼"..(pc.getqf("kill_count")).."隻成功")
+			say("回去跟孫老闆報告結果")
+			say("")
+			say("所使用的時間"..(math.floor(pc.getqf("game_time")/60)).."")
+			say("")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			if pc.getqf("kill_count")>=1000 then
+				if 30*60>pc.getqf("game_time") then
+					say("30分鐘以內殺死1000隻幼狼成功!")
+					say("完成速度非常快, 恭喜你")
+					setstate(reward_1st)
+				elseif 40*60>pc.getqf("game_time") then
+					say("40分鐘以內殺死1000隻幼狼成功!")
+					say("完成速度非常快, 恭喜你")
+					setstate(reward_2st)
+				elseif 50*60>pc.getqf("game_time") then
+					say("50分鐘以內殺死1000隻幼狼成功!")
+					say("完成速度非常快, 恭喜你")
+					setstate(reward_3st)
+				else
+					say("不好意思, 你的完成時間不能進入排行榜.")
+					say("謝謝你的參與")
+					setstate(__COMPLETE__)
+					q.done()
+				end
+			else
+				say("你需要去打死1000隻幼狼")
+			end
+		end
+	end
+	state reward_1st begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("打幼狼大會第一名")
+			q.set_title("打幼狼大會第一名")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 打幼狼大會第一名"..locale.NORMAL_COLOR)
+			say("剛開始的時候我覺得這是一個很無聊的大會.. ")
+			say("因為他們制限時間")
+			say("但是我得了第一名, 拿到獎金的時候")
+			say("那個想法, 消失了 ")
+			say("今天我感覺孫老闆的禿頭很可愛")
+			pc.changemoney(300000)
+			setstate(__COMPLETE__)
+			q.done()
+		end
+	end
+	state reward_2st begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("打幼狼大會第二名")
+			q.set_title("打幼狼大會第二名")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 打幼狼大會第二名"..locale.NORMAL_COLOR)
+			say("剛開始的時候我覺得這是一個很無聊的大會.. ")
+			say("因為他們制限時間")
+			say("但是我得了第二名, 拿到獎金的時候")
+			say("那個想法, 消失了")
+			say("孫老闆今天是在太帥了!")
+			pc.changemoney(100000)
+			setstate(__COMPLETE__)
+			q.done()
+		end
+	end
+	state reward_3st begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("打幼狼大會第三名")
+			q.set_title("打幼狼大會第三名")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 打幼狼大會第三名"..locale.NORMAL_COLOR)
+			say("剛開始的時候我覺得這是一個很無聊的大會.. ")
+			say("因為他們制限時間")
+			say("我覺得那個孫老闆在做騙人的把戲")
+			say("但是我得了第三名, 拿到獎金的時候")
+			say("我覺得現在的感覺還可以")
+			say("")
+			pc.changemoney(50000)
+			setstate(__COMPLETE__)
+			q.done()
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

@@ -1,0 +1,461 @@
+quest find_skillteacher begin
+	state start begin
+	end
+	state find begin
+		when letter begin
+			pc.setqf("talk_count", 0)
+
+			local job=pc.get_job()
+			if job==0 then
+			    local v=pc_find_skill_teacher_vid(1)
+			    if 0!=v then target.vid("teacher1", v, "劍宗") end
+			    local v=pc_find_skill_teacher_vid(2)
+			    if 0!=v then target.vid("teacher2", v, "氣宗") end
+			elseif job==1 then
+			    local v=pc_find_skill_teacher_vid(1)
+			    if 0!=v then target.vid("teacher3", v, "鋒刀") end
+			    local v=pc_find_skill_teacher_vid(2)
+			    if 0!=v then target.vid("teacher4", v, "百翼") end
+			elseif job==2 then
+			    local v=pc_find_skill_teacher_vid(1)
+			    if 0!=v then target.vid("teacher5", v, "幻舞") end
+			    local v=pc_find_skill_teacher_vid(2)
+			    if 0!=v then target.vid("teacher6", v, "黑魔") end
+			elseif job==3 then
+			    local v=pc_find_skill_teacher_vid(1)
+			    if 0!=v then target.vid("teacher7", v, "潛龍") end
+			    local v=pc_find_skill_teacher_vid(2)
+			    if 0!=v then target.vid("teacher8", v, "狂雷") end
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("去找職業教官")
+			q.set_title("去找職業教官")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 去找職業教官"..locale.NORMAL_COLOR)
+			if pc.job==0 then
+				say("去找 劍宗 或 氣宗")
+				say("聽猛將職業說明")
+			elseif pc.job==1 then
+				say("去找 刀峰 或 百翼")
+				say("聽刺客職業說明")
+			elseif pc.job==2 then
+				say("去找 幻舞 或 黑魔")
+				say("聽修羅職業的說明")
+			elseif pc.job==3 then
+				say("去找 潛龍 或 狂雷")
+				say("聽神女職業說明")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."去找職業教官"..locale.NORMAL_COLOR)
+			if pc.job==0 then
+				say("去找 劍宗 或 氣宗")
+				say("聽猛將職業說明")
+			elseif pc.job==1 then
+				say("去找 刀峰 或 百翼")
+				say("聽刺客職業說明")
+			elseif pc.job==2 then
+				say("去找 幻舞 或 黑魔")
+				say("聽休羅職業的說明")
+			elseif pc.job==3 then
+				say("去找 潛龍 或 狂雷")
+				say("聽神女職業說明")
+			end
+		end
+		when teacher1.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher1")
+			say("你新來的初心者吧")
+			say("我是猛將劍宗的教官")
+			say("到的等級5你一定要選擇職業")
+			say("猛將的話, 可以選擇")
+			say("劍宗 或 氣宗")
+			wait()
+			say("這裏是劍宗的天下！ ")
+			say("這裏將培養出最快，最勇猛的近距離形猛將")
+			say("可以學習到釋放速度快，連續性攻擊的技能")
+			say("我們只招收5登記以上的猛將")
+			say("會獲得速度很快的攻擊力 和 移動力")
+			say("等你到5級以後，將收到飛鴿傳書。收到")
+			say("以後馬上來我們這裡報到")
+			say("好了不多說了，趕快升級到5級吧。")
+			wait()
+			say("關於氣宗, ")
+			say("請跟氣宗的教官對話. ")
+			say("謝謝")
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher2.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher2")
+			say("你新來的初心者吧")
+			say("我是猛將劍宗的教官")
+			say("到的等級5你一定要選擇職業")
+			say("猛將的話, 可以選擇")
+			say("劍宗 或 氣宗")
+			wait()
+			say("這裡是氣宗的天下！將培養出強悍，")
+			say("血氣方剛的中距離性猛將")
+			say("將學技能雖然釋放速度較慢，消耗大量的精力，")
+			say("但擁有超強的威脅力")
+			say("我們只招收5登記以上的猛將，")
+			say("等你到5級以後，將收到飛鴿傳書。")
+			say("收到以後馬上來我們這裡報道，")
+			say("好了不多說了，趕快升級到5級吧。")
+			wait()
+			say("關於劍宗, ")
+			say("請跟劍宗的教官對話. ")
+			say("謝謝")
+
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher3.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher3")
+			say("你新來的初心者吧")
+			say("我是刺客刀峰的教官. ")
+			say("到的等級5你一定要選擇職業")
+			say("刺客的話, 可以選擇")
+			say("刀峰 或 百翼")
+			wait()
+			say("這裡是刺殺者的天下！將培養出擅長暗殺和鬼影的刺客，")
+			say("可以學習到炫耀的雙刀技能和?釀劇毒的技能。")
+			say("身為暗殺者，要步步小心")
+			say("擅長要在邪惡的黑暗中隱藏自己的身份。")
+			say("我們只招收5登記以上的刺客，等你到5級以後，")
+			say("將收到飛鴿傳書。收到以後馬上來我們這裡報到")
+			say("好了不多說了，趕快升級到5級吧。")
+			wait()
+			say("關於百翼, ")
+			say("請跟百翼的教官對話. ")
+			say("謝謝")
+
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher4.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher4")
+			say("你新來的初心者吧")
+			say("我是刺客百翼的教官")
+			say("到的等級5你一定要選擇職業")
+			say("刺客的話, 可以選擇")
+			say("刀峰 或 百翼")
+			wait()
+			say("這裡是弓箭手的天下！ ")
+			say("培養出擅長遠程攻擊的刺客,")
+			say("發揚弓箭手的真正威脅力。")
+			say("對同一個敵人連續發出多支威力巨大的連射")
+			say("可以學到連續穿刺敵人的幾能或")
+			say("將多支箭同時發射給多個敵人的技能。")
+
+			say("我們只招收5登記以上的刺客， ")
+			say("等你到5級以後，將收到飛鴿傳書。")
+
+
+			say("收到以後馬上來我們這裡報道， ")
+			say("好了不多說了，趕快升級到5級吧。")
+
+
+
+			wait()
+			say("關於刀峰, ")
+			say("聽我請跟刀峰的教官對話. ")
+			say("謝謝")
+
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher5.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher5")
+			say("你新來的初心者吧")
+			say("我是修羅的教官. ")
+			say("到的等級5你一定要選擇職業")
+			say("修羅的話, 可以選擇")
+			say("幻舞 或 黑魔")
+			wait()
+			say("這裡是幻舞修羅的天下！")
+			say("學到將惡魔左手召喚的魔力賦予刀或者盔甲上的技能，")
+			say("也可以召喚黑暗幽靈，逼使敵人失去鬥志。")
+			say("我們只招收5登記以上的修羅，等你到5級以後，")
+			say("將收到飛鴿傳書。")
+			say("收到以後馬上來我們這裡報道，")
+			say("好了不多說了，趕快升級到5級吧。")
+			wait()
+			say("關於黑魔, ")
+			say("請跟黑魔的教官對話. ")
+			say("謝謝")
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher6.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher6")
+			say("你新來的初心者吧")
+			say("我是修羅的教官. ")
+			say("到的等級5你一定要選擇職業")
+			say("修羅的話, 可以選擇")
+			say("幻舞 或 黑魔")
+			wait()
+			say("這裡是黑魔的天下！")
+			say("學到將惡魔左手召喚的魔力賦予刀或者盔甲上的技能，")
+			say("也可以召喚黑暗幽靈，逼使敵人失去鬥志。")
+			say("我們只招收5登記以上的修羅，")
+			say("等你到5級以後，將收到飛鴿傳書。")
+			say("收到以後馬上來我們這裡報道，")
+			say("好了不多說了，趕快升級到5級吧。")
+			wait()
+			say("關於幻舞, ")
+			say("請跟幻舞的教官對話. ")
+			say("謝謝")
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher7.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher7")
+			say("你新來的初心者吧")
+			say("我是修羅的教官. ")
+			say("到的等級5你一定要選擇職業")
+			say("神女的話, 可以選擇")
+			say("狂雷 或 潛龍")
+			wait()
+			say("這裡是潛龍的天下！")
+			say("追隨龍神的神女在這裡聚集起來，")
+			say("可以學到使用詛咒和精神力量的技能。")
+			say("在戰場上支援我軍，使他們受到神龍的保護，")
+			say("提升防禦力的同時，反射敵人的攻擊，使第人自食其果。")
+			say("我們只招收5登記以上的神女，")
+			say("等你到5級以後，將收到飛鴿傳書。")
+			say("收到以後馬上來我們這裡報道， ")
+			say("好了不多說了，趕快升級到5級吧。")
+			wait()
+			say("關於狂雷, ")
+			say("請跟狂雷的教官對話. ")
+			say("謝謝")
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher8.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher8")
+			say("你新來的初心者吧")
+			say("我是修羅的教官. ")
+			say("到的等級5你一定要選擇職業")
+			say("神女的話, 可以選擇")
+			say("狂雷 或 潛龍")
+			wait()
+			say("這裡是狂雷德天下！")
+			say("大自然的醒悟在這裡聚集起來，可以學到召喚雷電。")
+			say("狂風的技能。在戰場後方給與我軍強大的職員，")
+			say("我們只招收5登記以上的神女，")
+			say("等你到5級以後，將收到飛鴿傳書。")
+			say("收到以後馬上來我們這裡報道，")
+			say("好了不多說了，趕快升級到5級吧。")
+			say("")
+			wait()
+			say("關於潛龍, ")
+			say("請跟潛龍的教官對話. ")
+			say("謝謝")
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher1.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher1")
+			say("你新來的初心者吧")
+			say("我是猛將劍宗的教官")
+			say("到的等級5你一定要選擇職業")
+			say("猛將的話, 可以選擇")
+			say("劍宗 或 氣宗")
+			wait()
+			say("這裏是劍宗的天下！ ")
+			say("這裏將培養出最快，最勇猛的近距離形猛將")
+			say("可以學習到釋放速度快，連續性攻擊的技能")
+			say("我們只招收5登記以上的猛將")
+			say("會獲得速度很快的攻擊力 和 移動力")
+			say("等你到5級以後，將收到飛鴿傳書。收到")
+			say("以後馬上來我們這裡報到")
+			say("好了不多說了，趕快升級到5級吧。")
+			wait()
+			say("關於氣宗, ")
+			say("請跟氣宗的教官對話. ")
+			say("謝謝")
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher2.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher2")
+			say("你新來的初心者吧")
+			say("我是猛將劍宗的教官")
+			say("到的等級5你一定要選擇職業")
+			say("猛將的話, 可以選擇")
+			say("劍宗 或 氣宗")
+			wait()
+			say("這裡是氣宗的天下！將培養出強悍，")
+			say("血氣方剛的中距離性猛將")
+			say("將學技能雖然釋放速度較慢，消耗大量的精力，")
+			say("但擁有超強的威脅力")
+			say("我們只招收5登記以上的猛將，")
+			say("等你到5級以後，將收到飛鴿傳書。")
+			say("收到以後馬上來我們這裡報道，")
+			say("好了不多說了，趕快升級到5級吧。")
+			wait()
+			say("關於劍宗, ")
+			say("請跟劍宗的教官對話. ")
+			say("謝謝")
+
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher3.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher3")
+			say("你新來的初心者吧")
+			say("我是刺客刀峰的教官. ")
+			say("到的等級5你一定要選擇職業")
+			say("刺客的話, 可以選擇")
+			say("刀峰 或 百翼")
+			wait()
+			say("這裡是刺殺者的天下！將培養出擅長暗殺和鬼影的刺客，")
+			say("可以學習到炫耀的雙刀技能和?釀劇毒的技能。")
+			say("身為暗殺者，要步步小心")
+			say("擅長要在邪惡的黑暗中隱藏自己的身份。")
+			say("我們只招收5登記以上的刺客，等你到5級以後，")
+			say("將收到飛鴿傳書。收到以後馬上來我們這裡報到")
+			say("好了不多說了，趕快升級到5級吧。")
+			wait()
+			say("關於百翼, ")
+			say("請跟百翼的教官對話. ")
+			say("謝謝")
+
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher4.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher4")
+			say("你新來的初心者吧")
+			say("我是刺客百翼的教官")
+			say("到的等級5你一定要選擇職業")
+			say("刺客的話, 可以選擇")
+			say("刀峰 或 百翼")
+			wait()
+			say("這裡是弓箭手的天下！ ")
+			say("培養出擅長遠程攻擊的刺客,")
+			say("發揚弓箭手的真正威脅力。")
+			say("對同一個敵人連續發出多支威力巨大的連射")
+			say("可以學到連續穿刺敵人的幾能或")
+			say("將多支箭同時發射給多個敵人的技能。")
+
+			say("我們只招收5登記以上的刺客， ")
+			say("等你到5級以後，將收到飛鴿傳書。")
+
+
+			say("收到以後馬上來我們這裡報道， ")
+			say("好了不多說了，趕快升級到5級吧。")
+
+
+
+			wait()
+			say("關於刀峰, ")
+			say("聽我請跟刀峰的教官對話. ")
+			say("謝謝")
+
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher5.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher5")
+			say("你新來的初心者吧")
+			say("我是修羅的教官. ")
+			say("到的等級5你一定要選擇職業")
+			say("修羅的話, 可以選擇")
+			say("幻舞 或 黑魔")
+			wait()
+			say("這裡是幻舞修羅的天下！")
+			say("學到將惡魔左手召喚的魔力賦予刀或者盔甲上的技能，")
+			say("也可以召喚黑暗幽靈，逼使敵人失去鬥志。")
+			say("我們只招收5登記以上的修羅，等你到5級以後，")
+			say("將收到飛鴿傳書。")
+			say("收到以後馬上來我們這裡報道，")
+			say("好了不多說了，趕快升級到5級吧。")
+			wait()
+			say("關於黑魔, ")
+			say("請跟黑魔的教官對話. ")
+			say("謝謝")
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher6.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher6")
+			say("你新來的初心者吧")
+			say("我是修羅的教官. ")
+			say("到的等級5你一定要選擇職業")
+			say("修羅的話, 可以選擇")
+			say("幻舞 或 黑魔")
+			wait()
+			say("這裡是黑魔的天下！")
+			say("學到將惡魔左手召喚的魔力賦予刀或者盔甲上的技能，")
+			say("也可以召喚黑暗幽靈，逼使敵人失去鬥志。")
+			say("我們只招收5登記以上的修羅，")
+			say("等你到5級以後，將收到飛鴿傳書。")
+			say("收到以後馬上來我們這裡報道，")
+			say("好了不多說了，趕快升級到5級吧。")
+			wait()
+			say("關於幻舞, ")
+			say("請跟幻舞的教官對話. ")
+			say("謝謝")
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher7.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher7")
+			say("你新來的初心者吧")
+			say("我是修羅的教官. ")
+			say("到的等級5你一定要選擇職業")
+			say("神女的話, 可以選擇")
+			say("狂雷 或 潛龍")
+			wait()
+			say("這裡是潛龍的天下！")
+			say("追隨龍神的神女在這裡聚集起來，")
+			say("可以學到使用詛咒和精神力量的技能。")
+			say("在戰場上支援我軍，使他們受到神龍的保護，")
+			say("提升防禦力的同時，反射敵人的攻擊，使第人自食其果。")
+			say("我們只招收5登記以上的神女，")
+			say("等你到5級以後，將收到飛鴿傳書。")
+			say("收到以後馬上來我們這裡報道， ")
+			say("好了不多說了，趕快升級到5級吧。")
+			wait()
+			say("關於狂雷, ")
+			say("請跟狂雷的教官對話. ")
+			say("謝謝")
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+		when teacher8.target.click with pc.getf("find_skillteacher","talk_count")==0 begin
+			target.delete("teacher8")
+			say("你新來的初心者吧")
+			say("我是修羅的教官. ")
+			say("到的等級5你一定要選擇職業")
+			say("神女的話, 可以選擇")
+			say("狂雷 或 潛龍")
+			wait()
+			say("這裡是狂雷德天下！")
+			say("大自然的醒悟在這裡聚集起來，可以學到召喚雷電。")
+			say("狂風的技能。在戰場後方給與我軍強大的職員，")
+			say("我們只招收5登記以上的神女，")
+			say("等你到5級以後，將收到飛鴿傳書。")
+			say("收到以後馬上來我們這裡報道，")
+			say("好了不多說了，趕快升級到5級吧。")
+			say("")
+			wait()
+			say("關於潛龍, ")
+			say("請跟潛龍的教官對話. ")
+			say("謝謝")
+			say("")
+			pc.setqf("talk_count", 1)
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

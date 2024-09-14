@@ -1,0 +1,423 @@
+--------------------------------------------
+-- SUB QUEST 
+--LV 46
+--為了死者的安息
+--------------------------------------------
+quest subquest_42 begin 
+	state start begin
+		when login or levelup with pc.level >= 46 and pc.level <= 48 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			
+			local vnum=0
+
+			if pc.get_empire() == 1 then
+				vnum= 20306
+			elseif pc.get_empire() == 2 then
+				vnum= 20326
+			elseif pc.get_empire() == 3 then
+				vnum=20346
+			end
+
+
+			local v=find_npc_by_vnum(vnum)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "為了死者的安息")
+			end
+		end
+
+		when __TARGET__.target.click or
+		 20306.chat." 為了死者的安息"  begin
+			target.delete("__TARGET__")
+			say("潛龍長老  :")
+			say("連續不斷的戰爭中")
+			say("犧牲年輕生命的年輕人越來越多.")
+			say("他們是為了自己，為了家族，為了國家")
+			say("投身到戰場的勇士")
+			say("但是他們很多犧牲后不能安息")
+			say("在現世流浪.")
+			say("")
+			wait()
+			say("潛龍長老  :")
+			say("因戰爭中死去的冤枉和保衛國家的")
+			say("過度的責任感抓住他們.")
+			say("安撫他們是像我們這些神女們")
+			say("要做的任務之一.")
+			say("為了舉行安撫他們的儀式")
+			say("需要特別的秘宗順應符和秘宗教理")
+			say("最近不好找到，如果可以得話")
+			say("你能幫忙嗎?")
+			say("")
+			wait()
+			say("潛龍長老  :")
+			say("聽說在秘宗寺院附近居住的 ")
+			say(""..mob_name(774).."，"..mob_name(775).."，"..mob_name(776).."那裡")
+			say("可以取得秘宗順應符和秘宗教理.")
+			say("為了安撫為國家犧牲的同僚")
+			say("希望你能幫忙.")
+			say("")
+		
+			local s=select("好，我來說明吧","不行啊.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","不是")
+				if 2==a then
+					say("潛龍長老  :")
+					say("為了能使死去的士兵們安息")
+					say("請幫忙")
+					say("在這裡等著你的幫助了")
+					say("")
+					return
+				end
+				say("潛龍長老  :")
+				say("可惜啊..")
+				say("最近好像聽到")
+				say("流浪黃泉的者的聲音..")
+				say("為了他們的安息，要做巫術.")
+				say("只能請其他士兵幫忙了..")
+				say("再見")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("潛龍長老  :")
+			say("為了死去的同僚")
+			say("這麼地費心..")
+			say("現在他們的靈魂可以取好的地方了")
+			say("")
+			set_state(for_the_die)
+
+			end
+
+		when __TARGET__.target.click or
+			20326.chat."為了死者的安息"  begin
+			target.delete("__TARGET__")
+			say("潛龍掌門  :")
+			say("連續不斷的戰爭中")
+			say("犧牲年輕生命的年輕人越來越多.")
+			say("他們是為了自己，為了家族，為了國家")
+			say("投身到戰場的勇士.")
+			say("但是他們很多犧牲後不能安息")
+			say("在現世流浪.")
+			say("")
+			wait()
+			say("潛龍掌門  :")
+			say("因戰爭中死去的冤枉和保衛國家的")
+			say("過度的責任感抓住他們.")
+			say("安撫他們是像我們這些神女們")
+			say("要做的任務之一.")
+			say("為了舉行安撫他們的儀式")
+			say("需要特別的秘宗順應符和秘宗教理")
+			say("最近不好找到，如果可以得話")
+			say("你能幫忙嗎?")
+			say("")
+			wait()
+			say("潛龍掌門  :")
+			say("聽說在秘宗寺院附近居住的 ")
+			say(""..mob_name(774).."，"..mob_name(775).."，"..mob_name(776).."那裡")
+			say("可以取得秘宗順應符和秘宗教理.")
+			say("為了安撫為國家犧牲的同僚")
+			say("希望你能幫忙.")
+			say("")
+		
+
+			local s=select("好，我來說明吧","不行啊.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","不是")
+
+				if 2==a then
+					say("潛龍掌門  :")
+					say("為了能使死去的士兵們安息")
+					say("請幫忙")
+					say("在這裡等著你的幫助了")
+					say("")
+					return
+				end
+				say("潛龍掌門  :")
+				say("可惜啊..")
+				say("最近好像聽到")
+				say("流浪黃泉的者的聲音..")
+				say("為了他們的安息，要做巫術.")
+				say("只能請其他士兵幫忙了..")
+				say("再見")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("潛龍掌門  :")
+			say("為了死去的同僚")
+			say("這麼地費心..")
+			say("現在他們的靈魂可以取好的地方了")
+			say("")
+			set_state(for_the_die)
+
+			end
+
+
+
+
+		when __TARGET__.target.click or
+			20346.chat." 為了死者的安息"  begin
+			target.delete("__TARGET__")
+			say("潛龍隱士  :")
+			say("連續不斷的戰爭中")
+			say("犧牲年輕生命的年輕人越來越多.")
+			say("他們是為了自己，為了家族，為了國家")
+			say("投身到戰場的勇士.")
+			say("但是他們很多犧牲後不能安息")
+			say("在現世流浪.")
+			say("")
+			wait()
+			say("潛龍隱士  :")
+			say("因戰爭中死去的冤枉和保衛國家的")
+			say("過度的責任感抓住他們.")
+			say("安撫他們是像我們這些神女們")
+			say("要做的任務之一.")
+			say("為了舉行安撫他們的儀式")
+			say("需要特別的秘宗順應符和秘宗教理")
+			say("最近不好找到，如果可以得話")
+			say("你能幫忙嗎?")
+			say("")
+			wait()
+			say("潛龍隱士  :")
+			say("聽說在秘宗寺院附近居住的 ")
+			say(""..mob_name(774).."，"..mob_name(775).."，"..mob_name(776).."那裡")
+			say("可以取得秘宗順應符和秘宗教理.")
+			say("為了安撫為國家犧牲的同僚")
+			say("希望你能幫忙.")
+			say("")
+		
+			local s=select("好，我來說明吧","不行啊.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if 2==a then
+					say("潛龍隱士  :")
+					say("為了能使死去的士兵們安息")
+					say("請幫忙")
+					say("在這裡等著你的幫助了")
+					say("")
+					return
+				end
+				say("潛龍隱士  :")
+				say("可惜啊..")
+				say("最近好像聽到")
+				say("流浪黃泉的者的聲音..")
+				say("為了他們的安息，要做巫術.")
+				say("只能請其他士兵幫忙了..")
+				say("再見")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("潛龍隱士  :")
+			say("為了死去的同僚")
+			say("這麼地費心..")
+			say("現在他們的靈魂可以取好的地方了")
+			say("")
+			set_state(for_the_die)
+
+			end
+
+		end
+
+
+	state for_the_die begin
+
+		when letter begin
+
+			setskin(NOWINDOW)
+			makequestbutton("死者的安息")
+			q.set_title("死者的安息")
+			q.start()
+			
+			if  pc.count_item("30147") >=1 and  pc.count_item("30148") >=1 then
+					local vnum=0
+
+					if pc.get_empire() == 1 then
+						vnum= 20306
+					elseif pc.get_empire() == 2 then
+						vnum= 20326
+					elseif pc.get_empire() == 3 then
+						vnum= 20346
+					end
+
+					local v=find_npc_by_vnum(vnum)
+					if 0!= v then
+						target.vid("__TARGET__",v,"")
+					end 
+				end	
+
+		end		
+			
+	
+		when info or  button begin
+			if  pc.count_item("30147") >=1 and  pc.count_item("30148") >=1 then
+				say(locale.NOTICE_COLOR..  "找到秘宗順應符和秘宗教理" ..locale.NORMAL_COLOR)
+				say("")
+				say("找到安撫死去的士兵的冤魂的")
+				say("秘宗順應符和秘宗教理")
+				say("把這個拿給潛龍長老吧")
+				say("")
+				return
+			end
+			
+			say(locale.NOTICE_COLOR..  "尋找秘宗順應符和秘宗教理" ..locale.NORMAL_COLOR)
+			say("")
+			say("為了安撫在戰場死去的士兵們的冤魂")
+			say("需要秘宗教理和秘宗順應符")
+			say("可以通過在秘宗寺院居住的")
+			say(""..mob_name(774).."，"..mob_name(775).."，"..mob_name(776).."")
+			say("取得.")
+			say("為了使死去的士兵們能安息")
+			say("找來秘宗教理和秘宗順應符吧.")
+			say("")
+
+		end
+
+
+					
+		when 774.kill or 775.kill or 776.kill  begin
+			local s = number(1, 100)
+			
+			if s <= 5 and pc.count_item(30147)==0 then
+				pc.give_item2(30147, 1)
+			end	
+	
+			local a = number(1, 100)
+			if a <= 5 and pc.count_item(30148)==0 then
+				pc.give_item2(30148, 1)
+			end
+			
+						
+		end
+			
+				
+		when __TARGET__.target.click or
+			20306.chat."找到秘宗順應符和秘宗教理了" with pc.count_item("30147") >=1 and  pc.count_item("30148") >=1 begin
+		
+			target.delete("__TARGET__")
+			say("潛龍長老  :")
+			say("謝謝.")
+			say("現在可以安撫死去的士兵們的冤魂了.")
+			say("他們已經盡了力了，死去後")
+			say("要安息.")
+			say("向說明同僚們安息的你")
+			say("表示敬意")
+			say("")
+			pc.remove_item("30147",1)
+			pc.remove_item("30148",1)
+			
+			say_reward("獲得經驗值 1700000")
+			pc.give_exp2(1700000)
+
+			say_reward("獲得鑽石 5個")
+			pc.give_item2(50621)
+			pc.give_item2(50621)
+			pc.give_item2(50621)
+			pc.give_item2(50621)
+			pc.give_item2(50621)
+	
+			
+			pc.give_item2(50726,3)
+			pc.give_item2(50723,10)
+			say_reward("獲得了草藥物品")
+	
+
+			clear_letter()
+			set_state(COMPLETE)
+
+		end
+	
+		when __TARGET__.target.click or 
+			20326.chat." 找到秘宗順應符和秘宗教理了" with pc.count_item("30147") >=1 and  pc.count_item("30148") >=1 begin
+		
+			target.delete("__TARGET__")
+			say("潛龍掌門  :")
+			say("謝謝.")
+			say("現在可以安撫死去的士兵們的冤魂了.")
+			say("他們已經盡了力了，死去後")
+			say("要安息.")
+			say("向說明同僚們安息的你")
+			say("表示敬意")
+			say("")
+			pc.remove_item("30147",1)
+			pc.remove_item("30148",1)
+
+			say_reward("獲得經驗值 1700000 ")
+			pc.give_exp2(1700000)
+			 set_quest_state("levelup","run")
+			say_reward("獲得鑽石 5個")
+			pc.give_item2(50621)
+			pc.give_item2(50621)
+			pc.give_item2(50621)
+			pc.give_item2(50621)
+			pc.give_item2(50621)
+			
+
+			pc.give_item2(50726,3)
+			pc.give_item2(50723,10)
+			say_reward("獲得了草藥物品")
+	
+			clear_letter()
+			set_state(COMPLETE)
+
+		end
+	
+		when __TARGET__.target.click or 
+			20346.chat." 找到秘宗順應符和秘宗教理了" with pc.count_item("30147") >=1 and  pc.count_item("30148") >=1 begin
+		
+			target.delete("__TARGET__")
+			say("潛龍隱士  :")
+			say("謝謝.")
+			say("現在可以安撫死去的士兵們的冤魂了.")
+			say("他們已經盡了力了，死去後")
+			say("要安息.")
+			say("向說明同僚們安息的你")
+			say("表示敬意")
+
+			say("")
+			pc.remove_item("30147",1)
+			pc.remove_item("30148",1)
+
+			say_reward("獲得經驗值 1700000")
+			pc.give_exp2(1700000)
+		
+			say_reward("獲得鑽石 5個")
+			pc.give_item2(50621)
+			pc.give_item2(50621)
+			pc.give_item2(50621)
+			pc.give_item2(50621)
+			pc.give_item2(50621)
+	
+
+			pc.give_item2(50726,3)
+			pc.give_item2(50723,10)
+			say_reward("獲得了草藥物品")
+	
+			
+			clear_letter()
+			set_state(COMPLETE)
+
+		end
+
+end
+
+	state __GIVEUP__ begin
+	end
+
+	state COMPLETE begin
+		when enter begin
+			q.done()
+		end
+	end
+
+
+end
+

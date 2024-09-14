@@ -1,0 +1,159 @@
+----------------------------------
+--	Main Quest LV3
+--	雜貨店老闆任務   	
+----------------------------------
+quest main_quest_lv3 begin
+	state start begin
+
+	end
+	state run begin
+		when login or levelup or enter with pc.get_level() >= 3 begin
+			set_state( gototeacher )
+		end
+		when 20354.chat."第一個任務" begin
+			say("新兵教官:")
+			say("你看來非常享受第一個任務吧.")
+			say("你一直問有沒有其他任務, 這樣也沒有用")
+			say("你到等級3 級的話, 我才會給你第二任務")
+			say("")
+		end
+	end
+	state gototeacher begin
+		when letter begin
+			send_letter("新兵教官的聯絡")
+			local v=find_npc_by_vnum(20354)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找新兵教官")
+			end
+		end
+		when button or info begin
+			say_title("從新兵教官的聯絡")
+			say("請你暫時不要打怪物, 去找新兵教官吧.")
+			say("他會要求你送有些物品給人家.")
+			say("任務完成後可以獲得金錢, 經驗值 和 血瓶(小)")
+			say("200個.")
+			say("")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say("新兵教官:")
+			---                                                   l
+			say("你來的真好. 我現在需要有人幫我的忙.")
+			say("你知道在城市裡雜貨店老闆嗎?")
+			say("好像那 雜貨店老闆出了有些事情.")
+			say("你去找雜貨店老闆吧.")
+			say("應該不是很難的事情, 你可以幫他的忙.")
+			say("")
+			wait()
+			say("新兵教官:")
+			say("雜貨店老闆賣回復藥水和各種各樣的物品")
+			say("所以你去看一看以後去找雜貨店老闆的話,")
+			say("將來你會很方便的." )
+			say("現在你去找他吧")	
+			say_reward("任務完成後可以取得報酬")
+			say_reward("經驗值 450" )
+			say_reward("金錢 3000 兩")
+			set_state( gotogood )
+		end
+	end
+
+	state gotogood begin
+		when letter begin
+			local v=find_npc_by_vnum(9003)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找雜貨店老闆")
+			end
+		end
+		when letter begin
+			send_letter("請協助雜貨店老闆!")
+		end
+		when button or info begin
+			say_title("請協助雜貨店老闆!")
+			say("跟雜貨店老闆對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say("雜貨店老闆:")
+			---                                                   l
+			say("你好, 教官叫你來這裡吧.")
+			say("這次任務不太難比較簡單. ")
+			say("今天早上我的爸爸帶很重要的書")
+			say("如果今天他沒有這本書的話會很麻煩的.")
+			say("")
+			wait()
+			say("你可以幫我給我爸爸這本書好嗎?")
+			say("我要一直在我的商店招呼顧客")
+			say("所以我沒有辦法離開商店")
+			say("如果你幫我的忙")
+			say("我的爸爸會給你報酬.")
+			say("我的爸爸防禦器商店賣東西.")
+			say("")
+			say("")
+			say_item("防禦器製作法", 69000, "")
+			say("")
+
+			set_state( gotodefend )
+		end
+	end
+
+	state gotodefend begin
+		when letter begin
+			local v=find_npc_by_vnum(9002)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找防禦店老闆")
+			end
+		end
+		when letter begin
+			send_letter("將書帶給防禦店老闆")
+		end
+		when button or info begin
+			say_title("將書帶給防禦店老闆")
+			---                                                   l
+			say("請你把這本書帶給防禦店老闆")
+			say("他忘記了帶這本書")
+			say("")
+			say_item("防禦器製作法", 69000, "")
+			say("")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+
+			say("防禦店老闆:")
+			---                                                   l
+			say("你找我有什麼事情?")
+			say("我的女兒叫我來這裡嗎? ")
+			say("這本書我一直在找, 這本書對我很重要")
+			say("因為這本書可以讓我製作到新的防禦書..")
+			say_item("防禦器製作法", 69000, "")
+			say("很感謝你幫我拿過來")
+			say("我因該給你有些報酬, 給你哪個比較好呢?")
+			say("")
+			wait();
+			say("防禦店老闆:")
+			say("呵呵 ~ 因該這裝備很適合你")
+			say("我覺得這裝備對你很有用.")
+			say("你有這個物品可以保護")
+			say("你免受灰狼和幼狼的攻擊.")
+			say("這是給你的報酬. 謝謝妳啦.")
+			say("")
+
+			say_title("報酬")
+			say_reward("經驗值 450" )
+			say_reward("金錢 3000 兩")
+			pc.give_exp2( 450 )
+			set_quest_state("levelup","run")
+			pc.change_money( 3000 )
+
+			clear_letter()
+			set_quest_state("main_quest_lv6", "run")
+			set_state( __COMPLETE__ )
+
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end
+

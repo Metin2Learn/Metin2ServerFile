@@ -1,0 +1,321 @@
+----------------------------------------------------
+-- SUB QUEST 
+-- LV 51
+-- 鑲嵌青瓷的秘密 
+----------------------------------------------------
+
+quest subquest_37 begin 
+	state start begin
+		when login or levelup with pc.level >= 51 and pc.level <= 53 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+					
+			local v = find_npc_by_vnum(20005)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "鑲嵌青瓷的秘密")
+			end
+		end
+
+		
+		when __TARGET__.target.click or
+			20005.chat." 鑲嵌青瓷的秘密" with pc.level >= 51 begin
+			target.delete("__TARGET__")
+
+			say("制陶人 :")
+			say("這個也不是，那個也不是 .")
+			say("最近一直在制陶 ..")
+			say("但是沒有稱心的作品.")
+			say("需要些革新的方法...")
+			say("")
+			wait()
+			say("制陶人:")
+			say("這次想重新嘗試鑲嵌青瓷的做法")
+			say("熟悉掌握鑲嵌青瓷的人是屈指可數的")
+			say("是出了名的困難做法.")
+			say("但是為了屬於我的作品")
+			say("一定要做鑲嵌青瓷! 關於這個...")
+			say("老學究會知道一些!")
+			say("幫忙去老學究那裡打探")
+			say("鑲嵌青瓷的做法吧. 他肯定能幫上忙")
+			say("")
+			local s=select("接收.","拒絕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("制陶人:")
+					say("現在忙嗎？ ")
+					say("那下次想起來的時候再來吧")
+					say("")
+					return
+				end
+				say("制陶人:")
+				say("真的想做好的陶瓷.. ")
+				say("知道了~再見")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+
+			say("制陶人:")
+			say("謝謝 " )
+			say("一路順風")
+			say("")
+			set_state(ask_to_eulduji)
+
+
+		end
+	end
+
+	state ask_to_eulduji begin
+		when letter begin
+			send_letter("鑲嵌青瓷的秘密")
+		end
+
+		when letter begin
+			local v=find_npc_by_vnum(20011)
+			if 0== v then
+			else
+				target.vid("__TARGET__",v,"問老學究")
+			end
+
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."到老學究那裡"..locale.NORMAL_COLOR)
+			say("")
+			say("制陶人為了製作新的陶瓷而苦惱.")
+			say("制陶人想做的鑲嵌青瓷的做法")
+			say("老學究可能會知道.")
+			say("去找老學究問有關鑲嵌青瓷的做法")
+			say("")
+		end
+
+		when __TARGET__.target.click or 
+			20011.chat."關於鑲嵌青瓷" begin
+			target.delete("__TARGET__")
+			say("老學究 :")
+			say("鑲嵌青瓷的做法?")
+			say("我對歷史和語言倒是熟悉")
+			say("但是對藝術沒有什麼關心")
+			say("陶瓷的製作方法，可能.")
+			say("書蟲會知道")
+			say("他那傢伙沒有什麼實實在在的，但是閱讀各種各樣的書")
+			say("應該會充分知道陶瓷的製作方法.")
+			say("")
+
+			set_state(ask_to_sunyougil)
+		end
+	end
+
+	state ask_to_sunyougil begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("去找書蟲")
+			q.set_title("去找書蟲")
+			q.start()
+
+			local v=find_npc_by_vnum(20023)
+			if 0== v then
+			else
+				target.vid("__TARGET__",v,"向書蟲問")
+			end
+
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."鑲嵌青瓷的秘密"..locale.NORMAL_COLOR)
+			say("")
+			say("關於鑲嵌青瓷的做法")
+			say("書蟲可能會有情報.")
+			say("去找書蟲問他鑲嵌青瓷的做法")
+			say("")
+		end
+
+		when __TARGET__.target.click or 
+			20023.chat."關於鑲嵌青瓷" begin
+			target.delete("__TARGET__")
+			say("書蟲 :")
+			say("嘰裡呱啦...")
+			say("啊？ 嚇我一跳.")
+			say("我不是說過，我讀書的時候不要打擾我的嗎!")
+			say("有什麼事要煩我啊!")
+			say("什麼? 鑲嵌青瓷?")
+			say("那不就是製作陶瓷的一種方法嗎.")
+			say("關於這個的書有讀過十冊左右.")
+			say("問我為什麼讀那些書? 要不然怎麼叫我書蟲呢?")
+			say("只要是書，我什麼都看!")
+			say("")
+			wait()
+			say("書蟲:")
+			say("想知道有關鑲嵌青瓷?")
+			say("光口說不行啊!")
+			say("正好有個煩心事，剛好.")
+			say("我跟旁邊城市的鐵算盤拜託過想看的書")
+			say("你幫我取回來吧")
+			say("等鐵算盤來這裡太慢了，等不及了.")
+			say("我想儘快看下一個書! ")
+			say("")
+			set_state(to_seller)
+		end
+	end
+	
+	state to_seller begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("去找鐵算盤")
+			q.set_title("去找鐵算盤")
+			q.start()
+
+			local v=find_npc_by_vnum(20010)
+			if 0== v then
+			else
+				target.vid("__TARGET__",v," 去找鐵算盤")
+			end
+
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."鑲嵌青瓷的秘密"..locale.NORMAL_COLOR)
+			say("")
+			say("書蟲有")
+			say("有關鑲嵌青瓷的信息.")
+			say("要求去鐵算盤那裡取回自己書")
+			say("就給信息.")
+			say("到旁邊城市的鐵算盤那裡")
+			say("取回書蟲的書")
+			say("")
+		end
+
+		when __TARGET__.target.click or 
+			20010.chat."請給書蟲的書吧" begin
+			target.delete("__TARGET__")
+			say("鐵算盤:")
+			say("哦，你怎麼來了?")
+			say("想再幫我的忙來的嗎?")
+			say("啊，是說書蟲委託的書啊 .")
+			say("過不久我就要去那個村子的，真是急性子啊 .")
+			say("還要麻煩別人...")
+			say("真是的.")
+			say("這裡有")
+			say("這些紙張不知道有什麼那麼重要.")
+			say("賺錢才是更重要的嘛...")
+			say("交給書蟲吧")
+			say("")
+			set_state(back_to_bookbug)
+		end
+	end
+
+	state back_to_bookbug begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("拿給書蟲")
+			q.set_title("拿給書蟲")
+			q.start()
+
+			local v=find_npc_by_vnum(20023)
+			if 0!= v then
+				target.vid("__TARGET__",v,"去書蟲那裡")
+			end
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."回到書蟲那裡"..locale.NORMAL_COLOR)
+			say("")
+			say("從旁邊城市的鐵算盤那裡 ")
+			say("拿到書蟲的書")
+			say("回到書蟲那裡，把書交給他 ")
+			say("取得鑲嵌青瓷的情報")
+			say("")
+		end
+
+		when __TARGET__.target.click or
+			20023.chat."把書拿回來了" begin
+			target.delete("__TARGET__")
+			say("噢...")
+			say("終於來了新書了.")
+			say("拿到了盼望的書，真是高興啊.")
+			say("那就按約定")
+			say("給你有關鑲嵌青瓷的情報吧...")
+			say("我把所瞭解的全部整理在這個便條上")
+			say("你看看吧 .")
+			say("按照這裡寫的做")
+			say("就可以製作很好的陶瓷.")
+			say("我還要看新書，失陪了.")
+			say("")
+			
+			pc.give_item2(30160)
+			set_state(back_to)
+		end
+	end
+
+	state back_to begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("接到寫有秘方的便條")
+			q.set_title("接到寫有秘方的便條便條")
+			q.start()
+			
+			local v=find_npc_by_vnum(20005)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v,"給制陶人轉達秘方書")
+			end
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."鑲嵌青瓷的秘密"..locale.NORMAL_COLOR)
+			say("向制陶人轉達")
+			say("寫有秘方的便條")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20005.chat."鑲嵌青瓷的秘密" begin
+			target.delete("__TARGET__")
+			say("制陶人 :")
+			say("噢噢!!!")
+			say("這便條上有所有鑲嵌青瓷的製作方法嗎!")
+			say("終於我也將成為留名青史的匠人.")
+			say("好!! 一定要通過這個製作")
+			say("裝著我的人生的偉大的作品!")
+			say("謝謝你的幫助.")
+			say("下次有空也給你製作")
+			say("一個陶瓷吧.")
+			say("期待著吧!")
+			say("要製作留名後世的鑲嵌青瓷.")
+			say("")
+			pc.remove_item(30160,1)
+
+			say_reward("獲得 35000兩")
+			pc.change_money(35000)
+			
+			say_reward("獲得經驗值 2500000 ")
+			pc.give_exp2(2500000)
+			set_quest_state("levelup","run")
+			
+			say_reward("獲得狂逐靴+3")
+			pc.give_item2(15143)
+			clear_letter()	
+			set_state(__COMPLETE__)
+			return
+				
+		end
+	
+	end
+	state __GIVEUP__ begin
+	end
+	
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+

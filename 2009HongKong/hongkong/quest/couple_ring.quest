@@ -1,0 +1,145 @@
+quest couple_ring begin
+    state start begin
+	when 9006.chat."戒指商人的怨恨" with pc.get_level()>=25 begin
+
+	    say("老人家:")
+	    say("你現在長大了~ 你想試試自己的勇氣嗎? ")
+	    say("嗯....你知道白蓮域首嗎?")
+	    say("其實以前我們城市裡為了結婚的人家")
+	    say("一位戒指商人來到了這裡賣定情信物, ")
+	    say("但是討厭一對的白蓮域首殺死了戒指商人.")
+	    say("你可以幫戒指商人報仇嗎? ")
+	    say("")
+
+	    local s=select(
+	    "是, 白蓮域首 沒問題",
+	    "不是, 我覺得我應付不了.")
+
+	    if 1==s then
+		say("好的, 你去殺了他! ")
+		say("白蓮域首非常狡猾,不會常常出現在人們面前")
+		say("")
+		set_state(kill)
+	    elseif 2==s then
+		say("嗯~ 這樣啊.....")
+		say("嗯..如果你魯莽行動的話,這樣會令到你很危險的,甚至死亡")
+		say("好的,請保重...")
+		say("")
+	    end
+	end
+    end
+    state kill begin
+	when enter begin
+	    pc.setqf("kill_count", 0)
+	end
+	when leave begin
+	    pc.setqf("kill_count", 0)
+	    q.done()
+	end
+	when letter begin
+	    q.set_counter("剩下的白蓮域首數量", couple_ring.get_rest_count());
+	end
+	when 394.kill begin
+	    local kill_count=pc.getqf("kill_count")+1
+	    pc.setqf("kill_count", kill_count)	
+	    q.set_counter("剩下的白蓮域首數量", couple_ring.get_rest_count());
+
+	    if couple_ring.is_completed() then
+		say_title("已經殺死所有白蓮域首")
+		say("戒指商人的任務")
+		say("已經完成了.")
+		say("")
+		say("需要回去跟老人說我的任務已經完成了")
+		say("")
+		set_state(report)
+	    end
+	end
+	function get_rest_count()
+	    return 30-pc.getqf("kill_count")
+	end
+	function is_completed()
+		return pc.getqf("kill_count")>=30 
+	end
+
+	when letter begin
+	    send_letter("殺死白蓮域首")
+	end
+	when button or info begin
+	    say_title("殺死白蓮域首")
+	    say("殺死白蓮域首30個後")
+	    say("完成戒指商人的怨恨")
+	    say("")
+	    say_reward(string.format("剩下的白蓮域首數量 : %d", couple_ring.get_rest_count()))
+	    say("")
+	end
+	when 9006.chat."戒指商人的怨恨" begin
+	    say("老人家:")
+	    say("阿~ 你殺死了白蓮域首嗎??")
+	    say("還沒有殺死足夠白蓮域首..")
+	    say("如果覺得太難隨時告訴我吧...")
+	    say("")
+	    local s=select("進行","放棄")
+	    if 1==s then
+		say("戒指商人的家人,也想為了報仇而去殺死白蓮域首")
+		say("如果我殺死白蓮域首可以消除他們怨恨")
+		say("我可以幫他們殺死白蓮域首..!!")
+		say("")
+	    else
+		say("我不認識戒指商人...")
+		say("我覺得沒必要為他報仇..")
+		say("")
+		wait()
+		say("老人家:")
+		say("嗯 你自己的生命也很重要...")
+		say("我知道了, 你要保重自己的生命.")
+		say("")
+		say("老人家的手上似乎拿著什麼東西")
+		say("看樣子是一間十分燦爛十分珍貴的東西")
+		say("(好像金銀財寶一樣...)")
+		say("")
+		local s=select("重新再試", "放棄")
+		if 1==s then
+		    say("其實我並不想得到金銀財寶")
+		    say("為了戒指商人的家人")
+		    say("我一定要殺死那些白蓮域首")
+		    say("")
+		elseif 2==s then
+		    say("不會的, 人的人生只有一次,")
+		    say("我不必讓我的生命遇到危險, 對對...")
+		    say("對戒指的家人我感到十分抱歉, 但是我想放棄.")
+		    say("")
+		    set_state(start)
+		    q.done()
+		end
+	    end
+	end
+    end
+    state report begin
+	when letter begin
+	    send_letter("回去找老人家")
+	end
+	when button or info begin
+	    say_title("回去找老人家")
+	    say("回去找老人家, 告訴他, ")
+	    say("報仇的任務已經完成,")
+	    say("")
+	end
+	when 9006.chat."殺死 30個 白蓮域首!" begin
+	    say("老人家:")
+	    say("喔! 你已經完成了這次的任務, 辛苦你了")
+	    say("這樣的結果, 戒指商人在天上也會高興的")
+	    say("定情信物是戒指商人讓我保管的, 你現在交給你.")
+	    say("這個任務的補償")
+	    say("")
+	    say_reward("你獲得了一對定情信物")
+	    say_item("定情信物", 70301, "定情信物結婚的事侯可以使用.")
+	    pc.give_item2(70301)
+	    set_state(complete)
+	    q.done()
+	end
+    end
+    state complete begin
+    end
+    state failure begin
+    end
+end

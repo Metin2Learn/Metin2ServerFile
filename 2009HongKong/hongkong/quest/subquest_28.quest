@@ -1,0 +1,256 @@
+-------------------------------------------------
+-- SUB QUEST 
+--LV 52
+--樂師的蜘蛛網
+-------------------------------------------------
+quest subquest_28 begin
+	state start begin
+		when login or levelup with pc.level >=52   and pc.level <= 54 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20017)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "")
+			end
+		end
+
+		when __TARGET__.target.click or
+			20017.chat."樂器聲音不如以前了" begin
+			target.delete("__TARGET__")
+			say("樂師:")
+			say("叮叮叮~")
+			say("啊! 不應該是這個聲音..")
+			say("鬱悶阿...")
+			say("我的朋友王鐵匠能知道我的心嗎..")
+			say("")
+			set_state(to_weaponshop)
+		end
+	end
+
+	state to_weaponshop begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("去找王鐵匠")
+			q.set_title("去找王鐵匠")
+			q.start()
+			
+			local v=find_npc_by_vnum(20016)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "")
+			end
+
+		end
+		when info or button begin
+			say(locale.NOTICE_COLOR.." 去找王鐵匠"..locale.NORMAL_COLOR)
+			say("")
+			say("去找王鐵匠問他樂師")
+			say("為什麼無精打采")
+			say("")
+		end
+
+		
+		when __TARGET__.target.click or
+			20016.chat."樂師最近心情不好?"begin
+			target.delete("__TARGET__")
+			say("王鐵匠:")
+			say("啊 !!樂師 ?")
+			say("因樂器才那樣")
+			say("不分白天黑夜地抱著它演奏")
+			say("樂器能好嗎?")
+			say("換了線會好些...")
+			say("最近聽不到樂師的演奏聲")
+			say("村子很寂靜...")
+			say("")	
+			set_state(back_to_youhwan)
+
+		end
+	end
+	state back_to_youhwan begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("重新去找樂師")
+			q.set_title("重新去找樂師")
+			q.start()
+		
+			local v=find_npc_by_vnum(20017)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找樂師那裡")
+			end
+
+
+		end
+		
+		when info or  button begin
+			say(locale.NOTICE_COLOR.." 重新去找樂師"..locale.NORMAL_COLOR)
+			say("重新去找")
+			say("因不能演奏自己喜歡的樂器而悶悶不樂的樂師")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20017.chat."我的樂器的問題是.." begin
+			target.delete("__TARGET__")
+			say("樂師:")
+			say("是..")
+			say("不能像以前一樣演奏")
+			say("像這樣斷了的線.")
+			say("不能演奏清澈而明亮的聲音")
+			say("能幫我重新聽到原來的聲音嗎?")
+			say("這個樂器需要用"..mob_name(2054).."的蜘蛛網做得線..")
+			say("哎，講這些沒用..")
+			say("")
+			local s=select("我來試試看","對不起,我就.." )
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("樂師:")
+					say("你也想聽我的演奏了吧")
+					say("改變了主意再來吧")
+					say("那我等著了~")
+					say("")
+					return
+				end
+				say("樂師:")
+				say("是阿，我不提就好了")
+				say("歎息~")
+				say("聽我講話已經謝謝了")
+				say("再見")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+					
+			say("樂師:")
+			say("噢~~~~")
+			say("謝謝!")
+			say("如果你能取回來，就再試一遍")
+			say("歡快的演奏!")
+			say("哈哈")
+			say("")
+			set_state(find_spider)
+			
+		end
+
+	end
+
+		
+		
+		
+	
+	state find_spider begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("樂師的樂器")
+			q.set_title("樂師的樂器")
+			q.start()
+			
+			if pc.count_item(30056)>0 then	
+				local v=find_npc_by_vnum(20017)
+				if 0!= v then
+					target.vid("__TARGET__",v,"去找樂師")
+				end 
+			end
+
+		end
+		when info or  button begin
+			if pc.count_item(30056)>0 then	
+				say(locale.NOTICE_COLOR.."找到修理用蜘蛛網了"..locale.NORMAL_COLOR)
+				say("")
+				say("把從影悲沙漠的"..mob_name(2054).."那裡取得的")
+				say("修理用蜘蛛網轉達給樂師.")
+				say("")
+				return
+			end
+	
+			say(locale.NOTICE_COLOR.."抓捕"..mob_name(2054)..""..locale.NORMAL_COLOR)
+			say("")
+			say("抓捕影悲沙漠的"..mob_name(2054).."")
+			say("把修理用蜘蛛網轉達給樂師.")
+			say("")
+		end
+
+		when 2054.kill  begin
+			
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item(30056)==0  then
+				pc.give_item2(30056, 1)
+
+			end
+		end
+
+		when __TAEGET__.target.click or 
+			20017.chat."請演奏樂器吧~" begin
+			target.delete("__TARGET__")
+			if  pc.count_item("30056")>=1 then 
+				target.delete("__TARGET__")
+				say("樂師:")
+				say("哎呀")
+				say("取回來了啊")
+				say("謝謝啦，謝謝")
+				say("聽一下我的演奏嗎?")
+				say("")
+				pc.removeitem("30056",1)
+				say_reward("獲得經驗值 2800000 ")
+				pc.give_exp2(2800000)
+		        set_quest_state("levelup","run")
+		
+				say_reward("獲得了草藥物品")
+				pc.give_item2(50725,5)
+				pc.give_item2(50726,5)
+				say_reward("獲得了" ..item_name(70050).."")
+				say_reward("獲得了" ..item_name(70051).."")
+				pc.give_item2(70050)
+				pc.give_item2(70051)
+				clear_letter()
+				set_state(__COMPLETE__)
+				return
+			else
+				say("樂師:")
+				say("還沒找到嗎!")
+				say("對你來說確實是很難的事情嗎?")
+				say("")
+				local s=select("重新挑戰","放棄" )
+				if 2==s then
+					say("放棄任務嗎?")
+					local a=select("是","否")
+					if  2==a then
+						say("樂師:")
+						say(""..mob_name(2054).."倡狂吧?")
+						say("最近那些傢伙更強大了...")
+						say("慢慢重新挑戰吧")
+						say("")
+						return
+					end
+					say("樂師:")
+					say("是嗎?")
+					say("以為你能做到..")
+					say("看來在"..mob_name(2054).."面前沒有辦法")
+					say("那一路平安吧，無論如何謝謝了")
+					say("")
+					set_state(__GIVEUP__)
+					return
+				end
+						
+				say("樂師:")
+				say("謝謝! 那就信你了.")
+				say("")
+			end
+
+		end
+	end	
+  state __GIVEUP__ begin
+  end
+  state __COMPLETE__ begin
+	  
+  end
+  end
+  
+

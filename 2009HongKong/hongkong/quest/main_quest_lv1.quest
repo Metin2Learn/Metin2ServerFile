@@ -1,0 +1,85 @@
+----------------------------------
+--	Main Quest LV1
+--	通知問  	
+----------------------------------
+quest main_quest_lv1 begin
+	state start begin
+		when login or levelup with pc.get_level() == 1 begin
+			set_state( gotoinfomation )
+		end
+	end
+	state gotoinfomation begin
+		when letter begin
+			send_letter("歡迎來 龍駒")
+		end
+		when button or info begin
+			say_title("歡迎來 龍駒")
+			
+			----"12345678901234567890123456789012345678901234567890"|
+			say("從現在起,您們都開始進入到戰爭.")
+			say("首先請您們去找在城市的教官,")
+			say("他會教您基本的智識和不同的任務.")
+			say("新兵教官正在找您, 請您快去見他吧.")
+			say("還有您想開始打怪物的話, ")
+			say("你可以先去找在小地圖上面表示的紅點的地方")
+			say("開始的時候, 先打幼狼比較好.")
+			say("祝您好運. ")
+			say("")
+			set_state( gototeacher )
+		end
+	end
+
+	state gototeacher begin
+		when letter begin
+			local v=find_npc_by_vnum(20354)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找新兵教官")
+			end
+		end
+		when letter begin
+			send_letter("去找新兵教官!")
+		end
+		when button or info begin
+			say_title("去找新兵教官!")
+			say("去找新兵教官, 跟他對話")
+			say("")
+			----------"12345678901234567890123456789012345678901234567890"|
+			say_reward("請您找有箭嘴的 NPC 後, 請雙擊.")
+			say_reward("如果, 畫面上看不出來 NPC 的話,")
+			say_reward("您要追小地圖上的閃亮點.")
+			say("")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say("新兵教官 :")
+
+			----"12345678901234567890123456789012345678901234567890"|
+			say("您是不是新手? 唉唉, 你的動作慢得要命")
+			say("你要快~ 快動作!")
+			say("你以前訓練過嗎? 看你站著的姿勢...")
+			say("我已經開始擔心你會不會打怪物.")
+			say("呵呵, 你還沒起醒. 看看你的動作 !")
+			say("好的, 你什麼時候都要保持警惕, 這樣在戰爭中才可以生存.")
+			say("將來, 你的等級到10級")
+			say("我會要給你做非常酷毒的訓練. ")
+			say("你一定好好準備!")
+
+			say("")
+			wait()
+			say("新兵教官 :")
+			say("現在你去學習基本上打怪物的方法吧. ")
+			say("還有, 你可以去看一看廣場也好.")
+			say("你的等級到 2 級的時候, 再來找我.")	
+			say("")
+			clear_letter()
+
+			set_quest_state("find_squareguard", "find")
+			set_quest_state("main_quest_lv2","run")
+			set_state( __COMPLETE__ )
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end
+

@@ -1,0 +1,340 @@
+----------------------------------------------------
+-- SUB QUEST
+-- LV 59
+--刨冰?!
+----------------------------------------------------
+
+quest subquest_49 begin
+	state start begin
+		when login or levelup or enter with pc.level >= 59 and pc.level <= 61 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20014)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "刨冰?")
+			end
+		end
+
+		
+		when __TARGET__.target.click or
+			20014.chat." 刨冰?!" with pc.level >= 59 begin
+			target.delete("__TARGET__")
+			say("小強 :") 
+			say("今天又和鈴兒幹一仗了.")
+			say("鈴兒那傢伙...")
+			say("堅持說世上有用冰做的好吃的食品")
+			say("說什麼，叫刨冰. ")
+			say("")
+			wait()
+			say("小強:") 
+			say("如果不是下雪的冷天氣")
+			say("很難見到冰.")
+			say("怎麼可能用冰做食品呢?")
+			say("鈴兒搞不清楚,狀況")
+			say("總是堅持自己的說法")
+			say("我就故意輸給他了.")
+			say("替我跟鈴兒說些什麼吧.")
+			say("世界上真的會有那樣的食品嗎?")
+			say("")
+			local s=select("接收.","拒絕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("小強:")
+					say("那下次想起來再確認吧")
+					say("")
+					return
+				end
+				say("小強:")
+				say("真的很好奇叫刨冰的食品...")
+				say("一路小心..")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("小強:")
+			say("謝謝...真的很好奇 ")
+			say("")
+			set_state(ask_to_youhwarang)
+		
+
+		
+		end
+	end
+
+	state ask_to_youhwarang begin
+		when info or button begin
+			say(locale.NOTICE_COLOR.."關於刨冰"..locale.NORMAL_COLOR)
+			say("去問鈴兒")
+			say("刨冰是什麼食品.")
+			say("")			
+		end
+
+		when letter begin
+			send_letter("問鈴兒")
+			
+			local v=find_npc_by_vnum("20024")
+			if 0== v then
+			else
+				target.vid("__TARGET__",v," 問鈴兒")
+			end
+		end
+
+		when __TARGET__.target.click or
+			20024.chat."刨冰是什麼?!" begin
+			target.delete("__TARGET__")	
+			say("鈴兒 : ")
+			say("小強那傢伙!!")
+			say("連刨冰都不知道，還裝著什麼都知道.")
+			say("又好吃有涼爽的，怎麼連這個都不知道呢?")
+			say("那個鄉巴佬~")
+			say("叔叔也不知道刨冰嗎?")
+			say("如果想知道刨冰")
+			say("就去鄰村的孫老闆那裡問吧.")
+			say("他是料理專家，什麼都知道")
+			say("上次有給我做過刨冰了")
+			say("一定要確認，讓小強知道!")
+			say("")
+			set_state(ask_to_chef)
+		end
+	end
+
+	state ask_to_chef begin
+		when letter begin
+			send_letter("去找孫老闆")
+
+			local v=find_npc_by_vnum("20008")
+			if 0== v then
+			else
+				target.vid("__TARGET1__",v," 去找孫老闆")
+			end	
+		end
+		
+		when info or button begin
+			say(locale.NOTICE_COLOR.."關於刨冰"..locale.NORMAL_COLOR)
+			say("小強一定想要知道有關刨冰.")
+			say("不能無視小朋友的好奇心")
+			say("去孫老闆那裡確認" )
+			say("刨冰是什麼食品.")
+			say("")			
+		end
+		
+		
+		
+		when __TARGET1__.target.click or
+			20008.chat."有關刨冰的情報" begin
+			target.delete("__TARGET1__")
+			say("孫老闆 : ")
+			say("呵呵! 你因什麼事找我呢?")
+			say("刨冰 ? 當然知道阿. ")
+			say("在這個大陸開餐館的人")
+			say("誰會不知道刨冰呢. ")
+			say("應該是夏天最好的食品之一.")
+			say("")
+			wait()
+			say("孫老闆:")
+			say("刨冰是把冰塊碎")
+			say("放入砂糖，餅，水果等做的食物.")
+			say("在炎熱的夏天吃真是很舒服.")
+			say("小強想知道刨冰是吧")
+			say("小強那傢伙是很善良，只是太謹慎了.. ")
+			say("不過是個討人喜歡的傢伙")
+			say("這次要做刨冰給他... ")
+			say("你幫我一起做刨冰")
+			say("讓小強高興一下吧...")
+			say("")
+			wait()
+			say("孫老闆:")
+			say("如果能到舒寒山叫 邪惡冰魔 的怪物那裡取到冰塊")
+			say("製作刨冰的材料，就能製作刨冰.. ")
+			say("我們齊心協力給小朋友夢和希望吧")
+		    say("")	
+			local s=select("接受.","拒絕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("孫老闆:")
+					say("你不怎麼想吃嗎?")
+					say("吃膩了嗎?")
+					say("下次想起來再來吧")
+					 say("")	
+					return
+				end
+				say("孫老闆:")
+				say("小強該失望了吧?")
+				say("小心炎熱的天氣..再見")
+				say("")	
+				set_state(__GIVEUP__)
+				return
+			end
+			say("孫老闆:")
+			say("是阿是阿~")
+			say("抓舒寒山的邪惡冰魔")
+			say("就可以取到冰.")
+			say("取來 50個冰塊")
+			say("就做涼爽的刨冰")
+		    say("")	
+			set_state(gain_ice)
+		end
+	end
+
+	state gain_ice begin
+		when letter begin
+			send_letter("刨冰?")
+			
+			if pc.count_item("30146")>=50 then  
+				local v=find_npc_by_vnum(20008)
+				if 0==v then
+					else
+					target.vid("__TARGET__",v,"到孫老闆那裡")
+				end
+			end
+
+		end
+
+		when info or button begin
+
+			if pc.count_item("30146")>=50 then  
+				say(locale.NOTICE_COLOR.."取到冰塊"..locale.NORMAL_COLOR)
+				say("取到製作刨冰所需的")
+				say("所有的冰塊")
+				say("把這些拿給孫老闆.")
+				return
+			end
+			say(locale.NOTICE_COLOR.."尋找冰塊"..locale.NORMAL_COLOR)
+			say("為了製作刨冰需要冰塊.")
+			say("抓捕在舒寒山出現的邪惡冰魔")
+			say("就可以取到冰.")
+			say("取50個冰拿給孫老闆吧")
+			say("")
+		end
+		
+		when 1171.kill begin
+			local s = number(1, 100)
+			if s <= 7 and pc.count_item("30146")< 50  then
+				pc.give_item2("30146", 2)
+			end
+		end
+
+		when __TARGET__.target.click or 
+			20008.chat."把冰塊取來了.." begin
+			target.delete("__TARGET__")
+			if pc.count_item("30146") >= 50 then
+				say("孫老闆 :")
+				say("謝謝! 托你的福可以製作刨冰了")
+				say("用這個給小強找尋童心")
+				say("這是刨冰")
+				say("")
+				say_item_vnum(30149)
+				pc.give_item2(30149)
+				set_state(back_to_boy)
+				pc.remove_item(30146, 50)
+				return
+			else
+				say("還不夠啊...")
+				say("還得再取一些吧")
+				local s=select("是，再挑戰","要放棄")
+				if 2==s then
+					say("孫老闆 :")
+					say("難嗎? 沒辦法 ..")
+					say("保重身體，冰魔很怪癖的...")
+					set_state(__GIVEUP__)
+					return
+				end
+				say("孫老闆 :")
+				say("再試一次嗎?")
+				say("以你的實力充分可以找到的")
+				say("")
+
+			end
+	end
+end
+
+state back_to_boy begin
+	when letter begin
+			send_letter("回到小強那裡")
+			
+			local v = find_npc_by_vnum(20014)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "刨冰!")
+			end
+
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.." 回到小強那裡"..locale.NORMAL_COLOR)
+			say("")
+			say("把孫老闆做的刨冰")
+			say("拿給小強")
+			say_item_vnum(30149)
+		end
+
+		
+		when __TARGET__.target.click or
+			20014.chat."這是刨冰!" begin
+			target.delete("__TARGET__")
+			if pc.count_item("30149")>0 then
+				say("小強:")
+				say("哇~真是刨冰!")
+				say("這麼涼爽又甜的味道")
+				say("第一次嘗到")
+				say("謝謝")
+				say("")
+				pc.remove_item(30149,1)
+
+				say_reward("獲得經驗值 6000000 ")
+				pc.give_exp2(6000000)
+				set_quest_state("levelup","run")	
+
+				say_reward("獲得了" ..item_name(70035).."")
+				pc.give_item2(70035)
+			   clear_letter()
+			   set_state(__COMPLETE__)
+		   else
+			   say("小強:")
+			   say("我說過的刨冰 ")
+			   say("忘記了嗎?")
+			   say_item_vnum(30149)
+			   say("")
+			   wait()
+			   say_pc_name()
+			   say("啊，忘了刨冰了!")
+		      	say("")
+				say("為了得到刨冰，再去抓邪惡冰魔嗎")
+				say("還是放棄任務呢?")
+				local s = select("是, 再去抓邪惡冰魔.", "不是,放棄任務.")
+				if s == 2 then
+					say_pc_name()
+					say("以我的能力做不到.")
+					say("對不起.")
+					say("")
+					clear_letter()
+					set_state(__GIVEUP__)
+
+				end	
+				set_state(gain_ice)
+			end
+
+		end
+	end	
+
+
+
+
+
+		
+	state __GIVEUP__ begin
+	end
+		
+	state __COMPLETE__ begin
+	end
+end

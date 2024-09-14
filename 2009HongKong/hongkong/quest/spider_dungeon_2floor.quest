@@ -1,0 +1,39 @@
+-------------------------------------
+--Metin2 由盤絲洞 2 樓往 1 樓任務
+------------------------------------
+quest spider_dungeon_2floor begin
+	state start begin
+		when login or levelup with pc.level >0 begin
+			set_state(to_spider_2floor)
+		end
+	end
+		
+	state to_spider_2floor begin
+		when 20089.chat."向盤絲洞 1 樓出發!" begin
+			say("")
+			say(""..mob_name(20089).."")
+			say("您好!")
+			say("我是來帶領您...")
+			say("由盤絲洞2樓到1樓的人.")
+			say("您要去1樓嗎?")
+			say("")
+			local a= select("移動","不要移動")
+			if 1==a then
+				say("")
+				say(""..mob_name(20089).."")
+				say("好!")
+				say("到1樓跟蜘蛛們玩個痛快吧!")
+				wait()
+				pc.warp(91700, 525300)
+				return
+			end
+			say("")
+			say(""..mob_name(20089).."")
+			say("到您改變主意時再告訴我.")
+			say("")
+		end
+			
+
+	end
+
+end

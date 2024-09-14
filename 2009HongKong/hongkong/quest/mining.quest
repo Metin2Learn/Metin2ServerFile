@@ -1,0 +1,52 @@
+quest mining begin
+    state start begin
+	when 20015.chat."使用商店" begin
+	    setskin(NOWINDOW)
+	    npc.open_shop()
+	end
+
+	when 20015.take with item.vnum >= 29101 and item.vnum < 29200 and item.get_socket(0) != item.get_value(2) begin
+	    say("現在的鋤頭修練度不足, 無法改良.")
+	end
+	when 20015.take with item.vnum >= 29101 and item.vnum < 29200 and item.get_socket(0) == item.get_value(2) begin
+	    say("你想改良鋤頭嗎?[ENTER]讓我看看...[ENTER]你的鋤頭等級是".. item.get_level().."")
+	    if item.get_value(3) == 100 then
+		say("你想改良嗎?") 
+	    else
+		say("現在我的能力不足, 我改良鋤頭的話")
+		say("100個中" .. 100-item.get_value(3).. "個的等級會下降. ")
+		say("你還是要改良嗎?") 
+	    end
+	    local s = select("是的","不是")
+	    if s == 1 then
+	       local f = __refine_pick(item.get_cell())
+	       if f == 2 then say("改良中發現錯誤, 所以這次改良失敗了.[ENTER]現在我把鋤頭還給你[ENTER]下次再試試吧.") 
+	       elseif f == 1 then say("現在給你等級上升的鋤頭! ") 
+	       else say("哎呀~ 改良失敗了. 不好意思[ENTER]等級下降了. ")
+	       end 
+	    else 
+		say("那好吧, 下次再見了~")
+	    end
+	end
+
+	when 20047.click or
+	     20048.click or
+	     20049.click or
+	     20050.click or
+	     20051.click or
+	     20052.click or
+	     20053.click or
+	     20054.click or
+	     20055.click or
+	     20056.click or
+	     20057.click or
+	     20058.click or
+	     20059.click begin
+
+	     if pc.is_mount() != true then
+		 pc.mining()
+	     end
+	end
+    end
+end
+

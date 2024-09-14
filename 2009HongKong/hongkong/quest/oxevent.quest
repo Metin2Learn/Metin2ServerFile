@@ -1,0 +1,189 @@
+quest oxevent_manager begin
+	state start begin
+		when 20011.chat."天下第一天才大會" begin
+			say("喂！！您～您！！")
+			say("對~ 我就是在叫您，看上去您很聰明。")
+			say("天下第一天才大會現在開始。")
+			say("那個大會叫，天下第一天才大會！！！")
+			say("如果您取得了第一名的話，會得到很多的獎品。")
+
+			if game.get_event_flag("oxevent_status") == 0 then
+				say("開始大會的時候，我會幫您參加的。")
+				say("還有，如果您只想參觀的話，我也會幫您的。")
+				say("那個大會應該會很快就會開始，您應該要好好準備。")
+				say("")
+			elseif game.get_event_flag("oxevent_status") == 1 then
+				say("怎麼樣？您想參加嗎？")
+				say("只想參觀的話，也可以。")
+				say("")
+
+				local s = select("參加", "參觀", "取消")
+
+				if s == 1 then
+					say("呵呵～您想參加嗎？")
+					say("我幫您傳送到大戰場。")
+					say("")
+
+					wait()
+
+					pc.warp(896500, 24600)
+				elseif s == 2 then
+					say("只要參觀嗎？")
+					say("我幫您傳送到大戰場。")
+					say("但是進入之後，您要在那裡…")
+					say("留下來到大會結束才可以離開。")
+					say("")
+
+					wait()
+
+					pc.warp(896300, 28900)
+				end
+			elseif game.get_event_flag("oxevent_status") == 2 then
+				say("天才大會已經開始了。")
+				say("哎呀這次您不可以參加，")
+				say("但是，很短時間內會在次開始。")
+				say("您收到通知的話，")
+				say("請來找我吧。")
+				say("怎麼樣？這次您要參觀嗎？")
+				say("")
+
+				local s = select("好的", "不了，謝謝")
+				if s == 1 then
+					say("呵呵，您想參觀嗎？")
+					say("您在那好好觀察一下有甚麼樣的問題出現。")
+					say("")
+
+					wait()
+
+					pc.warp(896300, 28900)
+				end
+			end
+		end
+
+		when 20358.chat."OX 活動操作" with pc.is_gm() begin
+
+			local stat = oxevent.get_status()
+
+			if stat == 0 then
+				say("現時狀態：OX 活動完滿結束")
+				say("")
+
+				local s = select("開始參加活動", "結束操作")
+
+				if s == 1 then
+					local v = oxevent.open()
+
+					if v == 0 then
+						say("OX 測驗題目載入失敗")
+						say("請檢查 OX 測驗題目後，")
+						say("再作嘗試。")
+						say("")
+					elseif v == 1 then
+						say("OX 測驗題目載入成功")
+						say("開始參加")
+						say("")
+
+						notice_all("您好！這裡是《龍駒》。")
+						notice_all("OX 活動正式開始。")
+						notice_all("您可經由老學究進入活動場地。")
+						notice_all("請多多參加。")
+					else
+						say("OX 活動操作錯誤。")
+						say("")
+					end
+				end
+			elseif stat == 1 then
+					say("現時狀態：OX 活動開始參加")
+					say("現時參加者："..oxevent.get_attender().."位")
+					say("")
+
+					local s = select("停止接受參加申請", "結束操作")
+
+					if s == 1 then
+						oxevent.close()
+
+						say("現已不再接受 OX 活動的參加者。")
+						say("您可出題了。")
+						say("")
+					end
+			elseif stat == 2 then
+					say("現時狀態：OX 活動結束參加")
+					say("")
+
+					local s = select("出題", "重新開始活動", "結束活動", "結束操作")
+
+					if s == 1 then
+						local v = oxevent.quiz(1, 30)
+
+						if v == 0 then
+							say("出題失敗")
+							say("")
+						elseif v == 1 then
+							say("出題成功")
+							say("")
+						else
+							say("OX 活動操作錯誤。")
+							say("")
+						end
+					elseif s == 2 then
+						oxevent.end_event()
+
+						notice_all("您好！這裡是《龍駒》。")
+						notice_all("稍後將重新開始 OX 活動。")
+						notice_all("參加活動的玩家將會移動到城市。")
+
+						say("重新開始 OX 活動。")
+						say("")
+					elseif s == 3 then
+						oxevent.end_event()
+
+						notice_all("您好！這裡是《龍駒》。")
+						notice_all("OX 活動完滿結束。")
+						notice_all("稍後將移動到城市。")
+
+						say("結束 OX 活動。")
+						say("")
+					end
+			elseif stat == 3 then
+					say("現時狀態：正在出題。")
+					say("請稍候。")
+					say("")
+				else
+					say("現時狀態：發生錯誤。")
+				end
+			end
+
+		when 20358.chat."強行結束 OX 活動" with pc.is_gm() begin
+			say("您要強行結束 OX 活動。")
+			say("這會導致難以預計的問題發生。")
+			say("是否要繼續？")
+			say("")
+
+			local s = select("是", "否")
+
+			if s == 1 then
+				oxevent.end_event_force()
+
+				say("強行結束 OX 活動。")
+			end
+		end
+
+		when 20358.chat."派發 OX 活動獎品" with pc.is_gm() begin
+			say("您要向參加者派發物品。")
+			say("請輸入所派發物品的編號。")
+			say("")
+
+			local item_vnum = input()
+
+			say("請輸入派發的數量。")
+			say("")
+
+			local item_count = input()
+
+			oxevent.give_item(item_vnum, item_count)
+
+			say("向 "..oxevent.get_attender().." 位玩家派發了 OX 活動獎品。")
+			say("")
+		end
+	end
+end

@@ -1,0 +1,166 @@
+--------------------------------------------
+--SUB quest
+--LV 48
+--老海盜的治療藥
+--------------------------------------------
+quest subquest_21 begin
+	state start begin
+		when login or levelup with pc.level >= 48 and pc.level <= 50 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20020)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, " 老海盜?")
+			end
+		end
+
+		when __TARGET__.target.click or
+			20020.chat."渾身癢癢，真是難受"  begin
+			target.delete("__TARGET__")
+			say("老海盜 :")
+			say("想拜託你一件事.")
+			say("可能已經聽說過吧，我是背著背叛者的烙印")
+			say("不得已才活下去.")
+			say("我曾經也有過輝煌的日子，但是現在人生到盡頭了")
+			say("落魄成這個模樣 ...")
+			say("而且最近要過這種逃亡的生活")
+			say("身體都不怎麼聽話了.")
+			say("")
+			wait()
+			say("老海盜:")
+			say("所以說 .. 能替我找些藥嗎?")
+			say("因為是過著逃亡的生活")
+			say("不能自己找藥...")
+			say("在以前的民間療法中有故意將細微的毒注入到身體")
+			say("強化免疫力的療法.")
+			say("如果要恢復我現在虛弱的身體")
+			say("那個辦法最好...")
+			say("從"..mob_name(933).."那裏取來"..mob_name(933).."菌吧.")
+			say("雖然我不夠資格向別人尋求幫助")
+			say("但是拜託了.") 
+			say("")
+			local s=select("好，我幫你吧","不可以.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","不是")
+				if 2==a then
+					say("老海盜:")
+					say("我這個處境啊")
+					say("周圍的人都討厭我")
+					say("如果以後還會想起來，就再來吧 ")
+					say("")
+					return
+				end
+				say("老海盜 :")
+				say("哼! 像你這種人沒甚麼好說的!")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("老海盜 :")
+			say("那辛苦你了~.")
+			say("")
+			say("")
+			set_state(accept_request)
+
+
+			end
+
+		end
+
+
+	state accept_request begin
+
+		when letter begin
+			send_letter("老海盜的藥")
+			
+			if pc.count_item("30114")>0 then
+				local v=find_npc_by_vnum(20020)
+				if 0!= v then
+					target.vid("__TARGET__",v,"去找老海盜")
+				end 
+			end
+
+		end		
+			
+	
+		when info or  button begin
+			if pc.count_item("30114") >=1 then
+				say(locale.NOTICE_COLOR..  "擊毀了"..mob_name(933).."" ..locale.NORMAL_COLOR)
+				say("")
+				say("為了因長期的逃亡生活，使健康極度惡化的老海盜")
+				say("擊毀"..mob_name(933).."")
+				say("得到了"..mob_name(933).."菌")
+				say("把這個拿給老海盜")
+				say("")
+				return
+			end
+				
+			say(locale.NOTICE_COLOR..  "擊毀"..mob_name(933).."" ..locale.NORMAL_COLOR)
+			say("")
+			say("老海盜因長久的逃亡生活")
+			say("健康極度惡化了.")
+			say("為了使身體恢復")
+			say(""..mob_name(933).."的"..mob_name(933).."菌.")
+			say("可在雪寒山找到"..mob_name(933)..".")
+			say("找"..mob_name(933).."菌給老海盜")
+			say("")
+
+		end
+
+
+					
+		when 933.kill  begin
+			
+			local s = number(1, 100)
+			if s <= 5 and  pc.count_item("30114") ==0  then
+				pc.give_item2(30114, 1)
+
+			end
+		end
+
+	
+		
+		when  __TARGET__.target.click or
+			20020.chat."噢，謝謝！ " with pc.count_item("30114") >=1  begin
+			target.delete("__TARGET__")
+			say("老海盜 :")
+			say("噢，謝謝！ ")
+			say("過著逃亡生活夠委屈的了")
+			say("如果連身體都垮掉，是不行的.")
+			say("希望通過這個好起來...")
+			say("幫助像我這樣的人，真是感謝")
+			say("")
+			pc.remove_item("30114",1)
+			
+		   say_reward("獲得經驗值 1900000 ")
+		   say_reward("獲得 30000 兩")
+		   pc.change_money(30000)
+		   pc.give_exp2(1900000)	
+			 set_quest_state("levelup","run")
+		
+		    local jewels = {16163,16183,16203}
+	   		local jewel = jewels[number( 1 ,3)];
+			pc.give_item2(jewel)
+		   say_reward("獲得了" ..item_name(jewel).."")
+			
+			clear_letter()
+			set_state(COMPLETE)
+
+		end
+
+end
+
+	state __GIVEUP__ begin
+	end
+
+	state COMPLETE begin
+	end
+
+
+end
+

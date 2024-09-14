@@ -1,0 +1,157 @@
+----------------------------------
+-- Main Quest LV27
+-- 破壞更多的惡運石
+----------------------------------
+quest main_quest_lv27 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter begin
+			if  pc.get_level() >= 27 then 				
+				setstate( gotoboss )		
+			end
+		end
+	end
+	state gotoboss begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( "破壞更多的惡運石!" )
+			q.set_title( "破壞更多的惡運石!" )
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 破壞更多的惡運石!"..locale.NORMAL_COLOR)
+			--say("跟警備隊長對話")
+			say("最近因為惡運石的緣故, 損失越來越大,")
+			say("我們一定要破壞惡運石")
+			say("去找警備隊長")
+			
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."破壞更多的惡運石!"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+	    	---                                                   l
+			say("警備隊長 : 最近辛苦你了, 我聽過你的大名,")
+			say("應該是我給你做的任務, 令到你出了大名~")
+			say("你不必感到尷尬,")
+			say("我只是跟你開玩笑而已.")
+			say("我的意思是我很相信你的能力.")
+			say("")
+
+			say("這次我找你因為最近惡運石")
+			say("越來越多.")
+			wait()
+			say("惡運石的數量增加的話, 人民的生命會受到威脅.")
+			say("所以請你幫我們剷除惡運石.")
+		   	say("喔~ 神女說的事情真的會出現嗎?")
+		   	say("魔王真的復活的話, 那可怎麼辦啊?")
+			say("你剷除惡運石的話, 請向我報告")
+			say("你需要剷除惡運石的名字是: 盤蛇隕石.")
+			say("")
+			say_reward("任務報酬")
+			say_reward("經驗值 ".." 300000" )
+			say_reward("物品 "..item_name(71050))
+			say_reward("物品 "..item_name(71050))
+			setstate( killmetinstone )
+			q.done()
+		end
+	end
+	
+	state killmetinstone begin
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( "破壞更多的惡運石!" )
+			q.set_title( "破壞更多的惡運石!" )
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."破壞更多的惡運石!"..locale.NORMAL_COLOR)
+			say("剷除盤蛇隕石")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."破壞更多的惡運石!"..locale.NORMAL_COLOR)
+			say("剷除盤蛇隕石")
+		end
+		when 8005.kill begin
+			say(locale.NOTICE_COLOR.."破壞更多的惡運石!"..locale.NORMAL_COLOR)
+			say( locale.MAIN_QUEST_LV20[2] )
+			say("盤蛇隕石破壞完成了")
+			say("回去報告警備隊長")
+			say("")
+			say("跟警備隊長對話")
+			setstate(gotoboss2)
+			q.done()
+		end	
+	end
+	state gotoboss2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( "破壞更多的惡運石!" )
+			q.set_title( "破壞更多的惡運石!" )
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."破壞更多的惡運石!"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."破壞更多的惡運石!"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			pc.give_exp2( 300000 )
+			set_quest_state("levelup","run")
+			pc.give_item2(71050,5) 
+			pc.give_item2(71014,5) 
+			target.delete("__TARGET__")
+			say(locale.NOTICE_COLOR.."破壞更多的惡運石!"..locale.NORMAL_COLOR)
+	    	---                                                   l
+			say("警備隊長:")
+		  	say("破壞惡運石了嗎? 因為您的幫忙")
+		   	say("我們的城市會變得安全. 惡運石到底從哪裡來?")
+		   	say("繼續發現很多很危險的事情, ")
+			say("我們應該怎麼做才好呢.")
+		   	say("現在老學究開始研究惡運石出現的緣故")
+		   	say("結果什麼才會有呢? 謝謝您.")
+			say("")
+			say_reward("任務報酬")
+			say_reward("經驗值 ".." 300000" )
+			say_reward("物品 "..item_name(71050))
+			say_reward("物品 "..item_name(71014))
+			pc.give_item2(50721,5)
+			pc.give_item2(50723,5)
+			say_reward("獲得了草藥物品")
+			q.done()
+			clear_letter()
+			set_quest_state("main_quest_lv30", "run")
+			set_state( __COMPLETE2__ )
+		end
+	end
+	state __COMPLETE__ begin
+		when login begin
+			pc.setqf("complete", 0)
+			set_state( __COMPLETE2__ )
+		end
+	end
+	state __COMPLETE2__ begin
+	end
+end
+

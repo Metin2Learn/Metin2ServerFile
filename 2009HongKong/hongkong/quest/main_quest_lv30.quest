@@ -1,0 +1,235 @@
+---------------------------------
+-- Main Quest LV30
+--  惡運石的秘密
+---------------------------------
+quest main_quest_lv30 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter begin
+			if  pc.get_level() >= 30 then 				
+				set_state( gotoeulduji )		
+			end
+		end
+	end
+	state gotoeulduji begin
+		when letter begin
+			send_letter("惡運石的秘密")
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找老學究")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( "惡運石的秘密" )
+			q.set_title("惡運石的秘密")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."惡運石的秘密"..locale.NORMAL_COLOR)
+			--say("跟老學究對話")
+			say("")
+			say("縱欲老學究發現了惡運石的秘密.")
+			say("請您去找老學究.")
+			say("任務完成時候, 您可以獲得金錢和經驗值. ")
+			say("")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."惡運石的秘密"..locale.NORMAL_COLOR)
+			say("跟老學究對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+	    	---                                                   l
+			say("老學究:")
+   			say("啊啊 ~ 你是因為警備隊長的要求, 才來找我的吧")
+   			say("您看上去能力很不錯 ...")
+   			say("我要求您一件事情, 您也知道惡運石的事情吧")
+   			say("惡運石從天掉下來了")
+   			say("牠從天空掉下來並且開始傳播僵屍菌")
+   			say("還有影響動物, 令到他們發狂.")
+			say("但是我們不太清楚牠從哪裡來, ")
+   			say("也不知道牠到底是什麼東西")
+   			say("所以很難研究.")
+			say("最近我找到有些頭緒.")
+   			wait()
+			say("老學究:")
+   			say("根據資料下仙洞的洞窟裡的")
+   			say("下仙洞墓碑.")
+   			say("那墓碑上有會解釋惡運石的秘密的內容")
+   			say("為了我的研究, 你可以幫我找下仙洞墓碑")
+   			say("我可以揭開惡運石的秘密")
+   			say("請你去找下仙洞墓碑, 拜託你了!")
+			say("")
+			say(locale.NOTICE_COLOR.."報酬"..locale.NORMAL_COLOR)
+			say_reward("經驗值".." 420000" )
+			say_reward("金錢".." 20000 兩")
+			say_reward("物品 "..item_name(30075))
+			set_state( clickstone )
+			q.done()
+		end
+	end
+	state clickstone begin
+		when letter begin
+			local v=find_npc_by_vnum(20352)
+			if 0==v then
+			else
+				target.vid("__TARGET1__", v, "下仙洞墓碑")
+			end
+			send_letter("惡運石的秘密")
+			q.start()
+		end
+		when info or button begin
+			say(locale.NOTICE_COLOR.."惡運石的秘密"..locale.NORMAL_COLOR)
+			say("")
+			say("根據資料下仙洞的洞窟裡的")
+			say("下仙洞墓碑")
+			say("去下仙洞, 找下仙洞墓碑.")
+			say("")
+			say("(跟 第2 城市的地牢守衛對話後,)")
+			say("(您可以去下仙洞)")
+		end
+		when __TARGET1__.target.click or 
+			20352.chat."下仙洞墓碑!" begin
+			target.delete("__TARGET1__")
+			say_pc_name()
+			say("找到了墓碑")
+			say("檢查墓碑的內容後")
+			say("去找老學究!")
+			say("")
+			set_state( gotoeulduji2 )
+			q.done()
+		end
+	end
+	state gotoeulduji2 begin
+		when letter begin
+			send_letter("惡運石的秘密")
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找老學究")
+			end
+		end
+		when button or info begin
+			say(locale.NOTICE_COLOR.."惡運石的秘密"..locale.NORMAL_COLOR)
+			say("")
+			say("檢查墓碑的內容後")
+			say("跟老學究對話")
+			say("")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say(locale.NOTICE_COLOR.."惡運石的秘密"..locale.NORMAL_COLOR)
+	    	---                                                   l
+			say("老學究:")
+   			say("喔~ 這就是墓碑的內容, 讓我看看...")
+   			say("喔!!! 這可怎麼辦啊~ 有很多文字我看不懂. . .")
+   			say("所以我沒有辦法明白他的意思.")
+   			say("我們差一點就可以解釋惡運石的秘密,")
+			say("現在應該怎麼辦呢")
+   			say("(查看書籍), 看. . . 看 . . .~~")
+			say("")
+			say("阿!!! 你知道密教塔在昇龍谷嗎?")
+		   	say("古代時所建設的秘密場所")
+		   	say("這些文字我們都看不懂")
+		   	say("在那裡可以找到方法看懂這些文字.")
+		    wait()
+			say("這些是古代的問題")
+			say("所以從古代人留下來的遺址")
+		   	say("可以找到解釋這些文字的方法")
+		   	say("請你去找資料好嗎.")
+			say("那樣的話, 我可以解釋惡運石的秘密.")
+			say("")
+			-- set_state( __COMPLETE__ )
+			set_state(clickplace)
+			q.done()
+		end
+	end
+	state clickplace begin
+		when letter begin
+			local v=find_npc_by_vnum(20353)
+			if 0==v then
+			else
+				target.vid("__TARGET2__", v, "昇龍谷墓碑")
+			end
+			send_letter("惡運石的秘密")
+			q.start()
+		end
+		when info or  button begin
+			say(locale.NOTICE_COLOR.."惡運石的秘密"..locale.NORMAL_COLOR)
+			say("")
+			say("昇龍谷墓碑是古代時所建設的秘密場所")
+			say("看不懂的文字在下仙洞墓碑,")
+			say("可以找到解釋這些文字的方法在昇龍谷.")
+			say("去昇龍谷吧. ")
+			say("")
+		end
+		when __TARGET2__.target.click or
+		    20353.chat."昇龍谷墓碑!"	begin
+			target.delete("__TARGET2__")
+			say_pc_name()
+			say("找到了墓碑")
+			say("檢查墓碑的內容後")
+			say("去找老學究!")
+			say("")
+			set_state( gotoeulduji3 )
+			q.done()
+		end
+	end
+	state gotoeulduji3 begin
+		when letter begin
+			send_letter("惡運石的秘密")
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找老學究")
+			end
+		end
+		when info or button begin
+			say(locale.NOTICE_COLOR.."惡運石的秘密"..locale.NORMAL_COLOR)
+			say("")
+			say("找到下仙洞墓碑以外")
+			say("昇龍谷墓碑也找到了.")
+			say("回去第一城市, 找老學究,")
+			say("跟老學究對話")
+			say("")
+		end
+		when __TARGET__.target.click begin
+			pc.give_exp2( 420000 )
+			set_quest_state("levelup","run")
+			pc.change_money( 20000 )
+			target.delete("__TARGET__")
+			say(locale.NOTICE_COLOR.."惡運石的秘密"..locale.NORMAL_COLOR)
+	    	---                                                   l
+			say("老學究:")
+			say("老學究 : 哦哦~ 謝謝你, 因為你的協助")
+			say("我很快就可以解釋惡運石的秘密.")
+			say("我的研究應該很快就可以進行.")
+			say("謝謝, 還是要謝謝你, 這是我對你的感謝.")
+			say("請接受我的報酬.")
+			say_title("報酬")
+		    say_reward("經驗值".." 420000" )
+			say_reward("金錢     ".." 20000 兩")
+			say_reward("獲得了" ..item_name(30075).."")
+			pc.give_item2(30075)
+			pc.give_item2(50722,5)
+			pc.give_item2(50724,5)
+			say_reward("獲得了草藥物品")
+			clear_letter()
+			set_state(__COMPLETE__)
+			set_quest_state("main_quest_lv32", "run")
+			--set_state( __COMPLETE2__ )
+		end
+	end
+	state __COMPLETE__ begin
+		when login begin
+	--		set_quest_state("main_quest_lv32", "run")
+		--	set_state( __COMPLETE2__ )
+		end
+	end
+	state __COMPLETE2__ begin
+	end
+end
+

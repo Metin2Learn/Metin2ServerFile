@@ -1,0 +1,75 @@
+quest check_collect_reward begin
+	state start begin
+
+		when 20018.chat."流失了的藥方"   begin
+			say("你遺失了藥方嗎? ")
+			say("為何這麼粗心呢！！")
+			say("好的，我再給你一次機會。可別再弄掉了喔~~ ")	
+			say("")
+			wait("")
+			local value = "557528158"
+			local a = get_quest_state("collect_quest_lv30")
+			local b = get_quest_state("collect_quest_lv40")
+			local c = get_quest_state("collect_quest_lv50")
+			local d = get_quest_state("collect_quest_lv60")
+			local e = get_quest_state("collect_quest_lv70")
+			local f = get_quest_state("collect_quest_lv80")
+			local a_ = string.format("%d",  a)
+			local b_ = string.format("%d",  b)
+			local c_ = string.format("%d",  c)
+			local d_ = string.format("%d",  d)
+			local e_ = string.format("%d",  e)
+			local f_ = string.format("%d",  f)
+
+			affect.remove_collect() -- remove all	
+			if   a_== value then
+				affect.add_collect(apply.MOV_SPEED, 10, 60*60*24*365*60)
+				say("您已經完成了30級收集任務！")
+			end
+
+			if b_== value   then
+				affect.add_collect(apply.ATT_SPEED,5,60*60*24*365*60)	
+
+				say("您已經完成了40級收集任務！")
+
+			end
+			if  c_== value then
+				affect.add_collect(apply.DEF_GRADE_BONUS,60,60*60*24*365*60)
+
+				say("您已經完成了50級收集任務！")
+
+			end
+			if  d_== value then
+				affect.add_collect(apply.ATT_GRADE_BONUS,50,60*60*24*365*60)	
+
+				say("您已經完成了60級收集任務！")
+
+			end
+
+			if  e_== value then
+				affect.add_collect(apply.MOV_SPEED,11,60*60*24*365*60)
+				affect.add_collect_point(POINT_DEF_BONUS,10,60*60*24*365*60) --60斥
+				say("您已經完成了70級收集任務！")
+				say("防禦力+10%的效果不是顯示在角色屬性上")
+				say("但是會直接顯示在遊戲中")
+				say("")	
+			end
+			if f_== value  then
+				affect.add_collect(apply.ATT_SPEED,6,60*60*24*365*60) --60斥
+				affect.add_collect_point(POINT_ATT_BONUS,10,60*60*24*365*60) --60斥
+				say("您已經完成了80級收集任務！")
+				say("攻擊力+10%的效果不是顯示在角色屬性上")
+				say("但是會直接顯示在遊戲中")
+				say("")
+			end
+			wait()
+			say("")
+			say("請重新登陸一下 ")
+			say("")
+		end
+	end
+
+end
+
+
+

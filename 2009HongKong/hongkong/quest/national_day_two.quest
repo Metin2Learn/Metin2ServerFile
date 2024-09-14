@@ -1,0 +1,46 @@
+quest national_day_two begin
+	state start begin
+  	when 9003.chat."³ÁÁJªº¯¬ºÖ" with pc.get_level()>=33 and pc.countitem("30000")>=1 and game.get_event_flag("national_day")==1 begin
+		 	say_title("³ÁÁJªº¯¬ºÖ")
+		 	say("¥Î¤j³Á¨Ó§I´«§Aªº¼úÀy§a!")
+			say("")
+			local b=select("§I´«","¤£§I´«")
+			if 1==b then
+				pc.remove_item(30000,1)
+				national_day_two.exchange_item()
+				--set_state(_COMPLETE_)	
+				set_state(start)
+		 	elseif 2==b then
+		   	set_state(start)
+			end
+		end
+		function exchange_item() 
+			local s=number(1,100)
+			if s<=1 then
+				pc.give_item2(17185,1)	
+			elseif s<=2 then
+				pc.give_item2(25040,2)
+		  elseif s<=4 then
+			  pc.give_item2(25040,1)
+			elseif s<=8 then
+			  pc.give_item2(25041,2)
+			elseif s<=15 then
+			  pc.give_item2(25041,1)
+			elseif s<=30 then
+			  pc.give_item2(27102,10)
+			elseif s<=50 then
+				pc.give_item2(50107,10)
+			elseif s<=70 then
+		  	pc.give_item2(27006,50)
+		  elseif s<=100 then
+			  pc.give_item2(27003,100)
+			end
+		end
+	end
+	state _COMPLETE_ begin
+		when enter begin
+			q.done()
+		end
+	end	
+end
+

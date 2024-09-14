@@ -1,0 +1,70 @@
+quest fisher begin
+    state start begin
+		when 9009.chat."使用商店"  begin
+		    npc.open_shop()
+			setskin(NOWINDOW)
+		end
+	
+		when 9009.chat."漁竿改良通知" begin
+			say("你想知道怎麼可以釣到好的魚嗎?")
+			say("嗯~ 沒有什麼特別的方法.")
+			say("只要你專心釣魚,你的漁竿就有上升等級.")
+			say("如果你的魚竿的熟練度到了最高,請再來找我.")
+			say("我可以幫你升級你的魚竿.")
+			say("")
+			say("嗯~ 請把你想升級的魚竿交給我吧.")
+			say("")
+			say("")
+		end
+
+		when 9009.take with item.vnum < 27400 or item.vnum > 27590 begin
+			say("除了魚竿我不可以改良其他物品.")
+			say("")
+		end
+
+		when 9009.take with item.vnum == 27590 begin
+			say("這個魚竿不能再進行改良.")
+			say("")
+		end
+
+		when 9009.take with item.vnum >= 27400 and item.vnum < 27590 and item.get_socket(0) != item.get_value(2) begin
+			say("魚竿的熟練度不足.")
+			say("你現在不能改良到下一個等級.")
+			say("")
+		end
+
+		when 9009.take with item.vnum >= 27400 and item.vnum < 27590 and item.get_socket(0) == item.get_value(2) begin
+			say("是否需要改良魚竿?")
+			say("讓我先看看你的魚竿...")
+			say(string.format("你的魚竿的等級是 %d .", item.get_value(0) / 10))
+			say("我的能力不夠")
+			say("如果你想我幫你改良魚竿的話")
+			say(string.format("100個中 %d 個 可以會等級下降.", 100 - item.get_value(3)))
+			say("你還需要改良這個魚竿嗎?")
+			say("")
+
+			local s = select("需要改良", "放棄改良")
+
+			if s == 1 then
+				local f = __fish_real_refine_rod(item.get_cell())
+				if f == 2 then
+					say("出現錯誤,因此無法改良.")
+					say("現在把魚竿還給你.")
+					say("下次再試試吧.")
+					say("")
+				elseif f == 1 then
+					say("魚竿已經升級了,現在還給你!")
+					say("")
+				else
+					say("唉唷~ 升級失敗了.")
+					say("等級下降了.")
+					say("")
+				end
+			else
+				say("歡迎下次再來~")
+				say("")
+			end
+		end
+    end
+end
+

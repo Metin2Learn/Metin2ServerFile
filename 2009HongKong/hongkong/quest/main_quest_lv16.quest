@@ -1,0 +1,432 @@
+quest main_quest_lv16_1 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter begin
+			if  pc.get_level() >= 16 then 				
+				setstate( gotoboss )		
+			end
+		end
+	end
+	state gotoboss begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+			setskin(NOWINDOW)
+           	makequestbutton( "抓住奸細1" )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[16])
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."抓住奸細1"..locale.NORMAL_COLOR)
+			--say("跟警備隊長對話")
+	    	---                                                   l
+			say("現在我們的誠實內有一個奸細.")
+			say("警備隊長會給你奸細有關的資料.")
+			say("請你快去見面他吧")
+			say("任務完成時候, 你會獲得 金錢和經驗值.")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."抓住奸細1"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say( locale.MAIN_QUEST_LV16_1[1] )  
+				say(locale.NOTICE_COLOR.."任務報酬"..locale.NORMAL_COLOR)
+		  		say_reward("經驗值 ".." 40000" )
+				say_reward("金錢".." 5000 兩")
+			setstate( killrobber )
+			q.done()
+		end
+	end
+
+	state killrobber begin
+		when letter begin
+			setskin(NOWINDOW)
+		    makequestbutton( locale.MAIN_QUEST_TITLE_DICT[16] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[16] )
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."抓住奸細1"..locale.NORMAL_COLOR)
+			say("從白蓮黨, 取得證據物")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."抓住奸細1"..locale.NORMAL_COLOR)
+			say("從白蓮黨, 取得證據物")
+		end
+		when 394.kill or 393.kill or 392.kill or 391.kill or 301.kill or 302.kill or 303.kill or 304.kill begin
+			if number( 1 , 10 ) == 1 then 
+				pc.give_item2( 30129 , 1 )
+				say(locale.NOTICE_COLOR.."抓住奸細1"..locale.NORMAL_COLOR)
+				say( locale.MAIN_QUEST_LV16_1[2] )
+				say("跟警備隊長對話")
+				setstate(gotoboss2)
+				q.done()
+			end
+			
+		end	
+	end
+	state gotoboss2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[16] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[16])
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."抓住奸細1"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."抓住奸細1"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when __TARGET__.target.click begin
+			if pc.count_item("30129") < 1 then
+				target.delete("__TARGET__")
+				
+				say("請你去幫忙調查一下白蓮黨")	
+				setstate( killrobber )
+				q.done()
+			else
+				pc.give_exp2( 40000 )
+				set_quest_state("levelup","run")
+				pc.change_money( 5000 )
+				target.delete("__TARGET__")
+	    		---                                                   l
+				say("警備隊長:")
+				say("你找到證據了嗎? 看!  ~~")
+				say("這就是機密資料")
+				say("好的, 機密資料會幫助抓住奸細.")
+				say("因為您的功勞, 我們國家避免了一次危機.")
+				say("非常感謝你")
+				say("這是我們給你的報酬, 請接受它吧")
+				say("您先休息一下吧")
+				say("")
+				say(locale.NOTICE_COLOR.."任務報酬"..locale.NORMAL_COLOR)
+		  		say_reward("經驗值".." 40000" )
+				say_reward("金錢".." 5000 兩")
+				pc.remove_item("30129")
+				setstate( gotoboss3 )
+				q.done()
+			end
+		end
+	end
+
+	-- 16-2 ? ????.
+	state gotoboss3 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[16] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[16])
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."抓住奸細2"..locale.NORMAL_COLOR)
+			--say("跟警備隊長對話")
+			say("警備隊長有事情找你, 快去找他吧.")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."抓住奸細2"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say( locale.MAIN_QUEST_LV16_2[1] )
+			say(locale.NOTICE_COLOR.."任務完成時候, 可以獲得報酬"..locale.NORMAL_COLOR)
+		    say_reward("經驗值".." 60000" )
+			setstate( gotoeulduji )
+			q.done()
+		end
+	end
+	state gotoeulduji begin
+		when letter begin
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找老學究")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[16] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[16])
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."抓住奸細2"..locale.NORMAL_COLOR)
+			say("跟老學究對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."抓住奸細2"..locale.NORMAL_COLOR)
+			say("跟老學究對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say( locale.MAIN_QUEST_LV16_2[2] )
+			setstate( gotoboss4 )
+			q.done()
+		end
+	end
+	state gotoboss4 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[16] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[16])
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."抓住奸細2"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."抓住奸細2"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when __TARGET__.target.click begin
+			pc.give_exp2( 60000 )
+			set_quest_state("levelup","run")
+			target.delete("__TARGET__")
+			say( locale.MAIN_QUEST_LV16_2[3] )
+			say(locale.NOTICE_COLOR.."報酬"..locale.NORMAL_COLOR)
+		    say_reward("經驗值".." 60000" )
+			say_reward("獲得了" ..item_name(50037).."")
+			pc.give_item2(50037)
+			pc.give_item2(50724,3)
+			pc.give_item2(50723,3)
+			say_reward("獲得了草藥物品")
+			
+			setstate( gotoboss5 )
+			q.done()
+		end
+	end
+	--進入到16-3.
+	state gotoboss5 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[16] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[16])
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."抓住奸細3"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."抓住奸細3"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say( locale.MAIN_QUEST_LV16_3[1] )
+			
+			say(locale.NOTICE_COLOR.." 任務完成時候, 可以獲得報酬 "..locale.NORMAL_COLOR)
+		    say_reward("經驗值".." 200000" )
+			say_reward("金錢".." 10000 兩")
+			say_reward("物品"..item_name(30031).."1個" )
+			say_reward("物品"..item_name(30018).."1個" )
+			setstate( gotomusition )
+			q.done()
+		end
+	end
+	state gotomusition begin
+		when letter begin
+			local v=find_npc_by_vnum(20017)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找樂師")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+		    makequestbutton( locale.MAIN_QUEST_TITLE_DICT[16] )
+			q.set_title("去找樂師")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."抓住奸細3"..locale.NORMAL_COLOR)
+			say("跟樂師對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."抓住奸細3"..locale.NORMAL_COLOR)
+			say("跟樂師對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say( locale.MAIN_QUEST_LV16_3[2] )
+			setstate( gotobalso )
+			q.done()
+		end
+	end
+	state gotobalso begin
+		when letter begin
+			local v=find_npc_by_vnum(20020)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找老海盜")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+		    makequestbutton( locale.MAIN_QUEST_TITLE_DICT[16] )
+			q.set_title("去找老海盜")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."抓住奸細3"..locale.NORMAL_COLOR)
+			say("跟老海盜對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."抓住奸細3"..locale.NORMAL_COLOR)
+			say("跟老海盜對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say( locale.MAIN_QUEST_LV16_3[3] )
+			setstate( gotoboss6 )
+			q.done()
+		end
+	end
+	state gotoboss6 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[16] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[16])
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."抓住奸細3"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."抓住奸細3"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say( locale.MAIN_QUEST_LV16_3[4] )
+			setstate( killrobber2 )
+			q.done()
+		end
+	end
+	state killrobber2 begin
+		when letter begin
+			setskin(NOWINDOW)
+		    makequestbutton( locale.MAIN_QUEST_TITLE_DICT[16] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[16] )
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."抓住奸細3"..locale.NORMAL_COLOR)
+			say("剷除白蓮域首  ")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."抓住奸細3"..locale.NORMAL_COLOR)
+			say("剷除白蓮域首")
+		end
+		when 394.kill begin
+			say(locale.NOTICE_COLOR.."抓住奸細3"..locale.NORMAL_COLOR)
+			say( locale.MAIN_QUEST_LV16_3[5] )
+			say("跟警備隊長對話")
+			setstate(gotoboss7)
+			q.done()
+		end	
+	end
+	state gotoboss7 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[16] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[16])
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."抓住奸細3"..locale.NORMAL_COLOR)
+			--say("跟警備隊長對話")
+			say("找到了敵人的主要人物 .")
+			say("去找警備隊長.")
+			say("他會給你找到的詳細資料.")
+			say("任務完成時候, 可以獲得金錢和經驗值,")
+			say("還有可以獲得玩具和紅色紮.")
+			say_item(item_name(30031),30031,"")
+			say_item(item_name(30018),30018,"")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."抓住奸細3"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when __TARGET__.target.click begin
+			pc.give_exp2( 200000 )
+			set_quest_state("levelup","run")
+			pc.change_money( 10000 )
+			pc.give_item2( 30031 ,1 ) 
+			pc.give_item2( 30018 ,1 ) 
+			target.delete("__TARGET__")
+			setstate( __COMPLETE__ )
+			
+
+			say( locale.MAIN_QUEST_LV16_3[6] )
+			
+			say("[ENTER]")	
+			say(locale.NOTICE_COLOR.."報酬"..locale.NORMAL_COLOR)
+		    say_reward("經驗值".." 200000" )
+			say_reward("金錢".." 10000 兩")
+			say_reward("物品"..item_name(30031).."1個" )
+			say_reward("物品"..item_name(30018).."1個" )
+
+			clear_letter()
+			set_quest_state("main_quest_lv27", "run")
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			pc.setqf("complete",1)
+		end
+	end
+end

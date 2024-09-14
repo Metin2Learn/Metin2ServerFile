@@ -1,0 +1,54 @@
+quest skill_reset2 begin
+    state start begin
+
+	when oldwoman.chat."屬性點初級化" begin
+	    local cost = 10000 + pc.level * 4000
+	    local s = 0
+
+	    local STAT_RESET_SAY1=
+	    "您來找我.[ENTER]"..
+	    "我可以看的出來您現在的煩惱.[ENTER][ENTER]"..
+	    "現在我初級化您們的狀態.[ENTER]"..
+	    "但是初級化您的狀態之後,[ENTER]"..
+	    "會有不好的影響.[ENTER]"
+	    local STAT_RESET_SAY2=
+	    "您想知道這個為什麼嗎?[ENTER]"..
+	    "還是您要做狀態初級化呢?[ENTER]"..
+	    "初級化狀態是需要 "..cost.." 兩.[ENTER]"
+	    say(STAT_RESET_SAY1)
+	    wait()
+	    say(STAT_RESET_SAY2)
+	    s = select("先聽說明.", "初級化.", "不初級化.")
+	    if s==1 then
+		local STAT_RESET_DETAIL_SAY1=
+		"從現在開始不好處的理由.[ENTER]"..
+		"到現在您等級上升的時候,[ENTER]"..
+		"生命力跟精神力會隨機增加[ENTER]"..
+		"再說, 生命力跟精神力[ENTER]"..
+		"平均以上增加過的.[ENTER]"
+
+		local STAT_RESET_DETAIL_SAY2=
+		"現在初級化您的狀態的意思是[ENTER]"..
+		"您會放棄您已經得到的幸運.[ENTER]"..
+		"當然會比以前好很多,[ENTER]"..
+		"還有可能比以前差很多.[ENTER][ENTER]"..
+		"您還要初級化狀態嗎?[ENTER]"..
+		"初級化狀態是需要 "..cost.." 兩.[ENTER]"
+
+		say(STAT_RESET_DETAIL_SAY1)
+		wait()
+		say(STAT_RESET_DETAIL_SAY2)
+		s = select("初級化.", "不初級化.")+1
+	    end
+
+	    if s == 2 then
+		if pc.money < cost then
+		    say(locale.oldwoman.not_enough_money)
+		else
+		    pc.changegold(-cost)
+		    pc.reset_point()
+		end
+	    end
+	end
+    end
+end

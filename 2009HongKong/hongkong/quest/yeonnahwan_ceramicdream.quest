@@ -1,0 +1,315 @@
+quest yeonnahwan_ceramicdream begin
+	state start begin
+		when yeonnahwan.chat."詢問有關陶瓷" begin
+			local LOCALE_say=
+			"制陶人:[ENTER]"..
+			"我很用心去製作陶瓷???? ?? ?? ?? ????.[ENTER]"..
+			"你知道嗎? [ENTER]"..
+			"所以如果很用心去做的話, 陶瓷的聲音會很好聽. [ENTER]"..
+			"那就是制陶人的心血所換來的聲音. [ENTER]"
+			say(LOCALE_say)
+		end
+
+		when warehouse_keeper.chat."打聽一下製作陶瓷的消息" with pc.level>=locale.yeonnahwan.start_level_begin and pc.level<=locale.yeonnahwan.start_level_end and number(1, locale.yeonnahwan.start_probability)==1 begin
+			local START_say1=
+			"倉庫老人 : [ENTER]"..
+			"最近老學究 [ENTER]"..
+			"他找到非常特別的陶瓷製作方式 [ENTER]"..
+			"所以製陶人非常高興 [ENTER]"..
+			"如果你有空的話, 去找製陶人吧. [ENTER]"..
+			"他正在為了找材料, 所以需要有些人的幫忙. [ENTER]"..
+			say(START_say1) 
+
+			setstate(order)
+			makequestbutton(locale.yeonnahwan.find_yeonnahwan_label)
+			q.set_title(locale.yeonnahwan.find_yeonnahwan_label)
+			q.start()
+		end
+	end
+	state order begin
+		when login begin
+			setskin(NOWINDOW)
+			makequestbutton(locale.yeonnahwan.find_yeonnahwan_label)
+			q.set_title(locale.yeonnahwan.find_yeonnahwan_label)
+			q.start()
+		end
+		when button begin
+			say(locale.yeonnahwan.find_yeonnahwan_text)
+		end
+		when info begin
+			say(locale.yeonnahwan.find_yeonnahwan_text)
+		end
+
+		when yeonnahwan.chat."我來這裡因為倉庫老人的介紹"  begin
+			local ORDER_say1=
+			"製陶人 :[ENTER]"..
+			"喔喔! 你來了! [ENTER]"..
+			"你正在找人, 還好你出現了, [ENTER]"..
+			local ORDER_say2=
+			"製陶人 :[ENTER]"..
+			"我想告訴你我這個朋友找到[ENTER]"..
+			"最高級陶瓷的製作方法 [ENTER]"..
+			"你能不能去找找他, 問問他關於這個方法?[ENTER]"..
+			"我的腿不太舒服, 所以我沒有方法自己去.[ENTER]"
+			local ORDER_accept=
+			"我知道這是個簡單的事情."
+			local ORDER_refuse=
+			"阿~ 我不知道陶瓷在哪……."
+			local ORDER_accept_answer=
+			"製陶人 :[ENTER]"..
+			"快點去找他吧.[ENTER]"..
+			"呵呵. 你是一個很謹慎的人."
+			local ORDER_refuse_answer=
+			"製陶人 :[ENTER]"..
+			"你去嘗試一下找他吧~[ENTER]"..
+			"你幫幫我好嗎.[ENTER]"
+			local ORDER_2accept=
+			"知道了, 那我試試去找他吧"
+			local ORDER_2refuse=
+			"唉~ 我現在可是沒有時間.."
+			local ORDER_2accept_answer=
+			"製陶人 :[ENTER]"..
+			"嗯~ 那好吧.[ENTER]"..
+			"年輕的時候, 辛苦算什麼[ENTER]"..
+			"快點去找他, 然後回來吧"
+			local ORDER_2refuse_answer=
+			"製陶人 :[ENTER]"..
+			"我說了!~ 我沒有時間[ENTER]"..
+			"我知道了, 你沒有時間, 你還想說什麼呢.[ENTER]"..
+			"你不要太不好意思了.[ENTER]" 
+			say(ORDER_say1)
+			wait()
+			say(ORDER_say2)
+			local s=select(ORDER_accept, ORDER_refuse)
+			if 1==s then
+				say(ORDER_accept_answer)
+				setstate(find)
+				makequestbutton(locale.yeonnahwan.find_eulduji)
+				q.set_title(locale.yeonnawhan.find_eulduji)
+			else
+				say(ORDER_refuse_answer)
+				local s2=select(ORDER_2accept, ORDER_2refuse)
+				if 1==s2 then
+					say(ORDER_2accept_answer)
+					setstate(find)
+				else
+					say(ORDER_2refuse_answer)
+				end
+			end
+		end
+	end
+	state find begin
+		when login begin
+			setskin(NOWINDOW)
+			makequestbutton(locale.yeonnahwan.find_eulduji)
+			q.set_title(locale.yeonnawhan.find_eulduji)
+			q.start()
+		end
+		when button begin
+			say(locale.yeonnahwan.find_eulduji_text)
+		end
+		when info begin
+			say(locale.yeonnahwan.find_eulduji_text)
+		end
+		when yeonnahwan.chat." 詢問有關陶瓷" begin
+			local FIND_ask=
+			"製陶人 :[ENTER]"..
+			"在這裡的陶瓷, 只有可以參觀[ENTER]"..
+			"請不要觸碰. [ENTER]"..
+			"如果不小心的話, 很容易會弄壞. [ENTER]"
+			say(FIND_ask)
+		end
+		when eulduji.chat."問問新陶瓷製作法" begin
+			local FIND_buildorder1=
+			"老學究 : [ENTER]"..
+			"嗯? 你來這裡想問問新陶瓷的製作方法? [ENTER]"..
+			"哈哈! 你想聽我研究的結果?[ENTER]"..
+			"我可以慢慢說給你聽. [ENTER]"
+
+			local FIND_buildorder2=
+			"老學究 : [ENTER]"..
+			"你知不知道鬼牙?[ENTER]"..
+			" 它跟一般動物的牙齒不一樣[ENTER]"..
+			"鬼牙有很豐富的鐵, 他們的牙齒很黃[ENTER]"..
+			"這個不是因為他們不刷牙, 而是因為有很多鐵質在裡面, 所以顏色比較黃.[ENTER]"..
+			"使用很珍貴的鬼黃金槽牙, 如果去打磨的話, 可以製作陶瓷.[ENTER]"..
+			"還有鬼牙可以製作出陶瓷著色用釉子[ENTER]"..
+			"然後塗抹在上面, 就會產生一個最好的陶瓷[ENTER]"..
+
+			local FIND_buildorder3=
+			"怎麼樣? 很棒吧! [ENTER]"..
+			"你一定感覺我很厲害, 很崇拜我吧! [ENTER]"..
+			"嗯? 哈哈哈哈哈哈哈![ENTER]"..
+			"你會拿去老學究最好的製作方法![ENTER]"
+
+			say(FIND_buildorder1)
+			wait()
+			say(FIND_buildorder2)
+			wait()
+			say(FIND_buildorder3)
+			setstate(order2)
+			makequestbutton(locale.yeonnahwan.report_label)
+			q.set_title(locale.yeonnahwan.report_label)
+		end
+	end
+	state order2 begin
+		when login begin
+			setskin(NOWINDOW)
+			makequestbutton(locale.yeonnahwan.report_label)
+			q.set_title(locale.yeonnahwan.report_label)
+			q.start()
+		end
+		when button begin
+			say(locale.yeonnahwan.report_text)
+		end
+		when info begin
+			say(locale.yeonnahwan.report_text)
+		end
+
+		when yeonnahwan.chat."關於陶瓷製作方法" begin
+			local ORDER2_say1=
+			"製陶人 :[ENTER]"..
+			"那這樣阿! [ENTER]"..
+			"鬼牙跟鬼黃金槽牙有那樣的效能……![ENTER]"
+			local ORDER2_say2=
+			"製陶人 :[ENTER]"..
+			"我想找那2個東西, [ENTER]"..
+			"你已經來了這裡 [ENTER]"..
+			"你可以幫我找到那2個東西嗎? [ENTER]"..
+			"我會給你很好的報酬[ENTER]"
+			local ORDER2_accept=
+			"我知道了, 我會的!"
+			local ORDER2_refuse=
+			"我的能力還不夠殺死鬼族."
+			local ORDER2_accept_answer=
+			"製陶人 :[ENTER]"..
+			"謝謝, 你可以從一般的鬼族得到鬼牙[ENTER]"..
+			"比較容易可以找到[ENTER]"..
+			"但是, 鬼族的 鬼黃金槽牙 你最少鏟除鬼族將軍[ENTER]"..
+			"你一定要記得不要忘記了喔.[ENTER]"
+			local ORDER2_refuse_answer=
+			"製陶人 :[ENTER]"..
+			"我已經知道你的能力不足[ENTER]"..
+			"快點取得多一些的力量, 將來再來幫我吧[ENTER]"
+
+			say(ORDER2_say1)
+			wait()
+			say(ORDER2_say2)
+
+			local s=select(ORDER2_accept, ORDER2_refuse)
+			if 1==s then
+				say(ORDER2_accept_answer)
+				setstate(accept)
+				makequestbutton(locale.yeonnahwan.kill_unggwi)
+				q.set_title(locale.yeonnahwan.kill_unggwi)
+			else
+				say(ORDER2_refuse_answer)
+			end
+
+		end
+	end
+	state accept begin
+		when login begin
+			setskin(NOWINDOW)
+			makequestbutton(locale.yeonnahwan.kill_unggwi)
+			q.set_title(locale.yeonnahwan.kill_unggwi)
+			q.start()
+		end
+		when button begin
+			say(locale.yeonnahwan.kill_unggwi_text)
+		end
+		when info begin
+			say(locale.yeonnahwan.kill_unggwi_text)
+		end
+
+		when jinunggwi_janggun.kill begin
+
+			local kill_count=pc.getqf("kill_count")
+			pc.setqf("kill_count", kill_count+1)
+
+			chat("cur kill"..kill_count)
+			chat("pc lv"..pc.level)
+			chat("end lv"..locale.yeonnahwan.end_level)
+			chat("dst kill"..locale.yeonnahwan.kill_count)
+			chat("find"..pc.getqf("find"))
+			chat("item name"..locale.yeonnahwan.event_item)
+			chat("item count"..pc.countitem(locale.yeonnahwan.event_item))
+
+			local end_level=locale.yeonnahwan.end_level
+			local dst_kill_count=locale.yeonnahwan.kill_count
+
+			local giveup_say=
+			locale.NOTICE_COLOR..
+			"回去城市[ENTER]"..
+			locale.NORMAL_COLOR..
+			"這件事我感覺對製陶人非常抱歉[ENTER]"..
+			"但是, 鏟除多一些貴族也沒有什麼作用[ENTER]"..
+			"我還是先回去城市比較好[ENTER]"
+			local giveup_label=locale.yeonnahwan.failure_giveup_label
+			local pickup_say=
+			locale.NOTICE_COLOR..
+			"砍材人的金斧"..
+			locale.NORMAL_COLOR..
+			"找到砍材人的金斧.[ENTER]"..
+			"回去城市交還給他[ENTER]"
+
+			if pc.getqf("find")==0 then
+				chat("找到")
+				if pc.level>end_level then
+					chat("等級超過")
+					if kill_count>dst_kill_count then
+						chat("數量超過")
+						say(giveup_say)
+						setstate(failure)
+						makequestbutton(giveup_label)
+						q.set_title(giveup_label)
+					end
+				else
+					chat("應用等級")
+					if number(1, dst_kill_count)==1 then
+						chat("確率成功")
+						chat("獲得")
+						say(pickup_say)
+						pc.setqf("find", 1)
+					end
+				end
+			end
+
+		end
+
+		when yeonnahwan.chat."無法尋找物品." with pc.countitem(locale.yeonnahwan.event_item1_name)<locale.yeonnahwan.event_item2_count or pc.countitem(locale.yeonnahwan.event_item2_name)<locale.yeonnahwan.event_item2_count  begin
+			local ACCEPT_working=
+			"製陶人 :[ENTER]"..
+			"你這樣玩, 什麼時候才會開始找我想要的物品? [ENTER]"..
+			"除了你, 很多人也想做這個任務[ENTER]"..
+			"快點去找吧![ENTER]"
+			say(ACCEPT_working)
+		end
+		when yeonnahwan.chat."你找到了!" with pc.countitem(locale.yeonnahwan.event_item1_name)>=locale.yeonnahwan.event_item2_count or pc.countitem(locale.yeonnahwan.event_item2_name)>=locale.yeonnahwan.event_item2_count  begin
+			local ACCEPT_thanx=
+			"製陶人 :[ENTER]"..
+			"這樣應該夠吧, 辛苦你了.[ENTER]"..
+			"現在我會開始製作陶瓷![ENTER]"..
+			"阿~ 這個給你, 這是我對你表示的一點感謝[ENTER]"..
+			"那我先告辭了..[ENTER]"
+			say(ACCEPT_thanx)
+			setstate(complete)
+			q.done()
+		end
+	end
+	state failure begin
+
+	end
+	state complete  begin
+		when yeonnahwan.chat."問問有關陶瓷" begin
+			local COMPLETE_say=
+			"製陶人:[ENTER]"..
+			"阿!~ 你是在說這個瓶子嗎? 是不是一個非常漂亮的顏色? [ENTER]"..
+			"因為乾淨而且整潔的顏色是最好的[ENTER]"
+			say(COMPLETE_say)
+		end
+	end
+end
+	
+
+

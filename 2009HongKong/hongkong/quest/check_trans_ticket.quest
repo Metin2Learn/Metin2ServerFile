@@ -1,0 +1,66 @@
+-------------------------------------
+--Metin2 Premium Zone Pass Quest
+------------------------------------
+quest check_trans_ticket begin
+	state start begin
+		when login or levelup with pc.level >0 begin
+			set_state(zone_enter)
+		end
+	end
+		
+	state zone_enter begin
+		when 20088.chat."通行審查" begin
+			say("")
+			say(""..mob_name(20088).."")
+			say("噢! 有人來探索這個秘密宮殿呢.")
+			say("我負責守衛著結界..")
+			say("所有怪物都看不到我..")
+			say("先讓我看看您的通行證吧.")
+			say("")
+			wait()
+			say("")
+			say("")
+			if pc.get_premium_remain_sec(PREMIUM_EXP) > 0 then
+				say("")
+				say("噢噢..您具備條件了.")
+				say("進去吧.")
+				say("只要您是國家的一份子")
+				say("就能出入無阻..")
+				wait()
+				pc.warp(704100,464100)
+				return
+			end
+			
+			if pc.count_item(71095)>0 then
+				say("")
+				say(""..mob_name(20088).."")
+				say("您竟帶著通行證明書啊!")
+				say("")
+				pc.remove_item(71095)
+
+				char_log(0,"GO_SPIDER2","USE_ITEM(71095)")
+			elseif pc.count_item(71096) >0 then
+				say("")
+				say(""..mob_name(20088).."")
+				say("您竟帶著通行證明牌啊!")
+				say("")
+				
+				char_log(0,"GO_SPIDER2","USE_ITEM(71096)")
+			else
+				say("")
+				say(""..mob_name(20088).."")
+				say("您需要一張通行證.")
+				say("沒有通行證, 我不能讓您進去.")
+				return
+			end
+				
+			say("嗯.. 跟我來吧.")	
+			wait()
+			pc.warp(704100, 464100)
+			
+		end
+
+	end
+
+end
+

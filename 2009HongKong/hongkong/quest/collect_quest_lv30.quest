@@ -1,0 +1,306 @@
+----------------------------------------------------
+--COLLECT QUEST_lv30
+--METIN2 Collect Quest  
+----------------------------------------------------
+quest collect_quest_lv30  begin
+	state start begin
+		when login or levelup with pc.level >= 30 and pc.level <= 90 begin
+			set_state(information)
+		end	
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20084)
+			if v != 0 then
+				target.vid("__TARGET__", v, "生物學者梁柏年")
+			end
+			send_letter("生物學者梁柏年的請求")
+		end
+
+		when button or info begin
+			say_title("生物學者梁柏年的請求")
+			say("")
+			say("老學究的學生生物學者梁柏年")
+			say("正在找您.")
+			say("請您去找他問問有什麼事情可以幫他.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20084.chat."請您聽聽我的話吧." begin
+			target.delete("__TARGET__")
+			say("生物學者梁柏年:")
+			---                                                   l
+			say("唉呀~!!! 請您幫我的忙吧...")
+			say("我正在寫一本書關於帝國內各種怪物...")
+			say("現在我取得的資料不足...")
+			say("我應該自己去找資料才對, 但是...")
+			say("我只是一個學者, 所以沒有能力做得到...")
+			say("請您幫我的忙好嗎?")
+			say("我可以給您好的報酬 ~!")
+			wait()
+			say("生物學者梁柏年:")
+			say("我最近調查關於在昇龍谷居住的鬼族.")
+			say("您也應該聽過 傳說鬼族的鬼牙")
+			say("可以折斷鐵..")
+			say("所以我正在研究關於鬼牙..")
+			say("研究後我懷疑")
+			say("鬼族和我們人類是同一個血統..")
+			say("如果取得 鬼牙 的話, 我能研究事實真相..")
+			say("")
+			wait()
+			say("生物學者梁柏年")
+			say("從今天開始您可以幫我拿取最上級的")
+			say("鬼牙, 好嗎?.")
+			say("但是我無法接受不好狀態的鬼牙")
+			say("請您體諒一下..")
+			say("為了研究, 我需要 10個 鬼牙...")
+			say("拜託您~!")
+			say("")																																						  
+			set_state(go_to_disciple)
+			pc.setqf("duration",0)  -- 可以試試的時間
+			pc.setqf("collect_count",0) -- —取得過的物品數量
+			pc.setqf("drink_drug",0) -- — 喝迷惑藥水的話 1
+		end
+	end
+
+	state go_to_disciple begin
+		when letter begin
+			send_letter("生物學者梁柏年的研究")
+			
+		end
+		when button or info begin
+			say_title("我想取得鬼族的鬼牙")
+			---                                                   l
+			say("")
+			say("老學究的學生生物學者梁柏年")
+			say("正在調查在昇龍谷居住的鬼族.")
+			say("懷疑 鬼族和人類是同一個血統..")
+			say("取得 鬼牙 的話, 可以研究事實真相.")
+			say("取得 鬼牙後請給生物學者梁柏年.")
+			say("")
+			say_item_vnum(30006) 
+			say_reward("  現在取得了".." "..pc.getqf("collect_count").."個")
+			say("")
+		end
+		
+		when 71035.use begin --迷惑藥水
+			if get_time() < pc.getqf("duration") then
+				say("")
+				say("還不可以使用迷惑藥水")
+				say("")
+				return
+			end
+			if pc.getqf("drink_drug")==1 then
+				say("")
+				say("已經使用了1次")
+				say("")
+
+				return
+			end
+			if pc.count_item(30006)==0 then
+				say("生物學者梁柏年:")
+				say("先找到鬼牙以後, ")
+				say("才使用迷惑藥水也不會有問題.")
+				say("")
+				return
+			end
+			item.remove()	
+			pc.setqf("drink_drug",1)
+		end
+
+
+
+		
+    	when 20084.chat."你取得了鬼牙嗎? " with pc.count_item(30006) >0   begin
+			if get_time() > pc.getqf("duration") then
+				say("生物學者梁柏年")
+				---                                                   l
+				say("哦!! 您已經取得了...")
+				say("我馬上看看...")
+				say("請您等我一下...")
+				say("")
+				pc.remove_item("30006", 1)
+				pc.setqf("duration",get_time()+60*60*22) -----------------------------------22??
+				wait()
+				
+				local pass_percent
+				if pc.getqf("drink_drug")==0 then
+					pass_percent=60
+				else		
+					pass_percent=90
+				end
+				
+				local s= number(1,100)
+				if s<= pass_percent  then
+				   if pc.getqf("collect_count")< 9 then     --10個以下 
+						local index =pc.getqf("collect_count")+1 
+						pc.setqf("collect_count",index)     --取得一個時 +1 
+						say(pass_percent)
+						say("生物學者梁柏年:")
+						say("哦哦~!! 這是最上級呀. 辛苦您了...")
+						say("從現在您需要取得".." "..10-pc.getqf("collect_count").. " 個吧~!!")
+						say("麻煩您了~!")
+						say("")
+						pc.setqf("drink_drug",0)	 --藥水初始化
+						return
+					end
+					say("生物學者梁柏年:")
+					say("您10個都取得了啊!!")
+					say("那樣的話, 現在您需要取得最後的物品")
+					say("真鬼族靈魂石1 個.")
+					say("您能做得到吧?")	
+					say("為了取得真鬼族靈魂石, 您要剷除鬼族.")
+					say("")
+					pc.setqf("collect_count",0)
+					pc.setqf("drink_drug",0)	
+					pc.setqf("duration",0) 
+					set_state(key_item)
+					return
+				else								
+				say("生物學者梁柏年:")
+				say("唉....這個上面傷痕太多...")
+				say("不好意思, 這個不能使用..")
+				say("再找一個好嗎?")
+				pc.setqf("drink_drug",0)	 --藥水初始化
+				return
+				end
+	    else
+		  say("生物學者梁柏年:")
+		  say("唉呀~我這次不能接受, 不好意思....")
+		  say("因為我還沒有完成之前的研究. ")
+		  say("很抱歉...下次再給我好嗎?")
+		  say("")
+		  return
+		end
+
+	end
+end
+
+
+	state key_item begin
+		when letter begin
+			send_letter("生物學者梁柏年的研究")
+			
+			if pc.count_item(30220)>0 then	
+				local v = find_npc_by_vnum(20084)
+				if v != 0 then
+					target.vid("__TARGET__", v, "生物學者梁柏年")
+				end
+			end
+
+		end
+		when button or info begin
+			if pc.count_item(30220) >0 then
+				say_title("獲得 真鬼族靈魂石")
+				say("")
+				---                                                   l
+				say("終於取得了 真鬼族靈魂石")
+				say("去找生物學者梁柏年給他 真鬼族靈魂石")
+				say("")
+				return
+			end
+			say_title("需要 真鬼族靈魂石")
+			say("")
+			---                                                   l
+			say("為了生物學者梁柏年的研究")
+			say("交給他 鬼牙 10 個")
+			say("最後需要的東西是 真鬼族靈魂石!")
+			say_item_vnum(30220)----------- 真鬼族靈魂石
+			say("去找生物學者梁柏年給他 真鬼族靈魂石")
+			say("從鬼族可以取得 真鬼族靈魂石.")
+			say("")
+		end
+		
+
+	
+		when 635.kill or
+			 636.kill or 
+			 637.kill  begin
+			local s = number(1, 500)
+			if s == 1 and pc.count_item(30220)==0 then
+				pc.give_item2(30220, 1)
+				send_letter("獲得 真鬼族靈魂石")		
+			end	
+		end
+	
+		when __TARGET__.target.click  or
+			20084.chat."拿過來了 真鬼族靈魂石" with pc.count_item(30220) > 0  begin
+		    target.delete("__TARGET__")
+			say("生物學者梁柏年:")
+			say("哦哦~!!! 辛苦了..")
+			say("為了報答您, 我會提升您的內功..")
+			say("我給您提升內功的藥方")
+			say("帶這個資料去找醫生...")
+			say("他可以幫您製作藥物..")
+			say("那好吧. 路上小心~!")
+			say("因為您的幫忙, 我現在很了解鬼族了 ~!")
+			say("")
+			pc.remove_item(30220,1)
+			set_state(__reward)
+		end
+		
+	end
+	
+	state __reward begin
+		when letter begin
+			send_letter("生物學者梁柏年的報酬")
+			
+			local v = find_npc_by_vnum(20018)
+			if v != 0 then
+				target.vid("__TARGET__", v, "醫生")
+			end
+
+		end
+		when button or info begin
+			say_title("取得 生物學者梁柏年的報酬")
+			---                                                   l
+			say("為了 生物學者梁柏年的鬼族研究")
+			say("取得了 鬼牙10個和 真鬼族靈魂石.")
+			say("生物學者梁柏年給您報酬: ")
+			say("提升內功的藥方")
+			say("為了取得藥物, 請您去找醫生.")
+			say("")
+		end
+		
+		when __TARGET__.target.click  or
+			20018.chat."看看藥方好嗎"  begin
+		    target.delete("__TARGET__")
+			say("醫生:")
+			say("我先看看..")
+			say("您說 生物學者梁柏年 寄給我的藥方嗎?")
+			say("哦...可以增加您的移動速度+10")
+			say("這裡給您, 您拿去使用吧~")
+			say("")
+			say_reward("幫忙 生物學者梁柏年的結果")
+			say_reward("取得了 移動速度+10 的效果.")
+			say_reward("這效果可以永遠使用.")
+			
+			affect.add_collect(apply.MOV_SPEED, 10, 60*60*24*365*60) --60年	
+			
+			clear_letter()
+			set_quest_state("collect_quest_lv40", "run")
+			set_state(__complete)
+		end
+			
+	end
+
+	
+	state __giveup__ begin
+		when 20084.chat."您想再試試嗎?" begin
+			say("生物學者梁柏年:")
+			say("您想再試試吧!")
+			say("哦 ~ 那樣的話...非常好 ~")
+			say("麻煩您...再登入好嗎? ")
+			say("您必須要再登入才可以再做任務.")
+			say("那等一下見.~")
+	     end
+	 end
+	state __complete begin
+	end
+end
+
+
+
+

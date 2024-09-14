@@ -1,0 +1,32 @@
+quest manwoo begin
+    state start begin
+	when 9009.chat."漁夫的任務通知" with game.get_event_flag("manwoo")>0 begin
+	    say_title("漁夫的任務")
+	    say("")
+
+	    say("今天，您只要拿 " .. game.get_event_flag("manwoo") .. " 條小鯉魚給我，")
+	    say("便可以交換到不知名的箱子。")
+	    say("")
+
+	    say("打開不知名的箱子，")
+	    say("會有讓您驚喜的禮物.")
+	    say("")
+	end
+	when 9009.chat." 把小鯉魚換成不知名的箱子" with game.get_event_flag("manwoo")>0 and pc.countitem(27802) >= game.get_event_flag("manwoo") begin
+	    local count = pc.countitem(27802)
+	    local need = game.get_event_flag("manwoo")
+	    say_title("漁夫的任務")
+	    say("")
+
+	    say("我會交換到不知名的箱子。")
+	    say("")
+
+	    say_reward("獲得不知名的箱子!")
+	    pc.removeitem(27802, need)
+	    pc.give_item2(50033, 1)
+
+	    say("")
+	end
+    end
+end
+

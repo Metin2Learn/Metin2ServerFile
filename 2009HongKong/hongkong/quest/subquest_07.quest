@@ -1,0 +1,238 @@
+--SUB QUEST
+-- LV 12
+-- 最好的料理書
+----------------------------------------------------
+
+quest subquest_7 begin
+	state start begin
+		when login or levelup with pc.level >= 12 and pc.level <= 17 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+					
+			local v = find_npc_by_vnum(20008)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "分支任務7 最好的料理書")
+			end
+		end
+
+		
+		when __TARGET__.target.click or
+			20008.chat."最好的料理書" with pc.level >= 12 begin
+			target.delete("__TARGET__")
+
+			say("孫老闆 :")
+			say("嗯嗯~ 您認識書蟲嗎?")
+			say("對~ 天天只看書, 那個人就是書蟲.")
+			say("我聽過他有很好的料理書")
+			say("您去問問好嗎?.")
+			say("我聽過那本書上")
+			say("有非常珍貴料理的做法.")
+			say("")
+			local s=select("接受.","拒絕.")
+			if 2==s then
+				say("您想放棄任務嗎? ?")
+				local a=select("是","不是")
+				if  2==a then
+					say("孫老闆:")
+					say("唉 ~ 您說您太忙?")
+					say("那好的, 下次再來吧.")
+					return
+				end
+				say("我真想拿到那本料理書. .. ")
+				say("知道了 ~ 那再見了. ")
+				set_state(__GIVEUP__)
+				return
+			end
+
+			say("孫老闆:")
+			say("謝謝了, 謝謝." )
+			say("路上小心.")
+			say("")
+			set_state(ask_to_sunyugil)
+
+
+		end
+	end
+
+	state ask_to_sunyugil begin
+		when letter begin
+			send_letter("最好的料理書")
+		end
+
+		when letter begin
+			local v=find_npc_by_vnum(20023)
+			if 0== v then
+			else
+				target.vid("__TARGET__",v,"詢問書蟲")
+			end
+
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."最好的料理書"..locale.NORMAL_COLOR)
+			say("取問問書蟲關於最好的料理書")
+			say("")
+		end
+
+		when __TARGET__.target.click or 
+			20023.chat."關於料理書" begin
+			target.delete("__TARGET__")
+			say("書蟲 :")
+			say("嗯嗯嗯嗯... 嗯? 阿~ 您來找我有什麼事情嗎?")
+			say("料理書? 我有啊~.")
+			say("這個對我來說, 這個沒有用的書我會給您.")
+			say("但是, 下次我看書的時候請不要打擾我!")
+			say("")
+
+			set_state(back_to)
+		end
+	end
+
+	state back_to begin
+		when letter begin
+			send_letter("最好的料理書")
+			
+			local v=find_npc_by_vnum(20008)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v," 交還給孫老闆料理書")
+			end
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."最好的料理書"..locale.NORMAL_COLOR)
+			say("交還給孫老闆料理書")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20008.chat." 這料理書.." begin
+			target.delete("__TARGET__")
+			say("孫老闆 :")
+			say("哼哼~ 這就是很好的料理書.")
+			say("嗯~ 這個好像非常珍貴的書.")
+			say("我非常想做這個菜...")
+			say("")
+			wait()
+
+			say("好的, 您幫我找有些東西好嗎.")
+			say("其他的材料我都有")
+			say("但是, 我需要飢餓雪狼的腸子.")
+			say("這是比較難得到的材料.")
+			say("請您去找吧, 拜託您了~")
+			say_item_vnum("30026")
+			say("")
+			say("")
+			local s=select("接受.","拒絕.")
+			if 2==s then
+				say("您想放棄任務嗎? ?")
+				local a=select("是","不是")
+				if  2==a then
+					say("孫老闆:")
+					say("我很想做這個料理…")
+					say("您有空的話, 再來找我吧!")
+					say("")
+					return
+				end
+				say("唉 ~ 我怎麼拿到這個材料呢 ~ ")
+				say("知道了 ~ 再見了")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("孫老闆:")
+			say("謝謝了. 我早知道您會幫我的忙. ")
+			say("我們取得材料後, 我會請您吃飯. ")
+			say("")
+			set_state(hunt_for_oku)
+		end
+	end
+
+	state hunt_for_oku begin
+		when letter begin
+			send_letter("最好的料理書")
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."最好的料理書"..locale.NORMAL_COLOR)
+			say("為了孫老闆去找飢餓雪狼的腸子.")
+			say_item_vnum("30026")
+			say("")
+		end
+		
+		when 176.kill begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30026")==0  then
+				pc.give_item2("30026", 1)
+				local v=find_npc_by_vnum(20008)
+				if 0==v then
+				else
+					target.vid("__TARGET__",v," 回去找孫老闆")
+				end
+			end	
+		end
+			
+		when __TARGET__.target.click or
+			20008.chat."取得了料理材料" begin
+			target.delete("__TARGET__")
+			if pc.count_item("30026") >= 1 then
+				say("孫老闆 :")
+				say("嗯嗯~ 謝謝您了, 因為您的幫忙.")
+				say("我可以製作最好的料理")
+				say("")
+				pc.remove_item("30026")
+				pc.give_exp2(12000)
+				set_quest_state("levelup","run")
+				pc.change_money(5000)
+				pc.give_item2("30028", 1)
+
+				say_reward("獲得經驗值 12000.")
+				say_reward("獲得金錢 5000 兩.")
+				say_reward("獲得灰狼的指甲.")
+				say("")
+				
+				clear_letter()	
+				set_state(__COMPLETE__)
+				return
+				
+			end
+			say("孫老闆 :")
+			say("唉呀~ 料理的材料還是不夠..")
+			say("快點去找吧")
+			say("")
+			local s=select("再試試","放棄.")
+			if 2==s then
+				say("您想放棄任務嗎? ?")
+				local a=select("是","不是")
+				if  2==a then
+					say("孫老闆:")
+					say("好像比較容易找到, 但其實不太簡單. ")
+					say("所以很多人放棄過.")
+					say("哎呀 ..")
+					say("下次有機會的話, 再來找我吧. ")
+					return
+				end
+				say("孫老闆:")
+				say("我很想做這個料理… ")
+				say("怎麼也好 ~  路上小心.")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("孫老闆:")
+			say("謝謝了..")
+			say("我佩服您的勇氣. ")
+			say("")
+		end
+	end
+	state __GIVEUP__ begin
+	end
+	
+	state __COMPLETE__ begin
+	end
+end
+

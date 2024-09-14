@@ -1,0 +1,8 @@
+quest blacksmith begin
+    state start begin
+	when blacksmith.chat."§Ú·Q§ï¨}" begin
+	    say(locale.blacksmith.refine_info)
+	end
+    end
+end
+

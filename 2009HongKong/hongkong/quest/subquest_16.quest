@@ -1,0 +1,289 @@
+----------------------------------------------------
+-- SUB QUEST
+-- LV 25
+-- 去找鐵甲騎兵的痕跡
+----------------------------------------------------
+
+quest subquest_16 begin
+	state start begin
+		when login or levelup or enter with pc.level >= 25 and pc.level <= 30 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20355)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "分支任務16 去找鐵甲騎兵的痕跡")
+			end
+		end
+
+		
+		when __TARGET__.target.click or
+			20355.chat." 鐵甲騎兵的痕跡" with pc.level >= 25 begin
+			target.delete("__TARGET__")
+
+			say("警備隊長 :") 
+			say("我要給你新任務.")
+			say("找資料關於以前大陸統一的主要軍隊,")
+			say("[鐵甲騎兵]")
+			say("鐵甲騎兵擁有很強的機動力, 還擁有很強的攻擊力")
+			say("他們是對其他國家是很強的威脅.")
+			say("")
+			wait()
+
+			say("警備隊長 :") 
+			say("所以我們要找到他們的資料")
+			say("使用為了強化我們的力量.") 
+			say("首先去找樂師.") 
+			say("他應該找到很多資料.")
+			say("")
+			local s=select("接受","拒絕")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("警備隊長 :")
+					say("那下次再見了")
+					return
+				end
+				say("警備隊長 :")
+				say("唉~ 鐵甲騎兵的資料什麼時候可以找到呢!!")
+				say("路上小心, 再見了")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("警備隊長 :")
+			say("謝謝了.. 好好保重")
+			say("")
+			set_state(ask_to_youhwan)
+		
+
+		
+		end
+	end
+
+	state ask_to_youhwan begin
+		when info or button begin
+			say(locale.NOTICE_COLOR.."關於鐵甲騎兵"..locale.NORMAL_COLOR)
+			say("")
+			say("警備隊長說鐵甲騎兵的資料")
+			say("可以從樂師取得")
+			say("去找樂師問一問")
+			say("有關鐵甲騎兵的資料.")
+			say("")			
+		end
+
+		when letter begin
+			send_letter("關於鐵甲騎兵")
+			
+			local v=find_npc_by_vnum("20017")
+			if 0== v then
+			else
+				target.vid("__TARGET__",v," 去找樂師")
+			end
+		end
+
+		when 20017.chat." 鐵甲騎兵的資料" begin
+			target.delete("__TARGET__")	
+			say("樂師 : ")
+			say("玫瑰阿玫瑰我愛你~")
+			say("你又來了, 唉呀你一直都在打擾我.")
+			say("這次有什麼事? 鐵甲騎兵?")
+			say("你為什麼要知道那麼恐怖嚇人的事情?")
+			say("")
+			wait()
+
+			say("樂師 : ")
+			say("對了, 為了三國統一需要做成最強的軍隊")
+			say("這應該就是最快能夠統一國家的方法. ")
+			say("鐵甲騎兵就是都穿著鐵甲的騎馬隊")
+			say("他們的特徵是防禦力以及非常快的移動力.")
+			say("以前他們是最高級的軍隊, 可以說跟怪物一樣強.")
+			say("大部分的國家, 在鐵甲騎兵的面前")
+			say("都會不戰而敗.")
+			say("")
+			wait()
+
+			say("樂師 : ")
+			say("現在, 如果鐵甲騎兵在重新組成的話")
+			say("其他國家不會跟他們對戰. ")
+			say("為了組成鐵甲騎兵需要很強的鐵甲和")
+			say("很艱難的軍隊訓練.")
+			say("對這個事情, 鐵算盤跟老學究應該很清楚")
+			say("去找他們問問詳細的資料.")
+			say("阿拉拉~ 拉拉拉拉拉~ 玫瑰玫瑰~")
+			say("")
+			set_state(ask_to_hengsang)
+		end
+	end
+
+	state ask_to_hengsang begin
+		when letter begin
+			send_letter("關於鐵甲騎兵")
+
+			local v=find_npc_by_vnum("20010")
+			if 0== v then
+			else
+				target.vid("__TARGET1__",v,"鐵算盤")
+			end	
+		end
+		
+		when info or button begin
+			say(locale.NOTICE_COLOR.."關於鐵甲騎兵"..locale.NORMAL_COLOR)
+			say("樂師知道關於鐵甲騎兵的的事情")
+			say("鐵算盤和老學究有甲騎兵的的資料")
+			say("首先去找鐵算盤的鐵甲騎兵資料")
+			say("")			
+		end
+		
+		
+		when 20010.chat."鐵甲騎兵的資料" begin
+			target.delete("__TARGET1__")
+			say("鐵算盤 : ")
+			say("你來找我有什麼事?")
+			say("原來生意也不太好, ")
+			say("因為惡運石現在的生意非常差")
+			say("吃的方面也有問題...")
+			say("鐵甲騎兵的鐵甲?")
+			wait()
+
+			say("鐵算盤 : ")
+			say("那是很特別的方法製作過的鐵甲")
+			say("最高等級鐵甲中的一個. ")
+			say("劍和弓箭也不能輕易破壞它")
+			say("非常恐怖的鐵甲, 當然它很重而且很難活動")
+			say("所以, 最高級的士兵才可以使用")
+			say("")
+			wait()
+
+			say("鐵算盤 : ")
+			say("當時做成鐵甲騎兵的時候,")
+			say("他們花了很多軍事經費.")
+			say("最近有人使用惡運石製做鐵甲")
+			say("如果我們使用這個新裝備的話...")
+			say("我們可以再製作鐵甲騎兵")
+			say("這應該不是夢想, 是會實現的.")
+			say("")
+			wait()
+
+			say("鐵算盤 : ")
+			say("唉呀~ 我說的太多了.")
+			say("我現在應該要走了.")
+			say("")
+			set_state(ask_to_euldo)
+		end
+	end
+	state ask_to_euldo begin
+		when letter begin
+			local v=find_npc_by_vnum("20011")
+			if 0== v then
+			else
+				target.vid("__TARGET1__",v,"老學究")
+			end
+
+			send_letter("關於鐵甲騎兵")
+		end
+
+		when info or button begin
+			say("")
+			say(locale.NOTICE_COLOR.."關於鐵甲騎兵"..locale.NORMAL_COLOR)
+			say("確定了鐵算盤有鐵甲騎兵的資料")
+			say("現在你去找旁邊的城市裡的")
+			say("老學究, 他有鐵甲騎兵的資料" )
+			say("你去確定一下.")
+			say("")			
+		end
+		
+		
+		
+		when 20011.chat."鐵甲騎兵的資料" begin
+			target.delete("__TARGET1__")
+			say("老學究 : ")
+			say("哈哈~ 你再來找我有什麼事情嗎?")
+			say("鐵甲騎兵? 我當然知道. ")
+			say("在這個大陸, ")
+			say("有誰不知道鐵甲騎兵的事情呢?")
+			say("我可以說鐵甲騎兵是歷史上最強的軍隊.")
+			say("")
+			wait()
+
+			say("老學究 : ")
+			say("鐵甲騎兵他們會變成最強的軍隊的理由是")
+			say("非常艱難訓練過程, ")
+			say("通過了才可能成為鐵甲騎兵.")
+			say("如果我們現在使用這個訓練過程,")
+			say("不知道有多少人可以通過...")
+			say("")
+			wait()
+			
+			say("老學究 : ")
+			say("詳細的訓練過程, 我可以給你, 你看看吧.")
+			say("但是我有點猶豫, 現在是戰爭中, ")
+			say("但是我們真的需要組成這個軍隊嗎?.")
+			say("")
+			set_state(ask_to_guard)
+		end
+	end
+
+	state ask_to_guard begin
+		when info or button begin
+			say(locale.NOTICE_COLOR.."關於鐵甲騎兵"..locale.NORMAL_COLOR)
+			say("確定了鐵甲騎兵的大部分資料")
+			say("去找警備隊長報告所有的資料")
+			say("")			
+		end
+		
+		when letter begin
+			send_letter("關於鐵甲騎兵")
+
+			local v=find_npc_by_vnum("20355")
+			if 0== v then
+			else
+				target.vid("__TARGET__",v,"鐵甲騎兵")
+			end
+		end
+
+		when 20355.chat." 關於鐵甲騎兵的報告" begin
+			target.delete("__TARGET__")
+			say("警備隊長  : ")
+			say("怎麼樣, 你取得了重要的資料嗎?")
+			say("哈哈~ 你取得了這麼多的資料. ")
+			say("這就是鐵甲騎兵的秘密")
+			say("嗯嗯.")
+			say("")
+			wait()
+			
+			say(" 警備隊長  : ")
+			say("為了我們國家, 三國統一")
+			say("這可以是很重要的資料.")
+			say("這次你真的辛苦了.")
+			say("你應該很累了吧~ 去休息一下吧.")
+			say("")
+			wait()
+
+			say("警備隊長  : ")
+			say("唉呀~ 真的辛苦你了.")
+			say("為了取得這個資料你用了很常時間")
+			say("我給你一些報酬")
+
+			pc.give_exp2(150000)
+			 set_quest_state("levelup","run")
+			pc.give_item2("30034", 1)
+			
+			say_reward("獲得經驗值 150000.")
+			say_reward("獲得 白色紮.")
+			say("")
+			
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+	end
+end

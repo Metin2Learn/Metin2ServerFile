@@ -1,0 +1,239 @@
+--------------------------------------------------
+-- SUB QUEST 
+-- LV 47 
+-- 拯救陷入困難的伯樂 (馬夫) 
+----------------------------------------------------
+
+quest subquest_36 begin
+	state start begin
+		when login or levelup with pc.level >= 47 and pc.level <= 49 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20005)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "制陶人")
+			end
+		end
+
+                   
+        when __TARGET__.target.click or
+		    20005.chat."陷入困難的伯樂 (馬夫)" begin
+			target.delete("__TARGET__")
+			say("制陶人:")
+			say("我難得想請求你幫忙一件事情.")
+			say("我跟伯樂(馬夫)很熟.")
+			say("最近遇到了困難的事情 .")
+			say("因為戰爭馬是一直都需要的")
+			say("但是養馬受到了限制，很困難.")
+			say("")
+			wait()
+			say("制陶人:")
+			say("特別是馬多飼料少")
+			say("很是頭痛")
+			say("所以想請你幫忙找來餵馬的乾草")
+			say("除了你，沒有可以尋求幫助的合適的人.")
+			say("找來10個轉給伯樂(馬夫).")
+			say("告訴他是我叫你來的，他就明白了. ")
+			say("")
+			local s=select("接收.","拒絕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				
+				local a=select("是","否")
+				if 2==a then
+					say("制陶人:")
+					say("最近找馬的人很多")
+					say("養馬的人手不夠.")
+					say("飼料也快用完了")
+					say("這樣下去馬都快餓死了..")
+					say("那下次想起來再來吧")
+					say("")
+					return
+				end
+				say("制陶人:")
+				say("啊..馬得了營養失調")
+				say("要把它們救起來...")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end	
+			say("制陶人:")
+			say("不知能不能請你幫忙...")
+			say("最近飼料的供應")
+			say("也缺貨..")
+			say("希望能找來幼馬的飼料乾草.")
+			say("")
+			set_state(for_horse)
+		end	
+	end
+
+	
+ state for_horse begin
+	when letter begin
+	    send_letter("陷入困難的伯樂(馬夫)")
+		if 	pc.count_item(50054)>=10 then
+			local v=find_npc_by_vnum(20349)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "伯樂(馬夫)")
+			end
+		end
+
+	end
+	when button or info begin
+		if 	pc.count_item(50054)>=10 then
+	    	say_title("找到了幼馬的飼料乾草")
+			say("給因缺少飼料而陷入困難的")
+			say("伯樂(馬夫)帶去")
+			say("10個乾草吧!")
+			say("")
+			return
+		end
+		
+		say_title("找初級飼料乾草!")
+	    say("")
+		say("跟制陶人很好朋友的伯樂(馬夫)")
+		say("因缺少飼料而陷入困難.")
+		say("找來餵馬的乾草10個")
+		say("帶給伯樂(馬夫).")
+		say("可通過打獵取乾草.")
+		say("")
+	end
+--------------------------------------------------------------------------------------------------去那裡找乾草!!!
+
+	
+	when 20349.chat."幫助伯樂(馬夫)" with pc.count_item(50054) ==0 or   pc.count_item(50054) < 10 begin
+	    say("伯樂(馬夫):")
+	   	say("看來是受制陶人的委託來的吧.")
+		say("聽說過你了.")
+		say("我們的馬得了營養失調")
+	    say("要救活它們!!!")
+	    say("請幫幫忙")
+		say("")
+	    local s=select("繼續進行","放棄")
+	    if 1==s then
+			say_pc_name()
+			say("對別人的約定很重要")
+			say("而且也許是由我來騎這些馬呢..")
+			say("無論如何要拯救起來!")
+			say("")
+			return
+			
+	    else
+			say_pc_name()
+			say("對不起，本來想盡努力去拯救的..")
+			say("看來我的能力有限")
+			say("")
+			wait()
+			say("伯樂(馬夫):")
+			say("很是期待了，怎麼可以...")
+			say("也是，本來是我該做的事情，托給別人做， ")
+			say("是我的錯..但是")
+			say("也請你再考慮一下")
+			say("")
+			say("帝國的觀察台裡有我認識的人")
+			say("有很大的權力..")
+			say("如果能幫我，會給你幫助的..")
+
+			local s=select("重新挑戰","放棄")
+			if 1==s then
+				say_pc_name()
+				say("不是我向權力低頭")
+				say("是真心想幫助")
+				say("")
+				return
+			
+			elseif 2==s then
+				say_pc_name()
+				say("我不能向權力低頭.")
+				say("是很想幫忙")
+				say("但是也不能割嫩草弄幹...")
+				say("是我的能力有限.")
+				say("")
+				set_state(__GIVEUP__)
+			end
+	    end
+	end
+	
+
+	
+	when __TARGET__.target.click or 
+		20349.chat."轉達幼馬飼料乾草" with pc.count_item(50054)>=10 begin
+		target.delete("__TARGET__")
+	    say("伯樂(馬夫):")
+	    say("")
+		say("看來是受制陶人的委託來的吧.")
+		say("這麼快找到乾草了?")
+		say("啊! 謝謝了.")
+		say("因為缺少馬的飼料")
+		say("所以跟制陶人提起過")
+		say("他說會有辦法解決.")
+		say("沒想到這麼爽快地解決了.")
+		say("真是感謝你的幫助. ")
+		say("")
+		say_reward("獲得經驗值 1800000 ")
+		pc.give_exp2(1800000)
+       set_quest_state("levelup","run")
+
+		pc.remove_item(50054,10)	
+		set_state(OLD_MAN_DONE)
+	end
+  end
+
+  state OLD_MAN_DONE begin
+	when letter begin
+			send_letter("回到制陶人那裡!")
+			local v=find_npc_by_vnum(20005)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "制陶人")
+			end
+
+		end
+	when button or info begin
+		say_title("回到制陶人那裡")
+		say("")
+		say("回到制陶人那裡向他報告")
+		say("已向伯樂(馬夫)轉達了10個乾草")
+		say("") 
+	end
+	when __TARGET__.target.click or
+		20005.chat."乾草轉達完畢!" begin
+		target.delete("__TARGET__")
+		say("制陶人")
+		say("噢~")
+		say("成功了啊!")
+		say("是不好找到的，真是謝謝了")
+		say("為表感謝的心意給你小的禮物")
+		say("")
+		say_reward("接到任務執行書")
+		
+		local s=number(1,3)
+		if 1>=s then
+			pc.give_item2(50318)
+		elseif 2>=s then
+			pc.give_item2(50319)
+		elseif 3>=s then
+			pc.give_item2(50320)
+		end	
+		pc.give_item2(50726,5)
+		pc.give_item2(50728,5)
+		say_reward("獲得了草藥物品")
+		set_state(THEEND)
+		clear_letter()
+		
+	end
+end
+    state THEEND begin
+		when enter begin
+			q.done()
+		end
+	end
+	state __GIVEUP__ begin
+    end
+end

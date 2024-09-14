@@ -1,0 +1,131 @@
+quest reset_scroll begin
+    state start begin
+		when 71002.use begin
+			---                                                   l
+			say_title("屬性初始化秘笈")
+			say("這個文件可以幫你忘掉所有的事情.") 
+			say("屬性和技能都可以初始化, 但是無法恢復.")
+			say("初始化後, 去找職業教官. ")
+			say("你可以重新選擇職業.")
+			say("")
+			say("你想初始化嗎?")
+			say("")
+
+			local s = select("是", "不是")
+			if 2 == s then
+				return
+			end
+
+			say_title("屬性初始化秘笈: 確定")
+			say("使用技能書或著魂石修練的技能")
+			say("到達最高等級以上都可以初始化,")
+			say("但是無法恢復.")
+			say("你確定初始化嗎?")
+			say("")
+
+			local c = select("是", "不是")
+			if 2 == c then
+				return
+			end
+
+			char_log(0, "RESET_ALL", "USE_ITEM(71002)")
+			pc.remove_item(71002)
+
+			char_log(0, "RESET_ALL", "RESET_STAT_POINTS")
+			pc.reset_point()
+
+			char_log(0, "RESET_ALL", "RESET_SKILL_POINTS")
+			pc.clear_skill()
+			pc.set_skill_group(0)
+			char_log(0, "RESET_ALL", "RESET_END")
+		end
+
+		when 71003.use begin
+
+			---                                                   l
+			say_title("技能初始化秘笈")
+			say_reward("使用17點, 一個技能可以上升到最高等級.")
+			say_reward("無論技能到達最高時使用多少技能點.")
+			say_reward("也只可以獲得17點重新分配.")
+
+			local result = BuildSkillList(pc.get_job(), pc.get_skill_group())
+
+			local vnum_list = result[1]
+			local name_list = result[2]
+
+			if table.getn(vnum_list) < 2 then
+				say("現在沒有技能可以初始化.")
+				say("")
+				return
+			end
+
+			say("請選擇想初始化的技能.")
+			say("")
+
+			local i = select_table(name_list)
+
+			if table.getn(name_list) == i then
+				return
+			end
+
+			local name = name_list[i]
+			local vnum = vnum_list[i]
+
+			say_title("技能初始化秘笈")
+			say_reward("使用17點, 一個技能可以上升到最高等級.")
+			say_reward("無論技能到達最高時使用多少技能點.")
+			say_reward("也只可以獲得17點重新分配.")
+			say(string.format("你要初始化技能 %s 嗎?", name))
+			say("")
+
+			local s = select("是", "不是")
+			if 2 == s then
+				return
+			end
+
+			say_title("技能初始化秘笈")
+			say("初始化的技能無法恢復.")
+			say("你還是要初始化嗎?")
+			say("")
+
+			local c = select("是", "不是")
+
+			if 2 == c then
+				return
+			end
+
+			--
+			--local val = pc.getqf("force_to_master_skill")
+			--if val > 0 then
+				---                                                   l
+			--	say_title("技能初始化秘笈: 警告!")
+			--	say("你以前已經使用過技能初始化. ")
+			--	say("所以現在應用17點最高等級的效果的狀態. ")
+			--	say("這效果無法重複.")
+			--	say("")
+			--	say_reward("使用技能初始化秘笈之前")
+			--	say_reward("技能先必須要取得最高等級")
+			--	say("")
+			--	return
+			--end
+
+			char_log(0, "RESET_ONE_SKILL", "USE_ITEM(71003)")
+			pc.remove_item(71003)
+
+			char_log(0, "RESET_ONE_SKILL", string.format("RESET_SKILL[%s]", name))
+			pc.clear_one_skill(vnum)
+
+			char_log(0, "RESET_ONE_SKILL", "APPLY_17MASTER_BONUS")
+			pc.setqf("force_to_master_skill", 1)
+
+			say_title("技能初始化秘笈: 使用完成")
+			say(string.format("%s 技能初始化完成.", name))
+			say("")
+
+			---                                                   l
+			say_reward("使用17點可以把一個技能上升到最高等級.")
+			say("")
+		end
+	end
+end
+

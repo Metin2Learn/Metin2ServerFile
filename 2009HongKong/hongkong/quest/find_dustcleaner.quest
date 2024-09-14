@@ -1,0 +1,199 @@
+quest find_dustcleaner begin
+	state start begin
+		when 9006.chat."開始對話" with is_test_server() and number(1, 10)==1 and pc.countitem("30027")<1 and pc.level>=12 and pc.level<=22 begin
+			say("咳咳咳")
+			say("最近天天咳嗽, 真的好辛苦")
+			say("沒有掃,所以不能打掃家里的灰塵")
+			say("家里的衛生越來越差…哎呀哎呀.")
+			say("嗯? 位什麼我沒有掃呢?")
+			say("我的好兒子為了改良自己的武器.")
+			say("把我的掃給拿走了")
+			say("這樣的孩子, 不是我的兒子, 他是我的敵人!")
+			say("")
+			local b=select("在什麼地方可以取得掃呢?", "呵呵~ 這是一個很調皮的孩子.")
+			if 1==b then
+				say("我的老公生前會用 灰狼的毛+ 來製作掃")
+				say("但是已經很久以前的事情了, 已經不太清楚怎麼做了.")
+				say("咳咳咳~")
+				say("")
+				say("可以幫幫這個可憐的老人家去找")
+				say("去找灰狼的毛+ ?")
+				local b=select("答應", "拒絕")
+				if 1==b then
+					say("灰狼的毛+ 是很難取得的")
+					say("但是她咳嗽的那麼厲害!")
+					say("去幫助這個可憐的老人, 這是勇士的一種義務!")
+					say("")
+					setstate(find)
+				elseif 2==b then
+					say("連掃也沒有的老人.")
+					say("應該不會給我報酬?")
+					say("還是不要理會她比較好")
+					say("")
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state find begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("去找 灰狼的毛+ ")
+			q.set_title("去找 灰狼的毛+ ")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 去找 灰狼的毛+ "..locale.NORMAL_COLOR)
+			say("為了那個咳嗽很厲害的老人, 幫她製作掃")
+			say("去找做掃的材料, 灰狼的毛+ ")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 去找 灰狼的毛+"..locale.NORMAL_COLOR)
+			say("為了那個咳嗽很厲害的老人, 幫她製作")
+			say("去找做掃的材料, 灰狼的毛+ ")
+		end
+		when 9006.chat."交還灰狼的毛+" with pc.countitem("30070")>=1 begin
+			say("你是之前的那位勇士嗎?")
+			say("你問我的咳嗽怎麼樣? 咳咳咳.")
+			say("你看看~ 跟以前一樣, 家里的衛生還是不好.")
+			say("咳咳咳")
+			say("")
+			say("嗯? 可以使用這個來打掃嗎?")
+			say("你真是一個大好人阿~")
+			say("請你在這裡等我一下")
+			wait()
+			say("哎呀 哎呀 哎呀.")
+			say("可以幫幫我好嗎?")
+			say("唉唷~ 謝謝你啦, 這是擺放在家里很久的東西.")
+			say("我覺得你應該需要這樣東西")
+			say("我把這樣東西送給你")
+			say("我不是因為你幫我打掃而給你的禮物, 不要誤會了喔")
+			say("路上小心~ ")
+			setstate(reward)
+		end
+	end
+	state reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("獲得 神迷物體")
+			q.set_title("獲得 神迷物體")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."獲得 神迷物體"..locale.NORMAL_COLOR)
+			say("取得到一樣外觀看上去像垃圾一樣的東西")
+			say("為了知道是什麼東西, 好好清理了一下這個東西")
+			if pc.countitem("30070")>=1 then
+				pc.removeitem("30070", 1)
+				local s=number(1, 3)
+				if 1>=s then -- 33.33% (1/3)
+					say("發現了一個很殘舊的盔甲, 但是看上去還可以使用")
+					say("今天是我幸運的一天!")
+					local r=number(1, 16)
+					if r==1 then
+						pc.give_item2("11204", 1)
+					elseif r==2 then
+						pc.give_item2("11214", 1)
+					elseif r==3 then
+						pc.give_item2("11404", 1)
+					elseif r==4 then
+						pc.give_item2("11414", 1)
+					elseif r==5 then
+						pc.give_item2("11604", 1)
+					elseif r==6 then
+						pc.give_item2("11614", 1)
+					elseif r==7 then
+						pc.give_item2("11804", 1)
+					elseif r==8 then
+						pc.give_item2("11814", 1)
+					elseif r==9 then
+						pc.give_item2("11203", 1)
+					elseif r==10 then
+						pc.give_item2("11213", 1)
+					elseif r==11 then
+						pc.give_item2("11403", 1)
+					elseif r==12 then
+						pc.give_item2("11413", 1)
+					elseif r==13 then
+						pc.give_item2("11603", 1)
+					elseif r==14 then
+						pc.give_item2("11613", 1)
+					elseif r==15 then
+						pc.give_item2("11803", 1)
+					elseif r==16 then
+						pc.give_item2("11813", 1)
+					end
+				elseif 2>=s then -- 33.33% (1/3)
+					say("發現了一個很殘舊的盔甲, 但是看上去還可以使用")
+					say("但是是一款非常普通的盔甲.")
+					local r=number(1, 16)
+					if r==1 then
+						pc.give_item2("11202", 1)
+					elseif r==2 then
+						pc.give_item2("11212", 1)
+					elseif r==3 then
+						pc.give_item2("11402", 1)
+					elseif r==4 then
+						pc.give_item2("11412", 1)
+					elseif r==5 then
+						pc.give_item2("11602", 1)
+					elseif r==6 then
+						pc.give_item2("11612", 1)
+					elseif r==7 then
+						pc.give_item2("11802", 1)
+					elseif r==8 then
+						pc.give_item2("11812", 1)
+					elseif r==9 then
+						pc.give_item2("11201", 1)
+					elseif r==10 then
+						pc.give_item2("11211", 1)
+					elseif r==11 then
+						pc.give_item2("11401", 1)
+					elseif r==12 then
+						pc.give_item2("11411", 1)
+					elseif r==13 then
+						pc.give_item2("11601", 1)
+					elseif r==14 then
+						pc.give_item2("11611", 1)
+					elseif r==15 then
+						pc.give_item2("11801", 1)
+					elseif r==16 then
+						pc.give_item2("11811", 1)
+					end
+				elseif 3>=s then -- 33.33% (1/3)
+					say("跟他的希望不同, 那樣盔甲是")
+					say("好像廢品一樣的盔甲.")
+					local r=number(1, 8)
+					if r==1 then
+						pc.give_item2("11200", 1)
+					elseif r==2 then
+						pc.give_item2("11210", 1)
+					elseif r==3 then
+						pc.give_item2("11400", 1)
+					elseif r==4 then
+						pc.give_item2("11410", 1)
+					elseif r==5 then
+						pc.give_item2("11600", 1)
+					elseif r==6 then
+						pc.give_item2("11610", 1)
+					elseif r==7 then
+						pc.give_item2("11800", 1)
+					elseif r==8 then
+						pc.give_item2("11810", 1)
+					end
+				end
+			end
+			setstate(__COMPLETE__)
+			q.done()
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

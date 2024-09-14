@@ -1,0 +1,276 @@
+--------------------------------------------
+-- SUB QUEST 
+--LV 57
+--孫老闆 用青蛙後腿制作身體狀態 補品  
+---------------------------------------------
+quest subquest_26 begin
+	state start begin
+		when login or levelup with pc.level >= 57  and pc.level <= 59 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(9005)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "孫老闆")
+			end
+		end
+
+		when __TARGET__.target.click or
+			9005.chat."身體虛弱.." begin
+			target.delete("__TARGET__")
+			say("倉庫老人 :")
+			say("身體確實不如以前.")
+			say("年輕的時候連續一個星期熬夜幹活")
+			say("晚上也有體力喝酒...")
+			say("現在是，這樣站著都吃力")
+			say("這種時候，吃上一碗青蛙湯")
+			say("身體狀態能上升很多.")
+			say("")
+			wait()
+			say("倉庫老人 :")
+			say("你問那是甚麼? 別提了.")
+			say("只要吃一碗，跑一個星期的田野")
+			say("身體狀態也不會下降!")
+			say("孫老闆對熬青蛙湯有一手,")
+			say("最近一點都不想著熬湯.")
+			say("")
+
+			local s=select("去問孫老闆","還很忙..算了吧~")
+			if 2==s then
+				say("放棄任務嗎?")
+					local a=select("是","否")
+					if  2==a then
+						say("倉庫老人:")
+						say("年輕人很忙啊.")
+						say("下次想起來再來吧")
+						say("")
+						return
+					end	
+					say("倉庫老人:")
+					say("看來你..沒有身體狀態的煩惱")
+					say("已經夏天了，不想身體嗎?")
+					say("不要以後後悔啊~")
+					say("")
+					set_state(__GIVEUP__)
+					return
+			end					
+			say("倉庫老人:")
+			say("好!")
+			say("早就知道你會去找孫老闆的!")
+			say("呵呵")
+			say("找到後，不要自己吃，記得拿些給我~")
+			say("")
+			set_state(ask_okgu)
+
+		end
+	
+
+		end
+	state ask_okgu begin
+		when letter begin
+
+			send_letter("去找孫老闆 ")
+			
+			local v=find_npc_by_vnum(20008)
+			if 0==v then
+			else
+				target.vid("__TARGET1__", v, "孫老闆")
+			end
+
+		end
+
+		when info or button begin
+
+			say(locale.NOTICE_COLOR.." 去找孫老闆"..locale.NORMAL_COLOR)
+			say("問孫老闆有關青蛙湯 ")
+		end
+
+
+		when __TARGET1__.target.click or
+			20008.chat."青蛙湯?" begin
+			target.delete("__TARGET1__")
+			say("孫老闆 :")
+			say("噢，青蛙湯啊... 是啊，以前有一陣子做過.")
+			say("但是那是年輕的時候才可能的事情.")
+			say("那時候我是不怕怪物，隔天便")
+			say("去抓青蛙.")
+			say("")
+			wait("")
+			say("孫老闆 :")
+			say("但是現在呢?")
+			say("年紀也大了，沒有體力做那些活兒.")
+			say("我也恨不得吃青蛙湯提高體力,")
+			say("但是"..mob_name(1332).." 哪裡是好抓的怪物?")
+			say("如果你能找來"..mob_name(1332).." 的牛蛙後腿,")
+			say("我來做最高級的青蛙湯!")
+			say("")
+			local s=select("好，我來取回來.", "沒什麼興趣")
+			if 2==s then
+				say("放棄任務嗎?")
+					local a=select("是","不是")
+					if  2==a then
+						say("孫老闆:")
+						say("去啊裡要這麼忙啊?")
+						say("下次想起來再來吧")
+						say("")
+						return
+					end	
+					say("孫老闆:")
+					say("能吃到青蛙湯的機會不多啊!")
+					say("如果吃過我的青蛙湯，不會這樣的..呵呵")
+					say("再見")
+					say("")
+					set_state(__GIVEUP__)
+			return
+			end					
+			say("孫老闆:")
+			say("那辛苦你了!")
+			say("我做準備了")
+			say("")
+			set_state(accept)
+
+		end
+
+
+		end
+
+	state accept begin
+
+		when letter begin
+			if pc.count_item(30116)>0 then
+				send_letter("取到"..mob_name(1332).." 的牛蛙後腿")
+				
+				local v=find_npc_by_vnum(20008)
+				if 0==v then
+				else
+					target.vid("__TARGET__", v, "孫老闆")
+				end
+
+			return
+		  end 
+		  send_letter("取"..mob_name(1332).." 的牛蛙後腿")
+
+		end
+
+		when info or button begin
+			if pc.count_item(30116)>0 then
+
+				say(locale.NOTICE_COLOR.."取到"..mob_name(1332).." 的牛蛙後腿"..locale.NORMAL_COLOR)
+				say("")
+				say("捕獵"..mob_name(1332).." ，取到牛蛙後腿")
+				say("拿給孫老闆")
+				say("")
+				return
+			end
+			say(locale.NOTICE_COLOR.."捕獵"..mob_name(1332).." ，取牛蛙後腿"..locale.NORMAL_COLOR)
+			say("")
+			say("捕獵在密宗寺院的"..mob_name(1332).." ")
+			say("取"..mob_name(1332).." 的牛蛙後腿，拿給孫老闆")
+			say("")
+		end
+
+
+		when 20008.chat."還沒能取到" with pc.count_item(30116)==0  begin
+
+
+			say("孫老闆 :")
+			say("太想吃了.")
+			say("你知道嗎? 我年輕的時候")
+			say("一天能取十個以上"..mob_name(1332).." 的牛蛙後腿!")
+
+			local s=select("重新挑戰", "放棄")
+			if 2==s then
+				say("放棄任務嗎?")
+					local a=select("是","不是")
+					if  2==a then
+						say("孫老闆:")
+						say("這麼快累了?")
+						say("休息一會,再挑戰怎樣?")
+						return
+					end	
+					say("孫老闆:")
+					say("本來這個夏天想用青蛙湯解暑")
+					say("看來今年也不行了..")
+					say("再見")
+					set_state(__GIVEUP__)
+			return
+			end					
+			say("孫老闆:")
+			say("那辛苦你了!")
+			say("我來做準備")
+
+		end
+		
+		when 1332.kill begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30116")==0 then
+				pc.give_item2(30116, 1)
+				
+				if pc.count_item("30116")>=1 then
+					local v=find_npc_by_vnum(20008)
+					if 0 != v then
+						target.vid("__TARGET__",v,"去孫老闆那裡")
+					end
+				end 
+			end
+		end
+
+
+			
+		when __TARGET__.target.click or
+			20008.chat."噢! 做得好!" with pc.count_item(30116)>=1  begin
+			target.delete("__TARGET__")
+
+			say("孫老闆 :")
+			say("噢! 做得好!")
+			say("那現在就開始做了!")
+			say("來,吃吧.")
+			say("將有無窮的身體狀態!")
+			say("哈哈哈!")
+			say("")
+			wait()
+			say("孫老闆 :")
+			say("一定不要跟別人講")
+			say("有關青蛙湯.")
+			say("特別是倉庫老闆，更不行!")
+			say("本來就缺乏材料，如果知道熬了青蛙湯,")
+			say("馬上會來吃光光.")
+			say("")
+			pc.remove_item(30116,1)
+		
+			say_reward("獲得 50000兩 ")
+			pc.change_money(50000)
+
+			say_reward("獲得經驗值  5000000 ")
+			pc.give_exp2(5000000)
+			set_quest_state("levelup","run")
+			say_reward("獲得了草藥物品")
+			pc.give_item2(50727,5)
+			pc.give_item2(50728,5)
+			
+			local jewels = {17164,17184,17204}
+	   		local jewel = jewels[number( 1 ,3)]
+			pc.give_item2(jewel)
+			say_reward("獲得了" ..item_name(jewel).."")
+
+			clear_letter()
+			set_state(COMPLETE)
+
+		end
+	
+	end
+	
+	state __GIVEUP__ begin
+	end
+	state COMPLETE begin
+	end
+
+end
+
+	
+
+

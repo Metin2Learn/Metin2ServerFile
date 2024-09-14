@@ -1,0 +1,151 @@
+quest upgrade_refine_scroll begin
+    state start begin
+	when 20016.chat." 製作武神的祝福書" begin
+	    say("武神的祝福書是一樣非常神秘的物品")
+	    say("使用武神的祝福書 +0~+3的物品100%可以改良.")
+	    say("+4 以上的改良物品不能使用武神的祝福書.")
+
+	    if pc.count_item(70035)==0 then
+		say("如果想製作, 你必須要魔神之眼這個物品")
+		say("")
+		say_item("魔神之眼", 70035, "")
+		say_reward("需要魔神之眼這個物品.")
+		say("")
+		return	
+	    end
+
+	    if pc.count_item(25040)==0 then
+		say("為了製作需要永恆鑄件")
+		say("")
+		say_item("永恆鑄件", 25040, "")
+		say_reward("需要永恆鑄件這個物品.")
+		say("")
+		return
+	    end
+
+	    say("看上去你的材料已經足夠了")
+	    say("你想嘗試一下製作嗎?")
+	    say_title("製作是需要20萬.")
+	    say("")
+	    say_reward("在永恆鑄件上使用魔神之眼")
+	    say_reward("可以製作武神的祝福書")
+	    local s=select("好的", "不需要")
+	    if 1==s then
+		if pc.get_gold() < 200000 then
+		    say("你所帶的金錢不足!")
+		elseif pc.count_item(70035)>0 and pc.count_item(25040)>0 then
+		    pc.remove_item(70035)
+		    pc.remove_item(25040)
+		    pc.changegold(-200000)
+		    pc.give_item2(71021)
+		    say_title("武神的祝福書製作成功!")
+		    say("有魔神之眼很容易製作")
+		    say("武神的祝福書 成功了~ 哈哈哈")
+		    say("")
+
+		    say_item("武神的祝福書", 71021, "")
+		else
+		    say("製作中材料消失了,所以製作失敗.")
+		end
+	    end
+	end
+	when 20016.chat."製作龍神的祝福書" begin
+	    say("龍神的祝福書可以上升改良確率")
+	    say("龍神的祝福書是一樣非常神秘的物品")
+	    say("使用龍神的祝福書失敗改良物品的時候只會下降等級")
+	    say("龍神的祝福書就是永恆鑄件的強化版本")
+
+	    -- ?? ?? ??? ?? ?? ??? ?? ??? ??!
+	    if pc.count_item(71026)==0 then
+		say("如果想製作, 你必須要玄鐵這個物品")
+		say("")
+		say_item("玄鐵", 71026, "")
+		say_reward("需要玄鐵這個物品.")
+		say("")
+		return	
+	    end
+
+	    if pc.count_item(25040)==0 then
+		say("為了製作需要永恆鑄件")
+		say("")
+		say_item("永恆鑄件", 25040, "")
+		say_reward("需要永恆鑄件這個物品.")
+		say("")
+		return
+	    end
+
+	    say("看上去你的材料已經足夠了")
+	    say("你想嘗試一下製作嗎?")
+	    say_reward("在永恆鑄件上使用玄鐵")
+	    say_reward("可以製作龍神的祝福書")
+	    say("")
+	    local s=select("好的", "不需要")
+	    if 1==s then
+		if pc.count_item(71026)>0 and pc.count_item(25040)>0 then
+		    pc.remove_item(71026)
+		    pc.remove_item(25040)
+		    pc.give_item2(71032)
+		    say_title("龍神的祝福書製作成功!")
+		    say("有玄鐵很容易製作")
+		    say("龍神的祝福書 成功了~ 哈哈哈")
+		    say("")
+
+		    say_item("龍神的祝福書", 71032, "")
+		else
+		    say("製作中材料消失了,所以製作失敗.")
+		end
+	    end
+	end
+
+	when 20016.chat."製作高手指南針" begin
+		say("叫夜光石的礦石,你聽過了嗎?")
+		say("這是王鐵匠用了血汗而做出來的.")
+		say("如果你帶來了這礦石跟永恆鑄件,")
+		say("我可以幫你做高手指南針.")
+		say("功能跟龍神的祝福書差不多,但成功率比較高.")
+		say("")
+
+		if pc.count_item(71025) == 0 then
+			say("如果想製作, 你必須要夜光石這個物品")
+			say("")
+			say_item("夜光石", 71025, "")
+			say_reward("需要夜光石這個物品.")
+			say("")
+			return	
+		end
+
+		if pc.count_item(25040) == 0 then
+			say("為了製作需要永恆鑄件")
+			say("")
+			say_item("永恆鑄件", 25040, "")
+			say_reward("需要永恆鑄件這個物品.")
+			say("")
+			return
+		end
+
+		wait()
+
+		say("喔~ 原來你已經有了夜光石!")
+		say("所以你要不要製作高手指南針")
+		say("")
+
+		local s = select("好的", "不需要")
+		if 1 == s then
+			if pc.count_item(71025) > 0 and pc.count_item(25040) > 0 then
+				pc.remove_item(71025)
+				pc.remove_item(25040)
+				pc.give_item2(70039)
+				say_title("成功製作高手指南針!")
+				say("給你我們家的高手指南針.")
+				say("好好使用吧~ 哈哈哈")
+				say("")
+				say_item("高手指南針", 70039, "")
+			else
+				say("製作中材料消失了,所以製作失敗.")
+			end
+		end
+	end
+
+    end
+end
+

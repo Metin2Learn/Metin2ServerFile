@@ -1,0 +1,193 @@
+----------------------------------
+--	Main quest LV10
+--	警備隊長的教育
+----------------------------------
+
+quest main_quest_lv10 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter begin
+			if  pc.get_level() >= 10 then 				
+				setstate( gotoboss )		
+			end
+		end
+	end
+	state gotoboss begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[10] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[10])
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."警備隊長的教育"..locale.NORMAL_COLOR)
+			--say("去找警備隊長!")
+			say("請你去找警備隊長吧. ")
+			say("他會問你其他城市的")
+			say("一個人的消息.")
+			say("任務完成的時候,會獲得錢跟經驗值")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 警備隊長的教育"..locale.NORMAL_COLOR)
+			say("去找警備隊長!")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+	    	---                                                   l
+			say("警備隊長:")
+			say("今天是我跟你第一次見面.")
+			say("阿~ 我已經聽過教官說過. 他說你是一個很有潛力的新手.")
+			say("我不太清楚,以前的其他教官怎麼教導你.")
+			say("從現在開始你要做") 
+			say("很多不同的任務.")
+			say("")
+			wait()
+
+			say("你要做很多任務, 所以你一定好好準備.")
+			say("你知道三國的歷史嗎? ")
+			say("什麼!這麼基本的智識你也不知道?")
+			say("到底現在的教官教什麼呀!") 
+			say("還是我來重新教你吧?")
+			wait()
+
+			say("嗯. 但是這是你該知道的事情, 所以我給你簡單的說明")
+			say("原來, 三個國家是統一國家, 但是惡運石突然出現")
+			say("所以分離到三個國家.")
+			say("商業發展的新受國, 宗教國家的天調國")
+			say("還有軍事大國進勞國.")
+			say("")
+			wait()
+			say("各各國家現在從惡運石的出現後, 慢慢逐漸恢復起來")
+			say("所以他們都開準備想將大陸重新統一.")
+			say("你也要為了大陸統一努力阿!")
+			say("這是非常重要的事情, 你一定要記住.")
+			wait()
+
+			say("現在我要給你第一任務. ")
+			say("這是比較簡單的任務, 你不要太緊張.")
+			say("在其他城市有一位樂師.")
+			say("雖然他表面的身分是樂師")
+			say("但是他的真正的身分就是資料員")
+			say("我問過樂師有些文件")
+			say("你去找他交還給我那個文件吧.")
+			wait()
+
+			say("去找樂師的方法是按 M 鍵,")
+			say("看一看地圖後就可以見到有城市名字的傳送師")
+			say("您會移動到那個城市")
+			say("樂師拿著樂器, 體型看上去比較魁梧")
+			say_reward("任務完成獲得報酬")
+			say_reward("經驗值".."5000" )
+			say_reward("金錢".." 2000兩")
+			setstate( gotomusition )
+			q.done()
+		end
+	end
+
+	state gotomusition begin
+		when letter begin
+			local v=find_npc_by_vnum(20017)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找樂師")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+		    makequestbutton( locale.MAIN_QUEST_TITLE_DICT[10] )
+			q.set_title("去找樂師")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 警備隊長的教育"..locale.NORMAL_COLOR)
+			say("跟樂師對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 警備隊長的教育"..locale.NORMAL_COLOR)
+			say("跟樂師對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+	    	---                                                   l
+			say("樂師:")
+			say("人生無常, 人從哪裡來")
+			say("到底最後要到哪裡去呢?  這麼混亂的世界")
+			say("活著有什麼意義呢.")
+			say("你來這裡就是來聽我的音樂嗎?")
+			say("")
+			wait()
+
+			say("阿~ 警備隊長叫你來找我?")
+			say("噓~ 小聲一些, 不要讓其他人聽到.....")
+			say("")
+			say("在這個城市, 不可以讓其他人知道我的真正身分.")
+			say("警備隊長叫你來這裡找我")
+			say("證明了你是一個可信的人.")
+			say("給你資料文件")
+			say("你現在去交還給警備隊長.")
+			say("")
+			wait()
+
+			say("快點去吧,")
+			say("留下在這裡也沒有什麼特別的意思.")
+			say("人生無常, 我們要好好享受這短暫的人生.-")
+			setstate( gotoboss2 )
+			q.done()
+		end
+	end
+	state gotoboss2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[10] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[10])
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 警備隊長的教育"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 警備隊長的教育"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when __TARGET__.target.click begin
+			pc.give_exp2( 5000 )
+			set_quest_state("levelup","run")
+			pc.change_money( 2000 )
+			target.delete("__TARGET__")
+			say("警備隊長:")
+			say("哦! 就是這個文件, 您做的很好.")
+			say("我給您這個東西, 您繼續努力做好每件事情")
+			say("為了國家.")
+			say("")
+			say(locale.NOTICE_COLOR.."報酬"..locale.NORMAL_COLOR)
+		    say_reward("經驗值".."5000" )
+			say_reward("金錢".."2000兩")
+			clear_letter()
+			set_quest_state("main_quest_lv12", "run")
+			q.done()
+			setstate( __COMPLETE__ )
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+

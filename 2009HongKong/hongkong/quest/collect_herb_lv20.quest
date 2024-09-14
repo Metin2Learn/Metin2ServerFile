@@ -1,0 +1,174 @@
+----------------------------------------------------
+--MAKE HERB LV20
+--METIN2 Herb Quest  
+----------------------------------------------------
+quest make_herb_lv20  begin
+	state start begin
+		when login or levelup with pc.get_level() ==20  begin
+			set_state(information)
+		end	
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20084)
+			if v != 0 then
+				target.vid("__TARGET__", v, "生物學者梁柏年")
+			end
+			send_letter("生物學者梁柏年的研究")
+		end
+
+		when button or info begin
+			say_title("生物學者梁柏年的研究")
+			say("")
+			say("老學究的學生生物學者梁柏年")
+			say("正在找您.")
+			say("請您去找他問問有什麼事情可以幫他.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20084.chat."請您聽聽我的話吧." begin
+			target.delete("__TARGET__")
+			say("生物學者梁柏年:")
+			---                                                   l
+			say("唉呀~!!! 請您幫我的忙吧...")
+			say("我正在研究帝國內各種植物...")
+			say("研究植物方面太多事要做了")
+			say("都沒有空餘時間出外採摘植物..")
+			say("請您幫我的忙好嗎?")
+			say("我可以給您好的報酬 ~!")
+			wait()
+			say("生物學者梁柏年:")
+			say("最近我在研究的...")
+			say("就是石菖蒲...")
+			say("我要測試這個測試那個...")
+			say("需要多一點的石菖蒲...")
+			say("為了研究, 我需要 10個石菖蒲...")
+		   	say("請您幫幫我")
+			say("拜託您~!")
+			say("")																																						  
+			set_state(go_to_disciple)
+			pc.setqf("collect_count",0)--到現時為止所有物品數目
+			pc.setqf("drink_drug",0) --當喝了迷惑藥水 1
+		end
+	end
+
+	state go_to_disciple begin
+		when letter begin
+			send_letter("特別任務!收集草藥")
+			
+		end
+		when button or info begin
+			say_title("需要石菖蒲")
+			---                                                   l
+			say("")
+			say("老學究的學生生物學者梁柏年 ")
+			say("正在研究石菖蒲")
+			say("取得石菖蒲後請給生物學者梁柏年.")
+			say("石菖蒲可以在"..mob_name(182).."身上取得")
+			say("")
+			say_item_vnum(50705) 
+			say_reward("  現在取得了".." "..pc.getqf("collect_count").."個")
+			say("")
+		end
+		
+		when 71035.use begin --迷惑藥水
+
+			if pc.getqf("drink_drug")==1 then
+				say("")
+				say("已經使用了1次")
+				say("")
+
+				return
+			end
+			if pc.count_item(50705)==0 then
+				say("生物學者梁柏年:")
+				say("先找到石菖蒲以後,")
+				say("才使用迷惑藥水也不會有問題.")
+				say("")
+				return
+			end
+			item.remove()	
+			pc.setqf("drink_drug",1)
+		end
+
+
+		when 182.kill begin
+			if  pc.count_item(50705)< 10 - pc.getqf("collect_count")then
+				pc.give_item2(50705, 1)
+			end
+		end
+		
+    	when 20084.chat."你取得了石菖蒲嗎?" with pc.count_item(50705) >0   begin
+				say("生物學者梁柏年")
+				---                                                   l
+				say("哦!! 您已經取得了...")
+				say("我馬上看看...")
+				say("請您等我一下...")
+				say("")
+				pc.remove_item(50705, 1)
+				wait()
+				
+				local pass_percent
+				if pc.getqf("drink_drug")==0 then
+					pass_percent=80
+				else		
+					pass_percent=100
+				end
+				
+				local s= number(1,100)
+				if s<= pass_percent  then
+				   if pc.getqf("collect_count")< 9 then     --10個以下 
+						local index =pc.getqf("collect_count")+1 
+						pc.setqf("collect_count",index)     --取得一個時 +1
+						say("生物學者梁柏年:")
+						say("哦哦~!! 這是最上級呀. 辛苦您了...")
+						say("從現在您需要取得".." "..10-pc.getqf("collect_count").. " 個吧~!!")
+						say("麻煩您了~!")
+						say("")
+						pc.setqf("drink_drug",0)	 --藥水初始化
+						return
+					end
+					say("生物學者梁柏年:")
+					say("您10個都取得了啊!!")
+					say("哦哦~!!! 辛苦了..")
+					say("為了報答您, 我會給您一些錢和經驗值..")
+				    say("來,收下吧..")
+					say("")
+					say_reward("幫忙生物學者梁柏年的結果")
+					say_reward("得到經驗值95000和15000兩")
+					say_reward("還有銅手鐲+3")	
+					
+					pc.setqf("collect_count",0)
+					pc.setqf("drink_drug",0)	
+					
+					clear_letter()
+					set_state(__complete)
+					
+					pc.give_item2(14023)
+					pc.change_money(15000)
+					pc.give_exp2(95000)
+					set_quest_state("levelup","run")
+					
+					return
+				else								
+				say("生物學者梁柏年:")
+				say("不好意思, 這個不能使用..")
+				say("再找一個好嗎?")
+				say("")
+				pc.setqf("drink_drug",0)	 --藥水初始化
+				return
+				end
+
+	end
+end
+
+
+		
+	state __complete begin
+	end
+end
+
+
+

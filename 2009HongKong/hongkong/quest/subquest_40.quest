@@ -1,0 +1,197 @@
+----------------------------------------------------
+-- SUB QUEST 
+-- LV 56
+-- 籌募戰爭物資
+----------------------------------------------------
+
+quest subquest_40 begin
+	state start begin
+		when login or levelup with pc.level >= 56  and pc.level <= 58 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+			
+			local v = find_npc_by_vnum(20355)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "籌募戰爭物資")
+			end
+		end
+
+		when __TARGET__.target.click or
+			20355.chat." 籌募戰爭物資" with pc.level >= 56 begin
+			target.delete("__TARGET__")
+			say("警備隊長:")
+			say("如你知道，最近敵人的侵入頻繁")
+			say("根據樂師的情報")
+			say("有些可疑的活動在持續")
+			say("敵人是馬上就要入侵的態勢，缺少第一步")
+			say("低檔敵人的箭.")
+			say("")
+			wait()
+			say("警備隊長:")
+			say("如果敵人入侵的話，弓兵要用箭攻擊敵人")
+			say("使敵人停止進軍...")
+			say("但是缺很多箭，真是擔心.")
+			say("特別是箭的核心-弓箭的箭尖")
+			say("是迫在眉睫的問題.")
+			say("")
+			wait()
+			say("警備隊長:")
+			say("能不能找來")
+			say("製作弓箭的箭尖的材料?")
+			say("從雪寒山的"..mob_name(936).."那裡")
+			say("可以取到弓箭的箭尖.")
+			say("它們的弓箭的箭尖上有毒")
+			say("對低檔敵人有很好的效果.")
+			say("為確保資料供應充足")
+			say("需要5000個左右弓箭的箭尖.")
+			say("這個重大的任務要交給你.")
+			say("")
+			local b=select("我去取來", "我來籌募有些..")
+			if 2==b then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if 2==a then
+					say("警備隊長:")
+					say("雪寒山太遠了嗎?")
+					say("在考慮一下再來吧..")
+					say("")
+					return 
+				end
+				say("警備隊長 : ")
+				say("是嗎，雪寒山的"..mob_name(936).."有那麼可怕嗎?!")
+				say("我看錯人了")
+				say("哎喲，帝國的將來怎麼辦呢~")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("警備隊長 :")
+			say("噢，謝謝!! 從雪寒山的"..mob_name(936).."那裡取來")
+			say("5000個毒弓箭的箭尖吧!!")
+			say("雖然有些困難，從它們那裡取回毒弓箭的箭尖")
+			say("不是 很難的事")
+			say("")
+			set_state(for_five_thousand_bow)
+		end
+
+	end
+	state for_five_thousand_bow begin
+		when letter begin
+			send_letter("籌募戰爭物資")
+			
+			if 	pc.count_item("30157")>=5000 then	
+				local v=find_npc_by_vnum(20355)
+				if 0 == v then
+				else
+					target.vid("__TARGET__",v,"去警備隊長那裡")
+				end 
+			end
+
+		end
+		when button or info begin
+			if 	pc.count_item("30157")>=5000 then	
+				say_title("籌募戰爭物資")
+				say("")
+				say("找齊 5000個弓箭的箭尖")
+				say("去找警備隊長")
+				return
+			end
+			say_title("籌募戰爭物資")
+			say("")
+			say("為了低檔敵人的入侵需要箭,")
+			say("缺少很多弓箭的箭尖.")
+			say("可以從雪寒山的"..mob_name(936).."那裡")
+			say("得到弓箭的箭尖.")
+			say("打敗"..mob_name(936).."收集 5000個弓箭的箭尖") 
+			say("")
+			say_item_vnum(30157)
+		end
+		-------------------------------------------------------------------------------------------------------弓箭的箭尖
+		when 20355.chat."問有關怪病" with pc.count_item(30157) <5000 begin
+			say("警備隊長 :")
+			say("不知什麼時候開始在大陸戰役流行開的一種怪病")
+			say("但是我們醫生也不清楚其原因")
+			say("但是它們擁有的弓箭的箭尖的毒")
+			say("可以說是說不清楚的天然的武器~!")
+			say("怎麼問起這些啊?!")
+			say("")
+			local s=select("不是，只是對怪病很好奇", "怪病好可怕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a= select("是","否 ")
+				if 2==a then
+					say("警備隊長: ")
+					say("你這個人啊，一聽到怪病就害怕")
+					say("稍微調整後再來吧")
+					say("")
+					return
+				end
+				say("真的要放棄嗎.....")
+				say("你的水準有限是吧...")
+				say("看來得跟其他士兵講了....")
+				say("知道了....在下次傳召你為止先休息吧...")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("是吧..")
+			say("不會說不能去吧")
+			say("快去快回吧")
+		end
+		
+		when 936.kill   begin
+			local s = number(1, 100)
+			if s <= 10 and pc.count_item("30157")<5000 then
+				pc.give_item2(30157, 50)
+			end
+
+			
+		end
+
+		when __TARGET__.target.click  or 
+			20355.chat."給毒箭 5000個" with pc.count_item(30157)>=5000 begin
+			target.delete("__TARGET__")
+
+			say("警備隊長 :")
+			say("真是辛苦了!")
+			say("托你的福，充分做好了")
+			say("對付敵人的準備.")
+			say("我馬上下命令製作箭矢.")
+			say("這次真的做的很好")
+			say("上部也很滿意.")
+			wait()
+			say("警備隊長:")
+			say("這是給你的獎賞")
+			say("收下吧.")
+			say("下次有重要任務")
+			say("第一個交給你.")
+			say("繼續加油")
+			say("")
+
+			pc.remove_item(30157 , 5000)			
+		
+			say_reward("獲得 雙倍傷害丸5張")
+			say_reward("獲得 無視防禦丸 5張 ")
+			pc.give_item2(71044,5)
+			pc.give_item2(71045,5)
+			
+			say_reward("獲得經驗值 4500000 ")
+			pc.give_exp2(4500000)
+			 set_quest_state("levelup","run")
+			say_reward("獲得了" ..item_name(72003).."")
+			pc.give_item2(72003)
+			
+			clear_letter()	
+			set_state(COMPLETE)
+		end
+	end
+	state COMPLETE begin
+	end
+	state __GIVEUP__ begin
+	end
+end

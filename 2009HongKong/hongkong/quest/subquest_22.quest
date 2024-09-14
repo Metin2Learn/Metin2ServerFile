@@ -1,0 +1,150 @@
+-------------------------------------------------
+--SUB quest
+--LV 35
+--尋找砍材人的金斧
+-------------------------------------------------
+quest subquest_22 begin
+	state start begin
+		when login or levelup with pc.level >= 35  and pc.level <= 37 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20015)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "砍材人的金斧")
+			end
+		end
+
+
+		when __TARGET__.target.click or 
+			20015.chat."等一下.." begin
+			target.delete("__TARGET__")
+			say("砍材人 :")
+			say("那個...那個..")
+			say("我丟了斧頭了")
+			say("知道那個斧頭是什麼斧頭嗎?")
+			say("哎喲...")
+			say("看來勇士您是知道的")
+			say("對..是王鐵匠給的金斧..")
+			say("但是..被五狼兵偷走了.")
+			say("")
+			wait()
+			say("砍材人 :")
+			say("如果被王鐵匠知道了就不得了了..")
+			say("再也不給我改良斧頭了")
+			say("那是個很好的斧頭..")
+			say("勇士您能幫我找嗎?")
+			say("")
+			local s=select("接收.","拒絕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("砍材人 :")
+					say("哦~")
+					say("那下次有空再來吧")
+					say("")	
+					return
+				end
+				say("砍材人 :")
+				say("累嗎? 那就沒辦法了 ..")
+				say("保重身體.最近五狼兵們很倡狂")
+				say("")	
+				set_state(__GIVEUP__)
+				return
+			end
+			say("砍材人 :")
+			say("謝謝了")
+			say("我只相信勇士您了")
+			say("")
+
+		set_state(hunt_for_goldaxe)
+		end
+	end
+	
+	
+	
+	
+	state hunt_for_goldaxe begin
+		when letter begin
+			send_letter("砍材人")
+			
+			if pc.count_item(30102)>0 then
+				local v=find_npc_by_vnum(20015)
+				if 0==v then
+				else
+					target.vid("__TARGET__",v,"去找砍材人")
+				end
+			end	
+
+		end
+		when info or  button begin
+			if pc.count_item(30102)>0 then
+				say(locale.NOTICE_COLOR.."找到了砍材人的金斧"..locale.NORMAL_COLOR)
+				say("")
+				say("從五狼兵那裏找回了砍材人的金斧")
+				say("拿給砍材人吧")
+				say("")
+				return
+			end
+			say(locale.NOTICE_COLOR.."尋找砍材人的金斧"..locale.NORMAL_COLOR)
+			say("")
+			say("從"..mob_name(554).."那裏找砍材人的金斧")
+			say("")
+		end
+
+
+
+		when 554.kill  begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item(30102)==0  then
+				pc.give_item2("30102", 1)
+
+				local v=find_npc_by_vnum(20015)
+				if 0==v then
+				else
+					target.vid("__TARGET__",v,"去找砍材人")
+				end
+			end
+		end
+
+
+
+		when 20015.chat."找到金斧了!" with pc.count_item("30102")>=1 begin
+			target.delete("__TARGET__") 
+			say("砍材人 :")
+			say("哎喲，如果不是大人您，一輩子都")
+			say("找不回來這個斧頭了.")
+			say("很感謝")
+			say("從現在開始吃飯也好，睡覺也好")
+			say("要隨時帶著這個金斧 .")
+			say("")
+			pc.remove_item("30102",1)		
+			
+			say_reward("獲得經驗值 400000 ")
+			pc.give_exp2(400000)	
+		    set_quest_state("levelup","run")
+			say_reward("獲得了" ..item_name(71038).."")
+			pc.give_item2(71083)
+			
+			pc.give_item2(50725,3)
+			pc.give_item2(50722,10)
+			say_reward("獲得了草藥物品")
+			
+			set_state(__THEEND__)
+			clear_letter()	
+		end
+	end
+
+
+	state __GIVEUP__ begin
+	end
+	state __THEEND__ begin
+	end	
+end
+	
+

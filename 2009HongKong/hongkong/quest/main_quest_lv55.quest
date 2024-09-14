@@ -1,0 +1,198 @@
+----------------------------------
+--	MAIN QUEST  LV55
+--  	
+----------------------------------
+
+
+quest main_quest_lv55 begin	
+	state start begin
+	end
+	state run begin
+		when login or levelup with  pc.get_level() >= 55 begin
+			set_state( survey )		
+		end
+	end
+	
+	state survey begin
+		when letter begin
+			send_letter("古代日記簿的分頁")
+			
+		end
+		when button or info begin
+			say_title("抓葉靈鬼")
+			---                                                   l
+			say("")
+			say("目前為止十二個古代日記簿的分頁都找到了")
+			say("最後的古代日記簿的分頁即將在眼前的現在..")
+			say("老學究說在充滿邪惡氣息的密宗寺院")
+			say("完成了")
+			say("禁忌的咒文.")
+			say("古代的神女們可能在這裡")
+			say("完成了最後的咒文.")
+			say("密宗寺院是擠滿各種怪物的")
+			say("危險的地方.")
+			say("在密宗寺院抓葉靈鬼")
+			say("尋找有關咒文的最後的線索.")
+			say("")
+		end
+
+		when 1303.kill begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30150")==0 then
+				say("獲得古代日記簿的分頁!")
+				set_state( takepaper)
+			end
+		end
+	end
+	
+	state takepaper begin
+		when letter begin
+			send_letter("在密宗寺院的線索")
+			
+			local v=find_npc_by_vnum(20363)
+			if 0==v then
+			else
+				target.vid("__TARGET1__", v, "無名金石碑")
+			end
+
+		end
+		when button or info begin
+			say_pc_name("")
+			say("抓葉靈鬼")
+			say("獲得有以下字句的古代日記簿的分頁")
+			say("")
+			say_reward("...在這裡邪惡氣息最強烈的地方是")
+			say_reward("在最裡面的塔.")
+			say_reward("塔里面有各種魔鬼和邪惡的氣息")
+			say_reward("是非常危險的地方.")
+			say_reward("傳說")
+			say_reward("古代的咒文在這裡發動...")
+			say("")
+			say("根據情報，在這裡最裡面的塔里")
+			say("完成咒文.")
+			say("到邪鬼塔周邊查看無名金石碑內咒文的痕跡.")
+			say("")
+		end
+		when __TARGET1__.target.click or 
+			20363.chat."無名金石碑"begin 
+			target.delete("__TARGET1__")
+			say("這就是無名金石碑!")
+			say("終於獲得了最後的古代日記簿的分頁")
+			pc.give_item2(30150)
+			set_state( gototeacher)
+		end
+	end
+	state gototeacher begin
+		when letter begin
+			send_letter("最後的古代日記簿的分頁")
+
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "老學究")
+			end
+		end
+		when button or info begin
+			say_title("在密宗寺院尋找最後的線索")
+			say("")
+			say("在傳說密教寺院裡最充滿邪惡氣息的")
+			say("塔里發現了古代咒文的痕跡!")
+			say("終於把十三個古代日記簿的分頁都收集到了嗎?")
+			say("去找老學究" )
+			say("")
+		end
+		when __TARGET__.target.click or 
+			20011.chat." 最後的古代日記簿的分頁"begin
+			target.delete("__TARGET__")
+			---                                                   l
+			say("老學究:")
+			say("終於是最後第十三個古代日記簿的分頁!")
+			say("托你的福研究能順利地進行了.")
+			say("雖然有過很多危險的事情")
+			say("但是裝載著重要的內容")
+			say("是有意義的行動.")
+			say("最後的古代日記簿的分頁裡有什麼內容呢")
+			say("看看吧")
+			say("")
+			wait()
+			say("")
+			say_reward("克服長時間的失敗和逆境後")
+			say_reward("終於到達了最後的場所")
+			say_reward("到達這個塔為止，有了多少的")
+			say_reward("犧牲和血腥的戰鬥...")
+			say_reward("現在再也不用猶豫了")
+			say_reward("本來就明白，這個咒文很危險,")
+			say_reward("也明白，如果沒有這個咒文")
+			say_reward("不能保護下一代.")
+			say("")
+			wait()
+			say("")
+			say_reward("如果能以我們的生命保衛國家")
+			say_reward("那就滿足了")
+			say_reward("七個人聚在一起，靜靜地開始了儀式. 慢慢地,")
+			say_reward("但是可以感覺到")
+			say_reward("咒文確實在發動.")
+			say_reward("但是，突然有怪異的感覺.")
+			say_reward("除了我之外的6名")
+			say_reward("好像失去意識成為瀕死狀態，咒文在開始暴發,")
+			say_reward("馬力噴得")
+			say_reward("使整個塔在晃動.")
+			say("")
+			wait()
+			say("")
+			say_reward("我幸運地沒有被咒文捲入")
+			say_reward("但是其他的神女們被捲入咒文")
+			say_reward("隨著閃光我失去了意識.")
+			say_reward("咒文失敗了嗎?")
+			say_reward("怎麼可以這樣!")
+			say_reward("我們盼望的最後的希望")
+			say_reward("變成這樣的結果...!")	
+			say("")
+			wait()
+			say("老學究:")
+			say("啊，出現了意外的結果")
+			say("他們那麼期待的咒文")
+			say("就這樣失敗... 以我的推測")
+			say("因咒文的失敗，最終沒能阻擋鐵甲騎馬隊")
+			say("被滅亡.")
+			say("但是那樣危險的咒文失敗了")
+			say("應該會有非常巨大的")
+			say("惡影響...")
+			say("到底是什麼呢? 先休息一下頭腦.")
+			say("最近一直在講艱難的話題")
+			say("頭腦複雜.")
+			wait()
+			say("老學究:")
+			say("你也先休息一會再來吧.")
+			say("把情況整理後，再展開話題吧")
+			say("")
+			
+			say("這是找到第十三個古代日記簿的分頁的")
+			say("報酬..")
+			say("")
+			say_reward("獲得經驗值7000000 ")
+			pc.give_exp2(7000000)
+			set_quest_state("levelup","run")
+			local stones = {28430,28431,28432,28433,28434,28435,28436,28437,28438,28439,28440,28441,28442,28443}
+	   		local stone = stones[number( 1 ,14)];
+			pc.give_item2(stone)
+			say_reward("獲得了" ..item_name(stone).."")
+			
+			local stone = stones[number( 1 ,14)];
+			pc.give_item2(stone)
+			say_reward("獲得了" ..item_name(stone).."")
+			
+			pc.give_item2(25040)
+			pc.give_item2(25040)
+			say_reward("獲得了" ..item_name(25040).."")
+			
+			pc.remove_item(30150)		
+
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end
+

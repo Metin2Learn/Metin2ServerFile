@@ -1,0 +1,118 @@
+quest fortune_telling begin
+    state start begin
+	when oldwoman.chat."你會算命嗎?" begin
+	    if pc.level<=20 then
+		local novice_say=
+		"從相上看, 你來到這個世界並不久[ENTER]"..
+		"你有需要這麼早就開始算命嗎?[ENTER]"..
+		"你的命運就是需要好好認真的修練[ENTER]"..
+		"長大以後再來找我吧[ENTER]"
+		say(novice_say)
+		    	
+	    elseif get_time()-pc.getqf("time")<8*60*60 then
+		local passed_time = get_time() - pc.getqf("time")
+		local retry_say=
+		"算命是不會成為你日後的人生?[ENTER]"..
+		"其實算命是在人生中[ENTER]"..
+		"一種樂趣.[ENTER]"..
+		"對人來說最重要的是他們的夢想和目標[ENTER]"..
+		"只要擁有這2樣的話, [ENTER]"..
+		"你的人生會很順利.[ENTER]"..
+		"但是你還是想算命的話, 請你明天再來吧."
+		say(retry_say)
+
+		local idx = pc.getqf("idx")
+		if idx!=0 then
+		    say("以前你所算命出來的是"..locale.fortune_words[idx][1].."的結果[ENTER]")
+		    if pc.getqf("talisman") == 0 and special.fortune_telling[idx][5]>0 then
+			local talisman_cost = special.fortune_telling[idx][5]
+			-- ???? ??? ???
+			wait()
+			say("嗯~ 你有不好的運氣,[ENTER]"..
+			    "你還沒買<初災符>.[ENTER]"..
+			    "你付錢的話,我會賣給你<初災符>")
+			local s = select("是~ 我需要購買.","不是~ 我不需要購買.")
+			if s == 1 then
+			    if pc.gold < talisman_cost then
+				say("朋友, 雖然我是好人,[ENTER] 但是我不能免費給你.[ENTER]如果你想防止災難或惡運的話,[ENTER]你必須付出金錢.")
+				pc.setqf("talisman", 0)
+			    else
+				pc.give_item2(70052,1)
+				pc.changegold(-talisman_cost)
+				pc.setqf("talisman", 1)
+			    end
+			else
+			end
+		    end
+		end
+	    else
+		local gold = 7777
+
+		local intro_say= 
+		"你為什麼一直嘆氣呢?[ENTER]"..
+		"呵呵~ 你想利用天地強大的力量[ENTER]"..
+		"來算你的命運嗎?[ENTER]"..
+		"[ENTER]"..
+		"價錢是 "..gold.." 兩.[ENTER]"
+		say(intro_say)
+
+		local s = select('開始算命', '放棄算命')
+		if s == 1 then
+		    n = number(1,10000)
+		    local i
+		    local idx
+		    for i = 1, table.getn(special.fortune_telling) do
+			if n<=special.fortune_telling[i][1] then
+			    idx = i
+			    break
+			else
+			    n = n - special.fortune_telling[i][1]
+			end
+		    end
+		    i = idx
+
+		    say(locale.fortune_words[i][2])
+		    local t = {}
+		    n = 0
+		    local j
+		    for j = 2,4 do
+			if special.fortune_telling[i][j] != 0 then
+			    n=n+1
+			    t[n] = j
+			end
+		    end 
+		    if n>0 then
+			n = number(1, n)
+			__give_char_priv(t[n]-1, special.fortune_telling[i][t[n]])
+		    end
+		    pc.setqf("time", get_time())
+		    pc.setqf("idx", i)
+
+		    if special.fortune_telling[i][5]>0 then
+			-- ????? ??? ??.
+			wait()
+			say(locale.fortune_words[i][3])
+			local talisman_cost = special.fortune_telling[i][5]
+			local s = select("是~ 現在購買<初災符>","不是~ 不購買<初災符>")
+			if s== 1 then
+			    if pc.gold < talisman_cost then
+				say("朋友, 雖然我是好人,[ENTER] 但是我不能免費給你.[ENTER]如果你想防止災難或惡運的話,[ENTER]你必須付出金錢.")
+				pc.setqf("talisman", 0)
+			    else
+				pc.give_item2(70052,1)
+				pc.changegold(-talisman_cost)
+				pc.setqf("talisman", 1)
+			    end
+			elseif s == 2 then
+			    say("你要離開了嗎?那好吧.[ENTER]災難也是全部都[ENTER]個人的負擔.[ENTER]請保重,再見.[ENTER]稍後你的想法改便的話,可以隨時來找我.")
+			    pc.setqf("talisman", 0)
+			end
+		    end
+		elseif s == 2 then
+		    say("好~ [ENTER]人生上最重要的是[ENTER]自信的努力跟意志.[ENTER]那辛苦你了!")
+		end
+	    end
+	end
+    end
+end
+

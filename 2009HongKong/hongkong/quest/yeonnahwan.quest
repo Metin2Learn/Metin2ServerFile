@@ -1,0 +1,8 @@
+quest yeonnahwan begin
+    state start begin
+	when yeonnahwan.click begin
+	    say("你來這裡跟我對話的意思就是, 你的能力很高, 我會同意你的能力程度. 但是現在無法進入儀式塔, 因為這個區域暫時還沒有開放. 另外你還沒有帶可以進入這個區域的鑰匙. 如果時間到的時候你會有機會進入這個儀式塔, 到了那個時候, 請你安靜的等待.")
+	end
+    end
+end
+

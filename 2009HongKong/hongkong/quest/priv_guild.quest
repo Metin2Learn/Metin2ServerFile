@@ -1,0 +1,90 @@
+quest priv_guild begin
+    state start begin
+	when guild_man1.chat."GM: 給指定公會獎勵" or
+	    guild_man2.chat."GM: 給指定公會獎勵" or
+	    guild_man3.chat."GM: 給指定公會獎勵" with pc.is_gm() begin
+
+	    -- 選擇公會
+	    say_title( "給指定公會獎勵" )
+	    say( "請輸入公會名稱" )
+
+	    local g_name = input()
+	    local g_id = __get_guildid_byname( g_name )
+	    if 0 == g_id then
+		say( '不存在此公會.' )
+		return
+	    end
+
+	    -- 選擇公會type
+	    say_title( "給指定公會獎勵" )
+	    say('Current parameter:')
+	    say( __get_guild_priv_string( g_id ) )
+	    say('Choose type')
+	    local t = select(locale.item_drop_pct, locale.gold_drop_pct, locale.tengold_drop_pct, locale.exp_pct, locale.cancel)
+	    if t == 5 then
+		return
+	    end
+
+	    -- 選擇獎勵數值
+	    say_title('給指定公會獎勵')
+	    local title_list = {locale.item_drop_pct, locale.gold_drop_pct, locale.tengold_drop_pct, locale.exp_pct}
+	    say(string.format('%s 獎勵 : %s', g_name, title_list[t]))
+	    say('')
+	    local g = {0,10,20,30,40,50}
+	    say('How much?')
+	    local p = select(g[1]..'%',g[2]..'%',g[3]..'%',g[4]..'%',g[5]..'%',g[6]..'%', 'Cancel')
+	    if p == 7 then
+		return
+	    end
+
+	    -- 選擇獎勵時間
+	    say_title('給指定公會獎勵')
+	    say(string.format('%s 獎勵 : %s %d%%', g_name, title_list[t], g[p]))
+	    say('')
+
+	    say('選擇獎勵時間')
+	    local v = 0
+	    local h = select('6 hours', '12 hours', '24 hours', '直接輸入', 'Cancel')
+	    if 5 == h then
+		return
+	    elseif 4 == h then
+
+		-- 直接輸入獎勵時間
+		say_title('給指定公會獎勵')
+		say(string.format('%s 獎勵 : %s %d%%', g_name, title_list[t], g[p]))
+		say('')
+		say('請輸入獎勵時間')
+		v= input()
+
+		if v == "" then
+		    v = 0
+		else
+		    v = tonumber( v )
+		end
+
+	    elseif 3 == h then
+		v=24
+	    elseif 2 == h then
+		v=12
+	    elseif 1 == h then
+		v=6
+	    end
+
+	    -- 設置確認
+	    say_title('給指定公會獎勵')
+	    say(string.format('%s 獎勵 : %s %d%% (%d時間)', g_name, title_list[t], g[p], v))
+	    say('')
+	    say('確定上述設置嗎?')
+
+	    local s = select('Yes', 'No')
+	    if 1 == s then
+		__give_guild_priv(g_id, t, g[p], v*60*60)
+		say('設置完成')
+	    else
+		say('取消')
+	    end
+	end
+    end
+end
+
+

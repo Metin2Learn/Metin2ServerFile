@@ -1,0 +1,228 @@
+quest siege begin
+	state start begin
+		when 70021.use begin 
+			if oh.ismonarch() == 0 then
+				say("您沒有資格把我叫出來。")
+				say("到您成為真正的君主，再叫我出來吧。")
+				return
+			end
+			
+			say("如果您是君主，就可以使用以下技能，造福百姓。")
+			say("請選擇其中一項：")
+			
+			local s = select ("君主的祝福","君主的獅吼功","君主的金剛拳","召喚攻城戰NPC","下一頁")
+			if 5== s then
+				s= select("召喚怪物","君主資訊 ","傳送至玩家身邊","傳送玩家到身邊","取消" )+4
+			end
+			-- 君主的祝福
+			if s == 1 then
+				say_reward(" 君主的祝福" )
+				say("所謂君主的祝福，就是利用君主的力量，")
+				say("把這個地區內所有百姓的生命力和精神力注滿。")
+				say("")
+				say_reward("需要國庫資金：200萬兩")
+				local s = select ("使用","不使用" )
+				if s == 1 then
+					oh.monarchbless()
+				else
+					return
+				end
+				
+			-- 君主的獅吼功 
+			elseif s == 2 then
+				say_reward(" 君主的獅吼功")
+				say("所謂君主的獅吼功，就是利用君主的力量，")
+				say("在一定時間內提升這個地區內所有百姓的攻擊力。")
+				say("")
+				say_reward("需要國庫資金：500萬兩" )
+				local s = select ("使用","不使用" )
+				if s == 1 then
+					oh.monarchpowerup()
+				else
+					return
+				end
+
+			-- 君主的金剛拳
+			elseif s == 3 then
+				say("所謂君主的金剛拳，就是利用君主的力量，")
+				say("在一定時間內提升這個地區內所有百姓的防禦力。")
+				say("")
+				say_reward("需要國庫資金：500萬兩" )
+				local s = select ("使用","不使用" )
+				if s == 1 then
+					oh.monarchdefenseup()
+				else
+					return
+				end
+
+			elseif s == 4 then
+				say_reward("召喚攻城戰NPC" )
+				say("所謂召喚攻城戰NPC，就是為了守護主城，")
+				say("而配備提供防禦的NPC。")
+				say("當敵人入侵時，這些NPC會為了守護主城，")
+				say("而攻擊敵人。")
+				say("請選擇被召喚到的地區：")
+				
+				local selected_area = select ( "地區1","地區2","地區3","地區4","取消")
+				if 5==selected_area then
+					return
+				end
+				say("")
+				say("請選擇要召喚的NPC：")
+				local selected_npc = select ( "上級槍兵","中級槍兵","下級槍兵",
+											"上級弓兵", "中級弓兵", "下級弓兵", "取消")
+				
+				local siege_map = 
+				{
+					181,183,182,
+				}
+
+				local siege_npc = 
+				{
+					{ 9505, 9503, 9501,	9506, 9504, 9502 },
+					{ 9515, 9513, 9511, 9516, 9514, 9512 },
+					{ 9525, 9523, 9521, 9526, 9524, 9522 },
+					--{ 11112,11106,11100,	11113,11107,11101 },
+					--{ 11114,11108,11102,	11115,11109,11103 },
+					--{ 11116,11110,11104,	11117,11111,11105 }
+
+					--{11100,11100,11100},
+					--{11101,11101,11101},
+					--{11102,11102,11102},
+					--{11103,11103,11103},
+					--{11104,11104,11104},
+					--{11105,11105,11105},
+				}
+
+				-- 檢查攻城地圖 
+				if 7==selected_npc then
+					return
+				end
+				
+				if pc.get_map_index() != siege_map[pc.get_empire()] then
+					say("您只能在攻城地圖上配備NPC…")
+					--say(siege_map[pc.get_empire()])
+					--say(pc.get_map_index()..","..pc.get_empire() )
+					return
+				end
+
+				-- 召喚怪物
+				oh.spawnguard( siege_npc[pc.get_empire()][selected_npc], selected_area-1 )
+				--oh.spawnmob( siege_npc[pc.get_empire()][selected_npc] )
+
+--			elseif s == 4 then
+--				say_reward(" 設置黃金蟾蜍")
+--				say("黃金蟾蜍是金錢的象徵。")
+--				say("當國庫爆滿，便不能再收取稅金。")
+--				say("為了應付這個情況，君主可以把稅金變成黃金蟾蜍，")
+--				say("並放置在主城附近。")
+--				say("日後，當稅金不足時，")
+--				say("君主可以再次把黃金蟾蜍還原成為金錢。")
+--				say("但需要注意的是，")
+--				say("黃金蟾蜍有可能被其他國家偷走。") 
+--				say("若在其他國家破壞黃金蟾蜍，")
+--				say("會被還原成為該國的財產。" )
+--				say("")
+--				local s = select ( "設置", "不設置" )
+--				if s == 1 then 
+--					oh.spawnmob( 11505 )
+--				end
+--			elseif s == 6 then
+--				oh.frog_to_empire_money()
+
+			elseif s==5 then
+				if get_time()> pc.getqf("cool_time") then
+					mob_list=select(mob_name(191),mob_name(192),mob_name(193),mob_name(194),mob_name(391),"下一頁")
+					if 6== mob_list then
+						mob_list= select(mob_name(392),mob_name(393),mob_name(394),mob_name(491),mob_name(492),"下一頁")+5
+					end
+					if 11==mob_list then		
+						mob_list= select(mob_name(493),mob_name(494), mob_name(591),mob_name(691),mob_name(791),mob_name(1091),"下一頁")+10
+					end
+					if 17==mob_list then		
+						mob_list=select(mob_name(1304),mob_name(1901),mob_name(2091),mob_name(2191),mob_name(2206),"取消")+16
+					end
+					if 22== mob_list then
+						return
+					end
+					local monster= {
+						191, 
+						192, 
+						193, 
+						194, 
+						391, 
+						392, 
+						393, 
+						394, 
+						491, 
+						492, 
+						493, 
+						494, 
+						591, 
+						691, 
+						791, 
+						1091,
+						1304,
+						1901,
+						2091,
+						2191,
+						2206 
+					}
+					oh.spawnmob (monster[mob_list])
+					pc.setqf("cool_time",get_time()+60*60) --1 hour
+			else	
+				say("")
+				say("剩餘"..pc.getqf("cool_time")-get_time().."秒")
+				return
+			end
+
+		elseif s==6 then
+			oh.info()
+
+		elseif s==7 then
+			say("輸入角色名稱")
+			local chracter_name = input()
+			local my_empire=pc.get_empire()
+			local your_vid = find_pc_by_name(chracter_name) 
+			local my_info=pc.select(your_vid)
+			if your_vid ==0 then
+				say(string.format("%s 找不到該玩家",chracter_name))
+				return
+			end 
+			local your_empire=pc.get_empire()
+			pc.select(your_info)
+				if my_empire == your_empire then
+					pc.select(my_info)
+					oh.warp(chracter_name)
+				else
+					pc.select(my_info)
+					say("只限相同國家才可使用")
+					return
+				end
+
+		elseif s==8 then
+			say("輸入角色名稱")
+			local chracter_name = input()
+			local my_empire=pc.get_empire()
+			local your_vid = find_pc_by_name(chracter_name) 
+			local my_info = pc.select(your_vid)
+			if your_vid ==0 then
+				say(string.format("%s 找不到該玩家",chracter_name))
+				return
+			end 
+			local your_empire=pc.get_empire()
+			pc.select(my_info)
+			if my_empire== your_empire then
+					pc.select(my_info)
+					oh.transfer(chracter_name)
+			else
+				pc.select(my_info)
+				say("只限相同國家才可使用")
+				return
+			end
+		end
+		
+	end
+end
+end
+

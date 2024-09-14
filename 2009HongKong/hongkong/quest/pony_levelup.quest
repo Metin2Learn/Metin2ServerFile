@@ -1,0 +1,7011 @@
+quest pony_levelup begin
+	state training_frame_red_step9 begin
+		when letter begin
+			target.pos("__TARGET__", 200, 700, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#9)")
+			q.set_title("騎馬修練中(#9)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#9 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_red_step8 begin
+		when letter begin
+			target.pos("__TARGET__", 180, 520, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#8)")
+			q.set_title("騎馬修練中(#8)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#8 已經移動到目標位置")
+			setstate(training_frame_red_step9)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_red_step7 begin
+		when letter begin
+			target.pos("__TARGET__", 500, 500, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#7)")
+			q.set_title("騎馬修練中(#7)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#7 已經移動到目標位置")
+			setstate(training_frame_red_step8)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_red_step6 begin
+		when letter begin
+			target.pos("__TARGET__", 610, 400, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#6)")
+			q.set_title("騎馬修練中(#6)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#6 已經移動到目標位置")
+			setstate(training_frame_red_step7)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_red_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 960, 545, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#5)")
+			q.set_title("騎馬修練中(#5)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#5 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_red_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 940, 390, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(training_frame_red_step5)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_red_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 650, 270, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_frame_red_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_red_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 380, 240, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_frame_red_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_red_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 140, 270, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=62 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(62, 100, 100)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(62, 100, 100)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=62 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(62, 100, 100)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(62, 100, 100)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_frame_red_step2)
+		end
+	end
+	state training_frame_blue_step9 begin
+		when letter begin
+			target.pos("__TARGET__", 100, 100, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#9)")
+			q.set_title("騎馬修練中(#9)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#9 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_blue_step8 begin
+		when letter begin
+			target.pos("__TARGET__", 1430, 135, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#8)")
+			q.set_title("騎馬修練中(#8)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#8 已經移動到目標位置")
+			setstate(training_frame_blue_step9)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_blue_step7 begin
+		when letter begin
+			target.pos("__TARGET__", 1235, 310, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#7)")
+			q.set_title("騎馬修練中(#7)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#7 已經移動到目標位置")
+			setstate(training_frame_blue_step8)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_blue_step6 begin
+		when letter begin
+			target.pos("__TARGET__", 390, 580, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#6)")
+			q.set_title("騎馬修練中(#6)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#6 已經移動到目標位置")
+			setstate(training_frame_blue_step7)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_blue_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 1100, 450, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#5)")
+			q.set_title("騎馬修練中(#5)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#5 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_blue_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 940, 390, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(training_frame_blue_step5)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_blue_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 650, 270, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_frame_blue_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_blue_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 380, 240, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_frame_blue_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_blue_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 140, 270, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=62 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(62, 100, 100)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(62, 100, 100)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=62 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(62, 100, 100)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(62, 100, 100)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_frame_blue_step2)
+		end
+	end
+	state training_frame_yellow_step9 begin
+		when letter begin
+			target.pos("__TARGET__", 200, 700, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#9)")
+			q.set_title("騎馬修練中(#9)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#9 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_yellow_step8 begin
+		when letter begin
+			target.pos("__TARGET__", 70, 740, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#8)")
+			q.set_title("騎馬修練中(#8)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#8 已經移動到目標位置")
+			setstate(training_frame_yellow_step9)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_yellow_step7 begin
+		when letter begin
+			target.pos("__TARGET__", 110, 1200, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#7)")
+			q.set_title("騎馬修練中(#7)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#7 已經移動到目標位置")
+			setstate(training_frame_yellow_step8)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_yellow_step6 begin
+		when letter begin
+			target.pos("__TARGET__", 500, 1200, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#6)")
+			q.set_title("騎馬修練中(#6)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#6 已經移動到目標位置")
+			setstate(training_frame_yellow_step7)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_yellow_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 500, 910, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#5)")
+			q.set_title("騎馬修練中(#5)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#5 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_yellow_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 510, 665, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(training_frame_yellow_step5)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_yellow_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 690, 870, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_frame_yellow_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_yellow_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 900, 840, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_frame_yellow_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_yellow_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 1250, 690, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=62 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(62, 1430, 750)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(62, 1430, 750)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=62 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(62, 1430, 750)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(62, 1430, 750)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_frame_yellow_step2)
+		end
+	end
+	state training_frame_purple_step9 begin
+		when letter begin
+			target.pos("__TARGET__", 1430, 750, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#9)")
+			q.set_title("騎馬修練中(#9)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#9 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_purple_step8 begin
+		when letter begin
+			target.pos("__TARGET__", 450, 700, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#8)")
+			q.set_title("騎馬修練中(#8)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#8 已經移動到目標位置")
+			setstate(training_frame_purple_step9)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_purple_step7 begin
+		when letter begin
+			target.pos("__TARGET__", 420, 1030, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#7)")
+			q.set_title("騎馬修練中(#7)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#7 已經移動到目標位置")
+			setstate(training_frame_purple_step8)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_purple_step6 begin
+		when letter begin
+			target.pos("__TARGET__", 100, 520, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#6)")
+			q.set_title("騎馬修練中(#6)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#6 已經移動到目標位置")
+			setstate(training_frame_purple_step7)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_purple_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 490, 560, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#5)")
+			q.set_title("騎馬修練中(#5)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#5 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_purple_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 510, 665, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(training_frame_purple_step5)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_purple_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 690, 870 , 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_frame_purple_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_purple_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 900, 840, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_frame_purple_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_purple_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 1250, 690, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=62 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(62, 1430, 750)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(62, 1430, 750)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=62 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(62, 1430, 750)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(62, 1430, 750)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_frame_purple_step2)
+		end
+	end
+	state training_frame_white_step9 begin
+		when letter begin
+			target.pos("__TARGET__", 200, 700, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#9)")
+			q.set_title("騎馬修練中(#9)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#9 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_white_step8 begin
+		when letter begin
+			target.pos("__TARGET__", 80, 950, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#8)")
+			q.set_title("騎馬修練中(#8)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#8 已經移動到目標位置")
+			setstate(training_frame_white_step9)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_white_step7 begin
+		when letter begin
+			target.pos("__TARGET__", 180, 1200, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#7)")
+			q.set_title("騎馬修練中(#7)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#7 已經移動到目標位置")
+			setstate(training_frame_white_step8)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_white_step6 begin
+		when letter begin
+			target.pos("__TARGET__", 500, 1000, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#6)")
+			q.set_title("騎馬修練中(#6)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#6 已經移動到目標位置")
+			setstate(training_frame_white_step7)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_white_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 800, 1200, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#5)")
+			q.set_title("騎馬修練中(#5)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#5 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_white_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 1010, 1150, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(training_frame_white_step5)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_white_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 1000, 1300, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_frame_white_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_white_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 710, 1380, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_frame_white_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_white_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 515, 1455, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=62 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(62, 100, 1400)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(62, 100, 1400)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=62 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(62, 100, 1400)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(62, 100, 1400)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_frame_white_step2)
+		end
+	end
+	state training_frame_sky_step9 begin
+		when letter begin
+			target.pos("__TARGET__", 100, 1400, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#9)")
+			q.set_title("騎馬修練中(#9)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#9 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_sky_step8 begin
+		when letter begin
+			target.pos("__TARGET__", 485, 1315, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#8)")
+			q.set_title("騎馬修練中(#8)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#8 已經移動到目標位置")
+			setstate(training_frame_sky_step9)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_sky_step7 begin
+		when letter begin
+			target.pos("__TARGET__", 1430, 1400, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#7)")
+			q.set_title("騎馬修練中(#7)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#7 已經移動到目標位置")
+			setstate(training_frame_sky_step8)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_sky_step6 begin
+		when letter begin
+			target.pos("__TARGET__", 1400, 1200, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#6)")
+			q.set_title("騎馬修練中(#6)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#6 已經移動到目標位置")
+			setstate(training_frame_sky_step7)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_sky_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 1230, 1080, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#5)")
+			q.set_title("騎馬修練中(#5)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#5 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_sky_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 1010, 1150, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(training_frame_sky_step5)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_sky_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 1000, 1300, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_frame_sky_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_sky_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 710, 1380, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_frame_sky_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_frame_sky_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 515, 1455, 62, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=62 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(62, 100, 1400)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(62, 100, 1400)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=62 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(62, 100, 1400)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(62, 100, 1400)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_frame_sky_step2)
+		end
+	end
+	state training_desert_red_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 903, 670, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_red_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 680, 700, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_desert_red_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_red_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 410, 690, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_desert_red_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_red_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 480, 1020, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button or info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=63 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(63, 430, 1200)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(63, 430, 1200)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_desert_red_step2)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_blue_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 1400, 1400, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_blue_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 1350, 1100, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_desert_blue_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_blue_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 1200, 1200, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button or info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=63 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(63, 1200, 830)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(63, 1200, 830)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_desert_blue_step2)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_yellow_step6 begin
+		when letter begin
+			target.pos("__TARGET__", 930, 670, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#6)")
+			q.set_title("騎馬修練中(#6)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#6 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_yellow_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 680, 700, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#5)")
+			q.set_title("騎馬修練中(#5)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#5 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_yellow_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 680, 560, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(training_desert_yellow_step5)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_yellow_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 710, 380, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_desert_yellow_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_yellow_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 1140, 510, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_desert_yellow_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_yellow_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 1130, 930, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button or info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=63 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(63, 950, 830)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(63, 950, 830)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_desert_yellow_step2)
+		end
+	end
+	state training_desert_purple_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 410, 690, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_purple_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 500, 500, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_desert_purple_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_purple_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 330, 320, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_desert_purple_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_purple_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 140, 420, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=63 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(63, 170, 980)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(63, 170, 980)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=63 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(63, 170, 980)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(63, 170, 980)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_desert_purple_step2)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_white_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 930, 670, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_white_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 920, 440, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_desert_white_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_white_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 1140, 510, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_desert_white_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_white_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 1190, 900, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=63 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(63, 860, 1200)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(63, 860, 1200)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=63 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(63, 860, 1200)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(63, 860, 1200)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_desert_white_step2)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_sky_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 170, 980, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_sky_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 410, 690, 63, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_desert_sky_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_desert_sky_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 480, 1020, 63, "")
+		end
+		when letter begin
+			send_letter("騎馬修練中(#1)")
+		end
+		when button or info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=63 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(63, 430, 1200)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(63, 430, 1200)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_desert_sky_step2)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_red_step9 begin
+		when letter begin
+			target.pos("__TARGET__", 150, 740, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#9)")
+			q.set_title("騎馬修練中(#9)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#9 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_red_step8 begin
+		when letter begin
+			target.pos("__TARGET__", 380, 820, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#8)")
+			q.set_title("騎馬修練中(#8)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#8 已經移動到目標位置")
+			setstate(training_valley_red_step9)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_red_step7 begin
+		when letter begin
+			target.pos("__TARGET__", 380, 650, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#7)")
+			q.set_title("騎馬修練中(#7)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#7 已經移動到目標位置")
+			setstate(training_valley_red_step8)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_red_step6 begin
+		when letter begin
+			target.pos("__TARGET__", 720, 740, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#6)")
+			q.set_title("騎馬修練中(#6)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#6 已經移動到目標位置")
+			setstate(training_valley_red_step7)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_red_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 800, 730, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#5)")
+			q.set_title("騎馬修練中(#5)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#5 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_red_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 1030, 570, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(training_valley_red_step5)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_red_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 720, 360, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_valley_red_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_red_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 380, 500, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_valley_red_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_red_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 380, 820, 64, "")
+
+			if pc.get_map_index()!=64 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(64, 150, 740)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(64, 150, 740)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=64 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(64, 150, 740)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(64, 150, 740)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=64 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(64, 150, 740)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(64, 150, 740)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_valley_red_step2)
+		end
+	end
+	state training_valley_blue_step9 begin
+		when letter begin
+			target.pos("__TARGET__", 1460, 80, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#9)")
+			q.set_title("騎馬修練中(#9)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#9 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_blue_step8 begin
+		when letter begin
+			target.pos("__TARGET__", 1090, 510, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#8)")
+			q.set_title("騎馬修練中(#8)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#8 已經移動到目標位置")
+			setstate(training_valley_blue_step9)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_blue_step7 begin
+		when letter begin
+			target.pos("__TARGET__", 770, 810, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#7)")
+			q.set_title("騎馬修練中(#7)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#7 已經移動到目標位置")
+			setstate(training_valley_blue_step8)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_blue_step6 begin
+		when letter begin
+			target.pos("__TARGET__", 780, 1080, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#6)")
+			q.set_title("騎馬修練中(#6)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#6 已經移動到目標位置")
+			setstate(training_valley_blue_step7)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_blue_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 940, 1110, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#5)")
+			q.set_title("騎馬修練中(#5)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#5 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_blue_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 1060, 930, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(training_valley_blue_step5)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_blue_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 1190, 700, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_valley_blue_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_blue_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 1390, 570, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_valley_blue_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_blue_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 1230, 500, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=64 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(64, 1460, 80)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(64, 1460, 80)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=64 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(64, 1460, 80)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(64, 1460, 80)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_valley_blue_step2)
+		end
+	end
+	state training_valley_yellow_step9 begin
+		when letter begin
+			target.pos("__TARGET__", 650, 1420, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#9)")
+			q.set_title("騎馬修練中(#9)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#9 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_yellow_step8 begin
+		when letter begin
+			target.pos("__TARGET__", 970, 1080, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#8)")
+			q.set_title("騎馬修練中(#8)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#8 已經移動到目標位置")
+			setstate(training_valley_yellow_step9)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_yellow_step7 begin
+		when letter begin
+			target.pos("__TARGET__", 780, 1080, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#7)")
+			q.set_title("騎馬修練中(#7)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#7 已經移動到目標位置")
+			setstate(training_valley_yellow_step8)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_yellow_step6 begin
+		when letter begin
+			target.pos("__TARGET__", 710, 730, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#6)")
+			q.set_title("騎馬修練中(#6)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#6 已經移動到目標位置")
+			setstate(training_valley_yellow_step7)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_yellow_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 1090, 510, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#5)")
+			q.set_title("騎馬修練中(#5)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#5 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_yellow_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 1300, 500, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(training_valley_yellow_step5)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_yellow_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 1350, 640, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_valley_yellow_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_yellow_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 1340, 1140, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_valley_yellow_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_valley_yellow_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 970, 1080, 64, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=64 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(64, 650, 1420)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(64, 650, 1420)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=64 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(64, 650, 1420)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(64, 650, 1420)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_valley_yellow_step2)
+		end
+	end
+	state training_snow_red_step9 begin
+		when letter begin
+			target.pos("__TARGET__", 160, 270, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#9)")
+			q.set_title("騎馬修練中(#9)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#9 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_red_step8 begin
+		when letter begin
+			target.pos("__TARGET__", 170, 620, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#8)")
+			q.set_title("騎馬修練中(#8)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#8 已經移動到目標位置")
+			setstate(training_snow_red_step9)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_red_step7 begin
+		when letter begin
+			target.pos("__TARGET__", 580, 350, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#7)")
+			q.set_title("騎馬修練中(#7)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#7 已經移動到目標位置")
+			setstate(training_snow_red_step8)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_red_step6 begin
+		when letter begin
+			target.pos("__TARGET__", 760, 610, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#6)")
+			q.set_title("騎馬修練中(#6)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#6 已經移動到目標位置")
+			setstate(training_snow_red_step7)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_red_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 790, 810, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#5)")
+			q.set_title("騎馬修練中(#5)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#5 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_red_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 670, 820, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(training_snow_red_step5)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_red_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 760, 610, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_snow_red_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_red_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 580, 350, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_snow_red_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_red_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 170, 620, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=61 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(61, 160, 270)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(61, 160, 270)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=61 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(61, 160, 270)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(61, 160, 270)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_snow_red_step2)
+		end
+	end
+	state training_snow_blue_step9 begin
+		when letter begin
+			target.pos("__TARGET__", 1380, 160, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#9)")
+			q.set_title("騎馬修練中(#9)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#9 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_blue_step8 begin
+		when letter begin
+			target.pos("__TARGET__", 1240, 290, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#8)")
+			q.set_title("騎馬修練中(#8)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#8 已經移動到目標位置")
+			setstate(training_snow_blue_step9)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_blue_step7 begin
+		when letter begin
+			target.pos("__TARGET__", 1330, 540, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#7)")
+			q.set_title("騎馬修練中(#7)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#7 已經移動到目標位置")
+			setstate(training_snow_blue_step8)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_blue_step6 begin
+		when letter begin
+			target.pos("__TARGET__", 950, 470, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#6)")
+			q.set_title("騎馬修練中(#6)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#6 已經移動到目標位置")
+			setstate(training_snow_blue_step7)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_blue_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 760, 610, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#5)")
+			q.set_title("騎馬修練中(#5)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#5 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_blue_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 810, 120, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(training_snow_blue_step5)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_blue_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 760, 610, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_snow_blue_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_blue_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 1010, 180, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_snow_blue_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_blue_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 1240, 290, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=61 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(61, 1380, 160)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(61, 1380, 160)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=61 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(61, 1380, 160)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(61, 1380, 160)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_snow_blue_step2)
+		end
+	end
+	state training_snow_yellow_step9 begin
+		when letter begin
+			target.pos("__TARGET__", 760, 1380, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#9)")
+			q.set_title("騎馬修練中(#9)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#9)"..locale.NORMAL_COLOR)
+			say("#9 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#9 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_yellow_step8 begin
+		when letter begin
+			target.pos("__TARGET__", 390, 1160, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#8)")
+			q.set_title("騎馬修練中(#8)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#8)"..locale.NORMAL_COLOR)
+			say("#8 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#8 已經移動到目標位置")
+			setstate(training_snow_yellow_step9)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_yellow_step7 begin
+		when letter begin
+			target.pos("__TARGET__", 400, 1040, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#7)")
+			q.set_title("騎馬修練中(#7)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#7)"..locale.NORMAL_COLOR)
+			say("#7 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#7 已經移動到目標位置")
+			setstate(training_snow_yellow_step8)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_yellow_step6 begin
+		when letter begin
+			target.pos("__TARGET__", 660, 1030, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#6)")
+			q.set_title("騎馬修練中(#6)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#6)"..locale.NORMAL_COLOR)
+			say("#6 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#6 已經移動到目標位置")
+			setstate(training_snow_yellow_step7)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_yellow_step5 begin
+		when letter begin
+			target.pos("__TARGET__", 770, 640, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#5)")
+			q.set_title("騎馬修練中(#5)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#5)"..locale.NORMAL_COLOR)
+			say("#5 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#5 已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_yellow_step4 begin
+		when letter begin
+			target.pos("__TARGET__", 660, 840, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#4)")
+			q.set_title("騎馬修練中(#4)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#4)"..locale.NORMAL_COLOR)
+			say("#4 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#4 已經移動到目標位置")
+			setstate(training_snow_yellow_step5)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_yellow_step3 begin
+		when letter begin
+			target.pos("__TARGET__", 660, 1030, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#3)")
+			q.set_title("騎馬修練中(#3)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#3)"..locale.NORMAL_COLOR)
+			say("#3 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#3 已經移動到目標位置")
+			setstate(training_snow_yellow_step4)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_yellow_step2 begin
+		when letter begin
+			target.pos("__TARGET__", 1100, 1080, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#2)")
+			q.set_title("騎馬修練中(#2)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#2)"..locale.NORMAL_COLOR)
+			say("#2 請移動到目標位置")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#2 已經移動到目標位置")
+			setstate(training_snow_yellow_step3)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training_snow_yellow_step1 begin
+		when letter begin
+			target.pos("__TARGET__", 940, 1320, 61, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬修練中(#1)")
+			q.set_title("騎馬修練中(#1)")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=61 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(61, 760, 1380)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(61, 760, 1380)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."騎馬修練中(#1)"..locale.NORMAL_COLOR)
+			say("#1 請移動到目標位置")
+			say("")
+			if pc.get_map_index()!=61 then
+				say("為了進行騎馬修練,將傳送到其他地圖")
+				local b=select("進行", "放棄")
+				if 1==b then
+					pc.warp_local(61, 760, 1380)
+				elseif 2==b then
+					say("你想放棄這個任務嗎?")
+					local b=select("是的", "不是")
+					if 1==b then
+						setstate(start)
+						q.done()
+					elseif 2==b then
+						pc.warp_local(61, 760, 1380)
+					else
+						say("UNKNOWN BUTTON ["..b.."]")
+					end
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("#1 已經移動到目標位置")
+			setstate(training_snow_yellow_step2)
+		end
+	end
+	state training1_normal1 begin
+		when letter begin
+			pc.setqf("flag1", 0)
+			pc.setqf("flag2", 0)
+			target.pos("target1", 586, 1139, 1, "")
+			target.pos("target2", 260, 1172, 1, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到各個目標的位置")
+			q.set_title("請移動到各個目標的位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when target1.target.arrive begin
+			target.delete("target1")
+			say("到達 目標位置 1")
+			pc.setqf("flag1", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when target2.target.arrive begin
+			target.delete("target2")
+			say("到達 目標位置 2")
+			pc.setqf("flag2", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training1_normal2 begin
+		when letter begin
+			pc.setqf("flag1", 0)
+			pc.setqf("flag2", 0)
+			target.pos("target1", 221, 821, 1, "")
+			target.pos("target2", 305, 419, 1, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到各個目標的位置")
+			q.set_title("請移動到各個目標的位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when target1.target.arrive begin
+			target.delete("target1")
+			say("到達 目標位置 1")
+			pc.setqf("flag1", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when target2.target.arrive begin
+			target.delete("target2")
+			say("到達 目標位置 2")
+			pc.setqf("flag2", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training1_normal3 begin
+		when letter begin
+			pc.setqf("flag1", 0)
+			pc.setqf("flag2", 0)
+			target.pos("target1", 215, 176, 1, "")
+			target.pos("target2", 838, 248, 1, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到各個目標的位置")
+			q.set_title("請移動到各個目標的位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when target1.target.arrive begin
+			target.delete("target1")
+			say("到達 目標位置 1")
+			pc.setqf("flag1", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when target2.target.arrive begin
+			target.delete("target2")
+			say("到達 目標位置 2")
+			pc.setqf("flag2", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training1_normal4 begin
+		when letter begin
+			pc.setqf("flag1", 0)
+			pc.setqf("flag2", 0)
+			target.pos("target1", 886, 728, 1, "")
+			target.pos("target2", 601, 986, 1, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到各個目標的位置")
+			q.set_title("請移動到各個目標的位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when target1.target.arrive begin
+			target.delete("target1")
+			say("到達 目標位置 1")
+			pc.setqf("flag1", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when target2.target.arrive begin
+			target.delete("target2")
+			say("到達 目標位置 2")
+			pc.setqf("flag2", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training2_normal1 begin
+		when letter begin
+			pc.setqf("flag1", 0)
+			pc.setqf("flag2", 0)
+			target.pos("target1", 287, 449, 21, "")
+			target.pos("target2", 514, 209, 21, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到各個目標的位置")
+			q.set_title("請移動到各個目標的位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when target1.target.arrive begin
+			target.delete("target1")
+			say("到達 目標位置 1")
+			pc.setqf("flag1", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when target2.target.arrive begin
+			target.delete("target2")
+			say("到達 目標位置 2")
+			pc.setqf("flag2", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training2_normal2 begin
+		when letter begin
+			pc.setqf("flag1", 0)
+			pc.setqf("flag2", 0)
+			target.pos("target1", 649, 377, 21, "")
+			target.pos("target2", 883, 491, 21, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到各個目標的位置")
+			q.set_title("請移動到各個目標的位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when target1.target.arrive begin
+			target.delete("target1")
+			say("到達 目標位置 1")
+			pc.setqf("flag1", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when target2.target.arrive begin
+			target.delete("target2")
+			say("到達 目標位置 2")
+			pc.setqf("flag2", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training2_normal3 begin
+		when letter begin
+			pc.setqf("flag1", 0)
+			pc.setqf("flag2", 0)
+			target.pos("target1", 859, 824, 21, "")
+			target.pos("target2", 670, 1025, 21, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到各個目標的位置")
+			q.set_title("請移動到各個目標的位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when target1.target.arrive begin
+			target.delete("target1")
+			say("到達 目標位置 1")
+			pc.setqf("flag1", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when target2.target.arrive begin
+			target.delete("target2")
+			say("到達 目標位置 2")
+			pc.setqf("flag2", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training2_normal4 begin
+		when letter begin
+			pc.setqf("flag1", 0)
+			pc.setqf("flag2", 0)
+			target.pos("target1", 212, 992, 21, "")
+			target.pos("target2", 211, 488, 21, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到各個目標的位置")
+			q.set_title("請移動到各個目標的位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when target1.target.arrive begin
+			target.delete("target1")
+			say("到達 目標位置 1")
+			pc.setqf("flag1", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when target2.target.arrive begin
+			target.delete("target2")
+			say("到達 目標位置 2")
+			pc.setqf("flag2", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training3_normal1 begin
+		when letter begin
+			pc.setqf("flag1", 0)
+			pc.setqf("flag2", 0)
+			target.pos("target1", 200, 713, 41, "")
+			target.pos("target2", 200, 356, 41, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到各個目標的位置")
+			q.set_title("請移動到各個目標的位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when target1.target.arrive begin
+			target.delete("target1")
+			say("到達 目標位置 1")
+			pc.setqf("flag1", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when target2.target.arrive begin
+			target.delete("target2")
+			say("到達 目標位置 2")
+			pc.setqf("flag2", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training3_normal2 begin
+		when letter begin
+			pc.setqf("flag1", 0)
+			pc.setqf("flag2", 0)
+			target.pos("target1", 176, 1061, 41, "")
+			target.pos("target2", 422, 827, 41, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到各個目標的位置")
+			q.set_title("請移動到各個目標的位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when target1.target.arrive begin
+			target.delete("target1")
+			say("到達 目標位置 1")
+			pc.setqf("flag1", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when target2.target.arrive begin
+			target.delete("target2")
+			say("到達 目標位置 2")
+			pc.setqf("flag2", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training3_normal3 begin
+		when letter begin
+			pc.setqf("flag1", 0)
+			pc.setqf("flag2", 0)
+			target.pos("target1", 757, 869, 41, "")
+			target.pos("target2", 772, 446, 41, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到各個目標的位置")
+			q.set_title("請移動到各個目標的位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when target1.target.arrive begin
+			target.delete("target1")
+			say("到達 目標位置 1")
+			pc.setqf("flag1", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when target2.target.arrive begin
+			target.delete("target2")
+			say("到達 目標位置 2")
+			pc.setqf("flag2", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training3_normal4 begin
+		when letter begin
+			pc.setqf("flag1", 0)
+			pc.setqf("flag2", 0)
+			target.pos("target1", 808, 314, 41, "")
+			target.pos("target2", 206, 191, 41, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到各個目標的位置")
+			q.set_title("請移動到各個目標的位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到各個目標的位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+			say("")
+			if pc.getqf("flag1")==1 then
+				say("目標位置1: 完成")
+			elseif pc.getqf("flag1")==0 then
+				say("目標位置1: 進行中")
+			end
+			if pc.getqf("flag2")==1 then
+				say("目標位置2: 完成")
+			elseif pc.getqf("flag2")==0 then
+				say("目標位置2: 進行中")
+			end
+			say("")
+			local b=select("進行", "任務終止")
+			if 1==b then
+			elseif 2==b then
+				say("你真的想中止任務嗎??")
+				say("明天你再重新開始騎馬任務吧")
+				local b=select("是的", "不是")
+				if 1==b then
+					setstate(start)
+				elseif 2==b then
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when target1.target.arrive begin
+			target.delete("target1")
+			say("到達 目標位置 1")
+			pc.setqf("flag1", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when target2.target.arrive begin
+			target.delete("target2")
+			say("到達 目標位置 2")
+			pc.setqf("flag2", 1)
+			if pc.getqf("flag1")==1 and pc.getqf("flag2")==1 then
+				setstate(report)
+			end
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training1_easy1 begin
+		when letter begin
+			target.pos("__TARGET__", 84, 602, 1, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到目標位置")
+			q.set_title("請移動到目標位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training1_easy2 begin
+		when letter begin
+			target.pos("__TARGET__", 591, 1166, 1, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到目標位置")
+			q.set_title("請移動到目標位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training1_easy3 begin
+		when letter begin
+			target.pos("__TARGET__", 913, 1013, 1, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到目標位置")
+			q.set_title("請移動到目標位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training1_easy4 begin
+		when letter begin
+			target.pos("__TARGET__", 405, 73, 1, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到目標位置")
+			q.set_title("請移動到目標位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training2_easy1 begin
+		when letter begin
+			target.pos("__TARGET__", 298, 638, 21, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到目標位置")
+			q.set_title("請移動到目標位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training2_easy2 begin
+		when letter begin
+			target.pos("__TARGET__", 358, 1110, 21, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到目標位置")
+			q.set_title("請移動到目標位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training2_easy3 begin
+		when letter begin
+			target.pos("__TARGET__", 876, 1025, 21, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到目標位置")
+			q.set_title("請移動到目標位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training2_easy4 begin
+		when letter begin
+			target.pos("__TARGET__", 908, 87, 21, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到目標位置")
+			q.set_title("請移動到目標位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training3_easy1 begin
+		when letter begin
+			target.pos("__TARGET__", 125, 1118, 41, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到目標位置")
+			q.set_title("請移動到目標位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training3_easy2 begin
+		when letter begin
+			target.pos("__TARGET__", 670, 1157, 41, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到目標位置")
+			q.set_title("請移動到目標位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training3_easy3 begin
+		when letter begin
+			target.pos("__TARGET__", 819, 315, 41, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到目標位置")
+			q.set_title("請移動到目標位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state training3_easy4 begin
+		when letter begin
+			target.pos("__TARGET__", 137, 126, 41, "")
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("請移動到目標位置")
+			q.set_title("請移動到目標位置")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."請移動到目標位置"..locale.NORMAL_COLOR)
+			say("請騎馬移動到地圖上所顯示的位置")
+			say("移動中下馬或者使用傳送卷的話,任務會失敗")
+		end
+		when 22000.use begin
+			setstate(failure)
+		end
+		when 22010.use begin
+			setstate(failure)
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			say("已經移動到目標位置")
+			setstate(report)
+		end
+		when unmount begin
+			setstate(failure)
+		end
+	end
+	state start begin
+		when 20349.chat."我想學習騎馬" with horse.get_grade()==1 and (horse.get_level()>=1 and horse.get_level()<=10) begin
+			if pc.countitem("50050")<1 then
+				say("為了修練必須擁有馬牌")
+				say("結果或直接顯示在馬牌上")
+				say("")
+				setstate(need_item50050)
+			elseif get_time()<pc.getqf("next_time") then
+				say("馬也需要時間休息")
+				say("明天再來怎麼樣?")
+			elseif horse.get_stamina_pct()<=10 then
+				say("馬看上去很累, 讓它好好休息之後")
+				say("再開始修練比較好吧")
+			elseif horse.get_health_pct()<=10 then
+				say("看上去馬很餓")
+				say("修練很重要, 但是也應該先讓它吃點東西")
+			elseif horse.get_level()==10 then
+				say("你的馬現在已經不需要再練習騎馬")
+				say("現在會成長到成年馬")
+			elseif horse.is_riding()==0 then
+				say("你騎著馬來找我吧")
+			elseif (horse.get_level()>=8 and horse.get_level()<=9) then
+				say("騎馬修練度差些可以完成!")
+				say("騎著馬去中立地帶看看")
+				say("這是一個比較危險的地帶")
+				say("如果遇到了危險, 記得安全至上")
+				say("我相信你會做到的!")
+				say("如果距離太遠的時候, 你可以使用傳送卷")
+				say("那好吧, 等下見!")
+				say("修練結果會顯示在馬牌上!")
+				say("現在你要準備要將幼馬成長到成年馬了嗎!")
+				if is_test_server() then
+					pc.setqf("next_time", get_time()+10)
+				else
+					pc.setqf("next_time", get_time()+number(12, 24)*60*60)
+				end
+				if is_test_server() then
+					local s=select("1 val(1) 12.50%","2 val(1) 12.50%","3 val(1) 12.50%","4 val(1) 12.50%","5 val(1) 12.50%","6 val(1) 12.50%","7 val(1) 12.50%","8 val(1) 12.50%")
+					if 1==s then
+						setstate(training_frame_red_step1)
+					elseif 2==s then
+						setstate(training_frame_blue_step1)
+					elseif 3==s then
+						setstate(training_frame_yellow_step1)
+					elseif 4==s then
+						setstate(training_frame_purple_step1)
+					elseif 5==s then
+						setstate(training_frame_white_step1)
+					elseif 6==s then
+						setstate(training_snow_red_step1)
+					elseif 7==s then
+						setstate(training_snow_blue_step1)
+					elseif 8==s then
+						setstate(training_snow_yellow_step1)
+					end
+				else
+					local s=number(1, 8)
+					if 1>=s then -- 12.50% (1/8)
+						setstate(training_frame_red_step1)
+					elseif 2>=s then -- 12.50% (1/8)
+						setstate(training_frame_blue_step1)
+					elseif 3>=s then -- 12.50% (1/8)
+						setstate(training_frame_yellow_step1)
+					elseif 4>=s then -- 12.50% (1/8)
+						setstate(training_frame_purple_step1)
+					elseif 5>=s then -- 12.50% (1/8)
+						setstate(training_frame_white_step1)
+					elseif 6>=s then -- 12.50% (1/8)
+						setstate(training_snow_red_step1)
+					elseif 7>=s then -- 12.50% (1/8)
+						setstate(training_snow_blue_step1)
+					elseif 8>=s then -- 12.50% (1/8)
+						setstate(training_snow_yellow_step1)
+					end
+				end
+			elseif (horse.get_level()>=6 and horse.get_level()<=7) then
+				say("看上去你騎馬的能力好多了!")
+				say("騎著馬去中立地帶看看")
+				say("這是一個比較危險的地帶")
+				say("如果遇到了危險, 記得安全至上")
+				say("我相信你會做到的!")
+				say("如果距離太遠的時候, 你可以使用傳送卷")
+				say("那好吧, 等下見!")
+				say("修練結果會顯示在馬牌上!")
+				say("現在你要準備要將幼馬成長到成年馬了嗎!")
+				if is_test_server() then
+					pc.setqf("next_time", get_time()+10)
+				else
+					pc.setqf("next_time", get_time()+number(12, 24)*60*60)
+				end
+				if is_test_server() then
+					local s=select("1 val(1) 11.11%","2 val(1) 11.11%","3 val(1) 11.11%","4 val(1) 11.11%","5 val(1) 11.11%","6 val(1) 11.11%","7 val(1) 11.11%","8 val(1) 11.11%","9 val(1) 11.11%")
+					if 1==s then
+						setstate(training_valley_red_step1)
+					elseif 2==s then
+						setstate(training_valley_blue_step1)
+					elseif 3==s then
+						setstate(training_valley_yellow_step1)
+					elseif 4==s then
+						setstate(training_desert_red_step1)
+					elseif 5==s then
+						setstate(training_desert_blue_step1)
+					elseif 6==s then
+						setstate(training_desert_yellow_step1)
+					elseif 7==s then
+						setstate(training_desert_purple_step1)
+					elseif 8==s then
+						setstate(training_desert_white_step1)
+					elseif 9==s then
+						setstate(training_desert_sky_step1)
+					end
+				else
+					local s=number(1, 9)
+					if 1>=s then -- 11.11% (1/9)
+						setstate(training_valley_red_step1)
+					elseif 2>=s then -- 11.11% (1/9)
+						setstate(training_valley_blue_step1)
+					elseif 3>=s then -- 11.11% (1/9)
+						setstate(training_valley_yellow_step1)
+					elseif 4>=s then -- 11.11% (1/9)
+						setstate(training_desert_red_step1)
+					elseif 5>=s then -- 11.11% (1/9)
+						setstate(training_desert_blue_step1)
+					elseif 6>=s then -- 11.11% (1/9)
+						setstate(training_desert_yellow_step1)
+					elseif 7>=s then -- 11.11% (1/9)
+						setstate(training_desert_purple_step1)
+					elseif 8>=s then -- 11.11% (1/9)
+						setstate(training_desert_white_step1)
+					elseif 9>=s then -- 11.11% (1/9)
+						setstate(training_desert_sky_step1)
+					end
+				end
+			elseif (horse.get_level()>=3 and horse.get_level()<=5) then
+				say("看上去你騎馬的能力好多了!")
+				say("現在我們要提高你的修練難易度")
+				say("你去試試城市以外的主要地點")
+				say("你一定要好好保管你的馬牌")
+				say("你可以看的到你修練成果在你的馬牌上")
+				if is_test_server() then
+					pc.setqf("next_time", get_time()+10)
+				else
+					pc.setqf("next_time", get_time()+number(12, 24)*60*60)
+				end
+				if pc.get_empire()==1 then
+					if is_test_server() then
+						local s=select("1 val(1) 25.00%","2 val(1) 25.00%","3 val(1) 25.00%","4 val(1) 25.00%")
+						if 1==s then
+							setstate(training1_normal1)
+						elseif 2==s then
+							setstate(training1_normal2)
+						elseif 3==s then
+							setstate(training1_normal3)
+						elseif 4==s then
+							setstate(training1_normal4)
+						end
+					else
+						local s=number(1, 4)
+						if 1>=s then -- 25.00% (1/4)
+							setstate(training1_normal1)
+						elseif 2>=s then -- 25.00% (1/4)
+							setstate(training1_normal2)
+						elseif 3>=s then -- 25.00% (1/4)
+							setstate(training1_normal3)
+						elseif 4>=s then -- 25.00% (1/4)
+							setstate(training1_normal4)
+						end
+					end
+				elseif pc.get_empire()==2 then
+					if is_test_server() then
+						local s=select("1 val(1) 25.00%","2 val(1) 25.00%","3 val(1) 25.00%","4 val(1) 25.00%")
+						if 1==s then
+							setstate(training2_normal1)
+						elseif 2==s then
+							setstate(training2_normal2)
+						elseif 3==s then
+							setstate(training2_normal3)
+						elseif 4==s then
+							setstate(training2_normal4)
+						end
+					else
+						local s=number(1, 4)
+						if 1>=s then -- 25.00% (1/4)
+							setstate(training2_normal1)
+						elseif 2>=s then -- 25.00% (1/4)
+							setstate(training2_normal2)
+						elseif 3>=s then -- 25.00% (1/4)
+							setstate(training2_normal3)
+						elseif 4>=s then -- 25.00% (1/4)
+							setstate(training2_normal4)
+						end
+					end
+				elseif pc.get_empire()==3 then
+					if is_test_server() then
+						local s=select("1 val(1) 25.00%","2 val(1) 25.00%","3 val(1) 25.00%","4 val(1) 25.00%")
+						if 1==s then
+							setstate(training3_normal1)
+						elseif 2==s then
+							setstate(training3_normal2)
+						elseif 3==s then
+							setstate(training3_normal3)
+						elseif 4==s then
+							setstate(training3_normal4)
+						end
+					else
+						local s=number(1, 4)
+						if 1>=s then -- 25.00% (1/4)
+							setstate(training3_normal1)
+						elseif 2>=s then -- 25.00% (1/4)
+							setstate(training3_normal2)
+						elseif 3>=s then -- 25.00% (1/4)
+							setstate(training3_normal3)
+						elseif 4>=s then -- 25.00% (1/4)
+							setstate(training3_normal4)
+						end
+					end
+				end
+			elseif (horse.get_level()>=1 and horse.get_level()<=2) then
+				say("你看上去想將幼馬成長到成年馬!")
+				say("但是你騎馬的能力還是不太好")
+				say("你需要多些練習騎馬")
+				say("騎馬就是最基礎的操縱技巧")
+				say("你騎著馬去城市附近")
+				say("你一定要好好保管你的馬牌 你一定要好好保管你的馬牌")
+				if is_test_server() then
+					pc.setqf("next_time", get_time()+10)
+				else
+					pc.setqf("next_time", get_time()+number(12, 24)*60*60)
+				end
+				if pc.get_empire()==1 then
+					if is_test_server() then
+						local s=select("1 val(1) 25.00%","2 val(1) 25.00%","3 val(1) 25.00%","4 val(1) 25.00%")
+						if 1==s then
+							setstate(training1_easy1)
+						elseif 2==s then
+							setstate(training1_easy2)
+						elseif 3==s then
+							setstate(training1_easy3)
+						elseif 4==s then
+							setstate(training1_easy4)
+						end
+					else
+						local s=number(1, 4)
+						if 1>=s then -- 25.00% (1/4)
+							setstate(training1_easy1)
+						elseif 2>=s then -- 25.00% (1/4)
+							setstate(training1_easy2)
+						elseif 3>=s then -- 25.00% (1/4)
+							setstate(training1_easy3)
+						elseif 4>=s then -- 25.00% (1/4)
+							setstate(training1_easy4)
+						end
+					end
+				elseif pc.get_empire()==2 then
+					if is_test_server() then
+						local s=select("1 val(1) 25.00%","2 val(1) 25.00%","3 val(1) 25.00%","4 val(1) 25.00%")
+						if 1==s then
+							setstate(training2_easy1)
+						elseif 2==s then
+							setstate(training2_easy2)
+						elseif 3==s then
+							setstate(training2_easy3)
+						elseif 4==s then
+							setstate(training2_easy4)
+						end
+					else
+						local s=number(1, 4)
+						if 1>=s then -- 25.00% (1/4)
+							setstate(training2_easy1)
+						elseif 2>=s then -- 25.00% (1/4)
+							setstate(training2_easy2)
+						elseif 3>=s then -- 25.00% (1/4)
+							setstate(training2_easy3)
+						elseif 4>=s then -- 25.00% (1/4)
+							setstate(training2_easy4)
+						end
+					end
+				elseif pc.get_empire()==3 then
+					if is_test_server() then
+						local s=select("1 val(1) 25.00%","2 val(1) 25.00%","3 val(1) 25.00%","4 val(1) 25.00%")
+						if 1==s then
+							setstate(training3_easy1)
+						elseif 2==s then
+							setstate(training3_easy2)
+						elseif 3==s then
+							setstate(training3_easy3)
+						elseif 4==s then
+							setstate(training3_easy4)
+						end
+					else
+						local s=number(1, 4)
+						if 1>=s then -- 25.00% (1/4)
+							setstate(training3_easy1)
+						elseif 2>=s then -- 25.00% (1/4)
+							setstate(training3_easy2)
+						elseif 3>=s then -- 25.00% (1/4)
+							setstate(training3_easy3)
+						elseif 4>=s then -- 25.00% (1/4)
+							setstate(training3_easy4)
+						end
+					end
+				end
+			else
+				say("騎馬任務狀態上出現錯誤")
+			end
+		end
+	end
+	state need_item50050 begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("去找馬牌!")
+			q.set_title("去找馬牌!")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 去找馬牌!"..locale.NORMAL_COLOR)
+			say("為了進行幼馬任務")
+			say("需要馬牌. 在下仙洞可以找到")
+			setstate(start)
+			q.done()
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 去找馬牌!"..locale.NORMAL_COLOR)
+			say("為了進行幼馬任務")
+			say("需要馬牌. 在下仙洞可以找到")
+
+			setstate(start)
+			q.done()
+		end
+	end
+	state failure begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("騎馬任務失敗")
+			q.set_title("騎馬任務失敗")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 騎馬任務失敗"..locale.NORMAL_COLOR)
+			say("你下馬或者使用傳送卷")
+			say("所以騎馬任務失敗了")
+			setstate(start)
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 騎馬任務失敗"..locale.NORMAL_COLOR)
+			say("你下馬或者使用傳送卷")
+			say("所以騎馬任務失敗了")
+			setstate(start)
+		end
+	end
+	state report begin
+		when letter begin
+			local v=find_npc_by_vnum(20349)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("回去找馬夫")
+			q.set_title("回去找馬夫")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."回去找馬夫"..locale.NORMAL_COLOR)
+			say("你回去找馬夫的時候,")
+			say("可以查詢你的修練是否成功")
+			say("")
+			say("修練已經完成, 所以現在可以使用傳送卷")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."回去找馬夫"..locale.NORMAL_COLOR)
+			say("你回去找馬夫的時候,")
+			say("可以查詢你的修練是否成功")
+
+			say("")
+			say("修練已經完成, 所以現在可以使用傳送卷")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say("你有認真修練馬術嗎?")
+			say("你明天再來練習馬術吧")
+			say("今天修練的結果, 你可以查看一下你的馬牌")
+			setstate(reward)
+		end
+	end
+	state reward begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("查看幼馬修練結果")
+			q.set_title("查看幼馬修練結果")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.." 查看幼馬修練結果"..locale.NORMAL_COLOR)
+			if horse.get_level()>=11 then
+				say("現在你的馬已經準備好成長到成年馬")
+			elseif (horse.get_level()>=1 and horse.get_level()<=10) then
+				local s=number(1, 2)
+				if 1>=s then -- 50.00% (1/2)
+					say("騎馬修練失敗了")
+					say("")
+					say("回去找馬夫的話, 可以重新開始任務")
+					pc.setqf("next_time", 0)
+				elseif 2>=s then -- 50.00% (1/2)
+					say("騎馬修練成功")
+					if pc.countitem("50050")>=1 then
+						char_log(0, "PONY_ADVANCE", "BEGIN")
+						pc.removeitem("50050", 1)
+						char_log(0, "PONY_ADVANCE", "DEC 50050 1")
+						horse.unride()
+						horse.advance()
+						horse.ride()
+						char_log(0, "PONY_ADVANCE", "INC horse_advance 1")
+						char_log(0, "PONY_ADVANCE", "END")
+						say("騎馬修練成功，馬匹升級了上升到等級"..(horse.get_level()).."")
+						say("")
+						if horse.get_level()==10 then
+							say("回去找馬夫的話")
+							say("可以將幼馬成長到成年馬")
+							pc.setqf("next_time", 0)
+						else
+							say("為了成長到成年馬")
+							say(",等級必須為等級10以上")
+						end
+					else
+						say("你沒有馬牌, 所以無法知道結果")
+					end
+				end
+			end
+			setstate(start)
+			q.done()
+		end
+	end
+state __COMPLETE__ begin
+	when enter begin
+		q.done()
+	end
+end
+end

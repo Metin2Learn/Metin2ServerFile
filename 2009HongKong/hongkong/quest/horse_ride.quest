@@ -1,0 +1,44 @@
+quest horse_ride begin
+    state start begin
+	when 20349.chat."下馬" with pc.level>=10 and pc.is_mount() begin
+	    local msg = "你想下馬嗎?"
+	    say(msg)
+	    local s = select("下馬", "不下馬")
+	    if s==1 then
+		pc.unmount()
+	    end
+	end
+	when 20349.chat."騎馬 (利用騎馬卷)" with pc.level>=10 and not pc.is_mount() begin
+	    --local money = 10000
+	    if get_global_time() - pc.getqf("ride_time") < 3600 then
+		local no_lend_horse_yet =
+		    "可以借馬的時間還沒到.[ENTER]"..
+		    "請稍後再來."
+		say(no_lend_horse_yet)	
+	    else
+		local msg =
+		    "你想騎馬嗎?[ENTER]"..
+		    "帶騎馬卷的時候可以借馬[ENTER]"..
+		    "你騎馬的能力,只可以維持10分鐘.[ENTER]"..
+		    "你騎馬的能力,還不熟練[ENTER]"..
+		    "你可以騎馬,可以移動[ENTER]"..
+		    "但是無法攻擊."
+		local no_horse_ticket = "請你帶騎馬卷再過來把."
+		--local horse_ticket_vnum = 50005
+		local horse_ticket_vnum = 50083
+		say(msg)
+		local s=select("騎馬","不騎馬")
+		if s==1 then
+		    if pc.countitem(horse_ticket_vnum)>0 then
+			pc.removeitem(horse_ticket_vnum, 1)
+			pc.mount(20030, 600)
+			pc.setqf("ride_time", get_global_time())
+		    else
+			say(no_horse_ticket)
+		    end
+		end
+	    end
+	end
+    end
+end
+

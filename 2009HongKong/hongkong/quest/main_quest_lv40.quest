@@ -1,0 +1,456 @@
+----------------------------------
+--	MAIN QUEST LV40
+--	在秘宗寺院尋找線索
+----------------------------------
+
+quest main_quest_lv40 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter with pc.get_level() >= 40 begin
+			set_state( information )		
+		end
+	end
+	state information begin
+		when letter begin
+			send_letter("古代日記簿的分頁")
+		end
+		when button or info begin
+			say_title("在秘宗寺院尋找線索")
+			say("")
+			say("在之前的30等級找到了")
+			say("2個古代日記簿的分頁")
+			say("第三個古代日記簿的分頁的線索要在秘宗寺院")
+			say("尋找.")
+		   	say("打獵在秘宗寺院居住的真秘宗扇兵")
+		   	say("也許能找到線索.")
+			say("")
+		end
+
+		when 731.kill begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30150")==0 then
+				pc.give_item2(30150, 1)
+				set_state(gototeacher)
+			end
+		end
+	end
+
+	state gototeacher begin
+		when letter begin
+			send_letter("第三個古代日記簿的分頁")
+
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "老學究 ")
+			end
+		end
+		when button or info begin
+			say_title("在秘宗寺院找到的線索")
+			say("")
+		   	say("打獵居住在密教寺院的真秘宗扇兵")
+		   	say("找到了線索.")
+			say("到老學究那裡聽解讀")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20011.chat."第三個古代日記簿的分頁.." begin
+			target.delete("__TARGET__")
+			---                                                   l
+			say("老學究:")
+			say("噢， 找到下一個線索了嗎?")
+   			say("這是第三個古代日記簿的分頁了吧.")
+   			say("看一下是什麼內容?")
+			wait()
+			---                                                   l
+			say("")
+			say_reward("尋找充滿邪惡氣息的場所，來到了寺院")
+   			say_reward("但是不夠完成咒文.")
+   			say_reward("到底到哪裡才能發動咒文呢?")
+   			say_reward("剛好接到信息")
+   			say_reward("也許影悲沙漠就是被隱藏的場所.")
+   			say_reward("我們滿懷希望向影悲沙漠")
+   			say_reward("移動")
+			say("")
+			wait()
+			say("老學究 :")
+			say("嗯.. 在昇龍谷他們沒能")
+			say("達到目標")
+			say("影悲沙漠是一個人煙稀少")
+			say("至今還有未知領域的地方.")
+			say("很複雜的地方..")
+			say("他們到底去往哪裡了呢?")
+			say("我想去中仙洞看看為好.")
+			say("中仙洞是深深的洞的形態")
+			say("也許剛好合適聚集邪惡的氣息")
+			say("")
+			wait()
+			say("老學究")
+			say("這是找到第三個古代日記簿的分頁的")
+			say("報酬..")
+			say("")
+			say_reward("獲得經驗值 2000000")
+			pc.give_exp2(2000000)
+			set_quest_state("levelup","run")
+			
+			say_reward("獲得 50000兩")
+			pc.change_money(50000)
+			local stones = {28130,28131,28132,28133,28134,28135,28136,28137,28138,28139,28140,28141,28142,28143}
+	   		local stone = stones[number( 1 ,14)]
+			pc.give_item2(stone)
+			say_reward("獲得了" ..item_name(stone).."")
+			
+			local stone = stones[number( 1 ,14)]
+			pc.give_item2(stone)
+			say_reward("獲得了" ..item_name(stone).."")
+
+			pc.remove_item(30150)		
+			
+			set_state( godoc4 )	
+
+		end
+	end
+
+	state godoc4 begin
+		when letter begin
+			send_letter("去中仙洞")
+			
+			local v=find_npc_by_vnum(20360)
+			if 0==v then
+			else
+				target.vid("__TARGET1__", v, "尋找無名花石碑")
+			end
+			
+			local v=find_npc_by_vnum(20361)
+			if 0==v then
+			else
+				target.vid("__TARGET2__", v, "尋找無名水石碑")
+			end
+		end
+		
+		when button or info begin
+			say_title("去中仙洞尋找第四個古代日記簿的分頁")
+			say("")
+			say("根據老學究的推測中仙洞的石碑上")
+			say("可能會找到第四個古代日記簿的分頁的痕跡 ")
+			say("去中仙洞，尋找無名花石碑和無名水石碑")
+			say("2個石碑!")
+			say("這與第四個古代日記簿的分頁")
+			say("有密切的關係")
+			say("Tip:可以通過影悲沙漠下方的地牢守衛")
+			say("    去中仙洞")
+			say("")
+		end
+		when __TARGET1__.target.click or
+			20360.chat."無名花石碑"begin
+			target.delete("__TARGET1__")	
+			say_pc_name()
+			say("是無名花石碑!")
+			pc.setqf("click1",1)
+
+			if pc.getqf("click2") == 1 then
+				pc.setqf("click1",0)
+				pc.setqf("click2",0)
+				
+				pc.give_item2(30150)
+				set_state( gototeacher2)
+				return
+			end
+			say("接下來,,,")
+			say("找無名水石碑?")
+			say("太暗了，看不清楚")
+				
+			
+		end
+		
+		when __TARGET2__.target.click or 
+			20361.chat."是無名水石碑!"begin
+			target.delete("__TARGET2__")	
+			say_pc_name()
+			say("是無名水石碑!")
+			pc.setqf("click2",1);
+			
+			if pc.getqf("click1") == 1 then
+				pc.setqf("click1",0)
+				pc.setqf("click2",0)
+				pc.give_item2(30150)
+				set_state( gototeacher2)
+				return
+			end
+			say("接下來,,,")
+			say("找無名花石碑")
+			say("太暗了，看不清楚..")
+		end
+	end
+	
+	state gototeacher2 begin
+		when letter begin
+			send_letter("第四個古代日記簿的分頁")
+
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "找老學究")
+			end
+		end
+		when button or info begin
+			say_title("在中仙洞找到的線索")
+			say("")
+			say("把獲取的第四個古代日記簿的分頁")
+			say("拿給老學究吧.")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20011.chat."第四個古代日記簿的分頁.." begin
+			target.delete("__TARGET__")
+			---                                                   l
+			say("老學究:")
+			say("到中仙洞找到什麼質料了嗎?")
+			say("噢! 找到第四個古代日記簿的分頁了阿.")
+			say("希望這次一定有重要內容.")
+			say("")
+			wait()
+			say("")
+			say_reward("來到猴子們居住的深洞裡")
+			say_reward("但是遠不夠發動咒術.")
+			say_reward("時間越來越緊迫...")
+			say_reward("還沒有什麼方法")
+			say_reward("大家都在不安中煎熬.")
+			say_reward("是我們先找到場所呢，還是")
+			say_reward("太祖李攝的鐵甲騎兵隊先到呢...")
+			say_reward("要去掉不好的想法.")
+			say("")
+			wait()
+			say("")
+			say_reward("盡最快找到下一個場所.")
+			say_reward("接受其他人的建議")
+			say_reward("決定前往盤絲洞.")
+			say_reward("希望這次能達成我們的心願...")			
+			say("")
+			wait()
+			say("老學究:")
+			say("嗯. 看來中仙洞不是")
+			say("他們要找的地方...")
+			say("那只能按照這裡寫的前往下一個場所")
+			say("盤絲洞.")
+			say("但是在這之前，需要你確認一件事.")
+			say("最近城市裡有奇怪的外來人")
+			say("經常出現.")
+			say("聽說向村民收集")
+			say("一些情報.")
+			say("為此，警備隊長")
+			say("在苦惱.")
+			wait()
+			say("老學究:")
+			say("有些不好的預感...")
+			say("先去警備隊長那裡瞭解這件事吧.")
+			say("噢~ 差點忘了")
+			say("要給第四個古代日記簿的分頁的報酬..")
+			say("")
+			say_reward("獲得經驗值 2000000 ")
+			pc.give_exp2(2000000)
+			set_quest_state("levelup","run")
+			
+			say_reward("獲得了" ..item_name(71026).."")
+			pc.give_item2(71026)
+			say_reward("獲得了" ..item_name(50513).."")
+			pc.give_item2(50513)
+			pc.give_item2(50513)
+			pc.give_item2(50513)
+			pc.give_item2(50513)
+			pc.give_item2(50513)
+
+			pc.remove_item(30150)		
+			set_state( goboss )	
+
+		end
+	end
+	
+	state goboss begin
+		when letter begin
+			send_letter("可疑的群體")
+			
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "找警備隊長")
+			end
+		end
+		when button or info begin
+			say(locale.NOTICE_COLOR.."通過警備隊長瞭解可疑的群體"..locale.NORMAL_COLOR)
+			say("")	
+			say("聽說最近在村子周邊")
+			say("出現可疑的群體.")
+			say("他們好像在")
+			say("調查些什麼.")
+			say("警備隊長在找對策")
+			say("所以去找警備隊長. ")	
+			say("")
+		end
+		when __TARGET__.target.click or
+			20355.chat."關於可疑的群體"begin
+			target.delete("__TARGET__")
+			say("警備隊長 :")
+			say("最近有可疑的群體在村子周邊")
+			say("晃悠，是個問題.")
+			say("聽說在向村民們 ")
+			say("石碑和古代日記簿的分頁等事宜.")
+			say("其中有些人表示不知道")
+			say("結果受到身邊威脅.")
+			say("如今這樣被戰爭不安的時期")
+			say("這些傢伙來搗亂")
+			say("是成問題的.")
+			say("")
+			wait()
+			say("警備隊長:")
+			say("根据我的調查，第2 城市周邊的")
+			say("叫海寇的家伙跟他們")
+			say("有些關聯.")
+			say("你去調查海寇")
+			say("瞭解有關可疑的群體.")		
+			say("")
+			set_state(survey)
+		end
+	end
+
+
+	state survey begin
+		when letter begin
+			send_letter("找海寇")
+			
+			local v=find_npc_by_vnum(20364)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "海寇")
+			end
+		end
+		when button or info begin
+			say(locale.NOTICE_COLOR.."找海寇 "..locale.NORMAL_COLOR)
+			say("")	
+			say("要調查可疑的群體.")
+			say("第2 城市週邊的叫海寇的傢伙")
+			say("好像有些關聯.")
+			say("馬上調查有關海寇.")
+			say("")
+		end
+		when __TARGET__.target.click or 
+			20364.chat."咦? 跟我一樣的人" begin
+			target.delete("__TARGET__")
+			say("海寇 :")
+			say("咦? 跟我一樣的人")
+			say("什, 什麼事情啊?")
+			say("見~ 見~ 見過可疑的人了嗎?")
+			say("對不起，對不起.")
+			say("我絕對不是幫他們.")
+			say("只是因為戰爭，難以找工作")
+			say("還要養活妻兒...")
+			say("")
+			wait()
+			say("海寇:")
+			say("他們說只要簡單幫忙")
+			say("就給錢，所以才幫忙的.")
+			say("我也不大清楚")
+			say("他們是幹什麼的.")
+			say("我只是簡單地負責聯絡事宜.")
+			say("既然這樣，給你這個資料吧.")
+			say("好像是裝有")
+			say("他們的重要資訊的資料.")
+			say("我是負責把這個資料交給")
+			say("首領級怪物的..")
+			say("")
+			wait()
+			say("海寇 :")
+			say("去 首領級怪物 那裡")
+			say("也許會瞭解到什麼.")
+			say("請千萬不要向他們")
+			say("提起我，真的！拜託了.")
+			say("")
+			say_reward("取得秘密古代日記簿的分頁.")
+			say_reward("看一下古代日記簿的分頁的內容.")
+			say("")
+			wait()
+			say_reward("…太祖李攝通過鐵甲騎兵")
+			say_reward("建立了最初的統一帝國.")
+			say_reward("隨著惡運石的出現和魔王的登場")
+			say_reward("所有的國家陷入了混亂，統一國家")
+			say_reward("被分裂.")
+			say_reward("古代國家中的一個國與魔王的登場")
+			say_reward("好像有關聯.")
+			say_reward("惡運石是與魔王有關的謎團.")
+			say_reward("魔王因龍神的登場被封掉.")
+			say_reward("現在分為3個國家")
+			say_reward("進行著激烈的戰爭.")
+			say_reward("龍神給最強大的國家借給它的力量.")
+			say_reward("現在因惡運石")
+			say_reward("發生著各種各樣的事故…")
+			wait()
+			say_pc_name()
+			say("看來是有人整理的有關舊曆史的")
+			say("秘密古代日記簿的分頁.")
+			say("調查接收古代日記簿的分頁的 首領級怪物")
+			say("就可以知道更詳細的內容了.")
+			say("")
+			set_state(survey2)
+		end
+	end
+
+	state survey2 begin
+		when letter begin
+			send_letter("調查首領級怪物")
+		end
+		
+		when button or info begin
+			say(locale.NOTICE_COLOR.."調查首領級怪物 五狼霸王"..locale.NORMAL_COLOR)
+			say("")	
+			say("調查可疑群體的結果")
+			say("首領級怪物 五狼霸王是背後的勢力.")
+			say("也許調查五狼霸王")
+			say("就可以知道更詳細的內容.")
+			say("調查五狼霸王.")
+			say("五狼霸王在第2 城市的週邊登場.")
+			say("")
+		end
+		when 591.kill begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30150")==0 then
+				pc.give_item2(30150, 1)
+				set_state(_end_)
+			end
+		end
+	end
+
+	state _end_ begin
+		
+		when letter begin
+			send_letter("找到秘密古代日記簿的分頁")
+		end
+
+		when button or info begin
+			say_title("找到又一個秘密古代日記簿的分頁")
+			say("")
+			say("調查可疑群體的結果 ")
+			say("首領級怪物 五狼霸王是背後的勢力.")
+			say("抓到首領級怪物的結果")
+			say("獲取了第2個秘密古代日記簿的分頁")
+			say("雖然得到新的古代日記簿的分頁")
+			say("但是看不懂的內容.")
+			say("先回到老學究那裡請他解釋吧")
+			say("")
+			say_reward("Tip : 下一個古代日記簿的分頁的收集等級是47級以上")
+			say_reward("才可以履行.")
+			say("")
+
+			clear_letter()
+			set_state(__COMPLETE__)
+			set_quest_state("main_quest_lv47", "run")
+		end
+	
+	end
+	state __COMPLETE__ begin
+	end
+
+
+end
+	
+

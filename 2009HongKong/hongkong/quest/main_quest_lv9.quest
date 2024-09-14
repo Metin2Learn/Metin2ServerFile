@@ -1,0 +1,69 @@
+----------------------------------
+-- Main Quest LV9
+-- 新兵畢業  
+----------------------------------
+
+quest main_quest_lv9 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter begin
+			if  pc.get_level() >= 9 then 				
+				setstate( gototeacher )		
+			end
+		end
+	end
+	state gototeacher begin
+		when letter begin
+			local v=find_npc_by_vnum(20354)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找教官")
+			end
+			send_letter("新兵畢業 ")
+		end
+		when button begin
+			say(locale.NOTICE_COLOR..locale.MAIN_QUEST_TITLE_DICT[9]..locale.NORMAL_COLOR)
+			say("你可以畢業初心者的身分.")
+			say("恭喜你. 現在請你去找新兵教官.")
+			say("他會介紹警備隊長給你, 它會給你新任務.")
+			say("還有你會取得 金錢和經驗值")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR..locale.MAIN_QUEST_TITLE_DICT[9]..locale.NORMAL_COLOR)
+			say("跟教官對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			pc.give_exp2( 5000 )
+			set_quest_state("levelup","run")
+			say("教官:")
+			say("你過來吧, 比以前長大了很多")
+			say("現在你可以做得到好的士兵")
+			say(", 好好努力保護自己的國家")
+			say("將來你會遇到很多戰鬥")
+			say("所以你要好好修煉, 然後好好保護自己.")
+			say("到現在你已經很努力")
+			say("所以我給你一個獎勵.")
+			wait()
+			say("教官:")
+			say("還有現在開始, ")
+			say("不是我而是裝備隊長這個部份")
+			say("所以下次你可以從裝備隊長取得任務.")
+			say("現在你就去找裝備隊長吧. 加油!")
+			say("")
+			say(locale.NOTICE_COLOR.."報酬"..locale.NORMAL_COLOR)
+		    say_reward("經驗值 ".." 5000" )
+			--clear_letter()
+			set_quest_state("main_quest_lv10", "run")
+			q.done()
+			setstate( __COMPLETE__ )
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+

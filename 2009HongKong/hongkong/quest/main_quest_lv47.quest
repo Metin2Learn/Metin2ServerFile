@@ -1,0 +1,251 @@
+----------------------------------
+--	MAIN QUEST  LV47
+--  	
+----------------------------------
+
+
+quest main_quest_lv47 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup with pc.get_level() >= 47 begin
+			set_state( information )		
+		end
+	end
+		
+	state information begin
+		when letter begin
+			send_letter("古代日記簿的分頁")
+
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "老學究")
+			end
+		end
+		when button or info begin
+			say_title("從首領級怪物那裡獲取的古代日記簿的分頁")
+			say("")
+			say("在過去的40等級以上，抓到首領級怪物五狼霸王")
+			say("獲取了秘密古代日記簿的分頁")
+ 			say("把從首領級怪物那里獲取的秘密古代日記簿的分頁")
+			say("拿給老學究.")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20011.chat."秘密古代日記簿的分頁.."begin
+			target.delete("__TARGET__")
+			---                                                   l
+			say("老學究 :")
+			say("了解到可疑的群体了嗎？")
+			say("果然是有別人在展開跟我們一樣的")
+   			say("調查.")
+   			say("他們到底是什麼目的呢?")
+   			say("根據你帶來的古代日記簿的分頁解釋")
+   			say("也許能瞭解到些資訊.")
+   			say("解釋的過程需要些時間")
+   			say("你先去調查可能展開了古代咒術的")
+   			say("盤絲洞吧.")
+   			say("")
+			wait()
+			say("老學究:")
+			say("排除了中仙洞，那很可能是")
+   			say("盤絲洞，祝你好運。")
+			say("")
+			pc.remove_item(30150)
+			set_state( survey )	
+
+		end
+	end
+	
+	state survey begin
+		when letter begin
+			send_letter("去盤絲洞")
+			
+			local v=find_npc_by_vnum(20362) -----------------------------------------------
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "找警備隊長")
+			end
+		end
+		when button or info begin
+			say(locale.NOTICE_COLOR.."去盤絲洞尋找古代咒文的痕跡"..locale.NORMAL_COLOR)
+			say("")	
+			say("根據老學究的話，很可能在盤絲洞")
+			say("展開了古代禁忌的咒文.")
+		   	say("去盤絲洞")
+		   	say("尋找古代咒文的痕跡. ")
+			say("Tip:關於 古代和咒文 ...")
+			say("    找原始的NPC點擊")
+			say("")
+		   	say_reward("可通過影悲沙漠前往盤絲洞.")
+		end
+		when __TARGET__.target.click or
+			20362.chat."可疑的支石墓?" begin
+			target.delete("__TARGET__")
+			say("發現可能是古代日記簿分頁的古代文書!")
+			pc.give_item2(30150)
+			set_state( gototeacher2 )
+		end
+	end
+	
+	state gototeacher2 begin
+		when letter begin
+			send_letter("第五個古代日記簿的分頁")
+
+			local v=find_npc_by_vnum(20011)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "老學究")
+			end
+		end
+		when button or info begin
+			say_title("第五個古代日記簿的分頁")
+			say("在盤絲洞獲取第五個!")
+			say("把古代日記簿的分頁帶給老學究.")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20011.chat."第五個古代日記簿的分頁.."begin
+			target.delete("__TARGET__")
+			---                                                   l
+			say("老學究:")
+			say("盤絲洞怎麼樣了?")
+   			say("找到第五個古代日記簿的分頁?")
+   			say("那真是好事啊!")
+   			say("剛好上次你帶來的秘密古代日記簿的分頁的內容")
+   			say("解讀了")
+   			say("先看這個吧.")
+   			say("簡單說除了我們之外")
+   			say("分明還有有勢力在")
+   			say("調查在古代使用了禁忌咒文的國家.")
+   			say("")
+			wait()
+			say("老學究:")
+			say("這個古代日記簿的分頁上有詳細的相關內容,")
+   			say("跟我們調查的內容几乎一致")
+   			say("看得出他們是相當用功調查的.")
+   			say("這些到底是給我們幫助呢?")
+   			say("還是成為威脅呢?")
+   			say("不太清楚. 他們也許成為我們新的敵人")
+   			say("也許會成為")
+   			say("防礙我們的敵人.")
+   			say("所以禁忌的古代咒文可能是很危險的.")
+			say("")
+   			wait()
+			say("老學究:")
+			say("不能放任他們.")
+   			say("已經請樂師調查了.")
+   			say("第五個古代日記簿的分頁由我來解讀")
+   			say("你去進一步調查")
+   			say("可疑的群體吧. ")
+			say("")
+			say("這是找到第五個古代日記簿的分頁的")
+			say("報酬..")
+			say("")
+			say_reward("獲得經驗值 3000000 ")
+			pc.give_exp2(3000000)
+			set_quest_state("levelup","run")
+			
+			say_reward("獲得75000 兩 ")
+			pc.change_money(75000)
+
+			say_reward("獲得了草藥物品")
+			pc.give_item2(50725,5)
+			pc.give_item2(50726,5)
+			pc.remove_item(30150)		
+
+			set_state( gotomusician  )	
+
+		end
+	end
+	
+	state gotomusician begin
+		when letter begin
+			send_letter("疑問的勢力")
+			local v=find_npc_by_vnum(20017)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "找樂師")
+			end
+		end
+		
+		when button or info begin
+			say_title("找疑問的勢力!")	
+			say("可疑的群体好像不僅在收集有關古代禁忌的")
+		   	say("咒文的信息還收集")
+		   	say("有關古代國家的資訊.")
+		   	say("可能是比想像中還要危險的存在.")
+		   	say("老學究已經請樂師調查")
+		   	say("那就去找樂師")
+		   	say("取得資訊吧. ")
+			say("")
+			say_reward("Tip: 樂師在 第2 城市 " )
+		end
+	
+		when __TARGET__.target.click or
+			20017.chat."疑問的勢力?" begin
+			target.delete("__TARGET__")
+			say("樂師 :")
+			say("這樣又如何~ 那樣又如何~")
+   			say("人生也就這樣~")
+			say("噢，又是你啊.")
+   			say("前不久老學究讓我調查")
+   			say("有關可疑的群體.")
+   			say("目前在三國戰役上有不好的分子")
+   			say("在倡狂.")
+   			say("雖然不清楚他們確切的目的")
+   			say("但是可以肯定的是他們在接触不該知道的")
+   			say("事情.")
+			say("")
+   			wait()
+			say("樂師:")
+			say("因為戰爭已經夠亂的這個時候")
+   			say("出現另外的危險分子，真是危險.")
+   			say("最近觀察他們的動向的結果")
+   			say("在影悲沙漠出沒的裁決者")
+   			say("是可疑分子.")
+   			say("沙漠是沒有人接近的地方")
+   			say("所以在那裡策劃陰謀.")
+			wait()
+			say("樂師:")
+   			say("調查裁決者")
+			say("可以得到些確切的情報.")
+			say("當然這是你的份兒.")
+   			say("那好好幹吧.")
+			say("")
+			set_state(his_advice)
+		end
+	end
+	
+	state his_advice begin
+		when letter begin
+			send_letter("樂師的指教")	
+		end
+	
+		when button or info begin
+			say_title("在密教寺院尋找線索")
+			---                                                  l
+			say("")
+			say("据老學究講")
+			say("很可能在充滿邪惡氣息的密教寺院")
+			say("完成了古代的禁忌咒文")
+			say("古代的神女們在這裡完成最後的咒文.")
+			say("密教寺院是各種怪物聚集的")
+			say("危險的地方.")
+			say("去密教寺院尋找")
+			say("咒文的最後線索.")
+			say("")
+			say_reward("Tip : 要求 等級50級以上" )
+			say("")
+
+			clear_letter()
+			set_state(__COMPLETE__)	
+			set_quest_state("main_quest_lv50", "run")
+		end			
+	end
+
+	state __COMPLETE__ begin
+	end
+end
+

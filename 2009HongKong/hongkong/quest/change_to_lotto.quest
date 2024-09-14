@@ -1,0 +1,25 @@
+quest change_to_lotto begin
+    state start begin
+	when oldwoman.chat."請交換到抽獎卷" with game.get_event_flag("luck_scroll")>0 begin
+	    say("年輕人,我們國家舉行了一個很大的活動..[ENTER]"..
+	        "本來管理員要親自舉辦這次的活動[ENTER]"..
+		"但是他們太忙,所以委託這個任務給我...[ENTER]"..
+		"給我交換卷的話 [ENTER]"..
+		"交換給你祝福書.[ENTER]"..
+		"祝福書上寫的好嗎,就是您們幸運號碼!");
+
+	    if pc.countitem(50027) > 0 then
+		say("所以~ 你想交換嗎? ")
+		local s = select('是', '不')
+
+		if s == 1 then
+		    pc.removeitem(50027, 1)
+		    pc.give_lotto()
+		end
+	    else
+		say("嗯! 快點交換吧.")
+	    end
+	end
+    end
+end
+

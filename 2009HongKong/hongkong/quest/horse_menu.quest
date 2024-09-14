@@ -1,0 +1,15 @@
+quest horse_menu begin
+    state start begin
+	when 20030.click begin show_horse_menu() end
+	when 20101.click begin show_horse_menu() end
+	when 20102.click begin show_horse_menu() end
+	when 20103.click begin show_horse_menu() end
+	when 20104.click begin show_horse_menu() end
+	when 20105.click begin show_horse_menu() end
+	when 20106.click begin show_horse_menu() end
+	when 20107.click begin show_horse_menu() end
+	when 20108.click begin show_horse_menu() end
+	when 20109.click begin show_horse_menu() end
+    end
+end
+

@@ -1,0 +1,233 @@
+quest goldbar_shop begin
+	state start begin
+		when 20020.chat."黑風黨的財物" begin
+			if pc.get_level() < 30 then
+				say("什麼? 黑風黨的財物? 哈哈哈!")
+				say("朋友~ 你在哪裡聽到這個消息的阿?")
+				say("你先去跟幼狼玩玩吧")
+				say("")
+				say_reward("'黑風黨的財物' 等級30以上,任務可以開始")
+				say("")
+				return
+			end
+			if game.get_event_flag("gold_trade_enable") == 0 then
+				say("小心!! 黑風黨感覺到我們要去搶奪它們的財物")
+				say("這樣的時候, 我們先不要打草驚蛇")
+				say("那先再見了喔~")
+				say("")
+				say_reward("'黑風黨的財物' 任務無法進行.")
+				say("")
+				return
+			end
+
+			say("噓!!")
+			say("黑風黨可能會發現我們的.")
+			say("你在哪裡聽過黑風黨?")
+			say("哎呀~ 還是算了吧, 這個根本不重要.")
+			say("有人跟你說過?")
+			say("")
+
+			local s = select("不是~ 我不太清楚", "我知道")
+
+			if s == 1 then
+				say("我從黑風黨逃出來的時候..")
+				say("看到了它們的財物放在那裡.")
+				say("在那裡我見到很多黃金條…呵呵呵呵呵")
+				say("數量太多, 所以我們只偷1-2個的話")
+				say("它們根本不會知道.")
+				say("所以你給我一點報酬的話,")
+				say("我會去幫你去那拿一條黃金給你.")
+				say("我一次只能夠拿一條.")
+				say("")
+
+				wait()
+
+				local interval = game.get_event_flag("gold_trade_cycle")
+				local unit = ""
+				if interval <= 0 then interval = 360 end
+
+				if interval >= 60 then
+					interval = interval / 60
+					unit = "時間"
+					math.ceil(interval)
+				else
+					unit = "分"
+				end
+
+				if interval < 1 then interval = 1 end
+
+				say(string.format("每次拿取黃金, 大概需要 %d %s .", interval, unit))
+				say("如果你想要黃金的時候, ")
+				say("")
+			else
+				say("就告訴我吧~ 呵呵.")
+				say("只要你跟我說, 我就去拿給你 呵呵")
+				say("")
+			end
+
+			setstate(trade_goldbar)
+		end
+	end
+
+	state trade_goldbar begin
+		when 20020.chat."買黃金條" begin
+			if pc.get_level() < 30 then
+				say("你說什麼? 我不清楚這件事情")
+				setstate(start)
+				return
+			end
+			if game.get_event_flag("gold_trade_enable") == 0 then
+				say("什麼? 你想去買黃金條?")
+				say("不行~ 黑風黨它們感覺到有人要偷它們的財物")
+				say("如果不小心的話, 隨時都有生命危險!")
+				say("等他們平靜後, 再試試吧.")
+				say("")
+				say_reward("現在無法購買黃金條.")
+				return
+			end
+
+			local nexttime = pc.getqf("gold_buy_next_time")
+			
+			local interval = game.get_event_flag("gold_trade_cycle")
+			local unit = ""
+
+			if interval <= 0 then interval = 360 end
+
+			if get_time() < nexttime then
+				nexttime = (nexttime / 60) - (get_time()/60)
+
+				if nexttime >= 60 then
+					unit = "時間"
+					nexttime = nexttime / 60
+					math.ceil(nexttime)
+				else
+					unit = "分"
+				end
+
+				if nexttime < 1 then nexttime = 1 end
+
+					say("還沒拿到黃金條.")
+					say(string.format("從現在大概需要 %d %s ", nexttime, unit))
+					say("")
+				else
+					say("喔~ 我剛剛拿到黃金條.")
+					say("購買黃金條費用是220萬兩.")
+					say("20萬兩交易費")
+					say("怎麼樣? 你想買這條黃金嗎?")
+					say("")
+
+					local s = select("購買", "算了吧~不購買")
+					if s == 1 then
+						if pc.money >= 2200000 then
+							local goldbar_count = pc.count_item(80007)
+							char_log(0, "GOLDBAR", "BUY ("..goldbar_count..")")
+							pc.changemoney(-2200000)
+							say("你想買一條嗎? ")
+							say("嗯~ 這是一個不錯的意見, 你有錢的時候可以把它存起來.")
+							say("")
+							pc.give_item2("80007", 1)
+							pc.setqf("gold_buy_next_time", get_time() + time_min_to_sec(interval))
+						else
+							say("嘿~ 你的錢不夠嗎? 我是說220萬兩.")
+							say("")
+						end
+					elseif s == 2 then
+						say("既然不想買, 那你為什麼還來呢?")
+						say("你真浪費我的時間.")
+						say("")
+					else
+				end
+				say("")
+			end
+		end
+
+		when 20020.chat."GM: 黃金條買賣時間重新設定" with pc.is_gm() begin
+			say("黃金條買賣時間重新設定完成")
+			say("")
+			pc.setqf("gold_buy_next_time", 0)
+			pc.setqf("gold_sell_next_time", 0)
+		end
+		when 20020.chat."賣黃金條" begin
+			if pc.get_level() < 30 then
+				say("你說什麼我不知道這樣的事情")
+				setstate(start)
+				return
+			end
+			if game.get_event_flag("gold_trade_enable") == 0 then
+				say("什麼? 你想賣黃金條嗎?")
+				say("你沒聽過黑風黨正在找小偷嗎?")
+				say("這樣的時候你賣出去黃金條的話, 你必死無疑")
+				say(" 現在最好什麼都不要做")
+				say("你還是好好保管你的黃金條吧!")
+				say("")
+				say_reward("現在不能賣黃金條.")
+				say("")
+				return
+			end
+
+			local nexttime = pc.getqf("gold_sell_next_time")
+
+			local interval = game.get_event_flag("gold_trade_cycle")
+			local unit = ""
+
+			if interval <= 0 then interval = 360 end
+
+			if get_time() < nexttime then
+				nexttime = (nexttime / 60) - (get_time()/60)
+
+				if nexttime >= 60 then
+					unit = "時間"
+					nexttime = nexttime / 60
+					math.ceil(nexttime)
+				else
+					unit = "分"
+				end
+
+				if nexttime < 1 then nexttime = 1 end
+
+				say("如果把黃金條放回去的話,")
+				say(string.format("從現在開始大概需要 %d %s", nexttime, unit))
+				say("")
+			else
+				if pc.count_item(80007) <= 0 then
+					say("你身上沒有帶黃金條..")
+					say("你帶黃金條的話, 可以交換到錢")
+					say("")
+				else
+					say("什麼?")
+					say("你想把黃金條換成錢嗎?")
+					say("喂.. 這樣的話你為什麼要購買黃金條呢?")
+					say("那好吧!!! 我跟你交換.")
+					say("但是黑風黨它們正在找人所以我不可以常常交換")
+					say("你還要交換到錢嗎?")
+					say("")
+
+					local s = select("交換", "不交換")
+
+					if s == 1 then
+						say("收取金錢.")
+						say("唉唷我再要去把黃金條放回之前的地方..")
+						say("")
+
+						local goldbar_count = pc.count_item(80007)
+						if goldbar_count >= 1 then
+							char_log(0, "GOLDBAR", "SELL ("..goldbar_count..")")
+							pc.changemoney(2000000)
+							pc.remove_item(80007)
+						else
+							char_log(0, "GOLDBAR", "SELL_HACK")
+						end
+						pc.setqf("gold_sell_next_time", get_time() + time_min_to_sec(interval))
+
+					elseif s == 2 then
+						say("你真的有黃金條嗎?")
+						say("我是一個很忙的人, 沒有什麼事情就別來找我.")
+						say("")
+					end
+				end
+			end
+		end
+	end
+
+end
+

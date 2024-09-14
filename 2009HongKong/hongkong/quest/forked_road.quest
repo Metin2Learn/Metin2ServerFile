@@ -1,0 +1,188 @@
+quest forked_road begin
+    state start begin
+	when login begin
+		-- 114 sungzi
+		-- 115 116 117 118 119 120 Road
+	    if forked.isforkedmapindex( pc.get_map_index() ) == 1  then
+			if game.get_event_flag("threeway_war") == 0 then
+				warp_to_village();
+			else
+				--if forked.getdeadcount() <= 0 then
+				--	warp_to_village();
+				--end
+				if forked.issungzimapindex( pc.get_map_index() ) == 0 then
+					say( locale.forked_condition )
+					say( locale.NOTICE_COLOR..locale.forked_rule )
+					say_item( "通道解體石",50089,"");
+				else
+					say( locale.forked_condition2 )
+					say( locale.NOTICE_COLOR..locale.forked_rule_sungzi )
+				end
+				
+			end
+		end
+	end
+	when 11001.chat.locale.forked_man_chat or 11003.chat.locale.forked_man_chat or 11005.chat.locale.forked_man_chat begin
+	    if game.get_event_flag("threeway_war") == 0 then
+			say(locale.forked_man_say_cant)
+	    else
+			say(locale.forked_man_say)
+			local s = select(locale.forked_enter,locale.forked_no_enter)
+			if s == 1 then
+			--	if pc.get_level() < 35 then
+			--		say("如果你想參加三國爭霸的戰鬥,你的等級必須為35級");
+			--		return 
+			--	end
+				
+			forked.setdeadcount();
+			if pc.getempire() == 1 then
+				if game.get_event_flag("threeway_war_open_gate1" ) == 0 then
+					say("如果聖地的門打開之後,便不能進入三國爭霸.[ENTER] 請祝福我們,我們的帝國便可以爭奪要聖地!" );
+					return
+				end
+			elseif pc.getempire() == 2 then
+				if game.get_event_flag("threeway_war_open_gate2" ) == 0 then
+					say("如果聖地的門打開之後,便不能進入三國爭霸.[ENTER] 請祝福我們,我們的帝國便可以爭奪要聖地!" );
+					return
+				end
+			elseif pc.getempire() == 3 then
+				if game.get_event_flag("threeway_war_open_gate3" ) == 0 then
+					say("如果聖地的門打開之後,便不能進入三國爭霸.[ENTER] 請祝福我們,我們的帝國便可以爭奪要聖地!" );
+					return
+				end
+			else
+				say(locale.forked_man_say_you_cant2 )
+			end
+			pc.warp( forked.getpassstartposx() , forked.getpassstartposy() )
+			end
+		end
+	end
+	when 1306.kill begin		
+		game.drop_item(50089, 1 )
+		say("使用通道解體石可以解開通道封印石的話[ENTER]通道內所有的玩家可以移動到聖地.[ENTER] 然後玩家不可以進入聖地[ENTER] ") ;
+	end	
+
+	--????( ???? ??? ??? ?? )
+	when 1902.kill with forked.issungzimapindex( pc.get_map_index() ) == 1 begin
+		local iTime = 10
+
+		forked.incbosskillcount();
+		if game.get_event_flag("threeway_war_kill_boss_count" ) <= forked.getbosskillcount() then
+			game.set_event_flag("threeway_war",0)
+		
+			local nation = { "新受國","天調國","進勞國" }
+			notice_all("三國爭霸勝利者"..nation[pc.getempire()] ) 
+			
+			warp_all_to_village( forked.getsungzimapindex(), iTime);
+			warp_all_to_village( forked.getpassmapindexbyempire(1), iTime);
+			warp_all_to_village( forked.getpassmapindexbyempire(2), iTime);
+			warp_all_to_village( forked.getpassmapindexbyempire(3), iTime);
+		end
+	end
+
+--	when 2301.kill or 2304.kill or 2305.kill or 2311.kill or 2312.kill or 2313.kill or 2314.kill or 2315.kill with forked.issungzimapindex( pc.get_map_index() ) ==  1  begin
+		
+--		forked.incmobkillcount()
+
+--		local nation = { "新受國","天調國","進勞國" }
+--		local index = { 0,1,21,41 }; 
+--		local start_position = { { 469300,964200 } , {55700,157900}, { 969600,278400 } }
+
+--		if game.get_event_flag("threeway_war_mob_count") == forked.getmobkillcount() then
+--			say_in_map( pc.get_map_index() , "10分鐘 你有權攻擊三尾銀狐 " , 1)
+--			warp_all_to_village_except_my_empire( pc.get_map_index() , 5 );
+			
+--			mob.spawn( 1902 , 224 , 240 , 1 , 1 , 1 );
+--		end
+--	end
+
+	when 20081.take with item.vnum == 50089 begin
+		say_in_map( pc.get_map_index() , locale.forked_open_gate , 1); 
+		npc.purge()
+		item.remove()
+		
+		--??? ???
+		forked.setdeadcount()
+		forked.initkillcount()
+		forked.initmobkillcount()
+		
+		if pc.getempire() == 1 then
+			game.set_event_flag("threeway_war_open_gate1", 0 )
+			notice_all("進入新受國的聖地" ) 
+		elseif pc.getempire() == 2 then
+			game.set_event_flag("threeway_war_open_gate2", 0 )
+		    notice_all("進入天調國的聖地" )
+		elseif pc.getempire() == 3 then
+			game.set_event_flag("threeway_war_open_gate3", 0 )
+			notice_all("進入進勞國的聖地" )
+		else
+			say(locale.forked_man_say_you_cant2 )
+		end
+		local iEmpire = pc.getempire()
+		
+		warp_all_in_map( pc.get_map_index() , forked.getsungzimapindex() ,forked.getsungziposx() , forked.getsungziposy() , 10 );
+	end
+
+	when 11001.chat."GM: 三國爭霸設定" or 11003.chat."GM: 三國爭霸設定" or 11005.chat."GM: 三國爭霸設定" with pc.is_gm() begin
+
+--		if is_allow_map( forked.getsungzimapindex() ) == 0 or is_allow_map( forked.getpassmapindexbyempire(1) ) == 0 or is_allow_map( forked.getpassmapindexbyempire(2)) == 0 or is_allow_map( forked.getpassmapindexbyempire(3) ) == 0 then
+--			say( "這個區域不能開始三國爭霸" );
+--			say( "移動到99 伺服器相關地圖開始三國爭霸的戰鬥" );
+--			return
+--		end
+		
+		--local sel = { "三國爭霸活動開始" , "三國爭霸活動結束" };
+		--local s[2];
+		--if ( game.get_event_flag( "threeway_war" ) == 1 )	
+		
+		local s = select("三國爭霸活動開始" , "三國爭霸活動結束" );
+		if s == 1 then
+
+			-- ??? ?? ?? ?? ???
+			kill_all_in_map( forked.getsungzimapindex() );
+			kill_all_in_map( forked.getpassmapindexbyempire(1) );
+			kill_all_in_map( forked.getpassmapindexbyempire(2) );
+			kill_all_in_map( forked.getpassmapindexbyempire(3) );
+
+			-- ??? 
+			forked.initforked()
+			-- ??? ??? ?? 
+			regen_in_map( forked.getpassmapindexbyempire(1), forked.getpasspathbyempire(1) .."regen.txt" );
+			regen_in_map( forked.getpassmapindexbyempire(1), forked.getpasspathbyempire(1) .."npc.txt" );
+			regen_in_map( forked.getpassmapindexbyempire(2), forked.getpasspathbyempire(2) .."regen.txt" );
+			regen_in_map( forked.getpassmapindexbyempire(2), forked.getpasspathbyempire(2) .."npc.txt" );
+			regen_in_map( forked.getpassmapindexbyempire(3), forked.getpasspathbyempire(3) .."regen.txt" );
+			regen_in_map( forked.getpassmapindexbyempire(3), forked.getpasspathbyempire(3) .."npc.txt" );
+
+			-- ?? ??? ??
+			game.set_event_flag("threeway_war",1)
+
+
+			-- ??? ?? ? ?? ??
+			game.set_event_flag("threeway_war_dead_count", 5)
+			game.set_event_flag("threeway_war_mob_count", 150 )
+			game.set_event_flag("threeway_war_kill_count", 200 )
+			game.set_event_flag("threeway_war_kill_boss_count", 1 );
+			-- ??? ?? ??/?? ??
+			game.set_event_flag("threeway_war_open_gate1", 1 )
+			game.set_event_flag("threeway_war_open_gate2", 1 )
+			game.set_event_flag("threeway_war_open_gate3", 1 )
+			
+			notice_all("三國爭霸開始")
+			notice_all("如果想參加的玩家,請與城市內的 戰魂 對話." )
+		else	
+			game.set_event_flag("threeway_war",0)
+			kill_all_in_map( forked.getsungzimapindex() );
+			kill_all_in_map( forked.getpassmapindexbyempire(1) );
+			kill_all_in_map( forked.getpassmapindexbyempire(2));
+			kill_all_in_map( forked.getpassmapindexbyempire(3));
+			notice_all("三國爭霸結束")
+			warp_all_to_village( forked.getsungzimapindex() , 1 )
+			warp_all_to_village( forked.getpassmapindexbyempire(1) , 1 )
+			warp_all_to_village( forked.getpassmapindexbyempire(2) , 1 )
+			warp_all_to_village( forked.getpassmapindexbyempire(3) , 1 )
+		end
+	end
+	end
+end
+

@@ -1,0 +1,26 @@
+quest horse_exchange_ticket begin
+	state start begin
+		when 20349.chat."竒盿皑礟ユ传!" with pc.countitem("50005")>=1 begin
+			say("皑礟ユ传琌玡肕皑┮ㄏノ珇")
+			say("瞷砏﹚э跑")
+			say("┮иユ传皑礟")
+			say("")
+			local b=select("琌, и璶ユ传", "ぃユ传")
+			if 1==b then
+				if pc.countitem("50005")>=1 then
+					pc.removeitem("50005", 1)
+					pc.give_item2("50050", 1)
+					say("皑礟ユ传ユ传皑礟, ユ传Θ")
+				end
+			elseif 2==b then
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

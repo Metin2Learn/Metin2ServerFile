@@ -1,0 +1,473 @@
+-- [TEST_QUEST] --
+quest ring_first_detect begin
+	state destroy_step1_4 begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_4_say)
+			elseif pc.get_map_index()!=62 then
+				setstate(destroy_step1_4_go)
+			end
+		end
+	end
+	state destroy_step1_4_go begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_4_say)
+			end
+		end
+		when letter begin
+			send_letter("去找閻魔火地")
+		end
+		when button or info begin
+			say_title("去找閻魔火地")
+			say("去閻魔火地破壞邪惡的戒指")
+		end
+	end
+	state destroy_step1_4_say begin
+		when letter begin
+			send_letter("戒指開始說話")
+		end
+		when button or info begin
+			say_title("戒指開始說話")
+			say("[WINDOW_SIZE width;360|height;320]戒指看到了夜魔被殺死的樣子, 看上去很驚訝的樣子[ENTER][ENTER]'嗯~ 我現在只有最後的一個方法.[ENTER]你死了之後, 不要冤枉我[ENTER]如果放開我的時候, 應該不會有問題[ENTER]將來會出現什麼樣的情況, 不’應該想不到吧, 哈哈哈哈哈'[ENTER][ENTER]到了最後, 他應該發狂了[ENTER]但是需要緊張一些[ENTER][ENTER]")
+			setstate(destroy_step1_4_main)
+		end
+	end
+	state destroy_step1_4_main begin
+		when letter begin
+			target.pos("__TARGET__", 185, 710, 62, "")
+		end
+		when letter begin
+			send_letter("破壞目標地點內的 火焰王!")
+		end
+		when button or info begin
+			say_title("破壞目標地點內的 火焰王!")
+			say("現在戒指開始發狂了[ENTER]戒指火焰王是一個非常強的對手[ENTER]鏟除火焰王然後把戒指永遠封印起來![ENTER][ENTER]")
+		end
+		when 2206.party_kill with npc.is_quest() begin
+			if pc.count_item("40003")>=1 then
+				setstate(destroy_step_end)
+			elseif pc.count_item("40003")<1 then
+				say("你旅行中丟了戒指")
+				say("無法在進行破壞戒指的任務")
+				set_state(__COMPLETE__)
+				q.done()
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			local v=mob.spawn(2206, 185, 710, 1, 1, 1)
+			target.npc("__TARGET_MOB__", v)
+			mob.spawn(2202, 185, 710, 1, 1, 12)
+			mob.spawn(2205, 185, 705, 1, 1, 3)
+			mob.spawn(2205, 180, 715, 1, 1, 3)
+			mob.spawn(2205, 190, 715, 1, 1, 3)
+		end
+	end
+	state destroy_step1_3 begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_3_say)
+			elseif pc.get_map_index()!=62 then
+				setstate(destroy_step1_3_go)
+			end
+		end
+	end
+	state destroy_step1_3_go begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_3_say)
+			end
+		end
+		when letter begin
+			send_letter("去找閻魔火地")
+		end
+		when button or info begin
+			say_title("去找閻魔火地")
+			say("去閻魔火地破壞邪惡的戒指")
+		end
+	end
+	state destroy_step1_3_say begin
+		when letter begin
+			send_letter("戒指開始說話")
+		end
+		when button or info begin
+			say_title("戒指開始說話")
+			say("[WINDOW_SIZE width;360|height;320]我殺死火雲虎了, 戒指生氣了.[ENTER][ENTER]'為了殺死它們的老大, 所以我要先解決它的手下[ENTER]你玩得開心嗎? 我讓你跟我最強悍的手下戰鬥[ENTER]夜魔, 你們快點去把他殺死[ENTER]哈哈哈哈哈[ENTER][ENTER]我感覺到戒指的說話跟行動並不一致[ENTER]")
+			setstate(destroy_step1_3_main)
+		end
+	end
+	state destroy_step1_3_main begin
+		when letter begin
+			target.pos("__TARGET__", 1010, 1155, 62, "")
+		end
+		when letter begin
+			send_letter("破壞目標地點的夜魔!")
+		end
+		when button or info begin
+			say_title("破壞目標地點的夜魔!")
+			say("戒指的力量比以前更弱.[ENTER]但是它還會控制一些強悍的怪物.[ENTER]如果我殺死破壞目標地點的夜魔跟它的手下, 戒指會受到很大的傷害[ENTER]破壞目標地點[ENTER][ENTER]")
+		end
+		when 2205.party_kill with npc.is_quest() begin
+			if pc.count_item("40003")>=1 then
+				setstate(destroy_step1_4)
+			elseif pc.count_item("40003")<1 then
+				say("你旅行中丟了戒指")
+				say("無法在進行破壞戒指的任務")
+				set_state(__COMPLETE__)
+				q.done()
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			local v=mob.spawn(2205, 1010, 1155, 1, 1, 1)
+			target.npc("__TARGET_MOB__", v)
+			mob.spawn(2202, 1010, 1155, 1, 1, 5)
+			mob.spawn(2204, 1010, 1150, 1, 1, 2)
+			mob.spawn(2204, 1005, 1160, 1, 1, 2)
+			mob.spawn(2204, 1015, 1160, 1, 1, 2)
+		end
+	end
+	state destroy_step1_2 begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_2_say)
+			elseif pc.get_map_index()!=62 then
+				setstate(destroy_step1_2_go)
+			end
+		end
+	end
+	state destroy_step1_2_go begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_2_say)
+			end
+		end
+		when letter begin
+			send_letter("去找閻魔火地")
+		end
+		when button or info begin
+			say_title("去找閻魔火地")
+			say("去閻魔火地破壞邪惡的戒指")
+		end
+	end
+	state destroy_step1_2_say begin
+		when letter begin
+			send_letter("戒指開始說話")
+		end
+		when button or info begin
+			say_title("戒指開始說話")
+			say("[WINDOW_SIZE width;360|height;320]我殺死戒指的手下, 戒指看上去很吃驚[ENTER][ENTER]'喔喔! 你很厲害哦~ 我覺得你很弱, 但是比想像中強.[ENTER] 這次我會叫更強的手下來對付你[ENTER]哈哈哈~ 你的死期快到了, 還不快點求求我![ENTER]你現在選擇逃走也是可以的'[ENTER][ENTER]我想這個煩人的戒指, 我真的很想把它扔在它手下的面前[ENTER]但是應該這個情況會變得更糟[ENTER] 所以我要把它扔到熔爐比較好[ENTER]")
+			setstate(destroy_step1_2_main)
+		end
+	end
+	state destroy_step1_2_main begin
+		when letter begin
+			target.pos("__TARGET__", 615, 415, 62, "")
+		end
+		when letter begin
+			send_letter("鏟除目標地點的焰赤虎")
+		end
+		when button or info begin
+			say_title("鏟除目標地點的焰赤虎")
+			say("戒指的力量越來越弱 [ENTER]如果我繼續殺死它的手下, 它很快就會變成一般的戒指[ENTER]殺死目標地點的焰赤虎跟它的手下[ENTER][ENTER]")
+		end
+		when 2204.party_kill with npc.is_quest() begin
+			if pc.count_item("40003")>=1 then
+				setstate(destroy_step1_3)
+			elseif pc.count_item("40003")<1 then
+				say("你旅行中丟了戒指")
+				say("無法在進行破壞戒指的任務")
+				set_state(__COMPLETE__)
+				q.done()
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			local v=mob.spawn(2204, 615, 415, 1, 1, 1)
+			target.npc("__TARGET_MOB__", v)
+			mob.spawn(2202, 615, 415, 1, 1, 4)
+			mob.spawn(2201, 615, 410, 1, 1, 3)
+			mob.spawn(2201, 610, 420, 1, 1, 3)
+			mob.spawn(2201, 610, 420, 1, 1, 3)
+		end
+	end
+	state destroy_step1_1 begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_1_say)
+			elseif pc.get_map_index()!=62 then
+				setstate(destroy_step1_1_go)
+			end
+		end
+	end
+	state destroy_step1_1_go begin
+		when letter begin
+			if pc.get_map_index()==62 then
+				setstate(destroy_step1_1_say)
+			end
+		end
+		when letter begin
+			send_letter("去找閻魔火地")
+		end
+		when button or info begin
+			say_title("去找閻魔火地")
+			say("去閻魔火地破壞破壞邪惡的戒指")
+		end
+	end
+	state destroy_step1_1_say begin
+		when letter begin
+			send_letter("戒指開始說話")
+		end
+		when button or info begin
+			say_title("戒指開始說話")
+			say("[WINDOW_SIZE width;340|height;320] 進入到閻魔火地這個地方的時候, 戒指突然開始說話[ENTER][ENTER]'因為神秘老人封印讓我到這裡才可以說話[ENTER]但是現在這裡的熱氣讓令到我活躍起來, 哈哈[ENTER]你連作夢也別想可以破壞到我. [ENTER]因為這裡就像我的家鄉一樣, 哈哈哈哈哈'[ENTER][ENTER]為了把戒指重新封印起來[ENTER] 需要鏟除它力量的根源[ENTER]破壞目標地點的怪物.[ENTER]")
+			setstate(destroy_step1_1_main)
+		end
+	end
+	state destroy_step1_1_main begin
+		when letter begin
+			target.pos("__TARGET__", 915, 815, 62, "")
+		end
+		when letter begin
+			send_letter("鏟除目標地點的火雲虎")
+		end
+		when button or info begin
+			say_title("鏟除目標地點的火雲虎")
+			say("為了把戒指重新封印起來[ENTER] 需要鏟除它力量的根源[ENTER][ENTER] 破壞目標地點的怪物. [ENTER][ENTER]")
+		end
+		when 2203.party_kill with npc.is_quest() begin
+			if pc.count_item("40003")>=1 then
+				setstate(destroy_step1_2)
+			elseif pc.count_item("40003")<1 then
+				say("你旅行中丟了戒指")
+				say("無法在進行破壞戒指的任務")
+				set_state(__COMPLETE__)
+				q.done()
+			end
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			local v=mob.spawn(2203, 915, 815, 1, 1, 1)
+			target.npc("__TARGET_MOB__", v)
+			mob.spawn(2202, 915, 815, 1, 1, 3)
+			mob.spawn(2201, 915, 810, 1, 1, 3)
+			mob.spawn(2201, 910, 820, 1, 1, 3)
+			mob.spawn(2201, 920, 820, 1, 1, 3)
+		end
+	end
+	state start begin
+		when 9009.chat."你有很特別的金戒指" with is_test_server() and pc.count_item("40001")>=1 and pc.get_level()>=55 begin
+			say("我看到這個金戒指, 令到我想到一件事情")
+			say("釣魚的時候, 除了魚之外, 還有機會可以釣到戒指")
+			say("我的老公, 他也有釣過戒指")
+			say("那也是金戒指..")
+			say("跟普通的金戒指不太一樣, 但是現在跟你的差不多")
+			wait()
+			say("我現在也會記住, 有一天我不小心")
+			say("把戒指掉到篝火")
+			say("稍後我拿出來的時候, 戒指上出現了一些文字?")
+			say("我覺得很奇怪, 所以讓我的老公看一看")
+			say("然後我就不記得了")
+			setstate(detect)
+		end
+	end
+	state detect begin
+		when 9009.chat." 這是特別的金戒指" with pc.count_item("40001")>=1 begin
+			say("你也試一試把戒指放到篝火裡")
+			say("誰會知道之後會發生什麼有趣的事情.")
+		end
+		when 12000.take with item.vnum==40001 and item.count>=1 begin
+			say("我把戒指放到篝火裡之後...")
+			say("有些文字出現了")
+			setstate(notify)
+		end
+	end
+	state notify begin
+		when letter begin
+			send_letter("戒指上出現了奇怪的文字")
+		end
+		when button or info begin
+			say_title("戒指上出現了奇怪的文字")
+			if pc.count_item("40001")>=1 then
+				pc.remove_item("40001", 1)
+				pc.give_item2("40003", 1)
+				say("RING OF THOR")
+				say("")
+				say("托魯的戒指...")
+				say("我感覺到這個戒指一定有它特別的功能")
+				say("我想把他戴在我的身上")
+				setstate(check)
+			else
+				say("突然, 戒指消失了")
+				set_state(start)
+				q.done()
+			end
+		end
+	end
+	state check begin
+		when letter begin
+			local v=find_npc_by_vnum(9009)
+			if v!=0 then target.vid("__TARGET__", v, "") end
+		end
+		when letter begin
+			send_letter("去問問漁夫")
+		end
+		when button or info begin
+			say_title("去問問漁夫")
+			say("去問問漁夫關於托魯戒指的事情")
+			say("")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			if pc.count_item("40003")>=1 then
+				say("你說, 戒指上寫著奇怪的文字嗎?")
+				say("哈哈. 那樣奇怪的事情阿. 我又見到這樣的戒指..")
+				say("我想一想我到底做了什麼呢")
+				say("想起來了.. 我找過神秘老人")
+				say("")
+				setstate(order)
+			else
+				say("但是現在戒指不見了?")
+				say("非常奇怪阿.")
+				set_state(start)
+				q.done()
+			end
+		end
+	end
+	state order begin
+		when letter begin
+			local v=find_npc_by_vnum(9006)
+			if v!=0 then target.vid("__TARGET__", v, "") end
+		end
+		when letter begin
+			send_letter("去找神秘老人")
+		end
+		when button or info begin
+			say_title("去找神秘老人")
+			say("去找神秘老人")
+			say("問問關於戒指的事情")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			if pc.count_item("40003")>=1 then
+				say("唉唷~ 你怎麼帶著這個會帶來惡運的東西呢")
+				say("唉唷, 我覺得這個戒指已經消失了, 但是又出現了")
+				say("這是邪惡的戒指, 它會利用一些好的東西來引誘你")
+				say("但最後, 會令到人類滅亡")
+				say("這個戒指我們只能把它破壞, 並沒有其他的辦法!")
+				say("去閻魔火地破壞這個戒指! ")
+				say("")
+				say("你想執行破壞戒指的任務嗎?")
+				local b=select("進行", "拒絕")
+				if 1==b then
+					setstate(destroy_step1_1)
+				elseif 2==b then
+					say("這個戒指一定要消滅!")
+					say("你要小心不要受到引誘")
+					set_state(__COMPLETE__)
+					q.done()
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif (pc.get_job()==1 or pc.get_job()==3) then
+				say("你說什麼戒指呢?")
+				say("你想對我這個的老人求婚嗎? 呵呵呵")
+				say("我很久之前也是一位美女")
+				say("很多人向我求婚, 我的老公也是那個時候認識的")
+				say("")
+				set_state(start)
+				q.done()
+			elseif (pc.get_job()==2 or pc.get_job()==4) then
+				say("你說什麼樣的戒指?")
+				say("在這裡很難找到戒指")
+				say("所以結婚的時候, 也很難拿到戒指")
+				say("所以有些新郎, 只會給新娘")
+				say("耳環. 呵呵呵.")
+				say("")
+				set_state(start)
+				q.done()
+			end
+		end
+	end
+	state destroy_step_end begin
+		when letter begin
+			target.pos("__TARGET__", 215, 800, 62, "")
+		end
+		when letter begin
+			send_letter("剷除邪惡的戒指的最後的手下成功")
+		end
+		when button or info begin
+			say_title("剷除邪惡的戒指的最後的手下成功")
+			say("鏟除戒指控制的火焰王跟它的手下完成了")
+			say("快把戒指放到熔爐裡面, 把它消滅")
+		end
+		when __TARGET__.target.arrive begin
+			target.delete("__TARGET__")
+			setstate(last_test)
+		end
+	end
+	state last_test begin
+		when letter begin
+			send_letter("戒指向我求情")
+		end
+		when button or info begin
+			say_title("戒指向我求情")
+			say("你真的想把我扔到熔爐裡面嗎?")
+			say("如果這樣的話, 我一定永遠都在鎔爐裡面掙扎")
+			say("如果你肯放了我, 我一定會給你世界上最強的力量.")
+			say("連一個人也贏不到你的力量!")
+			say("")
+			say("你想跟戒指交易嗎?")
+			local b=select("同意", "拒絕")
+			if 1==b then
+				say("如果你跟戒指交易的話, 到現在的任務進行過程")
+				say("整個任務過程都會消失")
+				say("")
+				local b=select("交易", "拒絕交易")
+				if 1==b then
+					setstate(failure)
+				elseif 2==b then
+					setstate(success)
+				else
+					say("UNKNOWN BUTTON ["..b.."]")
+				end
+			elseif 2==b then
+				setstate(success)
+			else
+				say("UNKNOWN BUTTON ["..b.."]")
+			end
+		end
+	end
+	state failure begin
+		when letter begin
+			send_letter("跟戒指交易")
+		end
+		when button begin
+			say_title("跟戒指交易")
+			say("嗯~ 好主意, 現在我們開始合作了")
+			say("你想再看我的話, 請把我扔到篝火裡")
+			say("")
+			set_state(__COMPLETE__)
+			q.done()
+		end
+	end
+	state success begin
+		when letter begin
+			send_letter("成功破壞戒指")
+		end
+		when button begin
+			say_title("成功破壞戒指")
+			say("把戒指扔掉的時候, 它不斷的尖叫")
+			say("戒指在鎔爐裡面, 慢慢消失了, 任務終於完成了 . ")
+			say("")
+			set_state(__COMPLETE__)
+			q.done()
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

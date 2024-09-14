@@ -1,0 +1,8 @@
+quest notify_quest_server begin
+    state start begin
+	when login with is_test_server() begin
+	    cmdchat("test_server")
+	end
+    end
+end
+

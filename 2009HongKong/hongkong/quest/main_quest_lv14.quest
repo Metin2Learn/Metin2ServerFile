@@ -1,0 +1,146 @@
+quest main_quest_lv14 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter begin
+			if  pc.get_level() >= 14  then 				
+				setstate( gotoboss )		
+			end
+		end
+	end
+
+	state gotoboss begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[14] )
+			q.set_title("向警備隊長問一問情況")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."破壞鹿鳴隕石"..locale.NORMAL_COLOR)
+	    	---                                                   l
+		    say("警備隊長要求你破壞鹿鳴隕石.")
+		    say("快點去找他吧")
+		    say("任務完成的時候, 他會給你報酬.")
+			--say("跟警備隊長對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."破壞鹿鳴隕石"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+	    	---                                                   l
+			say("警備隊長:")
+			say("從樂師收到了的資料,")
+			say("我們發現了惡運石的原形.")
+			say("因為惡運石很多動物都已經發瘋了")
+			say("惡運石就是發生災難的源頭..")
+			say("")
+			wait()
+
+			say("如果這樣下去的話, 城市裡的人會很危險")
+			say("發瘋的動物會攻擊城市或者會散播僵屍菌.")
+			say("所以您幫我鏟除一個在")
+			say("城市附近的惡運石好嗎?")
+			say("現在的你的力量因該沒有問題.")
+ 
+			say_reward("任務完成時候, 獲得報酬")
+			say_reward("經驗值".."20000" )
+			say_reward("物品".."寶石+0 ~ +2 中 隨機".." 1個" )
+			setstate( killmetinstone )
+			q.done()
+		end
+	end
+
+	state killmetinstone begin
+		when letter begin
+			setskin(NOWINDOW)
+		    makequestbutton( locale.MAIN_QUEST_TITLE_DICT[14] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[14] )
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."破壞鹿鳴隕石"..locale.NORMAL_COLOR)
+			say("破壞鹿鳴隕石")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."破壞鹿鳴隕石"..locale.NORMAL_COLOR)
+			say("破壞鹿鳴隕石")
+		end
+		when 8003.kill begin
+			say(locale.NOTICE_COLOR.."破壞鹿鳴隕石"..locale.NORMAL_COLOR)
+			say("完成破壞鹿鳴隕石")
+			say("去找警備隊長對話")
+			setstate(gotoboss2)
+			q.done()
+		end	
+	end
+--			function getstone()
+--				local stone = { 28000,28100,28200 }
+--		   		locale i = number( 1 , 3 );
+--				return (i+number(1,14)-1)	
+--			end
+	state gotoboss2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[14] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[14])
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."破壞鹿鳴隕石"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.." 破壞鹿鳴隕石"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			local stones = { 28030,28031,28032,28033,28034,28035,28036,28037,28038,28039,28040,28041,28042,28043}
+	   		local stone = stones[number( 1 ,14 )]
+			pc.give_exp2(20000)
+			set_quest_state("levelup","run")
+			pc.give_item2( stone ,1 ) 
+	    	---                                                   l
+			say("警備隊長 :")
+		    say("喔~ 辛苦啦, 現在你變成一個值得信賴的士兵, ")
+		    say("從現在, 我什麼任務也會給你, ")
+		    say("以後也辛苦你了.")
+		    say("我給你報酬!")	
+		    say("下次再見.")
+		    say("")
+		    say(locale.NOTICE_COLOR.."報酬"..locale.NORMAL_COLOR)
+		    say_reward("經驗值 ".."20000" )
+			say_reward("物品 "..item_name(stone).." 1個" )
+
+			clear_letter()
+			set_quest_state("main_quest_lv15", "run")
+			q.done()
+
+			setstate( __COMPLETE__ )
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+

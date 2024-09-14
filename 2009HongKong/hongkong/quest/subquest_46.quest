@@ -1,0 +1,219 @@
+----------------------------------------------------
+-- SUB QUEST 
+-- LV  53 
+-- 鑲嵌青瓷的秘密 2
+----------------------------------------------------
+
+quest subquest_46 begin
+	state start begin
+		when login  or levelup with pc.level >= 53 and pc.level <= 56 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			
+			local v = find_npc_by_vnum(20005)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "鑲嵌青瓷的秘密")
+			end
+		end
+
+				
+	
+		when __TARGET__.target.click or
+			20005.chat." 鑲嵌青瓷的秘密" begin
+			target.delete("__TARGET__")
+			
+			say("制陶人:")
+			say("大事了.")
+			say("即使知道了鑲嵌青瓷的做法 ")
+			say("也不能製作良好的陶瓷!")
+			say("按照紙條上的內容做")
+			say("一直都失敗.")
+			say("製作完碎掉的陶瓷")
+			say("有數百個.")
+			say("再仔細看內容")
+			say("為了做好鑲嵌青瓷")
+			say("需要特別的材料.")
+			say("")
+			wait()
+			say("制陶人:")
+			say("首先需要最重要的好的浮泥粘土")
+			say("閃著漂亮光的水晶原石")
+			say("調整陶瓷的粘性的")
+			say("猴子的血.")
+			say("知道我想說什麼的吧?")
+			say("")
+			wait()
+			say("制陶人:")
+			say("就是要馬上找來這些材料")
+			say("好的浮泥粘土可以在影悲沙漠的")
+			say(""..mob_name(2158).."那裡取得")
+			say("水晶原石可通過礦脈取得.")
+			say("猴子的血可以在上仙洞的")
+			say("猴子那裡取得.")
+			say("那拜託了!")
+			say("")
+			
+			local s=select("接收.","拒絕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("制陶人:")
+					say("因為材料多嗎?")
+					say("忙的話，下次再來吧 ")
+					say("")
+					return
+				end
+				say("制陶人:")
+				say("沒有辦法，只能我自己去取材料了..")
+				say("再見")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("制陶人:")
+			say("你辛苦了~")
+			say("找來這些材料")
+			say("我可以完成流芳後世的名作!")
+			say("")
+			set_state(to_get_material) 
+		end	
+
+	end
+
+
+	state to_get_material begin
+		when letter begin
+			send_letter("鑲嵌青瓷的秘密2")
+			
+			if pc.count_item("50611")>0 and pc.count_item("30138")>0 and pc.count_item("30137")>0 then
+				local v = find_npc_by_vnum(20005)
+
+				if v != 0 then
+					target.vid("__TARGET__", v, "鑲嵌青瓷的秘密")
+				end
+			end	
+
+
+		end
+
+		when button or info begin
+			if pc.count_item("50611") >= 1  and  pc.count_item("30137") >= 1 and pc.count_item("30138") >= 1 then
+				say(locale.NOTICE_COLOR.." 鑲嵌青瓷的秘密"..locale.NORMAL_COLOR)
+				say("")
+				say("為了完成制陶人的鑲嵌青瓷")
+				say("找來的需要的材料")
+				say("把這些拿給制陶人")
+				say("")
+				return
+			end
+				
+			say(locale.NOTICE_COLOR.." 鑲嵌青瓷的秘密 "..locale.NORMAL_COLOR)
+			say("")
+			say("為了完成制陶人的鑲嵌青瓷 ")
+			say("需要特別的材料.")
+			say("好的浮泥粘土-從影悲沙漠的"..mob_name(2158).."那裡")
+			say("水晶原石-通過礦脈")
+			say("猴子的血-"..mob_name(5155)..","..mob_name(5156).."")
+			say(" 還有金猴將領那裡 ")
+			say("找齊三種材料後交給制陶人")
+			say("")
+
+
+		end
+
+	
+
+		when 2158.kill  begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30138")==0  then
+				pc.give_item2("30138", 1)
+				
+				if pc.count_item("50611")>0 and pc.count_item("30137")>0 then
+					local v = find_npc_by_vnum(20005)
+					if v != 0 then
+						target.vid("__TARGET__", v, "鑲嵌青瓷的秘密")
+					end
+				end	
+			end
+			
+		end
+				
+		
+		when 5155.kill or 5156.kill  begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30137")==0  then
+				pc.give_item2("30137", 1)
+				
+				if pc.count_item("50611")>0 and pc.count_item("30138")>0 then
+					local v = find_npc_by_vnum(20005)
+
+					if v != 0 then
+						target.vid("__TARGET__", v, "鑲嵌青瓷的秘密")
+					end
+				end	
+
+			end
+		end
+
+		
+		when __TARGET__.target.click or 
+			20005.chat."取到材料了" with  pc.count_item("50611") >= 1  and  pc.count_item("30137") >= 1 and pc.count_item("30138") >= 1 begin 
+				target.delete("__TARGET__")
+				say("制陶人:")
+				say("呵呵.")
+				say("終於到了等待的時刻了!")
+				say("知道了秘方，也取到了材料")
+				say("可以製作真的很棒的陶瓷.")
+				say("你想像看吧,")
+				say("優雅的姿態和發出翡翠的光的")
+				say("陶瓷的樣子...")
+				say("想起來都覺得很美吧")
+				say("我這就去製作陶瓷 .")
+				say("完成後第一個給你看!")
+				say("")
+			
+				pc.remove_item("50611",1)
+				pc.remove_item("30137",1)
+				pc.remove_item("30138",1)
+				
+				say_reward("獲得經驗值 3000000 ")
+				pc.give_exp2(3000000)
+			    set_quest_state("levelup","run")
+					 
+				say_reward("獲得 30000兩 ")
+				pc.change_money(30000)
+
+				pc.give_item2(50723,10)
+				pc.give_item2(50724,10)
+				say_reward("獲得了草藥物品")
+				
+				local stones_1 = {28430,28431,28432,28433,28434,28435,28436,28437,28438,28439,28440,28441,28442,28443}
+				local stone_1 = stones_1[number( 1 ,14)];
+				pc.give_item2(stone_1)
+				local stones_2 = {28330,28331,28332,28333,28334,28335,28336,28337,28338,28339,28340,28341,28342,28343}
+				local stone_2 = stones_2[number( 1 ,14)];
+				pc.give_item2(stone_2)
+
+				say_reward("獲得了" ..item_name(stone_1).."")
+				say_reward("獲得了" ..item_name(stone_2).."")
+
+				clear_letter()
+				set_state(__THEEND__)
+				
+
+
+	end
+end
+	state __GIVEUP__ begin
+	end
+	state __THEEND__ begin
+	end
+end
+			
+

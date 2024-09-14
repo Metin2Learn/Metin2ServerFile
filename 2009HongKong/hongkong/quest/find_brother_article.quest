@@ -1,0 +1,177 @@
+quest find_brother_article begin
+    state start begin
+	when 20006.chat."哭泣中的少女" with pc.get_level()>=23 and pc.get_level()<=26 begin
+	    	say("哭泣中的少女:")
+		say("嗚嗚~ 哥哥 嗚嗚嗚~ 你是誰?")
+		wait()
+		say_pc_name()
+		say("我剛剛經過這裡,見到你在哭~ 所以我拿手絹給你.")
+		wait()
+		say("哭泣中的少女:")
+		say("你真一個大好人~ 我的名字叫小虹..")
+		say("你可以幫幫我嗎?")
+		say("我的哥哥為了幫我找藥~")
+		say("但是~ 哥哥在找藥的時候意外死了 嗚嗚~")
+		say("我到了哥哥的墳前 拿到了哥哥的遺物.")
+		wait()
+		say("小虹:")
+		say("突然黑風黨出現了~ 就是這樣我跑到了這裡.")
+		say("在我跑的時候, 我把哥哥的遺物弄丟了")
+		say("但是我很害怕~ 所以沒有辦法去找哥哥的遺物..")
+		say("")
+		say_reward("為了這個可憐的少女, 你願意幫他找")
+		say_reward("他哥哥的衣服?")
+		local s=select("同意", "拒絕")
+		if 1==s then
+		    say("我一定要幫這個可憐的小妹妹")
+		    say("這個任務看上去沒有什麼難度")
+		    say("那我就馬上去幫他找吧.")
+		    set_state(accept)
+		elseif 2==s then
+		    say("我現在很忙很忙~ 根本沒有空餘的時間")
+		    say("再說~ 這女孩看上去根本沒錢.")
+		end
+	end
+    end
+    state accept begin
+	when letter begin
+	    send_letter("去找小虹哥哥的衣服!")
+	end
+	when button or info begin
+	    say_title("去找小虹哥哥的衣服!")
+	    say("去殺死黑風黨,")
+	    say("然後去找小虹哥哥的衣服, 再回去找小虹!")
+	end
+	when 20006.chat."找小虹哥哥的遺物" with pc.count_item(30032)==0 begin
+	    say("小虹:")
+	    say("這個事情對於你來說太難了嗎?")
+	    say("這事情有那麼困難嗎…嗚嗚…哥哥…")
+	    say("")
+	    local s=select("進行", "放棄")
+	    if 1==s then
+		say("拒絕小虹的請求")
+		say("比殺死 100個黑風黨更難.")
+		say("")
+	    else
+		say("很抱歉, 我明白你的情況")
+		say("黑風黨對於現在的我來說, 還是一個非常強的對手")
+		say("你還是請求其他人吧")
+		wait()
+		say("小虹:")
+		say("嗚嗚~ 我已經請求過其他人,但是...")
+		say("所有的人都沒有回來 嗚~~~~~~")
+		say("如果你肯幫我, 我會給你很一件寶物.") 
+		say("")
+		say("小虹給我看了一下那個寶物")
+		say("這個寶物看上去是一樣武器, ")
+		say("因該是一把很珍貴的劍")
+		say("")
+		local s=select("再試一試", "放棄")
+		if 1==s then
+		    say("雖然我不想得到你的報酬~ 嗯嗯~")
+		    say("那我還是在試試吧")
+		    say("")
+		elseif 2==s then
+		    say("所有幫小虹的人去了之後都沒有回來, 難到都已經死了-_-")
+		    say("人的生命只有一次,")
+		    say("我還是不接受這個危險的任務, 很抱歉")
+		    say("")
+		    set_state(failure)
+		end
+	    end
+	end
+	when 20006.chat."交還小虹哥哥的遺物" with pc.count_item(30032)>=1 begin
+	    say("小虹:")
+	    say("我感覺到我哥哥的氣味 嗚嗚.")	
+	    say("真的很感謝你, 這個是我很寶貴的東西")
+	    say("這個寶物…現在給你, 因為對於我來說並沒有用途, ")
+	    say("這個是我對你的感謝")
+	    say("")
+	    say_reward("獲得 小虹的報酬.")
+
+	    pc.remove_item(30032)
+	    set_state(reward)
+	end
+    end
+    state reward begin
+	when letter begin
+	    send_letter("獲得 小虹的報酬.")
+	end
+	when button begin
+	    say_title("獲得 小虹的報酬")
+	    say("收到小虹寶物之後,")
+	    say("我現在要把它打開,")
+	    say("劍柄的樣子很華麗")
+	    wait()
+	    say("就在興奮的時候")
+	    say("發現原來這把劍的劍身已經斷開了.")
+	    say("")
+	    say("哎呀~ 這可怎麼辦啊.")
+	    say("唉唷~ 沒辦法~ 只好去找王鐵匠.")
+	    say("")
+	    say_reward("你獲得短劍")
+	    set_state(repair)
+	end
+    end
+    state repair begin
+	when letter begin
+	    send_letter("讓王鐵匠修補短劍.")
+
+	end
+	when button or info begin
+	    say_title("讓王鐵匠修補短劍.")
+	    say("幫小虹之後所得到的短劍")
+	    say("如果把短劍扔了會很可惜")
+	    say("所以決定去找王鐵匠修補短劍.")
+	end
+	when letter begin
+	    local v=find_npc_by_vnum(20016)
+	    if v!=0 then
+		target.vid("__TARGET__", v, "讓王鐵匠修補短劍")
+	    end
+	end
+	when __TARGET__.target.click or 20016.chat."修復短劍" begin
+	    target.delete("__TARGET__")
+
+	    say("王鐵匠:")
+	    say("嗯~ 看來這短劍還不錯, 修理之後應該還可以使用…")
+	    say("我聽說你幫小虹.")
+	    say("你真是ㄧ個好人,對你這樣的好人")
+	    say("我可以免費幫你修復你的劍.")
+	    say("")
+	    say("王鐵匠開始修復短劍")
+	    say("很快就把短劍修復成為一把很好的劍")
+	    say("")
+	    wait()
+	    say("王鐵匠:")
+	    say("我把這把劍還給你, 我的朋友!")
+	    say("")
+	    say("他拿到劍的時候, 非常緊張")
+	    say("")
+	    say("")
+		
+	    local r=number(1, 4)
+	    if 1==r then
+		say_reward("你獲得 銀劍+2.")
+		pc.give_item2(00062)
+	    elseif 2==r then
+		say_reward("你獲得青風劍+2.")
+		pc.give_item2(00072)
+	    elseif 3==r then
+		say_reward("你獲得寒風劍+2.")
+		pc.give_item2(00082)
+	    elseif 4==r then
+		say_reward("你獲得麒麟刀+2.")
+		pc.give_item2(00092)
+	    end
+
+	    set_state(complete)
+	    q.done()
+	end
+    end
+    state complete begin
+    end
+    state failure begin
+    end
+end
+

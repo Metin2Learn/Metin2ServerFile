@@ -1,0 +1,295 @@
+--------------------------------------------------
+-- SUB QUEST 
+-- LV  50
+-- 解讀疑問的情報 
+----------------------------------------------------
+
+quest subquest_47  begin
+	state start begin
+		when login or levelup with pc.level >= 50  and pc.level <= 52 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "警備隊長")
+			end
+		end
+
+		when __TARGET__.target.click or
+			20355.chat." 解讀疑問的情報" with  pc.level >= 50 begin
+			target.delete("__TARGET__")
+			say("警備隊長:")
+			say("上次過後從樂師那裏接到了新的情報.")
+			say("但是也是暗號文，不好解釋.")
+			say("要盡快解釋，才能找到對策.")
+			say("為了保密採取暗號文")
+			say("反而也有害.")
+			say("上次也是由你來輕易地解釋了")
+			say("這次也試試看吧.")
+			say("")
+		
+			local r=select("接收", "拒絕")
+			if 2==r then
+				say("放棄任務嗎")
+				local a=select("是" ,"否")
+				if 2==a then
+					say("警備隊長:")
+					say("上次也解釋過了..")
+					say("還猶豫什麼呢 ?")
+					say("下次再來吧")
+					say("")
+					return
+				end
+				say("警備隊長")
+				say("知道你的想法了..")
+				say("是不想跟我們一起幹活..")
+				say("是吧?")
+				say("錯過了人才，可惜啊 ")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("警備隊長:")
+			say("就是阿!")
+			say("就知道你會接受")
+			say("看看這個文書吧..")
+			say("")
+			wait()		
+			---                                                   l
+			say("警備隊長:")                 
+			say("")
+			say("               哈尼阿孔與孟山榮他預")
+			say("               把米後他時候拉能計彭")
+			say("               剛僧龍時滾棟騰將常用")
+			say("               和榮雄駒四大會忙成平")
+			say("               起僧紅恐誓有仍重申卅")
+			say("               地運差染敵稱下巴納更")
+			say("               兵新星軍擦剎天四七區")
+			say("               上彭的冷充陳明下東等")
+			say("               馬襲永昌等剛狠鹹喇叭")
+			say("               擊行跟人本攤單機頭沙")
+			say("")
+			say("能看懂嗎? 慢慢看..")
+			wait()
+			say("警備隊長:")
+			say("怎樣 ?")
+			say("有些感覺了嗎 ?")
+			say("")
+			local s=select("啊! 就是這個","不知道.","重新看暗號文")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("警備隊長:")
+					say("回家考慮一下 ")
+					say("再來吧?")
+					say("內容要保密啊..")
+					say("")
+					return
+				end	
+				say("警備隊長:")
+				say("如果連你都猶豫..")
+				say("這個內容怎麼解釋呢!")
+				say("為了保密採取暗號文 ")
+				say("反而更累..")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			if 3==s then
+				say("就這一次幫忙看看吧")
+				say("")
+				say("               哈尼阿孔與孟山榮他預")
+				say("               把米後他時候拉能計彭")
+				say("               剛僧龍時滾棟騰將常用")
+				say("               和榮雄駒四大會忙成平")
+				say("               起僧紅恐誓有仍重申卅")
+				say("               地運差染敵稱下巴納更")
+				say("               兵新星軍擦剎天四七區")
+				say("               上彭的冷充陳明下東等")
+				say("               馬襲永昌等剛狠鹹喇叭")
+				say("               擊行跟人本攤單機頭沙")
+				say("")
+				wait()
+			end
+			say("警備隊長:")
+			say("是啊...")
+			say("這次暗號文的內容是什麼?")
+			say("")	
+			local answer=input()
+
+
+			if answer=="預計將會有敵軍的襲擊" or answer=="預計將會有敵軍的襲擊"  then
+				say("警備隊長:")
+				say("果然! 聽了你的解釋後")
+				say("可以理解了.")
+				say("哎呀!!")
+				say("你現在可是成了不可缺少的人物了.")
+				say("最近隨著來自他國的入侵者增加")
+				say("樂師要求做好對策.")
+				say("知道了，我們立即加強警備")
+				say("要命令士兵提起精神.")
+				say("你也要做好准備")
+				say("隨時應對敵軍的襲擊.")
+				say_reward("獲得經驗值  2300000 ")
+				pc.give_exp2(2300000)
+				 set_quest_state("levelup","run")
+				if pc.job == 0 then
+					pc.give_item2(112, 1)
+					say_reward("獲得了" ..item_name(112).."")
+				elseif pc.job == 1 then
+					pc.give_item2(1072, 1)
+					say_reward("獲得了" ..item_name(1072).."")
+				elseif pc.job == 2 then
+					pc.give_item2(112, 1)
+					say_reward("獲得了" ..item_name(112).."")
+				elseif pc.job == 3 then
+					pc.give_item2(7102, 1)
+					say_reward("獲得了" ..item_name(7102).."")
+				end	
+
+				clear_letter()
+			    set_state(__COMPLETE__)
+				return	
+			elseif answer=="" then
+					say("警備隊長:")
+					say("怎麼不說話?")
+					say("不知道嗎?")
+					local a=select("重新解釋給您聽","這個..不知道了")
+					if 2==a then
+						say("警備隊長:")
+				        say("如果連你都猶豫..")
+				        say("這個內容怎麼解釋呢!")
+				        say("為了保密採取暗號文 ")
+				        say("反而更累..")
+						say("")
+						return
+					end
+					say("那..這是什麼?")
+					local answer=input()
+					
+					if answer=="預計有敵軍的襲擊" or answer=="預計有敵軍的襲擊"  then
+						say("警備隊長:")
+						say("果然! 聽了你的解釋後")
+			        	say("可以理解了.")
+				        say("哎呀!!")
+				        say("你現在可是成了不可缺少的人物了.")
+				        say("最近隨著來自他國的入侵者增加")
+				        say("樂師要求做好對策.")
+				        say("知道了，我們立即加強警備")
+				        say("要命令士兵提起精神.")
+				        say("你也要做好准備")
+			            say("隨時應對敵軍的襲擊.")
+						say("")
+						say_reward("獲得經驗值 2300000")
+						pc.give_exp2(2300000)
+						 set_quest_state("levelup","run")
+
+					if pc.job == 0 then
+						pc.give_item2(112, 1)
+						say_reward("獲得了" ..item_name(112).."")
+					elseif pc.job == 1 then
+						pc.give_item2(1072, 1)
+						say_reward("獲得了" ..item_name(1072).."")
+					elseif pc.job == 2 then
+						pc.give_item2(112, 1)
+						say_reward("獲得了" ..item_name(112).."")
+					elseif pc.job == 3 then
+						pc.give_item2(7102, 1)
+						say_reward("獲得了" ..item_name(7012).."")
+					end	
+
+
+						clear_letter()
+						set_state(__COMPLETE__)
+						return
+					else
+						say("警備隊長: ")
+						say("嗯. " )
+						say("你的實力減退很多了 ")
+						say("")
+						return
+					end
+
+			else		
+				say("警備隊長:")
+				say("嗯." )
+				say("樂師不會說這樣的話...")
+				say("再想想看吧")
+				local a=select("重新解釋給您聽","這個..不知道了")
+				if 2==a then
+					say("警備隊長:")
+				        say("如果連你都猶豫..")
+				        say("這個內容怎麼解釋呢!")
+				        say("為了保密採取暗號文 ")
+				        say("反而更累..")
+
+					say("")
+					say("警備隊長:")
+					say("恩." )
+					say("你的實力減退很多了")
+					say("")
+					set_state(__GIVEUP__)
+					return
+				end
+			end
+				say("那..這是什麼?")
+				local answer=input()
+				
+				if answer=="預計有敵軍的襲擊" or answer=="預計有敵軍的襲擊"  then
+					say("警備隊長:")
+					say("果然! 聽了你的解釋後")
+			       	say("可以理解了.")
+				    say("哎呀!!")
+				    say("你現在可是成了不可缺少的人物了.")
+				     say("最近隨著來自他國的入侵者增加")
+				     say("樂師要求做好對策.")
+				     say("知道了，我們立即加強警備")
+				     say("要命令士兵提起精神.")
+				     say("你也要做好准備")
+			         say("隨時應對敵軍的襲擊.")
+					say("")
+					say_reward("獲得經驗值 2300000")
+					pc.give_exp2(2300000)
+					 set_quest_state("levelup","run")	
+					if pc.job == 0 then
+						pc.give_item2(112, 1)
+						say_reward("獲得了" ..item_name(112).."")
+					elseif pc.job == 1 then
+						pc.give_item2(1072, 1)
+						say_reward("獲得了" ..item_name(1072).."")
+					elseif pc.job == 2 then
+						pc.give_item2(112, 1)
+						say_reward("獲得了" ..item_name(112).."")
+					elseif pc.job == 3 then
+						pc.give_item2(7102, 1)
+						say_reward("獲得了" ..item_name(7012).."")
+					end	
+
+					clear_letter()
+					set_state(__COMPLETE__)
+					return
+				else
+					say("警備隊長:")
+					say("恩." )
+					say("你的實力減退很多了")
+					say("")
+					return
+				end
+	    end
+
+	end	
+
+
+	state __GIVEUP__ begin
+	end
+	
+	state __COMPLETE__ begin
+	end
+end
+

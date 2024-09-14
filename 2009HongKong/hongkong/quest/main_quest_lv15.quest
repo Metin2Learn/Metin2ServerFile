@@ -1,0 +1,201 @@
+---------------------------------------
+-- Main Quest LV15
+-- 三個國家的情況(警備隊長教育2)
+---------------------------------------
+quest main_quest_lv15 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter begin
+			if  pc.get_level() >= 15 then 				
+				setstate( gotoboss )		
+			end
+		end
+	end
+	state gotoboss begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[15] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[15])
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."三國的情況"..locale.NORMAL_COLOR)
+			--say("跟警備隊長對話")
+			say("現在去找警備隊長的話, 你可以知道三國的情況.")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."三國的情況"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			
+			say("警備隊長 : 嗯~ 現在你可以開始明白了吧, 我現在給你我們國家的說明,我們先熟悉我們自己, 然後再去熟悉我們的敵人, 這樣才可以戰鬥中取得勝利.")
+
+			wait()
+			local empire = pc.getempire()
+			if empire == 1 then
+	    		---                                                   l
+				say("【新受國】我們國家從古代的時候開始商業很發達.")
+				say("使用不同的貿易通道, 交易都很興旺.")
+			   	say("但是惡運石出現以後,交易上出現了難題")
+				say("戰爭開始了, 所以人們的生活越來越困難.")
+				say("這國家很重視交易, ")
+				say("比其他國家弱.")
+				say("")
+				say("這緣故, 我們使用資金力 ")
+   				say("開始使用傭用兵. 傭用兵的實力不錯. 還有付錢給他們的話")
+   				say("不會背叛我們. ")
+				wait()
+				say("因為傭用兵, 我們國家比以前穩定的多. ")
+   				say("為了防備日後的戰爭")
+   				say("我們需要多一些的傭用兵和經濟力.")
+   				say("為了這條件我們要努力.")
+				say("")
+				say("現在我給你新任務.")
+				say("請您幫我這特產交給在其他城市的樂師.")
+				say("我們國家的特產交易很興旺")
+			   	say("你交給樂師的話")
+			   	say("會幫助那城市的經濟發展.")
+				
+			elseif empire == 2 then
+	    		---                                                   l
+				say("【天調國】我們國家很重視宗教")
+			   	say("我們崇拜神, 祈求他的幫助")
+			   	say("我們很早以前已經感覺到魔王的存在")
+				say("所以使用神女們的能力, 防備惡運石的威脅.")
+				say("現在很多擁有高能力的神女, 為了我們國家的安全")
+				say("他們很努力的保衛著我們的國家.")
+   				say("神女們對宗教的信仰讓他們使用很多的法力")
+   				say("如果沒有他們的話, 我們的國家會被其他的國家侵略.")
+				wait()
+				say("還有, 國民的信仰心也非常強烈, 他們每天對龍神")
+			   	say("祈求上天 龍神可以制止魔王的復活")
+				say("還有, 給我們力量可以保護自己.")
+			   	say("將來根據我們的信仰心")
+			   	say("保護我們自己的國家及三國統一.")
+				wait()
+				say("現在我給你別的任務.")
+				say("請你把這龍神石像交給其他城市的樂師.")
+				say("因為我們國家是宗教國家")
+				say("所以, 我們需要信仰心.")
+				say("你交給這龍神石像給樂師的話")
+				say("會幫助那個城市的信仰心上升")
+				elseif empire == 3 then
+				say("【進勞國】我們國家從古代, 就擁有很強大的軍隊")
+				say("以前, 大陸最初是統一的, 先人是")
+				say("使用強大的軍事力,")
+				say("成功統一了整個大陸.")
+				say("因為惡運石, 發生的混亂,")
+				say("所以現在我們分開成為了3個國家. ")
+				say("但是我們還是很重視帝國的傳統心.")
+				wait()
+				say("現在也是軍事力的方面, 我們國家就是最好的")
+				say("因為惡運石, 我們不會開始行動 ")
+				say("但是, 我們開始行動的話, ")
+   				say("侵略其他國家是很簡單的事情.")
+   				say("為了成為最好的士兵,")
+   				say("你也怒力修煉吧.")
+				wait()
+				say("我給你別的任務.")
+				say("請你將這個軍需交給樂師.")
+			   	say("我們國家就是, 軍事強國")
+				say("所以獲得軍需是很重要的.")
+				say("你交換給雲樂師的話")
+				say("那軍需會幫助那城市的軍事力. ")
+			end  
+			
+			say( "[ENTER]")	
+			say_reward("任務完成取得報酬")
+			say_reward("經驗值".." 20000" )
+			say_reward("金錢".." 10000 兩")
+
+
+			setstate( gotomusition )
+			q.done()
+		end
+	end
+
+	state gotomusition begin
+		when letter begin
+			local v=find_npc_by_vnum(20017)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找樂師")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+		    makequestbutton( locale.MAIN_QUEST_TITLE_DICT[15] )
+			q.set_title("去找樂師")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."三國的情況"..locale.NORMAL_COLOR)
+			say("跟樂師對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."三國的情況"..locale.NORMAL_COLOR)
+			say("跟樂師對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			say("樂師 : 很久以前, 魔王跟龍神之間有很激烈的戰鬥- 現在人們也要開始戰鬥-您又來了… 這次有什麼事情嗎? 阿~警備隊長寄給我一樣很重要的東西, 謝謝您了. 您趕快離開這裡, 讓其他人知道就麻煩了, 再見!")
+			setstate( gotoboss2 )
+			q.done()
+		end
+	end
+	state gotoboss2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[15] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[15])
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."三國的情況"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."三國的情況"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when __TARGET__.target.click begin
+			pc.give_exp2( 10000 )
+			set_quest_state("levelup","run")
+			pc.change_money( 3000 )
+			target.delete("__TARGET__")
+			say( "警備隊長 : 哦! 辛苦您了, 從現在開始我什麼事情也會邀請您." )
+			say( "[ENTER]")	
+			say_reward("任務報酬")
+			say_reward("經驗值 ".." 10000" )
+			say_reward("金錢".." 3000 兩")
+			
+			pc.give_item2(50721,3)
+			pc.give_item2(50722,3)
+			say_reward("獲得了草藥物品")
+			clear_letter()
+			set_quest_state("main_quest_lv16_1", "run")
+	
+			setstate( __COMPLETE__ )
+		end
+	end
+	state __COMPLETE__ begin
+	end
+end
+

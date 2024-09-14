@@ -1,0 +1,326 @@
+------------------------------------------
+-- SUB QUEST 
+--LV 38
+--秘宗入門文書 書蟲
+-----------------------------------------
+quest subquest_27 begin
+	state start begin
+		when login or levelup with pc.level >= 38  and pc.level <= 40  begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20023)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "書蟲")
+			end
+		end
+
+		when __TARGET__.target.click or
+		 20023.chat."你知道洋書的奧妙嗎?" begin
+			target.delete("__TARGET__")
+			say("書蟲 :")
+			say("你知道洋書的奧妙嗎?")
+			say("文字連接成文章" )
+			say("形成一個長文，其味道,")
+			say("只有懂得的人才能體會得到" )
+			say("真是幸福.")
+			say("")
+			wait()
+		
+			say("書蟲 :")
+			say("得到所擁有的,")
+			say("掌握所知道的樂趣和快樂.")
+			say("如果能一直看書過餘生")
+			say("那該多好啊……")
+			say("")
+			
+			set_state(to_wife)
+
+		end
+	end
+	state to_wife begin
+		when letter begin
+			local v=find_npc_by_vnum(20002)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "劉嫂")
+			end
+			
+			send_letter("去找劉嫂")
+
+		end
+
+		when info or button begin
+		
+			say(locale.NOTICE_COLOR.." 去找劉嫂"..locale.NORMAL_COLOR)
+			say("")
+			say("去找劉嫂，問有關她的丈夫-書蟲.")
+
+
+		end
+
+		when __TARGET__.target.click or
+			20002.chat."真是傷心死了" begin
+			target.delete("__TARGET__")
+			say("劉嫂  :")
+			say("哎喲, 這個人又藏哪裡了!")
+			say("真是傷心死了." )
+			say("不去賺錢," )
+			say("整天藏起來翻書" )
+			say("虛度年華." )
+			say("還有臉見孩子嗎?" )
+			say("")
+			wait()
+			say("劉嫂 :")
+			say("書能當飯吃嗎," )
+			say("能當衣服穿嗎?" )
+			say("如果找到了" )
+			say("把他的腿……!")
+			say("")	
+			set_state(to_neighbor)
+		end
+	end	
+	
+	state to_neighbor  begin
+		when letter begin
+			local v=find_npc_by_vnum(9003)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "雜貨店老闆")
+			end
+			
+			send_letter("去找雜貨店老闆")
+
+		end
+
+		when info or button begin
+		
+			say(locale.NOTICE_COLOR.." 去找雜貨店老闆"..locale.NORMAL_COLOR)
+			say("")
+			say("問雜貨店老闆有關鄰居書蟲.")
+
+
+		end
+
+
+		when __TARGET__target.click or
+			9003.chat." 關於書蟲.."  begin
+			target.delete("__TARGET__")
+			say("雜貨店老闆 :")
+			say("這個人昨天也來過這裡.")
+			say("說什麼來著? 說秘宗的經典什麼的,")
+			say("連買書的錢都沒有，亂找書.")
+			say("說秘宗的話,")
+			say("應該是指昇龍谷的那些險惡的傢伙,")
+			say("為什麼突然對他們敢興趣呢.")
+			say("")
+			wait()
+			say("雜貨店老闆 :")
+			say("劉嫂真是可憐啊.")
+			say("怎麼遇到了那樣一個人，受苦,")
+			say("歎氣....")
+			say("")
+			set_state(back_to_soonyougil)
+		end	
+			
+	end
+
+	state  back_to_soonyougil begin
+
+		when letter begin
+
+			send_letter("重新去找書蟲")
+			
+			local v=find_npc_by_vnum(20023)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "重新去找書蟲")
+			end
+
+		end
+
+		when info or button begin
+		
+			say(locale.NOTICE_COLOR.."去找書蟲"..locale.NORMAL_COLOR)
+			say("")
+			say("找書蟲問有關秘宗經典.")
+
+
+		end
+
+		when __TARGET__.target.click or
+			20023.chat."什麼是秘宗經典?" begin
+			target.delete("__TARGET__")
+			say("書蟲 :")
+			say("噢，是你啊! 我啊,")
+			say("可以說是看遍了世上的所有的書的人.")
+			say("最近很想看仙人的各種經典.")
+			say("聽說秘宗經典上有")
+			say("成為真的仙人的秘訣和內容.")
+			say("")
+			wait("")
+			say("書蟲 :")
+			say("很想想盡辦法看那個書. ")
+			say("能幫我找那本書嗎?")
+			say("找來了，就給你相應的報酬.")
+			say("如果不夠了，把我家的頂樑柱拔出來")
+			say("作為報酬給你吧.")
+			say("")	
+
+			local s=select("幫你取回來!","比較難..." )
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("書蟲:")
+					say("啊，你幫幫忙吧，好嗎?")
+					say("現在忙得話，下次來也可以...")
+					say("那我等著了~")
+					return
+				end
+				say("書蟲 :")
+				say("啊，你幫幫忙吧，好嗎?")
+				say("就這樣走了~~~~")
+				say("這個書一定想看...")
+				say("那請誰幫忙呢..")
+				say("嗤嗤..")
+				set_state(__GIVEUP__)
+				return
+			end
+					
+			say("書蟲 :")
+			say("謝謝! 那就信你了.")
+			say("")
+			say("")
+			set_state(find_book)
+			
+		end
+
+	end
+			
+
+	state find_book begin
+
+		when letter begin
+					
+			if pc.count_item("30156")>=1 then
+				send_letter("找到秘宗經典")
+
+				local v=find_npc_by_vnum(20023)
+				if 0!= v then
+					target.vid("__TARGET__",v,"去書蟲那裡")
+				end 
+				return
+			end
+			
+			send_letter("擊毀"..mob_name(751).."!")
+
+		end
+
+		when info or  button begin
+			if pc.count_item("30156")>=1 then
+				say(locale.NOTICE_COLOR.." 擊毀了"..mob_name(751).."".. locale.NORMAL_COLOR)
+				say("給深深地關心著秘宗經典的書蟲")
+				say("拿給秘宗經典")
+				say("")
+				return
+			end
+			
+			say(locale.NOTICE_COLOR.." 擊毀"..mob_name(751).."!".. locale.NORMAL_COLOR)
+			say("書蟲對秘宗經典有著深深的關心")
+			say("這個書可以從"..mob_name(751).."那裡取到")
+			say("從"..mob_name(751).."那裡取秘宗經典")
+
+
+		end
+
+		when 751.kill  begin
+			
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30156")==0  then
+				pc.give_item2(30156, 1)
+
+			end
+		end
+
+			
+		when __TARGET__.target.click or
+			20023.chat."秘宗經典!"   begin
+			target.delete("__TARGET__")
+			if pc.count_item("30156")>=1	then
+				say("書蟲:")
+				say("噢~")
+				say("是這個書啊!!")
+				say("噢噢! 就是這個! 謝謝了!")
+				say("我的禮物")
+				say("")
+				pc.remove_item("30156",1)	
+				say_reward("從書蟲那裡獲得  20000兩")	
+				pc.change_money(20000)
+				
+				say_reward("獲得經驗值 850000 ")
+				pc.give_exp2(850000)
+
+				set_quest_state("levelup","run")
+				say_reward("獲得了草藥物品")
+				pc.give_item2(50722,10)
+				pc.give_item2(50724,10)
+
+				clear_letter()
+				set_state(__COMPLETE__)
+
+
+				
+				
+				return
+			else		
+				say("書蟲 :")
+				say("啊， 你...")
+				say("還沒取到!")
+				say("接收事情，要儘快行動阿")
+				say("這麼磨蹭，什麼時候才能完成事情啊!")
+
+
+				local s=select("重新挑戰","放棄" )
+				if 2==s then
+					say("放棄任務嗎?")
+					local a=select("是","不是")
+					if  2==a then
+						say("書蟲:")
+						say("見過"..mob_name(751).."了嗎?")
+						say("聽說最近很倡狂..")
+						say("慢慢再挑戰吧")
+						return
+					end
+					say("書蟲 :")
+					say("已經有其他人取來了秘宗經典.")
+					say("所以不用你來費勁地去取.") 
+
+					set_state(__GIVEUP__)
+					return
+				end
+						
+				say("書蟲 :")
+				say("謝謝! 那就信你了.")
+
+				end
+
+
+			end
+
+		end
+
+
+
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__ begin
+	end	
+end
+	
+
+

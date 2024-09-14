@@ -1,0 +1,292 @@
+-------------------------------------------------------
+--SUB QUEST 
+--LV 36
+--尋找小虹的哥哥
+-------------------------------------------------------
+quest subquest_23 begin 
+    state start begin
+		when login or levelup with pc.level >= 36  and pc.level <= 38 begin
+			set_state(information)
+		end
+	end	
+	
+	state information begin
+		when letter begin
+			local v= find_npc_by_vnum(20006)
+			if v!= 0 then
+				target.vid("__TARGET__",v,"幫忙找哥哥吧")
+			end 
+		end
+		
+		when __TARGET__.target.click or
+			20006.chat."少女在哭泣"  begin
+	    	target.delete("__TARGET__")
+			say("小虹:")
+			say("等一下...")
+			say("是上次轉達哥哥的信的那位吧?")
+			say("上次多謝了。 但是後來")
+			say("再也沒有哥哥的消息了.")
+			say("我知道哥哥為我")
+			say("努力去採藥")
+			say("但是沒有消息，讓人很擔心.")
+			say("麻煩你再幫我打聽哥哥的消息吧.")
+			say("他的朋友樂師叔叔應該會知道的.")
+			say("")
+			local s=select("接收", "拒絕")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","不是")
+					if 2==a then
+						say("小虹:")
+						say("哭泣~")
+						say("那我等你了，下次再來吧")
+						say("")
+						return
+					end
+					say_pc_name()
+					say("我自己也很忙")
+					say("還有必要幫助那個看起來沒錢的孤兒少女嗎?")
+					say("")	
+					set_state(__GIVEUP__)
+					return
+				end
+				say_pc_name()
+				say("幫助尋找哥哥的可憐的少女")
+				say("很有意義的事情. 看起來也不難")
+				say("趕緊去一趟.")
+				say("")	
+				set_state(to_youhwan)
+						
+		end	
+	end
+    state to_youhwan begin
+		when letter begin
+			send_letter("找樂師!")
+			
+			local v= find_npc_by_vnum(20017)
+			if v!= 0 then
+				target.vid("__TARGET__",v,"去樂師那裡")
+			end 
+
+		end
+		when button or info begin
+			say_title("去找小虹哥哥的朋友樂師")
+			say("")
+			say("小虹的哥哥好像是行蹤不明了.")
+			say("根據小虹的話，自從上次的信後")
+			say("沒有什麼消息了.")
+			say("為了找小虹的哥哥，去找樂師")
+			say("")
+		end
+
+
+		when __TARGET__.target.click or
+			20017.chat."看到小虹的哥哥了嗎?" begin
+			target.delete("__TARGET__")
+			say("樂師:")
+			say("是小虹叫你來的?")
+			say("看來很擔心她的哥哥啊.")
+			say("這怎麼辦呢..")
+			say("太久沒有見到小虹的哥哥了")
+			say("都不太記得了.")
+			say("最近都不過來玩，也沒有消息")
+			say("心裡很擔心，結果出現這些情況.")
+			say("之前獵手說過有見過小虹的哥哥")
+			say("先問看看他如何?")
+			say("")
+			set_state(to_hunter)
+		end
+	end
+
+
+	state to_hunter begin
+		when letter begin
+			send_letter("找獵手!")
+			
+			local v= find_npc_by_vnum(20019)
+			if v!= 0 then
+				target.vid("__TARGET__",v,"去獵手那裡")
+			end 
+
+		end
+		when button or info begin
+			say_title("去小虹哥哥的朋友獵手那裡")
+			say("")
+			say("為了找小虹的哥哥")
+			say("去找獵手")
+			say("")
+		end
+
+
+		when __TARGET__.target.click or
+			20019.chat."見過小虹的哥哥嗎?" begin
+			target.delete("__TARGET__")
+			say("獵手:")
+			say("是說小虹的哥哥嗎?")
+			say("上次見到的時候說，為了採更好的藥材")
+			say("去昇龍谷附近.")
+			say("但是，昇龍谷是鬼族橫行霸道的地方")
+			say("是很危險的地方.")
+			say("那是個勇猛的獵人們也因為危險而不敢靠近的地方.")
+			say("但是為了採藥去那個危險的地方...")
+			say("這麼久沒有消息，也許出了大事了.")
+			say("去昇龍谷看")
+			say("可以知道小虹哥哥的消息吧?")
+			say("")
+			local s=select("去昇龍谷", "放棄")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","不是")
+				if 2== a then
+					say_pc_name()
+					say("雖然不是一定為了報酬.")
+					say("下次再挑戰吧")
+					say("")
+					return
+				end	
+				say_pc_name()
+				say("去到獵人們也不去的昇龍谷之後")
+				say("沒有消息，那不就很明顯的嗎?")
+				say("沒有必要為了少女的請求")
+				say("去那麼危險的地方")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say_pc_name()
+			say("昇龍谷很危險；鬼族也很害怕")
+			say("但是有小虹的請求 ")
+			say("也選擇了找哥哥")
+			say("繼續前往")
+			say("")
+			set_state(to_danger_place)
+		end
+	end
+
+	 state to_danger_place begin
+		when letter begin
+			send_letter("去昇龍谷尋找哥哥!")
+			
+			local v= find_npc_by_vnum(20356)
+			if v!= 0 then
+				target.vid("__TARGET__",v,"去尋找哥哥")
+			end 
+
+		end
+		when button or info begin
+			say_title("去昇龍谷尋找小虹的哥哥")
+			say("")
+			say("根據樂師和獵手的話，小虹的哥哥")
+			say("為了採更好的藥")
+			say("去了昇龍谷.")
+			say("去昇龍谷找小虹的哥哥.")
+			say("可通過空間移動術師去昇龍谷.")
+			say("")
+		end
+
+
+		when __TARGET__.target.click or
+			20356.chat."屍體阿!" begin              
+			target.delete("__TARGET__")
+			say("有個看起來不是很久的屍體")
+			say("看形態好像是比較瘦的男子.")
+			say("屍體上有玉項鏈和吊飾.")
+			say("可能跟小虹的哥哥有關係")
+			say("先通知小虹")
+			pc.give_item2(16082)
+			pc.give_item2(30155)	
+			set_state(to_mirinae)
+		end
+	end
+
+
+
+	 state to_mirinae  begin
+		when letter begin
+			send_letter("去找小虹")
+			
+			local v= find_npc_by_vnum(20006)
+			if v!= 0 then
+				target.vid("__TARGET__",v," 去找小虹")
+			end 
+
+		end
+		when button or info begin
+			say_title("去找小虹")
+			say("")
+			say("從昇龍谷的屍體上收拾")
+			say("遺物(玉項鏈, 吊飾)後去找小虹")
+			say("")
+		end
+
+
+		when __TARGET__.target.click or
+			20006.chat."小虹阿~或許哥哥" with pc.count_item(16082)>0 and pc.count_item(30155)>0  begin
+			target.delete("__TARGET__")
+			say("小虹:")
+			say("有了哥哥的消息了嗎?")
+			say("啊，這個玉項鏈是... 哭泣 …")
+			say("哥哥一直帶著的玉項鏈.")
+			say("我也有相似的玉項鏈.")
+			say("是我和哥哥從小就一起帶的玉項鏈")
+			say("是一直陪伴我們兄妹的玉項鏈.")
+			say("但是.. 現在沒有哥哥..")
+			say("只有玉項鏈回來了阿..")
+			say("")
+			wait()
+			say("小虹:")
+			say("哭泣... 可憐的哥哥. 哭泣…")
+			say("這都是因為戰爭.")
+			say("如果沒有戰爭")
+			say("我和哥哥應該過著幸福的日子...")
+			say("因為戰爭，生活困難")
+			say("哥哥才去採藥賣")
+			say("維持生活.")
+			say("哥哥一直為我努力幹活")
+			say("因為我失去了哥哥. 哭泣...")
+			say("")
+			wait()
+			say("小虹:")
+			say("無論如何… 謝謝你幫我.")
+			say("知道了哥哥的行蹤")
+			say("總是幸運的")
+			say("如果不是勇士您，可能一輩子找不到哥哥" )
+			say("就那樣結束了.")
+			wait()
+			say("小虹:")
+			say("哥哥的吊飾")
+			say("我會小心珍藏.")
+			say("這個鍊咀，為表心意")
+			say("給您.")
+			say("肯定會幫上忙的.")
+			say("")
+			say("謝謝您幫忙")
+			say("哥哥肯定去了好地方. 是吧..?")
+			say("")
+			pc.remove_item(30155,1)
+		
+			say_reward("獲得經驗值 600000")
+			say_reward("獲得 35000兩") 
+			
+			pc.give_exp2(600000)	
+			set_quest_state("levelup","run")
+			say_reward("獲得了草藥物品")			             
+			pc.give_item2(50724,10)
+			pc.give_item2(50725,5)
+
+			pc.change_money(35000)	
+			
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end
+
+	state __GIVEUP__ begin
+	end
+	state __COMPLETE__  begin
+		when enter begin
+			q.done()
+		end
+	end
+	end
+

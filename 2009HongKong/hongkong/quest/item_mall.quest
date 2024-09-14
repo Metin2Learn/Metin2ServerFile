@@ -1,0 +1,9 @@
+quest item_mall begin
+	state start begin
+	    when 9010.chat."¨Ï¥ÎÁÊª«©±" with is_test_server() begin
+	    	setskin(NOWINDOW)
+		cmdchat("item_mall")
+	    end
+	end
+end
+

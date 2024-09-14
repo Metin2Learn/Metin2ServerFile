@@ -1,0 +1,193 @@
+----------------------------------------------------
+-- SUB QUEST 
+-- LV 45
+-- 獵手的寶物
+----------------------------------------------------
+
+quest subquest_38 begin 
+	state start begin
+		when login or levelup with pc.level >= 45 and pc.level <= 47 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+					
+			local v = find_npc_by_vnum(20019)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "獵手的寶物")
+			end
+		end
+
+		
+		when __TARGET__.target.click or 
+			20019.chat." 獵手的寶物" with pc.level >= 16 begin
+			target.delete("__TARGET__")
+
+			say("獵手 :")
+			say("你能聽我說幾句嗎?")
+			say("如你看到，我是個獵手")
+			say("我家幾代人都是一靠捕獵生存下來的.")
+			say("算是個資深的獵手世家.")
+			say("但是不久前我犯了給家族蒙羞的")
+			say("大失誤...")
+			say("")
+			wait()
+			say("獵手:")
+			say("有個祖傳下來的黃金角弓")
+			say("一不小心，被真上仙洞獮猴們")
+			say("偷走了.")
+			say("可能是因為上次我去上仙洞捕獵的時候 ")
+			say("趕走了它們")
+			say("為了報復，做了這些事.")
+			say("")
+			wait()
+			say("獵手:")
+			say("我沒有去過")
+			say("上仙洞深處")
+			say("所以想請您幫忙.")
+			say("聽村子裡的人說")
+			say("您是很有實力的.")
+			say("所以拜託您了.")
+			say("如果找不回黃金角弓，沒臉見祖先")
+			say("")
+
+			local s=select("接收.","拒絕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("獵手 :")
+					say("啊~ 要快點找到才行啊..")
+					say("下次有空再來好嗎?")
+					say("再見")
+					say("")
+					return
+				end
+				say("獵手:")
+				say("難嗎? 那沒辦法 ..")
+				say("保重身體，上仙洞是個危險的地方")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("獵手:")
+			say("黃金角弓應該好找.")
+			say("這次要好好報答您!")
+			say("")
+			set_state(hunt_monkey)
+		
+		end
+	end
+
+	state hunt_monkey begin
+		when letter begin
+			
+			setskin(NOWINDOW)
+			makequestbutton("獵手的寶物")
+			q.set_title("獵手的寶物")
+			q.start()
+
+			if pc.count_item(30136)> 0  then
+				local v = find_npc_by_vnum(20019)
+
+				if v != 0 then
+					target.vid("__TARGET__", v, "獵手的寶物")
+				end
+			end
+			
+		end
+
+		when info or button begin
+
+			if pc.count_item(30136)> 0  then
+				say(locale.NOTICE_COLOR.."找到黃金角弓了"..locale.NORMAL_COLOR)
+				say("找到獵手給真獮猴們搶走的 ")
+				say("黃金角弓")
+				say("回去還給獵手")
+				return
+			end
+			say(locale.NOTICE_COLOR.."幫忙找黃金角弓"..locale.NORMAL_COLOR)
+			say("獵手丟了")
+			say("祖先傳下來的黃金角弓.")
+			say("犯人好像是住在上仙洞的")
+			say("真獮猴們.")
+			say("去上仙洞找回被真獮猴們偷走的")
+			say("黃金角弓.")
+			say("找回黃金角弓，拿給獵手吧. ")
+			say("")
+		end
+		
+		when 5151.kill or 5152.kill or 5153.kill or 5154.kill or 5155.kill begin
+			local s = number(1, 100)------------------------------------------------------------黃金角弓ITEM 
+			if s <= 5 and pc.count_item("30136")== 0  then
+				pc.give_item2("30136", 1)
+				
+			end
+		end
+
+		when 20019.chat."這裡 黃金角弓.." begin
+			target.delete("__TARGET__")
+		
+			if pc.count_item("30136") >= 1 then
+				say("獵手 :")
+				say("啊 那是！ 黃金角弓沒錯.")
+				say("黃金角弓!!! 哈哈哈")
+				say("這才有臉見祖先了.")
+				say("這些天真是讓我心裡難受")
+				say("真是謝謝了，都是托您的福")
+				say("才能找回臉面.")
+				say("雖然不多，是我的心意，收下吧.")
+				say("多虧了您，這下活過來了!")
+				say("")
+				pc.remove_item("30136", 1)
+				
+				say_reward("獲得經驗值 1500000")
+				pc.give_exp2(1500000)
+				set_quest_state("levelup","run")
+				
+				say_reward("獲得了" ..item_name(72006).."")
+				pc.give_item2(72006)
+				
+				say_reward("獲得 35000 兩")
+				pc.change_money(35000)
+				set_state(COMPLETE)
+				clear_letter()
+				return
+			else
+				say("找回黃金角弓!")
+				local s=select("是，重新挑戰","放棄")
+				if 2==s then
+					say("放棄任務嗎?")
+					local a=select("是","不是")
+					if  2==a then
+						say("獵手 :")
+						say("難嗎? 那沒辦法 ..")
+						say("保重身體，上仙洞的真獮猴脾氣很怪...")
+						say("")
+						set_state(__GIVEUP__)
+						return
+					end
+				say("獵手:")
+				say("重新挑戰嗎?")
+				say("以您的實力充分可以找回來")
+				say("")
+				end	
+			end
+		end
+	end
+
+	state __GIVEUP__ begin
+	end
+		
+	state COMPLETE begin
+		when enter begin
+			q.done()
+		end
+	end
+end
+
+

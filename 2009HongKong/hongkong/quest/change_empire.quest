@@ -1,0 +1,138 @@
+quest change_empire begin
+	state start begin
+		when 20090.chat."更改國籍"  with game.get_event_flag("c_e") >0  begin
+
+			local count = pc.get_change_empire_count() ;
+			if count >= 1 then
+				say("已更改國籍的角色不能再更改。")
+				say("")
+				return
+			end
+			say_reward("更改國籍")
+			say("")
+			say("逃亡到其他帝國。")
+			say("公會會長不能逃亡，")
+			say("公會會員必須先脫離公會。")
+			say("而已婚者必須先離婚，")
+			say("另外需要50萬兩。")
+			say("")
+			say("您是否要逃亡？")
+			say("")
+
+			local s = select("要逃亡", "不要逃亡")
+
+			if s == 1 then
+				change_empire.move_pc()
+			end
+		end
+
+		when 71054.use begin
+			say("使用了帝國轉換秘籍。")
+			say("按照轉國的規定進行轉國")
+
+			if get_time() < pc.getqf("next_use_time") then
+				say("還沒到可轉國的時間")
+				say("")
+
+				if pc.is_gm() then
+					say("GM為了測試可以設定時間")
+					say("")
+					local s = select("重新設定", "取消")
+					if s == 1 then
+						say("時間初始化了")
+						pc.setqf("next_use_time", 0)
+					end
+				end
+
+				return
+			end
+
+			if change_empire.move_pc() == true then
+				pc.setqf("next_use_time", get_time() + 86400 * 7)
+			end
+		end
+
+
+
+		function move_pc()
+			if pc.is_engaged() then
+				say("您正在結婚。")
+				say("無法更改國籍。")
+				say("")
+				return false
+			end
+
+			if pc.is_married() then
+				say("您已經結婚。")
+				say("無法更改國籍。")
+				say("")
+				return false
+			end
+
+			if pc.is_polymorphed() then
+				say("您正在幻化。")
+				say("無法更改國籍。")
+				say("")
+				return false
+			end
+
+			if pc.has_guild() then
+				say("您是公會的成員。")
+				say("無法更改國籍。")
+				say("")
+				return false
+			end
+			if pc.money < 500000 then
+				say("金錢不足。")
+				say("要更改國籍，您需要有50萬兩。")
+				say("")
+				return false
+			end
+			say("進行流亡過程。")
+			local s = select("新受國", "天調國", "進勞國", "取消")
+			if 4==s then
+				return false 
+			end
+			say("")
+			say_reward("您真的要更改國籍？")
+			say_reward("更改後，您不能再更改。")
+			say("")
+			local a = select("要逃亡", "不要逃亡")
+			if 2== a then
+				return false
+			end
+
+			local ret = pc.change_empire(s)
+			local oldempire = pc.get_empire()
+			if ret == 999 then
+				say("成功更改國籍。")
+				say("請重新登入遊戲。")
+				say("")
+				pc.change_gold(-500000)
+				pc.remove_item(71054) ;
+
+				char_log(0, "CHANGE_EMPIRE",string.format("%d -> %d", oldempire, s)) 
+			
+				return  true
+			else
+				if ret == 1 then
+					say("您選擇的帝國和您現在所屬的帝國一樣。")
+					say("請選擇其他帝國。")
+					say("")
+					say("")
+				elseif ret == 2 then
+					say("您的其中一位角色現在加入了公會。")
+					say("加入了公會的角色無法更改國籍。")
+					say("")
+					say("")
+				elseif ret == 3 then
+					say("您的其中一位角色已經結婚。")
+					say("已婚的角色無法更改國籍。")
+					say("")
+				end
+			end
+			return false
+		end
+
+	end
+end

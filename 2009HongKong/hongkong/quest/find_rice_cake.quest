@@ -1,0 +1,167 @@
+quest find_rice_cake begin
+    state start begin
+	when 20012.chat."取得任務" with pc.get_level()>=35 and pc.get_level()<=38 begin
+	    say_pc_name()
+	    say("很高興見到你.. 你媽媽的病情現在怎麼樣了?")
+	    say("")
+	    wait()
+	    say("圓圓:")
+	    say("我媽媽現在好多了.")
+	    say("謝謝你的關心.")
+	    say("")
+	    wait()
+	    say_pc_name()
+	    say("但是為什麼你還是有著不開心的表情呢?")
+	    say("")
+	    wait()
+	    say("圓圓:")
+	    say("在沙漠我賣米餅的時候,")
+	    say("見到很可怕的蜘蛛的時候, 為了逃走我忘記拿我的米餅.")
+	    say("這隻蜘蛛比人還要大的多, 我差點要被他吃了")
+	    say("我不能賣米餅的話, 我們的生活怎麼幫")
+	    say("")
+	    say("圓圓說, 我因為那隻大蜘蛛, 所以忘記米餅了.")
+	    local s=select(
+	   	"很可惜, 我會幫你找你的米餅",
+	    	"不必擔心, 你嫁給年輕商人吧")
+
+	    if 1==s then
+		say("圓圓:")
+		say("謝謝.")
+		say("我知道你是一個很好的人.")
+		say("我在這裡等你")
+		say("")
+		set_state(accept)
+	    elseif 2==s then
+		say("圓圓:")
+		say("這位就是 年輕商人.")
+		say("那個也是 年輕商人.")
+		say("你很煩喔! 我再窮也")
+		say("不想跟這麼會花錢的年輕商人結婚.")
+		say("")
+	    end
+	end
+    end
+    state accept begin
+	when letter begin
+	    send_letter("去找圓圓的米餅!")
+	end
+	when button or info begin
+	    say_title("去找圓圓的米餅!")
+	    say("去找從蜘蛛拿走圓圓的米餅")
+	    say("如果, 在短時間內找不到的話, 蜘蛛會吃光那些米餅")
+	    say("或者它們會把這些米餅扔掉, 或者是會被太陽晒乾了")
+	    say("")
+	    say_reward("去殺死蜘蛛!")
+	end
+	when 20012.chat."米餅的故事" with get_time()>=pc.getf("find_rice_cake","limit_time") begin
+	    say("圓圓:")
+	    say("唉唷~ 已經太遲了")
+	    say("現在才找到也是")
+	    say("米餅應該被太陽晒乾了")
+	    say("")
+	    set_state("failure")
+	    q.done()
+	end
+	when 20012.chat."米餅的故事" with get_time()<pc.getf("find_rice_cake","limit_time") begin
+	    say("圓圓:")
+	    say("如果蜘蛛吃光我的米餅的話, 我該怎麼辦")
+	    say("天氣太熱, 可能會被太陽晒乾了...")
+	    say("")
+	    local s=select("應該沒事, 繼續找", "你放棄比較好.") 
+	    if 1==s then
+		say("圓圓:")
+		say("應該沒事~ 你去找吧.")
+		say("希望可以很快找到~ 嗚嗚~.")
+		say("")
+	    elseif 2==s then 
+		say("圓圓:")
+		say("你可以考慮再幫我好嗎?")
+		say("對於我來說, 那些米餅對我很重要!")
+		say("拜託你了")
+		say("")
+		say("你真的要放棄這個任務?")
+		local s=select(
+			"那好吧~ 我再試試", 
+			"很抱歉, 我找不到你的米餅.")
+
+		if 1==s then
+		elseif 2==s then
+		    say("放棄了找米餅的任務.")
+		    set_state("failure")
+		    q.done()
+		end
+	    end
+	end
+
+	when enter begin
+	    pc.setqf("limit_time", get_time()+30*60)
+	    pc.setqf("kill_count", 0)
+	end
+	when leave begin
+	    pc.setqf("limit_time", 0)
+	    pc.setqf("kill_count", 0)
+	    q.done()
+	end
+	when letter begin
+	    local rest_time=pc.getqf("limit_time")-get_time()
+	    timer("time_over", rest_time) 
+	    q.set_clock("剩餘時間", rest_time)
+	end
+	when time_over.timer begin
+	    say("看地面的時候, 突然發現")
+	    say("蜘蛛完米餅之後留下的痕跡")
+	    say("")
+	    say("")
+	    say_reward("你花了太長時間,")
+	    say_reward("所以任務失敗了.")
+	    say("")
+	    set_state("failure")
+	    q.done()
+	end
+	when 2001.kill begin
+	    local cur_kill_count=pc.getqf("kill_count")+1
+	    pc.setqf("kill_count", cur_kill_count)
+
+	    if cur_kill_count>=number(30, 40) then
+		set_state(report)
+	    end
+	end
+    end
+    state report begin
+	when letter begin
+	    send_letter("找到米餅!")
+	end
+	when button or info begin
+	    say_title("找到米餅!")
+	    say("找到的米餅")
+	    say("跟圓圓交換.")
+	    say("")
+	end
+	when letter begin
+	    local v=find_npc_by_vnum(20012)
+	    if v!=0 then
+		target.vid("__TARGET__", v, "會去找圓圓")
+	    end
+	end
+	when __TARGET__.target.click or 20012.chat."跟圓圓交換米餅." begin
+	    target.delete("__TARGET__")
+	    say("你好厲害! 好厲害!")
+	    say("我不知道應該怎麼感謝你.")
+	    say("因為我從明天又可以再開始賣米餅了.")
+	    say("非常感謝你")
+	    say("我想給你這個蜘蛛蛋作為報酬")
+	    say("")
+	    say_reward("圓圓給我的報酬就是")
+	    say_reward("蜘蛛的蛋")
+	    pc.give_item2(30058)
+	    set_state(complete)
+	    q.done()
+	end
+    end
+    state failure begin
+    end
+    state complete begin
+    end
+end
+

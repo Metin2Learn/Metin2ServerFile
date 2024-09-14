@@ -1,0 +1,291 @@
+--------------------------------------------------
+-- SUB quest
+-- LV 6
+-- 拯救撣子
+----------------------------------------------------
+
+quest subquest_19  begin
+	state start begin
+		when login or levelup with pc.level >= 13  and pc.level <=15 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(9006)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "神秘老人")
+			end
+		end
+
+		when __TARGET__.target.click or
+			9006.chat." 拯救撣子"  begin
+			target.delete("__TARGET__")
+			say("神秘老人:")
+			say("咳嗽")
+			say("哎喲. 最近因咳嗽難受啊")
+			say("沒有了撣子， ")
+			say("灰塵都不往外走，哎喲.")
+			say("嗯? 問為什麼沒有撣子?")
+			say("僅有一個的兒子說是要改良武器") 
+			say("把家裡的拿走了")
+			say("真不是兒子，是冤家阿 冤家.")
+			say("")
+			local b=select("哪里能找到撣子?", "呵呵. 真是壞傢夥。我不敢興趣")
+			if 2==b then
+				say("神秘老人:")
+				say("咳嗽")
+				say("老人家咳嗽這麼厲害..")
+				say("有個撣子就好了")
+				say("能幫忙嗎?")
+			else	
+				say("神秘老人:") 
+				say("過了太久了，不大記得")
+				say("以前老頭子在的時候")
+				say("好像是用狼的柔毛做的")
+				say("咳嗽… 哎喲.")
+				say("抓到"..mob_name(176).."就可以取到")
+				say("")
+				say("為了沒有撣子的可憐的老奶奶")
+				say("去取")
+				say("狼的柔毛嗎?")
+			end
+			local r=select("接受", "拒絕")
+			if 2==r then
+				say("放棄任務嗎")
+				local a=select("是" ,"否")
+				if 2==a then
+					say("神秘老人:")
+					say("哎喲~咳嗽")
+					say("那下次想起來的時候再來吧")
+					return
+				end
+				say_pc_name()
+				say("連一個撣子都沒有的老奶奶那裡")
+				say("還能期待些什麼?")
+				say("裝著不知道算了")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say_pc_name()
+			say("狼的柔毛是有些不好取")
+			say("但是咳嗽這麼厲害... 真是糟糕了!")
+			say("做好事是勇士的義務")
+			say("")
+			set_state(find)
+				
+		end
+	end
+	state find begin
+		when letter begin
+			send_letter("抓"..mob_name(176).."")
+		end
+		when info or button begin
+			say(locale.NOTICE_COLOR.."取狼的柔毛"..locale.NORMAL_COLOR)
+			say("")
+			say("為了讓咳嗽的老奶奶，可以做大清掃")
+			say("取可製作撣子的狼的柔毛")
+			say("抓到"..mob_name(176).."就可以取得")
+			say("")
+		end
+
+		when 176.kill begin
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30151")==0  then 
+				pc.give_item2("30151", 1)
+				local v=find_npc_by_vnum(9006)
+				if 0==v then
+				else
+					target.vid("__TARGET__",v,"回到神秘老人那裡")
+				end
+			end	
+		end
+		
+		when 9006.chat."要找到" with pc.count_item("30151") == 0 begin
+			say("神秘老人:")
+			---                                                   l
+			say("狼的柔毛...")
+			say("抓到"..mob_name(176).."就可以了")
+			say_item_vnum(30151)
+			say("真的很需要撣子.")
+			say("辛苦你了.")
+			say("")
+
+			local s=select("重新挑戰","放棄.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("神秘老人:")
+					say("那下次再來吧")
+					return
+				end	
+				say("神秘老人:")
+				say("難嗎?")
+				say("知道了~一路小心")
+				set_state(__GIVEUP__)
+				return
+			end
+				
+			say("神秘老人:")
+			say("以你的實力，應該不難")
+			say("拜託了")
+			
+		 end
+
+
+		when __TARGET__.target.click or 
+			9006.chat."給狼的柔毛" with pc.countitem("30151")>=1 begin 
+			target.delete("__TARGET__")
+			say("神秘老人:")
+			say("是上次的那位旅客阿~")
+			say("問我咳嗽怎樣了? 咳嗽…")
+			say("如你看到的，屋里的灰塵")
+			say("還在. 哎喲")
+			say("")
+			say("嗯? 拿這個當撣子?")
+			say("真是善良的人啊")
+			say("那稍等一下")
+			wait()
+			say("神秘老人:")
+			say("用力拉")
+			say("你來幫忙吧，用力拉")
+			say("謝謝了，這個放在家裡好久了")
+			say("你可能會需要")
+			say("拿去用吧。絕對不是為了清理屋子")
+			say("才給你的，不要誤會")
+			say("那一路平安")
+			say("")
+			pc.removeitem("30151", 1) 
+			setstate(reward)
+		end
+	end
+	state reward begin
+		when letter begin
+			send_letter("獲得了來歷不明的灰塵團")
+		end
+		when info or button begin
+			say(locale.NOTICE_COLOR.." 獲得了來歷不明的灰塵團"..locale.NORMAL_COLOR)
+			say("")
+			say("作為獎賞獲得了怎麼看都像是垃圾的東西")
+			say("因好奇的心，把灰塵去掉一看")
+	
+			local s=number(1, 3)
+			if 1>=s then -- 33.33% (1/3)
+				say("雖然是舊了些，但是可以看出來")
+				say("是很好的鐵匠做的鐵甲.")
+				say("真是幸運的一天!")
+				say("")
+				local r=number(1, 16)
+				if r==1 then
+					pc.give_item2("11204", 1)
+				elseif r==2 then
+					pc.give_item2("11214", 1)
+				elseif r==3 then
+					pc.give_item2("11404", 1)
+				elseif r==4 then
+					pc.give_item2("11414", 1)
+				elseif r==5 then
+					pc.give_item2("11604", 1)
+				elseif r==6 then
+					pc.give_item2("11614", 1)
+				elseif r==7 then
+					pc.give_item2("11804", 1)
+				elseif r==8 then
+					pc.give_item2("11814", 1)
+				elseif r==9 then
+					pc.give_item2("11203", 1)
+				elseif r==10 then
+					pc.give_item2("11213", 1)
+				elseif r==11 then
+					pc.give_item2("11403", 1)
+				elseif r==12 then
+					pc.give_item2("11413", 1)
+				elseif r==13 then
+					pc.give_item2("11603", 1)
+				elseif r==14 then
+					pc.give_item2("11613", 1)
+				elseif r==15 then
+					pc.give_item2("11803", 1)
+				elseif r==16 then
+					pc.give_item2("11813", 1)
+				end
+			elseif 2>=s then -- 33.33% (1/3)
+				say("看得出")
+				say("是還可以穿的鐵甲.")
+				say("但是會不會是到處都有的鐵甲呢?")
+				say("")
+				local r=number(1, 16)
+				if r==1 then
+					pc.give_item2("11202", 1)
+				elseif r==2 then
+					pc.give_item2("11212", 1)
+				elseif r==3 then
+					pc.give_item2("11402", 1)
+				elseif r==4 then
+					pc.give_item2("11412", 1)
+				elseif r==5 then
+					pc.give_item2("11602", 1)
+				elseif r==6 then
+					pc.give_item2("11612", 1)
+				elseif r==7 then
+					pc.give_item2("11802", 1)
+				elseif r==8 then
+					pc.give_item2("11812", 1)
+				elseif r==9 then
+					pc.give_item2("11201", 1)
+				elseif r==10 then
+					pc.give_item2("11211", 1)
+				elseif r==11 then
+					pc.give_item2("11401", 1)
+				elseif r==12 then
+					pc.give_item2("11411", 1)
+				elseif r==13 then
+					pc.give_item2("11601", 1)
+				elseif r==14 then
+					pc.give_item2("11611", 1)
+				elseif r==15 then
+					pc.give_item2("11801", 1)
+				elseif r==16 then
+					pc.give_item2("11811", 1)
+				end
+			elseif 3>=s then -- 33.33% (1/3)
+				say("果然是古老的破舊的")
+				say("快成廢品的鐵甲.")
+				say("")
+				local r=number(1, 8)
+				if r==1 then
+					pc.give_item2("11200", 1)
+				elseif r==2 then
+					pc.give_item2("11210", 1)
+				elseif r==3 then
+					pc.give_item2("11400", 1)
+				elseif r==4 then
+					pc.give_item2("11410", 1)
+				elseif r==5 then
+					pc.give_item2("11600", 1)
+				elseif r==6 then
+					pc.give_item2("11610", 1)
+				elseif r==7 then
+					pc.give_item2("11800", 1)
+				elseif r==8 then
+					pc.give_item2("11810", 1)
+				end
+			end
+			say_reward("獲得經驗值 15000 ")
+			pc.give_exp2(15000)
+			 set_quest_state("levelup","run")
+			clear_letter()
+		   set_state(__COMPLETE__)
+		end
+	end
+	
+	state __GIVEUP__ begin
+	end
+	
+	state __COMPLETE__ begin
+	end
+end

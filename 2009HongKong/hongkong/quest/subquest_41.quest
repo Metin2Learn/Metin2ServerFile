@@ -1,0 +1,191 @@
+----------------------------------------------------
+-- SUB QUEST
+-- LV 49
+-- 孫老闆的秘方
+----------------------------------------------------
+
+quest subquest_41 begin
+	state start begin
+		when login or levelup with pc.level >= 49 and pc.level <= 51 begin
+			set_state(information)
+		end
+
+	end
+
+	state information begin
+		when letter begin
+					
+			local v = find_npc_by_vnum(20008)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "分支任務 孫老闆的秘方")
+			end
+		end
+
+		
+		when __TARGET__.target.click or
+			20008.chat." 孫老闆的秘方" with pc.level >= 49 begin
+			target.delete("__TARGET__")
+
+			say("孫老闆 :")
+			say("你好..")
+			say("以前從書蟲給的書中看到")
+			say("珍貴的料理有 蜘蛛眼珠料理")
+			say("我也是第一次看到的料理，很是期待")
+			say("你知道用蚊子眼睛做的料理嗎?")
+			say("在別的國家很有名...")
+			say("應該也是很不錯的料理...")
+			say("")
+			wait()
+			say("孫老闆:")
+			say("但是我有什麼辦法找到蜘蛛眼睛呢?")
+			say("所以你幫忙找來蜘蛛眼睛吧.")
+			say("應該在盤絲洞就可以找到.")
+			say("找到後我們大吃一頓")
+			say("怎樣都要有100個左右吧 ?")
+			say("")
+			wait()
+			say("孫老闆:")
+			say("因為小，如果想吃多")
+			say("就要找多點")
+			say("那我等著了，你去取回材料吧.")
+			say("想快點做新的料理.")
+			say("")
+			say_item_vnum("30162")
+			say("")
+			local s=select("接收.","拒絕.")
+			if 2==s then
+				say("放棄QUEST嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("孫老闆:")
+					say("無論如何都想做這個料理，下次有空")
+					say("再來吧")
+					say("")
+					return
+				end
+				say("怎麼找這個材料呢~")
+				say("知道了~再見")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("孫老闆:")
+			say("謝謝了，就知道你會幫我")
+			say("我給你做好吃的料理")
+			say("")
+			set_state(hunt_for_oku)
+		end
+	end
+
+	state hunt_for_oku begin
+		when letter begin
+			send_letter("孫老闆的秘方")
+
+			if pc.count_item("30162") >= 100 then  
+				local v = find_npc_by_vnum(20008)
+
+				if v != 0 then
+					target.vid("__TARGET__", v, "孫老闆的秘方")
+				end
+				return
+			end
+		end
+
+		when info or button begin
+
+			if pc.count_item("30162") >= 100 then  
+				say(locale.NOTICE_COLOR.."找到蜘蛛眼睛了"..locale.NORMAL_COLOR)
+				say("把將成為孫老闆新料理材料的")
+				say("100個蜘蛛眼睛都找齊了")
+				say("拿給孫老闆吧")
+				say("")
+				return
+			end
+				
+			say(locale.NOTICE_COLOR.."找蜘蛛眼睛"..locale.NORMAL_COLOR)
+			say("孫老闆想做新的料理")
+			say("蜘蛛眼睛料理.")
+			say("為了做這個料理需要100個蜘蛛眼睛.")
+			say("可以通過在影悲沙漠居住的")
+			say(""..mob_name(2051).."," ..mob_name(2052).."," ..mob_name(2053).."," ..mob_name(2054)..","..mob_name(2055).."")
+			say("取得")
+			say_item_vnum("30162")
+			say("")
+		end
+		when 2051.kill or 2052.kill or 2053.kill or 2054.kill or  2055.kill begin
+			local s = number(1, 100)
+			if s <= 7 and pc.count_item(30162)<100  then -------------------------------蜘蛛眼睛
+				pc.give_item2("30162", 2) --------------------------------------
+				if pc.count_item("30162")>=100 then
+					local v=find_npc_by_vnum(20008)
+					if 0==v then
+					else
+						target.vid("__TARGET__",v,"回到孫老闆那裡")
+					end
+				end	
+			end	
+		end
+			
+		when __TARGET__.target.click or
+			20008.chat."找到料理材料了" begin
+			target.delete("__TARGET__")
+			if pc.count_item("30162") >= 100 then   --------------------------------
+				say("孫老闆 :")
+				say("讓我看一下，確實是 100個.")
+				say("那開始做了?")
+				say("馬上就好，等著吧.") 
+				say("做好了，讓我嘗一口?")
+				say("")
+				wait()
+				say("孫老闆:")
+				say("噢~ 滿口滑滑的感覺真好")
+				say("既不甜又酸酸的真是好味啊.")
+				say("多虧嘗試去做.")
+				say("托你的福可以做新的料理了")
+				say("謝謝你的幫助.")
+				say("這是給你的獎賞.")
+				say("不要光看著了")
+				say("嘗一口")
+				say("")
+				pc.remove_item("30162",100)
+
+				say_reward("獲得經驗值 2100000")
+				pc.give_exp2(2100000)
+				set_quest_state("levelup","run")
+								
+				say_reward("獲得 20000兩 ")
+				pc.change_money(20000)
+				say_reward("獲得了草藥物品")
+				pc.give_item2(50725,5)
+				pc.give_item2(50726,5)
+				clear_letter()	
+				set_state(COMPLETE)
+				return
+				
+			else
+				say("孫老闆 :")
+				say("材料還不夠..")
+				say("快去找來吧")
+				say("")
+				local s=select("重新挑戰","放棄.")
+				if 2==s then
+					say("孫老闆:")
+					say("是一定想要做的料理..")
+					say("不管怎樣謝謝了~一路小心")
+					set_state(__GIVEUP__)
+					return
+				end
+				say("孫老闆:")
+				say("謝謝了..")
+				say("重新挑戰的勇氣真不錯")
+				say("")
+			end
+		end
+	end
+	state __GIVEUP__ begin
+	end
+	
+	state COMPLETE begin
+	end
+end
+

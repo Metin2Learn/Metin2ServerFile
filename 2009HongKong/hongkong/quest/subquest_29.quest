@@ -1,0 +1,192 @@
+----------------------------------------------------
+-- SUB QUEST
+-- LV  32 
+--打壓黑掃蕩
+----------------------------------------------------
+
+quest subquest_29 begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >=32  and pc.get_level() <= 34 begin
+			 set_state( information )
+		end
+	end
+
+	state information begin
+		when letter begin
+					
+			local v = find_npc_by_vnum(20355)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "找警備隊長")
+			end
+		end
+
+				
+		when __TARGET__.target.click or
+			20355.chat."我找你有事" with pc.level >= 32 begin
+			target.delete("__TARGET__")
+			--                                                  |
+			say("")
+			say("警備隊長 :")
+			say("最近常接到舉報說")
+			say("2城市的周邊黑風黨猖狂.")
+			say("最近劍白刺客少了風聲")
+			say("黑風黨又引起事端.")
+			say("這些傢伙比白蓮黨更加兇惡")
+			say("我們也不能")
+			say("輕易地對待.")
+			say("這正是顯示")
+			say("成長為我們正規兵的")
+			say("你的能力的時候.")
+			wait()
+			say("")
+			say("警備隊長 :")
+			say("為了城市子的安全")
+			say("處置100名"..mob_name(453).."吧.")
+			say("那就可以認可你的")
+			say("一對一百的能力.")
+			say("當然，我向上面報告")
+			say("下達豐厚的報酬.")
+			say("那就等著你的好消息.")	
+			say("")
+			local s=select("接收.","拒絕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("警備隊長:")
+					say("如果現在不方便，那下次再來吧")
+					say("你是最合適的人選..")
+					return
+				end
+				say("警備隊長:")
+				say("不行嗎? ..")
+				say("那怎麼抓黑風黨呢...")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("警備隊長:")
+			say("早就知道你會挑戰")
+			say("抓100名"..mob_name(453).."，那它們也沒轍")
+			say("祝你幸運")	
+			say("")
+			pc.setqf("kill_count", 0)
+			q.set_counter("剩下的"..mob_name(453).."數",0)
+			set_state(goto_blackwind)
+		end
+	end
+	state goto_blackwind begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("抓捕"..mob_name(453).."")
+			q.set_title("抓捕"..mob_name(453).."")
+			q.start()
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.." 抓捕"..mob_name(453)..""..locale.NORMAL_COLOR)
+		--													|				
+			say("2城市四周的黑風黨的兇殘")
+			say("越來越厲害了.")
+			say("為了城市民的安全")
+			say("要處置黑風黨.")
+			say("處置 100名"..mob_name(453).."")
+			say("就可以完成任務.")
+			say("")
+			say_reward("現在抓捕了"..pc.getqf("kill_count").."名"..mob_name(453).."")
+		end
+		when 11004.chat."呵呵" with pc.level >=32 begin
+			say("抓捕了"..mob_name(453).."100名了嗎?") 
+			local s=select("重新挑戰","放棄")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("警備隊長:")
+					say(""..mob_name(453).."不是那麼好對付的...")
+					say("而且要抓捕100名才能壓住它們..")
+					say("休息一會兒再挑戰?")
+					return
+				end
+				say("警備隊長")
+				say("連你都放棄，那應該是很強大的勢力")
+				say("再見~")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("警備隊長:")
+			say("果然勇敢")
+			say(""..mob_name(453).."勢力，相信你能打壓")
+			say("")
+		end
+		
+		when 453.kill  begin
+			local count=pc.getqf("kill_count")+1
+			if count<=100  then	
+				pc.setqf("kill_count",count)
+				q.set_counter("剩餘的"..mob_name(453).."",100-count)
+				if count== 100 then
+					set_state(go_back_to_boss)
+				end
+			end	
+		end
+	end
+
+	state go_back_to_boss begin
+		when letter begin
+			setskin(NOWINDOW)
+			makequestbutton("轉捕了100名"..mob_name(453).."")
+			q.set_title("轉捕了100名"..mob_name(453).."")
+			q.start()
+			local v = find_npc_by_vnum(20355)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "去警備隊長那裡")
+			end
+
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.." 抓捕"..mob_name(453)..""..locale.NORMAL_COLOR)
+			say("回到警備隊長那裡報告") 
+			say("有關"..mob_name(453).."的掃蕩")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20355.chat." 呵呵" begin
+			target.delete("__TARGET__")
+			say("警備隊長:")
+			say("呵呵，現在成長為我國光榮的正規兵")
+			say("果然我們有看錯.")
+			say("早知道你會成大器.")
+			say("今後也作出好的成績吧.")
+			say("這是上面下達的報酬")
+			say("")
+			
+			say_reward("獲得 25000兩 ")
+			pc.change_money(25000)
+			
+			say_reward("獲得經驗值  400000 ")
+			pc.give_exp2(400000)
+
+			set_quest_state("levelup","run")
+			pc.give_item2(50724,5)
+			pc.give_item2(50723,5)
+			say_reward("獲得了草藥物品")
+
+			say_reward("獲得了" ..item_name(50006).."")
+			say_reward("獲得了" ..item_name(50007).."")
+			pc.give_item2(50006)
+            pc.give_item2(50007)
+			set_state(COMPLETE)
+			clear_letter()
+		end
+
+		end
+	state __GIVEUP__ begin
+	end
+	state COMPLETE begin
+	end
+end
+

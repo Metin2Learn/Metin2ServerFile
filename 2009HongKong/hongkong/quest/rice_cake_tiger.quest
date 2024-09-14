@@ -1,0 +1,621 @@
+quest rice_cake_tiger begin
+	state start begin
+		when 20008.chat."中秋節到了" with pc.get_level()>=15 and game.get_event_flag("full_moon")>0  begin
+			say_pc_name()
+			say("孫老闆.. 你看上去很緊張, 怎麼了?")
+			say("")
+			wait()
+			say("孫老闆:")
+			say("阿! 現在你要來拿月餅了嗎?")
+			wait()
+			say_pc_name()
+			say("月餅?...")
+			say("剛剛見到你的時候, 你的樣子很緊張")
+			say("所以我現在想問你, 為什麼你這麼緊張")
+			say("")
+			wait()
+			say("孫老闆:")
+			say("喔~! 我很好")
+			say("我還以為你要來我這裡拿月餅")
+			say("到底圓圓在那裡做什麼阿, 還不回來...")
+			say("一個星期前訂的月餅..")
+			say("怎麼還是沒有消息呢...")
+			say("")
+			wait()
+			say_pc_name()
+			say("阿!!  你定的月餅還沒到")
+			say("嗯~~~ 如果你還不開始賣月餅的話, 你的損失會很大喔!!!")
+			say("哎呀~ 你應該很擔心吧....")
+			say("")
+			wait()
+			say("孫老闆:")
+			say("嗯~~~ 如果你有空的話, 你可以幫我嗎?")
+			say("我不能離開我的商店,")
+			say("所以我需要你的幫助...")
+			say("怎麼樣, 可以幫我這個忙嗎?")
+			say("")
+			wait()
+			say_pc_name()
+			say("")
+			say("我現在有點忙, 但是我會幫你的")
+			say("")
+			wait()			
+			say("孫老闆:")
+			say("喔!! 太感謝了, 這是一件很簡單的事情")
+			say("只去找圓圓, 問問她為什麼還不把月餅送過來")
+			say("拜託你了~!")
+			say("可能她會在其他的城市裡玩耍")
+			say("你快去查查, 不然我的損失會很大~")
+			say("")
+			set_state(find)
+		
+		end
+	end
+	state find begin
+		when letter begin
+			send_letter("去找圓圓")
+			 local v=find_npc_by_vnum(20012)
+			    if 0==v then
+			    else
+				target.vid("__TARGET__", v, "")
+			    end
+	
+		end
+		when button or info begin
+			say_title("去找圓圓")
+			say("請移動到其他的城市找圓圓")
+			say("問一問, 運送月餅遲到的緣故")
+			say("運送月餅遲到的緣故")
+			say("")
+		end
+		when 20008.chat." 嗯.."begin
+			say("孫老闆:")
+			say("嗯..這次生意不好的話")
+			say("我怎還給從 倉庫老人, 雜貨店老闆, 老學究 借的錢.")
+			say("為了中秋節的生意, 我借了很多錢")
+			say("唉唷~ 圓圓怎麼還沒有消息呢~!!")
+			say("你還再這裡做什麼呢.")
+			say("快點去找圓圓吧")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20012.chat."你是圓圓嗎?"begin
+			target.delete("__TARGET__")
+			say_pc_name()
+			say("你是圓圓嗎?")
+			say("")
+			wait()
+			say("圓圓:")
+			say("是的~ 你認識我嗎?")
+			say("哎呀, 一定是因為我漂亮的外表, 所以很多人認識我")
+			say("你也是因為我的美麗, 而過來看我嗎?")
+			say("")
+			wait()
+			say_pc_name()
+			say("咳咳咳…")
+			say("(美麗=..= 在哪裡, 我怎麼沒發覺>w<..)")
+			say("")
+			wait()
+			say("圓圓:")
+			say("你剛剛說什麼?")
+			say("你說什麼, 你說我不美麗嗎???")
+			say("")
+			wait()
+			say_pc_name()
+			say("哇哈哈哈.. 你聽錯了..")
+			say("唉唷~ 你不要理那麼多啦, 我沒有那個意思....")
+			say("我來找你的原因是")
+			say("因為孫老闆的請求, 所以來找你了. ")
+			say("孫老闆已經訂了月餅")
+			say("但是為什麼還沒有到呢? 所以想知道原因...")
+			say("")
+			wait()
+			say("圓圓:")
+			say("阿!!! 孫老闆叫你來找我...")
+			say("哎呀~ 我因為這個事情, 頭都快煩炸了")
+			say("")
+			wait()
+			say_pc_name()
+			say("你有什麼問題嗎?")
+			say("剛才孫老闆讓我來找你, 因為時間很緊急")
+			say("所以他讓我快點來找你.. ")
+			say("")
+			wait()
+			say("圓圓:")
+			say("哎呀我怎麼不知道呢..我也想很快把月餅做好了之後")
+			say("回去家鄉見見我的母親....")
+			say("但是白虎跟老虎的緣故, 我沒有辦法..")
+			say("")
+			wait()
+			say_pc_name()
+			say("白虎跟老虎怎麼了?")
+			say("(難道老虎會說給我一個月餅就不吃了你嗎?...)")
+			say("")
+			wait()
+			say("圓圓:")
+			say("我去別的城市送月餅的時候")
+			say("老虎經常出現")
+			say("所以我沒有辦法送月餅..")
+			say("我沒有能力打老虎")
+			say("所以每次送月餅都失敗了")
+			say("你跟告訴孫老闆現在的情況好嗎")
+			say("")
+			wait()
+			say_pc_name()
+			say("哇哈哈哈… 你是在跟我開玩笑吧..")
+			say("真的有這個情況發生嗎?")
+			say("")
+			wait()
+			say("圓圓:")
+			say("你怎麼這樣跟我說話呢")
+			say("好像我這樣美麗的女人, 怎麼會騙你呢")
+			say("所以求求你, 告訴孫老闆我現在的情況")
+			say("拜託你了~")
+			say("")
+			wait()
+			say("")
+			say_pc_name()
+			say("我知道了, 我會這樣跟孫老闆說的")
+			say("")
+			wait()				
+			say("圓圓:")
+			say("謝謝你~!")
+			say("孫老闆他會明白我的情況")
+			say("拜託你了~!")
+			say("")
+			set_state(secondfind)
+		end
+	end
+	state secondfind begin
+		when letter begin
+			send_letter("回去找孫老闆")
+			local v=find_npc_by_vnum(20008)
+			    if 0==v then
+			    else
+				target.vid("__TARGET__", v, "")
+			    end
+
+		end
+		when button or info begin
+			say_title("回去找孫老闆")
+			say("請移動到原來的城市找孫老闆")
+			say("報告送月餅遲到的原因")
+			say("")
+			say("")
+		end
+		when 20012.chat."孫老闆~!!"begin
+			say("孫老闆~!! 現在他在找我嗎?")
+			say("想到他我就生氣, 因為他根本不信任我")
+			say("他為什麼訂那麼多月餅呢....")
+			say("唉唷如果沒有老虎跟白虎的話..")
+			say("我一早已經把月餅送過去了...")
+			say("")
+			wait()
+			say_pc_name()
+			say("你說真的嗎?...")
+			say("真的有老虎跟白虎出現跟你說要吃月餅嗎??")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20008.chat."喔~!" begin
+			target.delete("__TARGET__")
+			say("孫老闆:")
+			say("喔~! 你回來啦!!!")
+			say("圓圓跟你說了些什麼?")
+			say("哼~ (不要跟我說老虎出現!)")
+			say("跟她說要吃她的月餅這個故事....")
+			say("")
+			wait()
+			say_pc_name()
+			say("...............................")
+			say("阿!~ 你說的對.")
+			say("圓圓她想早點送月餅, 但是因為老虎並不能這麼做")
+			say("")
+			wait()
+			say("孫老闆:")
+			say("你覺得這個是虛構出來的!!!")
+			say("這樣的玩笑, 是從哪裡來的")
+			say("連一個人都不相信的")
+			say("請你再去找圓圓, 跟她說如果她當場不送月餅的話")
+			say("我會立即投訴她! 快點去~!")
+			say("")
+			wait()
+			say_pc_name()
+			say("")
+			say("嗯~! 我知道了, 我會馬上去找她的")
+			say("")	
+			wait()
+			say("孫老闆:")
+			say("嗯~ 為了我, 你已經很辛苦了")
+			say("但是, 如果你肯把月餅送出去的話")
+			say("會可以令到很多人過一個開心的中秋節!")
+			say("拜託你了~!")
+			set_state(threefind)
+		
+		end
+	end
+	state threefind begin
+		when letter begin
+			send_letter("回去找圓圓")
+			local v=find_npc_by_vnum(20012)
+			    if 0==v then
+			    else
+				target.vid("__TARGET__", v, "")
+			    end
+
+		end
+		when button or info begin
+			say_title("回去找圓圓")
+			say("回去找圓圓後, 跟她說")
+			say("如果妳還不送月餅過去的話, 孫老闆會投訴你!!")
+			say("")
+		end
+		when 20008.chat."你怎麼還在這裡" begin
+			say("你怎麼還在這裡, 還不去...")
+			say("你真的相信圓圓說的事情嗎?")
+			say("")
+			say("")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20012.chat."你回來啦~!" begin
+			target.delete("__TARGET__")		
+			say("圓圓:")
+			say("你回來啦~! 孫老闆跟你說了些什麼?")
+			say("孫老闆的性格你應該很了解, ")
+			say("他是會生氣的")
+			say("")
+			wait()
+			say_pc_name()
+			say("孫老闆說, 如果妳不想他投訴你的話")
+			say("那就快點把月餅送過去吧")
+			say("另外, 他還叫我跟你說")
+			say("不要再跟她開這樣無聊的玩笑....")
+			say("")
+			wait()
+			say("圓圓:")
+			say("唉唷~ 這可怎麼辦阿......")
+			say("我想送月餅, 但是我很害怕老虎.")
+			say("我該怎麼做呢..")
+			say("唉~ 我求你一件事情好嗎?")
+			say("")
+			wait()
+			say_pc_name()
+			say("你想求我什麼?....")
+			say("")
+			say("")
+			wait()
+			say("圓圓:")
+			say("你看上去是一個很強的人...")
+			say("你可以幫我殺死在路上出現的白虎和老虎好嗎?")
+			say("求求你..")
+			say("如果你不幫我的話, 我一定會被孫老闆投訴的!")
+			say("")
+			wait()
+			say_pc_name()
+			say("")
+			say("好的, 我會幫你的忙")
+			say("")
+			wait()
+			say("圓圓:")
+			say("謝謝..非常感謝你~!!")
+			say("我不會忘記你的好意~!!!")
+			say("")
+			set_state(killtiger1)
+		end
+	end
+	state killtiger1 begin
+		when letter begin
+			send_letter("圓圓的請求")
+		end
+		when button or info begin
+			say_title("圓圓的請求")
+			say("我覺得圓圓會被孫老闆投訴的情況太可憐")
+			say("所以決定幫他的忙. .")
+			say("他跟我請求我殺死在路上出現的白虎和老虎")
+			say("30隻老虎.")
+			say("")
+			say_reward("鏟除30隻老虎. ")
+			say("")
+		end
+		when enter begin
+			pc.setqf("kill_count", 0)
+		end
+		when leave begin
+			pc.setqf("kill_count", 0)
+			q.done()
+		end
+		when letter begin
+			q.set_counter("剩下的老虎數量", rice_cake_tiger.killtiger1_get_rest_count());
+		end
+		when 114.kill begin
+			local kill_count=pc.getqf("kill_count")+1
+			pc.setqf("kill_count", kill_count)	
+			q.set_counter("剩下的老虎數量 ", rice_cake_tiger.killtiger1_get_rest_count());
+			if rice_cake_tiger.killtiger1_is_end() then
+				say_title("鏟除老虎任務成功")
+				say("我很久沒有殺死老虎的經驗了")
+				say("到底是哪種老虎呢?..")
+				say("去找圓圓就會知道是什麼老虎了吧.")
+				say("")
+			end
+		end
+		when 20012.chat."鏟除老虎的任務成功了嗎?" with not rice_cake_tiger.killtiger1_is_completed() begin
+			say("圓圓:")
+			say("你先開始殺死老虎吧")
+			say("老虎應該比較容易處理")
+			say("")
+		end
+		when 20012.chat."鏟除老虎成功." with  rice_cake_tiger.killtiger1_is_completed() begin
+			say("圓圓:")
+			say("你真的已經殺死他們了嗎? ")
+			say("在老虎當中有沒有一些對月餅特別瘋狂的?")
+			say("")
+			wait()
+			say_pc_name()
+			say("( ... 想了想…不是很了解她的意思是什麼 ... )")
+			say("殺死了30隻老虎, 但是沒有發現這樣會瘋狂的老虎..")
+			say("")
+			wait()
+			say("圓圓:")
+			say("你說, 那隻老虎跟你說想吃月餅, 對嗎?!")
+			say("阿哈! 應該是白虎, 只有白虎才會這樣做")
+			say("不好意思, 你可以幫我去剷除白虎嗎?")
+			say("")
+			wait()
+			say_pc_name()
+			say("")
+			say("好的")
+			wait()	
+			say("圓圓:")
+			say("求求你, 讓我送月餅到其他城市")
+			say("")
+			set_state(killtiger2)
+		
+		end
+
+       function killtiger1_get_max_count()
+            return 30
+        end
+        function killtiger1_get_rest_count()
+            return math.max(0, rice_cake_tiger.killtiger1_get_max_count()-pc.getqf("kill_count"))
+        end
+        function killtiger1_is_completed()
+            return pc.getqf("kill_count")>=rice_cake_tiger.killtiger1_get_max_count()
+        end
+        function killtiger1_is_end()
+            return pc.getqf("kill_count")==rice_cake_tiger.killtiger1_get_max_count()
+        end
+
+
+
+	end
+	state killtiger2 begin
+		when letter begin
+		send_letter("圓圓的第二請求")
+	end
+	when button or info begin
+		say_title("圓圓的第二請求")
+		say("為了圓圓的第二請求")
+		say("我決定幫他鏟除")
+		say("20隻白虎")
+		say("")
+		say_reward("鏟除20隻白虎")
+		say("")
+	end
+	when enter begin
+	    pc.setqf("kill_count", 0)
+	end
+	when leave begin
+	    pc.setqf("kill_count", 0)
+	    q.done()
+	end
+	when letter begin
+	    q.set_counter("剩下的白虎數量", rice_cake_tiger.killtiger2_get_rest_count());
+	end
+	when 115.kill begin
+	    local kill_count=pc.getqf("kill_count")+1
+	    pc.setqf("kill_count", kill_count)	
+	    q.set_counter("剩下的白虎數量", rice_cake_tiger.killtiger2_get_rest_count());
+	    if rice_cake_tiger.killtiger2_is_end() then
+		say_title("鏟除白虎成功")
+		say("很久沒有殺死白虎了")
+		say("嗯~ 還沒有恢復之前的感覺, 所以有點難度")
+		say("但是會說話的老虎到底在哪裡.")
+		say("")
+	    end
+	end
+	when 20012.chat."關於老虎的任務" with not rice_cake_tiger.killtiger2_is_completed() begin
+	    say("圓圓:")
+	    say("我見到老虎的時候, 我是在太害怕")
+	    say("不能分別老虎和白虎...")
+	    say("求求你…可以幫幫我嗎!")
+	    say("")
+	end
+	when 20012.chat."鏟除白虎完成." with rice_cake_tiger.killtiger2_is_completed() begin
+	    say("圓圓:")
+	    say("喔!!! 你這次殺死了白虎")
+	    say("這次你殺死會說話的白虎了嗎?")
+	    say("")
+	    wait()
+	    say_pc_name()
+	    say("不是~ 我這次的白虎全部都不會說話..")
+	    say("")
+	    wait()
+	    say("圓圓:")
+	    say("咦~! 每次送月餅的時候, 我都喝醉了..")
+	    say("難道是我聽錯了嗎...")
+	    say("我不想再跟艾麗恩一起喝酒..")
+	    say("")
+	    wait()
+	    say_pc_name()
+	    say("(..所以你喝醉的時候見到白虎的嗎?..")
+	    say("唉唷!  我怎麼遇到這樣的人呢..")
+	    say("")
+	    say("")
+	    say("")
+	    wait()
+	    say("圓圓:")
+	    say("不好意思, 我有多一個請求, 你可以幫幫我嗎?")
+	    say("你去找孫老闆, 讓後跟他說")
+	    say("我現在會送月餅給他...")
+	    say("")
+	    wait()
+	    say_pc_name()
+	    say("")
+	    say("同意")
+	    say("")
+	    wait()
+        say("圓圓:")
+	    say("不好意思, 我很漂亮, 但是我所做的事情並不好..")
+	    say("")
+	    set_state(fourfind)
+	  
+	end
+	function killtiger2_get_max_count()
+	    return 20
+	end
+	function killtiger2_get_rest_count()
+	    return math.max(0, rice_cake_tiger.killtiger2_get_max_count()-pc.getqf("kill_count"))
+	end
+	function killtiger2_is_completed()
+	    return pc.getqf("kill_count")>=rice_cake_tiger.killtiger2_get_max_count() 
+	end
+	function killtiger2_is_end()
+	    return pc.getqf("kill_count")==rice_cake_tiger.killtiger2_get_max_count() 
+	end
+	end
+	state fourfind begin
+		when letter begin
+			send_letter("回去找孫老闆")
+			local v=find_npc_by_vnum(20008)
+			    if 0==v then
+			    else
+				target.vid("__TARGET__", v, "")
+			    end
+
+		end
+		when button or info begin
+			say_title("回去找孫老闆")
+			say("移動到原來的城市找孫老闆")
+			say("告訴他, 圓圓很快就會把月餅送過來")
+			say("")
+			say("")
+		end
+		when 20012.chat."謝謝你" begin
+			say("圓圓:")
+			say("謝謝你, 我不會忘記你對我的恩惠")
+			say("跟艾麗恩一起喝酒的時候, 我每次都很容易醉")
+			say("")
+			wait()
+			say_pc_name()
+			say("你這個也是醉了的時候聽到的故事?")
+			say("")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20008.chat."喔~! " begin
+			target.delete("__TARGET__")
+			say("孫老闆:")
+			say("喔~! 你回來了嗎!!!")
+			say("圓圓跟你說了些什麼阿?")
+			say("他說他會很快把月餅送過來嗎?")
+			say("")
+			say("")
+			wait()
+			say_pc_name()
+			say("...............................")
+			say("(最近到道路上出現了太多老虎跟白虎)")
+			say("所以圓圓想送月餅也沒有辦法")
+			say("")
+			wait()
+			say("孫老闆:")
+			say("....這個不是廢話...這應該是真正的情況吧....")
+			say("所以這樣的話…我應該怎麼辦呢?")
+			say("")
+			wait()
+			say_pc_name()
+			say("(....我幫他鏟除老虎跟白虎...)")
+			say("所以現在她應該會很快會送月餅給你...")
+			say("")
+			wait()
+			say("孫老闆:")
+			say("哈哈…這樣當然最好...")
+			say("那你現在回去告訴圓圓, 我現在很感謝她..")
+			say("")
+			wait()
+			set_state(compensate)
+		end
+	end
+	state compensate begin
+		when letter begin
+			send_letter("回去找圓圓")
+			local v=find_npc_by_vnum(20012)
+			    if 0==v then
+			    else
+				target.vid("__TARGET__", v, "")
+			    end
+
+		end
+		when button or info begin
+			say_title("回去找圓圓")
+			say("回去找圓圓, ")
+			say("孫老闆對她很感謝")
+			say("")
+		end
+		when 20008.chat."謝謝你..." begin
+			say("孫老闆:")
+			say("謝謝你...")
+			say("下次我有機會跟你見面的話..")
+			say("我可以請你吃飯~")
+		end
+		when __TARGET__.target.click or
+			20012.chat."你回來了喔~ " begin
+			target.delete("__TARGET__")
+			say("圓圓:")
+			say("你回來了喔~ 孫老闆說了些什麼?")
+			say("他想不想投訴我?")
+			say("")
+			wait()
+			say_pc_name()
+			say("不用擔心, 我跟他說好了, 他不會投訴你的")
+			say("那月餅的話你準備好了嗎?")
+			say("")
+			wait()
+			say("圓圓:")
+			say("我現在要出去送月餅.")
+			say("因為我已經很辛苦了...")
+			say("我真的很抱歉......")
+			wait()
+			say_pc_name()
+			say("人之間應該要互相幫助..")
+			say("另外, 送月餅以後")
+			say("會令到很多人開心..")
+			wait()
+			say("圓圓:")
+			say("唉唷!~ 你的心情那麼好喔.....")
+			say("你因為我太辛苦了....")
+			say("所以我想表示我對你的感謝...")
+			say("給你一些月餅~")
+			say("不用客氣, 你拿去吧")
+			say("")
+			say_reward("從圓圓手上獲得月餅20個")
+			say("")
+			pc.give_item2(50086, 20) 
+			wait()
+			say("圓圓:")
+			say("祝你中秋節快樂")
+			say("為了我們的帝國, 請你認真工作....")
+			say("另外我有個很小的請求......")
+			say("不要告訴別的人我喝醉酒的事情")
+			say("謝謝你~ 再見...")
+			say("")
+			wait()
+			set_state(__complete)
+			q.done()
+		end
+	end
+	state __complete begin
+	end
+end		
+

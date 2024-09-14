@@ -1,0 +1,204 @@
+----------------------------------------------------
+-- SUB QUEST
+-- LV 7
+-- 來吃飯唷
+----------------------------------------------------
+
+quest subquest_2 begin
+	state start begin
+		when login or levelup with pc.level >= 7 and pc.level <= 12 begin
+			set_state(information)
+		end	
+	end	
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(9003)
+
+			if v != 0 then
+				target.vid("__TARGET__",v,"來吃飯唷")
+			end
+		end	
+
+		
+		when __TARGET__.target.click or
+			9003.chat." 您應該已經知道了吧..." begin
+			target.delete("__TARGET__")
+
+			say("雜貨店老闆 :")
+			---                                                   l
+			say("你應該已經知道了吧，防禦店老闆就是我的爸爸.")
+			say("我不知道今天晚上他想吃什麼.")
+			say("我先要知道他想吃什麼，才可以準備材料...")
+			say("你可以幫我問問我爸爸想吃什麼嗎?")
+			say("我會給你報酬.")		
+			say("")
+			local s=select("接受.","拒絕.")
+			if 2==s then
+				say("您想放棄任務嗎?")
+				local a=select("是","不是")
+				if 2==a then
+					say("雜貨店老闆:")
+					say("我的爸爸會餓.. ")
+					say("下次再來吧")
+					say("")
+				return
+				end
+				say("雜貨店老闆:")
+				say("祝您好運 ~")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("雜貨店老闆:")
+			say("我的爸爸會餓")
+			say("快點去找他吧")
+			say("")
+			set_state(ask_dinner)
+			end					
+	end
+
+	state ask_dinner begin
+		when letter begin
+			local v=find_npc_by_vnum(9002)
+			if 0==v then
+			else
+				target.vid("__TARGET__",v,"去找防禦店老闆")
+			end
+			
+			send_letter("去問問防禦店老闆晚飯的菜單!")
+		end
+		when info or button begin
+			say_title("去問問防禦店老闆晚飯的菜單!")
+			---                                                   l
+			say("雜貨店老闆他想知道")
+			say("防禦店老闆今天晚上想吃什麼.")
+			say("")
+			say("去找防禦店老闆問問今天晚上的菜單")
+			say("")
+		end
+
+		when __TARGET__.target.click or 9002.chat." 歡迎光臨~"  begin
+			target.delete("__TARGET__")
+
+			say("防禦店老闆:")
+
+			---                                                   l
+			say("歡迎光臨 ")
+			say("我有很好的防禦貨品，")
+			say("我的貨品什麼東西都能防禦得到")
+			wait()
+			say("防禦店老闆:")
+			say("嗯? 我的女兒叫你來這裡嗎?")
+			say("哈哈! 她已經開始")
+			say("想想今天晚上做什麼給我.")
+			say("想一想今天晚上..")
+			say("我想喝野豬肉跟熊掌，泡菜，洋蔥還有雞蛋做的湯。")
+			say("你幫我跟我的女兒說好嗎.")
+			say("")
+
+			set_state(report)
+		end
+	end
+
+	state report begin
+		when letter begin
+			local v = find_npc_by_vnum(9003)
+			if v != 0 then
+				target.vid("__TARGET__",v,"回去跟雜貨店老闆說今晚的菜單")
+			end
+		end	
+
+		when letter begin
+			send_letter("回去跟雜貨店老闆說今晚的菜單.")
+		end
+
+		when info or button begin
+			say_title("回去跟雜貨店老闆說今晚的菜單.")
+			---                                                   l
+			say("雜貨店老闆想知道他的爸爸，")
+			say("防禦店老闆他想吃什麼.")
+			say("")
+			say("回去找雜貨店老闆，")
+			say("把防禦店老闆的菜單給她.")
+			say("")
+		end
+
+		when 9002.chat." 今天晚上的菜單..." begin
+			say("防禦店老闆: ")
+
+			---                                                   l
+			say("唉呀~ 今天晚飯，我已經開始餓了.")
+			say("")
+		end
+
+
+		when __TARGET__.target.click or 9003.chat." 他想吃什麼呢?" begin
+			target.delete("__TARGET__")
+
+			say("雜貨店老闆:")
+			say("我爸爸跟你說他想吃什麼呢?")
+			say("")
+
+			local s = select(
+							"豬肉、熊掌、泡菜、洋蔥還有雞蛋",
+							"野豬肉、熊掌、泡菜、洋蔥還有鴨蛋",
+							"野豬肉、熊掌、泡菜、洋蔥還有雞蛋",
+							"阿!!!.. 忘記了..")
+
+
+			if s == 3 then
+				say("雜貨店老闆 :")
+				say("謝謝你了.")
+				say("我快要開始準備我的晚飯.")
+				say("唉~ 這是我表示對你的感謝.")
+				say("")
+
+				say_title("報酬")
+				say_reward("經驗值 1000" )
+				say("")
+
+				pc.give_exp2(1000)
+				set_quest_state("levelup","run")
+
+				clear_letter()
+				set_state(__COMPLETE__)
+			elseif s == 4 then
+				say("雜貨店老闆 :")
+				say("唉呀～不好意思，這個湯的味道很濃吧...")
+				say("你可以幫我再問問好嗎?")
+				say("")
+				local s=select("是. 我去再找他.","不是，我想放棄任務.")
+				if s==2 then
+					say("怎麼也好，祝您好運.")
+					set_state(__GIVEUP__)
+				end
+				say("阿! 您是個好人.")
+				say("謝謝您.")
+				set_state(ask_dinner)
+
+
+			else
+				say("雜貨店老闆 :")
+				say("阿.. 我的爸爸真的想吃那樣的東西嗎?")
+				say("奇怪阿~ 以前他不喜歡吃這樣的東西啊..")
+				say("我覺得應該不對..")
+				say("你可以幫我再問問他好嗎?")
+				say("")
+				local s=select("是. 我去再找他.","不是，我想放棄任務.")
+					if s==2 then
+					say("怎麼也好，祝您好運.")
+					set_state(__GIVEUP__)
+					return
+					end
+				say("阿! 您是個好人.")
+				say("謝謝您.")
+				set_state(ask_dinner)
+
+			end
+		end
+	end
+	state __GIVEUP__   begin
+	end	
+	state __COMPLETE__ begin
+	end
+end

@@ -1,0 +1,267 @@
+---------------------------------------------------
+-- SUB quest
+-- LV 27
+-- 尋找艾麗恩的丈夫
+---------------------------------------------------
+quest subquest_17 begin
+	state start begin
+		when login or levelup with pc.level >= 27  and pc.level <=30 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20021)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "艾麗恩丈夫的故事")
+			end
+		end
+
+		when __TARGET__.target.click or
+			20021.chat." 艾麗恩丈夫的故事"  begin
+			target.delete("__TARGET__")
+			say("艾麗恩:")
+			say("該到達的時間過了好久，丈夫還沒有回來")
+			say("不知發生了什麼事情……")
+			say("")
+			say("也許是多餘的擔心，但是心裡很緊張")
+			say("放不下心來")
+			wait()
+			say("雜貨店老闆，見很多人")
+			say("或許會知道我丈夫的消息?")
+			say("")
+			local s=select("向雜貨店老闆問.","回去.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if  2==a then
+					say("艾麗恩:")
+					say("那，下次想起來的時候再來吧")
+					say("一定..")
+					return
+				end
+				say("艾麗恩:")
+				say("很忙嗎?")
+				say("那再見")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("艾麗恩:")
+			say("謝謝")
+			say("啊..我丈夫到底在哪里呢..")
+			say("")
+			set_state(to_itemmall_owner)
+			
+		end	
+		
+	end
+		
+	state to_itemmall_owner begin
+		when letter begin
+			local v=find_npc_by_vnum(9003)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "向雜貨店老闆打探艾麗恩丈夫的消息")
+			end
+			
+			send_letter("去雜貨店老闆那裡")
+		end
+		when info or button begin
+			say_title("去雜貨店老闆那裡")
+			say("")                                        
+			say("為了打探艾麗恩丈夫的消息")
+			say("去雜貨店老闆那裡")
+			say("")
+		end
+
+
+		
+		when __TARGET__.target.click or
+			9003.chat."艾麗恩的故事"  begin
+			target.delete("__TARGET__")
+			say("雜貨店老闆:")
+			say("原來如此，她還沒聽說過那個消息阿")
+			say("事實上她的丈夫")
+			say("已經不能再回來了.")
+			say("帶著行李回來的途中,")
+			say("被黑風黨抓去，不幸…….")
+			say("")
+			wait()
+			say("雜貨店老闆:")
+			say("真擔心她聽到這個消息後會怎樣")
+			say("他們夫婦原來那麼恩愛...")
+			say("")	
+			set_state(find_ariyoung)
+		end
+	end
+	state find_ariyoung begin
+		when letter begin
+			local v=find_npc_by_vnum(20021)
+			if 0!=v then
+				target.vid("__TARGET__",v,"去找艾麗恩")
+			end
+
+			send_letter("回去找艾麗恩")	
+		end
+		
+		when info or  button begin
+			say(locale.NOTICE_COLOR.."去找艾麗恩"..locale.NORMAL_COLOR)
+			say("")
+			say("找艾麗恩，告知丈夫死亡的消息")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20021.chat." 告知丈夫死亡的消息" begin
+			target.delete("__TARGET__")
+			say("艾麗恩:")
+			say("剛才說什麼?!")
+			say("他,……他被黑風黨殺害?!")
+			say("啊, 不行! 他, 他怎麼會會死,")
+			say("他把我留下來就死……! 幽咽 ")
+			say("")
+			wait()
+			say("艾麗恩:")
+			say("可以幫忙找丈夫的遺骸嗎?")
+			say("拜託了i")
+			say("如果不如意，什麼都好，找他的遺物吧")
+			say("那個黑風右護法")
+			say("可能會有他的遺物")
+			say("拜託了")
+			say("")
+			local s=select("相信我吧","對我來說還太難得任務")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if 2==a then
+					say("艾麗恩:")
+					say("那，下次想起來的時候再來吧")
+					say("一定..")
+					return
+				end
+				say("艾麗恩 :")
+				say("無情的人. 幽咽.")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("艾麗恩:")
+			say("不知該怎麼表達這感謝之情……")
+			say("拜託, 一定要找到丈夫的遺物.")
+			set_state(hunt)
+		end	
+	end	
+	
+	state hunt begin
+		when letter begin
+			send_letter("擊毀黑風右護法")
+		end
+		when info or  button begin
+			say(locale.NOTICE_COLOR.." 擊毀黑風右護法"..locale.NORMAL_COLOR)
+			say("")
+			say("擊毀黑風右護法和跟隨他的群體")
+			say("尋找艾麗恩丈夫的遺物")
+		end
+		when 20021.chat."丈夫的故事" begin
+			say("艾麗恩 :")
+			say("怎樣了? 能找到丈夫的痕跡了嗎?")
+			say("幽咽. 對我來說他是我人生的全部.")
+			say("我知道不容易，但是拜託了.")
+		
+			local s=select("重新挑戰","放棄")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","否")
+				if 2==a then
+					say("黑風右護法不簡單的")
+					say("累了吧")
+					say("休息一會後重新挑戰可以嗎 ")
+					return
+				end
+				say("艾麗恩:")
+				say("真是幸運.剛好有其他勇士的幫助，能找到丈夫的遺物.")
+				say("謝謝你的用心.")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("艾麗恩:")
+			say("不知該怎麼表達這感謝之情……")
+			say("拜託, 一定要找到丈夫的遺物.")
+		end
+		
+		when 493.kill begin
+			local s = number(1, 100)
+			if s <= 7 and pc.count_item(30101)==0 then
+				pc.give_item2(30101)        
+				set_state(discover_ring)
+			end
+		end
+		
+	end
+	state discover_ring begin
+		when letter begin
+			send_letter("發現艾麗恩的結婚戒指!")
+			
+			local v=find_npc_by_vnum(20021)
+			if 0!=v then
+				target.vid("__TARGET__",v,"去找艾麗恩")
+
+			end
+		end
+		when info or  button begin
+			say(locale.NOTICE_COLOR.." 發現艾麗恩的結婚戒指!"..locale.NORMAL_COLOR)
+			say("")
+			say("回到城市，把艾麗恩的結婚戒指還給她")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20021.chat."轉給結婚戒指" with pc.count_item("30101")>= 1  begin             --------------------------------
+			target.delete("__TARGET__")
+			say("艾麗恩:")
+			say("這個戒指是… 我們的結婚戒指… 謝謝")
+			say("現在, 丈夫也能安息了.")
+			say("跟我的信一起葬在陽面")
+			say("現在沒有他，要我一個人和孩子生活下去,")
+			say("還好有他的這個戒指陪伴…")
+			say("真是幸運, 謝謝… 真是謝謝了")
+			set_state(reward)
+			pc.remove_item("30101")                         ------------------------------------------
+		end
+	end
+	state reward begin
+		when letter begin
+			send_letter("完成了艾麗恩的任務!")
+		end
+		when info or button begin
+			say(locale.NOTICE_COLOR.." 完成了艾麗恩的任務!"..locale.NORMAL_COLOR)
+			say("幫助艾麗恩的消息廣泛傳開")
+			say("你被很多人受尊敬. ")
+			say("")
+			say_reward("獲得經驗值 300000")
+			pc.give_exp2(300000)
+		    set_quest_state("levelup","run")
+			   
+			say_reward("獲得10000 兩")
+			pc.change_money(10000)
+			
+			say_reward("獲得了" ..item_name(70038).."")
+			pc.give_item2(70038)
+
+
+			pc.give_item2(50723,5)
+			pc.give_item2(50724,5)
+			say_reward("獲得了草藥物品")
+			clear_letter()
+			
+			set_state(__COMPLETE__)
+		end
+	end
+
+	state __GIVEUP__ begin
+	end
+		
+	state __COMPLETE__ begin
+	end
+end

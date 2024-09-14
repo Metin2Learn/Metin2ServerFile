@@ -1,0 +1,217 @@
+------------------------------------------------------
+--SUB QUEST 
+--LV 39
+--尋找沙漠裡的圓圓的米餅
+------------------------------------------------------
+quest subquest_24 begin
+    state start begin
+		when login or levelup with pc.level >=39 and pc.level <=41 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20012)
+			if v!=0 then
+				target.vid("__TARGET__",v," 圓圓的米餅")
+			end
+		end
+		
+		when __TARGET__.target.click or 
+			20012.chat." 尋找沙漠裡的圓圓的米餅"  begin
+			target.delete("__TARGET__") 
+			say_pc_name()
+			say("你好.. 媽媽的病好些了嗎?")
+			say("")
+			wait()
+			say("圓圓:")
+			say("媽媽好了很多了.")
+			say("謝謝您的關心.")
+			say("")
+			wait()
+			say_pc_name()
+			say("但是怎麼看起來滿臉傷心呢?")
+			say("")
+			wait()
+			say("圓圓:")
+			say("我在沙漠賣米餅的時候")
+			say("被可怕的蜘蛛們搶去了米餅")
+			say("蜘蛛比人還要大, 差點就丟命, 如果不能賣米餅")
+			say("不知道怎麼生活下去.")
+			say("")
+			say("圓圓被蜘蛛們把米餅搶走了.")
+			say_item_vnum(30158)
+			say("")
+			local s=select(
+			"真是不幸啊, 我幫你把米餅找回來吧",
+			"有什麼好擔心的? 嫁給年輕商人吧")
+
+			if 2==s then
+				say("放棄任務?")
+				local a=select("是","不是")
+				if 2==a then
+					say("圓圓:")
+					say("下次有時間, 一定再來吧")
+					say("不知怎麼生活下去, 真是渺茫啊")
+					say("")
+					return
+				end
+				say("圓圓:")
+				say("這個人也說年輕商人.")
+				say("那個人也說年輕商人.")
+				say("煩死了! 我再窮 ")
+				say("也不喜歡像年輕商人那樣亂花錢的人.")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("圓圓:")
+			say("謝謝.")
+			say("您是像長相一樣善良的人.")
+			say("那我在這裡等了")
+			say("")
+			set_state(accept)
+    	end
+      end
+    state accept begin
+		when letter begin
+			send_letter("找回圓圓的米餅!")
+		end
+		when button or info begin
+			say_title("找回圓圓的米餅!") 
+			say("找回被沙漠的蜘蛛搶走的圓圓的米餅")
+			say("如果不趕緊追回來, 蜘蛛們把米餅全部吃完了")
+			say("或者被火熱的陽光幹掉了")
+			say("")
+			say_reward("除掉"..mob_name(2051).."!")
+		end
+		
+		when 20012.chat." 有關丟失的米餅的故事" with get_time()<pc.getf("subquest_24","limit_time") begin
+			if get_time() < pc.getqf("limit_time") then 
+			say("圓圓:")
+			say("如果蜘蛛們把我的米餅都吃掉了怎麼辦?")
+			say("太熱了, 也許都幹掉了...")
+			say("")
+			local s=select("不會吧! 應該沒事了", "我想也是, 放棄吧.") 
+			if 2==s then
+				say("圓圓:")
+				say("再考慮一次好嗎")
+				say("對我來說, 那個米餅太珍貴了")
+				say("拜託了")
+				say("")
+				say("放棄找圓圓的米餅嗎?")
+				local a=select(
+				"沒辦法. 再試試看", 
+				"對不起. 米餅太難找了.")
+
+				if 2==a then
+					say("放棄尋找圓圓的米餅的任務.")
+					set_state(__GIVEUP__)
+					return 
+				end
+				say("也許現在還好")
+				say("幫幫忙吧")
+				return
+			end
+			say("是吧 ? 拜託了.")
+			say("快點找回來就好了. 哭泣.")
+			say("")
+			return
+			end
+			say("圓圓:")
+			say("太遲了。")
+			say("就算再由蜘蛛身上找回年糕，")
+			say("年糕也會全部乾掉。")
+			set_state(__FAIL__)
+		end
+
+		when enter begin
+		    pc.setqf("limit_time", get_time()+30*60)
+		    pc.setqf("kill_count", 0)
+		end
+	
+		when leave begin
+		    pc.setqf("limit_time", 0)
+		    pc.setqf("kill_count", 0)
+		    q.done()
+		end
+		when letter begin
+		    local rest_time=pc.getqf("limit_time")-get_time()
+			 timer("time_over", rest_time) 
+			 q.set_clock("剩餘時間", rest_time)
+		end
+		when time_over.timer begin
+		say("偶然看到地上")
+		say("那裡有"..mob_name(2051).."們吃剩下的米餅屑")
+		say("灑落在地上")
+		say("")
+		say_reward("因為時間耽誤太久了, 尋找圓圓的米餅的任務")
+		say_reward("失敗了.")
+		say("")
+		set_state(__FAIL__)
+		end
+		when 2051.kill begin
+		    local cur_kill_count=pc.getqf("kill_count")+1
+		    pc.setqf("kill_count", cur_kill_count)
+
+		    if cur_kill_count>=number(30, 40) then
+				pc.give_item2(30158)
+				set_state(report)
+		    end
+		end
+
+
+		
+	end
+	state report begin
+		when letter begin
+			send_letter("找到了圓圓的米餅了!")
+			
+			local v=find_npc_by_vnum(20012)
+			if v!=0 then
+				target.vid("__TARGET__", v, "回到圓圓那裡")
+			end
+
+		end
+		when button or info begin
+			say_title("找到圓圓的米餅了!")
+			say("把從沙漠的"..mob_name(2051).."那裡找回來的米餅")
+			say("帶給圓圓.")
+			say("")
+		end
+		
+		when __TARGET__.target.click or
+			20012.chat."真是厲害啊!" with pc.count_item(30158) >0  begin 
+			target.delete("__TARGET__")
+			say("圓圓:")
+			say("真是厲害啊!")
+			say("不知怎麼感謝才好.")
+			say("托你的福明天也可以去賣米餅了.")
+			say("謝謝")
+			say("")
+			say_reward("作為找回米餅的獎賞從圓圓那裡")
+			pc.remove_item(30158)
+			say_reward("獲得經驗值 900000 ")
+			pc.give_exp2(900000)
+			set_quest_state("levelup","run")
+			say_reward("獲得了草藥物品")
+			pc.give_item2(50726,10)
+			pc.give_item2(50723,10)
+			say_reward("獲得了" ..item_name(70102).."")
+			say_reward("獲得了" ..item_name(70048).."")
+			pc.give_item2(70102)
+			pc.give_item2(70102)
+			pc.give_item2(70102)
+			pc.give_item2(70048)
+			clear_letter()
+			set_state(__COMPLETE__)
+		end
+	end 
+	state __FAIL__ begin
+	end
+    state __GIVEUP__ begin
+    end
+    state __COMPLETE__ begin
+    end
+end

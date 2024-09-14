@@ -1,0 +1,71 @@
+quest skill_clear begin
+	state start begin
+		when 71003.use begin
+
+			local result = BuildSkillList(pc.get_job(), pc.get_skill_group())
+
+			local vnum_list = result[1]
+			local name_list = result[2]
+
+			if table.getn(vnum_list) < 2 then
+				say("沒有技能可以初級化")
+				say("")
+				return
+			end
+
+			say("請選擇您想初級化的技能.")
+			say("")
+
+			local i = select_table(name_list)
+
+			if table.getn(name_list) == i then
+				return
+			end
+
+			say("完成初級化 "..name_list[i].." 技能.")
+			say("您想初級化嗎?")
+			say("")
+
+			local s = select("是", "不是")
+
+			if s == 1 then
+				say("初級化成功的技能無法再恢復.")
+				say("還是要初級化嗎?")
+				say("")
+
+				s = select("是", "不是")
+				
+				if s == 1 then
+					local val = pc.getqf("force_to_master_skill")
+					if val > 0 then
+						say("現在初級化其他技能")
+						say("使用17點可以使一個既能為高級.")
+						say("這個效果無法重疊.")
+						say("您想進行嗎?")
+						say("")
+
+						s = select("是", "不是")
+
+						if s == 1 then
+							pc.clear_one_skill(vnum_list[i])
+
+							say("初級化成功了.")
+							say("使用17點可以使一個既能為高級.")
+							say("")
+							pc.setqf("force_to_master_skill", 1)
+							pc.remove_item(71003)
+						end
+					else
+						pc.clear_one_skill(vnum_list[i])
+
+						say("初級化成功了.")
+						say("使用17點可以使一個既能為高級.")
+						say("")
+						pc.setqf("force_to_master_skill", 1)
+						pc.remove_item(71003)
+					end
+				end
+			end
+		end
+	end
+end

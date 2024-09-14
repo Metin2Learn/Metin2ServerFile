@@ -1,0 +1,135 @@
+quest japan_invader_kill begin
+	state start begin
+		when 20005.chat."制陶人的請求" with pc.get_level()>=15 and game.get_event_flag("815event")>0  begin 
+			say("制陶人")
+			say("阿~ 這個事情怎麼辦呢…")
+			say("我一定要抓住他, 這樣我才能放心")
+			say("他的行動很迅速, 所以很難抓住他..")
+			say("這可真是個難題阿...")
+			wait()
+			say_pc_name()
+			say("有人問~ 你怎麼這麼煩惱阿?")
+			wait()
+			say("制陶人")
+			say("最近倭寇出現了太多, 給了很多麻煩我們")
+			say("他的行動太迅速")
+			say("倭寇每天都用謊言欺騙人,")
+			wait()
+			say_pc_name()
+			say("他們都在說什麼呢?")
+			wait()
+			say("制陶人")
+			say("現在我們分開3個國家, 戰鬥中")
+			say("但是, 影悲沙漠是我們的領土!!")
+			say("但是從別的大陸過來愚蠢的倭寇")
+			say("他們強調這裏就是他們的領土")
+			wait()
+			say("制陶人")
+			say("所以我能不能請求你一個問題?")
+			say("倭寇偏佈全帝國的領土")
+			say("還不斷到處說謊, 妖言惑眾")
+			say("你可以幫我抓住他們嗎?你拿到證據之後我會給你報酬")
+			local b=select("好的, 我會抓住他們的", "不好意思, 我的速度並不快")
+			if 1==b then
+				say("制陶人")
+				say("謝謝你. 他的名字叫塔納嘉")
+				say("他應該還在繼續到處騙人")
+				say("你可以拿到他的耳朵, 然後交給我嗎?")
+				say("")
+				set_state(accept)
+			elseif 2==b then
+				say("制陶人")
+				say("嗯~ 難道你覺得 影悲沙漠 變成其他人的領取你也沒關係嗎?")
+				say("我知道你的意思.....")
+				say("唉唷, 我們帝國的將來怎麼辦阿~")
+				say("")
+			end
+		end
+	end
+	state accept begin
+		when letter begin
+			send_letter("去剷除塔納嘉!!")
+		end
+		when button or info begin
+			say_title("去剷除塔納嘉!!")
+			say("去殺死帝國內妖言惑眾的")
+			say("塔納嘉")
+			say("")
+			say_reward("獲得塔納嘉的耳朵, 交給製陶人")
+			say("")
+		end
+		when 20005.chat."問, 關於塔納嘉" with pc.count_item(30202)==0 begin
+			say("製陶人")
+			say("塔納嘉的行動很迅速,")
+			say("如果你穿很重的盔甲, 是不可能找到塔納嘉")
+			say("如果你改良你的盔甲的時候, 這個問題應該會好很多把")
+			say("嗯! 有什麼事情?")
+			say("")
+			local s=select("進行", "放棄")
+			if 1==s then
+			elseif 2==s then
+				say("製陶人")
+				say("呵呵! 你真的要放棄嗎?.....")
+				say("嗯~ 你的能力上不夠...")
+				say("怎麼也好, 謝謝你....")
+				say("")
+				say("突然發現在他的身上有一個發光的寶物")
+				local s=select("放棄", "繼續進行")
+				if 1==s then
+					say_pc_name()
+					say("在我的能力範圍內, 很難抓到.")	
+					say("你想放棄嗎")
+					say("")
+					say("製陶人")
+					say("怎麼也好, 謝謝你...")
+					q.done()
+					set_state(failure)
+				elseif 2==s then
+					say_pc_name()
+					say("我的目的不是想得到報酬")
+					say("只對我國家的感情.... ")
+					say("我改變我的想法")
+					say("我再試試吧.")
+					say("我再說一次! 我的目的不是想得到報酬")
+					say("")
+				end
+			end
+		end
+		when 20005.chat."交還塔納嘉的耳朵" with pc.count_item(30202)>=1 begin
+			target.delete("__TARGET__")
+
+			say("製陶人")
+			say("喔喔! 你真的抓住了塔納嘉...")
+			say("其實對我來說, 我從來都覺得")
+			say("全部帝國都是一個民族...")
+			say("現在我們的領土分開了....")
+			say("但是我不能同意 倭寇 ")		
+			say("會成為我們國家的主人...")
+			say("謝謝...這個是一件小東西")
+			say("為了表示我的感謝, 這個就送給你作為報酬")
+			say("")
+
+
+			pc.remove_item(30202)
+
+			local r=number(1, 3)
+			if 1==r then
+				say_reward("你獲得從製陶人經驗戒指.")
+				pc.give_item2(72003)
+			elseif 2==r then
+				say_reward("你獲得從製陶人幸運的金幣.")
+				pc.give_item2(72024)
+			elseif 3==r then
+				say_reward("你獲得從製陶人小偷的手套.")
+				pc.give_item2(72006)
+			end
+
+			set_state(complete)
+			q.done()
+		end
+	end
+	state complete begin
+	end
+	state failure begin
+	end
+end

@@ -1,0 +1,229 @@
+-- ???-??? ???
+-- -----------------------------------------------------------------
+-- ??:
+-- 15?? ?? ??? ??? ??
+--
+-- ???:
+-- ?? ???? ???
+-- ???? ?? ??? ???? ?? ???? 30???
+-- 300?? ????
+--
+-- ???:
+-- ???? ???? ??? ???? ????
+-- ???? ?? ?? 10%? ?????.
+
+quest bookworm begin
+	state start begin
+		when 20002.chat."唉~ 我的老公又去哪裡了阿?" with pc.get_level()<=15 begin
+			say("唉呀~ 他不是我的老公,他是我的敵人")
+			say("他覺得自己是一個學者,但是我只有一個老公")
+			say("我們家現在那麼窮連吃的東西也沒有,但是他每天只看書")
+			say("看來我的眼光出問題了, ")
+			say("我怎麼會嫁給這樣的一個人.")
+			say("")
+
+			local s=select(
+				"你需要我幫你找你的老公嗎?",
+				"哈哈~ 你很辛苦啦")
+
+			if 1==s then
+				say("如果你肯幫忙的話,我很感謝你.")
+				say("他看上去是個窮書生 ")
+				say("如果見到的話,請告訴我 ")
+				say("在這個城市裡,如果見到類似的人,那個人就是我的老公")
+				say("他常常會去一些地方朗誦文章")
+				say("你見到他的話,不要說我在找他,不然他會逃走")	
+				say("")
+				set_state(find)
+			elseif 2==s then
+				say("現在實在太忙了,他到底在哪裡啊?")
+				say("如果他現在出現在我的面前~ 一定會氣死我.")
+				say("")
+			end
+		end
+	end
+	state find begin
+		when letter begin
+			send_letter("去找書蟲")
+		end
+		when button or info begin
+			say_title("去找書蟲")
+			say("你去一些安靜的地方,可以找到一個正在朗誦的書生,") 
+			say("請與他交談.")
+			say("")
+		end
+		when 20002.click begin
+			say("他到底在哪裡躲起來了呢.")
+			say("我已經花了很長時間, 怎麼還是不能找到他呢.")
+			say("這個人真麻煩")
+			say("那我還是買追蹤吧")
+		end
+		when 20023.click begin
+			say_title("發現書蟲!")
+			say("我現在可以聽到有人在朗誦的聲音")
+			say("所以我現在應該去看看哪裡有沒有書蟲的蹤跡")
+			say("突然看到一個人在那裡一邊散步一邊朗誦.")
+			say("")
+			say("這個人應該就是我想找的人吧!")
+			say("")
+			say("就在想回去報告的時候")
+			say("突然有人在後面拍了拍我的肩膀")
+			say("")
+			wait()
+			say("我應該是第一次遇見你吧.")
+			say("是我的老婆叫你來找我的嗎?")
+			say("")
+			say("哎呀~ 我應該怎麼回答這個人的問題呢?")
+			local s=select(
+				"呵呵~ 我只是路過這裡.",
+				"嗯… 其實我…"
+			)
+			if 1==s then
+				say("阿~ 很高興見到你. 呵呵.")
+				say("今天的天氣不錯喔?")
+				say("你有看過一些可以令到人感動的書嗎?")
+				say("最近我開始看 五字書")
+				say("我覺得你有機會也可以看看")
+				say("")
+				set_state(report_true)
+			elseif 2==s then
+				say("嗯呵~ 看來真的是我的老婆叫你來找我的.")
+				say("哎呀~ 最近我的老婆,老是在煩我")
+				say("在家裡我根本沒有辦法好好看書")
+				say("她根本不會明白我的理想")
+				say("你已經找到我了,你現在去告訴她")
+				say("我會馬上離開這裡,到其他你找不到的地方")
+				say("你還是不要告訴我的老婆好嗎? ")
+				say("如果你肯幫我~ 我可以告訴你如何更有效的攻擊怪物")
+				set_state(report_false)
+			end
+		end
+	end
+	state report_false begin
+		when letter begin
+			local v=find_npc_by_vnum(20002)
+			if v!=0 then
+				target.npc("__TARGET__", v, "回去找劉嫂")
+			end
+		end
+		when letter begin
+			send_letter("回去找劉嫂????? ????")
+		end
+		when button or info begin
+			say_title("回去找劉嫂")
+			say("回去找劉嫂告訴她")
+			say("找不到書蟲.")
+		end
+		when 20023.click begin
+			say("如果你將我的行蹤告訴我的老婆,她一定會殺了我的")
+			say("我現在只能希望你不要告訴她我的行蹤")
+			say("你回來找我的時候,")
+			say("我會告訴你更加有效攻擊動物的方法.")
+			say("")
+		end
+		when __TARGET__.target.click or 20002.click begin
+			target.delete("__TARGET__")
+			say("你說什麼!!! 你找不到我的老公嗎!")
+			say("哎呀~ 他到底會走到哪去了阿~")
+			say("我真是一個可憐的女人~")
+			say("")
+			set_state(come_back)	
+		end
+	end
+	state come_back begin
+		when letter begin
+			local v=find_npc_by_vnum(20023)
+			if v!=0 then
+				target.npc("__TARGET__", v, "回去找書蟲")
+			end
+		end
+		when letter begin
+			send_letter("回去找書蟲")
+		end
+		when button or info begin
+			say_title("回去找書蟲")
+			say("回去找書蟲 告訴他")
+			say("告訴你的老婆我找不到你.")
+		end
+		when __TARGET__.target.click or 20023.click begin
+		    	target.delete("__TARGET__")
+			say("你終於回來找我了!")
+			say("你跟我的老婆說找不到我~ 我很感謝你")
+			say("現在我就給你一封信")
+			say("這封信裡面寫著如何有效的攻擊怪物的方法")
+			say("")
+			set_state(reward_animal_bonus)
+		end
+	end
+	state report_true begin
+		when letter begin
+			local v=find_npc_by_vnum(20002)
+			if v!=0 then
+				target.npc("__TARGET__", v, "回去找劉嫂")
+			end
+		end
+		when letter begin
+			send_letter("回去找劉嫂")
+		end
+		when button or info begin
+			say_title("回去找劉嫂")
+			say("去找劉嫂,告訴她")
+			say("書蟲的行蹤")
+			say("")
+		end
+		when 20023.click begin
+			say("他看上去現在很開心")
+			say("但是他的心中一至都擔心會給你找到他")
+			say("這是一件非常辛苦的事情")
+			say("")
+		end
+		when __TARGET__.target.click or 20002.click begin
+			target.delete("__TARGET__")
+			say("你說什麼!!!~ 我找到老公了嗎?")
+			say("非常感謝你,")
+			say("我現在要馬上去抓住我的老公")
+			say("我一定會抓到他的.. 哇卡卡卡")
+			say("")
+			say("哎呀~ 差點忘記了~ 你幫我的忙,")
+			say("我會給你一些報酬,請在稍後時間再打開.")
+			set_state(reward_life_bonus)
+		end
+	end
+	state reward_life_bonus begin
+		when letter begin
+			send_letter("劉嫂的報酬")
+		end
+		when button begin
+			say_title("劉嫂的報酬")
+			say("打開劉嫂個我的報酬,原來是一封信")
+			say("突然感覺到一股生命力湧進我的身體")
+			say("還感覺到我的生命力突然上升了")
+			say("")
+			say_reward("獲得最大生命力 +300 的效果")
+			say_reward("可持續 30分鐘")
+			affect.add(apply.MAX_HP, 300, time_min_to_sec(30))
+			complete_quest_state("__COMPLETE1__")
+		end
+	end
+	state reward_animal_bonus begin
+		when letter begin
+			send_letter("書蟲的報酬")
+		end
+		when button begin
+			say_title("書蟲的報酬")
+			say("打開書蟲給我的那封信")
+			say("信裡面有很多關於動物的資料")
+			say("看了之後,掌握了很多動物的弱點")
+			say("但是內容太多了,不能全部都能記住")
+			say("")
+			say_reward("獲得對動物攻擊 +10% 的效果")
+			say_reward("這個效果可以持續 30分鐘")
+			affect.add(apply.ATTBONUS_ANIMAL, 10, time_min_to_sec(30))
+			complete_quest_state("__COMPLETE2__")
+		end
+	end
+	state __COMPLETE1__ begin
+	end
+	state __COMPLETE2__ begin
+	end
+end

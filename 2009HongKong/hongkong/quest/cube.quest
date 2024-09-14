@@ -1,0 +1,53 @@
+ quest cube begin
+	state start begin
+		when 20018.chat."製造藥水??!" with pc.level >= 15 begin
+		     say("白高:")
+            say("阿~年輕人~")
+            say("你對製造藥水有沒有興趣? ....")
+            say("最近生物學者梁柏年已經研究出來")
+            say("可製造各式的藥水")
+            say("你要試試看製造藥水嗎?")
+			wait()
+			setskin(NOWINDOW)
+			command("cube open")
+			-- say("若你需要,隨時都可以跟我講,我就幫你製造 ")
+		end
+
+
+		when 20017.chat."國家的藥水製造術" with pc.level >= 30 begin
+			say("歌悠:")
+			say("最近對國家的製造術")
+			say("變得比較有名")
+			say("哇!你也已經學了不少製造術..")
+			say("我做給你看,你從來沒有看過的新的製造術")
+			say("你要試試看製造藥水嗎?")
+			wait()
+			setskin(NOWINDOW)
+			command("cube open")
+
+		end
+
+
+		when 20022.chat."家門的秘笈藥水製造術" with pc.level >=45 begin
+			say("侯安:")
+			say("我終於找到我家傳統下來的")
+			say("藥水製造術的秘密.")
+			say("哈哈哈")
+			say("也許我在這個帝國裡已經成為前所未有的")
+			say("最高權威者")
+			say("不管王?或是誰我都不怕啦")
+			say("現在我可以賺大錢了呵呵呵")
+			say("反正試試看你到現在學過的技術")
+			say("你想看製造術嗎?")
+			wait()
+			setskin(NOWINDOW)
+			command("cube open")
+
+		end
+
+
+			
+end
+end
+
+

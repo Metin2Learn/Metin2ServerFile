@@ -1,0 +1,134 @@
+----------------------------------
+--	Main Quest LV10
+--	警備隊長的教育
+----------------------------------
+
+
+
+quest main_quest_lv12 begin
+	state start begin
+	end
+	state run begin
+		when login or levelup or enter begin
+			if  pc.get_level() >= 12 then 				
+				setstate( gotoboss )		
+			end
+		end
+	end
+
+	state gotoboss begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[12] )
+			q.set_title("剷除雪狼首領")
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."剷除雪狼首領."..locale.NORMAL_COLOR)
+			--say("去找警備隊長, 拿到新的任務")
+			say("警備隊長要求剷除雪狼首領. 現在去見警備隊長, 任務完成的時候可以得到金錢和經驗值.")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."剷除雪狼首領."..locale.NORMAL_COLOR)
+			say("從警備隊長拿到新的任務")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+	    	---                                                   l
+			say("警備隊長:")
+		   	say("最近城市府近出現很多雪狼首領")
+		   	say("他們本來很兇猛, 但是最近他們變得更加兇猛")
+		   	say("他們常常攻擊人類或者是攻擊城市")
+			say("還有其他動物也開始發狂了")
+			say("為了解決這個問題,")
+			say("我們需要剷除雪狼首領")
+			say("你的能力上, 剷除10個雪狼首領應該沒有問題吧.")
+			say("請你去剷除雪狼首領吧." )
+			say("")
+			say_reward("任務完成時獲得報酬")
+			say_reward("經驗值 ".."10000" )
+			setstate( killgraydog )
+			q.done()
+		end
+	end
+
+	state killgraydog begin
+		when letter begin
+			setskin(NOWINDOW)
+		    makequestbutton( locale.MAIN_QUEST_TITLE_DICT[12] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[12] )
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."剷除雪狼首領"..locale.NORMAL_COLOR)
+			say("剷除雪狼首領")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."剷除雪狼首領"..locale.NORMAL_COLOR)
+			say("剷除雪狼首領")
+		end
+		when 107.kill begin
+			if pc.getqf("state") == 0 then
+				pc.setqf("state",1)
+			elseif pc.getqf("state") == 10 then
+				say("10隻雪狼首領剷除完成. 回去找警備隊長")
+				setstate(gotoboss2)
+				q.done()
+			else
+				pc.setqf("state",pc.getqf("state")+1)
+			end
+		end	
+	end
+	state gotoboss2 begin
+		when letter begin
+			local v=find_npc_by_vnum(20355)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "去找警備隊長")
+			end
+		end
+		when letter begin
+			setskin(NOWINDOW)
+           	makequestbutton( locale.MAIN_QUEST_TITLE_DICT[12] )
+			q.set_title(locale.MAIN_QUEST_TITLE_DICT[12])
+			q.start()
+		end
+		when button begin
+			say(locale.NOTICE_COLOR.."剷除雪狼首領"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when info begin
+			say(locale.NOTICE_COLOR.."剷除雪狼首領"..locale.NORMAL_COLOR)
+			say("跟警備隊長對話")
+		end
+		when __TARGET__.target.click begin
+			target.delete("__TARGET__")
+			pc.give_exp2( 10000 )
+			set_quest_state("levelup","run")
+	    	---                                                   l
+			say("警備隊長:")
+			say("你剷除雪狼首領了嗎? ")
+			say("因為你的幫忙, 城市的治安才可以得到穩定")
+			say("因為惡運石, 動物越來越兇猛.")
+			say("辛苦你了, 你先休息一下.")
+			say(locale.NOTICE_COLOR.."報酬"..locale.NORMAL_COLOR)
+			say_reward("經驗值".." 10000" )
+			--clear_letter()
+			set_quest_state("main_quest_lv14", "run")
+			q.done()
+			setstate( __COMPLETE__ )
+		end
+	end
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

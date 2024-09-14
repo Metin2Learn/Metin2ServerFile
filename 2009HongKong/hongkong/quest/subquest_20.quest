@@ -1,0 +1,192 @@
+----------------------------------------------------
+-- SUB quest
+-- LV 25
+-- 丈夫的飛鏢  
+----------------------------------------------------
+quest subquest_20  begin
+   	state start begin
+		when login or levelup with pc.level >= 30  and pc.level <= 32  begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v=find_npc_by_vnum(20003)
+			if 0==v then
+			else
+				target.vid("__TARGET__", v, "接任務")
+			end
+		end
+
+
+		when __TARGET__.target.click or
+			20003.chat."丈夫的飛鏢"  begin
+			target.delete("__TARGET__")
+			say("蓮嫂:")
+			say("真是傷心啊. 別哭了. 寶寶乖.")
+			say("媽媽今天也很傷心. 不乖媽媽就生氣了.")
+			say("別哭了. ")
+			say("")
+			wait()
+			say_pc_name()
+			say("以前都是很開心的阿,今天怎麼快要哭了.")
+			wait()
+			say("蓮嫂:")
+			say("因為傷心嘛. 你就每天都笑嗎?.")
+			say("丈夫以前一直都讓人擔心,後來在戰場死,")
+			say("剩下的只有孩子和一直珍惜的飛鏢.")
+			say("")
+			wait()
+			say("蓮嫂:")
+			say("我出去幹活的時候,有人來偷走了.")
+			say("鄰居的夫人講是"..mob_name(551).."幹的.")
+			say("如果不是孩子,我馬上去找回來..")
+			say_item_vnum(30161)
+			say("可以幫忙把被"..mob_name(551).."偷走的丈夫的飛鏢找回來嗎?")
+			say("")
+			local b=select("我幫忙找回來吧", "對不起，我還有事要忙.")
+			if 2==b then
+				say("放棄任務嗎?")
+				local q=select("是","否")
+				if 2==q  then
+					say("蓮嫂:")
+					say("那現在先忙其他的事")
+					say("下次一定再來吧")
+					say("哎喲~ 傷心啊")
+					return
+				end
+				say("蓮嫂:")
+				say("當然像你這樣懦弱的人")
+				say("見到"..mob_name(551).."就會逃跑的吧，再見.")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("蓮嫂:")
+			say("像你這樣懦弱的人可以嗎?")
+			say("當然如果能找回來，會非常感謝.")
+			say("3個為一套")
+			say("")
+			set_state(for_husband_product)
+		end
+    end
+    state for_husband_product begin
+		when letter begin
+			send_letter("蓮嫂丈夫的飛鏢")
+			if pc.count_item(30161) >= 3 then
+				local v=find_npc_by_vnum(20003)
+				if 0==v then
+				else
+					target.vid("__TARGET__",v," 蓮嫂")
+				end
+			end
+		end
+		
+		when button or info begin
+			if pc.count_item(30161) >= 3 then
+				say_title("飛鏢都找到了!")
+				say("被"..mob_name(551).."偷走的丈夫的飛鏢 ")
+				say("都找回來了，還給蓮嫂吧")
+				say("")
+				return
+			end
+			say_title("尋找蓮嫂丈夫的飛鏢!")
+			say(""..mob_name(551).."，"..mob_name(552).."，"..mob_name(553).."")
+			say("把"..mob_name(554).."偷走的蓮嫂丈夫的飛鏢 找回來")
+			say("還給蓮嫂吧")
+			say("")
+			say_reward("要把3個飛鏢都找齊，還給蓮嫂.")
+			say_reward("(找到的 飛鏢 數量: "..pc.count_item(30161).." )")
+			say("")
+			
+		end
+
+		when 551.kill or 552.kill or  553.kill or 554.kill  begin                      
+			local s = number(1, 100)
+			if s <= 5 and pc.count_item("30161")<3  then
+				pc.give_item2("30161", 1)				
+			end	
+		end
+
+		when 20003.chat."問起丈夫的飛鏢" with pc.count_item(30161)==0 begin
+			say("蓮嫂:")
+			say("丈夫的飛鏢可能在"..mob_name(551).."那裏")
+			say("也許賣給其他人也不知道...")
+			say("是很好的飛鏢")
+			say("")
+			say("繼續進行任務嗎?")
+			local s=select("進行", "放棄")
+			if 2==s then
+				say("蓮嫂:")
+				say("看起來就懦弱，沒怎麼期待")
+				say("沒辦法，只能自己去找了.")
+				say("")
+				say("真的要放棄任務嗎?")
+				local r=select("是", "不是")
+				if 2==r then
+					say("呵呵，老說別人懦弱")
+					say("那，等著吧. 馬上找回來!")
+					say("")
+					return
+				end
+				say("放棄找蓮嫂丈夫飛鏢的任務")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("謝謝了")
+			say("嗚嗚")
+			say("")
+		end
+		when __TARGET__.target.click or
+			20003.chat."還給丈夫的飛鏢" with pc.count_item(30161)>0 begin
+			target.delete("__TARGET__")
+			if pc.count_item(30161)<3 then
+				say("蓮嫂:")
+				say("謝謝你找回來... ")
+				say("但是丈夫的飛鏢是3個為一套的. ")
+				say("既然開始了，把剩下的飛鏢也找回來")
+				say("就感謝了.")
+				say("")
+				local z=select("重新挑戰","放棄")
+				if 2==z then
+					say("放棄了尋找蓮嫂丈夫飛鏢的任務")
+					set_state(__GIVEUP__)
+					return
+				end
+				say("以為勇敢的你會重新挑戰")
+				say("小心啊")
+				say("")
+
+			else
+				say("蓮嫂:")
+				say("咦，怎麼成功的阿?")
+				say("真是比估計的還了不起. 另眼看待了.")
+				say("這些不多的錢，收下吧~")
+				say("")
+				say_reward("作為給蓮嫂找回丈夫的3個飛鏢的獎賞")
+				say_reward("獲得經驗值 300000")
+				pc.give_exp2(300000)
+				set_quest_state("levelup","run")
+
+				say_reward("獲得了" ..item_name(30075).."")
+				pc.give_item2(30075)
+
+				say_reward("獲得了草藥物品")				                  
+				pc.give_item2(50726,3)
+				pc.give_item2(50721,10)
+																  
+				pc.remove_item(30161, 3)
+				clear_letter()
+				set_state(COMPLETE)
+			end
+		end
+    end
+    state __GIVEUP__ begin
+    end
+	state COMPLETE begin
+		when enter begin
+		end
+    end
+end
+

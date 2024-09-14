@@ -1,0 +1,336 @@
+----------------------------------------------------
+-- SUB QUEST 
+-- LV  44 
+-- 書蟲的藏寶圖 
+----------------------------------------------------
+
+quest subquest_33 begin
+	state start begin
+		when login or levelup or enter with pc.get_level() >=44  and pc.get_level() <= 46 begin
+			set_state( information )
+		end
+	end
+
+	state information begin
+		when letter begin
+					
+			local v = find_npc_by_vnum(20023)
+
+			if v != 0 then
+				target.vid("__TARGET__", v, "去找書蟲")
+			end
+		end
+
+				
+		when __TARGET__.target.click or
+			20023.chat."書蟲的藏寶圖" with pc.level >= 44 begin
+			target.delete("__TARGET__")
+			say("書蟲:")
+			say("喂...")
+			say("我看古文書的時候發現了奇特的信息")
+			say("有個城市的藏寶圖...")
+			say("城市周圍的動物神們")
+			say("狼王，熊王，赤煉金虎，野豬王 ..")
+			say("這些傢伙..")
+			say("")
+			wait()
+			say("書蟲:")
+			say("這4個首領級的怪物...")
+			say("把地圖分為4塊，各自拿著")
+			say("不知道是不是真的")
+			say("幫忙確認一下吧")
+			say("拜託了..")
+			say("實在忍不住想知道...拜託了..")
+			say("")
+			local s=select("接收.","拒絕.")
+			if 2==s then
+				say("放棄任務嗎?")
+				local a=select("是","不是")
+				if  2==a then
+					say("書蟲 :")
+					say("對藏寶圖塊沒有興趣嗎?")
+					say("我繼續看古文書了")
+					say("改變主意了再來吧~")
+					say("")
+					return
+				end
+				say("書蟲 :")
+				say("看來不怎麼喜歡冒險?")
+				say("從怪物那裡怎麼找地圖阿")
+				say("")
+				say("沒有辦法啊，再見~")
+				say("")
+				set_state(__GIVEUP__)
+				return
+			end
+			say("書蟲:")
+			say("噢~")
+			say("能幫忙嗎?")
+			say("真是好人啊")
+			say("我就信你了")
+			say("")
+			set_state(to_gain_map)
+		end	
+	end
+
+	state to_gain_map begin
+
+		when letter begin
+			send_letter("書蟲的藏寶圖")
+
+			if  pc.count_item(27988) ==4 then
+				local v = find_npc_by_vnum(20023)
+
+				if v != 0 then
+					target.vid("__TARGET__", v, "去找書蟲")
+				end
+				return
+			end
+				
+		end
+
+		when info or button begin
+			if  pc.count_item(27988) >=4 then
+				say(locale.NOTICE_COLOR.."找到藏寶圖了"..locale.NORMAL_COLOR)
+				say("打獵城市周圍的動物神 " )
+				say("找到了4塊藏寶圖")
+				say("拿給書蟲吧") 
+				say("")
+				return
+			end
+			say(locale.NOTICE_COLOR.."打獵動物神"..locale.NORMAL_COLOR)
+			say("打獵狼王，熊王，赤煉金虎，野豬王等" )
+			say("城市周圍的動物神")
+			say("取得藏寶圖塊") 
+			say("")
+			say_reward("(找到的地圖數量: "..pc.count_item(27988).." )")
+			say("")
+		end
+	
+		when 191.kill or 192.kill or 193.kill  or 194.kill   begin   
+			if pc.count_item("27988") <4 then
+				pc.give_item2(27988, 1)
+				
+			end	
+		end
+		
+		
+
+	when __TARGET__.click  or
+		20023.chat."找到藏寶圖塊了"  begin
+			target.delete("__TARGET__")
+			if pc.count_item(27988)>=4 then	
+				say("書蟲:")
+				say("噢!")
+				say("真是了不起..")
+				say("做夢都想著的!!")
+				say("藏寶圖，能親手摸到!")
+				say("拼來看看..")
+				say("把地圖拼來看看吧")
+				say("等一下吧..")
+				say("")
+				wait()
+				say("書蟲:")
+				say("這些地方...有寶物?")
+				say("奇怪啊，不敢相信...")
+				say("你幫忙去這些地方確認是不是有寶物")
+				say("怎麼像小孩子的家家..")
+				say("根據地圖在傳送老人附近的石塊底下")
+				say("去確認一下吧，這個像是在開玩笑的文書")
+				say("要毀掉，是對後學好...")
+				say("要燒掉它..")
+				say("")
+				local s=select("不行!!我去看看吧","那些地圖..燒掉吧")
+				if 2==s then
+					say("放棄任務嗎?")
+					local a=select("是","否")
+					if  1==s then
+						say("書蟲 :")
+						say("是吧，應該是可笑的故事吧?")
+						say("燒掉它吧..")
+						say("你找來的，雖然有些可惜.")
+						say("沒有辦法啊.. 再見~")
+						say("")
+						pc.remove_item(27988,4)
+						set_state(__GIVEUP__)
+						return
+					end
+					say("書蟲 :")
+					say("猶豫什麼呢~")
+					say("地圖都找回來了...")
+					say("快去看吧~")
+					say("小心")
+					say("不要丟地圖!!")
+					say("")
+					set_state(to_gain_tresure)
+					return 		
+
+				end	
+				say("書蟲:")
+				say("噢~")
+				say("你去看看嗎?")
+				say("如果真的有寶物，那是驚奇的事!")
+				say("相信你一定能取回來")
+				say("小心")
+				say("不要丟地圖!!")
+				say("")
+				set_state(to_gain_tresure)
+				return
+			else
+				say("書蟲:")
+				say("地圖是4塊..")
+				say("把剩餘的也找來吧..")
+				say("")	
+				local s=select("重新挑戰","放棄")
+				if 2==s then	
+					say("書蟲 :")
+					say("放棄嗎??")
+					say("那沒辦法..再見~")
+					say("")
+					set_state(__GIVEUP__)
+					return
+				end
+				say("書蟲:")
+				say("聽說你是永不熄滅的能量的所有者..")
+				say("就信你了!")
+				say("")
+		end
+	
+	end
+end
+	state to_gain_tresure begin
+		when letter begin
+			send_letter("書蟲的藏寶圖")
+			
+			local v=find_npc_by_vnum(20009)  -----------傳送老人
+				if 0 == v then
+				else
+					target.vid("__TARGET__",v,"石塊")
+				end 
+
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."按藏寶圖去找"..locale.NORMAL_COLOR)
+			say_pc_name()
+			say("傳送老人附近石塊底下...")
+			say("不大清楚")
+			say("去問傳送老人")
+			say("去找傳送老人的路怎麼這麼遠~")
+			say("")
+		end
+				
+
+		when __TARGET__.target.click or
+			20009.chat."找寶物嗎?" with pc.count_item(27988)>=4 begin   
+			 target.delete("__TARGET__")
+			 say("傳送老人:")
+			 say("找什麼呢?")
+			 say("給我看那個地圖吧")
+			 say("噢...")
+			 say("好像是那個地方啊?")
+			 say("挖那裡看看")
+			 say("")
+			 wait("")
+			 say_pc_name()
+			 say("挖傳送老人指點的地方")
+			 say("挖了好一會兒..")
+			 say("看到箱子!")
+			 say_item_vnum(50007)
+			 
+			 pc.give_item2(50007, 1)                                                           
+			 
+			 set_state(go_to_reward)
+		 end 
+						
+	end
+
+	state go_to_reward begin
+		when letter begin
+			send_letter("真的有寶物")
+			
+			local v=find_npc_by_vnum(20023)
+				if 0 == v then
+				else
+					target.vid("__TARGET__",v,"書蟲")
+				end 
+
+		end
+
+		when info or button begin
+			say(locale.NOTICE_COLOR.."找到寶物"..locale.NORMAL_COLOR)
+			say("按書蟲找的地圖去找")
+			say("真的找到寶物了")
+			say("沒想到這種地方有寶物..")
+			say("快點告訴書蟲 ")
+			say("這個好消息") 
+		end
+
+
+		when __TARGET__.click or
+			20023.chat."找到寶物了"  begin
+			target.delete("__TARGET__")
+			if pc.count_item(50007)>=1 then	
+				say("書蟲:")
+				say("噢!真是驚奇啊")
+				say("這個寶物跟古文書寫的一樣..")
+				say("真是謝謝了")
+				say("為了表心意，給你些東西")
+				say("")
+				pc.remove_item(50007,1)		
+				pc.remove_item(27988,4)	
+				
+				say_reward("獲得經驗值  1400000")
+				pc.give_exp2(1400000)
+				 set_quest_state("levelup","run")
+				say_reward("獲得 25000兩")
+				pc.change_money(25000)
+				
+				if pc.job == 0 then
+					pc.give_item2(12240, 1)
+					say_reward("獲得 獅喉盔+0.")
+				elseif pc.job == 2 then
+					pc.give_item2(12520, 1)
+					say_reward("獲得 龍吟盔+0.")
+				elseif pc.job == 1 then
+					pc.give_item2(12380, 1)
+					say_reward("獲得 虎嘯巾+0.")
+				elseif pc.job == 3 then
+					pc.give_item2(12660, 1)
+					say_reward("獲得 鳳鳴帽+0 ")
+				end	
+
+				clear_letter()
+				set_state(__COMPLETE__)
+			else
+				say("書蟲:")
+				say("還沒找到嗎?")
+				say("")
+				return 
+
+			end
+
+		end
+	end
+
+state __GIVEUP__ begin
+end
+
+state __COMPLETE__ begin
+	
+end
+
+end
+
+
+
+
+
+
+
+
+
+
+		
+
+
