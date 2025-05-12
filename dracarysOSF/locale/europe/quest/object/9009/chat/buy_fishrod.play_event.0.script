@@ -1,0 +1,3 @@
+say_title ( locale_quest ( 112 ) ) 
+say ( locale_quest ( 110 ) ) 
+setstate ( "reward" ) 

@@ -1,0 +1,5 @@
+if snow_dungeon . is_snowd ( pc . get_map_index ( ) ) and d . getf ( "level" ) == 6 then local setting = snow_dungeon . setting ( ) 
+snow_dungeon . level_clear ( ) 
+d . notice ( 8202 ) 
+server_timer ( "snow_dungeon_floor7_timer" , setting . floor_jump_delay , get_server_timer_arg ( ) ) 
+ return end 

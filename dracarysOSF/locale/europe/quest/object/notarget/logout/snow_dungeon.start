@@ -1,0 +1,11 @@
+local idx = pc . get_map_index ( ) 
+if snow_dungeon . is_snowd ( idx ) then 
+if d . getf ( "dungeon_enter" ) == 1 then 
+pc . setf ( "snow_dungeon" , "exit_time" , get_global_time ( ) ) 
+pc . setf ( "snow_dungeon" , "entered" , 0 ) 
+pc . setf ( "snow_dungeon" , "enter_time" , 0 ) 
+end 
+if party . is_leader ( ) then 
+server_timer ( "snow_dungeon_leader_out_timer" , 5 * 60 , d . get_map_index ( ) ) 
+end 
+end 

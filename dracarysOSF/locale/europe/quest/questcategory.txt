@@ -1,0 +1,10 @@
+4	collect_quest_lv30
+4	collect_quest_lv40
+4	collect_quest_lv50
+4	collect_quest_lv60
+4	collect_quest_lv70
+4	collect_quest_lv80
+4	collect_quest_lv85
+4	collect_quest_lv90
+4	collect_quest_lv92
+4	collect_quest_lv94

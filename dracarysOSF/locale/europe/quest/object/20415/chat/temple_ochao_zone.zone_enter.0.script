@@ -1,0 +1,5 @@
+say ( locale_quest ( 803 ) ) 
+local s = select ( locale_quest ( 4473 ) , locale_quest ( 3418 ) ) 
+if s == 1 then 
+pc . warp ( 817900 , 1.505e+06 ) 
+end 

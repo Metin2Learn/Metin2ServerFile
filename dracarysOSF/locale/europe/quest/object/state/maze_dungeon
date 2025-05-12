@@ -1,0 +1,10 @@
+maze_dungeon={["start"]=0,settings= function ()return { 
+[ "outside_base_pos" ] = { 1.1478e+06 , 532600 } , 
+[ "inside_base_pos" ] = { 
+{ 768000 , 1.2032e+06 } , 
+{ 844800 , 1.2032e+06 } , 
+{ 921600 , 1.2032e+06 } , 
+} , 
+} 
+end ,is_inside= function ()return pc . get_map_index ( ) >= 382 and pc . get_map_index ( ) <= 384 
+end }

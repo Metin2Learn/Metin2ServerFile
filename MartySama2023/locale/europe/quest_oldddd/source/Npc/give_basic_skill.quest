@@ -1,0 +1,78 @@
+quest basic_weapon begin
+	state start begin
+		when login begin
+			if pc.getqf("basic_skill") != 0 then
+				return
+			end
+			if pc.get_job() == 0 then
+				pc.set_skill_level (121,20)
+				pc.set_skill_level (122,20)
+				pc.set_skill_level (124,20)
+				pc.set_skill_level (126,20)
+				pc.set_skill_level (127,20)
+				pc.set_skill_level (129,20)
+				pc.set_skill_level (130,40)
+				pc.set_skill_level (131,20)
+				pc.set_skill_level (137,20)
+				pc.set_skill_level (138,20)
+				pc.set_skill_level (139,20)
+				pc.set_skill_level (140,20)
+				--pc.set_skill_level (128,59)
+				--horse.set_level(21)
+				-- horse.summon()
+				-- horse.ride()
+			elseif pc.get_job() == 1 then
+				pc.set_skill_level (121,20)
+				pc.set_skill_level (122,20)
+				pc.set_skill_level (124,20)
+				pc.set_skill_level (126,20)
+				pc.set_skill_level (127,20)
+				pc.set_skill_level (129,20)
+				pc.set_skill_level (130,40)
+				pc.set_skill_level (131,20)
+				pc.set_skill_level (137,20)
+				pc.set_skill_level (138,20)
+				pc.set_skill_level (139,20)
+				pc.set_skill_level (140,20)
+				--pc.set_skill_level (128,59)
+				--horse.set_level(21)
+				-- horse.summon()
+				-- horse.ride()
+			elseif pc.get_job() == 2 then
+				pc.set_skill_level (121,20)
+				pc.set_skill_level (122,20)
+				pc.set_skill_level (124,20)
+				pc.set_skill_level (126,20)
+				pc.set_skill_level (127,20)
+				pc.set_skill_level (129,20)
+				pc.set_skill_level (130,40)
+				pc.set_skill_level (131,20)
+				pc.set_skill_level (137,20)
+				pc.set_skill_level (138,20)
+				pc.set_skill_level (139,20)
+				pc.set_skill_level (140,20)
+				--pc.set_skill_level (128,59)
+				--horse.set_level(21)
+				-- horse.summon()
+				-- horse.ride()
+			elseif pc.get_job() == 3 then
+				pc.set_skill_level (121,20)
+				pc.set_skill_level (122,20)
+				pc.set_skill_level (124,20)
+				pc.set_skill_level (126,20)
+				pc.set_skill_level (127,20)
+				pc.set_skill_level (129,20)
+				pc.set_skill_level (130,40)
+				pc.set_skill_level (131,20)
+				pc.set_skill_level (137,20)
+				pc.set_skill_level (138,20)
+				pc.set_skill_level (139,20)
+				pc.set_skill_level (140,20)
+				--pc.set_skill_level (128,59)
+				--horse.set_level(21)
+				-- horse.summon()
+				-- horse.ride()
+			end
+		end
+	end
+end

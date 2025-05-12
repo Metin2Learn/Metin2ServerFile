@@ -1,0 +1,22 @@
+if pc . get_map_index ( ) == 208 then local settings = dragon_lair_access . get_settings ( ) 
+char_log ( pc . get_player_id ( ) , "LAIR" , pc . get_channel_id ( ) .. " DRAGON KILLED" ) 
+game . set_event_flag ( "dragon_lair_alive" , 0 ) 
+game . drop_item_with_ownership ( 71123 , 1 ) 
+game . drop_item_with_ownership ( 71129 , 1 ) 
+notice_all ( 890 , pc . get_name ( ) ) 
+if party . is_party ( ) then 
+local pids = { party . get_member_pids ( ) } 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+if pc . getf ( "dragon_lair_access" , "enter_time" ) > 0 then 
+d . update_rank ( 208 , ( get_global_time ( ) - pc . getf ( "dragon_lair_access" , "enter_time" ) ) , pc . get_last_damage ( ) ) 
+end 
+q . end_other_pc_block ( ) 
+end 
+else 
+if pc . getf ( "dragon_lair_access" , "enter_time" ) > 0 then 
+d . update_rank ( 208 , ( get_global_time ( ) - pc . getf ( "dragon_lair_access" , "enter_time" ) ) , pc . get_last_damage ( ) ) 
+end 
+end 
+purge_area ( settings . room_area . first . x , settings . room_area . first . y , settings . room_area . last . x , settings . room_area . last . y ) 
+ return end 

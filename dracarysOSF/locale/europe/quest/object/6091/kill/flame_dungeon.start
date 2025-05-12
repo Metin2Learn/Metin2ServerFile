@@ -1,0 +1,22 @@
+if flame_dungeon . is_flamed ( d . get_map_index ( ) ) and d . getf ( "level" ) == 17 then d . notice ( 1371 ) 
+d . notice ( 1372 ) 
+server_timer ( "dungeon_end_timer" , 60 , d . get_map_index ( ) ) 
+flame_dungeon . level_clear ( ) 
+if party . is_party ( ) then 
+party . setf ( "flame_dungeon_boss_kill_count" , 1 ) 
+end 
+if party . is_party ( ) then 
+local pids = { party . get_member_pids ( ) } 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+if pc . getf ( "flame_dungeon" , "enter_time" ) > 0 then 
+d . update_rank ( 351 , ( get_global_time ( ) - pc . getf ( "flame_dungeon" , "enter_time" ) ) , pc . get_last_damage ( ) ) 
+end 
+q . end_other_pc_block ( ) 
+end 
+else 
+if pc . getf ( "flame_dungeon" , "enter_time" ) > 0 then 
+d . update_rank ( 351 , ( get_global_time ( ) - pc . getf ( "flame_dungeon" , "enter_time" ) ) , pc . get_last_damage ( ) ) 
+end 
+end 
+ return end 

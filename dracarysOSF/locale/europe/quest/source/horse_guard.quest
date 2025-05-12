@@ -1,0 +1,29 @@
+quest horse_guard begin
+	state start begin
+		when 20349.chat.locale_quest(2094) begin
+			say_title(locale_quest(2118))
+			local s = number(1, 7)
+			if 1 >= s then -- 14.29% (1/7)
+				say(locale_quest(2095))
+			elseif 2 >= s then -- 14.29% (1/7)
+				say(locale_quest(2096))
+			elseif 3 >= s then -- 14.29% (1/7)
+				say(locale_quest(2097))
+			elseif 4 >= s then -- 14.29% (1/7)
+				say(locale_quest(2098))
+			elseif 5 >= s then -- 14.29% (1/7)
+				say(locale_quest(2099))
+			elseif 6 >= s then -- 14.29% (1/7)
+				say(locale_quest(2100))
+			elseif 7 >= s then -- 14.29% (1/7)
+				say(locale_quest(2101))
+			end
+		end
+	end
+
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

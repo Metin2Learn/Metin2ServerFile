@@ -1,0 +1,13 @@
+source_of_the_devil={["start"]=0,["__COMPLETE__"]=668443392,["back_to_the_guard"]=136004270,["bear_hunt"]=-582932855,["traces_of_evil"]=1163455321,["trigger"]=443223901,bear_hunt_kill_count= function ()local total_remaining = 0 
+local current_remaining = 1 - pc . getqf ( "hunted_bears" ) 
+if current_remaining < 0 then 
+current_remaining = 0 
+end 
+total_remaining = total_remaining + current_remaining 
+q . set_counter_value ( total_remaining ) 
+if total_remaining == 0 then 
+say_title ( locale_quest ( 6379 ) ) 
+say ( locale_quest ( 6378 ) ) 
+set_state ( "back_to_the_guard" ) 
+end 
+end }

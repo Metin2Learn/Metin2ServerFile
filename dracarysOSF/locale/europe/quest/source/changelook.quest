@@ -1,0 +1,19 @@
+define CHANGE_LOOK_ITEM 0
+define CHANGE_LOOK_MOUNT 1
+
+quest changelook begin
+	state start begin
+		when 60003.chat.locale_quest(165) begin
+			say(locale_quest(166))
+			if select(locale_quest(4473), locale_quest(3418)) == 1 then
+				setskin(NOWINDOW)
+				game.open_changelook(CHANGE_LOOK_ITEM)
+			else return end
+		end
+
+		when 60003.chat.locale_quest(11774) begin
+			setskin(NOWINDOW)
+			game.open_changelook(CHANGE_LOOK_MOUNT)
+		end
+	end
+end

@@ -1,0 +1,8 @@
+if npc . is_pc ( ) == false then if number ( 0 , 3 ) ~= 3 then 
+return 
+end 
+pc . give_item2 ( 31093 ) 
+say_title ( locale_quest ( 6363 ) ) 
+say ( locale_quest ( 6407 ) ) 
+set_state ( "back_to_the_guard" ) 
+ return end 

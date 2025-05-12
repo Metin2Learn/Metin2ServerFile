@@ -1,0 +1,95 @@
+quest soul_system begin
+	state start begin
+		when login or levelup with pc.get_level() >= 30 and game.get_event_flag("soul_event") > 0 begin
+			set_state("information")
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(EVENT_NPC)
+			if v != 0 then
+				target.vid("__TARGET__", v, mob_name(EVENT_NPC))
+			end
+			send_letter("*" .. locale_quest(8220))
+		end
+
+		when button or info begin
+			say_title(locale_quest(8221))
+			say(locale_quest(8222))
+		end
+
+		when __TARGET__.target.click or EVENT_NPC.chat.locale_quest(8223) begin
+			say_title(locale_quest(8223))
+			say(locale_quest(8224))
+			say(locale_quest(8225))
+			say(locale_quest(8226))
+			local s = select(locale_quest(8227), locale_quest(8228))
+			if s != 1 then
+				say(locale_quest(8229))
+			else
+				say(locale_quest(8230))
+				set_state(hunt_wolves)
+			end
+
+			target.delete("__TARGET__")
+		end
+	end
+
+	state hunt_wolves begin
+		when letter begin
+			send_letter("*" .. locale_quest(8220))
+		end
+
+		when button or info begin
+			say_title(locale_quest(8221))
+			say(locale_quest(8231))
+		end
+
+		when 102.kill or 103.kill or 104.kill or 105.kill or 106.kill or 107.kill begin
+			if math.random(1, 100) == 1 then
+				game.drop_item_with_ownership(70601, 1)
+				set_state("return_to_ahyu")
+			end
+		end
+	end
+
+	state return_to_ahyu begin
+		when enter begin
+			notice_multiline(locale_quest(8235), notice)
+		end
+
+		when letter begin
+			local v = find_npc_by_vnum(EVENT_NPC)
+			if v != 0 then
+				target.vid("__TARGET__", v, mob_name(EVENT_NPC))
+			end
+			send_letter("*" .. locale_quest(8223))
+		end
+
+		when button or info begin
+			say(locale_quest(8235))
+		end
+
+		when __TARGET__.target.click or EVENT_NPC.chat.locale_quest(8223) begin
+			target.delete("__TARGET__")
+			if pc.count_item(70601) > 0 then
+				say_title(locale_quest(8234))
+				say(locale_quest(8232))
+				pc.remove_item(70601, 200)
+				pc.give_item2(70600, 1)
+				set_state(start)
+			else
+				say_title(locale_quest(8234))
+				say(locale_quest(8233))
+				set_state(hunt_wolves)
+			end
+		end
+	end
+
+	state complete begin
+		when login or levelup with pc.get_level() >= 30 and game.get_event_flag("soul_event") > 0 begin
+			set_state("information")
+		end
+	end
+end

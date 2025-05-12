@@ -1,0 +1,8 @@
+say_title ( locale_quest ( 3 ) ) 
+say ( locale_quest ( 4 ) ) 
+if pc . get_playtime ( ) > pc . getqf ( "duration" ) then 
+say ( locale_quest ( 11 ) ) 
+else 
+say_reward ( string . format ( locale_quest ( 10 ) .. " %s" , get_playtime_duration ( pc . getqf ( "duration" ) - pc . get_playtime ( ) ) ) ) 
+end 
+say_reward ( locale_quest ( 5643 ) ) 

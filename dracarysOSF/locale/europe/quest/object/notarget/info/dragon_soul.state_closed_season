@@ -1,0 +1,7 @@
+say ( locale_quest ( 946 ) ) 
+local today = math . floor ( get_global_time ( ) / 86400 ) 
+if today == pc . getf ( "dragon_soul" , "eye_timestamp" ) then 
+say ( locale_quest ( 947 ) ) 
+else 
+say ( locale_quest ( 948 ) ) 
+end 

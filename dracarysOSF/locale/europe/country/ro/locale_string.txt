@@ -1,0 +1,4848 @@
+"$*** Winner of the item %s is: %s ***";
+"$*** Câºtigãtorul obiectului %s este: %s ***";
+
+"%d guild EXP received!";
+"%d EXP pentru breaslã!";
+
+"%d minutes remaining to register for the PvP tournament!";
+"%d minute au mai rãmas din înregistrarea turneului PvP!";
+
+"%d more until the battle begins!";
+"Încã %d pânã când începe bãtãlia!";
+
+"%d ±ÇÀ» ´õ ÀĞ¾î¾ß ¼ö·ÃÀ» ¿Ï·á ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Trebuie sa citesti inca %d pentru a avea succes.";
+
+"%d ³ÉÀ» ÅõÀÚÇÏ¼Ì½À´Ï´Ù.";
+"Ai investit %d Yang.";
+
+"%d ³ÉÀ» È¹µæÇÏ¼Ì½À´Ï´Ù.";
+"Ai câºtigat %d Yang.";
+
+"%d ·¹º§ÀÌ µÇ¾î¾ß ´Ù½Ã ¿°»öÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.";
+"Trebuie sã atingi nivelul %d pentru a-şi putea vopsi pãrul iar.";
+
+"%d ºĞ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d min %d sec ramase pana la expirarea MUTE-ului";
+
+"%d ½Ã°£ %d ºĞ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d ore %d min %d sec ramase pana la expirarea MUTE-ului.";
+
+"%d ½Ã°£ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d ore %d sec ramase pana la expirarea MUTE-ului.";
+
+"%d Á¾·ù %d ¸¶¸® ³¬À½";
+"Ai prins %d de %d.";
+
+"%d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d secunde ramase pana la deblocarea chatului";
+
+"%d ÃÊ ÈÄ¿¡ ±ºÁÖÀÇ Ãàº¹À» »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù";
+"Binecuvântarea împãratului poate fi folositã dupã %d sec.";
+
+"%d ÃÊ°£ ÄğÅ¸ÀÓÀÌ Àû¿ëÁßÀÔ´Ï´Ù.";
+"Timp de cooldown de aproximativ %d secunde";
+
+"%d ÃÊÈÄ ¸ñÀûÁö·Î ÀÌµ¿µË´Ï´Ù.";
+"%d secunde de la executare ajungi la locul cu pricina.";
+
+"%d%% È®·ü·Î °üÅë °ø°İ";
+"Atac pãtrunzãtor cu ºansa %d%%";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã °æÇèÄ¡ Ãß°¡ »ó½Â";
+"Creºterea experienşei cu %d%% în cazul înfrângerii inamicului.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã µ· 2¹è µå·Ó";
+"Creºterea Yang-ului capturat cu %d%% în cazul înfrângerii inamicului.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã »ı¸í·Â È¸º¹";
+"%d%% ºansã de a-şi umple PV dupã o victorie.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã ¾ÆÀÌÅÛ 2¹è µå·Ó";
+"Creºterea obiectelor capturate cu %d%% în cazul înfrângerii inamicului.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã Á¤½Å·Â È¸º¹";
+"Creºtere mana cu %d%% în cazul înfrângerii inamicului.";
+
+"%d%% È®·ü·Î Ä¡¸íÅ¸ °ø°İ";
+"Atac critic cu ºansa %d%%";
+
+"%d%% È®·ü·Î Å¸°İ½Ã »ó´ë Àü½Å·Â ¼Ò¸ğ";
+"Mana este luatã de la inamic cu o probabilitate de %d%%.";
+
+"%d%% È®·ü·Î ÇÇÇØ½Ã Á¤½Å·Â È¸º¹";
+"Probabilitate de absorbire mana %d%%.";
+
+"%dºĞÀÇ °áÁ¦½Ã°£ÀÌ Ãß°¡ µÇ¾ú½À´Ï´Ù. (°áÁ¦¹øÈ£ %d)";
+"Contului tãu îi este adãugat %d timp de joc. (Nr. platã %d)";
+
+"%dÀÇ °æÇèÄ¡¸¦ È¹µæÇß½À´Ï´Ù.";
+"Ai primit %d experienşã.";
+
+"%dÃÊ ³²¾Ò½À´Ï´Ù.";
+"%d secunde pânã la final.";
+
+"%dÃÊ ¸¸Å­ ÃæÀüµÇ¾ú½À´Ï´Ù.";
+"%d de secunde au fost adaugate.";
+
+"%dÃÊ ÈÄ °ÔÀÓÀÌ ¼Ë´Ù¿î µË´Ï´Ù.";
+"Jocul se sfârºeºte în %d secunde.";
+
+"%s";
+"%s";
+
+"%s : %d ¸¶¸®";
+"%s: %d";
+
+"%s SP¼Ò¸ğ: %d";
+"%s Consum de FP: %d";
+
+"%s earned %d points in a game of okey.";
+"%s a obşinut %d puncte în jocul okey.";
+
+"%s effect activated.";
+"Efectul %s este activat.";
+
+"%s effect not activated.";
+"Efectul %s nu este activat.";
+
+"%s emerges from the Transport Box.";
+"%s iese din Cutia de Transport.";
+
+"%s has been revived.";
+"%s a fost înviat.";
+
+"%s has blocked you.";
+"%s te-a blocat.";
+
+"%s has completed level %u in Sung Mahi Tower!";
+"%s a terminat nivel %u în Turnul Sung Mahi!";
+
+"%s has erected all the outposts and Sung Mahi's control will start in %d minutes.";
+"%s a ridicat toate avanposturile ºi controlul lui Sung Mahi va începe în %d minute.";
+
+"%s has evolved to %s! Excellent!";
+"%s a evoluat la %s! Excelent!";
+
+"%s has hatched!";
+"%s a iesit din ou!";
+
+"%s has left the arena. %s wins.";
+"%s a pãrãsit arena. %s câºtigã.";
+
+"%s has occupied %s!";
+"%s a ocupat %s!";
+
+"%s has reached level %d!";
+"%s a ajuns la nivelul %d!";
+
+"%s has reached the personal score of %d!";
+"%s a ajuns la scorul personal de %d!";
+
+"%s improvement failed.";
+"%s îmbunãtãşire eºuatã.";
+
+"%s improvement successful.";
+"%s îmbunãtãşire reuºitã.";
+
+"%s is already being blocked.";
+"%s este deja blocat.";
+
+"%s is attacking %s!";
+"%s atacã %s!";
+
+"%s is currently fast asleep.";
+"%s a adormit.";
+
+"%s is insufficient. You need %d for the next stage of evolution.";
+"%s insuficient. Ai nevoie de %d pentru urmatorul stadiu al evolutiei.";
+
+"%s is no longer blocked.";
+"%s nu mai este blocat.";
+
+"%s is now blocked.";
+"%s este acum blocat.";
+
+"%s is now in a Transport Box.";
+"%s se afla acum in Cutia de Transport.";
+
+"%s is the tournament victor!";
+"%s a câºtigat turneul!";
+
+"%s killcount %d mobkillcount %d bosskillcount %d ¼ºÁö ÁøÀÔ¼ö %d";
+"%s killcount %d mobkillcount %d bosskillcount %d Numãr Pãmânt Sfânt %d";
+
+"%s killed %s.";
+"%s învins %s.";
+
+"%s recovers from the exhaustion.";
+"%s recuperare de la epuizare.";
+
+"%s refuses to eat anything!";
+"%s refuza sa manance!";
+
+"%s skill activated. HP restored by %d.";
+"%s abilitate activata. PV restaurat cu %d.";
+
+"%s skill activated. Slow, poison and bleeding effects were removed.";
+"%s abilitate activata. Efectele incetinirii, otravii si sangerarii au fost inlaturate.";
+
+"%s skill activated. You will now receive no damage.";
+"%s abilitate activata. Nu vei mai primi daune.";
+
+"%s still has %d outposts. (%d/%d)";
+"%s mai are încã %d avanposturi (%d/%d)";
+
+"%s wakes up and dives into the tasty meal.";
+"%s se trezeste si savureaza masa.";
+
+"%s was successful! A %d%% absorption rate on their new %s. Congratulations!";
+"%s efectuat cu succes! %d%% rata de absorbşie pe %s. Felicitãri!";
+
+"%s will appear here: %s";
+"%s va apãrea aici: %s";
+
+"%s ±ºÁÖ ÈÄº¸¿¡¼­ »èÁ¦ÇÏ¿´½À´Ï´Ù";
+"%s a fost ºters ca ºi candidat ca împãrat.";
+
+"%s ±ºÁÖ·Î ÀÔ¸í Çß½À´Ï´Ù.";
+"%s este numit împãrat.";
+
+"%s ±ºÁÖ¸£ Á¦°Å ÇÏ¿´½À´Ï´Ù..";
+"Împãratul %s este înlãturat.";
+
+"%s ±ºÁÖ¸¦ Á¦°Å ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Împãratul %s nu paote fi înlãturat.";
+
+"%s ±æµå°¡ %s ±æµå¿¡ ¼±ÀüÆ÷°í¸¦ ÇÏ¿´½À´Ï´Ù!";
+"Breasla %s a declarat rãzboi breslei %s!";
+
+"%s ±æµå°¡ %s ±æµå¿ÍÀÇ ÀüÀï¿¡¼­ ½Â¸® Çß½À´Ï´Ù.";
+"Breasla %s a câºtigat rãzboiul împotriva breslei %s.";
+
+"%s ±æµå°¡ %s ±æµåÀÇ ±ê¹ßÀ» »©¾Ñ¾Ò½À´Ï´Ù!";
+"%s a cucerit steagul %s!";
+
+"%s ±æµå¿Í %s ±æµå »çÀÌÀÇ ÀüÀïÀÌ ¹«½ÂºÎ·Î ³¡³µ½À´Ï´Ù.";
+"Rãzboiul dintre breslele %s ºi %s s-a terminat la egalitate.";
+
+"%s ±æµå¿Í %s ±æµå »çÀÌÀÇ ÀüÀïÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.";
+"Rãzboiul întrebreslele  %s ºi %s a fost întrerupt.";
+
+"%s ±æµå¿Í %s ±æµå°¡ Àá½Ã ÈÄ ÀüÀïÀ» ½ÃÀÛÇÕ´Ï´Ù!";
+"Rãzboiul de breaslã dintre %s ºi %s începe în câteva secunde!";
+
+"%s ±æµå¿Í %s ±æµå°¡ ÀüÀïÀ» ½ÃÀÛÇÏ¿´½À´Ï´Ù!";
+"Rãzboiul între breslele %s ºi %s a început!";
+
+"%s ±æµåÀÇ %sÀÌ %d%% Áõ°¡Çß½À´Ï´Ù!";
+"%s al breslei %s a crescut cu %d%%!";
+
+"%s ±æµåÀÇ %sÀÌ Á¤»óÀ¸·Î µ¹¾Æ¿Ô½À´Ï´Ù.";
+"%s al breslei %s s-a normalizat.";
+
+"%s ±æµåÀÇ ±ê¹ßÀ» %s ´ÔÀÌ È¹µæÇÏ¿´½À´Ï´Ù.";
+"Steagul breslei %s a fost furat de %s.";
+
+"%s ´Â ±ºÁÖ ÈÄº¸°¡ ¾Æ´Õ´Ï´Ù.";
+"%s nu este candidat ca împãrat.";
+
+"%s ´Â ±ºÁÖ·Î ÀÔ¸íÇÒ¼ö ¾ø½À´Ï´Ù .";
+"%s nu poate fi numit împãrat.";
+
+"%s ´Ô°úÀÇ ±³È¯ÀÌ ¼º»ç µÇ¾ú½À´Ï´Ù.";
+"Negoşul cu %s a reuºit.";
+
+"%s ´Ô¿¡°Ô ÆÄÆ¼°¡ÀÔ ½ÅÃ»À» Çß½À´Ï´Ù.";
+"Doreºti sã te alãturi grupei lui %s.";
+
+"%s ´ÔÀ¸·Î ºÎÅÍ Ä£±¸ µî·ÏÀ» °ÅºÎ ´çÇß½À´Ï´Ù.";
+"%s a refuzat invitaşia.";
+
+"%s ´ÔÀº %d Ã¤³Î¿¡ Á¢¼Ó Áß ÀÔ´Ï´Ù. (ÇöÀç Ã¤³Î: %d)";
+"Jucãtorul %s se aflã în canalul %d. (Canalul tãu: %d)";
+
+"%s ´ÔÀº Á¢¼ÓµÇ ÀÖÁö ¾Ê½À´Ï´Ù.";
+"%s nu este online.";
+
+"%s ´ÔÀº Á¤»óÀûÀ¸·Î Ãâ¸¶¸¦ ÇÏ¿´½À´Ï´Ù.";
+"Jucãtorul %s este deja în alegere.";
+
+"%s ´ÔÀ» ¼ÒÈ¯ÇÏ¿´½À´Ï´Ù.";
+"Ai recrutat %s jucãtori.";
+
+"%s ´ÔÀÌ ´ë·Ã¿¡¼­ ½Â¸®ÇÏ¿´½À´Ï´Ù.";
+"%s a câºtigat duelul.";
+
+"%s ´ÔÀÌ ½Â¸®ÇÏ¿´½À´Ï´Ù.";
+"%s a câºtigat.";
+
+"%s ºí·°! (%d%%)";
+"Blocheazã %s! (%d%%)";
+
+"%s ¾ÆÀÌÅÛ À» È¹µæÇÏ¼Ì½À´Ï´Ù";
+"Ai cãºtigat obiectul %s.";
+
+"%s ¾ÆÀÌÅÛÀÌ ÇÊ¿äÇÕ´Ï´Ù";
+"Ai nevoie de %s.";
+
+"%s ¿¡°Ô·Î ÀÌµ¿ÇÕ´Ï´Ù";
+"Tragere la jucãtorul %s.";
+
+"%s È¸ÇÇ! (%d%%)";
+"Eschiveazã %s! (%d%%)";
+
+"%s's pet skill has been activated. %s uses Feather Walk.";
+"Abilitatea însoşitorului %s a fost activatã. %s foloseºte Mers de Fulg.";
+
+"%s's remaining HP: %d%%";
+"%s PV rãmas: %d%%";
+
+"%s: Á¸ÀçÇÏÁö ¾Ê´Â ±æµå ÀÔ´Ï´Ù.";
+"%s: Aceastã breaslã nu existã.";
+
+"%s:%s_WAS_SET_TO%d%%";
+"%s: %s a crescut cu %d%%!";
+
+"%s:_%s_IS_NORMAL_AGAIN";
+"%s al lui %s s-a normalizat.";
+
+"%s[%d]°¡ °ø°İ À§Ä¡: %d %d";
+"%s[%d] Pozitie de atac: %d %d";
+
+"%s´Ô°úÀÇ ´ë°á ½ÃÀÛ!";
+"Lupta cu %s a început!";
+
+"%s´ÔÀÌ ´ë°á½ÅÃ»À» Çß½À´Ï´Ù. ½Â³«ÇÏ·Á¸é ´ë°áµ¿ÀÇ¸¦ ÇÏ¼¼¿ä.";
+"%s te-a provocat la luptã!";
+
+"%s´ÔÀÌ ÁÖ»çÀ§¸¦ ±¼·Á %d°¡ ³ª¿Ô½À´Ï´Ù. (%d-%d)";
+"%s zaruri aruncate. El/ea a primit %d (%d-%d).";
+
+"%s¸¦ ±¸¿ü½À´Ï´Ù.";
+"Prãjeºti %s deasupra focului.";
+
+"%s¿¡ ¹ÚÇôÀÖ´ø º¸¼®ÀÌ »ç¶óÁı´Ï´Ù.";
+"O piatrã preşioasã din %s a dispãrut.";
+
+"%s¿¡ ÀüÀïÀÇ ½ÃÀÛÀ» ¾Ë¸®´Â ºÀÈ­°¡ ³ªÅ¸³µ½À´Ï´Ù.";
+"La %s s-a aprins un foc de iluminare pentru a avertiza în legãturã cu o luptã.";
+
+"%s¿¡°Ô ´ë°á½ÅÃ»À» Çß½À´Ï´Ù.";
+"L-ai provocat pe %s la luptã.";
+
+"%s¿¡¼­ ºÀÈ­¸¦ µÑ·¯½Î°í ÀüÅõ°¡ ÁøÇàÁßÀÔ´Ï´Ù.";
+"În %s este rãzboi pentru a aprinde focurile de iluminare.";
+
+"%s¿¡¼­ ¼ÒÄÏ ºüÁú¶§±îÁö ³²Àº ½Ã°£ %d";
+"Timp rãmas pânã la înlãturarea soket-ului din %s: %d";
+
+"%sÀÇ ±ºÁÖ°¡ %s ´ÔÀ¸·Î ±³Ã¼µÇ¾ú½À´Ï´Ù.";
+"Împãratul lui %s a fost schimbat în %s.";
+
+"%sÀÌ ¸ğµç ºÀÈ­¸¦ ÆÄ±«ÇÏ¿´½À´Ï´Ù.";
+"%s a distrus toate focurile de iluminare.";
+
+"%sÀÌ ºÀÈ­¸¦ ÆÄ±«Çß½À´Ï´Ù.";
+"%s a distrus focul de iluminare.";
+
+"%sÀÌ ¼ö¼º¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Lui %s i-a reuºit apãrarea.";
+
+"%sÀÌ ¼ö¼º¿¡ ½ÇÆĞÇÏ¿© ÀüÀï¿¡ ÆĞ¹èÇÏ¿´½À´Ï´Ù..";
+"%s a pierdut rãzboiul pentru ca nu au putut sã apere castelul.";
+
+"%sÀÌ ÇÊ¿äÇÕ´Ï´Ù.";
+"Pentru aceasta actiune ai nevoie de: %s";
+
+"(%s) ±æµå°¡ »ı¼ºµÇ¾ú½À´Ï´Ù. [ÀÓ½Ã]";
+"(%s) a fost creat. [Temporar]";
+
+"(¸¸·áÀÏ : %d³â %d¿ù %dÀÏ)";
+"(Desfãºurare: %d j- %d m - %d t)";
+
+". ³ÊÈñ°¡ ¼ºÁöÀÇ ¼öÈ£ÀÚ¸¦ Àâ°Ô µÈ´Ù¸é ³ÊÈñ´Â ¼ºÁöÀÇ ÁÖÀÎÀÌ µÈ´Ù.[ENTER][ENTER] ";
+"Dacã îl învingeşi pe paznicul Locului Sfânt, veşi fi deşinãtorii Locului Sfânt.";
+
+"1-50 »çÀÌÀÇ ¼öÄ¡¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä";
+"Alege un numãr între 1 ºi 50.";
+
+"10ÃÊµÚ ´ÙÀ½ ÆÇÀ» ½ÃÀÛÇÕ´Ï´Ù.";
+"În 10 secunde începe runda urmãtoare.";
+
+"10ÃÊµÚ ´ë·ÃÀÌ ½ÃÀÛµË´Ï´Ù.";
+"Lupta începe în 10 secunde.";
+
+"10ÃÊµÚ ¸¶À»·Î µÇµ¹¾Æ°©´Ï´Ù.";
+"În 10 secunde vei fi teleportat în oraº.";
+
+"10ÃÊµÚ ¸¶À»·Î ÀÌµ¿ÇÕ´Ï´Ù.";
+"În 10 secunde vei fi teleportat în oraº.";
+
+"10ÃÊµÚ ÆÇÁ¤ÇÏ°Ú½À´Ï´Ù.";
+"Decizia urmeazã în 10 secunde.";
+
+"10ÃÊÈÄ ÀÚµ¿À¸·Î Á¢¼ÓÀÌ Á¾·áµÇ¸ç,";
+"În 10 secunde vei fi deconectat automat.";
+
+"1ºĞ ÀÌ³»¿¡ ¾Æ¹«µµ Á¢¼ÓÇÏÁö ¾ÊÀ¸¸é ±æµåÀüÀÌ ÀÚµ¿ Á¾·áµË´Ï´Ù.";
+"Dacã nu se gãseºte un inamic rãzboiul breslei va fi încheiat automat.";
+
+"20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© »óÁ¡À» ¿­¼ö°¡ ¾ø½À´Ï´Ù";
+"Nu poti negocia deoarece ai mai mult de 2 miliarde yang.";
+
+"20¾ï³ÉÀÌ ÃÊ°úÇÏ¿© ¹°Ç°À» ÆÈ¼ö ¾ø½À´Ï´Ù.";
+"Nu poti negocia deoarece ai mai mult de 2 miliarde yang.";
+
+"5ºĞ ÈÄ¿¡ Á¤»óÀûÀ¸·Î Á¢¼ÓÇÏ½Ç¼ö ÀÖ½À´Ï´Ù.";
+"Te poşi conecta dupã 5 minute.";
+
+"5ÃÊ µÚ Æ²¸®½Å ºĞµéÀ» ¹Ù±ùÀ¸·Î ÀÌµ¿ ½ÃÅ°°Ú½À´Ï´Ù.";
+"In 5 sec. vor fi inlaturati toti jucatorii care au dat un raspuns gresit.";
+
+"<±æµå> %d ½ºÅ³À» »ç¿ëÇÔ (%d, %d) to %u";
+"[Breasla] Competenşa %d a fost folositã (%d, %d) pe %u.";
+
+"<±æµå> %s ±æµå°¡ ±æµåÀüÀ» °ÅºÎÇÏ¿´½À´Ï´Ù.";
+"[Breasla] %s a refuzat rãzboiul breslei.";
+
+"<±æµå> %uÀÇ °æÇèÄ¡¸¦ ÅõÀÚÇÏ¿´½À´Ï´Ù.";
+"[Breasla] %u experienta primita.";
+
+"<±æµå> %uÀÇ ¿ë½Å·ÂÀ» È¸º¹ÇÏ¿´½À´Ï´Ù.";
+"[Breasla] Punctele de Spirit al Dragonului ale lui %u au fost refãcute.";
+
+"<±æµå> [%s] ±æµå°¡ »ı¼ºµÇ¾ú½À´Ï´Ù.";
+"[Breasla] [%s] a fost formatã.";
+
+"<±æµå> °¡Áö°í ÀÖ´Â µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"[Breasla] Nu ai destui Yang la tine.";
+
+"<±æµå> °æÇèÄ¡ ÅõÀÚ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Breasla] Punerea în practicã a experienşei eºuatã.";
+
+"<±æµå> °øÁö±ÛÀ» ÀÛ¼ºÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Breasla] Nu ai dreptul sã faci un anunş.";
+
+"<±æµå> ±×·¯ÇÑ »ç¶÷À» Ã£À» ¼ö ¾ø½À´Ï´Ù.";
+"[Breasla] Persoana cãutatã nu poate si gãsitã.";
+
+"<±æµå> ±×·± ±æµå°¡ ¾ø½À´Ï´Ù.";
+"[Breaslã] Nu existã nicio breaslã cu acest nume.";
+
+"<±æµå> ±æµå ±İ°í¿¡¼± ±æµåÀå¸¸ Ãâ±İÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Guild] Doar liderul breslei poate retrage Yang.";
+
+"<±æµå> ±æµå »ı¼º¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Breasla] Formarea breslei eºuatã.";
+
+"<±æµå> ±æµå ½ºÅ³ ·¹º§À» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Breasla] Nu ai dreptul de a schimba nivelul competenşelor breslei.";
+
+"<±æµå> ±æµå ½ºÅ³Àº ±æµåÀü Áß¿¡¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Breasla] Competenşa de breaslã poate fi folositã doar în rãzboi.";
+
+"<±æµå> ±æµå ÀÌ¸§ÀÌ ÀûÇÕÇÏÁö ¾Ê½À´Ï´Ù.";
+"[Breasla] Numele breslei nu este valabil.";
+
+"<±æµå> ±æµå°¡ ÀÌ¹Ì ÃÖ°í ·¹º§ÀÔ´Ï´Ù.";
+"[Breaslã] Breasla ta a ajuns deja la lvl maxim posibil.";
+
+"<±æµå> ±æµå¸¦ »ı¼ºÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Breasla] Nu poşi forma o breaslã.";
+
+"<±æµå> ±æµå¸¦ ÇØ»êÇÑ Áö %dÀÏÀÌ Áö³ªÁö ¾ÊÀº »ç¶÷Àº ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Breasla] Poşi invita noi membri doar peste %d zile de la reformare.";
+
+"<±æµå> ±æµå¿¡ ¼ÓÇØÀÖÁö ¾Ê½À´Ï´Ù.";
+"[Breasla] Nu aparşine breslei.";
+
+"<±æµå> ±æµå¿ø %s ´ÔÀ» °­Á¦ Å»Åğ ½ÃÄ×½À´Ï´Ù.";
+"[Breasla] Membrul %s a fost exclus din breaslã.";
+
+"<±æµå> ±æµå¿øÀ» °­Á¦ Å»Åğ ½ÃÄ×½À´Ï´Ù.";
+"[Breasla] Ai concediat un membru al breslei.";
+
+"<±æµå> ±æµå¿øÀ» °­Á¦ Å»Åğ ½ÃÅ³ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Breasla] Nu ai dreptul de a concedia un membru al breslei.";
+
+"<±æµå> ±æµå¿øÀ» ÃÊ´ëÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Breasla] Nu ai dreptul sã invişi pe cineva în breaslã.";
+
+"<±æµå> ±æµåÀåÀ¸·Î Á÷À§¸¦ º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Breasla] Nu îşi poşi schimba pozişia în cea de maestru al breslei.";
+
+"<±æµå> ±æµåÀåÀÇ ±ÇÇÑÀº º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Drepturile liderului breslei nu pot fi schimbate.";
+
+"<±æµå> ±æµåÀåÀÇ Á÷À§ ÀÌ¸§Àº º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Drepturile liderului breslei nu pot fi schimbate.";
+
+"<±æµå> ±æµåÀåÀÇ Á÷À§´Â º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Pozişia liderului breslei nu poate sa fie schimbatã.";
+
+"<±æµå> ±æµåÀü¿¡ ´ëÇÑ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Breasla] Nu existã dreptul la un rãzboi al breslelor.";
+
+"<±æµå> ±æµåÀüÀ» ÇÏ±â À§ÇØ¼± ÃÖ¼ÒÇÑ %d¸íÀÌ ÀÖ¾î¾ß ÇÕ´Ï´Ù.";
+"[Breasla] E nevoie de minim %d jucãtori pentru a participa la un rãzboi al breslei.";
+
+"<±æµå> ±æµåÀüÀÌ Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"[Breasla] Rãzboiul breslei a fost întrerupt.";
+
+"<±æµå> ±æµåÀüÁß¿¡´Â »ç³É¿¡ µû¸¥ ÀÌÀÍÀÌ ¾ø½À´Ï´Ù.";
+"[Breasla] În timpul unui rãzboi nu existã puncte de experienşã pentru vânãtoare.";
+
+"<±æµå> ´Ù¸¥ Á¦±¹ »ç¶÷À» ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Breasla] Jucãtori din alt regat nu pot fi invitaşi în breaslã.";
+
+"<±æµå> ´õÀÌ»ó Àå¼ö¸¦ ÁöÁ¤ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Nu mai poşi alege alşi lideri pentru breasla.";
+
+"<±æµå> µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"[Breaslã] Nu ai Yang suficient în tezaurul breslei!";
+
+"<±æµå> ·¡´õ Á¡¼ö°¡ %d Á¡ÀÌ µÇ¾ú½À´Ï´Ù";
+"[Breasla] Breasla a atins %d puncte.";
+
+"<±æµå> ·¹´õ Á¡¼ö°¡ ¸ğÀÚ¶ó¼­ ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Breasla] Nivelul breslei este prea scãzut pentru a participa la un rãzboi al breslelor.";
+
+"<±æµå> »èÁ¦ÇÒ ¼ö ¾ø´Â ±ÛÀÔ´Ï´Ù.";
+"[Breasla] Mesajul nu poate fi ºters.";
+
+"<±æµå> »ó´ë°¡ %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"[Breasla] Jucãtorul se aflã în canalul %d. (Canal actual: %d)";
+
+"<±æµå> »ó´ë°¡ ¿Â¶óÀÎ »óÅÂ°¡ ¾Æ´Õ´Ï´Ù.";
+"[Breasla] Jucãtorul nu este online.";
+
+"<±æµå> »ó´ë¹æ ±æµå°¡ ÀÌ¹Ì ÀüÀï Áß ÀÔ´Ï´Ù.";
+"[Breasla] Breasla se aflã deja în rãzboi.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ±æµå¿ø ¼ö°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Breasla] Breasla nu are destui membri pentru a participa la un rãzboi al breslelor.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ±æµåÀåÀÌ Á¢¼ÓÁßÀÌ ¾Æ´Õ´Ï´Ù.";
+"[Alianşã] Liderul alianşei inamice este offline.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ·¹´õ Á¡¼ö°¡ ¸ğÀÚ¶ó¼­ ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Breasla] Breasla nu are destule puncte pentru a participa la un rãzboi al breslelor.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ Àüºñ°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Breasla] Breasla nu are destul Yang pentru a participa la un rãzboi al breslelor.";
+
+"<±æµå> »ó´ë¹æÀÌ °°Àº ±æµå°¡ ¾Æ´Õ´Ï´Ù.";
+"[Breasla] Persoana nu aparşine aceleiaºi bresle.";
+
+"<±æµå> »ó´ë¹æÀÌ ±æµå ÃÊ´ë °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"[Breasla] Jucãtorul refuzã invitaşia breslei.";
+
+"<±æµå> »ó´ë¹æÀÌ ÀÌ¹Ì ´Ù¸¥ ±æµå¿¡ ¼ÓÇØÀÖ½À´Ï´Ù.";
+"[Breasla] Persoana aparşine deja unei alte bresle.";
+
+"<±æµå> »ó´ë¹æÀÌ ÃÊ´ë ½ÅÃ»À» ¹ŞÀ» ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"[Breaslã] Persoana care stã în faşa ta nu poate primi invitaşia.";
+
+"<±æµå> ¿ë½Å·Â È¸º¹¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Breasla] Spiritul Dragonului nu a fost refãcut.";
+
+"<±æµå> ¿ë½Å·ÂÀÌ ºÎÁ·ÇÕ´Ï´Ù. (%d, %d)";
+"[Breasla] Spiritul Dragonului insuficient. (%d, %d)";
+
+"<±æµå> ÀÌ¹Ì °°Àº ÀÌ¸§ÀÇ ±æµå°¡ ÀÖ½À´Ï´Ù.";
+"[Breasla] Acest nume de breaslã este deja folosit.";
+
+"<±æµå> ÀÌ¹Ì ´Ù¸¥ ÀüÀï¿¡ ÂüÀü Áß ÀÔ´Ï´Ù.";
+"[Breasla] Breasla ta participã deja la alt rãzboi.";
+
+"<±æµå> ÀÌ¹Ì ÀüÀï ÁßÀÎ ±æµåÀÔ´Ï´Ù.";
+"[Breasla] Breasla se aflã deja într-un rãzboi.";
+
+"<±æµå> ÀÌ¹Ì ÀüÀïÀÌ ¿¹¾àµÈ ±æµå ÀÔ´Ï´Ù.";
+"[Breasla] Breasla este rezervatã pentru alt rãzboi.";
+
+"<±æµå> Àß¸øµÈ ±İ¾×ÀÔ´Ï´Ù.";
+"[Breasla] Suma de Yang nu e corectã.";
+
+"<±æµå> Àá½ÃÈÄ¿¡ ÀÌ¿ëÇØÁÖ½Ê½Ã¿À";
+"[Breasla] Încearcã dinnou mai târziu.";
+
+"<±æµå> Àá½ÃÈÄ¿¡ ÀÌ¿ëÇØÁÖ½Ê½Ã¿À.";
+"[Breasla] Încearcã dinnou mai târziu.";
+
+"<±æµå> Àå±ºÀ» ÁöÁ¤ÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guild] Nu ai dreptul sa alegi liderul breslei.";
+
+"<±æµå> ÀûÇÕÇÏÁö ¾ÊÀº Á÷À§ ÀÌ¸§ ÀÔ´Ï´Ù.";
+"[Breasla] Numele gradului nu este valabil.";
+
+"<±æµå> Àüºñ°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Breasla] Yang insufucient pentru a participa la un rãzboi al breslelor.";
+
+"<±æµå> Á¦°øÇÏ°íÀÚ ÇÏ´Â °æÇèÄ¡°¡ ³²Àº °æÇèÄ¡º¸´Ù ¸¹½À´Ï´Ù.";
+"[Breasla] Experienşa oferitã este mai mare decât experienşa rãmasã.";
+
+"<±æµå> Á÷À§ ±ÇÇÑÀ» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Breasla] Nu ai dreptul sã îşi schimbi pozişia de putere.";
+
+"<±æµå> Á÷À§ ÀÌ¸§À» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Breasla] Nu ai dreptul sã îşi schimbi numele gradului.";
+
+"<±æµå> Á÷À§¸¦ º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Breasla] Nu ai dreptul sa iti schimbi pozitia.";
+
+"<±æµå> ÃÖ´ë ±æµå¿ø ¼ö¸¦ ÃÊ°úÇß½À´Ï´Ù.";
+"[Breasla] S-a atins capacitatea maximã a breslei.";
+
+"<±æµå> ÄğÅ¸ÀÓÀÌ ³¡³ªÁö ¾Ê¾Æ ±æµå ½ºÅ³À» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Breasla] Nu poşi folosi încã competenşa breslei.";
+
+"<±æµå> Å»ÅğÇÑ ÈÄ %dÀÏ ÀÌ³»¿¡´Â ±æµå¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.";
+"[Breasla] Nu poşi forma o breaslã nouã timp de %d zile de la pãrãsirea unei bresle.";
+
+"<±æµå> Å»ÅğÇÑ ÈÄ %dÀÏÀÌ Áö³ªÁö ¾ÊÀº »ç¶÷Àº ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Breaslã] Acest jucãtor poate fi invitat din nou peste %d zile.";
+
+"<±æµå> ÇØ»êÇÑ ÈÄ %dÀÏ ÀÌ³»¿¡´Â ±æµå¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.";
+"[Breasla] Nu poşi forma o breaslã nouã timp de %d zile de la desfiinşarea unei bresle.";
+
+"<±æµå> ÇöÀç ±æµå°¡ ÀüÀï Áß ÀÔ´Ï´Ù.";
+"[Guild] Aceastã breaslã se aflã în momentul de fata într-o bãtãlie.";
+
+"<¸Ş½ÅÁ®> %s ´ÔÀ» ¸Ş½ÅÀú¿¡¼­ »èÁ¦ÇÏ¿´½À´Ï´Ù.";
+"[Prieteni] L-ai ºters pe %s din listã.";
+
+"<¸Ş½ÅÁ®> %s ´ÔÀ» Ä£±¸·Î Ãß°¡ÇÏ¿´½À´Ï´Ù.";
+"[Prieteni] L-ai adãugat pe %s ca prieten.";
+
+"<¸Ş½ÅÁ®> ¿î¿µÀÚ´Â ¸Ş½ÅÁ®¿¡ Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Prieteni] Nu poşi adãuga un GM în lista ta.";
+
+"<Ã¢°í> °Å¸®°¡ ¸Ö¾î¼­ Ã¢°í¸¦ ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"[Magazie] Eºti prea departe pentru a deschide Magazia.";
+
+"<Ã¢°í> ±âÁ¸ ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù.";
+"[Lagãr] Ai introdus parola greºitã.";
+
+"<Ã¢°í> ¿Å±æ ¼ö ¾ø´Â À§Ä¡ÀÔ´Ï´Ù.";
+"[Depozit] Nicio miºcare posibilã.";
+
+"<Ã¢°í> ÀÌ ¾ÆÀÌÅÛÀº ³ÖÀ» ¼ö ¾ø½À´Ï´Ù.";
+"[Lagãr] Obiectul nu poate fi depozitat.";
+
+"<Ã¢°í> Àß¸øµÈ ¾ÏÈ£¸¦ ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.";
+"[Lagãr] Ai introdus o parolã greºitã.";
+
+"<Ã¢°í> Ã¢°í ºñ¹Ğ¹øÈ£°¡ º¯°æµÇ¾ú½À´Ï´Ù.";
+"[Magazie] Parola magaziei a fost modificatã.";
+
+"<Ã¢°í> Ã¢°í°¡ ÀÌ¹Ì ¿­·ÁÀÖ½À´Ï´Ù.";
+"[Lagãr] Lagãrul este deschis deja.";
+
+"<Ã¢°í> Ã¢°í·Î ¿Å±æ ¼ö ¾ø´Â ¾ÆÀÌÅÛ ÀÔ´Ï´Ù.";
+"[Magazie] Nu poşi muta aceste obiecte în magazia ta.";
+
+"<Ã¢°í> Ã¢°í¸¦ ´İÀºÁö 10ÃÊ ¾È¿¡´Â ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"[Lagãr] Trebuie sã aºtepşi 10 secunde pentru a deschide lagãrul.";
+
+"<Äù½ºÆ®> ÀÌÀü¿¡ °°Àº º¸»óÀ» ¹ŞÀº ÀûÀÌ ÀÖ¾î ´Ù½Ã ¹ŞÁö ¾Ê½À´Ï´Ù.";
+"[Quest] Şi-ai primit deja recompensa.";
+
+"<ÆÄÆ¼> %s ´ÔÀÌ ÆÄÆ¼ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"[Grupã] %s refuzã invitaşia.";
+
+"<ÆÄÆ¼> %s´ÔÀÇ ÆÄÆ¼¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"[Grupã] %s s-a alãturat grupei tale.";
+
+"<ÆÄÆ¼> %s´ÔÀÌ ÆÄÆ¼ ÃÊ´ë¸¦ °ÅÀıÇÏ¼Ì½À´Ï´Ù.";
+"[Grup] %s a refuzat invitatia.";
+
+"<ÆÄÆ¼> %s´ÔÀÌ ÆÄÆ¼¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"[Grupã] %s s-a alãturat grupei tale.";
+
+"<ÆÄÆ¼> -30 ~ +30 ·¹º§ ÀÌ³»ÀÇ »ó´ë¹æ¸¸ ÃÊ´ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Grupã] Pot fi invitaşi doar jucãtori cu diferenşa de nivel -30-30";
+
+"<ÆÄÆ¼> °üÀü ¸ğµå¿¡¼± ÆÄÆ¼ ÃÊ´ë¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Nu poşi face o invitaşie în modul spectator.";
+
+"<ÆÄÆ¼> ´Ù¸¥ Á¦±¹°ú ÆÄÆ¼¸¦ ÀÌ·ê ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Nu poşi forma o grupã cu jucãtori ai altui regat.";
+
+"<ÆÄÆ¼> ´Ù¸¥ ÆÄÆ¼¿øÀ» Å»Åğ½ÃÅ³ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Nu poşi exclude membrii grupei.";
+
+"<ÆÄÆ¼> ´ë»óÀ» ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Nu poşi striga şinta.";
+
+"<ÆÄÆ¼> ´õ ÀÌ»ó ÆÄÆ¼¿øÀ» ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Nu mai poşi invita alşi jucãtori în grupã.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼ ÃÊ´ë¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Nu poşi face o invitaşie într-o temnişã.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼ ÃÊ´ë¿¡ ÀÀÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Nu poşi accepta o invitaşie într-o temnişã.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼¿¡¼­ ³ª°¥ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupa] Nu poşi pãrãsi grupa într-o temnişã.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼¿¡¼­ Ãß¹æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] În temnişã nu poşi exclude niciun jucãtor.";
+
+"<ÆÄÆ¼> ´øÁ¯³»¿¡¼­´Â ÆÄÆ¼¸¦ ³ª°¥ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Nu poşi pãrãsi o grupã în temnişã.";
+
+"<ÆÄÆ¼> ´øÁ¯³»¿¡¼­´Â ÆÄÆ¼¿øÀ» Ãß¹æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] În temnişã nu poşi exclude niciun jucãtor.";
+
+"<ÆÄÆ¼> ¸®´õ¸¸ º¯°æÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Grupã] Doar conducãtorul grupei poate schimba asta.";
+
+"<ÆÄÆ¼> »óÅÂ¸¦ º¯°æÇÏ·Á´Â »ç¶÷ÀÌ ÆÄÆ¼¿øÀÌ ¾Æ´Õ´Ï´Ù.";
+"[Grupã] Şinta nu este membru al grupei tale.";
+
+"<ÆÄÆ¼> ¼­¹ö ¹®Á¦·Î ÆÄÆ¼ °ü·Ã Ã³¸®¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupa] Serverul nu poate prelucra sarcina grupei.";
+
+"<ÆÄÆ¼> ¼ÒÈ¯ÇÏ·Á´Â ´ë»óÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Şinta nu a fost gãsitã.";
+
+"<ÆÄÆ¼> ÀÌ¹Ì %s´ÔÀº ÆÄÆ¼¿¡ ¼ÓÇØ ÀÖ½À´Ï´Ù.";
+"[Grupã] %s este deja în grupã.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ ±â¼úÀº ÆÄÆ¼Àå¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Grupã] Competenşele grupei stau doar conducãtorului ei la dispozişie.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ ÃÊ´ë¿¡ ÀÀÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Nu eºti în mãsurã sã accepşi invitaşia.";
+
+"<ÆÄÆ¼> ÆÄÆ¼°¡ ÇØ»ê µÇ¾ú½À´Ï´Ù.";
+"[Grupã] Grupa s-a desfiinşat.";
+
+"<ÆÄÆ¼> ÆÄÆ¼³» ÃÖ°í ·¹º§ º¸´Ù 30·¹º§ÀÌ ³·¾Æ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Nu poşi invita jucãtorul, deoarece nivelul sãu este prea scãzut.";
+
+"<ÆÄÆ¼> ÆÄÆ¼³» ÃÖÀú ·¹º§ º¸´Ù 30·¹º§ÀÌ ³ô¾Æ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Nu poşi invita jucãtorul, deoarece nivelul sãu este prea înalt.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿¡¼­ ³ª°¡¼Ì½À´Ï´Ù.";
+"[Grupa] Ai pãrãsit grupa.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿¡¼­ Ãß¹æ´çÇÏ¼Ì½À´Ï´Ù.";
+"[Grupã] Ai fost exclus din grupã.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿äÃ»À» ÇÑ Ä³¸¯ÅÍ¸¦ Ã£À»¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Jucãtorul care a rostit invitaşia nu este online.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿øÀ» ÃÊ´ëÇÒ ¼ö ÀÖ´Â ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Grupã] Nu ai dreptul sã faci o invitaşie.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿øÀ» ÇöÀç À§Ä¡·Î ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Nu poşi striga membrii grupei la pozişia ta actualã.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ÀÇ ÀÎ¿øÁ¦ÇÑÀÌ ÃÊ°úÇÏ¿© ÆÄÆ¼¿¡ Âü°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Nu te poşi alãtura grupei deoarece este plinã.";
+
+"@*** ->%*s - Dice score: %4d ***";
+"@*** ->%*s - Scor zaruri: %4d ***";
+
+"@*** Rolling for the following item: %s ***";
+"@*** Aruncã pentru urmãtorul obiect: %s ***";
+
+"A level-%d Dragon Portal can now be entered.";
+"Nivel-%d Portalul Dragonului se poate intra acum.";
+
+"A level-%d Dragon Portal has opened. Take the dungeon by storm!";
+"Nivelul-%d Portalul Dragonului s-a deschis. Intrã în temnişa furtunii!";
+
+"A name has already been registered.";
+"Un nume a fost deja înregistrat.";
+
+"A player has announced their withdrawal. Kill them to earn more points!";
+"Un jucãtor a anunşat retragerea. Omoarã-i pentru a aduna puncte!";
+
+"A special supply pack has been dropped somewhere.";
+"Un pachet special de provizii a apãrut undeva.";
+
+"Account limit reached. You cannot open this box.";
+"Limitã atinsã pe cont. Nu poşi deschide aceastã cutie.";
+
+"Acquire the Valiant Pet Book for your pet's hero training.";
+"Obtine Cartea Insotitor Curajos pentru antrenament.";
+
+"Activate your pet first.";
+"Mai întâi activeazã însoşitorul.";
+
+"After using the Tincture of Kingdoms, you cannot accept invitations in this kingdom any more.";
+"Dupã ce foloseºti Tinctura Regatelor, nu mai poşi accepta invitaşii din acest regat.";
+
+"All Combat Zone rankings have been reset.";
+"Toate rangurile pentru Zona de Rãzboi au fost resetate.";
+
+"All curses have been lifted.";
+"Toate blestemele au fost înlãturate.";
+
+"All group members have been turned to stone. Mission failed.";
+"Toşi membrii grupului au fost pietrificaşi. Misiune eºuatã.";
+
+"All group members must be located on the same map to enter.";
+"Toşi membrii grupului trebuie sã fie în aceeºi hartã pentru a intra.";
+
+"All levels cleared. You will now be teleported to the bonus level.";
+"Toate nivelele complete. Acum vei fi teleportat la nivelul bonus.";
+
+"All of the outposts in %s have been destroyed and the area is no longer under Sung Mahi's control.";
+"Toate avanposturile din %s au fost distruse, iar zona nu mai este sub controlul lui Sung Mahi.";
+
+"All slots are occupied.";
+"Toate sloturile sunt ocupate.";
+
+"An error has occurred. The bonuses could not be changed.";
+"A apãrut o eroare. Bonusurile nu pot fi schimbate.";
+
+"An event is running and you will receive double points.";
+"Ruleazã un eveniment ºi vei primi puncte duble.";
+
+"Ask Sam Pumpkin if you've earned a reward.";
+"Întreabã-l pe Sam Dovleacul dacã ai câºtigat o recompensã.";
+
+"Battle Royale";
+"Bãtãlia Roialã";
+
+"Battle Royale Combat Reward. Killed %d opponents or more";
+"Recompensã Luptã Bãtãlia Roialã. %d sau mai mulşi oponenşi uciºi";
+
+"Battle Royale Game Reward. Rank: %d";
+"Recompensã Joc Bãtãlia Roialã. Rang: %d";
+
+"Battle Royale General Reward.";
+"Recompensã Generalã Bãtãlia Roialã.";
+
+"Battle Royale Season Reward. Season rank: %d";
+"Recompensã Sezon Bãtãlia Roialã. Rang sezon: %d";
+
+"Battle Royale participants status: (%u/%u)";
+"Status participanşi Bãtãlia Roialã: (%u/%u)";
+
+"Battle not started. Dungeon closed.";
+"Bãtãlia nu a început. Temnişã închisã.";
+
+"Bonus level: Destroy Metin stones.";
+"Nivel bonus: Distruge pietrele Metin.";
+
+"Bonus level: Destroy a Metin stone.";
+"Nivel bonus: Distruge o piatrã Metin.";
+
+"Bonus level: You have 5 minutes to trade with the merchant and stock up on supplies.";
+"Nivel bonus: Ai 5 minute sã negociezi cu vânzãtorul ºi sã te aprovizionezi.";
+
+"Cannot connect to the channel at this time. Please try again later.";
+"Nu se poate stabili acum conexiunea la canal. Încearcã mai târziu.";
+
+"Climb the steps of Sung Mahi Tower and enter the next level.";
+"Urcã scãrile în Turnul Sung Mahi ºi intrã la nivelul urmãtor.";
+
+"Collect Birch Branches, craft Yut Nori Boards from them and play the exciting minigame.";
+"Colecteazã Beşe de Mesteacãn, crãftuieºte Plãci Yut Nori din acestea ºi joacã fantasticul minijoc.";
+
+"Comb through the areas and eliminate them. Gather hit points and exchange them for chests.";
+"Mergi în aceste şinuturi si eliminã-i. Adunã puncte de loviturã ºi schimbã-le pentru cufere.";
+
+"County Bakra";
+"Regiunea Bakra";
+
+"County Bokjung";
+"Regiunea Bokjung";
+
+"County Yayang";
+"Regiunea Yayang";
+
+"Current participants: %lu";
+"Participanşi actuali: %lu";
+
+"Daeyami";
+"Daeyami";
+
+"Defeat 5 Zodiac bosses.";
+"Învinge 5 ºefi Zodiac.";
+
+"Defeat all Zodiac bosses.";
+"Învinge toşi ºefii Zodiac.";
+
+"Defeat all monsters without dying.";
+"Învinge toşi monºtrii fãrã sã mori.";
+
+"Defeat all monsters.";
+"Învinge toşi monºtrii.";
+
+"Defeat monsters.";
+"Învinge monºtrii.";
+
+"Defeat the Zodiac boss without dying.";
+"Învinge ºeful Zodiac fãrã sã mori.";
+
+"Defeat the Zodiac boss.";
+"Învinge ºeful Zodiac.";
+
+"Deliver equipped weapon skin.";
+"Trimite accesoriu de armã echipat.";
+
+"Delivered Pumpkin Lanterns: %d";
+"Lanterne Dovleac Livrate: %d";
+
+"Destroy Metin stones.";
+"Distruge pietrele Metin.";
+
+"Destroy a Metin stone. If you are successful, you'll receive a bonus buff.";
+"Distruge o piatrã Metin. Dacã vei reuºi, vei primi un bonus de ajutor.";
+
+"Destroy all Metin stones and defeat the Zodiac boss.";
+"Distruge toate pietrele Metin ºi învinge ºeful Zodiac.";
+
+"Destroy all Metin stones.";
+"Distruge toate pietrele Metin.";
+
+"Destroy the right Metin stone!";
+"Distruge piatrã Metin corectã!";
+
+"Dodge every attack!";
+"Pareazã fiecare atac!";
+
+"Dong Gwang Plain";
+"Aria Dong Gwang";
+
+"Doyyumhwan";
+"Doyyumhwan";
+
+"Drag the items into the window.";
+"Trage obiectul in fereastra.";
+
+"Duel of the Seers Prizes";
+"Premii Duelul Profeşilor";
+
+"Enchant Item cannot be used on this item.";
+"Vrãjeºte Obiectul nu poate fi folosit pe acest obiect.";
+
+"Enchanted Forest";
+"Pãdurea Fermecatã";
+
+"Enough Pumpkin Lanterns have been collected.";
+"Au fost colectate suficiente Lanterne Dovleac.";
+
+"Entering the Combat Zone in %d seconds.";
+"Intri în Zonã de Rãzboi în %d secunde.";
+
+"Experience has increased to %d points.";
+"Experienta a crescut cu %d puncte.";
+
+"Failed!";
+"Fara succes!";
+
+"Failure! The %s effect was not activated.";
+"Eºec! Efectul %s nu a fost activat.";
+
+"Failure! The absorption rate was reduced by 1%.";
+"Eºec! Rata de absorbşie a fost redusã cu 1%.";
+
+"Failure! The attempt to change to the %s effect failed.";
+"Eºec! Încercarea de a schimba la efectul %s a eºuat.";
+
+"Failure! The attempt to upgrade the %s effect to level %d failed.";
+"Eºec! Încercarea de îmbunãtãşire a efectului %s la nivel %d a eºuat.";
+
+"Fantastic prizes await!";
+"Premii fantastice te aºteaptã!";
+
+"Final";
+"Finalã";
+
+"Find a Sealstone to break the seal!";
+"Gãseºte o Piatrã Sigiliu pentru a rupe sigiliul!";
+
+"Find the right key to escape!";
+"Gãseºte cheia pentru a scãpa!";
+
+"First level cleared. Return to Monk Milbon.";
+"Primul nivel complet. Întoarce-te la Cãlugãrul Milbon.";
+
+"Gautama Cliff";
+"Stâncile Gautama";
+
+"Go and talk to Sam Pumpkin!";
+"Mergi si vorbeºte cu Sam Dovleacul!";
+
+"Go to the Yut Nori Table to collect your reward.";
+"Mergi la Tabla Yut Nori ºi colecteazã recompensa.";
+
+"Grotto of Exile";
+"Grota Exilului";
+
+"Grotto of Exile 2";
+"Grota Exilului 2";
+
+"Guild [%s]! The final objective has appeared. Destroy all objectives to win this war!";
+"Breaslã [%s]! Obiectivul final a apãrut. Distruge toate obiectivele pentru a câºtiga rãzboiul!";
+
+"Hurry! You have %d minutes to travel through the portal to reach the mainland.";
+"Grãbeºte-te! Ai %d minute sã cãlãtoreºti prin portal pentru a ajunge pe continent.";
+
+"Hwang Temple";
+"Templul Hwang";
+
+"If you don't start the sea battle within 1 minute, you will have to leave the ship.";
+"Dacã nu începi bãtãlia pe mare în decurs de 1 minut, va trebui sã pãrãseºti nava.";
+
+"If you want to change weapons, you must remove the weapon skin first.";
+"Dacã doreºti sã schimbi arma trebuie sa scoşi mai întâi accesoriul.";
+
+"Imha";
+"Imha";
+
+"In 15 sec. everyone who gave an incorrect answer will be removed.";
+"In 15 sec. vor fi inlaturati toti jucatorii care au dat un raspuns gresit.";
+
+"Insufficient space in your inventory. The reward will be sent to your mailbox.";
+"Spaşiu insuficient în inventar. Recompensele vor fi trimise pe adresa de email înregistratã.";
+
+"Items can only be traded on the same map.";
+"Obiectele pot fi negociate doar în aceeaºi hartã";
+
+"Joan";
+"Joan";
+
+"Jungrang";
+"Jungrang";
+
+"Kill a pair of monsters that don't belong together!";
+"Omoarã o pereche de monºtri care nu sunt împreunã!";
+
+"Kill all the monsters within the time limit!";
+"Ucide toşi monºtrii în limita de timp!";
+
+"Kuahlo Dong (Spiders Dungeon)";
+"Kuahlo Dong (Temnişa pãianjenilor)";
+
+"Land sighted! You have successfully protected the mast and reached the new continent after a long and weary journey. Continue to the portal.";
+"Se vede pãmântul! Ai apãrat cu succes catargul ºi ai ajuns pe noul continent dupã o cãlãtorie lungã ºi obositoare. Continuã spre portal.";
+
+"Leaving the Combat Zone in %d seconds.";
+"Ieºi din Zonã de Rãzboi în %d secunde.";
+
+"Loot for completing Sung Mahi Tower";
+"Pradã pentru terminarea Turnului Sung Mahi";
+
+"Magic penetration of %d%%.";
+"Penetrare magica de %d%%.";
+
+"Make sure you have enough space in your inventory before you go fishing.";
+"Asigurã-te cã ai destul spaşiu în inventar înainte de a merge la pescuit.";
+
+"Maximum absorption rate reached.";
+"A ajuns la rata maximã de absorbşie.";
+
+"Maximum guild level reached. No more donations possible.";
+"Nivel breaslã maximum atins. Nu mai sunt posibile donaşii.";
+
+"Miryang";
+"Miryang";
+
+"Mission complete. As soon as the group leader hits the button, you will be teleported directly to level %d.";
+"Misiune completã. De îndatã ce liderul grupului apasã butonul eºti teleportat direct la nivelul %d.";
+
+"Monsters have appeared in the Valley of Seungryong, Mount Sohan, Doyyumhwan and in the Yongbi Desert!";
+"Monºtrii au apãrut în Valea Seungryong, Muntele ªohan, Doyyumhwan ºi în Deºertul Yongbi!";
+
+"Mount Sohan";
+"Muntele Sohan";
+
+"Mr B and the boss monsters disappear in %d minute(s).";
+"Mr. B ºi monºtrii ºefi dispar în %d minute.";
+
+"Nam Gwang Chasm";
+"Prãpastia Nam Gwang";
+
+"Nephrite Bay";
+"Trecãtoarea Nephrite";
+
+"New absorption rate: %d";
+"Noua ratã de absorbşie: %d";
+
+"Next entry available in %d minute(s).";
+"Urmãtoarea intrare disponibilã în %d minut(e).";
+
+"Next entry available in %d second(s).";
+"Urmãtoarea intrare disponibilã în %d secund(e).";
+
+"No guilds have registered for the territory auction.";
+"Nu s-au înregistrat bresle pentru licitaşia teritorialã.";
+
+"No lease needs to be paid.";
+"Nu este necesarã plata unei arende.";
+
+"No winner";
+"Fãrã câºtigãtor";
+
+"Not possible while transferring bonuses.";
+"Nu este posibil în timpul transferului de bonus.";
+
+"O ÀÔ´Ï´Ù";
+"Da (O)";
+
+"OX ¹®Á¦ ½ºÅ©¸³Æ® ·Îµù ¼º°ø";
+"OX Quiz Script a fost încãrcat.";
+
+"OX ¹®Á¦ ½ºÅ©¸³Æ® ·Îµù ½ÇÆĞ";
+"OX Quiz Script nu a putut fi încãrcat.";
+
+"OX »óÇ°À» Áö±ŞÇÏ¿´½À´Ï´Ù. ID: %d ¼ö·®: %d";
+"OX Premiul a fost înmânat. ID: %d Quantity: %d";
+
+"OX ÀÌº¥Æ®°¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.";
+"OX Event a început.";
+
+"OX ÀÌº¥Æ®°¡ ÀÌ¹Ì ÁøÇàÁßÀÔ´Ï´Ù(flag: %d)";
+"Evenimentul are deja loc (Dlag: %d)";
+
+"OX ÀÌº¥Æ®¸¦ ¸¶Ä¡°Ù½À´Ï´Ù.";
+"OX Evenimentul va lua sfârºit.";
+
+"OXÀÌº¥Æ® ¸ÊÀ» ¸ÕÀú ´İ¾Æ ÁÖ¼¼¿ä.(Flag: %d)";
+"Întâi închide harta evenimentului OX.(Flag: %d)";
+
+"OXÀÌº¥Æ®°¡ ´İÈ÷Áö ¾Ê¾Ò°Å³ª, ÄûÁî ÃâÁ¦ÁßÀÔ´Ï´Ù.(flag: %d)";
+"OX Evenimentul încã nu s-a sfârºit. A apãrut p eroare.(flag: %d)";
+
+"OXÀÌº¥Æ®°¡ ¿­·Á ÀÖÁö ¾Ê°Å³ª ¹®Á¦ ÃâÁ¦ÁßÀÔ´Ï´Ù.(Flag: %d)";
+"Evenimentul OX a luat sfârºit. Nu au apãrut erori.(Flag: %d)";
+
+"OXÀÌº¥Æ®¸¦ °­Á¦ Á¾·á ½ÃÅµ´Ï´Ù.";
+"OX Evenimentul va fi sfârºit.";
+
+"OXÀÌº¥Æ®ÀÇ ³ª¸ÓÁö ÀÎ¿ø ±â·ÏÀ» ½ÇÆĞÇß½À´Ï´Ù.";
+"OX Ceilalşi participanşi la eveniment nu au fost notaşi.";
+
+"OXÀÌº¥Æ®ÀÇ ³ª¸ÓÁö ÀÎ¿øÀ» ±â·ÏÇÏ¿´½À´Ï´Ù.";
+"OX Ceilalşi participanşi la eveniment sunt notaşi.";
+
+"Only guilds of level %d or higher can register.";
+"Se pot înregistra doar bresle de nivel %d sau mai mare.";
+
+"Only the guild leader can register for the territory auction.";
+"Doar liderul breslei se poate înregistra la licitaşia teritorialã.";
+
+"Only the guild leader or a member with bank access can pay the lease.";
+"Doar liderul breslei sau un membru cu acces la bancã poate plãti arenda.";
+
+"Partial success! The absorption rate was reduced by 1%.";
+"Succes parşial! Rata de absorbşie a fost redusã cu 1%.";
+
+"Participants: %s";
+"Participanşi: %s";
+
+"Perfect! You have attached the Spirit Stone successfully and you even receive a double stat bonus.";
+"Perfect! Ai ataºat cu succes Piatra Spiritului ºi primeºti chiar ºi un bonus dublu.";
+
+"Please close all other windows to open your mailbox.";
+"Închide toate celelalte ferestre pentru a deschide cutia poºtalã.";
+
+"Please empty your mailbox to be able to receive new messages.";
+"Goleºte cutia poºtalã pentru a putea primi mesaje noi.";
+
+"Please enter another name.";
+"Introdu alt nume.";
+
+"Please remove the equipped Dragon Stone before using this item.";
+"Înlaturã Piatra Dragon echipatã înainte de a folosi acest obiect.";
+
+"Please try again later.";
+"Încearcã mai târziu.";
+
+"Please wait a moment. Changing channel...";
+"Aºteaptã un moment. Schimbã canal...";
+
+"PvP Tournament";
+"Turneu PvP";
+
+"Pyungmoo";
+"Pyungmo";
+
+"Receive: %s - %d";
+"Primit: %s - %d";
+
+"Red Forest";
+"Pãdurea Roºie";
+
+"Registration for the Battle Royale has been closed.";
+"Înregistrarea pentru Bãtãlia Roialã a fost închisã.";
+
+"Registration for the PvP tournament complete.";
+"Înregistrarea pentru turneul PvP a fost finalizatã.";
+
+"Reinforce Item cannot be used on this item.";
+"Îmbunãtãşirea Obiectului nu poate fi folosit pe acest obiect.";
+
+"Remaining number: %d";
+"Numarul ramas: %d";
+
+"Remaining participants: %lu";
+"Participanşi rãmaºi: %lu";
+
+"Remaining time: %.2f | Fish difficulty: %lu | Difficulty reduction: %d";
+"Timp rãmas: %.2f | Dificultate pescuit: %lu | Reducere dificultate: %d";
+
+"Remove %s from your friends list to continue.";
+"Înlãturã pe %s din lista prietenilor pentru a continua.";
+
+"Reward";
+"Recompensã";
+
+"Reward for Ritual of Blood";
+"Recompensã pentru Ritualul Sângelui";
+
+"Reward for rank %d";
+"Recompensã pentru rang %d";
+
+"Reward for winning a round";
+"Recompensã pentru câºtigarea unei runde";
+
+"Reward for winning a tournament";
+"Recompensã pentru câºtigarea turneului";
+
+"Round %d is starting";
+"Runda %d începe.";
+
+"Round %lu";
+"Runda %lu";
+
+"SOS! The mast has been smashed and your ship is sinking. You will now be teleported to Cape Dragon Fire.";
+"SOS! Catargul a fost zdrobit ºi nava ta se scufundã. Acum vei fi teleportat la Peninsula Dragon de Foc.";
+
+"Sadly you were unable to stop the Apocalypse. You will be teleported back to the Zodiac Temple shortly.";
+"Pãcat cã nu ai putut sã opreºti Apocalipsa. Vei fi teleportat înapoi în Templul Zodiac în scurt timp.";
+
+"Safe zone has now been deactivated.";
+"Zona de siguranta fost dezactivata.";
+
+"Seasonal Sung Mahi Tower Reward";
+"Recompensã Sezon Turn Sung Mahi";
+
+"Seasonal reward for 1st place on level %d in Sung Mahi Tower.";
+"O recompensã de sezon pentru eroii care au ajuns pe locul 1 la nivelul %d în Turnul Sung Mahi.";
+
+"Semifinal";
+"Semifinalã";
+
+"Seo Gwang Wastelands";
+"Pustietatea Seo Gwang";
+
+"Snakefield";
+"Valea ªerpilor";
+
+"Songpa";
+"Songpa";
+
+"Spider Dungeon 2";
+"Temnişa Pãianjenilor 2";
+
+"Success!";
+"Succes!";
+
+"Success! The %s effect has been increased to level %d.";
+"Succes! Efectul %s a crescut la nivelul %d.";
+
+"Success! The %s effect is now active.";
+"Succes! Efectul %s este acum activ.";
+
+"Success! The bonus was transferred successfully.";
+"Succes! Bonusul a fost transferat cu succes.";
+
+"Sung Mahi Tower Level %d";
+"Nivel Turn Sung Mahi %d";
+
+"Sung Mahi's outposts are being erected.";
+"Se construiesc avanposturile lui Sung Mahi.";
+
+"Sung Mahi's outposts have been destroyed.";
+"Avanposturile lui Sung Mahi au fost distruse.";
+
+"TEST : ÇöÀç ±¹°í : %d";
+"TEST: În seiful regatului tãu se aflã: %d";
+
+"TEST : È²±İµÎ²¨ºñ°¡ ±¹°í·Î È¯¿øµÇ¾ú½À´Ï´Ù.";
+"TEST: Lingoul de aur a fost returnat seif-ului regatului tãu.";
+
+"TEST : È²±İµÎ²¨ºñ¸¦ ±¹°í·Î È¯¿øÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"TEST: Nu poşi returna lingoul de aur seiful-ui regatului tãu.";
+
+"Taxes are set to %d%%.";
+"Impozitul a fost stabilit la %d%%.";
+
+"Teleportation to the Plateau of Primal Forces has failed.";
+"Teleportarea cãtre Platoul Forşelor Primare a eºuat.";
+
+"Thanks to the immunity blessing, you are not influenced by Sung Mahi's Presence.";
+"Datoritã binecuvântãrii cu imunitate , nu eºti influenşat de prezenşa lui Sung Mahi.";
+
+"The %s guild has purchased the territory in the %s area at %d,%d for %d Won.";
+"Breasla %s a achizişionat teritoriul în şinutul %s la %d,%d pentru %d Won.";
+
+"The 'Ship Defence' dungeon is ready. The fisherman will let you board now.";
+"Temnişa 'Apãrare Navã' este gata. Pescarul te primeºte la bord.";
+
+"The Altar of Blood has appeared.";
+"Altarul Sângelui";
+
+"The Anniversary Event ends in %d minute(s).";
+"Evenimentul Aniversar se terminã în %d minute.";
+
+"The Anniversary Event has started!";
+"Evenimentul Aniversar a început!";
+
+"The Battle Royale cannot begin, because there are too few participants.";
+"Bãtãlia Roialã nu poate începe, deoarece sunt prea puşini participanşi.";
+
+"The Battle Royale ends in %d seconds.";
+"Bãtãlia Roialã se terminã în %d secunde.";
+
+"The Battle Royale has begun!!";
+"Bãtãlia Roialã a început!";
+
+"The Battle Royale has begun. The first area will be shown in %d seconds.";
+"Bãtãlia Roialã a început. Prima zonã va fi afiºatã în %d secunde.";
+
+"The Battle Royale has ended!!";
+"Bãtãlia Roialã s-a terminat!";
+
+"The Battle of the Five Shrines ends in %d minute(s).";
+"Bãtãlia celor Cinci Altare se încheie în %d minute.";
+
+"The Battle of the Five Shrines has begun! It will last %d days.";
+"Bãtãlia celor Cinci Altare a început! Va dura %d zile.";
+
+"The Battle of the Five Shrines is over. The next battle starts in %d hour(s).";
+"Bãtãlia celor Cinci Altare s-a terminat. Urmãtoarea bãtãlie începe în %d ore.";
+
+"The Boss Reaper Event ends in %d minute(s).";
+"Evenimentul Spintecãtorul de ªefi se terminã în %d minute.";
+
+"The Combat Zone has been updated. It will be closed off in %d seconds.";
+"Zona de Rãzboi a fost actualizatã. Se va inchide în %d secunde.";
+
+"The Combat Zone is now closed.";
+"Zona de Rãzboi este închisã.";
+
+"The Combat Zone is now open.";
+"Zona de Rãzboi este deschisã.";
+
+"The Combat Zone will be closed off in %d seconds.";
+"Zona de Rãzboi se va inchide în %d secunde.";
+
+"The Combat Zone will close in %d minute(s).";
+"Zona de Rãzboi se va închide în %d minut(e).";
+
+"The Combat Zone will open in %d minute(s).";
+"Zona de Rãzboi se va deschide în %d minut(e).";
+
+"The Compass was used, but the Guard wasn’t found.";
+"Compasul a fost folosit dar Gardianul nu a fost gãsit.";
+
+"The Flower Power Event has ended.";
+"Evenimentul Flower Power s-a sfârºit.";
+
+"The Flower Power Event has started.";
+"Evenimentul Flower Power a început.";
+
+"The Halloween Event has begun!";
+"Evenimentul de Halloween a început!";
+
+"The Halloween Event has finished. Don't forget to collect your rewards!";
+"Evenimentul de Halloween a luat sfârºit. Nu uita sã colectezi recompensa.";
+
+"The Okey Event has started!";
+"Evenimentul Okey a început!";
+
+"The Okey Event is over!";
+"Evenimentul Okey s-a terminat!";
+
+"The PvP tournament is over.";
+"Turneul PvP s-a sfârºit.";
+
+"The PvP tournament starts in %d min.";
+"Turneul PvP începe în %d min.";
+
+"The Ramadan Event has started!";
+"Evenimentul pentru Ramadan a început!";
+
+"The Ramadan Event is over.";
+"Evenimentul pentru Ramadan a luat sfârºit.";
+
+"The Ritual Stone only works with items above level 80.";
+"Piatra Fermecatã funcşioneazã numai pe obiecte de la nivel 80 în sus.";
+
+"The Ritual of Blood has started. Buy special items to get better rewards.";
+"Ritualul Sângelui a început. Cumpãrã obiecte speciale pentru recompense mai bune.";
+
+"The Ritual of Blood is over. Try again another time.";
+"Ritualul Sângelui s-a sfârºit. Încearcã altã datã.";
+
+"The Tower Action has been activated.";
+"Evenimentul Turn a fost activat.";
+
+"The Zodiac Apocalypse has already started.";
+"Apocalipsa Zodiac a început deja.";
+
+"The Zodiac Apocalypse is not currently active.";
+"Apocalipsa Zodiac nu este activã momentan.";
+
+"The answer will appear in 20 seconds.";
+"Raspunsul va aparea in 20 de secunde.";
+
+"The battle has been terminated as a result of an unexpected issue.";
+"Bãtãlia a fost încheiatã ca urmare a unei erori neaºteptate.";
+
+"The battle has begun.";
+"Bãtãlia a început.";
+
+"The battle starts in %d seconds.";
+"Bãtãlia începe în %d secunde.";
+
+"The boss has been defeated! You will be teleported back to the Zodiac Temple shortly.";
+"ªeful a fost învins! Vei fi teleportat înapoi în Templul Zodiac în scurt timp.";
+
+"The countdown has begun. The Battle Royale starts in %d seconds.";
+"Numãratoarea inversã a început. Bãtãlia Roialã începe în %d secunde.";
+
+"The dungeon will be closed if you do not start the battle within %d minute(s).";
+"Temnişa se va închide dacã nu începi bãtãlia în %d minute.";
+
+"The electrical field has stopped. The next Combat Zone will be shown in %d seconds.";
+"Câmpul electric s-a oprit. Urmãtoarea Zonã de Rãzboi va fi afiºatã în %d secunde.";
+
+"The event has ended as none of the kingdoms entered.";
+"Evenimentul a luat sfarsit deoarece niciun regat nu a luat parte.";
+
+"The event has started!";
+"Evenimentul a început!";
+
+"The event in the Combat Zone has finished.";
+"Evenimentul din Zona de Rãzboi s-a terminat.";
+
+"The event is not currently active.";
+"Evenimentul nu este activ momentan.";
+
+"The event is over. You cannot use this item any more.";
+"Evenimentul a luat sfârºit. Nu mai poşi folosi acest obiect.";
+
+"The group members are too far away to receive the item.";
+"Membrii grupului sunt prea departe pentru a primi obiectul.";
+
+"The guild does not have enough Yang.";
+"Breasla nu are destul Yang.";
+
+"The guild war declaration expires in 3 minutes.";
+"Declaraşia de rãzboi de breaslã expirã în 3 minute.";
+
+"The interface cannot be opened while you are mounted.";
+"Interfaşa nu poate fi deschisã în timp ce eºti pe mount.";
+
+"The lease for the guild territory wasn't paid. The guild territory has been abandoned.";
+"Arenda pentru teritoriul breslei nu a fost plãtitã. Teritoriul breslei a fost abandonat.";
+
+"The loot from Sung Mahi Tower has been sent to your mailbox.";
+"Prada din Turnul Sung Mahi a fost trimisã la cutia poºtalã.";
+
+"The maximum bid is %d Won.";
+"Licitaşia maximã este de %d Won.";
+
+"The maximum level has already been reached.";
+"Nivelul maxim a fost deja atins.";
+
+"The mission was unsuccessful.";
+"Misiunea nu a avut succes.";
+
+"The monster from the current event has appeared.";
+"Monstrul de la actualul eveniment a apãrut.";
+
+"The name entered is too short.";
+"Numele introdus este prea scurt.";
+
+"The next wave begins in %d sec.";
+"Urmãtorul val începe în %d sec.";
+
+"The other person is currently busy so you cannot trade right now.";
+"Cealaltã persoanã tocmai negociazã, de aceea nu poşi sã negociezi.";
+
+"The pet's level cannot be higher than the player's.";
+"Nivelul insotitorului nu poate fi mai mare decat cel al jucatorului.";
+
+"The player cannot accept your invitation at this time.";
+"Jucãtorul nu poate accepta acum invitaşia ta.";
+
+"The portal to the next level is open.";
+"Portalul cãtre nivelul urmãtor este deschis.";
+
+"The portal to the next room is open.";
+"Portalul cãtre camera alãturatã este deschis.";
+
+"The reward from the Duel of the Seers will be delivered by post since your inventory was full.";
+"Recompensa de la Duelul Profeşilor va fi trimisã prin poºtã deoarece inventarul tãu a fost plin.";
+
+"The sash cannot take on any further bonuses.";
+"Esarfa nu mai poate lua si alte bonusuri.";
+
+"The sea battle starts in %d sec.";
+"Bãtãlia pe mare începe în %d sec.";
+
+"The soulbind on this item is already in the process of being removed.";
+"Acestui obiect i-a inceput deja actiunea de depersonalizare.";
+
+"The summer event has started. Visit Summer in town. She'll give you some tasty refreshments.";
+"Evenimentul de varã a început. Vziteazã Vara în oraº. Îşi poate da câteva rãcoritoare gustoase.";
+
+"The summer event will end soon. Summer will keep the towns supplied with tasty refreshments for 7 more days.";
+"Evenimentul de varã se terminã curând. Vara va şine oraºul aprovizionat cu rãcoritoare gustoase pentru încã 7 zile.";
+
+"The time to enter the Dragon Portal has expired.";
+"Timpul de intrare în Portalul Dragonului a expirat.";
+
+"The window is already open.";
+"Fereastra este deja deschisa.";
+
+"There are %d Zodiac Temple(s) in the area. Enter the relevant command to teleport to one of them (1-%d).";
+"Existã %d Temple Zodiac în acest şinut. Introdu comanda relevantã pentru a te teleporta la unul dintre acestea (1-%d).";
+
+"There are no items matching your search.";
+"Niciun obiect care sã corespundã cãutãrii.";
+
+"There are no more Combat Zones. The whole area will be closed off in %d seconds.";
+"Nu mai sunt Zone de Rãzboi. Întreaga zonã va fi închisã în %d secunde.";
+
+"There are no territory auctions right now.";
+"Nu existã licitaşii de teritoriu în acest moment.";
+
+"There is no Zodiac Temple on this map.";
+"Nu este niciun Templu Zodiac pe aceastã hartã.";
+
+"There's nothing to collect.";
+"Nu e nimic de colectat.";
+
+"These sashes cannot be combined.";
+"Aceste eºarfe nu pot fi combinate.";
+
+"They're attacking again! Ready your weapons!";
+"Ne atacã din nou! Pregãteºte armele!";
+
+"This action is not possible on this map.";
+"Aceastã acşiune nu este posibilã în aceastã hartã.";
+
+"This cannot be used on equipped items.";
+"Nu poate fi folosit pe obiecte echipate.";
+
+"This character isn't available to duel.";
+"Acest caracter nu este disponibil pentru duel.";
+
+"This command can only be used in the Zodiac Temple.";
+"Aceastã comandã poate fi folositã numai în Templul Zodiac.";
+
+"This command can only be used on the PvP tournament map.";
+"Aceastã comandã poate fi utilizatã numai pe harta turneelor PvP.";
+
+"This effect is already active.";
+"Îºi face deja efectul.";
+
+"This function is unavailable as hacking software has been detected.";
+"Aceastã funcşie nu este disponibilã deoarece a fost detectat software de hacking.";
+
+"This guild does not exist.";
+"Breasla nu existã.";
+
+"This has already been customised.";
+"Acesta a fost deja personalizat.";
+
+"This is not possible while the other player is transferring bonuses.";
+"Nu este posibil în timp ce celãlalt jucãtor transferã bonusurile.";
+
+"This is the winner of the Battle Royale: %s";
+"Acesta este câºtigãtorul la Bãtãlia Roialã: %s";
+
+"This item cannot be absorbed.";
+"Acest obiect nu poate fi absorbit.";
+
+"This item cannot be transmuted.";
+"Acest obiect nu poate fi transformat.";
+
+"This item is already soulbound.";
+"Acest obiect este deja personalizat.";
+
+"This item is not soulbound.";
+"Acest obiect nu este personalizat.";
+
+"This item is only available in Meley’s Lair.";
+"Obiectul este disponibil doar în Adãpostul lui Meley.";
+
+"This player is already trading with someone else.";
+"Acest jucãtor face deja negoş cu altcineva.";
+
+"This temple's gates open on another day.";
+"Porşile templului se vor deschide în altã zi.";
+
+"Thunder Mountains";
+"Munşii Thunder";
+
+"Time remaining to finish first round: %d minutes.";
+"Timp rãmas pentru a termina prima rundã: %d minute.";
+
+"Time remaining to finish second round: %d minutes.";
+"Timp rãmas pentru a termina runda a doua: %d minute.";
+
+"Time remaining until safe zone is deactivated: %d minutes.";
+"Timp rãmas pânã la dezactivarea zonei de siguranşã: %d minute.";
+
+"Time's up.";
+"Timpul a expirat.";
+
+"Time's up. Better luck next time.";
+"Timpul a expirat. Mult noroc data viitoare.";
+
+"Time's up. First round over.";
+"Timpul a expirat. Prima runda s-a sfarsit.";
+
+"Time's up. Second round over.";
+"Timpul a expirat. A doua runda s-a sfarsit.";
+
+"Time's up. You're being taken outside.";
+"Timpul a expirat. Eºti dus afarã.";
+
+"To determine a pet's destiny you need a Pet Destiny Orb.";
+"Pentru a determina destinul unui însoşitor ai nevoie de Glob Destin Însoşitor.";
+
+"Total %d: You can still unpack %d.";
+"Total %d: Mai poşi despacheta %d.";
+
+"Total Pumpkin Lanterns: %d";
+"Lanterne Dovleac Total: %d";
+
+"Unblock %s to continue.";
+"Deblocheazã pe %s pentru a continua.";
+
+"Unfortunately you don't have enough space in your inventory.";
+"Din pãcate nu ai destul spaşiu în inventar.";
+
+"Unlucky, there was no treasure in the fish's belly.";
+"Ghinion, în burta peºtelui nu se afla nicio comoarã.";
+
+"Unpack the next gift in %d minutes.";
+"Despacheteazã urmãtorul cadou în %d minute.";
+
+"Upgrade change failed.";
+"Schimbare îmbunãtãşire eºuatã.";
+
+"Valley of Seungryong";
+"Valea Seungryong";
+
+"Visit %s to collect your reward.";
+"Viziteazã %s pentru a colecta recompensa.";
+
+"Waryong";
+"Waryong";
+
+"Wave %d: For %d sec. you must protect the %s with all your strength.";
+"Val %d: Pentru %d sec. trebuie sã protejezi %s cu toatã puterea ta.";
+
+"Wave %d: While protecting the %s, defeat %s.";
+"Val %d: În timp ce protejezi %s, învinge %s.";
+
+"We're under attack from sea monsters! Get ready to fight!";
+"Suntem atacaşi de monºtrii marini! Pregãteºte-te de luptã!";
+
+"We've slain the boss!";
+"Am ucis ºeful!";
+
+"Well done! For reaching rank %d in the Combat Zone rankings, you will be rewarded a special accolade.";
+"Bravo! Pentru atingerea rangului %d în clasamentul Zonã de Rãzboi, vei primi un premiu special.";
+
+"While modifying your pet's stats, you cannot trade, sell items, use the storeroom etc.";
+"În timp ce modifici statusul unui însoşitor, nu poşi face negoş, vinde obiect, folosi depozitul etc.";
+
+"Winner: %s / Loser: %s";
+"Câºtigãtor:%s / Pierzãtor: %s";
+
+"Wipe out! If no one is revived within one minute, your dungeon adventure will be over.";
+"Aşi eºuat! Dacã nimeni nu este reînviat într-un minut, aventura ta în temnişã va lua sfârºit.";
+
+"X ÀÔ´Ï´Ù";
+"Nu (X)";
+
+"Yongan";
+"Yongan";
+
+"Yongbi Desert";
+"Deºertul Yongbi";
+
+"You already have the maximum amount of Won.";
+"Ai deja cantitatea maximã de Won.";
+
+"You are entering the Combat Zone. Please wait.";
+"Intri în Zonã de Rãzboi. Ai rãbdare.";
+
+"You are facing level %d.";
+"Te confrunşi cu nivelul %d.";
+
+"You are leaving the Combat Zone. Please wait.";
+"Ieºi din Zonã de Rãzboi! Ai rãbdare.";
+
+"You are not a member of any guild.";
+"Nu eºti membru al vreunei bresle.";
+
+"You are not cursed.";
+"Nu eºti blestemat.";
+
+"You are not the group leader.";
+"Nu eºti tu liderul grupului.";
+
+"You attacked the wrong monster. Kill all the monsters!";
+"Ai atacat monstrul greºit. Ucide toşi monºtrii!";
+
+"You can get back the Won you bid from the guard in the village.";
+"Poşi lua înapoi Won-ul pe care l-ai licitat, de la gardianul din sat.";
+
+"You can learn this after reaching the Champion Level.";
+"Poşi învãşa acest lucru dupã ce ai ajuns la Nivel Campion.";
+
+"You can now wear gloves.";
+"Acum poşi purta mãnuºile.";
+
+"You can only bid if you have been a member of the guild for more than 24 hours.";
+"Poşi licita doar dacã eºti membru al breslei de mai mult de 24 de ore.";
+
+"You can only discard the belt when there are no longer any items in its inventory.";
+"Iti poti scoate cureaua numai daca nu se mai afla obiecte in inventarul acesteia.";
+
+"You can only receive your prize once you have made space in your inventory.";
+"Poşi primi premiul de îndatã ce ai fãcut spaşiu în inventar.";
+
+"You can only use Shoulder Sashes as well as weapons and armour pieces.";
+"Poti folosi doar Esarfe dar si arme si armuri.";
+
+"You can only use Shoulder Sashes.";
+"Poti folosi doar Esarfe.";
+
+"You can only use this item during the current event.";
+"Acest obiect poate fi folosit numai pe parcursul acestui eveniment.";
+
+"You can only withdraw from the battle in %d sec.";
+"Te poşi retrage din bãtãlie în %d sec.";
+
+"You can open it 3 seconds after closing the menu for modifying pet stats.";
+"Dupã închiderea meniului de modificare a statusului însoşitorului, nu il mai poşi deschide timp de 3 secunde.";
+
+"You can take back the Won you bid.";
+"Poşi lua înapoi Won-ul licitat.";
+
+"You can use a maximum of 200 ingredients at once.";
+"Poşi folosi maximum 200 de ingrediente simultan.";
+
+"You cannot bind this item to your soul.";
+"Nu poti personaliza acest obiect.";
+
+"You cannot block your spouse.";
+"Nu îşi poşi bloca partenerul.";
+
+"You cannot cancel this on the Battle Royale server.";
+"Nu poşi anula asta pe serverul de Bãtãlie Roialã.";
+
+"You cannot carry out this action at the moment.";
+"Nu poşi efectua aceastã acşiune în acest moment.";
+
+"You cannot carry out this action while fishing.";
+"Nu poşi efectua aceastã acşiune în timpul pescuitului.";
+
+"You cannot carry out this action while the Shoulder Sash bonus transfer window is open.";
+"Nu poşi efectua aceastã acşiune în timp ce fereastra de transfer a bonusurilor de pe Eºarfã este deschisã.";
+
+"You cannot carry out this action while the bonus transfer window is open.";
+"Nu poşi efectua aceastã acşiune în timp ce fereastra de transfer a bonusurilor este deschisã.";
+
+"You cannot carry out this action while the window for combining or absorbing Shoulder Sashes is open.";
+"Nu poşi efectua aceastã acşiune în timp ce fereastra pentru combinarea sau absorbşia Eºarfelor este deschisã.";
+
+"You cannot change channel.";
+"Nu poşi schimba canalul.";
+
+"You cannot change the attributes of a soulbound item.";
+"Nu poti schimba atributele unui obiect personalizat.";
+
+"You cannot claim an achievement right now.";
+"Nu poşi obşine o realizare acum.";
+
+"You cannot declare a guild war here.";
+"Nu poti declara aici rãzboi între bresle.";
+
+"You cannot declare wars in the Combat Zone.";
+"Nu poşi declara rãzboi în Zona de Rãzboi.";
+
+"You cannot discard cards when you have already selected some.";
+"Nu mai poşi renunşa la cãrşi dacã ai selectat deja unele dintre ele.";
+
+"You cannot do that during a Battle Royale.";
+"Nu poşi face asta în timpul unei Bãtãlii Roiale.";
+
+"You cannot do that while the territory auction is ongoing.";
+"Nu poşi face asta în timp ce licitaşia teritorialã este în desfãºurare.";
+
+"You cannot do this while the item is equipped.";
+"Nu poşi face asta în timp ce obiectul este echipat.";
+
+"You cannot do this whilst carrying out another action.";
+"Nu poşi face asta în timp ce faci altã acşiune.";
+
+"You cannot do this whilst performing another action.";
+"Nu poşi face asta în timp ce faci altã acşiune.";
+
+"You cannot do this whilst playing okey.";
+"Nu poşi face asta în timp ce joci okey.";
+
+"You cannot do this with a user of hacking software.";
+"Nu poşi face acest lucru folosind un software de hacking.";
+
+"You cannot donate while your pet is summoned.";
+"Nu poşi dona dacã însoşitorul este chemat.";
+
+"You cannot draw any more cards when you have already selected some.";
+"Nu mai poşi trage alte cãrşi dacã ai deja selectate altele.";
+
+"You cannot draw any more cards.";
+"Nu mai poşi trage alte cãrşi.";
+
+"You cannot drop a soulbound item.";
+"Nu poti arunca un obiect personalizat.";
+
+"You cannot drop items during the bonus transfer.";
+"Nu poşi arunca obiecte în timpul transferului de bonus.";
+
+"You cannot drop items while modifying your pet's stats.";
+"Nu poşi arunca obiecte în timp ce modifici statusul unui însoşitor.";
+
+"You cannot drop items while the Fortune Chest is open.";
+"Nu poşi arunca obiectul în timp ce ai un Cufãr Valoros deschis.";
+
+"You cannot enter the Combat Zone at the moment.";
+"Nu poşi intra în Zona de Rãzboi momentan.";
+
+"You cannot enter the Combat Zone from this map.";
+"Nu poşi intra în Zona de Rãzboi din aceastã hartã.";
+
+"You cannot enter the PvP tournament combat arena.";
+"Nu poşi intra în arena de luptã a turneelor PvP.";
+
+"You cannot enter while you are mounted.";
+"Nu poşi intra în timp ce cãlãreºti.";
+
+"You cannot enter, because the countdown has already begun.";
+"Nu poşi intra, deoarece numãrãtoarea inversã a început deja.";
+
+"You cannot equip this item while wearing a Wedding Dress or a Tuxedo.";
+"Nu te poşi echipa cu acest obiect în timp ce porşi o Rochie de Mireasã sau un Smoking.";
+
+"You cannot exchange as this would exceed the maximum amount of Won.";
+"Nu poşi schimba dacã depãºeºti limita maximã de Won.";
+
+"You cannot exchange as this would exceed the maximum amount of Yang.";
+"Nu poşi schimba dacã depãºeºti limita maximã de Yang.";
+
+"You cannot expand your inventory while trading.";
+"Nu îşi poşi extinde inventarul în timp ce negociezi.";
+
+"You cannot feed your pet while the refinement window is open.";
+"Nu poşi hrãni însoşitorul în timp ce fereastra de rafinare este deschisã.";
+
+"You cannot fish when your pet is hatched.";
+"Nu poşi sã pescuieºti când însoşitorul tãu eclozeazã.";
+
+"You cannot fish while other windows are open.";
+"Nu poşi sã pescuieºti în timp ce alte ferestre sunt deschise.";
+
+"You cannot fish while the pet bonus change window is open.";
+"Nu poşi sã pescuieºti în timp ce fereastra de schimbare a bonusurilor însoşitorului este deschisã.";
+
+"You cannot fish while your pet is summoned.";
+"Nu poşi sã pescuieºti când însoşitorul tãu este chemat.";
+
+"You cannot give away a soulbound item.";
+"Nu poti da altcuiva un obiect personalizat.";
+
+"You cannot improve a soulbound item.";
+"Nu poti imbunatati un obiect personalizat.";
+
+"You cannot improve your weapon while your pet is summoned.";
+"Nu poşi sã îmbunãtãşeºti arma când însoşitorul tãu este chemat.";
+
+"You cannot leave the Combat Zone when you are dead.";
+"Nu poşi pãrãsi Zona de Rãzboi dacã eºti mort.";
+
+"You cannot make use of weapon skins while you are wearing a Wedding Dress or a Tuxedo.";
+"Nu poşi folosi un accesoriu de armã atâta timp cât porşi o Rochie de Mireasã sau un Smoking.";
+
+"You cannot move items during the bonus transfer.";
+"Nu poşi muta obiecte în timpul transferului de bonus.";
+
+"You cannot move items while modifying your pet's stats.";
+"Nu poşi muta obiecte în timp ce modifici statusul unui însoşitor.";
+
+"You cannot move items while the Fortune Chest is open.";
+"Nu poşi miºca obiectele în timp ce ai un Cufãr Valoros deschis.";
+
+"You cannot move items while the bonus change window is open.";
+"Nu poşi miºca obiecte în timp ce fereastra de schimbare bonusuri este deschisã.";
+
+"You cannot neither trade or move, nor sell, drop or store items while summoning a mount.";
+"Nu poşi negocia sau muta, nici vinde, arunca sau depozita obiecte în timpul ce chemi un mount.";
+
+"You cannot open a private shop while you are trading with others.";
+"Nu poti deschide un magazin in timp ce faci comert cu altii.";
+
+"You cannot open a private shop whilst summoning your pet.";
+"Nu poti deschide un magazin privat in timp ce iti chemi insotitorul.";
+
+"You cannot open a private shop, as this would exceed the maximum amount of %d Won.";
+"Nu poşi deschide un magain privat dacã depãºeºti limita maximã de %d Won.";
+
+"You cannot open a private shop.";
+"Nu poti deschide un magazin privat.";
+
+"You cannot open a shop while you are turned to stone.";
+"Nu poşi deschide un magazin în timp ce eºti pietrificat.";
+
+"You cannot open this chest because you do not have enough space in your inventory.";
+"Nu poşi deschide acest cufãr deoarece nu ai spaşiu suficient în inventar.";
+
+"You cannot participate in the territory auction on the day the guild is founded.";
+"Nu poşi participa la licitaşia teritorialã în ziua în care a fost fondatã breasla.";
+
+"You cannot register for that on the Battle Royale server.";
+"Nu te poşi înregistra pentru asta pe serverul de Bãtãlie Roialã.";
+
+"You cannot register for that on this map.";
+"Nu te poşi înregistra pentru asta pe aceastã hartã.";
+
+"You cannot ride in this dungeon.";
+"Nu poti calari in acest loc.";
+
+"You cannot sell a soulbound item.";
+"Nu poti vinde un obiect personalizat.";
+
+"You cannot sell items during the bonus transfer.";
+"Nu poşi vinde obiecte în timpul transferului de bonus.";
+
+"You cannot sell items you are currently using in a private shop.";
+"Nu poti vinde obiecte folosite la magazinul privat.";
+
+"You cannot sell soulbound items in a private shop.";
+"Nu poti vinde obiecte personalizate la un magazin privat.";
+
+"You cannot soulbind items on this server.";
+"Nu poti personaliza obiecte pe acest server.";
+
+"You cannot speak with an NPC while modifying your pet's stats.";
+"Nu poşi vorbi cu NPC în timp ce modifici statusul însoşitorului.";
+
+"You cannot start a game of okey while trading.";
+"Nu poşi începe un joc okey în timp ce faci negoş.";
+
+"You cannot summon your mount/pet right now.";
+"Nu poşi chema însoşitorul/mountul chiar acum.";
+
+"You cannot summon your pet whilst trading.";
+"Nu poti chema insotitorul in timp ce faci negot.";
+
+"You cannot swap this.";
+"Nu poşi schimba asta.";
+
+"You cannot take part in the Battle Royale.";
+"Nu poşi participa la Bãtãlia Roialã.";
+
+"You cannot talk to NPCs while the Fortune Chest is open.";
+"Nu poşi vorbi cu NPC-ul în timp ce ai un Cufãr Valoros deschis.";
+
+"You cannot trade while another window is open.";
+"Nu poti face negot in timp ce ai alta fereastra deschisa.";
+
+"You cannot trade while the Fortune Chest is open.";
+"Nu poşi face negoş în timp ce ai un Cufãr Valoros deschis.";
+
+"You cannot trade while your partner's Fortune Chest is open.";
+"Nu poşi face negoş dacã partenerul tãu are un Cufãr Valoros deschis.";
+
+"You cannot trade while your trading partner is modifying their pet's stats.";
+"Nu poşi face negoş dacã partenerul tãu de negoş modificã statusul unui însoşitor.";
+
+"You cannot trade whilst summoning your pet.";
+"Nu poti face negot in timp ce iti chemi insotitorul.";
+
+"You cannot trade whilst your partner is summoning their pet.";
+"Nu poti face negot in timp ce partenerul tau isi cheama insotitorul.";
+
+"You cannot trade whilst your partner's Incubator is open.";
+"Nu poti face negot in timp ce Incubatorul partenerului este deschis.";
+
+"You cannot trade, because the maximum number of %d Won was exceeded.";
+"Nu poşi face negoş deoarece numãrul maxim de %d Won a fost depãºit.";
+
+"You cannot transfer the bonus as the sashes have different absorption rates.";
+"Nu puteşi transfera bonusul, deoarece eºarfele au rate de absorbşie diferite.";
+
+"You cannot transfer the bonus as the sashes have different grades.";
+"Nu puteşi transfera bonusul, deoarece eºarfele au grade diferite.";
+
+"You cannot transform at the moment.";
+"Nu poşi sã te transformi momentan.";
+
+"You cannot transform during the PvP tournament.";
+"Nu te poşi transforma în timpul turneului PvP.";
+
+"You cannot use a Scroll of the Location while the window for the Shoulder Sash is open.";
+"Nu poşi folosi Pergamentul Oraºului în timp ce fereastra pentru Eºarfã este deschisã.";
+
+"You cannot use a sash with a bonus for the target.";
+"Nu poşi folosi o eºarfã cu bonus pentru şintã.";
+
+"You cannot use a sash without a bonus as the source.";
+"Nu poşi folosi o eºarfã fãrã bonus ca sursã.";
+
+"You cannot use a soulbound item.";
+"Nu poti folosi un obiect personalizat.";
+
+"You cannot use any emotions right now.";
+"Nu poşi folosi emoşii acum.";
+
+"You cannot use any soulbound items.";
+"Nu poti folosi niciun obiect personalizat.";
+
+"You cannot use it at the moment.";
+"Nu poşi folosi asta acum.";
+
+"You cannot use items while modifying your pet's stats.";
+"Nu poşi folosi obiecte în timp ce modifici statusul unui însoşitor.";
+
+"You cannot use items while the Fortune Chest is open.";
+"Nu poşi folosi obiectul în timp ce ai un Cufãr Valoros deschis.";
+
+"You cannot use items while you are turned to stone.";
+"Nu poşi sã foloseºti aceste obiecte în timp ce eºti pietrificat.";
+
+"You cannot use that any more.";
+"Nu mai poşi folosi asta.";
+
+"You cannot use that at the moment.";
+"Nu poşi folosi asta acum.";
+
+"You cannot use that at this location.";
+"Nu poşi folosi asta aici.";
+
+"You cannot use that here.";
+"Nu poşi folosi asta aici.";
+
+"You cannot use the Incubator whilst trading or whilst you have your storeroom or private shop open.";
+"Nu poti folosi Incubatorul in timp ce faci negot, ai deschis depozitul sau un magazin privat.";
+
+"You cannot use the item here.";
+"Nu poti folosi obiectul aici.";
+
+"You cannot use this bundle whilst riding.";
+"Nu poti folosi acest manunchi in timp ce calaresti.";
+
+"You cannot use this costume for this weapon.";
+"Nu poşi folosi acest accesoriu pentru aceastã armã.";
+
+"You cannot use this item during your withdrawal from the Combat Zone.";
+"Nu poşi folosi acest obiect în timpul retragerii din Zona de Rãzboi.";
+
+"You cannot use this item here.";
+"Nu poşi folosi acest obiect aici.";
+
+"You cannot use this item on soulbound items.";
+"Nu poşi folosi acest obiect pe obiecte personalizate.";
+
+"You cannot use this item while the windows for absorption and combination are open.";
+"Nu poti folosi acest obiect in timp ce fereastra pentru absorbtie si combinatie este deschisa.";
+
+"You cannot use this item while wearing another costume.";
+"Nu poşi folosi acest obiect în timp ce porşi un alt costum.";
+
+"You cannot use this item while you are trading.";
+"Nu poti folosi acest obiect in timp ce faci comert.";
+
+"You cannot wear a Wedding Dress or a Tuxedo when you are already wearing a weapon skin.";
+"Nu poşi purta o Rochie de Mireasã sau un Smoking atâta timp cât porşi un accesoriu de armã.";
+
+"You cannot wear gloves yet.";
+"Încã nu poşi purta mãnuºile.";
+
+"You currently have %d point(s). Your total score is %d.";
+"Momentan ai %d puncte. Scorul tãu total este %d.";
+
+"You destroyed the wrong Metin stone. Defeat all the monsters!";
+"Ai distrus o piatrã Metin greºitã. Învinge toşi monºtrii!";
+
+"You do not have enough Yang.";
+"Nu ai suficient Yang.";
+
+"You do not have enough money for the combination.";
+"Nu ai suficienti bani pentru aceasta combinatie.";
+
+"You don't have an %s to start a game of okey.";
+"Nu ai niciun %s pentru a începe un joc okey.";
+
+"You don't have enough Anniversary Flags.";
+"Nu ai suficiente Steaguri Aniversare.";
+
+"You don't have enough Gaya.";
+"Nu ai suficient Gaya.";
+
+"You don't have enough Won.";
+"Nu ai suficient Won.";
+
+"You don't have enough Yang to start a game of okey.";
+"Nu ai suficient yang pentru a începe un joc okey.";
+
+"You don't have enough Yang to trade books with me.";
+"Nu ai suficient yang pentru a face negot de carti.";
+
+"You don't have enough Yang.";
+"Nu ai suficient Yang.";
+
+"You don't have enough insignia.";
+"Nu ai suficiente insigne.";
+
+"You don't have enough items to revive anyone.";
+"Nu ai suficiente obiecte pentru reînviere.";
+
+"You don't have enough of the necessary items to play Yut Nori.";
+"Nu ai suficiente obiecte necesare pentru a juca Yut Nori.";
+
+"You don't have enough space in your inventory.";
+"Nu ai destul spaşiu în inventar.";
+
+"You don't receive any points for this player.";
+"Nu primeºti puncte de la acest jucãtor.";
+
+"You have already learned this skill.";
+"Ai învãşat deja aceastã abilitate.";
+
+"You have already reached the Champion Level.";
+"Ai deja Nivel Campion.";
+
+"You have already registered for the territory auction.";
+"Te-ai înregistrat deja la licitaşia teritorialã.";
+
+"You have already submitted your bid.";
+"Ai trimis deja oferta ta la licitaşie.";
+
+"You have already used the Researcher's Elixir.";
+"Ai folosit deja Elixirul Explorãrii.";
+
+"You have announced your withdrawal from the Combat Zone and can leave in %d minutes.";
+"Ai anunşat retragerea din Zona de Rãzboi ºi poşi ieºi în %d minut(e).";
+
+"You have announced your withdrawal from the Combat Zone and can leave in %d seconds.";
+"Ai anunşat retragerea din Zona de Rãzboi ºi poşi ieºi în %d secunde.";
+
+"You have been revived by %s.";
+"Ai fost înviat de cãtre %s.";
+
+"You have been revived.";
+"Ai fost înviat.";
+
+"You have bid %d Won.";
+"Ai lictat %d Won.";
+
+"You have captured a soul.";
+"Ai capturat un suflet.";
+
+"You have dismissed %s.";
+"Ai eliberat pe %s.";
+
+"You have earned your daily target – collect your reward.";
+"Ai atins şinta zilnicã - colecteazã recompensa.";
+
+"You have entered an area which is under Sung Mahi's sway and are suffering from his curse.";
+"Ai intrat într-o zonã aflatã sub influenşa lui Sung Mahi ºi stãpânitã de blestemul sãu.";
+
+"You have entered the dungeon %s with difficulty %d. The battle starts in %d seconds.";
+"Ai intrat în temnişa %s cu dificultate %d. Bãtãlia începe în %d secunde.";
+
+"You have entered the dungeon %s. The battle starts in %d seconds.";
+"Ai intrat în temnişa %s. Bãtãlia începe în %d secunde.";
+
+"You have insufficient materials for the upgrade. (Soulbound items cannot be used.)";
+"Nu ai suficiente materiale pentru îmbunãtãşire. (Obiectele personalizate nu pot fi folosite.)";
+
+"You have lost %d points. Remaining points: %d";
+"Ai pierdut %d puncte. Puncte rãmase: %d";
+
+"You have no debuff at the moment.";
+"Nu ai niciun contra-ajutor acum.";
+
+"You have not registered for any territory auctions.";
+"Nu te-ai înregistrat la licitaşii de teritoriu.";
+
+"You have not registered for the PvP tournament.";
+"Nu te-ai înregistrat la turneul PvP.";
+
+"You have not yet completed all missions.";
+"Nu ai terminat toate misiunile.";
+
+"You have paid the %lu-Yang lease for the guild territory.";
+"Ai plãtit arenda de %lu Yang pentru teritoriul breslei.";
+
+"You have received %d Won.";
+"Ai primit %d Won.";
+
+"You have received %lu EXP for your Champion Level.";
+"Ai primit %lu EXP pentru Nivel Campion.";
+
+"You have received a storage bonus of %d defence.";
+"Ai primit un bonus de stocare de %d apãrare.";
+
+"You have received a storage bonus of %d%% EXP.";
+"Ai primit un bonus de stocare de %d%% EXP.";
+
+"You have received a storage bonus of %d%% HP.";
+"Ai primit un bonus de stocare de %d%% PV.";
+
+"You have received a storage bonus of %d%% strength against monsters.";
+"Ai primit un bonus de stocare de %d%% putere împotriva monºtrilor.";
+
+"You have registered for the PvP tournament.";
+"Te-ai înregistrat la turneul PvP.";
+
+"You have revived %s.";
+"Ai înviat pe %s.";
+
+"You have successfully protected the mast. Keep it up! Get ready for the next wave.";
+"Ai protejat cu succes catargul. Şine-o tot aºa! Pregãteºte-te pentru urmãtorul val!";
+
+"You have summoned %s.";
+"Ai chemat pe %s.";
+
+"You have to leave your group first.";
+"Mai întâi trebuie sã pãrãseºti grupul.";
+
+"You have to wait %d sec. after opening the Mailbox before you can switch channels or teleport.";
+"Ai de aºteptat %d sec. dupã folosirea Cutiei Poºtalã, înainte de a schimba canalele sau de a folosi teleportul.";
+
+"You have transferred the bonuses successfully.";
+"Ai transferat bonusurile cu succes.";
+
+"You just missed the bonus level.";
+"Ai ratat nivelul bonus.";
+
+"You must abandon the ship in %d min.";
+"Trebuie sã abandonezi nava în %d min.";
+
+"You must abandon the ship in %d sec.";
+"Trebuie sã abandonezi nava în %d sec.";
+
+"You must be level %d to enter the Combat Zone.";
+"Trebuie sã fii nivel %d pentru a intra în Zona de Rãzboi.";
+
+"You must close all windows before entering or leaving the Combat Zone.";
+"Trebuie sã închizi toate ferestrele înainte de intrarea sau pãrãsirea Zonei de Rãzboi.";
+
+"You must complete the 'Ship Defence' dungeon.";
+"Trebuie sã termini misiunea Apãrare Navã.";
+
+"You must fill up at least 1 EXP Marble at level 120 to reach Champion Level.";
+"Trebuie sã umpli cel puşin 1 Bilã EXP la nivel 120 pentru a ajunge la Nivel Campion.";
+
+"You must leave the ship now as you have not started the sea battle.";
+"Trebuie sã pãrãseºti nava deoarece nu ai început bãtãlia pe mare.";
+
+"You must wait a while before opening your mailbox again.";
+"Trebuie sã aºtepşi un timp înainte de a deschide cutia poºtalã din nou.";
+
+"You need %d perpendicular slots in your inventory to open the Chest.";
+"Ai nevoie de %d sloturi perpendiculare în inventar pentru a deschide Cufãrul.";
+
+"You need a Battle Royale Ticket to participate.";
+"Ai nevoie de un Tichet Bãtãlie Roialã pentru a participa.";
+
+"You need a Reincarnation item to revive instantly.";
+"Ai nevoie de obiectul Reîncarnare pentru a învia instant.";
+
+"You need more Aventurine and Aureolin Treasures to receive your reward.";
+"Ai nevoie de mai multe Comori Aventurine ºi Aureoline pentru a primi recompensa.";
+
+"You need to equip a weapon first.";
+"Trebuie sã porşi o armã.";
+
+"You receive your bonuses.";
+"Primesti bonusurile.";
+
+"You require %s x %d more.";
+"Ai nevoie de %s x %d mai mult.";
+
+"You still require %d %s(s).";
+"Mai ai nevoie de %d %s.";
+
+"You took back the %d Won you bid.";
+"Ai luat înapoi %d Won licitat.";
+
+"You've taught your pet well! It's quickly learning its new skills!";
+"Ai dresat insotitorul bine! Invata foarte repede noile abilitati!";
+
+"Your Dragon Stone's bonus has been changed.";
+"Bonusurile de pe Piatra Dragon au fost schimbate.";
+
+"Your game of okey has started!";
+"Jocul tãu okey a început!";
+
+"Your guild already has a guild territory.";
+"Breasla ta are deja un teritoriu de breaslã.";
+
+"Your guild isn't registered for the territory auction.";
+"Breasla ta nu este înregistratã la licitaşia teritorialã.";
+
+"Your guild leader has registered for the auction of the territory in the %s area at %d,%d.";
+"Liderul breslei tale s-a înregistrat la licitaşia teritoriului din şinutul %s la %d,%d.";
+
+"Your guild's territory will be automatically relinquished in %d hours. Any items in the guild warehouse will be deleted.";
+"Teritoriul breslei tale va fi abandonat automat în %d ore. Orice obiect din depozitul breslei va fi ºters.";
+
+"Your immunity has expired and you are again influenced by Sung Mahi's Presence and Curse.";
+"Imunitatea ta a expirat ºi eºti influenşat din nou de prezenşa ºi blestemul lui Sung Mahi.";
+
+"Your inventory is full.";
+"Inventarul tãu e plin.";
+
+"Your inventory is full. Your reward will be delivered by post.";
+"Nu mai existã loc în inventar. Recompensa ta va fi trimisã prin poºtã.";
+
+"Your level is too low to summon the pet.";
+"Nivelul tau este prea mic pentru a chema insotitorul.";
+
+"Your mailbox is full.";
+"Cutia poºtalã este plinã.";
+
+"Your mast has been smashed. You fought valiantly, but the battle is lost.";
+"Catargul a fost zdrobit. Ai luptat brav dar bãtãlia este pierdutã.";
+
+"Your pet enthusiastically tucks into the Protein Snack.";
+"Insotitorul tau este entuziasmat de Biscuitii cu Proteine.";
+
+"Your pet has already learnt this skill and refuses to practice it again.";
+"Insotitorul a invata deja aceasta abilitate si refuza sa invete din nou.";
+
+"Your pet has already reached the highest stage of evolution.";
+"Insotitorul a atins deja cel mai inalt grad al evolutiei.";
+
+"Your pet has gathered enough experience. It now requires Item EXP to reach the next stage of evolution.";
+"Insotitorul a adunat experienta suficienta. Acum este necesar un EXP Obiect pentru a trece la urmatorul stagiu al evolutiei.";
+
+"Your pet is ready to evolve. Use Pet Books to achieve this.";
+"Insotitorul este gata sa evolueze. Foloseste Cartea Insotitorului pentru a reusi.";
+
+"Your pet must be %d days old to train and promote it to the next stage of evolution.";
+"Insotitorul trebuie sa aiba %d zile pentru a-l antrena si promova la urmatorul stadiu de evolutie.";
+
+"Your pet must be level %d to train and promote it to the next stage of evolution.";
+"Insotitorul trebuie sa aiba nivelul %d pentru a-l antrena si promova la urmatorul stadiu de evolutie.";
+
+"Your pet must have 100% experience to train and promote it to the next stage of evolution.";
+"Insotitorul trebuie sa aiba 100% experienta pentru a-l antrena si promova la urmatorul stadiu de evolutie.";
+
+"Your pet's stats have been modified.";
+"Statusul însoşitorului tãu a fost modificat.";
+
+"Your withdrawal announcement is active.";
+"Anunşul tãu de retragere este activ.";
+
+"Your withdrawal announcement was cancelled.";
+"Anunşul tãu de retragere a fost anulat.";
+
+"Yut Nori has finished.";
+"Yut Nori s-a terminat!";
+
+"Yut Nori has started!";
+"Yut Nori a început!";
+
+"[%s±ºÁÖ] : %s";
+"[%sMonarh] : %s";
+
+"[%s±ºÁÖ] : %s  º¸À¯±İ¾× %lld";
+"[%sMonarh] : %s Avere Yang %lld";
+
+"[Aura] Can only be done once an Aura Outfit has been inserted.";
+"[Aura] Poate fi fãcut numai dupã ce un Costum Aura a fost inserat.";
+
+"[Aura] Cannot be evolved.";
+"[Aura] Nu poate fi evoluat.";
+
+"[Aura] Cannot be improved.";
+"[Aura] Nu poate fi îmbunãtãşit.";
+
+"[Aura] Does not work with an Aura Outfit onto which an item has already been transmitted.";
+"[Aura] Nu funcşioneazã cu un Costum Aura pe care a fost deja transmis un obiect.";
+
+"[Aura] Does not work with soulbound items.";
+"[Aura] Nu funcşioneazã cu obiecte personalizate.";
+
+"[Aura] Evolution successful!";
+"[Aura] Evoluşie reuºitã!";
+
+"[Aura] Improvement successful!";
+"[Aura] Îmbunãtãşire reuºitã!";
+
+"[Aura] Improvement successful. Evolution is now possible.";
+"[Aura] Îmbunãtãşire reuºitã. Evoluşia este acum posibilã.";
+
+"[Aura] Only Aura Outfit can be inserted.";
+"[Aura] Doar Costum Aura poate fi inserat.";
+
+"[Aura] Only Aura Outfit, Shield, Necklace, Earring or Armband can be inserted.";
+"[Aura] Doar un Costum Aura, Colier, Cercel sau Banderolã pot fi inserate.";
+
+"[Aura] Successful!";
+"[Aura] Ai reusit!";
+
+"[Aura] The amount of inserted materials has been adjusted to match the required amount.";
+"[Aura] Cantitatea materialelor inserate a fost ajustatã pentru a se potrivi cu cantitatea cerutã.";
+
+"[Aura] You cannot evolve your Aura Outfit until you have improved it.";
+"[Aura] Nu poşi evolua Costumul Aura pânã nu-l îmbunãtãşeºti.";
+
+"[Aura] You don’t have enough money to evolve your Aura Outfit.";
+"[Aura] Nu ai bani sufiecienşi sã evoluezi Costumul Aura.";
+
+"[Aura] You have to insert items.";
+"[Aura] Trebuie sã inserezi obiecte.";
+
+"[Aura] Your Aura Outfit has reached the maximum level.";
+"[Aura] Costumul Aura a ajuns la nivelul maxim.";
+
+"[Catch the King] %s earned %d points in Catch the King.";
+"[Prinde Regele] %s a obşinut %d puncte la Prinde Regele.";
+
+"[Catch the King] Catch the King has ended.";
+"[Prinde Regele] Prinde Regele s-a sfârºit.";
+
+"[Catch the King] Defeat monsters to collect King Cards. You need 25 cards for a King Deck.";
+"[Prinde Regele] Învinge monºtrii pentru a colecta Cãrşile Regelui. Ai nevoie de 25 de cãrşi pentru un Pachet Rege.";
+
+"[Catch the King] If you make it into the top rankings, you'll receive your prize from the game table.";
+"[Prinde Regele] Dacã te situezi în rangul clasamentului, vei primi un premiu de pe masa de joc.";
+
+"[Catch the King] Loads of great prizes await!";
+"[Prinde Regele] Te aºteaptã multe premii grozave!";
+
+"[Catch the King] Play a game of Catch the King now!";
+"[Prinde Regele] Joacã Prinde Regele acum!";
+
+"[Catch the King] You don't have a complete King Deck or you have insufficient Yang.";
+"[Prinde Regele] Nu ai Pachet Rege complet sau nu ai suficient Yang.";
+
+"[Catch the King] Your score isn't good enough for a prize.";
+"[Prinde Regele] Scorul tãu nu este suficient pentru un premiu.";
+
+"[DS] Your rank reward";
+"[DP] Recompensã rang";
+
+"[Duel of the Seers] Check your rank and claim your reward.";
+"[Duelul Profeşilor] Verificã rangul ºi obşine recompensa.";
+
+"[Duel of the Seers] Rich treasures await!";
+"[Duelul Profeşilor] Comori valoroase aºteaptã!";
+
+"[Duel of the Seers] The Duel of the Seers has begun!";
+"[Duelul Profeşilor] Duelul Profeşilor a început!";
+
+"[Duel of the Seers] The Duel of the Seers is over.";
+"[Duelul Profeşilor] Duelul Profeşilor s-a terminat.";
+
+"[Duel of the Seers] You don't have enough Seer Coins.";
+"[Duelul Profeşilor] Nu ai suficiente Monede Profet.";
+
+"[Duel of the Seers] You have increased your donations count by 1.";
+"[Duelul Profeşilor] Ai crescut numãrul donaşiilor cu 1.";
+
+"[Duel of the Seers] You receive a quest for the minigame.";
+"[Duelul Profeşilor] Primeºti o misiune de mini joc.";
+
+"[Flower Power] There isn't enough space in your inventory.";
+"[Flower Power] Nu ai suficient spaşiu în inventar.";
+
+"[Flower Power] This item can no longer be used.";
+"[Flower Power] Acest obiect nu mai poate fi folosit.";
+
+"[Flower Power] You don't have enough Flower Seeds.";
+"[Flower Power] Nu ai suficiente Seminşe de Flori.";
+
+"[Flower Power] You don't have enough shoots.";
+"[Flower Power] Nu ai suficienşi lãstari.";
+
+"[Flower Power] You have received a Chrysanthemum Shoot.";
+"[Flower Power] Ai primit Lãstar Crizantemã.";
+
+"[Flower Power] You have received a Daffodil Shoot.";
+"[Flower Power] Ai primit Lãstar Narcisã.";
+
+"[Flower Power] You have received a Lily Shoot.";
+"[Flower Power] Ai primit Lãstar Crin.";
+
+"[Flower Power] You have received a May Bell Shoot.";
+"[Flower Power] Ai primit Lãstar Floare Clopoşel.";
+
+"[Flower Power] You have received a Sunflower Shoot.";
+"[Flower Power] Ai primit Lãstar Floarea Soarelui.";
+
+"[Flower Power] You received Flower Seeds.";
+"[Flower Power] Ai primit Seminşe de Flori.";
+
+"[Gaya] Cutting failed.";
+"[Gaya] Tãiere eºuatã.";
+
+"[Gaya] Cutting successful.";
+"[Gaya] Tãiere cu succes.";
+
+"[Gaya] The Gaya Market is already open.";
+"[Gaya] Piaşã Gaya este deja deschisã.";
+
+"[Gaya] The Gaya Market is currently unavailable.";
+"[Gaya] Piaşã Gaya este momentan indisponibilã.";
+
+"[Gaya] The item list has been refreshed.";
+"[Gaya] Lista obiectelor a fost actualizatã.";
+
+"[Gaya] You already have the maximum amount of Gaya.";
+"[Gaya] Ai deja cantitatea maximã de Gaya.";
+
+"[Gaya] You can only open the Gaya Market once you have closed the other windows.";
+"[Gaya] Poşi deschide o Piaşã Gaya doar dacã ai închis celelalte ferestre.";
+
+"[Gaya] You cannot purchase this item.";
+"[Gaya] Nu poşi achizişiona acest obiect.";
+
+"[Gaya] You cannot unlock any more slots on the Gaya Market.";
+"[Gaya] Nu mai poşi debloca ºi alte locuri în Piaşã Gaya.";
+
+"[Gaya] You don't have a Refresh Gaya Market item.";
+"[Gaya] Nu ai suficiente obiecte Actualizeazã Piaşã Gaya.";
+
+"[Gaya] You don't have enough %s. You need %d more to unlock an additional slot.";
+"[Gaya] Nu ai suficient %s. Mai ai nevoie de încã %d pentru a deschide un loc adişional.";
+
+"[Gaya] You don't have enough Gaya.";
+"[Gaya] Nu ai suficient Gaya.";
+
+"[Gaya] You don't have enough Glimmerstones.";
+"[Gaya] Nu ai suficiente Pietre Licioase.";
+
+"[Gaya] You don't have enough Yang to cut Glimmerstones.";
+"[Gaya] Nu ai suficient Yang pentru a tãia Pietre Lucioase.";
+
+"[Gaya] You must open the Gaya Market first.";
+"[Gaya] Deschide Piaşã Gaya mai întâi.";
+
+"[Gaya] Your inventory is full.";
+"[Gaya] Nu mai existã loc în inventar.";
+
+"[Group] Please talk to the relevant NPC to enter.";
+"[Grup] Vorbeºte cu NPC-ul corespunzãtor pentru a intra.";
+
+"[Group] The battle has begun.";
+"[Grup] Bãtãlia a început.";
+
+"[Group] The dungeon will close in %d min.";
+"[Grup] Temnişa se va închide în %d min.";
+
+"[Group] The rankings for groups in Meley's Lair is being compiled.";
+"[Grup] Rangurile pentru grupurile în Adãpostul lui Meley se formeazã.";
+
+"[Group] Time until teleportation: %d min. %d sec.";
+"[Grup] Timp pânã la teleportare: %d min. %d sec.";
+
+"[Group] You are now registered for Meley's Lair.";
+"[Grup] Înregistrare cu succes pentru Adãpostul lui Meley.";
+
+"[Group] You cannot do this while the group search is active.";
+"[Grup] Nu poşi face asta în timp ce cãutarea de grup este activã.";
+
+"[Group] You cannot leave the dungeon at the moment.";
+"[Grup] Nu poşi pãrãsi temnişa momentan.";
+
+"[Group] You have 1 hour to complete the dungeon.";
+"[Grup] Ai la dispozişie 1 orã pentru a termina temnişa.";
+
+"[Group] You have completed your task with distinction!";
+"[Grup] Ai terminat misiunea cu onoare!";
+
+"[Group] You have conceded.";
+"[Grupa] Ai cedat.";
+
+"[Group] You have left the dungeon.";
+"[Grupa] Ai pãrãsit temnişa.";
+
+"[Group] You will be teleported to the city in 1 minute.";
+"[Grup] Vei fi teleportat în oraº în 1 minut.";
+
+"[Group] You will be transported from the dungeon in 10 minutes.";
+"[Grup] Vei fi teleportat afarã din temnişã în 10 minute.";
+
+"[Group] Your time in the dungeon is up.";
+"[Grup] Timpul tãu în temnişã s-a terminat.";
+
+"[Guild Territory] Go to the guard and pay the lease of %d Yang for your guild territory.";
+"[Teritoriu Breaslã] Mergi la gardian ºi plãteºte arenda de %d Yang pentru teritoriul breslei voastre.";
+
+"[Guild] %d EXP has been donated.";
+"[Breaslã] %d EXP a fost donat.";
+
+"[Guild] %d Yang received.";
+"[Breaslã] %d Yang primit.";
+
+"[Guild] %s has used %s.";
+"[Breaslã] %s a folosit %s.";
+
+"[Guild] %s has won.";
+"[Breaslã] %s a câºtigat.";
+
+"[Guild] 'Guild Leader Transfer' vote in progress.";
+"[Breaslã] Votul 'Transfer Lider Breaslã' se desfãºoarã.";
+
+"[Guild] 'Guild Territory Abandonment' vote in progress.";
+"[Breaslã] Votul 'AbandonTeritoriu Breaslã' se desfãºoarã.";
+
+"[Guild] 'Guild Territory Sale' vote in progress.";
+"[Breaslã] Votul 'Vânzare Teritoriu Breaslã' se desfãºoarã.";
+
+"[Guild] 'Remove Member' vote in progress.";
+"[Breaslã] Votul 'Înlãturã Membru' se desfãºoarã.";
+
+"[Guild] A Dragon's Temple fight is running on another channel.";
+"[Breaslã] O luptã în Templul Dragonului are loc pe alt canal.";
+
+"[Guild] After deduction of %d%% taxes you receive %d Yang.";
+"[Breaslã] Dupã deducerea de %d%% taxe primeºti %d Yang.";
+
+"[Guild] Another guild member is currently using this.";
+"[Breaslã] Alt membru foloseºte momentan asta.";
+
+"[Guild] Another member is currently using the guild bank.";
+"[Breaslã] Alt membru foloseºte momentan banca breslei.";
+
+"[Guild] As a combatant you cannot spectate your own guild war.";
+"[Breaslã] Ca ºi combatant nu poşi asista drept spectator la propriul rãzboi de breaslã.";
+
+"[Guild] Cannot be upgraded as the guild bank is full.";
+"[Breaslã] Nu poate fi îmbunãtãşitã dacã banca breslei este plinã.";
+
+"[Guild] Certain members are offline or on another map.";
+"[Breaslã] O parte dintre membrii breslei nu se aflã în joc sau se aflã într-o altã hartã.";
+
+"[Guild] Certain members of the enemy guild are offline or on another map.";
+"[Breaslã] O parte dintre membrii breslei inamice nu se aflã în joc sau se aflã într-o altã hartã.";
+
+"[Guild] Deposited: %d Yang";
+"[Breaslã] Depunere: %d Yang";
+
+"[Guild] Draw";
+"[Breaslã] Remizã";
+
+"[Guild] For your own safety, you will be teleported away from the nest in 1 minute.";
+"[Breaslã] Pentru siguranşa ta vei fi teleportat afarã din adãpost în 1 minut.";
+
+"[Guild] For your own safety, you will be teleported away from the nest in 10 minutes.";
+"[Breaslã] Pentru siguranşa ta vei fi teleportat afarã din adãpost în 10 minute.";
+
+"[Guild] Guild %s has purchased territory.";
+"[Breaslã] Breasla %s a achizişionat teritoriul.";
+
+"[Guild] Guild [%s] has lost the war against [%s].";
+"[Breaslã] Breasla [%s] a pierdut rãzboiul împotriva [%s].";
+
+"[Guild] Guild advertisement extended.";
+"[Breaslã] Publicitatea Breslei este extinsã.";
+
+"[Guild] Guild advertisement launched.";
+"[Breaslã] Publicitatea Breslei este lansatã.";
+
+"[Guild] No applications available.";
+"[Breaslã] Nicio aplicaşie disponibilã.";
+
+"[Guild] No guild advertisements available.";
+"[Breaslã] Nu existã reclame disponibile.";
+
+"[Guild] No guild found.";
+"[Breaslã] Nicio breaslã gãsitã.";
+
+"[Guild] No guild has defeated the dragon yet.";
+"[Breaslã] Nicio breaslã nu a învins încã dragonul.";
+
+"[Guild] No guild present with a guild advertisement.";
+"[Breaslã] Nicio breaslã prezentatã cu publicitate.";
+
+"[Guild] No guild territory found.";
+"[Breaslã] Niciun teritoriu de breaslã gãsit.";
+
+"[Guild] Not enough space in the guild bank.";
+"[Breaslã] Nu existã spaşiu suficient în banca breslei.";
+
+"[Guild] Object moved successfully.";
+"[Breaslã] Obiect mutat cu succes.";
+
+"[Guild] Only available to the guild leader (if a guild territory is being relinquished).";
+"[Breaslã] Disponibil numai pentru liderul breslei (dacã un teritoriu al breslei va fi abandonat).";
+
+"[Guild] Player %s has applied to join you.";
+"[Breaslã] Jucãtorul %s a aplicat.";
+
+"[Guild] Please check enemy members and leaders.";
+"[Breaslã] Verificã membrii ºi liderii inamici.";
+
+"[Guild] Please check members and leaders.";
+"[Breaslã] Verificã membrii ºi liderii.";
+
+"[Guild] Please try again in 10 seconds.";
+"[Breaslã] Încearcã din nou în 10 secunde.";
+
+"[Guild] Rankings update.";
+"[Breaslã] Ranguri Actualizate";
+
+"[Guild] Required time: %d min. %d sec.";
+"[Breaslã] Timp necesar: %d min. %d sec.";
+
+"[Guild] Starting 'Guild Leader Transfer' vote.";
+"[Breaslã] Începe votul pentru 'Transfer Lider Breaslã'.";
+
+"[Guild] Starting 'Guild Territory Abandonment' vote.";
+"[Breaslã] Începe votul pentru 'AbandonTeritoriu Breaslã'.";
+
+"[Guild] Starting 'Guild Territory Sale' vote.";
+"[Breaslã] Începe votul pentru 'Vânzare Teritoriu Breaslã'.";
+
+"[Guild] Starting 'Remove Member' vote.";
+"[Breaslã] Începe votul pentru 'Înlãturã Membru'.";
+
+"[Guild] Successfully registered for Meley's Lair.";
+"[Breaslã] Înregistrare cu succes pentru Adãpostul lui Meley";
+
+"[Guild] That can only be used in guild wars.";
+"[Breaslã] Asta poate fi folositã numai în bãtãliile între bresle.";
+
+"[Guild] The Deposit Yang or Withdraw Yang window is already open.";
+"[Breaslã] Fereastra de Retragere Yang sau Depunere Yang este deja deschisa.";
+
+"[Guild] The Guild Warehouse is currently in use.";
+"[Breaslã] Depozitul Breslei este folosit momentan.";
+
+"[Guild] The battle against Dragon Queen Meley is starting.";
+"[Breaslã] Bãtãlia împotriva lui Meley Regina Dragon începe.";
+
+"[Guild] The character must be at least level 40 to receive the guild leadership.";
+"[Breaslã] Caracterul tãu trebuie sã aibã cel puşin nivelul 40 pentru a prelua conducerea breslei.";
+
+"[Guild] The enemy guild is currently fighting in the dragon cave.";
+"[Breaslã] Breasla inamicã se luptã momentan în temnişa dragonului.";
+
+"[Guild] The gates to Meley's Lair are open. The time limit in the dungeon is one hour.";
+"[Breaslã] Porşile cãtre Adãpostul lui Meley sunt deschise. Limita de timp în temnişã este de o ora.";
+
+"[Guild] The gates to the lair are closed once more.";
+"[Breaslã] Porşile cãtre adãpost sunt din nou închise.";
+
+"[Guild] The guild advertisement will run for %s.";
+"[Breaslã] Publicitatea Breslei va rula o periodã de %s.";
+
+"[Guild] The guild already owns guild territory.";
+"[Breaslã] Breasla are deja un teritoriu.";
+
+"[Guild] The guild has set a minimum level for applicants (min. level: %d).";
+"[Breaslã] Breasla a selectat un nivel minim pentru aplicanşi (min. nivel: %d).";
+
+"[Guild] The guild leader is offline or on another map.";
+"[Breaslã] Liderul breslei nu se aflã în joc sau este într-o altã hartã.";
+
+"[Guild] The guild level is too low.";
+"[Breaslã] Nivelul breslei este prea mic.";
+
+"[Guild] The guild member has been removed from the guild for inactivity.";
+"[Breaslã] Membrul a fost exclus din breaslã din cauza inactivitãşii.";
+
+"[Guild] The guild territory sale cannot be completed as there is insufficient Yang in the guild bank.";
+"[Breaslã] Vinderea teritoriului breslei nu poate fi terminatã deoarece nu existã suficient Yang în contul breslei.";
+
+"[Guild] The guild territory sale has failed.";
+"[Breaslã] Vinderea teritoriului breslei a eºuat.";
+
+"[Guild] The guild territory sale is complete.";
+"[Breaslã] Vânzarea teritoriului breslei este completã.";
+
+"[Guild] The guild's treasury has reached the maximum.";
+"[Breaslã] Trezoreria breslei a ajuns la maxim.";
+
+"[Guild] The lair will close in %d min.";
+"[Breaslã] Adãpostul se va închide în %d min.";
+
+"[Guild] The list is being updated. Please try again later.";
+"[Breaslã] Lista este în curs de actualizare. Încearcã din nou mai târziu.";
+
+"[Guild] The logo server is currently undergoing maintenance.";
+"[Breaslã] Serverul este momentan în mentenanşã.";
+
+"[Guild] The member is currently offline.";
+"[Breaslã] Membrul breslei nu este momentan în joc.";
+
+"[Guild] The player is offline or on another map.";
+"[Breaslã] Jucãtorul nu se aflã în joc sau este într-o altã hartã.";
+
+"[Guild] The purchase was cancelled as you already own guild territory.";
+"[Breaslã] Achizişionarea a fost anulatã deoarece ai deja teritoriu de breaslã.";
+
+"[Guild] The purchase was cancelled as your guild already owns guild territory.";
+"[Breaslã] Achizişionarea a fost anulatã deoarece breasla ta are deja teritoriu de breaslã.";
+
+"[Guild] The vote relating to this player failed. Please try again in %d months, %d days, %d hours and %d minutes.";
+"[Breaslã] Votarea pentru acest jucator a eºuat. Încearcã din nou în %d luni, %d zile, %d ore ºi %d minute.";
+
+"[Guild] There are no votes in progress.";
+"[Breaslã] Nu existã voturi în desfãºurare.";
+
+"[Guild] There are not enough participants online.";
+"[Breaslã] Nu sunt în joc suficienşi participanşi.";
+
+"[Guild] There are still items in the Guild Warehouse.";
+"[Breaslã] Incã se aflã obiecte în Depozitul Breslei.";
+
+"[Guild] This action is not possible during a war.";
+"[Breaslã] Aceastã acşiune nu este posibilã în timpul unui rãzboi.";
+
+"[Guild] This guild does not exist.";
+"[Breaslã] Aceastã breaslã nu existã.";
+
+"[Guild] This guild is not the one entered in the guild territory sale vote.";
+"[Breaslã] Breasla nu este cea publicatã în lista de vânzare a teritoriilor breslelor .";
+
+"[Guild] This land belongs to another player.";
+"[Breaslã] Acest loc aparşine altui jucãtor.";
+
+"[Guild] Time's up.";
+"[Breaslã] Timpul a expirat.";
+
+"[Guild] Visit the Dragon Watcher Dolnarr to enter the dragon cave.";
+"[Breaslã] Viziteazã Garda Dragon Dolnarr pentru a intra în temnişã.";
+
+"[Guild] War ends in 1 minute.";
+"[Breaslã] Rãzboiul se terminã în 1 minut.";
+
+"[Guild] War ends in 5 minutes.";
+"[Breaslã] Rãzboiul se terminã în 5 minute.";
+
+"[Guild] You are now in observer mode because you have reached the respawn limit.";
+"[Breaslã] Eºti în modul telespectator deoarece ai atins limita de reînviere.";
+
+"[Guild] You can only construct one Guild Warehouse.";
+"[Breaslã] Poşi doar sã construieºti un Depozit de Breaslã.";
+
+"[Guild] You can only make one transaction every 10 seconds.";
+"[Breaslã] Poşi face o tranzacşie doar o datã la 10 secunde.";
+
+"[Guild] You can use it in 10 seconds.";
+"[Breaslã] Poşi folosi în 10 secunde.";
+
+"[Guild] You cannot carry out this action during a war.";
+"[Breaslã] Nu poşi avea aceastã acşiune în timpul unui rãzboi.";
+
+"[Guild] You cannot carry out this action while depositing or withdrawing Yang from the guild account.";
+"[Breaslã] Nu poşi face aceastã acşiune în timp ce depui sau retragi Yang din contul breslei.";
+
+"[Guild] You cannot carry out this action whilst the Guild Warehouse is open.";
+"[Breaslã] Nu poşi avea aceastã acşiune în timp ce Depozitul Breaslei este deschis.";
+
+"[Guild] You cannot change guild leader whilst at war.";
+"[Breaslã] Nu poşi schimba liderul dacã breasla este în rãzboi.";
+
+"[Guild] You cannot declare a guild war whilst fighting in the dragon cave.";
+"[Breaslã] Nu poşi declara un rãzboi între bresle în timp ce lupşi în temnişa dragonului.";
+
+"[Guild] You cannot deposit or withdraw Yang from the guild account while another window is open.";
+"[Breaslã] Nu poşi depune sau retrage Yang din contul breslei în timp ce ai altã fereastrã deschisã.";
+
+"[Guild] You cannot deposit or withdraw Yang from the guild account while your pet is summoned.";
+"[Breaslã] Nu poşi depune sau retrage Yang din contul breslei în timp ce însoşitorul tãu este chemat.";
+
+"[Guild] You cannot disband the guild whilst a vote is in progress.";
+"[Breaslã] Nu poşi abandona breasla dacã un vot este în desfãºurare.";
+
+"[Guild] You cannot invite someone to the guild whilst a vote is in progress.";
+"[Breaslã] Nu poşi invita pe cineva in breaslã dacã un vot este în desfãºurare.";
+
+"[Guild] You cannot kick the guild leader.";
+"[Breaslã] Nu poşi înlãtura liderul breslei.";
+
+"[Guild] You cannot kick yourself.";
+"[Breaslã] Nu te poşi înlãtura pe tine.";
+
+"[Guild] You cannot leave the guild while a vote is in progress.";
+"[Breaslã] Nu poşi pãrãsi breasla în timpul unui vot.";
+
+"[Guild] You cannot make yourself guild leader.";
+"[Breaslã] Nu îşi poşi atribui singur statutul de lider al breslei.";
+
+"[Guild] You cannot relinquish guild territory during a guild battle.";
+"[Breaslã] Nu poşi abandona teritoriul breslei în timpul unei bãtãlii dintre bresle.";
+
+"[Guild] You cannot remove anyone from the guild whilst at war.";
+"[Breaslã] Nu poşi înlãtura membri dacã breasla este în rãzboi.";
+
+"[Guild] You cannot select combatants whilst the guild is in a war.";
+"[Breaslã] Nu poşi selecta combatanşi dacã breasla este în rãzboi.";
+
+"[Guild] You cannot sell the guild territory to yourself.";
+"[Breaslã] Nu îşi poşi vinde şie teritoriul breslei.";
+
+"[Guild] You cannot start a vote during a war.";
+"[Breaslã] Nu poşi începe un vot dacã se desfãºoarã un rãzboi.";
+
+"[Guild] You cannot start a vote for your own character.";
+"[Breaslã] Nu poşi începe un vot pentru propriul caracter.";
+
+"[Guild] You cannot start a vote to remove the guild leader.";
+"[Breaslã] Nu poşi începe un vot pentru a înlãtura liderul breslei.";
+
+"[Guild] You cannot start a vote to remove yourself from the guild.";
+"[Breaslã] Nu poşi începe un vot pentru a te înlãtura din breaslã.";
+
+"[Guild] You cannot start a war whilst a vote is in progress.";
+"[Breaslã] Nu poşi începe un rãzboi dacã se desfãºoarã un vot.";
+
+"[Guild] You cannot start another vote whilst one is in progress.";
+"[Breaslã] Nu poşi începe un vot dacã un altul este în curs de desfãºurare.";
+
+"[Guild] You cannot use guild skills in field guild wars.";
+"[Breaslã] Nu poşi folosi abilitãşile breslei pe câmpul de bãtãlie între bresle.";
+
+"[Guild] You cannot use the Guild Warehouse whilst a vote is in progress.";
+"[Breaslã] Nu poşi folosi Depozitul Breaslei dacã un vot este în desfãºurare.";
+
+"[Guild] You cannot use this guild logo. Please try again.";
+"[Breaslã] Nu poşi folosi acest logo de breaslã. Mai încearcã odatã.";
+
+"[Guild] You cannot withdraw Yang while another window is open.";
+"[Breaslã] Nu poşi scoate Yang în timp ce ai altã fereastrã deschisã.";
+
+"[Guild] You cannot withdraw any Yang as you have more than 2 billion Yang.";
+"[Breaslã] Nu poşi scoate Yang deoarece ai mai mult de 2 bilioane de Yang.";
+
+"[Guild] You do not have permission to use guild skills.";
+"[Breaslã] Nu ai permisiunea sã foloseºti abilitãşile breslei.";
+
+"[Guild] You have already applied to this guild.";
+"[Breaslã] Deja ai aplicat la acestã breaslã.";
+
+"[Guild] You have already donated the maximum amount of EXP.";
+"[Breaslã] Deja ai donat maximul de EXP.";
+
+"[Guild] You have cancelled the fight in Meley's Lair.";
+"[Breaslã] Ai anulat lupta din Adãpostul lui Meley.";
+
+"[Guild] You have defeated Meley the Dragon Queen!";
+"[Breaslã] Ai învins-o pe Meley Regina Dragon!";
+
+"[Guild] You have taken part in the current vote.";
+"[Breaslã] Ai participat la votare.";
+
+"[Guild] You have voted against.";
+"[Breaslã] Ai votat împotrivã.";
+
+"[Guild] You have voted for.";
+"[Breaslã] Ai votat pentru.";
+
+"[Guild] You must conduct a vote before selling your guild territory.";
+"[Breaslã] Trebuie sã aibã loc un vot înainte de vânzarea teritoriului.";
+
+"[Guild] You must wait 10 seconds before reopening the Guild Warehouse.";
+"[Breaslã] Trebuie sã aºtepşi 10 secunde pentru a redeschide Depozitul Breslei.";
+
+"[Guild] You must wait at least 12 hours after using the Guild Warehouse before leaving the guild.";
+"[Breaslã] Trebuie sã aºtepşi cel puşin 12 ore dupã ce ai folosit Depozitul Breaslei pentru a putea pãrãsi breasla.";
+
+"[Guild] You need the Ring of Successor to transfer the guild.";
+"[Breaslã] Ai nevoie de Inelul Urmaºului pentru a transfera breasla.";
+
+"[Guild] Your application has been registered.";
+"[Breaslã] Aplicaşia ta a fost înregistratã.";
+
+"[Guild] Your guild advertisement will expire soon.";
+"[Breaslã] Publicitatea Breslei va expira curând.";
+
+"[Guild] Your guild does not have enough Yang in the account. Please deposit more Yang and try again.";
+"[Breaslã] Breasla ta nu are suficienşi Yang în cont. Depune mai mult Yang ºi încearcã din nou.";
+
+"[Guild] Your guild doesn't have a warehouse.";
+"[Breaslã] Breasla ta nu are depozit.";
+
+"[Guild] Your members rejected the last vote to sell. Try again.";
+"[Breaslã] Membrii tãi au refuzat ultimul vot de vânzare. Încearcã din nou.";
+
+"[Guild] Your members rejected the last vote. Please try again in %d months, %d days, %d hours and %d minutes.";
+"[Breaslã] Membrii tãi au refuzat ultimul vot. Încearcã din nou în %d luni, %d zile, %d ore ºi %d minute.";
+
+"[Monster Bash Event] Map %s is reporting sightings of %s.";
+"Hartã [Eveniment Omorât Monºtri] %s raporteazã viziunea lui %s.";
+
+"[Monster Card] Mission level: %d. You've defeated the monster: %s.";
+"[Card Monstru] Nivel misiune: %d Ai învins monstrul: %s.";
+
+"[Monster Card] You can now teleport to the monster's location.";
+"[Card Monstru] Poşi sã te teleportezi acum la locaşia monstrului.";
+
+"[Monster Card] You can now transform into the monster.";
+"[Card Monstru] Poşi sã te transformi acum într-un monstru.";
+
+"[Monster Card] You can now watch the monster's movement animation.";
+"[Card Monstru] Poşi sã urmãreºti acum animaşia de miºcare a monstrului.";
+
+"[Monster Card] You don't have enough space in your inventory.";
+"[Card Monstru] Nu ai loc suficient în inventar.";
+
+"[Monster Card] You've completed your monster mission. Collect your Monster Card now.";
+"[Card Monstru] Ai îndeplinit misiunea monstru. Colecteazã Cardul Monstru acum.";
+
+"[Monster Card] [%s] Level up complete.";
+"[Card Monstru] [%s] Nivel îndeplinit.";
+
+"[Okey Event] Amazing prizes await!";
+"[Eveniment Okey] Te aºteaptã premii fabuloase!";
+
+"[Okey Event] Defeat monsters, collect cards and play a game of okey.";
+"[Eveniment Okey] Învinge monºtrii, colecteazã carduri ºi joacã un joc okey.";
+
+"[Okey Event] If you make it into the top rankings, you have 7 days to collect your prize.";
+"[Eveniment Okey] Dacã te situezi în rangul clasamentului, ai 7 zile pentru a-şi colecta premiul.";
+
+"[Personal Premium Shop] %s has been sold. Please collect your money.";
+"[Magazin Premium Personal] %s s-a vândut. Te rugãm sã colectezi banii.";
+
+"[Personal Premium Shop] A shop has already been opened here. Please find another location to open your shop.";
+"[Magazin Premium Personal] Un magazin a fost deja deschis aici. Te rugãm sã gãseºti o altã locaşie pentru a deschide magazinul.";
+
+"[Personal Premium Shop] Collectable money will not be updated while you manage items.";
+"[Magazin Premium Personal] Banii colectaşi nu se vor actualiza în timp ce administrezi obiectele.";
+
+"[Personal Premium Shop] The shop is being prepared now.";
+"[Magazin Premium Personal] Magazinul este în pregãtire.";
+
+"[Personal Premium Shop] You can collect items in your personal shop.";
+"[Magazin Premium Personal] Nu poşi colecta obiectele din magazinul personal.";
+
+"[Personal Premium Shop] You can collect money in your personal shop.";
+"[Magazin Premium Personal] Nu poşi colecta banii din magazinul personal.";
+
+"[Personal Premium Shop] You can't open this, because you still have items to collect.";
+"[Magazin Premium Personal] Nu poşi deschide asta, pentru cã mai ai obiecte de colectat.";
+
+"[Personal Premium Shop] You can't open this, because you still have money to collect.";
+"[Magazin Premium Personal] Nu poşi deschide asta, pentru cã mai ai bani de colectat.";
+
+"[Personal Premium Shop] You cannot do that while managing items.";
+"[Magazin Premium Personal] Nu poşi face asta în timp ce administrezi obiectele.";
+
+"[Personal Premium Shop] You cannot duel here.";
+"[Magazin Premium Personal] Nu te poşi duela aici.";
+
+"[Personal Premium Shop] You cannot reopen your shop for %d seconds after closing it.";
+"[Magazin Premium Personal] Nu poşi redeschide magazinul timp de %d secunde dupã ce l-ai închis.";
+
+"[Personal Premium Shop] You cannot use items while opening your personal shop.";
+"[Magazin Premium Personal] Nu poşi folosi aceste obiecte în timp ce deschizi magazinul personal.";
+
+"[Personal Premium Shop] You cannot use that. Go to the village's Trade Administrator.";
+"[Magazin Premium Personal] Nu poşi folosi asta. Mergi la Gestionarã Negoş.";
+
+"[Personal Premium Shop] You cannot use the Personal Premium Shop while you have other windows open.";
+"[Magazin Premium Personal] Nu poşi folosi Magazin Premium Personal dacã ai alte ferestre deschise.";
+
+"[Personal Premium Shop] You don't have enough space in your inventory.";
+"[Magazin Premium Personal] Nu ai destul spaşiu în inventar.";
+
+"[Personal Premium Shop] You have already opened your personal shop.";
+"[Magazin Premium Personal] Ai deschis deja magazinul personal.";
+
+"[Relic Bonus] This is not possible while the Soul Relic window is open.";
+"[Bonus Relicvã] Nu este posibil în timp ce fereastra de Spirit Relicvã este deschisã.";
+
+"[Relic Bonus] You are already wearing a Soul Relic.";
+"[Bonus Relicvã] Porşi deja Spirit Relicvã.";
+
+"[Ritual of Blood] You don't have enough Yang.";
+"[Ritualul Sângelui] Nu ai suficient Yang.";
+
+"[Ritual of Blood] You don't have enough souls.";
+"[Ritualul Sângelui] Nu ai suficiente suflete.";
+
+"[Ritual of Blood] You don't have enough space in your inventory.";
+"[Ritualul Sângelui] Nu ai destul spaşiu în inventar.";
+
+"[Soul System] %s is already at the highest level.";
+"[Sistem Spirit] %s este deja la cel mai înalt nivel.";
+
+"[Soul System] The soul is active.";
+"[Sistem Spirit] Spiritul este activ.";
+
+"[Soul System] Use %s to receive the effect.";
+"[Sistem Spirit] Foloseºte %s pentru a primi efectul.";
+
+"[Storeroom] An item that is currently being used cannot be stored.";
+"[Inventar] Un obiect ce este momentan folosit, nu poate fi inventariat.";
+
+"[Sung Mahi Tower] A new ranking cycle has begun.";
+"[Turn Sung Mahi] O nouã rundã de ranguri a început.";
+
+"[Sung Mahi Tower] Break the seal with Sung Mahi's Sealstone!";
+"[Turn Sung Mahi] Rupe sigiliul cu o Piatrã Sigiliu Sung Mahi!";
+
+"[Sung Mahi Tower] Destroy the Demon Stone!";
+"[Turn Sung Mahi] Distruge piatra Demonilor!";
+
+"[Sung Mahi Tower] Kill all the monsters within the time limit!";
+"[Turn Sung Mahi] Ucide toşi monºtrii în limita de timp!";
+
+"[Sung Mahi Tower] The current ranking cycle has ended.";
+"[Turn Sung Mahi] Runda actualã de ranguri s-a încheiat.";
+
+"[Sung Mahi Tower] The key does not fit. Find another one and try again!";
+"[Turn Sung Mahi] Cheia nu se potriveºte. Gãseºte alta ºi încearcã din nou!";
+
+"[Sung Mahi Tower] You completed this level in %d seconds.";
+"[Turn Sung Mahi] Ai terminat acest nivel în %d secunde.";
+
+"[Sung Mahi Tower] You have to break another seal first!";
+"[Turn Sung Mahi] Trebuie sã rupi un alt sigiliu înainte!";
+
+"[TEST_ONLY]ÇöÀç ±¹°í : %d";
+"[TEST_ONLY]Impozit: %d";
+
+"[Transmutation] You cannot equip the transmuted item as it does not match your class.";
+"[Transformare] Nu poşi sã foloseºti obiectul tranformat deoarece nu se potriveºte cu clasa ta.";
+
+"[Transmutation] You cannot equip the transmuted item as it does not match your gender.";
+"[Transformare] Nu poşi sã foloseºti obiectul tranformat deoarece nu se potriveºte cu sexul tãu.";
+
+"[World boss] Caution: the world boss will appear soon!";
+"[ªeful lumii] Atenşie: ºeful lumii va apãrea curând.";
+
+"[World boss] Event completed";
+"[ªeful lumii] Eveniment încheiat";
+
+"[World boss] Event started";
+"[ªeful lumii] Eveniment început";
+
+"[World boss] In Channel %d, %s has appeared and is terrorising the area of %s. Let's go hunting!";
+"[ªeful lumii] Pe Canalul %d, a apãrut %s ºi înspãimântã şinutul %s. Sã mergem la vînãtoare!";
+
+"[World boss] Reward for Loot Level I in the rankings: %d";
+"[ªeful lumii] Recompensã pentru Nivel Pradã I în rang: %d";
+
+"[World boss] Rewards for Loot Level II in the rankings: %d";
+"[ªeful lumii] Recompensã pentru Nivel Pradã II în rang: %d";
+
+"[World boss] Rewards for Loot Level III in the rankings: %d";
+"[ªeful lumii] Recompensã pentru Nivel Pradã III în rang: %d";
+
+"[World boss] Rewards for Loot Level IV in the rankings: %d";
+"[ªeful lumii] Recompensã pentru Nivel Pradã IV în rang: %d";
+
+"[World boss] The World boss has escaped! Good luck next time.";
+"[ªeful lumii] ªeful lumii a scãpat! Mult noroc data viitoare.";
+
+"[World boss] The world boss in Channel %d has been attacked. Join the hunt now!";
+"[ªeful lumii] ªeful de pe Canalul %d a fost atacat. Mergi la vânãtoare acum!";
+
+"[World boss] Well done! Here is your reward. Join in next time as well!";
+"[ªeful lumii] Foarte bine! Poftim recompensa. Vino ºi data viitoare!";
+
+"[World boss] Well done: %s has been defeated and peace has been restored... for now.";
+"[ªeful lumii] Foarte bine: %s a fost învins ºi pacea a fost restauratã... pentru moment.";
+
+"[World boss] You can't receive a reward now, because you do not have enough space in your inventory.";
+"[ªeful lumii] Nu poşi primi o recompensã acum, deoarece nu ai suficient spaşiu în inventar.";
+
+"[World boss] You can't receive a reward now.";
+"[ªeful lumii] Nu poşi primi o recompensã acum.";
+
+"the level Heroic";
+"nivel Eroic";
+
+"the level Valiant";
+"nivel Curajos";
+
+"the level Wild";
+"nivel Sãlbatic";
+
+"the level Young";
+"nivel Tânãr";
+
+"°¡¸¸È÷ ÀÖÀ» ¶§¸¸ Âø¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Trebuie sã stai pe loc pentru a echipa obiectul.";
+
+"°¢Á¦±¹ ÁøÇà Á¤º¸";
+"Informaşii de succes ale regatelor.";
+
+"°¨Áö±â¸¦ ÀÛ¿ëÇÏ¿´À¸³ª °¨ÁöµÇ´Â ¿µ¼®ÀÌ ¾ø½À´Ï´Ù.";
+"Momentan nu este nicio Piatra Metin pe aceasta harta.";
+
+"°©¿ÊÀ» ¹ş¾î¾ß °³ÀÎ »óÁ¡À» ¿­ ¼ö ÀÖ½À´Ï´Ù.";
+"Poşi deschide magazinul dacã dezbraci armura.";
+
+"°ªÀ» Àß¸ø ÀÔ·ÂÇÏ¿´½À´Ï´Ù.";
+"Ai introdus o valoare greºitã.";
+
+"°­È­¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Intarirea a fost facuta cu succes.";
+
+"°­È­¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Întãrirea a eºuat.";
+
+"°­È­¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Nu ai materialele necesare pentru intarirea Pietrei Dragon.";
+
+"°­È­Ã¢À» ¿¬ »óÅÂ¿¡¼­´Â ¾ÆÀÌÅÛÀ» ¿Å±æ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poti muta obiectul in cadrul ferestrei de rafinament.";
+
+"°­È­ÇÒ ¼ö ¾ø´Â ¿ëÈ¥¼®ÀÔ´Ï´Ù.";
+"Aceasta Piatra Dragon nu poate fi folosita pentru intarire.";
+
+"°°Àº °³·®¼­¸¦ ÇÕÄ¥ ¼ö´Â ¾ø½À´Ï´Ù.";
+"Nu poşi uni pergamente ale îmbunãtãşirii identice.";
+
+"°°Àº Á¾·ùÀÇ ¸ŞÆ¾¼®Àº ¿©·¯°³ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi atasa mai multe pietre de acelasi fel.";
+
+"°°Àº Á¾·ùÀÇ À¯´ÏÅ© ¾ÆÀÌÅÛ µÎ °³¸¦ µ¿½Ã¿¡ ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi echipa acest obiect de douã ori.";
+
+"°°ÀÌ ÁöÀ» ¼ö ¾ø´Â Á¾·ùÀÇ °Ç¹°ÀÌ Áö¾îÁ® ÀÖ½À´Ï´Ù.";
+"Acest tip de clãdire poate fi construit doar o datã.";
+
+"°³·®µÈ ÈÄ ¾ÆÀÌÅÛÀÇ ·¹º§ Á¦ÇÑº¸´Ù ·¹º§ÀÌ ³·½À´Ï´Ù.";
+"Nivelul tãu este prea scãzut pentru a folosi acest obiect.";
+
+"°³·®À» ÇÏ±â À§ÇÑ µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Yang insuficient pentru upgrade.";
+
+"°³·®À» ÇÏ±â À§ÇÑ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"Nu ai materialul potrivit pentru a produce asta.";
+
+"°³ÀÎ»óÁ¡ »ç¿ëÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Dupã deschiderea Depozitului nu poşi folosi Pergamentul Oraºului timp de %d secunde.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡ Ã¢°í¸¦ ¿­¼ö ¾ø½À´Ï´Ù.";
+"Dupã un târg, trebuie sã aºtepşi %d secunde înainte de a deschide un magazin.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎµîÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Dupã un schimb de obiecte nu poşi folosi Pergamentul Oraºului timp de %d secunde.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡´Â ´Ù¸¥Áö¿ªÀ¸·Î ÀÌµ¿ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Timp de %d secunde de la negoş nu poşi pleca altundeva.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi folosi Pergamentul Oraºului în timp ce altã fereastrã este deschisã.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â ´Ù¸¥°÷À¸·Î ÀÌµ¿,Á¾·á ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Dupã negoş nu poşi pleca altundeva pentru un anumit timp.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â º¸µû¸®,ºñ´Üº¸µû¸®¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi deschide un lagãr atâta timp cât este deschisã altã fereastrã.";
+
+"°ÅÁş";
+"FALSE";
+
+"°Ç¹° ºñ¿ë Á¤º¸ ÀÌ»óÀ¸·Î °Ç¼³ ÀÛ¾÷¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Construcşia eºuatã datoritã unui preş de construcşie greºit.";
+
+"°Ç¹°À» ÁöÀ» ¼ö ¾ø´Â À§Ä¡ÀÔ´Ï´Ù.";
+"Aici nu poşi construi.";
+
+"°Ç¼³ ºñ¿ëÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Breasla ta nu are suficient Yang pentru a construi clãdirea.";
+
+"°Ç¼³¿¡ ÇÊ¿äÇÑ °Ç¹°ÀÌ Áö¾îÁ® ÀÖÁö ¾Ê½À´Ï´Ù.";
+"Clãdirea principalã trebuie construitã întâi.";
+
+"°ÔÀÓÀ» Á¾·á ÇÕ´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Vei fi deconectat de la server. Aºteaptã.";
+
+"°áÀç±â°£ÀÌ %dºĞ ÈÄ ¸¸·á µË´Ï´Ù.";
+"Timpul de joc îşi expirã în %d minute.";
+
+"°áÈ¥ »óÅÂ°¡ ¾Æ´Ï¸é °áÈ¥¹İÁö¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi purta un inel de cununie dacã nu eºti cãsãtorit.";
+
+"°áÈ¥½ÄÀÌ Á¾·áµË´Ï´Ù.";
+"Nunta ia în curând sfârºit.";
+
+"°áÈ¥ÇÏÁö ¾ÊÀº »óÅÂ¿¡¼­ ¿¹¹°À» Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi folosi acest obiect dacã nu eºti cãsãtorit.";
+
+"°æÇèÄ¡ %d%%";
+"Experienşã %d%%";
+
+"°æÇèÄ¡ %d%% Ãß°¡ È¹µæ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Bonusul de experienta este in momentul de fata de %d%%";
+
+"°æÇèÄ¡ ¹èÀ²";
+"Procentaj pentru punctele de experienşã";
+
+"°æÇèÄ¡°¡ ºÎÁ·ÇÏ¿© Ã¥À» ÀĞÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Nu o poti citi din cauza lipsei de experienta.";
+
+"°í±â°¡ ¹Ì³¢¸¸ »©¸Ô°í Àì½Î°Ô µµ¸ÁÄ¨´Ï´Ù.";
+"Ai pierdut momeala.";
+
+"°í±â°¡ ÀâÇû½À´Ï´Ù! (%s)";
+"Ai prins un peºte! (%s)";
+
+"°í±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"Peºtele a dispãrut în adâncurile apei.";
+
+"°î±ªÀÌ ¼ö·Ãµµ°¡ ÃÖ´ë(%d)°¡ µÇ¾ú½À´Ï´Ù.";
+"Punctele de exploatare au ajuns la maxim. (%d)";
+
+"°î±ªÀÌ°¡ ÃÖ´ë ¼ö·Ãµµ¿¡ µµ´ŞÇÏ¿´½À´Ï´Ù.";
+"Punctele de exploatare au ajuns la un nivel maxim.";
+
+"°î±ªÀÌ¸¦ µé°í ÀÖÁö ¾Ê¾Æ¼­ Ä¶ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi exploata nimic fãrã târnãcop.";
+
+"°î±ªÀÌ¸¦ ÀåÂøÇÏ¼¼¿ä.";
+"Ai nevoie de tîrnãcop pentru a extrage minereu!";
+
+"°î±ªÀÌÀÇ ¼ö·Ãµµ°¡ Áõ°¡ÇÏ¿´½À´Ï´Ù! (%d/%d)";
+"Punctele tale de exploatare au crescut! (%d%d)";
+
+"°ñµå µå·Ó·ü %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Nivelul de drop Yang este în momentul de faşã plus %d%%";
+
+"°ø°İ·Â +%d";
+"Putere de atac + %d";
+
+"°ø°İ·Â +%d%%";
+"Atac + %d%%";
+
+"°ø°İ¼Óµµ +%d";
+"Vitezã de atac +%d";
+
+"°øºÎÇÏ±â ½È¾îÁö³×.";
+"Nu vreau sã învãş mai departe.";
+
+"°üÀü ¸ğµå·Î ±æµåÀü¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"Poşi participa la luptã în modul spectator.";
+
+"°üÀü »óÅÂ¿¡¼­´Â ±³È¯À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi negocia la observare.";
+
+"°üÅë Ãß°¡ µ¥¹ÌÁö %d";
+"Pagubã arme albe plus %d";
+
+"±¹°í¿¡ µ·ÀÌ ºÎÁ·ÇÏ°Å³ª µ·À» °¡Á®¿Ã¼ö ¾ø´Â »óÈ²ÀÔ´Ï´Ù";
+"Nu ai Yang suficient.";
+
+"±¹°í¿¡ µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù. ÇöÀç : %u ÇÊ¿ä±İ¾× : %u";
+"Lipsã de impozite. Capital actual: %u capital lipsã: %u";
+
+"±¹°í¿¡ ÀÚ±İÀÌ ¸ğÀÚ¶ø´Ï´Ù ±¹°í : %d";
+"Încasãri din impozite insuficiente: %d";
+
+"±ºÁÖ Á¤º¸";
+"Inormaşiile împãratului";
+
+"±ºÁÖ°¡ ³»¸° Ãàº¹À¸·Î ¸ğµç ¿¡³ÊÁö°¡ °¡µæ Ã¤¿öÁı´Ï´Ù";
+"Datorita Binecuvantarii Liderului, energia va fi reflectata.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ë °¡´ÉÇÑ ±â´ÉÀÔ´Ï´Ù";
+"Aceastã funcşie poate fi folositã doar de împãrat.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ë°¡´É ÇÑ ±â´ÉÀÔ´Ï´Ù";
+"Doar împãratul poate folosi asta.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ëÇÒ¼ö ÀÖ´Â ±â´ÉÀÔ´Ï´Ù";
+"Doar un împãrat poate folosi asta.";
+
+"±ºÁÖÀÇ ±İ°­±Ç ¿µÇâÀ¸·Î ÀÌÁö¿ª %s À¯Àú´Â 3ºĞ°£ 10 %% ÀÇ ¹æ¾î·ÂÀÌ  Áõ°¡µË´Ï´Ù";
+"Prin domnitorul Geum-Gang-Gwon, jucãtorului %s îi este crescutã armura în acest şinut cu 10 %% timp de 3 minute.";
+
+"±ºÁÖÀÇ »çÀÚÈÄ ¿µÇâÀ¸·Î ÀÌÁö¿ª %s À¯Àú´Â 3ºĞ°£ 10 %% ÀÇ °ø°İ·ÂÀÌ  Áõ°¡µË´Ï´Ù";
+"Prin domnitorul Sa-Za-Hu, jucãtorului %s îi este crescutã puterea de atac în acest şinut cu 10 %% timp de 3 minute.";
+
+"±ºÁÖÀÇ ÀÚ°İÀ» °¡Áö°í ÀÖÁö ¾Ê½À´Ï´Ù";
+"Nu ai calificarea unui împãrat.";
+
+"±ºÁÖÀÇ Ãàº¹À¸·Î ÀÌÁö¿ª %s À¯Àú´Â HP,SP°¡ ¸ğµÎ Ã¤¿öÁı´Ï´Ù.";
+"Cand este folosita Binecuvantarea Liderului %s din PV si PM sunt refacute.";
+
+"±ºÁÖÀÇ Ãàº¹À» »ç¿ëÇÏ¿´½À´Ï´Ù.";
+"Binecuvantarea Liderului este activata.";
+
+"±ºÁ÷ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu îndeplineºti condişiile pentru a folosi acest obiect.";
+
+"±ÍÈ¯¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Teleportare eºuatã.";
+
+"±×°ÍÀ¸·Î ¼ö·ÃÀº ³¡³­ °Å¾ß!";
+"Antrenamentul s-a terminat.";
+
+"±×·¡, ÀÌ ´À³¦ÀÌ¾ß. Ã¼³»¿¡ ±â°¡ ¾ÆÁÖ Ãæ¸¸ÇØ.";
+"Se simte bine. Corpul meu e plin de Chi.";
+
+"±×·¡, ÃµÃµÈ÷. Á»´õ ÃµÃµÈ÷, ±×·¯³ª ¸·Èû ¾øÀÌ ºü¸£°Ô!";
+"Cam încet... dar continuu... fãrã oprire!";
+
+"±×·£µå ¸¶½ºÅÍ ¼ö·ÃÀ» ÇÒ ¼ö ¾ø´Â ½ºÅ³ÀÔ´Ï´Ù.";
+"Nu poşi antrena aceastã abilitate pânã la Mare Maestru.";
+
+"±×·± ¸í·É¾î´Â ¾ø½À´Ï´Ù";
+"Aceastã comandã nu existã.";
+
+"±×·± »ç¶÷ÀÌ ¾ø½À´Ï´Ù.";
+"Aceastã persoanã nu existã.";
+
+"±×·± ÀÌ¸§ ¶Ç´Â ¹øÈ£ÀÇ ±æµå°¡ ¾ø½À´Ï´Ù.";
+"O breaslã nu acest nume sau numãr nu existã.";
+
+"±Ù·Â +%d";
+"Putere +%d";
+
+"±Ù·ÂÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu eºti destul de puternic pentru a echipa acest obiect.";
+
+"±İ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Yang insuficient.";
+
+"±â¾ïµÈ À§Ä¡°¡ Å¸Á¦±¹¿¡ ¼ÓÇØ ÀÖ¾î¼­ ±ÍÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu te poşi teleporta într-un punct sigur într-un regat strãin.";
+
+"±â¾ïÇØ µÑ ¼ö ¾ø´Â À§Ä¡ ÀÔ´Ï´Ù.";
+"Nu poşi stoca aceastã locaşie.";
+
+"±âÀıÇÏÁö ¾ÊÀ½ %d%%";
+"Fãrã zãpãcealã %d%%";
+
+"±æµå¿¡ °¡ÀÔÇÏÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Nu te-ai alãturat breslei.";
+
+"±æµå¿ø";
+"Member";
+
+"±æµåÀå";
+"Leader";
+
+"±æµåÀü¿¡ Âü°¡ÇÑ »ó´ë¹æ ±æµå¿øÀÌ ¾Æ¹«µµ ¾ø½À´Ï´Ù.";
+"Nu existã inamici.";
+
+"±æµåÀüÀÌ ÀÏÂï Á¾·áµÇ¾î ¹«½ÂºÎ·Î ÆÇÁ¤ µÇ¾ú½À´Ï´Ù. (5ºĞÀÌ Áö³ªÁö ¾ÊÀ½)";
+"Deoarece rãzboiul s-a terminat mai devreme, s-a terminat cu o remizã.";
+
+"²Ş¼Ó¿¡¼­ ¾î¶»°Ô¿ä?";
+"În visele mele? Cum?";
+
+"³ª¹«²Û¸¦ ÅëÇØ ´ÙÀ½ ·¹º§ÀÇ °î±ªÀÌ·Î ¾÷±×·¹ÀÌµå ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Poşi merge la tãietorul de lemne Deokbae pentru a-şi upgrada Toporul.";
+
+"³ª¹«¿¡¼­ ºÎÅÍ ½ÅºñÇÑ ºûÀÌ ³ª¿É´Ï´Ù.";
+"O luminã misticã apare din copac.";
+
+"³ªº¸´Ù ³Ê¹« ³ôÀº ·¹º§ÀÇ ¸ó½ºÅÍ·Î´Â º¯½Å ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu te poşi transforma într-un monstru cu un nivel mai mare ca al tãu.";
+
+"³ªÀÇ ±ºÁÖ Á¤º¸";
+"Informaşiile împãratului ale mele.";
+
+"³ªÀÇ »ï°Å¸® ÁøÇàÁ¤º¸";
+"Informaşii despre lupta regatelor.";
+
+"³¬½Ã Áß¿¡ ¹Ì³¢¸¦ °¥¾Æ³¢¿ï ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi schimba momeala în timpul pescuitului.";
+
+"³¬½Ã´ë°¡ ¾Æ´Ñ ¹°°ÇÀ¸·Î ³¬½Ã¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù!";
+"Nu poşi pescui fãrã undişã!";
+
+"³¬½Ã´ë°¡ ÃÖ´ë ¼ö·Ãµµ¿¡ µµ´ŞÇÏ¿´½À´Ï´Ù.";
+"Ai atins numãrul maxim de puncte de pescuit.";
+
+"³¬½Ã´ë¸¦ ÀåÂø ÇÏ¼¼¿ä.";
+"Alege o undişã.";
+
+"³¬½Ã´ë¿¡ %s¸¦ ¹Ì³¢·Î ³¢¿ó´Ï´Ù.";
+"Ai agãşat %s în cârlig ca momealã.";
+
+"³¬½Ã´ëÀÇ ¼ö·Ãµµ°¡ Áõ°¡ÇÏ¿´½À´Ï´Ù! (%d/%d)";
+"Punctele tale de pescuit au crescut! (%d/%d)";
+
+"³¬½Ã¸¦ ÇÒ ¼ö ÀÖ´Â °÷ÀÌ ¾Æ´Õ´Ï´Ù";
+"Nu poşi pescui aici.";
+
+"³¬½ÃÀÌº¥Æ®¿ùÃ´ºØ¾î";
+"Eveniment pescãresc 'Cel mai bun pescar'";
+
+"³¬½ÃÀÌº¥Æ®À×¾î";
+"Eveniment pescãresc 'Puterea liniºtii'";
+
+"³²Àº »ı¸í·Â ¾çÀÌ ¸ğÀÚ¶ó »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu ai destule PV.";
+
+"³²Àº ½ºÅÈ Æ÷ÀÎÆ®°¡ ¾ø½À´Ï´Ù.";
+"Nu au mai rãmas puncte de status.";
+
+"³²Àº ½ºÅÈ Æ÷ÀÎÆ®°¡ Àû½À´Ï´Ù.";
+"Au mai rãmas prea puşine puncte de status.";
+
+"³²Àº Á¤½Å·Â ¾çÀÌ ¸ğÀÚ¶ó »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu ai destulã mana pentru a folosi asta.";
+
+"³Ê¹« °¡±îÀÌ ÀÖ½À´Ï´Ù.";
+"Eºti prea aproape.";
+
+"³Ê¹« ¸Ö¸® ÀÖ½À´Ï´Ù";
+"Eºti prea departe.";
+
+"³Ñ¾îÁöÁö ¾ÊÀ½ %d%%";
+"Fãrã cãzãturã %d%%";
+
+"³à¼®µéÀº ÀÌ°÷ ¼ºÁö¿¡ ÀÖÀ» ÀÚ°İÀ» ÀÒ¾ú´Ù. ¸ğµÎ ¼ºÁö¿¡¼­ ¹°·¯³ª°Å¶ó~~[ENTER][ENTER] 10ÃÊ ÈÄ¿¡ ¸ğµÎ ¸¶À»·Î ÀÌµ¿ÇÏ°Ô µË´Ï´Ù.";
+", nu ai niciun drept sa te aflii aici! Membrii regatului tau vor parasi locul sacru in 10 secunde.";
+
+"´À·ÁÁöÁö ¾ÊÀ½ %d%%";
+"Fãrã încetinire %d%%";
+
+"´ÔÀÇ ¸»";
+"Cal";
+
+"´Ù ÀĞ¾ú´Ù! ÀÌÁ¦ ºñ±Ş¿¡ ÀûÇôÀÖ´Â ´ë·Î Àü½Å¿¡ ±â¸¦ µ¹¸®±â¸¸ ÇÏ¸é,";
+"Am citit-o! Acum trebuie sã se împrãºtie Chi-ul în corpul meu.";
+
+"´Ù¸¥ °Å·¡Áß(Ã¢°í,±³È¯,»óÁ¡)¿¡´Â °³ÀÎ»óÁ¡À» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi folosi acum niciun magazin privat";
+
+"´Ù¸¥ °Å·¡Áß(Ã¢°í,±³È¯,»óÁ¡)¿¡´Â »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi crea dacã mai este deschisã o fereastrã de negoş-lagãr.";
+
+"´Ù¸¥ °Å·¡ÁßÀÏ°æ¿ì °³ÀÎ»óÁ¡À» ¿­¼ö°¡ ¾ø½À´Ï´Ù.";
+"Nu poşi deschide un magazin privat în timp ce altã fereastrã este deschisã.";
+
+"´Ù¸¥ °Å·¡Ã¢ÀÌ ¿­·ÁÀÖÀ»°æ¿ì °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Dacã o altã fereastrã este deschisã, nu poşi negocia cu altcineva.";
+
+"´Ù¸¥ °Å·¡Ã¢ÀÌ ¿­¸°»óÅÂ¿¡¼­´Â »óÁ¡°Å·¡¸¦ ÇÒ¼ö °¡ ¾ø½À´Ï´Ù.";
+"Nu poşi face negoş în timp ce altã fereastrã este deschisã.";
+
+"´Ù¸¥ Á¦±¹ À¯Àú´Â ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi recruta jucãtori din alte regate.";
+
+"´Ù¸¥ ÄÄÇ»ÅÍ¿¡¼­ ·Î±×ÀÎ ÇÏ¿© Á¢¼ÓÀ» Á¾·á ÇÕ´Ï´Ù.";
+"Cineva a intrat cu contul tãu. Vei fi deconectat.";
+
+"´Ù¸¥°Å·¡Ã¢ÀÌ ¿­¸°»óÅÂ¿¡¼­´Â Ã¢°í¸¦ ¿­¼ö°¡ ¾ø½À´Ï´Ù.";
+"Nu poşi deschide un Depozit în timp ce altã fereastrã este deschisã.";
+
+"´ÙÀ½ ¹®Á¦ ÁØºñÇØÁÖ¼¼¿ä.";
+"Pregãtit pentru urmãtoarea întrebare?";
+
+"´ÙÀÌ¾Æ¸óµå·Î ¼ÒÄÏÀ» Ãß°¡ÇØ¾ßÇÕ´Ï´Ù.";
+"Trebuie sã adaugi un suport dacã vrei sã foloseºti un diamant.";
+
+"´Ü°è °³·®¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Îmbunãtãşirea nivelului de claritate efectuat cu succes.";
+
+"´Ü°è °³·®¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Îmbunãtãşirea nivelului de claritate efectuat a eºuat.";
+
+"´Ü°è °³·®¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Acest obiect nu este necesar pentru rafinare.";
+
+"´Ü°è °³·®ÇÒ ¼ö ¾ø´Â ¿ëÈ¥¼®ÀÔ´Ï´Ù.";
+"Piatra Dragonului nu poate fi folosita pentru rafinare.";
+
+"´İ±â";
+"Închide";
+
+"´ç½ÅÀÌ ÁÖ»çÀ§¸¦ ±¼·Á %d°¡ ³ª¿Ô½À´Ï´Ù. (%d-%d)";
+"Ai aruncat zarurile. Ai primit %d (%d-%d).";
+
+"´ë·Ã °­Á¦ Á¾·á ¼º°ø";
+"Deul întrerupt cu succes.";
+
+"´ë·Ã °­Á¦ Á¾·á ½ÇÆĞ";
+"Duelul a fost întrerupt fãrã succes.";
+
+"´ë·Ã »ó´ë°¡ »ç¶óÁ® ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Duelul a fost încheiat deoarece inamicul tãu a dispãrut.";
+
+"´ë·Ã ½Ã°£ ÃÊ°ú·Î ´ë·ÃÀ» Áß´ÜÇÕ´Ï´Ù.";
+"Duelul va fi încheiat deoarece limita de timp a fost depãºitã.";
+
+"´ë·Ã ½ÃÀÛ¿¡ ¹®Á¦°¡ ÀÖ½À´Ï´Ù.";
+"Existã o problemã pentru a începe duelul.";
+
+"´ë·Ã Áß¿¡´Â ÀÌ¿ëÇÒ ¼ö ¾ø´Â ¹°Ç°ÀÔ´Ï´Ù.";
+"Nu poşi folosi acest obiect în duel.";
+
+"´ë·ÃÀÌ ¼º°øÀûÀ¸·Î ½ÃÀÛ µÇ¾ú½À´Ï´Ù.";
+"Început de duel reuºit.";
+
+"´ë·ÃÀÌ ½ÃÀÛµÇ¾ú½À´Ï´Ù.";
+"Duelul a început.";
+
+"´ë·ÃÀÚ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Duelul a luat sfârºit deoarece a apãrut o problemã cu participantul la duel.";
+
+"´ë·ÃÀÚ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Áß´ÜÇÕ´Ï´Ù.";
+"Duelul va fi oprit deoarece a apãrut o problema cu arena de duel.";
+
+"´ë·ÃÀÚ°¡ ¾ø½À´Ï´Ù.";
+"Nu existã participanşi la duel.";
+
+"´ë·ÃÀå ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Duelul va fi încheiat deoarece a apãrut o problema cu arena de duel.";
+
+"´ë·ÃÀå¿¡¼­ »ç¿ëÇÏ½Ç ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi folosi asta în arena de duel.";
+
+"´ë¹Ú°ñµå µå·Ó·ü %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Rata de drop pentru ploaia de Yang este cu %d%% mai mare.";
+
+"´õ ³ôÀº °æÁöÀÇ ¼ö·ÃÀ» ¼º°øÀûÀ¸·Î ³¡³»¼Ì½À´Ï´Ù.";
+"Ai încheiat cu succes antrenamentul cu cartea.";
+
+"´õ ÀÌ»ó OXÀÌº¥Æ® Âü°¡ÀÚ¸¦ ¹ŞÁö ¾Ê½À´Ï´Ù.";
+"OX Evenimentul nu mai acceptã participanşi.";
+
+"´õ ÀÌ»ó °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nicio altã îmbunãtãşire posibilã.";
+
+"´õ ÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu îşi mai poşi creºte aceastã abilitate.";
+
+"´õ ÀÌ»ó ½Â¸¶ ¼ö·Ã¼­¸¦ ÀĞÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi citi mai multe indicaşii de cãlãrie.";
+
+"´õ ÀÌ»ó ÀÌ ¾ÆÀÌÅÛÀ» ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Acest obiect nu mai poate fi îmbunãtãşit. Numãrul maxim de bonusuri a fost atins.";
+
+"´õÀÌ»ó ÀÌ ¾ÆÀÌÅÛÀ» ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Trebuie sã foloseºti Marmurã Binecuvântatã ca sã poşi adãuga încã un bonus acestui obiect.";
+
+"´õÀÌ»ó Ä³³¾ ¼ö ¾ø½À´Ï´Ù.";
+"Nu existã nimic de exploatat.";
+
+"´øÀü ¾È¿¡¼­´Â %s%s »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"%s%s nu poate fi folosit într-o temnişã.";
+
+"µ¶ ÀúÇ× %d%%";
+"Rezistenşã la otravã %d%%";
+
+"µ¶°ø°İ %d";
+"Atac otrãvit %d";
+
+"µ· %d ³ÉÀ» È¹µæÇß½À´Ï´Ù.";
+"Ai primit %d Yang.";
+
+"µ· ´ë¹ÚÀÌ ³ª¿Ã È®·ü";
+"Ratã drop ploaie de Yang";
+
+"µ· µå·ÓÀ² %.1f¹è";
+"Probabilitatea de a gãsi Yang %. 1f";
+
+"µ·ÀÌ ³ª¿Ã È®·ü";
+"Procent Yang droprate";
+
+"µ·ÀÌ ºÎÁ·ÇÏ°Å³ª ¾ÆÀÌÅÛÀÌ Á¦ÀÚ¸®¿¡ ¾ø½À´Ï´Ù.";
+"Yang insuficient sau lipsã de loc în inventar.";
+
+"µ¿¹°·ù ¸ó½ºÅÍ Å¸°İÄ¡ +%d%%";
+"Puterea de atac a calului împotriva monºtrilor +%d%%";
+
+"µ¿ÀÏÇÑ ¸Ó¸® ½ºÅ¸ÀÏ·Î´Â ±³Ã¼ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Porşi deja aceastã frizurã.";
+
+"µÎ¼Õ°Ë ¹æ¾î %d%%";
+"Apãrare sabie-2-mâini %d%%";
+
+"µĞ°© Áß¿¡´Â ´É·ÂÀ» ¿Ã¸± ¼ö ¾ø½À´Ï´Ù.";
+"Nu îşi poşi schimba statusul atâta timp cât eºti transformat.";
+
+"µĞ°© Áß¿¡´Â Âø¿ëÁßÀÎ Àåºñ¸¦ º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi schimba obiectul echipat în timp ce te transformi.";
+
+"µĞ°©¼­ ¼ö·ÃÀ» ¸¶Ãº½À´Ï´Ù. ½Å¼±¿¡°Ô Ã£¾Æ°¡¼¼¿ä.";
+"Ai învãşat transformarea.";
+
+"µĞ°©¿¡ ½ÇÆĞ ÇÏ¿´½À´Ï´Ù";
+"Eroare la transformare";
+
+"µĞ°©ÇÒ ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"Nu te poşi transforma cat timp cãlareºti.";
+
+"µåµğ¾î ³¡ÀÌ º¸ÀÌ´Â °Ç°¡...  ÀÌ ±â¼úÀº ÀÌÇØÇÏ±â°¡ ³Ê¹« Èûµé¾î..";
+"Aceste instrucşiuni sunt greu de înşeles. Am sã studiez în continuare.";
+
+"µî±Ş °³·®¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Rafinarea la nivelul urmator a fost cu succes.";
+
+"µî±Ş °³·®¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Rafinarea la clasa urmãtoare a eºuat.";
+
+"µî±Ş °³·®¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Acest obiect nu este necesar pentru îmbunãtãşirea nivelului de claritate.";
+
+"¶³¾îÁø ¾ÆÀÌÅÛÀº %dºĞ ÈÄ »ç¶óÁı´Ï´Ù.";
+"Obiectul aruncat va dispãrea dupã %d minute.";
+
+"¶³¾îÁø ¾ÆÀÌÅÛÀº 3ºĞ ÈÄ »ç¶óÁı´Ï´Ù.";
+"Obiectul cãzut va dispãrea în 5 minute.";
+
+"¶ß°Å¿î ¹«¾ùÀÌ °è¼Ó ¿ë¼ÚÀ½Ä¡°í ÀÖ¾î! ÀÌ°Ç, ÀÌ°ÍÀº!";
+"Antrenamentul pare sã funcşioneze deja...";
+
+"·¹º§ 20 ÀÌÇÏ´Â ÇÚµåÆù ¹øÈ£¸¦ µî·ÏÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nivelul tãu trebuie sã fie peste 20 pentru a putea înregistra un numãr de mobil.";
+
+"·¹º§ 30ÀÌ µÇ±â Àü¿¡´Â ½ÀµæÇÒ ¼ö ÀÖÀ» °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Trebuie sã ai minim nivelul 30 pentru a înşelege cartea asta.";
+
+"·¹º§ 50ÀÌ µÇ±â Àü¿¡´Â ½ÀµæÇÒ ¼ö ÀÖÀ» °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Trebuie sã ai minim nivelul 50 pentru a înşelege cartea asta.";
+
+"·¹º§ÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nivelul tãu este prea scãzut pentru a echipa acest obiect.";
+
+"·Î±×ÀÎ È­¸éÀ¸·Î µ¹¾Æ °©´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Înapoi la fereastra de login. Aºteaptã.";
+
+"·í·¿À» µ¹¸³´Ï´Ù. ±İ¾× %d";
+"Învârte ruleta pentru o sumã de %d Yang.";
+
+"¸¦";
+"pe";
+
+"¸¶¹ı °ø°İ·Â +%d";
+"Atac Magic + %d";
+
+"¸¶¹ı ¹æ¾î·Â +%d";
+"Apãrare magie + %d";
+
+"¸¶¹ı ÀúÇ× %d%%";
+"Rezistenşã la magie %d%%";
+
+"¸¶À½ÀÌ ¸¼¾ÆÁö´Â±º. °¡½¿À» Áş´©¸£´ø ¹«¾ğ°¡°¡ Á» °¡º­¿öÁø ´À³¦ÀÌ¾ß.";
+"Spiritul îşi este limpede. Acum te poşi concentra.";
+
+"¸¹Àº Âü¿© ºÎÅ¹µå¸³´Ï´Ù.";
+"Rugãm participarea multor jucãtori.";
+
+"¸» ¼ÒÈ¯ ¾ÆÀÌÅÛÀ» »ç¿ëÇÏ¼¼¿ä.";
+"Foloseºte un obiect pentru a striga un cal.";
+
+"¸» ¼ÒÈ¯¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Strigarea calului eºuatã.";
+
+"¸»¿¡°Ô %s%s ÁÖ¾ú½À´Ï´Ù.";
+"Ai hrãnit un cal cu %s%s.";
+
+"¸»¿¡°Ô »ç·á¸¦ ÁÖ¾ú½À´Ï´Ù.";
+"Ai hrãnit calul.";
+
+"¸»¿¡°Ô ¼±ÃÊ¸¦ ÁÖ¾ú½À´Ï´Ù.";
+"Ai hrãnit calul cu ierburi.";
+
+"¸»¿¡¼­ ¸ÕÀú ³»·Á¾ß ÇÕ´Ï´Ù.";
+"Trebuie sã cobori.";
+
+"¸»À» µ¹·Áº¸³Â½À´Ï´Ù.";
+"Şi-ai trimis calul departe.";
+
+"¸»À» ¸ÕÀú ¼ÒÈ¯ÇØÁÖ¼¼¿ä.";
+"Strigã-şi întâi calul.";
+
+"¸»À» ¼ÒÀ¯ÇÏ°í ÀÖÁö ¾Ê½À´Ï´Ù.";
+"Nu ai cal.";
+
+"¸»À» Åº »ó´ë¿Í °¨Á¤Ç¥ÇöÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poti folosi emotiile pe un jucator care se afla pe cal.";
+
+"¸»À» Åº »óÅÂ¿¡¼­ °¨Á¤Ç¥ÇöÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poti folosi emotiile in timp ce esti pe cal.";
+
+"¸»À» Åº »óÅÂ¿¡¼­ ¿¹º¹À» ÀÔÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Nu poti folosi asta in timpul calariei.";
+
+"¸»À» Åº »óÅÂ¿¡¼­´Â ¸ÔÀÌ¸¦ ÁÙ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi hrãni calul în timp ce cãlãreºti.";
+
+"¸»ÀÇ ½ºÅ×¹Ì³Ê°¡ ºÎÁ·ÇÏ¿© ¸»À» Å» ¼ö ¾ø½À´Ï´Ù.";
+"Rezistenşa calului tãu este prea scãzutã.";
+
+"¸»ÀÌ ¾ø½À´Ï´Ù. ¸¶±Â°£ °æºñº´À» Ã£¾Æ°¡¼¼¿ä.";
+"Niciun cal. Întreabã grãjdarul.";
+
+"¸»ÀÌ Á×¾îÀÖ´Â »óÅÂ ÀÔ´Ï´Ù.";
+"Calul tãu este mort.";
+
+"¸ÂÀ¸¸é O, Æ²¸®¸é X·Î ÀÌµ¿ÇØÁÖ¼¼¿ä";
+"Daca este corect: O, daca este gresit: X.";
+
+"¸Ó´Ï  ·ê·¿ ½ÃÀÛ.";
+"Porneºte ruleta de Yang.";
+
+"¸ÕÀú ´ÙÀÌ¾Æ¸óµå·Î ¾Ç¼¼¼­¸®¿¡ ¼ÒÄÏÀ» Ãß°¡ÇØ¾ßÇÕ´Ï´Ù.";
+"Trebuie sã adaugi un suport înainte. Foloseºte diamantul pentru a face asta.";
+
+"¸ÕÀú ¿ëÈ¥¼® Äù½ºÆ®¸¦ ¿Ï·áÇÏ¼Å¾ß ÇÕ´Ï´Ù.";
+"Inainte de a deschide Cor Draconis, trebuie sa termini misiunea Pietrelor Dragon si sa activezi Alchimia Piatra Dragon.";
+
+"¸ÕÀú ÀÏ¾î ³ª¼¼¿ä.";
+"Ridicã-te întâi.";
+
+"¸ÕÀú Àç°¡ºñ¼­¸¦ ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡½ÃÄÑ ÁÖ¼¼¿ä.";
+"Poşi folosi Marmurã Binecuvântatã cu un obiect care are deja 4 bonusuri.";
+
+"¸ŞÆ¾2ÀÎÁõ¹øÈ£: %s";
+"Cod de confirmare Metin2: %s";
+
+"¸ŞÆ¾¼® ºÎÂø¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Ai pus piatra cu succes.";
+
+"¸ŞÆ¾¼® ºÎÂø¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Piatra s-a spart în timp ce încercai s-o ataºezi.";
+
+"¸í·É¾î¸¦ ¸ğµÎ ÀÔ·ÂÇÏ¼¼¿ä.";
+"Introdu comanda întreagã.";
+
+"¸í·É¾îÀÇ ¼­ºê Ä¿¸Çµå°¡ Àß¸ø µÇ¾ú½À´Ï´Ù.";
+"Sub-comanda comenzii este greºitã.";
+
+"¸ğ´ÚºÒÀ» ÇÇ¿ï ¼ö ¾ø´Â ÁöÁ¡ÀÔ´Ï´Ù.";
+"Nu poşi face un foc de tabãrã aici.";
+
+"¸ó½ºÅÍ¿¡°Ô °­ÇÔ +%d%%";
+"Puternic împotriva monºtrilor + %d%%";
+
+"¸ö ¼ÓÀÌ ¶ß°Ì±º. ÇÏÁö¸¸ ¾ÆÁÖ Æí¾ÈÇØ. ÀÌ´ë·Î ±â¸¦ ¾ÈÁ¤½ÃÅ°ÀÚ.";
+"Ard în interior, dar îmi liniºteºte corpul. Chi-ul meu trebuie sã se stabilizeze.";
+
+"¸ö¿¡¼­ ¹º°¡ ÈûÀÌ ÅÍÁ® ³ª¿À´Â ±âºĞÀÌ¾ß!";
+"Corpul meu este plin de putere.";
+
+"¹«±â¿Í °©¿Ê¿¡¸¸ »ç¿ë °¡´ÉÇÕ´Ï´Ù.";
+"Poate fi folosit doar pentru arme si armuri.";
+
+"¹«´ç°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% Rezistenşã la Atacurile ªamanului.";
+
+"¹«´ç¿¡°Ô °­ÇÔ +%d%%";
+"Puternic împotriva ºamanilor + %d%%";
+
+"¹«·á °³·® ±âÈ¸´Â 20 ÀÌÇÏÀÇ ¹«±â¸¸ °¡´ÉÇÕ´Ï´Ù";
+"Îmbunãtãşirea gratuitã a obiectelor poate fi folositã pe arme pentru nivel maxim 20.";
+
+"¹«»ç°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% Rezistenşã la Atacurile Rãzboinicului";
+
+"¹«»ç¿¡°Ô °­ÇÔ +%d%%";
+"Puternic împotriva rãzboinicilor + %d%%";
+
+"¹®ÀÚ ¸Ş¼¼Áö Àü¼Û¿¡´Â 2000¿øÀÌ ÇÊ¿ä ÇÕ´Ï´Ù.";
+"Ai nevoie de 2000 DT pentru a trimite un SMS.";
+
+"¹®ÀÚ ¸Ş¼¼Áö Àü¼ÛÀº ·¹º§ 20ºÎÅÍ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Trebuie sã fi cel puşin la nivelul 20 pentru a trimite un SMS.";
+
+"¹®ÀÚ ¸Ş¼¼Áö¸¦ Àü¼Û Çß½À´Ï´Ù.";
+"SMS-ul a fost trimis.";
+
+"¹®Á¦ ÀÔ´Ï´Ù.";
+"Întrebare.";
+
+"¹®Á¦¸¦ ÃâÁ¦ÇÏ¿´½À´Ï´Ù.";
+"A intervenit o eroare.";
+
+"¹®Á¦¸¦ ÃâÁ¦ÇÏÁö ¸øÇß½À´Ï´Ù.";
+"Nu a apãrut nicio eroare.";
+
+"¹° ¼Ó¿¡ ¸ğ´ÚºÒÀ» ÇÇ¿ï ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi face un foc de tabãrã în apã.";
+
+"¹°¸®Å¸°İ½Ã ºí·° È®·ü %d%%";
+"%d%% ºansã de a bloca un atac corporal";
+
+"¹°¾à »ç¿ë½Ã %d%% ¼º´É Áõ°¡";
+"Creºterea eficienşei cu %d%% prin luarea porşiei";
+
+"¹°¾à Á¦Á¶¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Producerea licorii a eºuat.";
+
+"¹°¾à Á¦ÇÑÀÌ ¾ø½À´Ï´Ù.";
+"Nu existã limitã pentru licori.";
+
+"¹°¾à Á¶ÇÕÀ» À§ÇÑ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"Lipseºte material pentru amestecul licorii.";
+
+"¹°¾àÀ» %d °³ ±îÁö »ç¿ë °¡´ÉÇÕ´Ï´Ù.";
+"Poşi folosi pânã la %d licori.";
+
+"¹º°¡ ¸ö ¾È¿¡ ÈûÀÌ »ı±â´Â ±âºĞÀÎ °É.";
+"Mã simt reîmprospãtat.";
+
+"¹Ì³¢¸¦ ³¢°í ´øÁ® ÁÖ¼¼¿ä.";
+"Fixeazã întâi momeala în cârlig.";
+
+"¹ÎÃ¸ +%d";
+"Dexteritate +%d";
+
+"¹ÎÃ¸ÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Dexteritatea ta este prea scãzutã pentru a echipa acest obiect.";
+
+"¹Ğ±³·ù Å¸°İÄ¡ +%d%%";
+"Întãrirea atacului împotriva Milgyo + %d%%";
+
+"¹Ù¶÷ ÀúÇ× %d%%";
+"Rezistenşã la vânt %d%%";
+
+"¹æ¾î·Â +%d";
+"Armurã + %d";
+
+"¹æ¾î·Â +%d%%";
+"Apãrare + %d%%";
+
+"¹æ¿ï ¹æ¾î %d%%";
+"Apãrare clopot %d%%";
+
+"¹è ¼Ó¿¡¼­ Á¶°³°¡ ³ª¿Ô½À´Ï´Ù.";
+"În peºte se aflã o scoicã.";
+
+"¹è ¼Ó¿¡¼­ Áö··ÀÌ°¡ ³ª¿Ô½À´Ï´Ù.";
+"În peºte se aflã o râmã.";
+
+"¹ö¸± ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Nu poşi arunca acest obiect.";
+
+"º¯°æÇÒ ¼Ó¼ºÀÌ ¾ø½À´Ï´Ù.";
+"Nu ai nicio îmbunãtãşire care poate fi schimbatã.";
+
+"º¯½Å »óÅÂ¿¡¼­´Â ¸»¿¡ Å» ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi cãlãri atâta timp cât eºti transformat.";
+
+"º¯½ÅÁß¿¡´Â Ã¥À» ÀĞÀ»¼ö ¾ø½À´Ï´Ù.";
+"Nu poti citi o carte cat timp esti transformat.";
+
+"ºÎÂøÇÒ ¼ö ÀÖ´Â ½½·ÔÀÌ ¾ø½À´Ï´Ù.";
+"Nu este niciun slot liber.";
+
+"ºÎÃ¤ ¹æ¾î %d%%";
+"Apãrare evantai %d%%";
+
+"ºÒ¹ı ÇÁ·Î±×·¥ÀÌ °¨Áö µÇ¾î °ÔÀÓÀÌ Á¾·á µË´Ï´Ù.";
+"A fost descoperit software ilegal. Jocul va fi închis.";
+
+"ºñ¼Ó¾î³ª Àº¾î°¡ Æ÷ÇÔµÈ »óÁ¡ ÀÌ¸§À¸·Î »óÁ¡À» ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi da magazinului tãu un nume care nu este valabil.";
+
+"ºó º´ÀÌ ¸ğÀÚ¸¨´Ï´Ù.";
+"Nu ai destule sticle goale.";
+
+"»©³¾ ¼ö ÀÖ´Â ¸ŞÆ¾¼®ÀÌ ¾ø½À´Ï´Ù.";
+"Nu existã piatrã de scos.";
+
+"»©³¾ ¿µ¼®ÀÌ ¾ø½À´Ï´Ù";
+"Nicio piatra valabila pentru indepartare.";
+
+"»ç±Í Å¸¿ö ¿Ï·á º¸»óÀº ÇÑ¹ø±îÁö »ç¿ë°¡´ÉÇÕ´Ï´Ù.";
+"Poşi fi rãsplãtit doar o datã pentru sarcina turnului demonilor.";
+
+"»ç¿ë Á¦ÇÑ·®À» ÃÊ°úÇÏ¿´½À´Ï´Ù.";
+"Aceasta depãºeºte limita.";
+
+"»ç¿ë¹ı: transfer <name>";
+"Foloseºte: transfer <name>";
+
+"»ç¿ë¹ı: warpto <character name>";
+"Comandã: warpto <character name>";
+
+"»ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Aceastã funcşie nu poate fi folositã aici ºi acum.";
+
+"»ï°Å¸® ¸÷ ¸®Á¨";
+"Monºtri la lupta regatelor";
+
+"»ï°Å¸® ÀüÅõ Âü°¡Áß¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi folosi Pergamentul Oraºului în timp ce iei parte la Bãtãlia Regatelor.";
+
+"»ï°Å¸® ÀüÅõ¿¡¼­ %s ±¹°¡°¡ °¡Àå¸ÕÀú Å»¶ôÀ» ÇÏ¿´½À´Ï´Ù";
+"Regatul %s a fost infrant si este exclus din Lupta Regatelor.";
+
+"»ó´ë¹æ Ä³¸¯ÅÍ°¡ Á¢¼ÓÀ» Á¾·áÇÏ¿© ´ë·ÃÀ» ÁßÁöÇÕ´Ï´Ù.";
+"Inamicul de duel a fost deconectat. Duelul este întrerupt.";
+
+"»ó´ë¹æ Ä³¸¯ÅÍÀÇ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Inamicul de duel are probleme. Duelul va fi încheiat.";
+
+"»ó´ë¹æÀÇ µ·ÀÌ ºÎÁ·ÇÏ°Å³ª ¾ÆÀÌÅÛÀÌ Á¦ÀÚ¸®¿¡ ¾ø½À´Ï´Ù.";
+"Cealaltã persoanã nu are destul Yang sau destul loc în inventar.";
+
+"»ó´ë¹æÀÇ ¼ÒÁöÇ°¿¡ ºó °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"Cealaltã persoanã nu are destul loc în inventar.";
+
+"»ó´ë¹æÀÇ ÃÑ±İ¾×ÀÌ 20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© °Å·¡¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù..";
+"Jucãtorul are peste 2 Mrd. Yag. Nu poşi negocia cu el.";
+
+"»ó´ë¹æÀÌ %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"Jucãtorul joacã în canalul %d. (Tu eºti în canalul %d).";
+
+"»ó´ë¹æÀÌ ±³È¯ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"Cealaltã persoanã a întrerupt negoşul.";
+
+"»ó´ë¹æÀÌ ´Ù¸¥ °Å·¡¸¦ ÇÏ°í ÀÖ´Â ÁßÀÔ´Ï´Ù.";
+"Jucãtorul negociazã cu altul.";
+
+"»ó´ë¹æÀÌ ´Ù¸¥ °Å·¡ÁßÀÌ¶ó °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Cealaltã persoanã este ocupatã, de aceea nu poşi sã negociezi acum.";
+
+"»ó´ë¹æÀÌ ´ë·ÃÁßÀÔ´Ï´Ù.";
+"Jucãtorul tocmai se dueleazã.";
+
+"»ó´ë¹æÀÌ ¸Ş½ÅÁ® Ãß°¡ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"Jucãtorul a refuzat cererea ta de a fi adãugat la lista de prieteni.";
+
+"»ó´ë¹æÀÌ ¿Â¶óÀÎ »óÅÂ°¡ ¾Æ´Õ´Ï´Ù.";
+"Jucãtorul nu este online.";
+
+"»ó´ë¹æÀÌ ÀÖ´Â °÷À¸·Î ¿öÇÁÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu te poşi teleporta la jucãtor.";
+
+"»ó´ë¹æÀÌ Ä£±¸ Ãß°¡¸¦ ¹ŞÀ» ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"Nu poşi adãuga persoana care stã în faşa ta la lista de prieteni.";
+
+"»ó´ë¹æÀÌ ÆÄÆ¼¿¡ ¼ÓÇØÀÖÁö ¾Ê½À´Ï´Ù.";
+"Jucãtorul nu se aflã în grupã.";
+
+"»óÀÚ°¡ °©ÀÚ±â Æø¹ßÇÏ¿´½À´Ï´Ù! »ı¸í·ÂÀÌ °¨¼ÒÇß½À´Ï´Ù.";
+"Cutia a explodat deodatã! PV şi-au scãzut.";
+
+"»óÀÚ¿¡¼­ %s °¡ %d °³ ³ª¿Ô½À´Ï´Ù.";
+"Ai primit %s, %d unitãşi.";
+
+"»óÀÚ¿¡¼­ %s °¡ ³ª¿Ô½À´Ï´Ù.";
+"În cutie este %s.";
+
+"»óÀÚ¿¡¼­ ³ª¿Â ³ì»ö ¿¬±â¸¦ µéÀÌ¸¶½ÃÀÚ µ¶ÀÌ ¿Â¸öÀ¸·Î ÆÛÁı´Ï´Ù!";
+"Dacã inhalezi fumul verde care iese din cutie, corpul tãu se va umple cu otravã.";
+
+"»óÀÚ¿¡¼­ ³ª¿Â »¡°£ ¿¬±â¸¦ µéÀÌ¸¶½ÃÀÚ ¿òÁ÷ÀÌ´Â ¼Óµµ°¡ ´À·ÁÁ³½À´Ï´Ù!";
+"Dacã inhalezi fumul roºu din cutie îşi creºte repeziciunea.";
+
+"»óÀÚ¿¡¼­ ¸ó½ºÅÍ°¡ ³ªÅ¸³µ½À´Ï´Ù!";
+"Priveºte ce a ieºit din cutie!";
+
+"»óÀÚ¿¡¼­ ºÎÅÍ ½ÅºñÇÑ ºûÀÌ ³ª¿É´Ï´Ù.";
+"Din cutie iese luminã misterioasã.";
+
+"»óÁ¡°úÀÇ °Å¸®°¡ ³Ê¹« ¸Ö¾î ¹°°ÇÀ» »ì ¼ö ¾ø½À´Ï´Ù.";
+"Eºti prea departe de magazin pentru a cumpãra.";
+
+"»óÁ¡°úÀÇ °Å¸®°¡ ³Ê¹« ¸Ö¾î ¹°°ÇÀ» ÆÈ ¼ö ¾ø½À´Ï´Ù.";
+"Eºti prea departe de magazin pentru a vinde.";
+
+"»óÇ°À» ¹ŞÀ» ÀÎº¥Åä¸®°¡ ºÎÁ·ÇÕ´Ï´Ù. ÀÎº¥Åä¸®¸¦ ºñ¿öÁÖ¼¼¿ä!";
+"Nu ai destul spaşiu în inventar pentru a accepta aceasta recompensã.";
+
+"»ı°¢¸¸Å­ ÀĞ±â°¡ ½±Áö°¡ ¾Ê±º. ÀÌÇØµµ ¾î·Æ°í ³»¿ëµµ ³­ÇØÇØ.";
+"E mai complicat ºi mai greu de înşeles decât am crezut.";
+
+"»ı¸í·Â È¸º¹ +%d";
+"Odihna vieşii +%d";
+
+"¼­¹ö¿¡ Ä¡¸íÀûÀÎ ¿À·ù°¡ ¹ß»ıÇÏ¿© ÀÚµ¿À¸·Î ÀçºÎÆÃµË´Ï´Ù.";
+"O eroare criticã de server a intervenit. Serverul va fi restartat automat.";
+
+"¼±¾ÇÄ¡°¡ %d Áõ°¡ÇÏ¿´½À´Ï´Ù.";
+"Rangul tau a crescut cu %d puncte.";
+
+"¼±¾ÇÄ¡¸¦ ´õ ÀÌ»ó ¿Ã¸± ¼ö ¾ø½À´Ï´Ù.";
+"Punctele abilitãşilor nu mai pot fi mãrite.";
+
+"¼±ÅÃ ¸Ê Á¤º¸ ¼ºÁö %d Åë·Î %d %d %d";
+"Alege informaşiile hãrşii Pãmântului Sfânt %d trecere %d %d %d";
+
+"¼ºº°ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi folosi acest obiect deoarece sexul tãu nu corespunde.";
+
+"¼ºº°ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"Obiectul poate fi deschis doar de cãtre celãlalt sex.";
+
+"¼º¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖ´Â ±â´ÉÀÔ´Ï´Ù.";
+"Aceastã funcşie poate fi folositã doar în castel.";
+
+"¼ºÁö¿¡¼­ ºÎÈ° ±âÈ¸¸¦ ¸ğµÎ ÀÒ¾ú½À´Ï´Ù! ¸¶À»·Î ÀÌµ¿ÇÕ´Ï´Ù!";
+"Perioada de aºteptare a expirat. Vei re-învia în oraº.";
+
+"¼ºÁöÀÇ ¸¶¿Õ: ³ÊÈñ";
+"Spiritul locului sacru: [ENTER][ENTER]";
+
+"¼¼±İÀÌ %d %·Î ¼³Á¤µÇ¾ú½À´Ï´Ù";
+"Impozitul a fost stabilit la %d %%.";
+
+"¼Ë´Ù¿îÀÌ %dÃÊ ³²¾Ò½À´Ï´Ù.";
+"%d sec pânã la final.";
+
+"¼ÒÀ¯ µ·ÀÌ 20¾ï³ÉÀ» ³Ñ¾î °Å·¡¸¦ ÇÛ¼ö°¡ ¾ø½À´Ï´Ù.";
+"Ai mai mult de 2 Mrd. Yang la tine. Nu poşi negocia.";
+
+"¼ÒÁö±İÀÌ ºÎÁ·ÇÏ¿© ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu ai destul Yang pentru a folosi obiectul.";
+
+"¼ÒÁöÇ°¿¡ ºó °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"Nu este destul loc în inventar.";
+
+"¼ÒÁöÇÏ°í ÀÖ´Â ¾ÆÀÌÅÛÀÌ ³Ê¹« ¸¹½À´Ï´Ù.";
+"Porşi prea multe obiecte la tine.";
+
+"¼ÒÄÏ Ãß°¡¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Nici un suport adãugat.";
+
+"¼ÒÄÏÀÌ ¼º°øÀûÀ¸·Î Ãß°¡µÇ¾ú½À´Ï´Ù.";
+"Suportul a fost adãugat cu succes.";
+
+"¼ÒÈ¯ÇÒ¼ö ¾ø´Â ¸ó½ºÅÍ ÀÔ´Ï´Ù. ¼ÒÈ¯°¡´ÉÇÑ ¸ó½ºÅÍ´Â È¨ÆäÀÌÁö¸¦ ÂüÁ¶ÇÏ¼¼¿ä";
+"Monstrul nu poate fi strigat. Verificã numãrul mob.";
+
+"¼Ó¼º Ãß°¡¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Upgrade adaugat cu succes.";
+
+"¼Ó¼º Ãß°¡¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Niciun upgrade adaugat.";
+
+"¼Ó¼ºÀ» ¹Ù²ÛÁö %dºĞ ÀÌ³»¿¡´Â ´Ù½Ã º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.(%d ºĞ ³²À½)";
+"Poti face asta dupa %d Minute de la upgrade. (%d Minute ramase)";
+
+"¼Ó¼ºÀ» º¯°æÇÏ¿´½À´Ï´Ù.";
+"Ai schimbat îmbunãtãşirea.";
+
+"¼Ó¼ºÀ» º¯°æÇÒ ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Nu poti schimba upgradeul acestui obiect.";
+
+"¼ö¶ó°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% Rezistenta la Atacurile Sura";
+
+"¼ö¶ó¿¡°Ô °­ÇÔ +%d%%";
+"Puternic împotriva sura + %d%%";
+
+"¼ö·ÃÀÌ ½ÇÆĞ·Î ³¡³µ½À´Ï´Ù. ´Ù½Ã µµÀüÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.";
+"Antrenament eºuat. Încearcã mai târziu.";
+
+"¼ö·ÃÇÒ ¼ö ¾ø´Â ½ºÅ³ÀÔ´Ï´Ù.";
+"Nu poşi antrena aceastã abilitate.";
+
+"½ºÅ³ µ¥¹ÌÁö %d%%";
+"Paguba Abilitãşii %d%%";
+
+"½ºÅ³ µ¥¹ÌÁö ÀúÇ× %d%%";
+"Rezistenşã la Paguba Abilitãşii %d%%";
+
+"½ºÅ³ ·¹º§À» ³»¸®´Âµ¥ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Şi-a scãzut nivelul abilitãşii.";
+
+"½ºÅ³ ·¹º§À» ³»¸± ¼ö ¾ø½À´Ï´Ù.";
+"Nu îşi poşi scãdea nivelul abilitãşii.";
+
+"½ºÅÏ +%d";
+"Stea +%d";
+
+"½½·Î¿ì +%d";
+"Reducerea vitezei +%d";
+
+"½Â¸¶ ¼ö·Ã¼­ ÀÌÇØ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Nu ai înşeles indicaşiile de cãlãrie.";
+
+"½Â¸¶ ¼ö·Ã¼­¸¦ ÀĞ¾î ½Â¸¶ ½ºÅ³ Æ÷ÀÎÆ®¸¦ ¾ò¾ú½À´Ï´Ù.";
+"Ai citit Manualul de Cãlãrie ºi ai primit un Punct de Cãlãrie.";
+
+"½ÃÃ¼·ù Å¸°İÄ¡ +%d%%";
+"Întãrirea atacului împotriva Zombie + %d%%";
+
+"½Å¼ö±¹";
+"Regatul Shinsoo";
+
+"¾²·¯Áø »óÅÂ¿¡¼­´Â ¸»¿¡ Å» ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi urca pe cal atâta timp cât stai întins pe jos.";
+
+"¾²·¯Áø »óÅÂ¿¡¼­´Â ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi face asta cât timp eºti întins pe jos.";
+
+"¾Æ´Ï ¾î¶»°Ô µÈ °Ô Á¾ÀÏ ÀĞ¾îµµ ¸Ó¸®¿¡ ¾È µé¾î¿À³Ä.";
+"Citesc în continuu acelaºi rând.";
+
+"¾Æ¹«°Íµµ ¾òÀ» ¼ö ¾ø¾ú½À´Ï´Ù.";
+"Nu ai primit nimic.";
+
+"¾ÆÀÌÅÛ °³·®ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poti folosi Scroll-uri timp de %d dupa un schimb.";
+
+"¾ÆÀÌÅÛ µå·Ó·ü  %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Nivelul de drop obiecte este în momentul de faşã plus %d%%";
+
+"¾ÆÀÌÅÛ µå·ÓÀ² %.1f¹è";
+"Probabilitatea de a gãsi un obiect %. 1f";
+
+"¾ÆÀÌÅÛ ·ê·¿ ½ÃÀÛ.";
+"Porneºte ruleta obiectelor.";
+
+"¾ÆÀÌÅÛ Àü´Ş: %s ´Ô¿¡°Ô %s";
+"Negoş cu obiecte: %s, %s";
+
+"¾ÆÀÌÅÛ È¹µæ: %s";
+"Ai primit %s.";
+
+"¾ÆÀÌÅÛ È¹µæ: %s ´ÔÀ¸·ÎºÎÅÍ %s";
+"%s primeºte %s.";
+
+"¾ÆÀÌÅÛ·Î±×°¡ syslog ¿¡ ³²¾Ò½À´Ï´Ù";
+"Itemlog a fost pun în syslog.";
+
+"¾ÆÀÌÅÛÀ» °Ç³×ÁÙ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi renunşa la acest obiect.";
+
+"¾ÆÀÌÅÛÀÇ ·¹º§ Á¦ÇÑº¸´Ù ·¹º§ÀÌ ³·½À´Ï´Ù.";
+"Nivelul tãu este prea scãzut pentru a folosi acest obiect.";
+
+"¾ÆÀÌÅÛÀÌ ³ª¿Ã È®·ü";
+"Procent drop obiecte";
+
+"¾ÆÁ÷ °ñµå¸¦ ¹ö¸± ¼ö ¾ø½À´Ï´Ù.";
+"Încã nu poşi arunca Aurul.";
+
+"¾ÆÁ÷ ¸¶À»¿¡¼­ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù. (%d ÃÊ ³²À½)";
+"Încã nu poti restarta în oraº. Aºteaptã încã %d secunde.";
+
+"¾ÆÁ÷ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poate fi folosit inca.";
+
+"¾ÆÁ÷ ½Â¸¶ ½ºÅ³À» ¼ö·ÃÇÒ ¼ö ÀÖ´Â ·¹º§ÀÌ ¾Æ´Õ´Ï´Ù.";
+"Trebuie sã ai minim nivelul 50 pentru a învãşa sã cãlãreºti.";
+
+"¾ÆÁ÷ ÀÌ ¸Ó¸®¸¦ »ç¿ëÇÒ ¼ö ¾ø´Â ·¹º§ÀÔ´Ï´Ù.";
+"Nivelul tãu este prea scãzut pentru a purta aceastã frizurã.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù. (%dÃÊ ³²À½)";
+"Încã nu poşi restarta. Te rugãm aºteaptã încã %d secunde.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù.(%dÃÊ ³²À½ )";
+"Un nou start nu e posibil în acest moment.Te rugãm aºteaptã %d secunde.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù.(%dÃÊ ³²À½)";
+"Încã nu poşi restarta. Te rugãm aºteaptã încã %d secunde.";
+
+"¾Ç¸¶·ù Å¸°İÄ¡ +%d%%";
+"Întãrirea atacului împotriva diavolilor + %d%%";
+
+"¾È³çÇÏ¼¼¿ä. ¸ŞÆ¾2 ÀÔ´Ï´Ù.";
+"Bun Venit în Metin2.";
+
+"¾×¼ö°¡ 20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© °Å·¡¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù..";
+"Ai mai mult de 2 Mrd. Yang. Nu poşi face negoş.";
+
+"¾ç¼Õ°Ë ¹æ¾î %d%%";
+"Apãrare sabie-2-mâini %d%%";
+
+"¾î´ÀÁ¤µµ ÀÌ ±â¼ú¿¡ ´ëÇØ ÀÌÇØ°¡ µÇ¾úÁö¸¸ Á¶±İ ºÎÁ·ÇÑµí ÇÑµ¥..";
+"Fac progrese, dar încã nu am înşeles tot.";
+
+"¾îºÎ¸¦ ÅëÇØ ´ÙÀ½ ·¹º§ÀÇ ³¬½Ã´ë·Î ¾÷±×·¹ÀÌµå ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Du-te la Pescar ºi îmbunãtãşeºte-şi Undişa!";
+
+"¾òÀº Æ÷ÀÎÆ®·Î´Â ½Â¸¶ ½ºÅ³ÀÇ ·¹º§À» ¿Ã¸± ¼ö ÀÖ½À´Ï´Ù.";
+"Poti folosi acest punct pentru a perfectiona abilitatea de calarie.";
+
+"¾ó¸¶ ¾È ³²¾Ò¾î! Á¶±İ¸¸ ´õ!";
+"Aproape am reuºit! Încã puşin!";
+
+"¿©ÀÚ¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Doar femeile pot face asta.";
+
+"¿¬°è±â´Â ´õÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi antrena mai multe combo.";
+
+"¿­¼è°¡ ¸ÂÁö ¾Ê´Â °Í °°´Ù.";
+"Se pare cã aceastã cheie nu funcşioneazã.";
+
+"¿­¼è´Â ¸ÂÀ¸³ª ¾ÆÀÌÅÛ ÁÖ´Â ºÎºĞ ±¸ÇöÀÌ ¾ÈµÇ¾ú½À´Ï´Ù.";
+"Aceasta este cheia corectã.";
+
+"¿­¼è·Î ¿©´Â ¹°°ÇÀÌ ¾Æ´Ñ°Í °°´Ù.";
+"Acest obiect nu poate fi deschis cu o cheie.";
+
+"¿­¼è·Î Àá°Ü ÀÖ¾î¼­ ¿­¸®Áö ¾Ê´Â°Í °°´Ù. ¿­¼è¸¦ ±¸ÇØº¸ÀÚ.";
+"Încuiat. Ar trebui sã cauşi cheia.";
+
+"¿­½ÉÈ÷ ÇÏ´Â ¹è¿òÀ» °¡Áö´Â °Í¸¸ÀÌ ±â¼úÀ» ¹è¿ï¼ö ÀÖ´Â À¯ÀÏÇÑ ±æÀÌ´Ù..";
+"Am înşeles acest capitol. Dar trebuie sã muncesc din greu în continuare.";
+
+"¿­Á¤ÀÇ °¡¸éÀ» Âø¿ë½Ã¿¡¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Poşi face asta dacã porşi Masca Emoşiei.";
+
+"¿µ¼® °¨Áö±â°¡ ½Åºñ·Î¿î ºûÀ» ³»¸ç »ç¶óÁı´Ï´Ù.";
+"Busola pentru Pietrele Metin a dispãrut cu lumina misterioasã.";
+
+"¿µ¼® °¨Áö±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"Busola pentru Pietrele Metin a dispãrut.";
+
+"¿¹º¹À» ÀÔÀº »óÅÂ¿¡¼­ ¸»À» Å» ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi cãlãri atâta timp cât porşi o rochie de mireasã sau un smoking.";
+
+"¿ÜÄ¡±â´Â ·¹º§ %d ÀÌ»ó¸¸ »ç¿ë °¡´É ÇÕ´Ï´Ù.";
+"Ai nevoie de un nivel minim de %d pentru a putea striga.";
+
+"¿ÜÄ¡±â´Â À¯·áÈ¸¿ø¸¸ »ç¿ëÇÒ¼ö ÀÖ½À´Ï´Ù";
+"Ai nevoie de un nivel mai mare pentru a putea striga.";
+
+"¿ë½ÅÀÇ °¡È£·Î °æÇèÄ¡°¡ ¶³¾îÁöÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Prin binecuvântarea zeului zmeu nu ai pierdut experienşã.";
+
+"¿ë½ÅÀÇ º¸È£·Î ¾ÆÀÌÅÛÀÌ ¶³¾îÁöÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Prin protecşia zeului zmeu nu ai aruncat niciun obiect.";
+
+"¿ë½É ÃßÃâ¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Timpul ramas din Piatra Dragon a fost extras.";
+
+"¿ë½É ÃßÃâ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Durata de extragerea a timpului a eºuat.";
+
+"¿ëÈ¥¼® »óÀÚ°¡ È°¼ºÈ­µÇÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Piatra Dragon nu este activata.";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Piatra Dragon a fost înlocuitã.";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ½ÇÆĞÇÏ¿© %s¸¦ ¾ò¾ú½À´Ï´Ù.";
+"Înlocuirea Pietrei Dragon a eºuat. Dar ai primit urmãtoarele: %s";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Înlocuirea Pietrei Dragon a eºuat.";
+
+"¿î¿µÀÚ Á¦Á¦·Î Ã¤ÆÃÀÌ ±İÁö µÇ¾ú½À´Ï´Ù.";
+"Chat-ul tãu a fost blocat temporar pentru spam.";
+
+"¿õ±ÍÁ· Å¸°İÄ¡ +%d%%";
+"Întãrirea atacului împotriva Wonggui + %d%%";
+
+"¿ø·¡ À§Ä¡·Î º¹±Í";
+"Vei fi adus la locul inişial.";
+
+"¿ùº´ ¶Ç´Â Á¾ÀÚ ¸¦ »ç¿ëÇÏ¿´½À´Ï´Ù";
+"Plãcintã lunã sau seminşe folosite.";
+
+"¿ùº´,Á¾ÀÚ »ç¿ëÈÄ 5ÃÊµ¿¾È »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Poşi folosi plãcinta lunã doar o datã la 5 secunde.";
+
+"À¯·áÈ­ ¾ÆÀÌÅÛÀº °³ÀÎ»óÁ¡¿¡¼­ ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi vinde un obiect din Item-Shop într-un magazin privat.";
+
+"À»";
+"pe";
+
+"À»µÎÁö¸¦ ÅëÇÏ¿© ÀÔÀå °¡´ÉÇÕ´Ï´Ù.";
+"Prin acordul lui Uriel este permisã intrarea.";
+
+"ÀÌ °³·®¼­·Î °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi îmbunãtãşi cu acest pergament.";
+
+"ÀÌ °³·®¼­·Î ´õ ÀÌ»ó °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Pergamentul rãzboiului nu poate fi folosit pe obiecte cu +4 sau sub acestea.";
+
+"ÀÌ °÷¿¡¼­ ¿µ¼® °¨Áö±â°¡ µ¿ÀÛÇÏÁö ¾Ê´Â°Í °°½À´Ï´Ù.";
+"Busola pentru Pietrele Metin nu funcşioneazã în peºteri.";
+
+"ÀÌ °÷¿¡¼± ÀÌº¥Æ®¿ë °¨Áö±â°¡ µ¿ÀÛÇÏÁö ¾Ê´Â°Í °°½À´Ï´Ù.";
+"Detectorul de evenimente nu poate fi operat de aici.";
+
+"ÀÌ ¸ŞÆ¾¼®Àº ¹«±â¿¡ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi pune aceastã piatrã în armã.";
+
+"ÀÌ ¸ŞÆ¾¼®Àº Àåºñ¿¡ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Piatra Spiritului nu poate fi ataºatã la acest tip de obiect.";
+
+"ÀÌ ½ºÅ³Àº ¾ÆÁ÷ ±×·£µå ¸¶½ºÅÍ ¼ö·ÃÀ» ÇÒ °æÁö¿¡ ÀÌ¸£Áö ¾Ê¾Ò½À´Ï´Ù.";
+"Abilitatea ta este insuficientã pentru antrenamentul de Mare Maestru.";
+
+"ÀÌ ½ºÅ³Àº ¾ÆÁ÷ Ã¥À¸·Î ¼ö·ÃÇÒ °æÁö¿¡ ÀÌ¸£Áö ¾Ê¾Ò½À´Ï´Ù.";
+"Aceastã abilitate nu este destul de înaltã pentru a o antrena cu o carte.";
+
+"ÀÌ ½ºÅ³Àº Ã¥À¸·Î ´õÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu mai poşi antrena aceastã abilitate cu o carte.";
+
+"ÀÌ ¾ÆÀÌÅÛÀ¸·Î ¼ÒÄÏÀ» Ãß°¡ÇÒ ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Acestui obiect nu îi poate fi adãugat un suport.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº PC¹æ¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Acest obiect poate fi folosit doar într-un Internet Cafe.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Acest obiect nu poate fi îmbunãtãşit.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº º§Æ® ÀÎº¥Åä¸®·Î ¿Å±æ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poti tine acest obiect in inventarul curelei.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº ÀÌ ¹æ½ÄÀ¸·Î´Â °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Acest obiect nu poate fi îmbunãtãşit în acest fel.";
+
+"ÀÌ ¾ÆÀÌÅÛÀ» ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Aceste obiecte nu pot fi folosite împreunã.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó º¸¼®À» ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Pe acest obiect nu mai poşi adãuga pietre preşioase.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó ¼ÒÄÏÀ» Ãß°¡ÇÒ °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"Acestui obiect nu-i pot fi adãugate suporturi noi.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó ÀåÂøÇÒ ¼ÒÄÏÀÌ ¾ø½À´Ï´Ù.";
+"În aceste accesorii nu existã suport de echipat cu pietre preşioase.";
+
+"ÀÌ Ã¥À¸·Î´Â ´õ ÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Cu aceastã carte nu te poşi antrena mai departe.";
+
+"ÀÌ Ã¥Àº ³Ê¹« ¾î·Á¿ö ÀÌÇØÇÏ±â°¡ Èûµì´Ï´Ù.";
+"Aceastã carte este prea greu de înşeles.";
+
+"ÀÌ Ã¥Àº ³Ê¹« ¾î·Á¿ö¼­ ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Cartea este prea grea pentru a exersa.";
+
+"ÀÌ Ã¥Àº ¾Æ¹«¸® ºÁµµ µµ¿òÀÌ µÉ °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Aceastã carte nu te ajutã mai departe.";
+
+"ÀÌ Ã¥À» ÀĞÀ¸·Á¸é ·¹º§À» ´õ ¿Ã·Á¾ß ÇÕ´Ï´Ù.";
+"Trebuie sã avansezi nivelul pentru a putea citi aceastã carte.";
+
+"ÀÌ Çàµ¿Àº »óÈ£µ¿ÀÇ ÇÏ¿¡ °¡´É ÇÕ´Ï´Ù.";
+"Pentru aceastã acşiune ai nevoie de acordul partenerului tãu de joc.";
+
+"ÀÌµ¿ µÇ¾îÁú À§Ä¡¿Í ³Ê¹« °¡±î¿ö ±ÍÈ¯ºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi folosi Pergamentul Oraºului deoarece distanşã este prea micã.";
+
+"ÀÌµ¿¼Óµµ %d";
+"Viteza de Miscare %d";
+
+"ÀÌµ¿ÇÒ ÁØºñ°¡ µÇ¾îÀÖÀ½À¸·Î ±ÍÈ¯ºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù";
+"Nu poşi folosi Pergamentul Oraºului.";
+
+"ÀÌ·¡¼­¾ß °øºÎ°¡ ¾ÈµÈ´Ù±¸.";
+"E greu sã mã concentrez. Ar trebui sa iau o pauzã.";
+
+"ÀÌ¹Ì °°Àº Á¾·ùÀÇ ¿ëÈ¥¼®À» Âø¿ëÇÏ°í ÀÖ½À´Ï´Ù.";
+"Deti deja o Piatra Dragon de acest tip.";
+
+"ÀÌ¹Ì ²ÈÇôÀÖ´ø ¹Ì³¢¸¦ »©°í %s¸¦ ³¢¿ó´Ï´Ù.";
+"Schimbi momeala actualã cu %s.";
+
+"ÀÌ¹Ì µĞ°©ÁßÀÎ »óÅÂÀÔ´Ï´Ù.";
+"Te-ai transformat deja.";
+
+"ÀÌ¹Ì ¼±ÀüÆ÷°í ÁßÀÎ ±æµåÀÔ´Ï´Ù.";
+"Ai declarat rãzboi acestei bresle.";
+
+"ÀÌ¹Ì ¿Ïº®ÇÏ°Ô ¾Ë¾ÆµéÀ» ¼ö ÀÖ´Â ¾ğ¾îÀÌ´Ù.";
+"Înşelegi deja aceastã limbã.";
+
+"ÀÌ¹Ì ÀÔÈÄº¸µÇ¾îÀÖ½À´Ï´Ù";
+"Existã deja o candidaturã.";
+
+"ÀÌ¹Ì Àåºñ¸¦ Âø¿ëÇÏ°í ÀÖ½À´Ï´Ù.";
+"Ai deja echipat acest tip de Piatra Dragon.";
+
+"ÀÌ¹Ì ÀüÀïÀÌ ³¡³µ½À´Ï´Ù.";
+"Rãzboiul s-a terminat.";
+
+"ÀÌ¹Ì Á¦Á¶Ã¢ÀÌ ¿­·ÁÀÖ½À´Ï´Ù.";
+"Fereastra de creare este deschisã deja.";
+
+"ÀÌ¹Ì Å»°ÍÀ» ÀÌ¿ëÁßÀÔ´Ï´Ù.";
+"Deja cãlareºti. Da-te jos prima datã.";
+
+"ÀÌ¹Ì ÆÄÆ¼¿¡ ¼ÓÇØ ÀÖÀ¸¹Ç·Î °¡ÀÔ½ÅÃ»À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi accepta invitaşia, deoarece eºti deja în grupã.";
+
+"ÀÌ¹Ì È¿°ú°¡ °É·Á ÀÖ½À´Ï´Ù.";
+"Îºi face deja efectul.";
+
+"ÀÌ¹ÌÅõÇ¥¸¦ ÇßÀ½";
+"Ales deja.";
+
+"ÀÌ¹ø¿¡ ÀâÀº ¹°°í±âÀÇ ±æÀÌ´Â %.2fcm";
+"Lungimea peºtelui prins este de %.2cm.";
+
+"ÀÌº¥Æ®¿ë °¨Áö±â°¡ ½Åºñ·Î¿î ºûÀ» ³»¸ç »ç¶óÁı´Ï´Ù.";
+"Detectorul de evenimente a dispãrut cu lumina misterioasã.";
+
+"ÀÌº¥Æ®¿ë °¨Áö±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"Detectorul de evenimente a dispãrut.";
+
+"ÀÌ¼º°£¿¡¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Aceastã acşiune poate fi realizatã doar cu sexul opus.";
+
+"ÀÌÁ¦ Á» ½½½½ °¡´ÚÀÌ ÀâÈ÷´Â °Í °°Àºµ¥.";
+"Acum o înşeleg!";
+
+"ÀÌÁ¦ Ã¥ÀÇ ¸¶Áö¸· ÀåÀÌ¾ß! ¼ö·ÃÀÇ ³¡ÀÌ ´«¿¡ º¸ÀÌ°í ÀÖ¾î!";
+"Am ajuns la ultima paginã a cãrşii! Antrenamentul e aproape gata!";
+
+"ÀÎ°£·ù ¸ó½ºÅÍ Å¸°İÄ¡ +%d%%";
+"Puterea de atac a jucãtorului împotriva monºtrilor +%d%%";
+
+"ÀÎº¥Åä¸®°¡ ²Ë Â÷¼­ ³»¸± ¼ö ¾ø½À´Ï´Ù.";
+"Inventarul tãu e plin. Obiectul nu poate fi ridicat.";
+
+"ÀÎÁõ¹øÈ£°¡ Æ²·È½À´Ï´Ù. ´Ù½Ã ½ÃµµÇÏ¼¼¿ä.";
+"Codul de confirmare este greºit. Mai încearcã odatã.";
+
+"ÀÔ·ÂÇÏ½Å ÀÌ¸§À» °¡Áø »ç¿ëÀÚ°¡ ¾ø½À´Ï´Ù.";
+"Nu existã niciun jucãtor cu numele introdus de tine.";
+
+"ÀÚ°´°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% Rezistenta la Atacurile Ninja";
+
+"ÀÚ°´¿¡°Ô °­ÇÔ +%d%%";
+"Puternic împotriva ninja + %d%%";
+
+"ÀÚµ¿À¸·Î ³ª°¡°ÔµË´Ï´Ù.";
+"Va fi pãrãsit automat.";
+
+"ÀÚ½ÅÀ» ¼±ÅÃÇÏ½Ã¸é ¹ÛÀ¸·Î ³ª°¥ ¼ö ÀÖ´Â <°ü¶÷ Á¾·á> ¹öÆ°ÀÌ ³ª¿É´Ï´Ù.";
+"La alegerea caracterului apare o icoanã.";
+
+"ÀÚ½ÅÀ» ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu te poşi recruta singur.";
+
+"ÀÚÀç°¡ ºÎÁ·ÇÏ¿© °Ç¼³ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu ai destul material pentru a construi.";
+
+"Àß¸øµÈ µĞ°© ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Acesta este obiectul nepotrivit pentru transformare.";
+
+"Àß¸øµÈ ¼±ÅÃÀ» Çß½À´Ï´Ù";
+"Alegerea este greºitã.";
+
+"Àá½Ã ÈÄ OX ÀÌº¥Æ®¸¦ ´Ù½Ã ½ÃÀÛÇÏ°Ú½À´Ï´Ù.";
+"Evenimentul OX va începe în scurt timp.";
+
+"Àá½Ã ÈÄ ¸¶À»·Î ÀÌµ¿µÇ°Ú½À´Ï´Ù.";
+"Jucãtorul va fi teleportat în oraº în scurt timp.";
+
+"Àá½ÃÈÄ ¸ğµÎ ¸¶À»·Î ÀÌµ¿µË´Ï´Ù.";
+"Toşi vor fi teleportaşi în oraº.";
+
+"Àá½ÃÈÄ ÇØ´ç ¸¶À»Àº  ¸¶À»·Î ÀÌµ¿µË´Ï´Ù.";
+"Toşi vor fi teleportaşi în oraº în scurt timp.";
+
+"ÀåºñÁßÀÎ ¾ÆÀÌÅÛÀº °³ÀÎ»óÁ¡¿¡¼­ ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Obiectele echipate nu pot fi vândute în magazinul privat.";
+
+"ÀåÂø¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Echipare reuºitã.";
+
+"ÀåÂø¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Echipare eºuatã.";
+
+"Àç·á(%s)°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"Nu ai destul material (%s).";
+
+"ÀúÁÖ µÇµ¹¸®±â È®·ü %d%%";
+"Reflecteazã blestem: %d%%";
+
+"Àû¿ë ·¹º§º¸´Ù ³ô¾Æ »ç¿ëÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.";
+"Nivelul obiectului tau este prea mare.";
+
+"ÀûÇÕÇÏÁö ¾ÊÀº ±æµå ÀÌ¸§ ÀÔ´Ï´Ù.";
+"Numele breslei nu este valabil.";
+
+"Àü±â ÀúÇ× %d%%";
+"Rezistenşã la electricitate %d%%";
+
+"ÀüÀï ¼­¹ö°¡ ¿­·ÁÀÖÁö ¾Ê¾Æ ±æµåÀüÀ» ½ÃÀÛÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Lupta breslelor nu poate începe, deoarece serverul nu este online.";
+
+"ÀüÁ¦±¹";
+"Toate regatele";
+
+"ÀüÅõ°¡ ½ÃÀÛ µÇ¾î Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"Actiune intrerupta. Batalie in desfasurare.";
+
+"Á¤´äÀº";
+"Rãspunsul corect este:";
+
+"Á¤´äÀÔ´Ï´Ù!";
+"Corect!";
+
+"Á¤»óÀûÀ¸·Î ÅõÇ¥¸¦ÇÏ¿´½À´Ï´Ù.";
+"Ales regulamentar.";
+
+"Á¤½Å·Â È¸º¹ +%d";
+"Odihna mana +%d";
+
+"Á¦Á¶ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù";
+"Nu ai materialul potrivit.";
+
+"Á¦Á¶¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Îmbunãtãşirea obiectului tãu nu a avut succes.";
+
+"Á¦Á¶Ã¢ÀÌ ¿­·ÁÀÖÁö ¾Ê½À´Ï´Ù";
+"Fereastra de creare nu este deschisã.";
+
+"Á¶°³°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"Scoica a dispãrut.";
+
+"Á¶°³¿¡¼­ µ¹Á¶°¢ÀÌ ³ª¿Ô½À´Ï´Ù.";
+"În scoicã vei gãsi o simplã Bucatã de Piatrã.";
+
+"Á¶°³¿¡¼­ ¹éÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"În scoicã se aflã o perlã albã.";
+
+"Á¶°³¿¡¼­ Ã»ÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"În scoicã se aflã o perlã albastrã.";
+
+"Á¶°³¿¡¼­ ÇÇÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"În scoicã se aflã o perlã viºinie.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â °Ç¹°ÀÔ´Ï´Ù.";
+"Clãdirea nu existã.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â ¾ÆÀÌÅÛ ÀÔ´Ï´Ù";
+"Acest obiect nu existã.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â Ä³¸¯ÅÍ ÀÔ´Ï´Ù.";
+"Caracterul nu existã.";
+
+"ÁÁ¾Æ, ÀÌ ±â¼¼·Î °è¼Ó ³ª°£´Ù!";
+"Bine, trebuie sã rãmân concentrat în continuare!";
+
+"ÁÁ¾Ò¾î! Á¶±İ¸¸ ´õ ÀĞÀ¸¸é ³¡ÀÌ´Ù!";
+"Aproape am terminat de citit!";
+
+"ÁÖ¾È¼ú¼­¸¦ ÅëÇØ ÁÖÈ­ÀÔ¸¶¿¡¼­ ºüÁ®³ª¿Ô½À´Ï´Ù.";
+"Cu ajutorul unui Pergament de Exorcizare ai scãpat de blestemul spiritelor rele.";
+
+"Á×Àº ¸»¿¡°Ô »ç·á¸¦ ¸ÔÀÏ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi hrãni un cal mort.";
+
+"Á×Àº Á¤º¸ %s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d";
+"%s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d";
+
+"Á×Áö ¾ÊÀº ¸»¿¡°Ô ¼±ÃÊ¸¦ ¸ÔÀÏ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi hrãni un cal viu cu Iarba Maimuşei. E folositã pentru a re-învia caii morşi.";
+
+"Áö±İºÎÅÍ %sÀº 30ºĞ°£ ºÀÈ­¸¦ ÆÄ±«ÇÏ¿© º¸»óÀ» È¹µæ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Pentru 30 de minute de acum înainte %s poate fi rãsplãtit pentru distrugerea focului de iluminare.";
+
+"Áö´É +%d";
+"Inteligenşã +%d";
+
+"Áö´ÉÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Inteligenşa ta este prea scãzutã pentru a echipa acest obiect.";
+
+"Á÷Á¢ Å¸°İÄ¡ ¹İ»ç È®·ü : %d%%";
+"Reflecteazã atac direct: %d%%";
+
+"Áø³ë±¹";
+"Regatul Jinno";
+
+"Âø¿ë ÁßÀÎ ¾ÆÀÌÅÛÀº ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi vinde obiectele echipate.";
+
+"Âø¿ë ÁßÀÎ ¿ëÈ¥¼®Àº ÃßÃâÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Aceasta Piatra Dragon nu poate fi inlaturata.";
+
+"Âü";
+"TRUE";
+
+"Ã¢°í,°Å·¡Ã¢µîÀÌ ¿­¸° »óÅÂ¿¡¼­´Â °³·®À» ÇÒ¼ö°¡ ¾ø½À´Ï´Ù";
+"Nu poşi sã îmbunãtãşeºti nimic dacã o altã fereastrã este deschisã.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Poşi face negoş dinnou peste %d sec.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Dupã deschiderea Depozitului nu poşi folosi Pergamentul Oraºului timp de %d secunde.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â ´Ù¸¥°÷À¸·Î ÀÌµ¿ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Nu poti merge nicaieri timp de %d secunde de la folosirea Depozitului.";
+
+"Ã¤±¤¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Exploatarea a reuºit.";
+
+"Ã¤±¤¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Exploatarea a eºuat.";
+
+"Ã¤±¤À» Áß´ÜÇÏ¿´½À´Ï´Ù.";
+"Exploatarea a luat sfârºit.";
+
+"Ã¤ÆÃ ±İÁö »óÅÂÀÔ´Ï´Ù.";
+"Chatul tãu este blocat.";
+
+"Ã¤ÆÃ ±İÁö°¡ Ç®·È½À´Ï´Ù.";
+"Blocarea chat-ului tãu a fost anulatã.";
+
+"Ã¥À¸·Î ´õ ³ôÀº °æÁöÀÇ ¼ö·ÃÀ» ¼º°øÀûÀ¸·Î ³¡³»¼Ì½À´Ï´Ù.";
+"Ai încheiat cu succes antrenamentul cu cartea.";
+
+"Ã¥Àåµµ ÀÌÁ¦ ¾ó¸¶ ³²Áö ¾Ê¾Ò±º.";
+"Au rãmas doar câteva pagini, apoi voi termina de citit.";
+
+"ÃµÁ¶±¹";
+"Regatul Chunjo";
+
+"Ã»¼ÒÇÒ ¼®ÀÌ ¹ÚÇôÀÖÁö ¾Ê½À´Ï´Ù.";
+"Nu e nicio bucatã din Piatra Spartã disponibilã pentru înlãturare.";
+
+"Ã¼·Â +%d";
+"Rezistenşã +%d";
+
+"Ã¼·ÂÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vitalitatea ta este prea scãzutã pentru a echipa acest obiect.";
+
+"ÃÑ ÄûÁî ¼ö: %d";
+"Numãrul de puncte al quiz-ului: %d";
+
+"ÃÖ´ë »ı¸í·Â +%d";
+"Puncte de viaşã +%d";
+
+"ÃÖ´ë »ı¸í·Â +%d%%";
+"Viaşã maximã +%d%%";
+
+"ÃÖ´ë Á¤½Å·Â +%d";
+"Puncte de mana +%d";
+
+"ÃÖ´ë Á¤½Å·Â +%d%%";
+"Viaşã maximã +%d%%";
+
+"ÃÖ´ë Áö±¸·Â +%d";
+"Rezistenşã maximã + %d";
+
+"Ãàº¹ÀÇ ¼­¿Í ÇöÃ¶À» ÇÕÄ¥ ¼ö ÀÖ½À´Ï´Ù.";
+"Poti combina Pergamentul Binecuvântat cu Minereul de Fier Magic.";
+
+"Ãâ¸¶¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù";
+"Nu poate fi propus spre alegere.";
+
+"ÃæÀüÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poti incarca aceasta Piatra Dragon.";
+
+"Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"Logout-ul a fost întrerupt.";
+
+"Ä³¸¯ÅÍ¸¦ ÀüÈ¯ ÇÕ´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Schimbi caracterul. Aºteaptã.";
+
+"ÄğÅ¸ÀÓ -%d";
+"Timp de stingere -%d";
+
+"ÄğÅ¸ÀÓ Àû¿ëÁß  %d ÈÄ »ç¿ë°¡´É";
+"Se pregãteºte. Folosire posibilã dupã %d";
+
+"Äù½ºÆ®¸¦ ·ÎµåÇÏ´Â ÁßÀÔ´Ï´Ù. Àá½Ã¸¸ ±â´Ù·Á ÁÖ½Ê½Ã¿À.";
+"Cererea este în curs de încãrcare. Ai rãbdare.";
+
+"Å©À¹, ±â°¡ ¿ª·ùÇÏ°í ÀÖ¾î! ÀÌ°Å ¼³¸¶ ÁÖÈ­ÀÔ¸¶ÀÎ°¡!? Á¨Àå!";
+"Of, nu a reuºit. La naiba!";
+
+"Å¬¶óÀÌ¾ğÆ® ¹öÀüÀÌ Æ²·Á ·Î±×¾Æ¿ô µË´Ï´Ù. Á¤»óÀûÀ¸·Î ÆĞÄ¡ ÈÄ Á¢¼ÓÇÏ¼¼¿ä.";
+"Versiunea ta de client este greºitã. Instaleazã patch-ul normal.";
+
+"Å¸°İÄ¡ %d%% ¸¦ »ı¸í·ÂÀ¸·Î Èí¼ö";
+"Absorbire viaşã la atac %d%%.";
+
+"Å¸·ÂÄ¡ %d%% ¸¦ Á¤½Å·ÂÀ¸·Î Èí¼ö";
+"Absorbire mana la atac %d%%.";
+
+"Å¸Á¦±¹ À¯Àú´Â ¼ÒÈ¯ ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Nu poşi aduna jucãtori strãini.";
+
+"Å¸Á¦±¹ À¯Àú¿¡°Ô´Â ÀÌµ¿ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Nu poşi sã te tragi la un luptãtor strãin.";
+
+"Åº »óÅÂ¿¡¼­´Â ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi face asta în timp ce stai pe cal.";
+
+"Å×½ºÆ® ¼­¹ö ½Ã°£Á¦ÇÑ Åë°ú";
+"Timpul limita pe serverul test a fost depasit.";
+
+"ÆÄÆ¼ ÁßÀÌ ¾Æ´Õ´Ï´Ù.";
+"Nu eºti în grupã.";
+
+"ÆÄÆ¼ÀÇ Çùµ¿·ÂÀÌ ³ô¾ÆÁ® Áö±İºÎÅÍ Ãß°¡ °æÇèÄ¡ º¸³Ê½º¸¦ ¹Ş½À´Ï´Ù.";
+"Grupul tãu coopereaza bine împreunã, membrii grupului din apropierea liderului de grup vor primi un bonus de experienşã.";
+
+"ÆÄÆ¼ÀåÀÌ Á¢¼Ó »óÅÂ°¡ ¾Æ´Ï¶ó¼­ ¿äÃ»À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grupã] Nu poşi face nicio cerere, deoarece conducãtorul grupei nu este online.";
+
+"ÆÇ¸Å±İ¾×ÀÇ %d %% °¡ ¼¼±İÀ¸·Î ³ª°¡°ÔµË´Ï´Ù";
+"Vânzarea este impozitatã cu %d%%.";
+
+"ÆÛÆåÆ® ¸¶½ºÅÍµÈ ½ºÅ³ÀÔ´Ï´Ù. ´õ ÀÌ»ó ¼ö·Ã ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Eºti deja maestru al acestei abilitãşi. Nu o mai poşi antrena.";
+
+"ÆòÅ¸ µ¥¹ÌÁö %d%%";
+"Paguba loviturii %d%%";
+
+"ÆòÅ¸ µ¥¹ÌÁö ÀúÇ× %d%%";
+"Rezistenşã la lovituri %d%%";
+
+"ÇÃ·¹ÀÌ¾î %d ¿Í ÇÃ·¹ÀÌ¾î  %d¸¦ ÆÄÈ¥½ÃÅµ´Ï´Ù..";
+"Înşelegere încãlcatã între jucãtorul %d ºi jucãtorul %d.";
+
+"ÇÑ¼Õ°Ë ¹æ¾î %d%%";
+"Apãrare sabie-1-mânã %d%%.";
+
+"ÇØ´ç À¯Àú´Â %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"Adãugare jucãtor %d în canal. (Cadou canal %d)";
+
+"ÇÚµåÆù ¹øÈ£°¡ µî·Ï µÇ¾ú½À´Ï´Ù.";
+"Numãrul de mobil este înregistrat.";
+
+"ÇÚµåÆù ¹øÈ£°¡ µî·ÏµÇ¾î ÀÖÁö ¾Ê½À´Ï´Ù.";
+"Numãrul de mobil nu este înregistrat.";
+
+"ÇöÀç %s ±¹°í¿¡´Â %d ÀÇ µ·ÀÌ ÀÖ½À´Ï´Ù";
+"%s mai are %d Yang la dispozişie.";
+
+"ÇöÀç %s ±¹°í¿¡´Â %u ÀÇ µ·ÀÌ ÀÖ½À´Ï´Ù";
+"%s mai are %u Yang la dispozişie.";
+
+"ÇöÀç ³²Àº Âü°¡ÀÚ¼ö : %d";
+"Numãrul celorlalşi participanşi : %d";
+
+"ÇöÀç ½ºÄÚ¾î ½Å¼ö±¹:%d ÃµÁ¶±¹:%d Áø³ë±¹:%d";
+"Scor curent: Shinsoo %d, Chunjo: %d, Jinno: %d";
+
+"ÇöÀç ¿Â¶óÀÎ »óÅÂ ÀÔ´Ï´Ù. ±Ó¸»À» ÀÌ¿ëÇÏ¼¼¿ä.";
+"El/ea este online. Foloseºte ºoapta.";
+
+"ÇöÀç À§Ä¡¿¡¼­ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nu poşi folosi aceasta din pozişia ta actualã.";
+
+"ÇöÀç ÀÌº¥Æ® Âü°¡ÀÚ ºĞµéÀº ¸¶À»·Î ÀÌµ¿ µÇ°Ú½À´Ï´Ù.";
+"Evenimentul cadou va fi redus la un şinut.";
+
+"ÇöÀç ÀüÀïÁßÀÎ ±æµå ÀÔ´Ï´Ù";
+"Aceastã breaslã se aflã în rãzboi.";
+
+"ÇöÀç Çì¾î½ºÅ¸ÀÏ¿¡¼­´Â ¿°»ö°ú Å»»öÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.";
+"Nu îşi poşi vopsi sau înãlbi frizura actualã.";
+
+"È­¿° ÀúÇ× %d%%";
+"Rezistenşã la foc %d%%";
+
+"È° °ø°İ È¸ÇÇ È®·ü %d%%";
+"%d%% ºansã de a bloca un atac de la distanşã";
+
+"È°°ø°İ ÀúÇ× %d%%";
+"Rezistenşã la atac de la depãrtare %d%%";
+

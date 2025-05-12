@@ -1,0 +1,62 @@
+quest meley_lair begin
+	state start begin
+		when login with MeleyLair.IsMeleyMap() begin
+			MeleyLair.Check()
+		end
+
+		when 20419.chat.locale_quest(1828) with MeleyLair.IsMeleyMap() begin
+			say_title(mob_name(20419))
+			say(locale_quest(1829))
+			say(locale_quest(1832))
+			if select(locale_quest(4473), locale_quest(3418)) != 1 then
+				return
+			end
+
+			MeleyLair.Leave()
+			setskin(NOWINDOW)
+			return
+		end
+
+		when 20420.click with MeleyLair.IsMeleyMap() begin
+			if select(locale_quest(1795), locale_quest(2426)) == 1 then
+				if not MeleyLair.CanGetReward() then
+					say_title(mob_name(20420))
+					say(locale_quest(1796))
+				else
+					say_title(mob_name(20420))
+					say(locale_quest(1797))
+
+					local rewardName = {
+						locale_quest(1799),
+						locale_quest(1800),
+					}
+					table.insert(rewardName, locale_quest(2426))
+					local rewardSelect = select_table(rewardName)
+
+					if rewardSelect == 1 then
+						say_title(mob_name(20420))
+						say(locale_quest(1801))
+						if select(locale_quest(2625), locale_quest(2600)) == 1 then
+							MeleyLair.Reward(rewardSelect)
+							say_title(mob_name(20420))
+							say(locale_quest(1803))
+						else return end
+					elseif rewardSelect == 2 then
+						say_title(mob_name(20420))
+						say(locale_quest(1802))
+						if select(locale_quest(2625), locale_quest(2600)) == 1 then
+							MeleyLair.Reward(rewardSelect)
+							say_title(mob_name(20420))
+							say(locale_quest(1803))
+						else return end
+					else return end
+				end
+			else return end
+		end
+
+		when 20388.click."" begin
+			setskin(NOWINDOW)
+			return
+		end
+	end
+end

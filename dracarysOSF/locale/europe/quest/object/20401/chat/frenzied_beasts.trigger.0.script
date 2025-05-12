@@ -1,0 +1,6 @@
+target . delete ( "__TARGET__" ) 
+clear_letter ( ) 
+say_title ( mob_name ( 20401 ) ) 
+say ( ) 
+say ( locale_quest ( 6359 ) ) 
+set_state ( "investigate_wild_animals" ) 

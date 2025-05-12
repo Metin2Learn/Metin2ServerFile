@@ -1,0 +1,82 @@
+snow_dungeon={["start"]=0,setting= function ()return { 
+[ "outside_entry_pos" ] = { 4322 , 1655 } , 
+[ "floor_pos" ] = { 
+{ 5291 , 1814 } , 
+{ 5540 , 1797 } , 
+{ 5882 , 1800 } , 
+{ 5293 , 2071 } , 
+{ 5540 , 2074 } , 
+{ 5866 , 2076 } , 
+{ 5423 , 2244 } , 
+{ 5689 , 2237 } , 
+{ 5969 , 2229 } , 
+{ 6047 , 1924 } 
+} , 
+[ "dungeon_man_pos" ] = { 172 , 261 } , 
+[ "dungeon_man_last_pos" ] = { 849 , 641 } , 
+[ "need_shaman" ] = true , 
+[ "need_assassin" ] = true , 
+[ "check_mount" ] = true , 
+[ "level5_cube_pos" ] = { 
+{ 449 , 488 } , 
+{ 455 , 445 } , 
+{ 419 , 422 } , 
+{ 382 , 444 } , 
+{ 389 , 488 } 
+} , 
+[ "level6_stone_pos" ] = { 747 , 494 } , 
+[ "level4_boss_cords" ] = { 
+{ 160 , 490 } , 
+{ 215 , 440 } , 
+{ 140 , 425 } 
+} , 
+[ "level7_boss_pos" ] = { 
+{ 302 , 678 } , 
+{ 281 , 657 } , 
+{ 303 , 635 } , 
+{ 324 , 656 } 
+} , 
+[ "final_boss_poss" ] = { 927 , 333 } , 
+[ "level9_stone_pos" ] = { 849 , 660 } , 
+[ "floor_jump_delay" ] = 5 , 
+[ "floor_check_delay" ] = 5 , 
+} 
+end ,is_snowd= function (idx)return idx >= 352 * 10000 and idx < ( 352 + 1 ) * 10000 
+end ,make_dungeon= function ()local setting = snow_dungeon . setting ( ) 
+d . new_jump_party ( 352 , setting . floor_pos [ 1 ] [ 1 ] , setting . floor_pos [ 1 ] [ 2 ] ) 
+d . spawn_mob_ac_dir ( 20397 , setting . dungeon_man_pos [ 1 ] , setting . dungeon_man_pos [ 2 ] , 0 ) 
+d . setf ( "level" , 0 ) 
+d . setf ( "started" , 0 ) 
+d . setf ( "dungeon_enter" , 0 ) 
+end ,go_boss= function ()local setting = snow_dungeon . setting ( ) 
+if not party . is_leader ( ) then 
+say ( locale_quest ( 8209 ) ) 
+return 
+end 
+say ( locale_quest ( 8210 ) ) 
+local warp = select ( locale_quest ( 8211 ) , locale_quest ( 8212 ) ) 
+if warp == 1 then 
+npc . purge ( ) 
+d . notice ( 8172 ) 
+server_timer ( "snow_dungeon_floor10_timer" , setting . floor_jump_delay , d . get_map_index ( ) ) 
+end 
+end ,level_clear= function ()d . clear_regen ( ) 
+d . purge_area ( 520000 , 155000 , 612000 , 228600 ) 
+end ,clear_timer= function (inx)clear_server_timer ( "snow_dungeon_floor2_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_floor3_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_floor4_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_floor5_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_floor6_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_floor7_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_floor8_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_floor9_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_45m_left_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_30m_left_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_15m_left_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_5m_left_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_1m_left_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_0m_left_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_end_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_check_timer" , inx ) 
+clear_server_timer ( "snow_dungeon_leader_out_timer" , inx ) 
+end }

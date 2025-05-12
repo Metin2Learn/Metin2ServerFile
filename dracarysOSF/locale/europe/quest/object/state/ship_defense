@@ -1,0 +1,10 @@
+ship_defense={["start"]=0,in_dungeon= function (idx)return idx >= 358 * 10000 and idx < ( 358 + 1 ) * 10000 
+end ,main_quest_complete= function ()if 0 > 0 then 
+local main_quest = pc . getf ( "main_quest_meley_trail" , "__status" ) 
+if main_quest ~= nil and main_quest == main_quest_meley_trail . __COMPLETE__ then 
+return true 
+end 
+return false 
+end 
+return true 
+end }

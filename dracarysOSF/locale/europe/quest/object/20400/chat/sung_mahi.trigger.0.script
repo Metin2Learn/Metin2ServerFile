@@ -1,0 +1,6 @@
+target . delete ( "__TARGET__" ) 
+clear_letter ( ) 
+say_title ( mob_name ( 20400 ) ) 
+say ( ) 
+say ( locale_quest ( 6398 ) ) 
+set_state ( "kingdom_of_humans" ) 

@@ -1,0 +1,93 @@
+local setting = snow_dungeon . setting ( ) 
+if party . is_party ( ) then 
+local party_check = 0 
+if d . find ( party . getf ( "dungeon_index" ) ) then 
+party_check = ( d . getf_from_map_index ( "party_leader_pid" , party . getf ( "dungeon_index" ) ) == party . get_leader_pid ( ) ) 
+end 
+if d . find ( party . getf ( "dungeon_index" ) ) and party_check then 
+if get_global_time ( ) - pc . getf ( "snow_dungeon" , "exit_time" ) < 5 * 60 then 
+local level = d . getf_from_map_index ( "level" , party . getf ( "dungeon_index" ) ) 
+pc . warp ( setting . floor_pos [ level ] [ 1 ] * 100 , setting . floor_pos [ level ] [ 2 ] * 100 , party . getf ( "dungeon_index" ) ) 
+else 
+say_title ( mob_name ( 20395 ) ) 
+say ( locale_quest ( 8176 ) ) 
+end 
+else 
+local pids = { party . get_member_pids ( ) } 
+local notEnoughLevelMembers = { } 
+local levelCheck = true 
+local jobAssassin = 0 
+local jobShaman = 0 
+local rideCheck = true 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+if pc . get_level ( ) < 100 then 
+table . insert ( notEnoughLevelMembers , pc . get_name ( ) ) 
+levelCheck = false 
+end 
+if setting . need_assassin then 
+if pc . get_job ( ) == ASSASSIN then 
+jobAssassin = jobAssassin + 1 
+end 
+end 
+if setting . need_shaman then 
+if pc . get_job ( ) == SHAMAN then 
+jobShaman = jobShaman + 1 
+end 
+end 
+if setting . check_mount then 
+if pc . is_mount ( ) then 
+rideCheck = false 
+end 
+end 
+q . end_other_pc_block ( ) 
+end 
+if not levelCheck then 
+say_title ( mob_name ( 20395 ) ) 
+say ( locale_quest ( 8180 ) ) 
+for i , name in next , notEnoughLevelMembers , nil begin 
+say ( color ( 1 , 1 , 0 ) , " " .. name ) 
+end 
+return 
+end 
+if setting . need_assassin then 
+if jobAssassin < 1 then 
+say_title ( mob_name ( 20395 ) ) 
+say ( locale_quest ( 8177 ) ) 
+return 
+end 
+end 
+if setting . need_shaman then 
+if jobShaman < 1 then 
+say_title ( mob_name ( 20395 ) ) 
+say ( locale_quest ( 8177 ) ) 
+return 
+end 
+end 
+if setting . check_mount then 
+if not rideCheck then 
+say_title ( mob_name ( 20395 ) ) 
+say ( locale_quest ( 8174 ) ) 
+return 
+end 
+end 
+if party . is_leader ( ) then 
+say_title ( mob_name ( 20395 ) ) 
+say ( locale_quest ( 8177 ) ) 
+say ( locale_quest ( 8178 ) ) 
+local warp = select ( locale_quest ( 8179 ) , locale_quest ( 8181 ) ) 
+if warp == 1 then 
+if party . is_map_member_flag_lt ( "exit_time" , get_global_time ( ) - 240 * 60 ) then 
+snow_dungeon . make_dungeon ( ) 
+else 
+say ( locale_quest ( 8182 ) ) 
+end 
+end 
+party . setf ( "snow_dungeon_boss_kill_count" , 0 ) 
+else 
+say ( locale_quest ( 8183 ) ) 
+end 
+end 
+else 
+say ( locale_quest ( 8184 ) ) 
+end 

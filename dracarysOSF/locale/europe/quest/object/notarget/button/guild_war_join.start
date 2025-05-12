@@ -1,0 +1,14 @@
+if ( pc . get_map_index ( ) ~= 71 and pc . get_map_index ( ) ~= 104 and pc . get_map_index ( ) ~= 72 and pc . get_map_index ( ) ~= 73 and pc . get_map_index ( ) ~= 208 ) and pc . get_map_index ( ) <= 200 then local e = guild . get_any_war ( ) 
+if e == 0 then 
+say ( locale_quest ( 2621 ) ) 
+else 
+say ( string . format ( locale_quest ( 1911 ) , guild . name ( e ) ) ) 
+local s = select ( locale_quest ( 2625 ) , locale_quest ( 2600 ) ) 
+if s == 1 then 
+guild . war_enter ( e ) 
+else 
+setskin ( NOWINDOW ) 
+send_letter ( locale_quest ( 2617 ) ) 
+end 
+end 
+ return end 

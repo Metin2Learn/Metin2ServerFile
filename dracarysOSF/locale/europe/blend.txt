@@ -1,0 +1,177 @@
+# 적상액
+section
+	item_vnum	50821
+	apply_type	CRITICAL_PCT
+	apply_value	8	10	12	15	20
+	apply_duration	60	120	180	300	600
+end
+
+# 홍상액
+section
+	item_vnum	50822
+	apply_type	PENETRATE_PCT
+	apply_value	8	10	12	15	20
+	apply_duration	60	120	180	300	600
+end
+
+# 황상액
+section
+	item_vnum	50823
+	apply_type	ATTACK_SPEED
+	apply_value	2	3	4	5	8
+	apply_duration	60	120	180	300	600
+end
+
+# 녹상액
+section
+	item_vnum	50824
+	apply_type	RESIST_MAGIC
+	apply_value	8	10	12	15	20
+	apply_duration	60	120	180	300	600
+end
+
+# 청상액
+section
+	item_vnum	50825
+	apply_type	ATT_BONUS
+	apply_value	30	50	70	90	120
+	apply_duration	60	120	180	300	600
+end
+
+# 백상액
+section
+	item_vnum	50826
+	apply_type	DEF_BONUS
+	apply_value	40	70	100	150	200
+	apply_duration	60	120	180	300	600
+end
+
+# 충기환
+section
+	item_vnum	51002
+	apply_type	ENERGY
+	apply_value	1	3	5	7	10
+	apply_duration	1800	1800	1800	1800	1800
+end
+
+# 적상액 (I)
+section
+	item_vnum	950821
+	apply_type	CRITICAL_PCT
+	apply_value	20	20	20	20	20
+	apply_duration	0	0	0	0	0
+end
+
+# 홍상액 (I)
+section
+	item_vnum	950822
+	apply_type	PENETRATE_PCT
+	apply_value	20	20	20	20	20
+	apply_duration	0	0	0	0	0
+end
+
+# 황상액 (I)
+section
+	item_vnum	950823
+	apply_type	ATTACK_SPEED
+	apply_value	8	8	8	8	8
+	apply_duration	0	0	0	0	0
+end
+
+# 녹상액 (I)
+section
+	item_vnum	950824
+	apply_type	RESIST_MAGIC
+	apply_value	20	20	20	20	20
+	apply_duration	0	0	0	0	0
+end
+
+# 청상액 (I)
+section
+	item_vnum	950825
+	apply_type	ATT_BONUS
+	apply_value	120	120	120	120	120
+	apply_duration	0	0	0	0	0
+end
+
+# 백상액 (I)
+section
+	item_vnum	950826
+	apply_type	DEF_BONUS
+	apply_value	200	200	200	200	200
+	apply_duration	0	0	0	0	0
+end
+
+# 충기환 (I)
+section
+	item_vnum	951002
+	apply_type	ENERGY
+	apply_value	10	10	10	10	10
+	apply_duration	0	0	0	0	0
+end
+
+## Dragon God Medals
+
+# 용신의 생명 (I)
+section
+	item_vnum	939017
+	apply_type	MAX_HP_PCT
+	apply_value	20	20	20	20	20
+	apply_duration	0	0	0	0	0
+end
+
+# 용신의 공격 (I)
+section
+	item_vnum	939018
+	apply_type	ATT_BONUS
+	apply_value	20	20	20	20	20
+	apply_duration	0	0	0	0	0
+end
+
+# 용신의 지능 (I)
+section
+	item_vnum	939019
+	apply_type	MAX_SP_PCT
+	apply_value	20	20	20	20	20
+	apply_duration	0	0	0	0	0
+end
+
+# 용신의 방어 (I)
+section
+	item_vnum	939020
+	apply_type	DEF_BONUS
+	apply_value	20	20	20	20	20
+	apply_duration	0	0	0	0	0
+end
+
+# 크리티컬의 장 (I)
+section
+	item_vnum	939024
+	apply_type	CRITICAL_PCT
+	apply_value	20	20	20	20	20
+	apply_duration	0	0	0	0	0
+end
+
+# 관통의 장 (I)
+section
+	item_vnum	939025
+	apply_type	PENETRATE_PCT
+	apply_value	20	20	20	20	20
+	apply_duration	0	0	0	0	0
+end
+
+# 녹색물약E (I)
+section
+	item_vnum	927209
+	apply_type	ATTACK_SPEED
+	apply_value	30	30	30	30	30
+	apply_duration	0	0	0	0	0
+end
+
+# 보라색물약E (I)
+section
+	item_vnum	927212
+	apply_type	MOVE_SPEED
+	apply_value	60	60	60	60	60
+	apply_duration	0	0	0	0	0
+end

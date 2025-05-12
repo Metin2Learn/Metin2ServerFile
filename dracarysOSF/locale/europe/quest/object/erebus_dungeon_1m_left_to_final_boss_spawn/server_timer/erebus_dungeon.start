@@ -1,0 +1,4 @@
+local setting = erebus_dungeon . setting ( ) 
+if d . select ( get_server_timer_arg ( ) ) then 
+d . spawn_mob ( 6192 , setting . boss_pos [ 1 ] , setting . boss_pos [ 2 ] ) 
+end 

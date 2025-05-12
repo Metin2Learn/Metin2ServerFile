@@ -1,0 +1,11 @@
+if pc . get_level ( ) < 40 then 
+say_title ( locale_quest ( 849 ) ) 
+say ( locale_quest ( 860 ) ) 
+else 
+say_title ( locale_quest ( 849 ) ) 
+say ( locale_quest ( 861 ) ) 
+local s = select ( locale_quest ( 2699 ) , locale_quest ( 2702 ) ) 
+if s == 1 then 
+pc . warp ( 216500 , 727000 ) 
+end 
+end 

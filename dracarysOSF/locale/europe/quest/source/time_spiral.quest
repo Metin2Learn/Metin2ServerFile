@@ -1,0 +1,102 @@
+--[[
+ Title: Time Spiral
+ Description: Reduce the waiting time of researches and other quests.
+ Author: Owsap
+ Last Date: 2022.05.31
+]]
+
+quest time_spiral begin
+	state start begin
+		function run(item_vnum, item_value)
+			if item_vnum == nil then
+				return
+			end
+
+			local quest_table = {
+				{ "collect_quest_lv30", "duration", locale_quest(10828) }, -- Biology Research 1
+				{ "collect_quest_lv40", "duration", locale_quest(10829) }, -- Biology Research 2
+				{ "collect_quest_lv50", "duration", locale_quest(10830) }, -- Biology Research 3
+				{ "collect_quest_lv60", "duration", locale_quest(10831) }, -- Biology Research 4
+				{ "collect_quest_lv70", "duration", locale_quest(10832) }, -- Biology Research 5
+				{ "collect_quest_lv80", "duration", locale_quest(10833) }, -- Biology Research 6
+				{ "collect_quest_lv85", "duration", locale_quest(10834) }, -- Biology Research 7
+				{ "collect_quest_lv90", "duration", locale_quest(10835) }, -- Biology Research 8
+				{ "collect_quest_lv92", "duration", locale_quest(10836) }, -- Seon-Pyeong's research
+				{ "collect_quest_lv94", "duration", locale_quest(10837) }, -- Seon-Pyeong's research 2
+			}
+
+			local reserved_table = {}
+			local option_table = {}
+			local option_count = 0
+
+			for index, quest_file in ipairs(quest_table) do
+				local quest_name = quest_file[1]
+				local flag_name = quest_file[2]
+				local option_text = quest_file[3]
+				local wait_time = pc.getf(quest_name, flag_name)
+
+				if wait_time > get_global_time() then
+					option_count = option_count + 1
+					table.insert(reserved_table, index)
+					table.insert(option_table, string.format(option_text, wait_time_to_str(wait_time)))
+				end
+			end
+			table.insert(option_table, locale_quest(10841))
+
+			if option_count == 0 then
+				say(locale_quest(10838))
+				return
+			end
+
+			say_title(item_name(item_vnum))
+			say(locale_quest(10827))
+
+			local option_select = select_table(option_table)
+			if option_select <= option_count then
+
+				say_title(item_name(item_vnum))
+				say(option_table[option_select])
+
+				if item_vnum == 72347 + (item_vnum - 72347) then
+					say(locale_quest(11331 + (item_vnum - 72347)))
+				end
+
+				say(locale_quest(10844))
+				if select(locale_quest(10842), locale_quest(10843)) == 1 then
+					local quest_file = quest_table[reserved_table[option_select]]
+					local quest_name = quest_file[1]
+					local flag_name = quest_file[2]
+
+					local wait_time = pc.getf(quest_name, flag_name)
+					if wait_time > get_global_time() then
+						local time_period = wait_time - get_global_time()
+						local remove_pct = time_period * (item_value / 100)
+						local time_result = math.floor(math.abs(time_period - remove_pct))
+						if time_result > 0 then
+							pc.setf(quest_name, flag_name, get_global_time() + time_result)
+							pc.remove_item(item_vnum, 1)
+
+							say_title(item_name(item_vnum))
+							say(locale_quest(10840))
+							say(string.format(locale_quest(10823), wait_time_to_str(pc.getf(quest_name, flag_name))))
+
+							if pc.count_item(item_vnum) > 0 then
+								if select(locale_quest(11334), locale_quest(10843)) == 1 then
+									time_spiral.run(item_vnum, item_value)
+								else return end
+							else
+								return
+							end
+						else
+							say(locale_quest(10839))
+						end
+					end
+				else return end
+			else return end
+		end
+
+		when 72347.use or 72348.use or 72349.use begin
+			time_spiral.run(item.get_vnum(), item.get_value(1))
+		end
+	end
+end

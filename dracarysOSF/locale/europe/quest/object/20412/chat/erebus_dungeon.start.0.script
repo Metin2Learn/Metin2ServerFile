@@ -1,0 +1,2 @@
+pc . setf ( "erebus_dungeon" , "exit_time" , get_global_time ( ) - 120 * 60 ) 
+say ( "Done" ) 

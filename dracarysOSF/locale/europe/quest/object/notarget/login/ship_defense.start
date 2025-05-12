@@ -1,0 +1,7 @@
+if pc . get_map_index ( ) == 358 then 
+if ship_defense_mgr . is_created ( ) or ship_defense_mgr . is_running ( ) then 
+ship_defense_mgr . join ( ) 
+else 
+ship_defense_mgr . leave ( ) 
+end 
+end 

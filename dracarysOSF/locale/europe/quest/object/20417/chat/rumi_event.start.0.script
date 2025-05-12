@@ -1,0 +1,10 @@
+local s = select ( locale_quest ( 6606 ) , locale_quest ( 6607 ) ) 
+if s == 1 then 
+say_title ( locale_quest ( 6606 ) ) 
+say ( pc . get_okey_global_rank ( ) ) 
+elseif s == 2 then 
+say_title ( locale_quest ( 6607 ) ) 
+say ( pc . get_okey_rund_rank ( ) ) 
+else 
+return 
+end 

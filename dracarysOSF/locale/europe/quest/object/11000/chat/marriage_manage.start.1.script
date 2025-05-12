@@ -1,0 +1,4 @@
+say_title ( locale_quest ( 1294 ) ) 
+say ( locale_quest ( 6585 ) ) 
+say_reward ( locale_quest ( 6586 ) ) 
+pc . remove_item ( 70302 ) 

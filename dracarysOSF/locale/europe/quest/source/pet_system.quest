@@ -1,0 +1,240 @@
+quest pet_system begin
+	state start begin
+		function get_pet_info(itemVnum)
+			pet_info_map = {
+				[53001] = { 34001, pc.get_name() .. " - ", 1 },
+				[53002] = { 34002, pc.get_name() .. " - ", 1 },
+				[53003] = { 34003, pc.get_name() .. " - ", 1 },
+				[53005] = { 34004, pc.get_name() .. " - ", 1 },
+				[53006] = { 34009, pc.get_name() .. " - ", 1 },
+				[53007] = { 34010, pc.get_name() .. " - ", 1 },
+				[53008] = { 34011, pc.get_name() .. " - ", 1 },
+				[53009] = { 34012, pc.get_name() .. " - ", 1 },
+				[53010] = { 34008, pc.get_name() .. " - ", 1 },
+				[53011] = { 34007, pc.get_name() .. " - ", 1 },
+				[53012] = { 34005, pc.get_name() .. " - ", 1 },
+				[53013] = { 34006, pc.get_name() .. " - ", 1 },
+				[53014] = { 34013, pc.get_name() .. " - ", 1 },
+				[53015] = { 34014, pc.get_name() .. " - ", 1 },
+				[53016] = { 34015, pc.get_name() .. " - ", 1 },
+				[53017] = { 34016, pc.get_name() .. " - ", 1 },
+				[53018] = { 34020, pc.get_name() .. " - ", 1 },
+				[53019] = { 34019, pc.get_name() .. " - ", 1 },
+				[53020] = { 34017, pc.get_name() .. " - ", 1 },
+				[53021] = { 34018, pc.get_name() .. " - ", 1 },
+				[53022] = { 34021, pc.get_name() .. " - ", 1 },
+				[53023] = { 34022, pc.get_name() .. " - ", 1 },
+				[53024] = { 34023, pc.get_name() .. " - ", 1 },
+				[53025] = { 34024, pc.get_name() .. " - ", 1 },
+				[53026] = { 34025, pc.get_name() .. " - ", 1 },
+				[53218] = { 34023, pc.get_name() .. " - ", 1 },
+				[53219] = { 34023, pc.get_name() .. " - ", 1 },
+				[53220] = { 34024, pc.get_name() .. " - ", 1 },
+				[53221] = { 34024, pc.get_name() .. " - ", 1 },
+				[53222] = { 34026, pc.get_name() .. " - ", 1 },
+				[53223] = { 34027, pc.get_name() .. " - ", 1 },
+				[53224] = { 34028, pc.get_name() .. " - ", 1 },
+				[53225] = { 34029, pc.get_name() .. " - ", 1 },
+				[53226] = { 34030, pc.get_name() .. " - ", 1 },
+				[53227] = { 34031, pc.get_name() .. " - ", 1 },
+				[53228] = { 34033, pc.get_name() .. " - ", 1 },
+				[53229] = { 34032, pc.get_name() .. " - ", 1 },
+				[53230] = { 34034, pc.get_name() .. " - ", 1 },
+				[53231] = { 34035, pc.get_name() .. " - ", 1 },
+				[53232] = { 34039, pc.get_name() .. " - ", 1 },
+				[53233] = { 34055, pc.get_name() .. " - ", 1 },
+				[53234] = { 34056, pc.get_name() .. " - ", 1 },
+				[53235] = { 34055, pc.get_name() .. " - ", 1 },
+				[53236] = { 34058, pc.get_name() .. " - ", 1 },
+				[53237] = { 34059, pc.get_name() .. " - ", 1 },
+				[53238] = { 34058, pc.get_name() .. " - ", 1 },
+				[53239] = { 34059, pc.get_name() .. " - ", 1 },
+				[53240] = { 34063, pc.get_name() .. " - ", 1 },
+				[53241] = { 34062, pc.get_name() .. " - ", 1 },
+				[53242] = { 34066, pc.get_name() .. " - ", 1 },
+				[53243] = { 34066, pc.get_name() .. " - ", 1 },
+				[53244] = { 34067, pc.get_name() .. " - ", 1 },
+				[53245] = { 34068, pc.get_name() .. " - ", 1 },
+				[53246] = { 34069, pc.get_name() .. " - ", 1 },
+				[53247] = { 34070, pc.get_name() .. " - ", 1 },
+				[53248] = { 34071, pc.get_name() .. " - ", 1 },
+				[53249] = { 34072, pc.get_name() .. " - ", 1 },
+				[53250] = { 34085, pc.get_name() .. " - ", 1 },
+				[53251] = { 34084, pc.get_name() .. " - ", 1 },
+				[53253] = { 34086, pc.get_name() .. " - ", 1 },
+				[53254] = { 34087, pc.get_name() .. " - ", 1 },
+				[53255] = { 34088, pc.get_name() .. " - ", 1 },
+				[53256] = { 34066, pc.get_name() .. " - ", 1 },
+				[53258] = { 34090, pc.get_name() .. " - ", 1 },
+				[53259] = { 34091, pc.get_name() .. " - ", 1 },
+				[53260] = { 34092, pc.get_name() .. " - ", 1 },
+				[53261] = { 34093, pc.get_name() .. " - ", 1 },
+				[53262] = { 34094, pc.get_name() .. " - ", 1 },
+				[53263] = { 34095, pc.get_name() .. " - ", 1 },
+				[53264] = { 34096, pc.get_name() .. " - ", 1 },
+				[53265] = { 34097, pc.get_name() .. " - ", 1 },
+				[53266] = { 34098, pc.get_name() .. " - ", 1 },
+				[53267] = { 34099, pc.get_name() .. " - ", 1 },
+				[53268] = { 34100, pc.get_name() .. " - ", 1 },
+				[53269] = { 34101, pc.get_name() .. " - ", 1 },
+				[53270] = { 34102, pc.get_name() .. " - ", 1 },
+				[53271] = { 34103, pc.get_name() .. " - ", 1 },
+				[53272] = { 34104, pc.get_name() .. " - ", 1 },
+				[53273] = { 34105, pc.get_name() .. " - ", 1 },
+				[53274] = { 34106, pc.get_name() .. " - ", 1 },
+				[53275] = { 34107, pc.get_name() .. " - ", 1 },
+				[53276] = { 34108, pc.get_name() .. " - ", 1 },
+				[53257] = { 34089, pc.get_name() .. " - ", 1 },
+				[53277] = { 34109, pc.get_name() .. " - ", 1 },
+				[53278] = { 34110, pc.get_name() .. " - ", 1 },
+				[53279] = { 34111, pc.get_name() .. " - ", 1 },
+				[53280] = { 34112, pc.get_name() .. " - ", 1 },
+				[53281] = { 34113, pc.get_name() .. " - ", 1 },
+				[53288] = { 34120, pc.get_name() .. " - ", 1 },
+				[53289] = { 34121, pc.get_name() .. " - ", 1 },
+				[53282] = { 34114, pc.get_name() .. " - ", 1 },
+				[53283] = { 34115, pc.get_name() .. " - ", 1 },
+				[53284] = { 34116, pc.get_name() .. " - ", 1 },
+				[53285] = { 34117, pc.get_name() .. " - ", 1 },
+				[53286] = { 34118, pc.get_name() .. " - ", 1 },
+				[53287] = { 34119, pc.get_name() .. " - ", 1 },
+				[53290] = { 34124, pc.get_name() .. " - ", 1 },
+				[53291] = { 34125, pc.get_name() .. " - ", 1 },
+				[53292] = { 34126, pc.get_name() .. " - ", 1 },
+				[53293] = { 34127, pc.get_name() .. " - ", 1 },
+				[53294] = { 34128, pc.get_name() .. " - ", 1 },
+				[53295] = { 34129, pc.get_name() .. " - ", 1 },
+				[53296] = { 34130, pc.get_name() .. " - ", 1 },
+				[53297] = { 34131, pc.get_name() .. " - ", 1 },
+				[53298] = { 34132, pc.get_name() .. " - ", 1 },
+				[53299] = { 34133, pc.get_name() .. " - ", 1 },
+				[53300] = { 34134, pc.get_name() .. " - ", 1 },
+				[53301] = { 34135, pc.get_name() .. " - ", 1 },
+				[53302] = { 34136, pc.get_name() .. " - ", 1 },
+				[53303] = { 34137, pc.get_name() .. " - ", 1 },
+				[53304] = { 34138, pc.get_name() .. " - ", 1 },
+				[53305] = { 34139, pc.get_name() .. " - ", 1 },
+				[53306] = { 34140, pc.get_name() .. " - ", 1 },
+				[53307] = { 34141, pc.get_name() .. " - ", 1 },
+				[53308] = { 34142, pc.get_name() .. " - ", 1 },
+				[53309] = { 34143, pc.get_name() .. " - ", 1 },
+				[53313] = { 34147, pc.get_name() .. " - ", 1 },
+				[53314] = { 34148, pc.get_name() .. " - ", 1 },
+				[53315] = { 34149, pc.get_name() .. " - ", 1 },
+				[53316] = { 34150, pc.get_name() .. " - ", 1 },
+				[53317] = { 34151, pc.get_name() .. " - ", 1 },
+				[53318] = { 34152, pc.get_name() .. " - ", 1 },
+				[53319] = { 34038, pc.get_name() .. " - ", 1 },
+				[53320] = { 34153, pc.get_name() .. " - ", 1 },
+				[53321] = { 34154, pc.get_name() .. " - ", 1 },
+				[53322] = { 34155, pc.get_name() .. " - ", 1 },
+				[53329] = { 34162, pc.get_name() .. " - ", 1 },
+				[53330] = { 34163, pc.get_name() .. " - ", 1 },
+				[53331] = { 34164, pc.get_name() .. " - ", 1 },
+				[53332] = { 34167, pc.get_name() .. " - ", 1 },
+				[53333] = { 34168, pc.get_name() .. " - ", 1 },
+				[53334] = { 34169, pc.get_name() .. " - ", 1 },
+				[53335] = { 34170, pc.get_name() .. " - ", 1 },
+				[53336] = { 34171, pc.get_name() .. " - ", 1 },
+				[53337] = { 34172, pc.get_name() .. " - ", 1 },
+				[53338] = { 34173, pc.get_name() .. " - ", 1 },
+				[53339] = { 34174, pc.get_name() .. " - ", 1 },
+				[53340] = { 34175, pc.get_name() .. " - ", 1 },
+				[53341] = { 34176, pc.get_name() .. " - ", 1 },
+			}
+
+			itemVnum = tonumber(itemVnum)
+			return pet_info_map[itemVnum]
+		end
+
+		function get_spawn_effect_file(idx)
+			effect_table = {
+				[0] = nil,
+				[1] = "d:\\\\ymir work\\\\effect\\\\etc\\\\appear_die\\\\monster_appear.mse",
+			}
+			return effect_table[idx]
+		end
+
+		when
+			53001.use or
+			53002.use or
+			53003.use or
+			53005.use or 53006.use or
+			53007.use or
+			53008.use or 53009.use or
+			53010.use or 53011.use or 53012.use or 53013.use or
+			53014.use or 53015.use or
+			53016.use or 53017.use or
+			53018.use or 53019.use or 53020.use or 53021.use or
+			53022.use or 53023.use or
+			53024.use or 53025.use or
+			53026.use or
+			53218.use or 53219.use or 53220.use or 53221.use or
+			53222.use or 53223.use or
+			53224.use or 53225.use or
+			53226.use or 53227.use or
+			53228.use or 53229.use or
+			53230.use or 53231.use or
+			53232.use or
+			53233.use or 53234.use or 53235.use or
+			53236.use or 53237.use or 53238.use or 53239.use or
+			53240.use or 53241.use or
+			53242.use or 53243.use or
+			53244.use or 53245.use or 53246.use or
+			53247.use or 53248.use or 53249.use or
+			53250.use or 53251.use or
+			53253.use or 53254.use or 53255.use or
+			53256.use or
+			53258.use or 53259.use or
+			53260.use or 53261.use or 53262.use or
+			53263.use or 53264.use or
+			53265.use or 53266.use or 53267.use or
+			53268.use or 53269.use or 53270.use or
+			53271.use or 53272.use or 53273.use or
+			53274.use or 53275.use or 53276.use or
+			53257.use or
+			53277.use or 53278.use or 53279.use or 53280.use or 53281.use or
+			53288.use or 53289.use or
+			53282.use or 53283.use or 53284.use or
+			53285.use or 53286.use or 53287.use or
+			53296.use or 53297.use or 53298.use or
+			53290.use or 53291.use or 53292.use or 53293.use or 53294.use or 53295.use or
+			53299.use or 53300.use or
+			53301.use or 53302.use or 53303.use or
+			53304.use or 53305.use or 53306.use or
+			53307.use or 53308.use or 53309.use or
+			53313.use or 53314.use or 53315.use or
+			53316.use or 53317.use or 53318.use or
+			53319.use or
+			53320.use or 53321.use or 53322.use or
+			53329.use or 53330.use or 53331.use or
+			53332.use or 53333.use or 53334.use or 53335.use or 53336.use or 53337.use or 53338.use or
+			53339.use or 53340.use or 53341.use
+		begin
+			local pet_info = pet_system.get_pet_info(item.get_vnum())
+			if nil != pet_info then
+				local mobVnum = pet_info[1]
+				local petName = pet_info[2]
+				local spawn_effect_file_name = pet_system.get_spawn_effect_file(pet_info[3])
+
+				if true == pet.is_summon(mobVnum) then
+					if spawn_effect_file_name != nil then
+						pet.spawn_effect(mobVnum, "d:\\\\ymir work\\\\effect\\\\etc\\\\appear_die\\\\monster_die.mse")
+					end
+
+					pet.unsummon(mobVnum)
+				else
+					if pet.count_summoned() < 1 then
+						pet.summon(mobVnum, petName, false)
+					else
+						syschat(locale_quest(7638))
+					end
+
+					if spawn_effect_file_name != nil then
+						pet.spawn_effect(mobVnum, spawn_effect_file_name)
+					end
+				end
+			end
+		end
+	end
+end

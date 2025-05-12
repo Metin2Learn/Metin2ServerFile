@@ -1,0 +1,3 @@
+send_letter ( locale_quest ( 4554 ) ) 
+q . set_counter_name ( locale_quest ( 5962 ) ) 
+arboreal_menace_access . kill_count_2 ( ) 

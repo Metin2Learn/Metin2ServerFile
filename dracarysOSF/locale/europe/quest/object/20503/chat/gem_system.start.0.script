@@ -1,0 +1,2 @@
+say ( locale_quest ( 1464 ) ) 
+say ( string . format ( locale_quest ( 1465 ) , 10 ) ) 

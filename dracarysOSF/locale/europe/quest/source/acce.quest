@@ -1,0 +1,177 @@
+quest acce begin
+	state start begin
+		when login or levelup with pc.get_level() >= 40 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(60003)
+			if v != 0 then
+				target.vid("__TARGET__", v, mob_name(60003))
+			end
+			send_letter(locale_quest(1))
+		end
+
+		when button or info begin
+			say_title(locale_quest(1))
+			say(locale_quest(12))
+		end
+
+		when __TARGET__.target.click or 60003.chat.locale_quest(1) begin
+			target.delete("__TARGET__")
+			say_title(mob_name(60003))
+			say(locale_quest(13))
+			wait()
+			say_title(mob_name(60003))
+			say(locale_quest(14))
+			wait()
+			say_title(mob_name(60003))
+			say(locale_quest(15))
+			wait()
+			say_title(mob_name(60003))
+			say(locale_quest(16))
+			say_show_item(80019) -- icon of item
+			if select(locale_quest(1475), locale_quest(1476)) == 2 then
+				return
+			end
+			notice_multiline(locale_quest(17), notice)
+			set_state(go_to_captain)
+		end
+	end
+
+	state go_to_captain begin
+		when letter begin
+			local v = find_npc_by_vnum(20355)
+			if v != 0 then
+				target.vid("__TARGET__", v, mob_name(20355))
+			end
+			send_letter(locale_quest(3))
+		end
+
+		when button or info begin
+			say_title(locale_quest(3))
+			say(locale_quest(17))
+		end
+
+		when 20355.chat.locale_quest(3) begin
+			target.delete("__TARGET__")
+			say_title(mob_name(20355))
+			say(locale_quest(5))
+			wait()
+			say_title(mob_name(20355))
+			say(locale_quest(6))
+			if select(locale_quest(1475), locale_quest(1476)) == 2 then
+				return
+			end
+
+			pc.setqf("duration", (pc.get_playtime() + (60 * 3)))
+			set_state(waiting)
+		end
+
+		when 60003.chat.locale_quest(1) begin
+			if pc.count_item(80019) >= 40 then
+				say(locale_quest(19))
+				say_show_item(85005)
+				set_state(go_to_captain)
+			else
+				say_title(mob_name(60003))
+				say(locale_quest(2))
+				return
+			end
+		end
+	end
+
+	state waiting begin
+		when letter begin
+			local v = find_npc_by_vnum(20355)
+			if v != 0 then
+				target.vid("__TARGET__", v, mob_name(20355))
+			end
+			send_letter(locale_quest(3))
+		end
+
+		when button or info begin
+			say_title(locale_quest(3))
+			say(locale_quest(4))
+			if pc.get_playtime() > pc.getqf("duration") then
+				say(locale_quest(11))
+			else
+				say_reward(string.format(locale_quest(10) .. " %s", get_playtime_duration(pc.getqf("duration") - pc.get_playtime())))
+			end
+			say_reward(locale_quest(5643))
+		end
+
+		when 20355.chat.locale_quest(3) begin
+			if pc.get_playtime() > pc.getqf("duration") then
+				pc.give_item2(80019, 1)
+
+				if pc.count_item(80019) >= 40 then
+					pc.setqf("duration", 0)
+					say_title(mob_name(20355))
+					say(locale_quest(8))
+					notice_multiline(locale_quest(8), notice)
+					set_state(reward)
+				else
+					pc.setqf("duration", (pc.get_playtime() + (60 * 3)))
+					say_title(mob_name(20355))
+					say(locale_quest(7))
+				end
+
+				say_show_item(80019)
+			else
+				say_title(mob_name(20355))
+				say(locale_quest(9))
+				say_reward(string.format(locale_quest(10) .. " %s", get_playtime_duration(pc.getqf("duration") - pc.get_playtime())))
+				return
+			end
+		end
+
+		when 60003.chat.locale_quest(1) begin
+			if pc.count_item(80019) >= 40 then
+				say_title(mob_name(60003))
+				say(locale_quest(19))
+				say_show_item(85005)
+				pc.give_item2(85005, 1)
+				pc.remove_item(80019, 40)
+				clear_letter()
+				set_state(information)
+			else
+				say_title(mob_name(60003))
+				say(locale_quest(2))
+			end
+		end
+	end
+
+	state reward begin
+		when letter begin
+			local v = find_npc_by_vnum(60003)
+			if v != 0 then
+				target.vid("__TARGET__", v, mob_name(60003))
+			end
+			send_letter(locale_quest(1))
+		end
+
+		when button or info begin
+			say_title(locale_quest(1))
+			say(locale_quest(18))
+		end
+
+		when 60003.chat.locale_quest(1) begin
+			if pc.count_item(80019) >= 40 then
+				say(locale_quest(19))
+				say_show_item(85005)
+				pc.give_item2(85005, 1)
+				pc.remove_item(80019, 40)
+				clear_letter()
+				set_state(information)
+			else -- missing clothes?
+				say_title(mob_name(60003))
+				say(locale_quest(2))
+				clear_letter()
+				set_state(waiting)
+			end
+		end
+	end
+end

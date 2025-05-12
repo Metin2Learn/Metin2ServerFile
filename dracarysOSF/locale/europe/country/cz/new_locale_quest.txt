@@ -1,0 +1,12 @@
+91614	Jsem pouhý správce pozemkù a nemùžu snížit cenu.[ENTER]Dones mi víc Yangù.
+91615	Cech koupil území!
+91613	Správce pozemkù:
+91616	Až si to rozmyslíš, pøijï znovu.[ENTER]Kdo døív pøijde, ten døív mele.
+91617	Jsem správce pozemkù a zodpovídám za prodej[ENTER]parcel. Pøedtím, než nestvùry obsadily zemi ve[ENTER]støedu kontinentu, mìli jsme všichni dostatek[ENTER]území a všem se daøilo dobøe. Teï prodávám[ENTER]pozemky jenom vùdcùm cechù, kteøí je pak[ENTER]využívají jako cechovní území.[ENTER]Chceš koupit tento pozemek?
+91618	Jak už jsem øekl, pozemek si nemùže koupit jen[ENTER]tak nìkdo.[ENTER]Doufám, že to chápeš.
+91619	Cech, který už jeden pozemek vlastní, nemùže[ENTER]koupit další.
+91620	Vyskytla se chyba pøi vyøizování zakázky.
+91621	Abys mohl koupit tento pozemek, musí být úroveò[ENTER]cechu vyšší než %s, cena èiní %s.
+91622	Tvùj cech ještì zatím nedosáhl tuto úroveò.[ENTER]Lituji.
+91623	Chceš si koupit tento pozemek?
+91624	Tento pozemek byl prodán jinému cechu.[ENTER]Lituji.

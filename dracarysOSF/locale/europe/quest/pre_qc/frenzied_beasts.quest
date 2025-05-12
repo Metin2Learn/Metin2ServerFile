@@ -1,0 +1,92 @@
+quest frenzied_beasts begin
+	state start begin end
+	state trigger begin
+		when letter begin
+			send_letter(locale_quest(6357))
+			local v = find_npc_by_vnum(20401)
+			if 0 ~= v then
+				target.vid("__TARGET__", v, locale_quest(6357))
+			end
+		end
+
+		when button or info begin
+			say_title(locale_quest(6357))
+			say(locale_quest(6358))
+		end
+
+		when __TARGET__.target.click or 20401.chat.locale_quest(6357) begin
+			target.delete("__TARGET__")
+			clear_letter()
+
+			say_title(mob_name(20401))
+			say()
+			say(locale_quest(6359))
+			set_state(investigate_wild_animals)
+		end
+	end
+
+	state investigate_wild_animals begin
+		when letter begin
+			send_letter(locale_quest(6360))
+		end
+
+		when button or info begin
+			say_title(locale_quest(6360))
+			say(locale_quest(6361))
+		end
+
+		when 20401.chat.locale_quest(6357) begin
+			say_title(mob_name(20401))
+			say(locale_quest(6362))
+		end
+
+		-- The is_pc() check is useless, Lycan will almost never be level 15 and still in the map
+		-- 33% chance of drop
+		when kill with npc.is_pc() == false begin
+			if number(0, 3) ~= 3 then
+				return
+			end
+
+			pc.give_item2(31093)
+			say_title(locale_quest(6363))
+			say(locale_quest(6407))
+			set_state(back_to_the_guard)
+		end
+	end
+
+	state back_to_the_guard begin
+		when letter begin
+			send_letter(locale_quest(6363))
+			local v = find_npc_by_vnum(20401)
+			if 0 ~= v then
+				target.vid("__TARGET__", v, locale_quest(6363))
+			end
+		end
+
+		when button or info begin
+			say_title(locale_quest(6363))
+			say(locale_quest(6407))
+		end
+
+		when __TARGET__.target.click or 20401.chat.locale_quest(6363) begin
+			target.delete("__TARGET__")
+			clear_letter()
+
+			say_title(mob_name(20401))
+			say()
+			say(locale_quest(6364))
+			say()
+			say_reward(string.format(locale_quest(5043), item_name(27001),10))
+			say_reward(string.format(locale_quest(6882), 250))
+			pc.give_exp2(250)
+			pc.give_item2(27001, 10)
+			pc.remove_item(31093, pc.count_item(31093))
+			wait()
+			set_state(__COMPLETE__)
+			set_quest_state("unknown_stone", "trigger")
+		end
+	end
+
+	state __COMPLETE__ begin
+	end
+end

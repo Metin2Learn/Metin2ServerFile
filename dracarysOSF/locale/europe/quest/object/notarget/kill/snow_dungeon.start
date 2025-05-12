@@ -1,0 +1,27 @@
+if snow_dungeon . is_snowd ( pc . get_map_index ( ) ) then local setting = snow_dungeon . setting ( ) 
+local level = d . getf ( "level" ) 
+if level == 2 then 
+local rand = number ( 1 , 100 ) 
+local chance = 3 
+if rand <= chance or is_test_server ( ) then 
+game . drop_item ( 30331 , 1 ) 
+end 
+elseif level == 5 then 
+local rand = number ( 1 , 100 ) 
+local chance = 3 
+if rand <= chance or is_test_server ( ) then 
+game . drop_item ( 30332 , 1 ) 
+end 
+elseif level == 8 then 
+if setting . need_assassin then 
+if pc . get_job ( ) ~= ASSASSIN then 
+return 
+end 
+end 
+local rand = number ( 1 , 100 ) 
+local chance = 3 
+if rand <= chance or is_test_server ( ) then 
+game . drop_item ( 30333 , 1 ) 
+end 
+end 
+ return end 

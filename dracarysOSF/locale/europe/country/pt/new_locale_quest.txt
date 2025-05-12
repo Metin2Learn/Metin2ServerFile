@@ -1,0 +1,12 @@
+91614	Eu sou apenas o Agente do Terreno, por isso não[ENTER]posso baixar o preço. Precisas de mais Yang.
+91615	A Guild comprou o terreno!
+91613	Dono do Terreno:
+91616	Volta quando decidires o que fazer. Lembra-te que[ENTER]outros podem comprá-lo primeiro.
+91617	Sou o Agente do Terreno e o responsável pela[ENTER]venda. Antes dos monstros terem ocupado a região[ENTER]no centro do continente, não havia falta de[ENTER]terrenos e todos estavam contentes. Por isso[ENTER]agora apenas vendo terrenos a líderes de Guilds.[ENTER]Queres comprar o terreno?
+91618	Já te disse que não posso vender terrenos a toda[ENTER]a gente. Espero que compreendas.
+91619	Uma Guild que já possua um terreno não poderá[ENTER]adquirir outro.
+91620	Ocorreu um erro enquanto o pedido era processado.
+91621	Para comprares este terreno, o nível da guild tem[ENTER]de ser superior a %s. O terreno custa %s.
+91622	A tua Guild ainda não tem o nível necessário.[ENTER]Lamento.
+91623	Queres comprar este terreno?
+91624	Lamento, mas este terreno já foi adquirido por[ENTER]outra Guild.

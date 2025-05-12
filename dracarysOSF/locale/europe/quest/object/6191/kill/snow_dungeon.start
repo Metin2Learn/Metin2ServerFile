@@ -1,0 +1,22 @@
+if snow_dungeon . is_snowd ( pc . get_map_index ( ) ) and d . getf ( "level" ) == 10 then snow_dungeon . level_clear ( ) 
+d . notice ( 8214 ) 
+d . notice ( 8215 ) 
+server_timer ( "snow_dungeon_end_timer" , 60 , d . get_map_index ( ) ) 
+if party . is_party ( ) then 
+party . setf ( "snow_dungeon_boss_kill_count" , 1 ) 
+end 
+if party . is_party ( ) then 
+local pids = { party . get_member_pids ( ) } 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+if pc . getf ( "snow_dungeon" , "enter_time" ) > 0 then 
+d . update_rank ( 352 , ( get_global_time ( ) - pc . getf ( "snow_dungeon" , "enter_time" ) ) , pc . get_last_damage ( ) ) 
+end 
+q . end_other_pc_block ( ) 
+end 
+else 
+if pc . getf ( "snow_dungeon" , "enter_time" ) > 0 then 
+d . update_rank ( 352 , ( get_global_time ( ) - pc . getf ( "snow_dungeon" , "enter_time" ) ) , pc . get_last_damage ( ) ) 
+end 
+end 
+ return end 

@@ -1,0 +1,39 @@
+say_title ( locale_quest ( 5097 ) ) 
+say ( locale_quest ( 7560 ) ) 
+wait ( ) 
+if game . get_event_flag ( "oxevent_status" ) == 0 then 
+say_title ( locale_quest ( 5097 ) ) 
+say ( locale_quest ( 7573 ) ) 
+elseif game . get_event_flag ( "oxevent_status" ) == 1 then 
+say_title ( locale_quest ( 5097 ) ) 
+say ( locale_quest ( 7583 ) ) 
+local s = select ( locale_quest ( 104 ) , locale_quest ( 105 ) ) 
+if s == 1 then 
+say_title ( locale_quest ( 5097 ) ) 
+say ( locale_quest ( 7584 ) ) 
+wait ( ) 
+local min = game . get_event_flag ( "ox_map_level_min" ) 
+local max = game . get_event_flag ( "ox_map_level_max" ) 
+if pc . get_level ( ) < min or pc . get_level ( ) > max then 
+say_title ( locale_quest ( 5097 ) ) 
+say_reward ( string . format ( locale_quest ( 995 ) , min , max ) ) 
+return 
+end 
+if get_time ( ) < pc . getqf ( "ox_end_cooldown_time" ) then 
+say_title ( locale_quest ( 5097 ) ) 
+say ( locale_quest ( 2696 ) ) 
+return 
+end 
+if oxevent_manager . check_limit ( ) == 0 then 
+say_title ( locale_quest ( 5097 ) ) 
+say ( locale_quest ( 997 ) ) 
+return 
+end 
+pc . warp ( 896500 , 24600 ) 
+elseif s == 2 then 
+return 
+end 
+elseif game . get_event_flag ( "oxevent_status" ) == 2 then 
+say_title ( locale_quest ( 5097 ) ) 
+say ( locale_quest ( 7585 ) ) 
+else return end 

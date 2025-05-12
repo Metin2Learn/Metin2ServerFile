@@ -1,0 +1,62 @@
+change_empire={["start"]=0,move_pc= function ()if pc . is_engaged ( ) then 
+say_title ( locale_quest ( 148 ) ) 
+say_reward ( locale_quest ( 152 ) ) 
+say ( locale_quest ( 126 ) ) 
+return false 
+end 
+if pc . is_married ( ) then 
+say_title ( locale_quest ( 148 ) ) 
+say_reward ( locale_quest ( 152 ) ) 
+say ( locale_quest ( 127 ) ) 
+return false 
+end 
+if pc . is_polymorphed ( ) then 
+say_title ( locale_quest ( 148 ) ) 
+say_reward ( locale_quest ( 128 ) ) 
+say ( locale_quest ( 129 ) ) 
+return false 
+end 
+if pc . has_guild ( ) then 
+say_title ( locale_quest ( 148 ) ) 
+say_reward ( locale_quest ( 130 ) ) 
+say ( locale_quest ( 131 ) ) 
+return false 
+end 
+if pc . get_money ( ) < 500000 then 
+say_title ( locale_quest ( 148 ) ) 
+say_reward ( locale_quest ( 132 ) ) 
+say ( locale_quest ( 133 ) ) 
+return false 
+end 
+say ( locale_quest ( 134 ) ) 
+local s = select ( locale_quest ( 135 ) , locale_quest ( 137 ) , locale_quest ( 138 ) , locale_quest ( 2426 ) ) 
+if 4 == s then 
+return false 
+end 
+say_reward ( locale_quest ( 139 ) ) 
+local a = select ( locale_quest ( 4473 ) , locale_quest ( 2426 ) ) 
+if 2 == a then 
+return false 
+end 
+local ret = pc . change_empire ( s ) 
+local oldempire = pc . get_empire ( ) 
+if ret == 999 then 
+say_title ( locale_quest ( 140 ) ) 
+say_reward ( locale_quest ( 141 ) ) 
+pc . change_gold ( - 500000 ) 
+pc . remove_item ( 71054 ) 
+char_log ( 0 , "CHANGE_EMPIRE" , string . format ( locale_quest ( 142 ) , oldempire , s ) ) 
+return true 
+else 
+if ret == 1 then 
+say ( locale_quest ( 143 ) ) 
+elseif ret == 2 then 
+say ( locale_quest ( 144 ) ) 
+elseif ret == 3 then 
+say ( locale_quest ( 145 ) ) 
+else 
+say ( locale_quest ( 153 ) ) 
+end 
+end 
+return false 
+end }

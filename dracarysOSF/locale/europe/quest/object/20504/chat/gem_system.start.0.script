@@ -1,0 +1,8 @@
+say ( locale_quest ( 1459 ) ) 
+say ( locale_quest ( 1460 ) ) 
+say ( locale_quest ( 1461 ) ) 
+say ( locale_quest ( 1462 ) ) 
+if select ( locale_quest ( 1475 ) , locale_quest ( 1476 ) ) == 1 then 
+setskin ( NOWINDOW ) 
+game . open_gem_market ( ) 
+else return end 

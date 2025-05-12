@@ -1,0 +1,5037 @@
+section
+	npc	9009
+	item	27621	1
+	item	27622	1
+	item	27623	1
+	item	27624	3
+	reward	27591	1
+	category	EVENT
+	percent	100
+end
+
+# º¹¼þ¾Æ²ÉÁø¾×
+section
+	npc	9009
+	item	50721	1
+	reward	50801	1
+	category	ETC
+	percent	100
+end
+
+# µµ¶óÁöÁø¾×
+section
+	npc	9009
+	item	50722	1
+	reward	50802	1
+	category	ETC
+	percent	100
+end
+
+# °¨²ÉÁø¾×
+section
+	npc	9009
+	item	50723	1
+	reward	50803	100
+	category	ETC
+	percent	100
+end
+
+# °¡½Ã¿À°¡ÇÇÁø¾×
+section
+	npc	9009
+	item	50724	1
+	reward	50804	100
+	category	ETC
+	percent	100
+end
+
+# º¹¼þ¾Æ²ÉÁø¾×
+section
+	npc	20017
+	item	50721	1
+	reward	50801	1
+	category	ETC
+	percent	100
+end
+
+# µµ¶óÁöÁø¾×
+section
+	npc	20017
+	item	50722	1
+	reward	50802	1
+	category	ETC
+	percent	100
+end
+
+# °¨²ÉÁø¾×
+section
+	npc	20017
+	item	50723	1
+	reward	50803	100
+	category	ETC
+	percent	100
+end
+
+# °¡½Ã¿À°¡ÇÇÁø¾×
+section
+	npc	20017
+	item	50724	1
+	reward	50804	100
+	category	ETC
+	percent	100
+end
+
+# È°½É¾×Áø¾×
+section
+	npc	20017
+	item	50801	1
+	item	50725	1
+	reward	50813	1
+	category	ETC
+	percent	100
+end
+
+# ÇÇµ¶¼ö
+section
+	npc	20017
+	item	50802	1
+	item	50725	1
+	reward	50814	1
+	category	ETC
+	percent	100
+end
+
+# º¸È¯¼ö
+section
+	npc	20017
+	item	50803	100
+	item	50726	1
+	reward	50815	100
+	category	ETC
+	percent	100
+end
+
+# ¿µº¸¼ö
+section
+	npc	20017
+	item	50804	100
+	item	50726	1
+	reward	50816	100
+	category	ETC
+	percent	100
+end
+
+# ¹ëÆ®
+section
+	npc	20017
+	item	50624	10
+	item	27992	2
+	item	51001	30
+	reward	18000	1
+	gold	10000
+	category	BELT
+	percent	50
+end
+
+section
+	npc	20017
+	item	50625	10
+	item	27992	2
+	item	51001	50
+	reward	18010	1
+	gold	10000
+	category	BELT
+	percent	40
+end
+
+section
+	npc	20017
+	item	50626	10
+	item	27993	2
+	item	51001	70
+	reward	18020	1
+	gold	30000
+	category	BELT
+	percent	30
+end
+
+section
+	npc	20017
+	item	50630	10
+	item	27993	2
+	item	51001	100
+	reward	18030	1
+	gold	30000
+	category	BELT
+	percent	20
+end
+
+# º¹¼þ¾Æ²ÉÁø¾×
+section
+	npc	20018
+	item	50721	1
+	reward	50801	1
+	category	ETC
+	percent	100
+end
+
+# µµ¶óÁöÁø¾×
+section
+	npc	20018
+	item	50722	1
+	reward	50802	1
+	category	ETC
+	percent	100
+end
+
+# °¨²ÉÁø¾×
+section
+	npc	20018
+	item	50723	1
+	reward	50803	100
+	category	ETC
+	percent	100
+end
+
+# °¡½Ã¿À°¡ÇÇÁø¾×
+section
+	npc	20018
+	item	50724	1
+	reward	50804	100
+	category	ETC
+	percent	100
+end
+
+## °æÇèÀÇ¹°¾àÅ×½ºÆ®
+#section
+#	npc	20018
+#	item	51001	100
+#	reward	71157	1
+#	gold	100000
+#	category	ETC
+#	percent	10
+#end
+
+# ¾àÀç
+section
+	npc	20018
+	item	31145	20
+	reward	31144	1
+	category	ETC
+	percent	50
+end
+
+## ¿µ±â(çÏÑ¨)ÀÇ ÄÚ½ºÆ¬
+#section
+#	npc	20018
+#	item	31137	1
+#	item	51001	200
+#	item	31135	1
+#	reward	49001	1
+#	gold	25000000
+#	category	ACCESSORY
+#	percent	20
+#end
+
+# ¿ªÇÒ¼ö·Ã¼­(°í±Þ)
+section
+	npc	20018
+	item	50339	5
+	reward	50340	1
+	category	SKILL_BOOK
+	percent	20
+end
+
+# ÅëÂû·Â(°í±Þ)
+section
+	npc	20018
+	item	50342	5
+	reward	50343	1
+	category	SKILL_BOOK
+	percent	20
+end
+
+# º¹¼þ¾Æ²ÉÁø¾×
+section
+	npc	20022
+	item	50721	1
+	reward	50801	1
+	category	ETC
+	percent	100
+end
+
+# µµ¶óÁöÁø¾×
+section
+	npc	20022
+	item	50722	1
+	reward	50802	1
+	category	ETC
+	percent	100
+end
+
+# °¨²ÉÁø¾×
+section
+	npc	20022
+	item	50723	1
+	reward	50803	100
+	category	ETC
+	percent	100
+end
+
+# °¡½Ã¿À°¡ÇÇÁø¾×
+section
+	npc	20022
+	item	50724	1
+	reward	50804	100
+	category	ETC
+	percent	100
+end
+
+# È°½É¾×Áø¾×
+section
+	npc	20022
+	item	50801	1
+	item	50725	1
+	reward	50813	1
+	category	ETC
+	percent	100
+end
+
+# ÇÇµ¶¼ö
+section
+	npc	20022
+	item	50802	1
+	item	50725	1
+	reward	50814	1
+	category	ETC
+	percent	100
+end
+
+# º¸È¯¼ö
+section
+	npc	20022
+	item	50803	100
+	item	50726	1
+	reward	50815	100
+	category	ETC
+	percent	100
+end
+
+# ¿µº¸¼ö
+section
+	npc	20022
+	item	50804	100
+	item	50726	1
+	reward	50816	100
+	category	ETC
+	percent	100
+end
+
+# ÁøÈ°½É¾×Áø¾×
+section
+	npc	20022
+	item	50813	1
+	item	50727	1
+	reward	50817	1
+	category	ETC
+	percent	100
+end
+
+# ÁøÇÇµ¶¼ö
+section
+	npc	20022
+	item	50814	1
+	item	50727	1
+	reward	50818	1
+	category	ETC
+	percent	100
+end
+
+# Áøº¸È¯¼ö
+section
+	npc	20022
+	item	50815	100
+	item	50728	1
+	reward	50819	1
+	category	ETC
+	percent	100
+end
+
+# Áø¿µº¸¼ö
+section
+	npc	20022
+	item	50816	100
+	item	50728	1
+	reward	50820	1
+	category	ETC
+	percent	100
+end
+
+# Àû»ó¾×
+section
+	npc	20022
+	item	50901	10
+	item	50814	20
+	reward	50821	10
+	category	ETC
+	percent	100
+end
+
+# È«»ó¾×
+section
+	npc	20022
+	item	50901	10
+	item	50813	20
+	reward	50822	10
+	category	ETC
+	percent	100
+end
+
+# È²»ó¾×
+section
+	npc	20022
+	item	50901	10
+	item	50820	20
+	reward	50823	10
+	category	ETC
+	percent	100
+end
+
+# ³ì»ó¾×
+section
+	npc	20022
+	item	50901	10
+	item	50819	20
+	reward	50824	10
+	category	ETC
+	percent	100
+end
+
+# Ã»»ó¾×
+section
+	npc	20022
+	item	50901	10
+	item	50817	20
+	reward	50825	10
+	category	ETC
+	percent	100
+end
+
+# ¹é»ó¾×
+section
+	npc	20022
+	item	50901	10
+	item	50818	20
+	reward	50826	10
+	category	ETC
+	percent	100
+end
+
+# ¿ë½ÅÁö°Ë
+section
+	npc	20383
+	item	145	1
+	item	30500	10
+	item	30505	10
+	reward	460	1
+	gold	100000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20383
+	item	146	1
+	item	30500	10
+	item	30505	10
+	reward	460	1
+	gold	100000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20383
+	item	147	1
+	item	30500	10
+	item	30505	10
+	reward	460	1
+	gold	100000
+	category	WEAPON
+	percent	30
+end
+
+section
+	npc	20383
+	item	148	1
+	item	30500	10
+	item	30505	10
+	reward	460	1
+	gold	100000
+	category	WEAPON
+	percent	40
+end
+
+section
+	npc	20383
+	item	149	1
+	item	30500	10
+	item	30505	10
+	reward	460	1
+	gold	100000
+	category	WEAPON
+	percent	50
+end
+
+# ÆÄ¸êÁö°Ë
+section
+	npc	20383
+	item	155	1
+	item	30503	10
+	item	30502	10
+	reward	470	1
+	gold	100000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20383
+	item	156	1
+	item	30503	10
+	item	30502	10
+	reward	470	1
+	gold	100000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20383
+	item	157	1
+	item	30503	10
+	item	30502	10
+	reward	470	1
+	gold	100000
+	category	WEAPON
+	percent	30
+end
+
+section
+	npc	20383
+	item	158	1
+	item	30503	10
+	item	30502	10
+	reward	470	1
+	gold	100000
+	category	WEAPON
+	percent	40
+end
+
+section
+	npc	20383
+	item	159	1
+	item	30503	10
+	item	30502	10
+	reward	470	1
+	gold	100000
+	category	WEAPON
+	percent	50
+end
+
+# ¿ÀÇàµµ
+section
+	npc	20383
+	item	1105	1
+	item	30506	10
+	item	30507	10
+	reward	1340	1
+	gold	100000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20383
+	item	1106	1
+	item	30506	10
+	item	30507	10
+	reward	1340	1
+	gold	100000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20383
+	item	1107	1
+	item	30506	10
+	item	30507	10
+	reward	1340	1
+	gold	100000
+	category	WEAPON
+	percent	30
+end
+
+section
+	npc	20383
+	item	1108	1
+	item	30506	10
+	item	30507	10
+	reward	1340	1
+	gold	100000
+	category	WEAPON
+	percent	40
+end
+
+section
+	npc	20383
+	item	1109	1
+	item	30506	10
+	item	30507	10
+	reward	1340	1
+	gold	100000
+	category	WEAPON
+	percent	50
+end
+
+# Ãµ·æÁö±Ã
+section
+	npc	20383
+	item	2145	1
+	item	30501	10
+	item	30506	10
+	reward	2370	1
+	gold	100000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20383
+	item	2146	1
+	item	30501	10
+	item	30506	10
+	reward	2370	1
+	gold	100000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20383
+	item	2147	1
+	item	30501	10
+	item	30506	10
+	reward	2370	1
+	gold	100000
+	category	WEAPON
+	percent	30
+end
+
+section
+	npc	20383
+	item	2148	1
+	item	30501	10
+	item	30506	10
+	reward	2370	1
+	gold	100000
+	category	WEAPON
+	percent	40
+end
+
+section
+	npc	20383
+	item	2149	1
+	item	30501	10
+	item	30506	10
+	reward	2370	1
+	gold	100000
+	category	WEAPON
+	percent	50
+end
+
+# ÅÂ¾ç°Ë
+section
+	npc	20383
+	item	3145	1
+	item	30504	10
+	item	30508	10
+	reward	3190	1
+	gold	100000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20383
+	item	3146	1
+	item	30504	10
+	item	30508	10
+	reward	3190	1
+	gold	100000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20383
+	item	3147	1
+	item	30504	10
+	item	30508	10
+	reward	3190	1
+	gold	100000
+	category	WEAPON
+	percent	30
+end
+
+section
+	npc	20383
+	item	3148	1
+	item	30504	10
+	item	30508	10
+	reward	3190	1
+	gold	100000
+	category	WEAPON
+	percent	40
+end
+
+section
+	npc	20383
+	item	3149	1
+	item	30504	10
+	item	30508	10
+	reward	3190	1
+	gold	100000
+	category	WEAPON
+	percent	50
+end
+
+# ¿ë½Å·É
+section
+	npc	20383
+	item	5105	1
+	item	30507	10
+	item	30503	10
+	reward	5340	1
+	gold	100000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20383
+	item	5106	1
+	item	30507	10
+	item	30503	10
+	reward	5340	1
+	gold	100000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20383
+	item	5107	1
+	item	30507	10
+	item	30503	10
+	reward	5340	1
+	gold	100000
+	category	WEAPON
+	percent	30
+end
+
+section
+	npc	20383
+	item	5108	1
+	item	30507	10
+	item	30503	10
+	reward	5340	1
+	gold	100000
+	category	WEAPON
+	percent	40
+end
+
+section
+	npc	20383
+	item	5109	1
+	item	30507	10
+	item	30503	10
+	reward	5340	1
+	gold	100000
+	category	WEAPON
+	percent	50
+end
+
+# ¹«¾ÆÁö¼±
+section
+	npc	20383
+	item	7145	1
+	item	30508	10
+	item	30504	10
+	reward	7370	1
+	gold	100000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20383
+	item	7146	1
+	item	30508	10
+	item	30504	10
+	reward	7370	1
+	gold	100000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20383
+	item	7147	1
+	item	30508	10
+	item	30504	10
+	reward	7370	1
+	gold	100000
+	category	WEAPON
+	percent	30
+end
+
+section
+	npc	20383
+	item	7148	1
+	item	30508	10
+	item	30504	10
+	reward	7370	1
+	gold	100000
+	category	WEAPON
+	percent	40
+end
+
+section
+	npc	20383
+	item	7149	1
+	item	30508	10
+	item	30504	10
+	reward	7370	1
+	gold	100000
+	category	WEAPON
+	percent	50
+end
+
+# ³ì¸Í¾Æ
+section
+	npc	20383
+	item	6055	1
+	item	30502	10
+	item	30500	10
+	reward	6090	1
+	gold	100000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20383
+	item	6056	1
+	item	30502	10
+	item	30500	10
+	reward	6090	1
+	gold	100000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20383
+	item	6057	1
+	item	30502	10
+	item	30500	10
+	reward	6090	1
+	gold	100000
+	category	WEAPON
+	percent	30
+end
+
+section
+	npc	20383
+	item	6058	1
+	item	30502	10
+	item	30500	10
+	reward	6090	1
+	gold	100000
+	category	WEAPON
+	percent	40
+end
+
+section
+	npc	20383
+	item	6059	1
+	item	30502	10
+	item	30500	10
+	reward	6090	1
+	gold	100000
+	category	WEAPON
+	percent	50
+end
+
+# ÅÂÀ»°©
+section
+	npc	20383
+	item	11295	1
+	item	30509	10
+	item	30516	10
+	item	30514	10
+	reward	20000	1
+	gold	100000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20383
+	item	11296	1
+	item	30509	10
+	item	30516	10
+	item	30514	10
+	reward	20000	1
+	gold	100000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20383
+	item	11297	1
+	item	30509	10
+	item	30516	10
+	item	30514	10
+	reward	20000	1
+	gold	100000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20383
+	item	11298	1
+	item	30509	10
+	item	30516	10
+	item	30514	10
+	reward	20000	1
+	gold	100000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20383
+	item	11299	1
+	item	30509	10
+	item	30516	10
+	item	30514	10
+	reward	20000	1
+	gold	100000
+	category	ARMOR
+	percent	50
+end
+
+# ¿µº¸
+section
+	npc	20383
+	item	11495	1
+	item	30512	10
+	item	30513	10
+	item	30517	10
+	reward	20250	1
+	gold	100000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20383
+	item	11496	1
+	item	30512	10
+	item	30513	10
+	item	30517	10
+	reward	20250	1
+	gold	100000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20383
+	item	11497	1
+	item	30512	10
+	item	30513	10
+	item	30517	10
+	reward	20250	1
+	gold	100000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20383
+	item	11498	1
+	item	30512	10
+	item	30513	10
+	item	30517	10
+	reward	20250	1
+	gold	100000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20383
+	item	11499	1
+	item	30512	10
+	item	30513	10
+	item	30517	10
+	reward	20250	1
+	gold	100000
+	category	ARMOR
+	percent	50
+end
+
+# ÇöÃµ°©
+section
+	npc	20383
+	item	11695	1
+	item	30515	10
+	item	30510	10
+	item	30511	10
+	reward	20500	1
+	gold	100000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20383
+	item	11696	1
+	item	30515	10
+	item	30510	10
+	item	30511	10
+	reward	20500	1
+	gold	100000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20383
+	item	11697	1
+	item	30515	10
+	item	30510	10
+	item	30511	10
+	reward	20500	1
+	gold	100000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20383
+	item	11698	1
+	item	30515	10
+	item	30510	10
+	item	30511	10
+	reward	20500	1
+	gold	100000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20383
+	item	11699	1
+	item	30515	10
+	item	30510	10
+	item	30511	10
+	reward	20500	1
+	gold	100000
+	category	ARMOR
+	percent	50
+end
+
+# »ï°üÀÇ
+section
+	npc	20383
+	item	11895	1
+	item	30509	10
+	item	30517	10
+	item	30510	10
+	reward	20750	1
+	gold	100000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20383
+	item	11896	1
+	item	30509	10
+	item	30517	10
+	item	30510	10
+	reward	20750	1
+	gold	100000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20383
+	item	11897	1
+	item	30509	10
+	item	30517	10
+	item	30510	10
+	reward	20750	1
+	gold	100000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20383
+	item	11898	1
+	item	30509	10
+	item	30517	10
+	item	30510	10
+	reward	20750	1
+	gold	100000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20383
+	item	11899	1
+	item	30509	10
+	item	30517	10
+	item	30510	10
+	reward	20750	1
+	gold	100000
+	category	ARMOR
+	percent	50
+end
+
+# À§Ãµ°©
+section
+	npc	20383
+	item	21075	1
+	item	30512	10
+	item	30516	10
+	item	30517	10
+	reward	21090	1
+	gold	100000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20383
+	item	21076	1
+	item	30512	10
+	item	30516	10
+	item	30517	10
+	reward	21090	1
+	gold	100000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20383
+	item	21077	1
+	item	30512	10
+	item	30516	10
+	item	30517	10
+	reward	21090	1
+	gold	100000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20383
+	item	21078	1
+	item	30512	10
+	item	30516	10
+	item	30517	10
+	reward	21090	1
+	gold	100000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20383
+	item	21079	1
+	item	30512	10
+	item	30516	10
+	item	30517	10
+	reward	21090	1
+	gold	100000
+	category	ARMOR
+	percent	50
+end
+
+# È«¿Á°è¿­
+section
+	npc	20383
+	item	50635	3
+	item	30518	10
+	item	30523	10
+	reward	14500	1
+	gold	100000
+	category	ACCESSORY
+	percent	30
+end
+
+section
+	npc	20383
+	item	50635	3
+	item	30519	10
+	item	30520	10
+	reward	16500	1
+	gold	100000
+	category	ACCESSORY
+	percent	30
+end
+
+section
+	npc	20383
+	item	50635	3
+	item	30520	10
+	item	30521	10
+	reward	17500	1
+	gold	100000
+	category	ACCESSORY
+	percent	30
+end
+
+# ¼®·ù°è¿­
+section
+	npc	20383
+	item	50636	3
+	item	30518	10
+	item	30522	10
+	reward	14520	1
+	gold	100000
+	category	ACCESSORY
+	percent	30
+end
+
+section
+	npc	20383
+	item	50636	3
+	item	30519	10
+	item	30521	10
+	reward	16520	1
+	gold	100000
+	category	ACCESSORY
+	percent	30
+end
+
+section
+	npc	20383
+	item	50636	3
+	item	30520	10
+	item	30523	10
+	reward	17520	1
+	gold	100000
+	category	ACCESSORY
+	percent	30
+end
+
+# ³ìÁÖ°è¿­
+section
+	npc	20383
+	item	50637	3
+	item	30518	10
+	item	30521	10
+	reward	14540	1
+	gold	100000
+	category	ACCESSORY
+	percent	30
+end
+
+section
+	npc	20383
+	item	50637	3
+	item	30519	10
+	item	30523	10
+	reward	16540	1
+	gold	100000
+	category	ACCESSORY
+	percent	30
+end
+
+section
+	npc	20383
+	item	50637	3
+	item	30520	10
+	item	30522	10
+	reward	17540	1
+	gold	100000
+	category	ACCESSORY
+	percent	30
+end
+
+# Ã»¿Á°è¿­
+section
+	npc	20383
+	item	50638	3
+	item	30518	10
+	item	30519	10
+	reward	14560	1
+	gold	100000
+	category	ACCESSORY
+	percent	30
+end
+
+section
+	npc	20383
+	item	50638	3
+	item	30519	10
+	item	30522	10
+	reward	16560	1
+	gold	100000
+	category	ACCESSORY
+	percent	30
+end
+
+section
+	npc	20383
+	item	50638	3
+	item	30520	10
+	item	30518	10
+	reward	17560	1
+	gold	100000
+	category	ACCESSORY
+	percent	30
+end
+
+# ¿À±¤°è¿­
+section
+	npc	20383
+	item	50639	3
+	item	30518	10
+	item	30519	10
+	reward	14570	1
+	gold	100000
+	category	ACCESSORY
+	percent	30
+end
+
+section
+	npc	20383
+	item	50639	3
+	item	30519	10
+	item	30522	10
+	reward	16570	1
+	gold	100000
+	category	ACCESSORY
+	percent	30
+end
+
+section
+	npc	20383
+	item	50636	10
+	item	27994	2
+	item	30518	5
+	item	30524	10
+	reward	18040	1
+	gold	50000
+	category	BELT
+	percent	10
+end
+
+section
+	npc	20383
+	item	50635	10
+	item	27994	2
+	item	30519	5
+	item	30525	10
+	reward	18050	1
+	gold	50000
+	category	BELT
+	percent	10
+end
+
+section
+	npc	20383
+	item	50637	10
+	item	27994	2
+	item	30522	5
+	item	30524	10
+	reward	18060	1
+	gold	50000
+	category	BELT
+	percent	10
+end
+
+section
+	npc	20383
+	item	50638	10
+	item	27994	2
+	item	30523	5
+	item	30525	10
+	reward	18070	1
+	gold	50000
+	category	BELT
+	percent	10
+end
+
+section
+	npc	20383
+	item	50634	10
+	item	27994	2
+	item	30550	20
+	item	51001	100
+	reward	18080	1
+	gold	50000
+	category	BELT
+	percent	10
+end
+
+section
+	npc	20383
+	item	50639	10
+	item	27994	2
+	item	30519	5
+	item	30525	10
+	reward	18090	1
+	gold	50000
+	category	BELT
+	percent	10
+end
+
+# ÀûÈ­¼®ÀçÁ¶
+section
+	npc	20383
+	item	51001	50
+	item	27992	1
+	item	27993	1
+	item	27994	1
+	reward	18900	1
+	gold	50000
+	category	ETC
+	percent	10
+end
+
+# Ã»È£°©
+section
+	npc	20413
+	item	20005	1
+	item	30601	1
+	item	30605	5
+	item	30602	1
+	reward	20760	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20006	1
+	item	30601	1
+	item	30605	5
+	item	30602	1
+	reward	20760	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20007	1
+	item	30601	1
+	item	30605	5
+	item	30602	1
+	reward	20760	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20008	1
+	item	30601	1
+	item	30605	5
+	item	30602	1
+	reward	20760	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20009	1
+	item	30601	1
+	item	30605	5
+	item	30602	1
+	reward	20760	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# Ã»°Ç
+section
+	npc	20413
+	item	20255	1
+	item	30601	1
+	item	30606	5
+	item	30602	1
+	reward	20770	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20256	1
+	item	30601	1
+	item	30606	5
+	item	30602	1
+	reward	20770	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20257	1
+	item	30601	1
+	item	30606	5
+	item	30602	1
+	reward	20770	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20258	1
+	item	30601	1
+	item	30606	5
+	item	30602	1
+	reward	20770	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20259	1
+	item	30601	1
+	item	30606	5
+	item	30602	1
+	reward	20770	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# Ã»¸¶°©
+section
+	npc	20413
+	item	20505	1
+	item	30601	1
+	item	30607	5
+	item	30602	1
+	reward	20780	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20506	1
+	item	30601	1
+	item	30607	5
+	item	30602	1
+	reward	20780	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20507	1
+	item	30601	1
+	item	30607	5
+	item	30602	1
+	reward	20780	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20508	1
+	item	30601	1
+	item	30607	5
+	item	30602	1
+	reward	20780	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20509	1
+	item	30601	1
+	item	30607	5
+	item	30602	1
+	reward	20780	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# Ã»»óÀÇ
+section
+	npc	20413
+	item	20755	1
+	item	30601	1
+	item	30608	5
+	item	30602	1
+	reward	20790	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20756	1
+	item	30601	1
+	item	30608	5
+	item	30602	1
+	reward	20790	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20757	1
+	item	30601	1
+	item	30608	5
+	item	30602	1
+	reward	20790	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20758	1
+	item	30601	1
+	item	30608	5
+	item	30602	1
+	reward	20790	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20759	1
+	item	30601	1
+	item	30608	5
+	item	30602	1
+	reward	20790	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# Ã»ÇØ°©
+section
+	npc	20413
+	item	21095	1
+	item	30601	1
+	item	30609	5
+	item	30602	1
+	reward	20800	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	21096	1
+	item	30601	1
+	item	30609	5
+	item	30602	1
+	reward	20800	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	21097	1
+	item	30601	1
+	item	30609	5
+	item	30602	1
+	reward	20800	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	21098	1
+	item	30601	1
+	item	30609	5
+	item	30602	1
+	reward	20800	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	21099	1
+	item	30601	1
+	item	30609	5
+	item	30602	1
+	reward	20800	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# Àû·æ°©
+section
+	npc	20413
+	item	20005	1
+	item	30601	1
+	item	30606	5
+	item	30603	1
+	reward	20810	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20006	1
+	item	30601	1
+	item	30606	5
+	item	30603	1
+	reward	20810	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20007	1
+	item	30601	1
+	item	30606	5
+	item	30603	1
+	reward	20810	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20008	1
+	item	30601	1
+	item	30606	5
+	item	30603	1
+	reward	20810	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20009	1
+	item	30601	1
+	item	30606	5
+	item	30603	1
+	reward	20810	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# ÀûÇö
+section
+	npc	20413
+	item	20255	1
+	item	30601	1
+	item	30607	5
+	item	30603	1
+	reward	20820	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20256	1
+	item	30601	1
+	item	30607	5
+	item	30603	1
+	reward	20820	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20257	1
+	item	30601	1
+	item	30607	5
+	item	30603	1
+	reward	20820	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20258	1
+	item	30601	1
+	item	30607	5
+	item	30603	1
+	reward	20820	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20259	1
+	item	30601	1
+	item	30607	5
+	item	30603	1
+	reward	20820	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# Àû»ó°©
+section
+	npc	20413
+	item	20505	1
+	item	30601	1
+	item	30608	5
+	item	30603	1
+	reward	20830	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20506	1
+	item	30601	1
+	item	30608	5
+	item	30603	1
+	reward	20830	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20507	1
+	item	30601	1
+	item	30608	5
+	item	30603	1
+	reward	20830	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20508	1
+	item	30601	1
+	item	30608	5
+	item	30603	1
+	reward	20830	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20509	1
+	item	30601	1
+	item	30608	5
+	item	30603	1
+	reward	20830	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# Àû¼±ÀÇ
+section
+	npc	20413
+	item	20755	1
+	item	30601	1
+	item	30609	5
+	item	30603	1
+	reward	20840	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20756	1
+	item	30601	1
+	item	30609	5
+	item	30603	1
+	reward	20840	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20757	1
+	item	30601	1
+	item	30609	5
+	item	30603	1
+	reward	20840	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20758	1
+	item	30601	1
+	item	30609	5
+	item	30603	1
+	reward	20840	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20759	1
+	item	30601	1
+	item	30609	5
+	item	30603	1
+	reward	20840	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# ÀûÃµ°©
+section
+	npc	20413
+	item	21095	1
+	item	30601	1
+	item	30605	5
+	item	30603	1
+	reward	20850	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	21096	1
+	item	30601	1
+	item	30605	5
+	item	30603	1
+	reward	20850	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	21097	1
+	item	30601	1
+	item	30605	5
+	item	30603	1
+	reward	20850	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	21098	1
+	item	30601	1
+	item	30605	5
+	item	30603	1
+	reward	20850	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	21099	1
+	item	30601	1
+	item	30605	5
+	item	30603	1
+	reward	20850	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# ¹éÈ£°©
+section
+	npc	20413
+	item	20005	1
+	item	30601	1
+	item	30605	5
+	item	30615	1
+	reward	20860	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20006	1
+	item	30601	1
+	item	30605	5
+	item	30615	1
+	reward	20860	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20007	1
+	item	30601	1
+	item	30605	5
+	item	30615	1
+	reward	20860	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20008	1
+	item	30601	1
+	item	30605	5
+	item	30615	1
+	reward	20860	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20009	1
+	item	30601	1
+	item	30605	5
+	item	30615	1
+	reward	20860	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# ¹é°Ç
+section
+	npc	20413
+	item	20255	1
+	item	30601	1
+	item	30606	5
+	item	30615	1
+	reward	20870	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20256	1
+	item	30601	1
+	item	30606	5
+	item	30615	1
+	reward	20870	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20257	1
+	item	30601	1
+	item	30606	5
+	item	30615	1
+	reward	20870	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20258	1
+	item	30601	1
+	item	30606	5
+	item	30615	1
+	reward	20870	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20259	1
+	item	30601	1
+	item	30606	5
+	item	30615	1
+	reward	20870	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# ¹é¸¶°©
+section
+	npc	20413
+	item	20505	1
+	item	30601	1
+	item	30607	5
+	item	30615	1
+	reward	20880	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20506	1
+	item	30601	1
+	item	30607	5
+	item	30615	1
+	reward	20880	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20507	1
+	item	30601	1
+	item	30607	5
+	item	30615	1
+	reward	20880	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20508	1
+	item	30601	1
+	item	30607	5
+	item	30615	1
+	reward	20880	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20509	1
+	item	30601	1
+	item	30607	5
+	item	30615	1
+	reward	20880	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# ¹é»óÀÇ
+section
+	npc	20413
+	item	20755	1
+	item	30601	1
+	item	30608	5
+	item	30615	1
+	reward	20890	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20756	1
+	item	30601	1
+	item	30608	5
+	item	30615	1
+	reward	20890	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20757	1
+	item	30601	1
+	item	30608	5
+	item	30615	1
+	reward	20890	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20758	1
+	item	30601	1
+	item	30608	5
+	item	30615	1
+	reward	20890	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20759	1
+	item	30601	1
+	item	30608	5
+	item	30615	1
+	reward	20890	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# ¹éÇö°©
+section
+	npc	20413
+	item	21095	1
+	item	30601	1
+	item	30609	5
+	item	30615	1
+	reward	20900	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	21096	1
+	item	30601	1
+	item	30609	5
+	item	30615	1
+	reward	20900	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	21097	1
+	item	30601	1
+	item	30609	5
+	item	30615	1
+	reward	20900	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	21098	1
+	item	30601	1
+	item	30609	5
+	item	30615	1
+	reward	20900	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	21099	1
+	item	30601	1
+	item	30609	5
+	item	30615	1
+	reward	20900	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# Èæ·æ°©
+section
+	npc	20413
+	item	20005	1
+	item	30601	1
+	item	30606	5
+	item	30614	1
+	reward	20910	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20006	1
+	item	30601	1
+	item	30606	5
+	item	30614	1
+	reward	20910	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20007	1
+	item	30601	1
+	item	30606	5
+	item	30614	1
+	reward	20910	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20008	1
+	item	30601	1
+	item	30606	5
+	item	30614	1
+	reward	20910	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20009	1
+	item	30601	1
+	item	30606	5
+	item	30614	1
+	reward	20910	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# ÈæÇö
+section
+	npc	20413
+	item	20255	1
+	item	30601	1
+	item	30607	5
+	item	30614	1
+	reward	20920	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20256	1
+	item	30601	1
+	item	30607	5
+	item	30614	1
+	reward	20920	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20257	1
+	item	30601	1
+	item	30607	5
+	item	30614	1
+	reward	20920	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20258	1
+	item	30601	1
+	item	30607	5
+	item	30614	1
+	reward	20920	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20259	1
+	item	30601	1
+	item	30607	5
+	item	30614	1
+	reward	20920	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# Èæ»ó°©
+section
+	npc	20413
+	item	20505	1
+	item	30601	1
+	item	30608	5
+	item	30614	1
+	reward	20930	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20506	1
+	item	30601	1
+	item	30608	5
+	item	30614	1
+	reward	20930	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20507	1
+	item	30601	1
+	item	30608	5
+	item	30614	1
+	reward	20930	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20508	1
+	item	30601	1
+	item	30608	5
+	item	30614	1
+	reward	20930	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20509	1
+	item	30601	1
+	item	30608	5
+	item	30614	1
+	reward	20930	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# Èæ¼±
+section
+	npc	20413
+	item	20755	1
+	item	30601	1
+	item	30609	5
+	item	30614	1
+	reward	20940	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	20756	1
+	item	30601	1
+	item	30609	5
+	item	30614	1
+	reward	20940	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	20757	1
+	item	30601	1
+	item	30609	5
+	item	30614	1
+	reward	20940	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	20758	1
+	item	30601	1
+	item	30609	5
+	item	30614	1
+	reward	20940	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	20759	1
+	item	30601	1
+	item	30609	5
+	item	30614	1
+	reward	20940	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# ÈæÃµ°©
+section
+	npc	20413
+	item	21095	1
+	item	30601	1
+	item	30605	5
+	item	30614	1
+	reward	20950	1
+	gold	3000000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	21096	1
+	item	30601	1
+	item	30605	5
+	item	30614	1
+	reward	20950	1
+	gold	3000000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	21097	1
+	item	30601	1
+	item	30605	5
+	item	30614	1
+	reward	20950	1
+	gold	3000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	21098	1
+	item	30601	1
+	item	30605	5
+	item	30614	1
+	reward	20950	1
+	gold	3000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	21099	1
+	item	30601	1
+	item	30605	5
+	item	30614	1
+	reward	20950	1
+	gold	3000000
+	category	ARMOR
+	percent	50
+end
+
+# È­¿°½Å¹ß
+section
+	npc	20413
+	item	15435	1
+	item	30600	1
+	item	30602	1
+	item	30611	5
+	reward	15440	1
+	gold	400000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	15436	1
+	item	30600	1
+	item	30602	1
+	item	30611	5
+	reward	15440	1
+	gold	400000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	15437	1
+	item	30600	1
+	item	30602	1
+	item	30611	5
+	reward	15440	1
+	gold	400000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	15438	1
+	item	30600	1
+	item	30602	1
+	item	30611	5
+	reward	15440	1
+	gold	400000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	15439	1
+	item	30600	1
+	item	30602	1
+	item	30611	5
+	reward	15440	1
+	gold	400000
+	category	ARMOR
+	percent	50
+end
+
+# ºù¿°½Å¹ß
+section
+	npc	20413
+	item	15375	1
+	item	30600	1
+	item	30603	1
+	item	30611	5
+	reward	15450	1
+	gold	400000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20413
+	item	15376	1
+	item	30600	1
+	item	30603	1
+	item	30611	5
+	reward	15450	1
+	gold	400000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20413
+	item	15377	1
+	item	30600	1
+	item	30603	1
+	item	30611	5
+	reward	15450	1
+	gold	400000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20413
+	item	15378	1
+	item	30600	1
+	item	30603	1
+	item	30611	5
+	reward	15450	1
+	gold	400000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20413
+	item	15379	1
+	item	30600	1
+	item	30603	1
+	item	30611	5
+	reward	15450	1
+	gold	400000
+	category	ARMOR
+	percent	50
+end
+
+# ºñ´ÃÅõ±¸(ÆÄÆ¼)
+section
+	npc	20421
+	item	12285	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12730	1
+	gold	1000000
+	category	ARMOR
+	percent	10
+	not_remove	12285
+end
+
+section
+	npc	20421
+	item	12286	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12730	1
+	gold	1000000
+	category	ARMOR
+	percent	20
+	not_remove	12286
+end
+
+section
+	npc	20421
+	item	12287	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12730	1
+	gold	1000000
+	category	ARMOR
+	percent	30
+	not_remove	12287
+end
+
+section
+	npc	20421
+	item	12288	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12730	1
+	gold	1000000
+	category	ARMOR
+	percent	40
+	not_remove	12288
+end
+
+section
+	npc	20421
+	item	12289	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12730	1
+	gold	1000000
+	category	ARMOR
+	percent	50
+	not_remove	12289
+end
+
+# ¿ëºñµÎ°Ç(ÆÄÆ¼)
+section
+	npc	20421
+	item	12405	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12740	1
+	gold	1000000
+	category	ARMOR
+	percent	10
+	not_remove	12405
+end
+
+section
+	npc	20421
+	item	12406	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12740	1
+	gold	1000000
+	category	ARMOR
+	percent	20
+	not_remove	12406
+end
+
+section
+	npc	20421
+	item	12407	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12740	1
+	gold	1000000
+	category	ARMOR
+	percent	30
+	not_remove	12407
+end
+
+section
+	npc	20421
+	item	12408	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12740	1
+	gold	1000000
+	category	ARMOR
+	percent	40
+	not_remove	12408
+end
+
+section
+	npc	20421
+	item	12409	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12740	1
+	gold	1000000
+	category	ARMOR
+	percent	50
+	not_remove	12409
+end
+
+# ±ÍÈ¥Åõ±¸(ÆÄÆ¼)
+section
+	npc	20421
+	item	12545	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12750	1
+	gold	1000000
+	category	ARMOR
+	percent	10
+	not_remove	12545
+end
+
+section
+	npc	20421
+	item	12546	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12750	1
+	gold	1000000
+	category	ARMOR
+	percent	20
+	not_remove	12546
+end
+
+section
+	npc	20421
+	item	12547	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12750	1
+	gold	1000000
+	category	ARMOR
+	percent	30
+	not_remove	12547
+end
+
+section
+	npc	20421
+	item	12548	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12750	1
+	gold	1000000
+	category	ARMOR
+	percent	40
+	not_remove	12548
+end
+
+section
+	npc	20421
+	item	12549	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12750	1
+	gold	1000000
+	category	ARMOR
+	percent	50
+	not_remove	12549
+end
+
+# ¹éÁ¦¸ð(ÆÄÆ¼)
+section
+	npc	20421
+	item	12685	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12760	1
+	gold	1000000
+	category	ARMOR
+	percent	10
+	not_remove	12685
+end
+
+section
+	npc	20421
+	item	12686	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12760	1
+	gold	1000000
+	category	ARMOR
+	percent	20
+	not_remove	12686
+end
+
+section
+	npc	20421
+	item	12687	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12760	1
+	gold	1000000
+	category	ARMOR
+	percent	30
+	not_remove	12687
+end
+
+section
+	npc	20421
+	item	12688	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12760	1
+	gold	1000000
+	category	ARMOR
+	percent	40
+	not_remove	12688
+end
+
+section
+	npc	20421
+	item	12689	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12760	1
+	gold	1000000
+	category	ARMOR
+	percent	50
+	not_remove	12689
+end
+
+# ¿ë¼öÅõ±¸(ÆÄÆ¼)
+section
+	npc	20421
+	item	21545	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12770	1
+	gold	1000000
+	category	ARMOR
+	percent	10
+	not_remove	21545
+end
+
+section
+	npc	20421
+	item	21546	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12770	1
+	gold	1000000
+	category	ARMOR
+	percent	20
+	not_remove	21546
+end
+
+section
+	npc	20421
+	item	21547	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12770	1
+	gold	1000000
+	category	ARMOR
+	percent	30
+	not_remove	21547
+end
+
+section
+	npc	20421
+	item	21548	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12770	1
+	gold	1000000
+	category	ARMOR
+	percent	40
+	not_remove	21548
+end
+
+section
+	npc	20421
+	item	21549	1
+	item	30620	5
+	item	30621	5
+	item	30622	5
+	item	30630	3
+	reward	12770	1
+	gold	1000000
+	category	ARMOR
+	percent	50
+	not_remove	21549
+end
+
+# ºñ´ÃÅõ±¸
+section
+	npc	20421
+	item	12285	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12690	1
+	gold	1000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20421
+	item	12286	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12690	1
+	gold	1000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20421
+	item	12287	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12690	1
+	gold	1000000
+	category	ARMOR
+	percent	50
+end
+
+section
+	npc	20421
+	item	12288	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12690	1
+	gold	1000000
+	category	ARMOR
+	percent	60
+end
+
+section
+	npc	20421
+	item	12289	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12690	1
+	gold	1000000
+	category	ARMOR
+	percent	70
+end
+
+# ¿ëºñµÎ°Ç
+section
+	npc	20421
+	item	12405	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12700	1
+	gold	1000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20421
+	item	12406	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12700	1
+	gold	1000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20421
+	item	12407	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12700	1
+	gold	1000000
+	category	ARMOR
+	percent	50
+end
+
+section
+	npc	20421
+	item	12408	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12700	1
+	gold	1000000
+	category	ARMOR
+	percent	60
+end
+
+section
+	npc	20421
+	item	12409	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12700	1
+	gold	1000000
+	category	ARMOR
+	percent	70
+end
+
+# ±ÍÈ¥Åõ±¸
+section
+	npc	20421
+	item	12545	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12710	1
+	gold	1000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20421
+	item	12546	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12710	1
+	gold	1000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20421
+	item	12547	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12710	1
+	gold	1000000
+	category	ARMOR
+	percent	50
+end
+
+section
+	npc	20421
+	item	12548	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12710	1
+	gold	1000000
+	category	ARMOR
+	percent	60
+end
+
+section
+	npc	20421
+	item	12549	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12710	1
+	gold	1000000
+	category	ARMOR
+	percent	70
+end
+
+# ¹éÁ¦¸ð
+section
+	npc	20421
+	item	12685	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12720	1
+	gold	1000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20421
+	item	12686	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12720	1
+	gold	1000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20421
+	item	12687	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12720	1
+	gold	1000000
+	category	ARMOR
+	percent	50
+end
+
+section
+	npc	20421
+	item	12688	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12720	1
+	gold	1000000
+	category	ARMOR
+	percent	60
+end
+
+section
+	npc	20421
+	item	12689	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	12720	1
+	gold	1000000
+	category	ARMOR
+	percent	70
+end
+
+# Ãµ¼öÅõ±¸
+section
+	npc	20421
+	item	21545	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	21550	1
+	gold	1000000
+	category	ARMOR
+	percent	30
+end
+
+section
+	npc	20421
+	item	21546	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	21550	1
+	gold	1000000
+	category	ARMOR
+	percent	40
+end
+
+section
+	npc	20421
+	item	21547	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	21550	1
+	gold	1000000
+	category	ARMOR
+	percent	50
+end
+
+section
+	npc	20421
+	item	21548	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	21550	1
+	gold	1000000
+	category	ARMOR
+	percent	60
+end
+
+section
+	npc	20421
+	item	21549	1
+	item	30620	5
+	item	30621	5
+	item	30622	10
+	reward	21550	1
+	gold	1000000
+	category	ARMOR
+	percent	70
+end
+
+# °í±ÍÇÏ°Ô ºû³ª´Â ¹«±â ÆÄÆí
+section
+	npc	20433
+	item	39097	200
+	reward	39100	1
+	gold	500000
+	category	ETC
+	percent	30
+end
+
+# °í±ÍÇÏ°Ô ºû³ª´Â °©¿Ê ÆÄÆí
+section
+	npc	20433
+	item	39091	200
+	reward	39094	1
+	gold	500000
+	category	ETC
+	percent	30
+end
+
+# °í±ÍÇÏ°Ô ºû³ª´Â Çï¸ä ÆÄÆí
+section
+	npc	20433
+	item	39085	200
+	reward	39088	1
+	gold	500000
+	category	ETC
+	percent	30
+end
+
+# ¼þ°íÇÏ°Ô ºû³ª´Â ¹«±â ÆÄÆí
+section
+	npc	20433
+	item	39098	200
+	reward	39101	1
+	gold	1000000
+	category	ETC
+	percent	20
+end
+
+# ¼þ°íÇÏ°Ô ºû³ª´Â °©¿Ê ÆÄÆí
+section
+	npc	20433
+	item	39092	200
+	reward	39095	1
+	gold	1000000
+	category	ETC
+	percent	20
+end
+
+# ¼þ°íÇÏ°Ô ºû³ª´Â Çï¸ä ÆÄÆí
+section
+	npc	20433
+	item	39086	200
+	reward	39089	1
+	gold	1000000
+	category	ETC
+	percent	20
+end
+
+# °Å·èÇÏ°Ô ºû³ª´Â ¹«±â ÆÄÆí
+section
+	npc	20433
+	item	39099	200
+	reward	39102	1
+	gold	3000000
+	category	ETC
+	percent	15
+end
+
+# °Å·èÇÏ°Ô ºû³ª´Â °©¿Ê ÆÄÆí
+section
+	npc	20433
+	item	39093	200
+	reward	39096	1
+	gold	3000000
+	category	ETC
+	percent	15
+end
+
+# °Å·èÇÏ°Ô ºû³ª´Â Çï¸ä ÆÄÆí
+section
+	npc	20433
+	item	39087	200
+	reward	39090	1
+	gold	3000000
+	category	ETC
+	percent	15
+end
+
+# ¿µ·ÕÇÏ°Ô ºû³ª´Â ¹«±â ÆÄÆí
+section
+	npc	20433
+	item	39102	10
+	reward	39105	1
+	gold	5000000
+	category	ETC
+	percent	10
+end
+
+# ¿µ·ÕÇÏ°Ô ºû³ª´Â °©¿Ê ÆÄÆí
+section
+	npc	20433
+	item	39096	10
+	reward	39104	1
+	gold	5000000
+	category	ETC
+	percent	10
+end
+
+# ¿µ·ÕÇÏ°Ô ºû³ª´Â Çï¸ä ÆÄÆí
+section
+	npc	20433
+	item	39090	10
+	reward	39103	1
+	gold	5000000
+	category	ETC
+	percent	10
+end
+
+# Âù¶õÇÏ°Ô ºû³ª´Â ¹«±â ÆÄÆí
+section
+	npc	20433
+	item	39105	10
+	reward	39108	1
+	gold	5000000
+	category	ETC
+	percent	10
+end
+
+# Âù¶õÇÏ°Ô ºû³ª´Â °©¿Ê ÆÄÆí
+section
+	npc	20433
+	item	39104	10
+	reward	39107	1
+	gold	5000000
+	category	ETC
+	percent	10
+end
+
+# Âù¶õÇÏ°Ô ºû³ª´Â Çï¸ä ÆÄÆí
+section
+	npc	20433
+	item	39103	10
+	reward	39106	1
+	gold	5000000
+	category	ETC
+	percent	10
+end
+
+# È­¿°Á¤·É
+section
+	npc	20433
+	item	39117	2
+	reward	53581	1
+	gold	100000
+	gem	10
+	category	PET
+	percent	100
+end
+
+# ³Ã±âÁ¤·É
+section
+	npc	20433
+	item	39117	2
+	reward	53582	1
+	gold	100000
+	gem	10
+	category	PET
+	percent	100
+end
+
+# Àü±âÁ¤·É
+section
+	npc	20433
+	item	39117	2
+	reward	53583	1
+	gold	100000
+	gem	10
+	category	PET
+	percent	100
+end
+
+# ¹Ù¶÷Á¤·É
+section
+	npc	20433
+	item	39117	2
+	reward	53584	1
+	gold	100000
+	gem	10
+	category	PET
+	percent	100
+end
+
+# ´ëÁöÁ¤·É
+section
+	npc	20433
+	item	39117	2
+	reward	53585	1
+	gold	100000
+	gem	10
+	category	PET
+	percent	100
+end
+
+# ¾îµÒÁ¤·É
+section
+	npc	20433
+	item	39117	2
+	reward	53586	1
+	gold	100000
+	gem	10
+	category	PET
+	percent	100
+end
+
+# °¢¼ºÀÇ µ¹
+section
+	npc	20470
+	item	31108	5
+	item	31113	1
+	reward	31109	1
+	gold	200000
+	category	ETC
+	percent	45
+end
+
+section
+	npc	20470
+	item	31109	3
+	item	31113	1
+	reward	31110	1
+	gold	300000
+	category	ETC
+	percent	35
+end
+
+section
+	npc	20470
+	item	31110	2
+	item	31113	1
+	reward	31111	1
+	gold	400000
+	category	ETC
+	percent	30
+end
+
+section
+	npc	20470
+	item	31111	1
+	item	31113	1
+	reward	31112	1
+	gold	500000
+	category	ETC
+	percent	25
+end
+
+# Èæ·æµµ
+section
+	npc	20473
+	item	31115	10
+	item	31196	5
+	item	31120	5
+	item	31121	5
+	item	31108	1
+	reward	320	1
+	gold	2500000
+	category	WEAPON
+	percent	2
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31196	5
+	item	31120	5
+	item	31121	5
+	item	31109	1
+	reward	320	1
+	gold	2500000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31196	5
+	item	31120	5
+	item	31121	5
+	item	31110	1
+	reward	320	1
+	gold	2500000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31196	5
+	item	31120	5
+	item	31121	5
+	item	31111	1
+	reward	320	1
+	gold	2500000
+	category	WEAPON
+	percent	15
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31196	5
+	item	31120	5
+	item	31121	5
+	item	31112	1
+	reward	320	1
+	gold	2500000
+	category	WEAPON
+	percent	25
+end
+
+# Èæ·æ¸¶°Ë
+section
+	npc	20473
+	item	31115	10
+	item	31197	5
+	item	31120	5
+	item	31121	5
+	item	31108	1
+	reward	340	1
+	gold	2500000
+	category	WEAPON
+	percent	2
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31197	5
+	item	31120	5
+	item	31121	5
+	item	31109	1
+	reward	340	1
+	gold	2500000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31197	5
+	item	31120	5
+	item	31121	5
+	item	31110	1
+	reward	340	1
+	gold	2500000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31197	5
+	item	31120	5
+	item	31121	5
+	item	31111	1
+	reward	340	1
+	gold	2500000
+	category	WEAPON
+	percent	15
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31197	5
+	item	31120	5
+	item	31121	5
+	item	31112	1
+	reward	340	1
+	gold	2500000
+	category	WEAPON
+	percent	25
+end
+
+# Èæ·æ´ë°Å
+section
+	npc	20473
+	item	31115	10
+	item	31198	5
+	item	31120	5
+	item	31121	5
+	item	31108	1
+	reward	1190	1
+	gold	2500000
+	category	WEAPON
+	percent	2
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31198	5
+	item	31120	5
+	item	31121	5
+	item	31109	1
+	reward	1190	1
+	gold	2500000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31198	5
+	item	31120	5
+	item	31121	5
+	item	31110	1
+	reward	1190	1
+	gold	2500000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31198	5
+	item	31120	5
+	item	31121	5
+	item	31111	1
+	reward	1190	1
+	gold	2500000
+	category	WEAPON
+	percent	15
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31198	5
+	item	31120	5
+	item	31121	5
+	item	31112	1
+	reward	1190	1
+	gold	2500000
+	category	WEAPON
+	percent	25
+end
+
+# Èæ·æ°¢±Ã
+section
+	npc	20473
+	item	31115	10
+	item	31199	5
+	item	31120	5
+	item	31121	5
+	item	31108	1
+	reward	2210	1
+	gold	2500000
+	category	WEAPON
+	percent	2
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31199	5
+	item	31120	5
+	item	31121	5
+	item	31109	1
+	reward	2210	1
+	gold	2500000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31199	5
+	item	31120	5
+	item	31121	5
+	item	31110	1
+	reward	2210	1
+	gold	2500000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31199	5
+	item	31120	5
+	item	31121	5
+	item	31111	1
+	reward	2210	1
+	gold	2500000
+	category	WEAPON
+	percent	15
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31199	5
+	item	31120	5
+	item	31121	5
+	item	31112	1
+	reward	2210	1
+	gold	2500000
+	category	WEAPON
+	percent	25
+end
+
+# Èæ·æÁö°Ë
+section
+	npc	20473
+	item	31115	10
+	item	31200	5
+	item	31120	5
+	item	31121	5
+	item	31108	1
+	reward	3230	1
+	gold	2500000
+	category	WEAPON
+	percent	2
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31200	5
+	item	31120	5
+	item	31121	5
+	item	31109	1
+	reward	3230	1
+	gold	2500000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31200	5
+	item	31120	5
+	item	31121	5
+	item	31110	1
+	reward	3230	1
+	gold	2500000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31200	5
+	item	31120	5
+	item	31121	5
+	item	31111	1
+	reward	3230	1
+	gold	2500000
+	category	WEAPON
+	percent	15
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31200	5
+	item	31120	5
+	item	31121	5
+	item	31112	1
+	reward	3230	1
+	gold	2500000
+	category	WEAPON
+	percent	25
+end
+
+# Èæ·æ»ç·É
+section
+	npc	20473
+	item	31115	10
+	item	31201	5
+	item	31120	5
+	item	31121	5
+	item	31108	1
+	reward	5170	1
+	gold	2500000
+	category	WEAPON
+	percent	2
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31201	5
+	item	31120	5
+	item	31121	5
+	item	31109	1
+	reward	5170	1
+	gold	2500000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31201	5
+	item	31120	5
+	item	31121	5
+	item	31110	1
+	reward	5170	1
+	gold	2500000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31201	5
+	item	31120	5
+	item	31121	5
+	item	31111	1
+	reward	5170	1
+	gold	2500000
+	category	WEAPON
+	percent	15
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31201	5
+	item	31120	5
+	item	31121	5
+	item	31112	1
+	reward	5170	1
+	gold	2500000
+	category	WEAPON
+	percent	25
+end
+
+# Èæ·æ¼ö
+section
+	npc	20473
+	item	31115	10
+	item	31202	5
+	item	31120	5
+	item	31121	5
+	item	31108	1
+	reward	6130	1
+	gold	2500000
+	category	WEAPON
+	percent	2
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31202	5
+	item	31120	5
+	item	31121	5
+	item	31109	1
+	reward	6130	1
+	gold	2500000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31202	5
+	item	31120	5
+	item	31121	5
+	item	31110	1
+	reward	6130	1
+	gold	2500000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31202	5
+	item	31120	5
+	item	31121	5
+	item	31111	1
+	reward	6130	1
+	gold	2500000
+	category	WEAPON
+	percent	15
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31202	5
+	item	31120	5
+	item	31121	5
+	item	31112	1
+	reward	6130	1
+	gold	2500000
+	category	WEAPON
+	percent	25
+end
+
+# Èæ·æ¸¶¼±
+section
+	npc	20473
+	item	31115	10
+	item	31203	5
+	item	31120	5
+	item	31121	5
+	item	31108	1
+	reward	7310	1
+	gold	2500000
+	category	WEAPON
+	percent	2
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31203	5
+	item	31120	5
+	item	31121	5
+	item	31109	1
+	reward	7310	1
+	gold	2500000
+	category	WEAPON
+	percent	5
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31203	5
+	item	31120	5
+	item	31121	5
+	item	31110	1
+	reward	7310	1
+	gold	2500000
+	category	WEAPON
+	percent	10
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31203	5
+	item	31120	5
+	item	31121	5
+	item	31111	1
+	reward	7310	1
+	gold	2500000
+	category	WEAPON
+	percent	15
+end
+
+section
+	npc	20473
+	item	31115	10
+	item	31203	5
+	item	31120	5
+	item	31121	5
+	item	31112	1
+	reward	7310	1
+	gold	2500000
+	category	WEAPON
+	percent	25
+end
+
+# Èæ·æÆ÷_¹«»ç
+section
+	npc	20474
+	item	31114	10
+	item	31204	5
+	item	31117	5
+	item	31118	5
+	item	31108	1
+	reward	21210	1
+	gold	2500000
+	category	ARMOR
+	percent	2
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31204	5
+	item	31117	5
+	item	31118	5
+	item	31109	1
+	reward	21210	1
+	gold	2500000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31204	5
+	item	31117	5
+	item	31118	5
+	item	31110	1
+	reward	21210	1
+	gold	2500000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31204	5
+	item	31117	5
+	item	31118	5
+	item	31111	1
+	reward	21210	1
+	gold	2500000
+	category	ARMOR
+	percent	15
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31204	5
+	item	31117	5
+	item	31118	5
+	item	31112	1
+	reward	21210	1
+	gold	2500000
+	category	ARMOR
+	percent	25
+end
+
+# Ç³·æÆ÷_ÀÚ°´
+section
+	npc	20474
+	item	31114	10
+	item	31205	5
+	item	31117	5
+	item	31118	5
+	item	31108	1
+	reward	21230	1
+	gold	2500000
+	category	ARMOR
+	percent	2
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31205	5
+	item	31117	5
+	item	31118	5
+	item	31109	1
+	reward	21230	1
+	gold	2500000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31205	5
+	item	31117	5
+	item	31118	5
+	item	31110	1
+	reward	21230	1
+	gold	2500000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31205	5
+	item	31117	5
+	item	31118	5
+	item	31111	1
+	reward	21230	1
+	gold	2500000
+	category	ARMOR
+	percent	15
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31205	5
+	item	31117	5
+	item	31118	5
+	item	31112	1
+	reward	21230	1
+	gold	2500000
+	category	ARMOR
+	percent	25
+end
+
+# ¸¶·æÆ÷_¼ö¶ó
+section
+	npc	20474
+	item	31114	10
+	item	31206	5
+	item	31117	5
+	item	31118	5
+	item	31108	1
+	reward	21250	1
+	gold	2500000
+	category	ARMOR
+	percent	2
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31206	5
+	item	31117	5
+	item	31118	5
+	item	31109	1
+	reward	21250	1
+	gold	2500000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31206	5
+	item	31117	5
+	item	31118	5
+	item	31110	1
+	reward	21250	1
+	gold	2500000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31206	5
+	item	31117	5
+	item	31118	5
+	item	31111	1
+	reward	21250	1
+	gold	2500000
+	category	ARMOR
+	percent	15
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31206	5
+	item	31117	5
+	item	31118	5
+	item	31112	1
+	reward	21250	1
+	gold	2500000
+	category	ARMOR
+	percent	25
+end
+
+# ½Å·æÆ÷_¹«´ç
+section
+	npc	20474
+	item	31114	10
+	item	31207	5
+	item	31117	5
+	item	31118	5
+	item	31108	1
+	reward	21270	1
+	gold	2500000
+	category	ARMOR
+	percent	2
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31207	5
+	item	31117	5
+	item	31118	5
+	item	31109	1
+	reward	21270	1
+	gold	2500000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31207	5
+	item	31117	5
+	item	31118	5
+	item	31110	1
+	reward	21270	1
+	gold	2500000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31207	5
+	item	31117	5
+	item	31118	5
+	item	31111	1
+	reward	21270	1
+	gold	2500000
+	category	ARMOR
+	percent	15
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31207	5
+	item	31117	5
+	item	31118	5
+	item	31112	1
+	reward	21270	1
+	gold	2500000
+	category	ARMOR
+	percent	25
+end
+
+# Ãµ·æÆ÷_¼öÀÎ
+section
+	npc	20474
+	item	31114	10
+	item	31208	5
+	item	31117	5
+	item	31118	5
+	item	31108	1
+	reward	21290	1
+	gold	2500000
+	category	ARMOR
+	percent	2
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31208	5
+	item	31117	5
+	item	31118	5
+	item	31109	1
+	reward	21290	1
+	gold	2500000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31208	5
+	item	31117	5
+	item	31118	5
+	item	31110	1
+	reward	21290	1
+	gold	2500000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31208	5
+	item	31117	5
+	item	31118	5
+	item	31111	1
+	reward	21290	1
+	gold	2500000
+	category	ARMOR
+	percent	15
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31208	5
+	item	31117	5
+	item	31118	5
+	item	31112	1
+	reward	21290	1
+	gold	2500000
+	category	ARMOR
+	percent	25
+end
+
+# Èæ·æÅõ±¸
+section
+	npc	20474
+	item	31114	10
+	item	31209	5
+	item	31117	5
+	item	31121	5
+	item	31108	1
+	reward	12780	1
+	gold	2500000
+	category	ARMOR
+	percent	2
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31209	5
+	item	31117	5
+	item	31121	5
+	item	31109	1
+	reward	12780	1
+	gold	2500000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31209	5
+	item	31117	5
+	item	31121	5
+	item	31110	1
+	reward	12780	1
+	gold	2500000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31209	5
+	item	31117	5
+	item	31121	5
+	item	31111	1
+	reward	12780	1
+	gold	2500000
+	category	ARMOR
+	percent	15
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31209	5
+	item	31117	5
+	item	31121	5
+	item	31112	1
+	reward	12780	1
+	gold	2500000
+	category	ARMOR
+	percent	25
+end
+
+# Ç³·æÅõ±¸_ÀÚ°´
+section
+	npc	20474
+	item	31114	10
+	item	31210	5
+	item	31117	5
+	item	31121	5
+	item	31108	1
+	reward	12800	1
+	gold	2500000
+	category	ARMOR
+	percent	2
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31210	5
+	item	31117	5
+	item	31121	5
+	item	31109	1
+	reward	12800	1
+	gold	2500000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31210	5
+	item	31117	5
+	item	31121	5
+	item	31110	1
+	reward	12800	1
+	gold	2500000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31210	5
+	item	31117	5
+	item	31121	5
+	item	31111	1
+	reward	12800	1
+	gold	2500000
+	category	ARMOR
+	percent	15
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31210	5
+	item	31117	5
+	item	31121	5
+	item	31112	1
+	reward	12800	1
+	gold	2500000
+	category	ARMOR
+	percent	25
+end
+
+# ¸¶·æÅõ±¸_¼ö¶ó
+section
+	npc	20474
+	item	31114	10
+	item	31211	5
+	item	31117	5
+	item	31121	5
+	item	31108	1
+	reward	12820	1
+	gold	2500000
+	category	ARMOR
+	percent	2
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31211	5
+	item	31117	5
+	item	31121	5
+	item	31109	1
+	reward	12820	1
+	gold	2500000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31211	5
+	item	31117	5
+	item	31121	5
+	item	31110	1
+	reward	12820	1
+	gold	2500000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31211	5
+	item	31117	5
+	item	31121	5
+	item	31111	1
+	reward	12820	1
+	gold	2500000
+	category	ARMOR
+	percent	15
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31211	5
+	item	31117	5
+	item	31121	5
+	item	31112	1
+	reward	12820	1
+	gold	2500000
+	category	ARMOR
+	percent	25
+end
+
+# ½Å·æÅõ±¸_¹«´ç
+section
+	npc	20474
+	item	31114	10
+	item	31212	5
+	item	31117	5
+	item	31121	5
+	item	31108	1
+	reward	12840	1
+	gold	2500000
+	category	ARMOR
+	percent	2
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31212	5
+	item	31117	5
+	item	31121	5
+	item	31109	1
+	reward	12840	1
+	gold	2500000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31212	5
+	item	31117	5
+	item	31121	5
+	item	31110	1
+	reward	12840	1
+	gold	2500000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31212	5
+	item	31117	5
+	item	31121	5
+	item	31111	1
+	reward	12840	1
+	gold	2500000
+	category	ARMOR
+	percent	15
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31212	5
+	item	31117	5
+	item	31121	5
+	item	31112	1
+	reward	12840	1
+	gold	2500000
+	category	ARMOR
+	percent	25
+end
+
+# Ãµ·æÅõ±¸_¼öÀÎ
+section
+	npc	20474
+	item	31114	10
+	item	31213	5
+	item	31117	5
+	item	31121	5
+	item	31108	1
+	reward	12860	1
+	gold	2500000
+	category	ARMOR
+	percent	2
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31213	5
+	item	31117	5
+	item	31121	5
+	item	31109	1
+	reward	12860	1
+	gold	2500000
+	category	ARMOR
+	percent	5
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31213	5
+	item	31117	5
+	item	31121	5
+	item	31110	1
+	reward	12860	1
+	gold	2500000
+	category	ARMOR
+	percent	10
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31213	5
+	item	31117	5
+	item	31121	5
+	item	31111	1
+	reward	12860	1
+	gold	2500000
+	category	ARMOR
+	percent	15
+end
+
+section
+	npc	20474
+	item	31114	10
+	item	31213	5
+	item	31117	5
+	item	31121	5
+	item	31112	1
+	reward	12860	1
+	gold	2500000
+	category	ARMOR
+	percent	25
+end
+
+section
+	npc	20502
+	item	79508	1
+	reward	27128	1
+	gold	50000
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	11
+	item	30640	1
+	reward	83004	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	11
+	item	30654	1
+	reward	83028	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	7
+	item	30641	1
+	reward	83005	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	7
+	item	30655	1
+	reward	83029	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	11
+	item	30642	1
+	reward	83006	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	7
+	item	30643	1
+	reward	83007	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	29
+	item	30644	1
+	reward	83008	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	15
+	item	30645	1
+	reward	83009	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	9
+	item	30646	1
+	reward	83010	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	33
+	item	30647	1
+	reward	83011	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	14
+	item	30648	1
+	reward	83012	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	25
+	item	30649	1
+	reward	83013	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	55
+	item	30650	1
+	reward	83014	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	7
+	item	30651	1
+	reward	83015	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	11
+	item	30652	1
+	reward	83016	1
+	category	EVENT
+	percent	100
+end
+
+section
+	npc	20502
+	item	30639	11
+	item	30653	1
+	reward	83017	1
+	category	EVENT
+	percent	100
+end
+
+# ±æµå pve ¿­¼è
+section
+	npc	20650
+	item	90011	100
+	item	90012	100
+	item	90010	100
+	reward	56013	1
+	gold	1000000
+	category	ETC
+	percent	100
+end

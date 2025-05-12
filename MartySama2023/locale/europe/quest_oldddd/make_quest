@@ -1,0 +1,22 @@
+#!/usr/local/bin/python
+
+import pre_qc
+import os
+import sys
+
+os.system('rm -f quest_list')
+os.system('find . -maxdepth 1 -type f -name "*.quest" | sort | sed \'s|^./||\' > quest_list')
+
+os.system('rm -rf object')
+os.system('mkdir object')
+#os.system('rm -rf pre_qc')
+os.system('mkdir pre_qc')
+os.system('chgrp quest object')
+
+for line in file('quest_list'):
+	if os.system('./qc ' + filename):
+		print ('Error occured on compile ' + line)
+		os.system('chmod -R 770 object')
+		sys.exit(-1)
+
+os.system('chmod -R 770 object')

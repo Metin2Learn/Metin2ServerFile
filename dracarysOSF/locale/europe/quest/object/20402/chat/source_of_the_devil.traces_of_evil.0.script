@@ -1,0 +1,8 @@
+target . delete ( "__TARGET__" ) 
+clear_letter ( ) 
+say_title ( mob_name ( 20402 ) ) 
+say ( ) 
+say ( locale_quest ( 6374 ) ) 
+say_reward ( string . format ( locale_quest ( 6882 ) , 300 ) ) 
+pc . give_exp2 ( 300 ) 
+set_state ( "bear_hunt" ) 

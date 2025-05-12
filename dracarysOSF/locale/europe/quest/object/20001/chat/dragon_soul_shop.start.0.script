@@ -1,0 +1,2 @@
+say ( locale_quest ( 939 ) ) 
+npc . open_shop ( 12 ) 

@@ -1,0 +1,1 @@
+say ( string . format ( locale_quest ( 940 ) , pc . getf ( "dragon_soul" , "eye_left" ) ) ) 

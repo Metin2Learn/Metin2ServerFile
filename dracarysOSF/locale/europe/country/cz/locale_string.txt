@@ -1,0 +1,4848 @@
+"$*** Winner of the item %s is: %s ***";
+"$*** Vítìz pøedmìtu %s je: %s ***";
+
+"%d guild EXP received!";
+"[Cech] Obdreno %d BZK!";
+
+"%d minutes remaining to register for the PvP tournament!";
+"Zbıvá %d minut na registraci do PvP turnaje!";
+
+"%d more until the battle begins!";
+"Zbıvá %d do zaèátku bitvy!";
+
+"%d ±ÇÀ» ´õ ÀĞ¾î¾ß ¼ö·ÃÀ» ¿Ï·á ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Musíš pøeèíst ještì %d knih, abys vylepšil tuto schopnost.";
+
+"%d ³ÉÀ» ÅõÀÚÇÏ¼Ì½À´Ï´Ù.";
+"Investoval jsi %d Yangù.";
+
+"%d ³ÉÀ» È¹µæÇÏ¼Ì½À´Ï´Ù.";
+"Vyhrál jsi %d Yangù.";
+
+"%d ·¹º§ÀÌ µÇ¾î¾ß ´Ù½Ã ¿°»öÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.";
+"Musíš dosáhnout úrovnì %d, abys mohl opìt obarvit svùj úèes.";
+
+"%d ºĞ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d minut a %d sekund bude ještì trvat blokace chatu.";
+
+"%d ½Ã°£ %d ºĞ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d hodin, %d minut a %d sekund bude ještì trvat tvùj blok chatu";
+
+"%d ½Ã°£ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d hodin a %d sekund budete ještì blokování na chatu";
+
+"%d Á¾·ù %d ¸¶¸® ³¬À½";
+"Chytil jsi %d z %d.";
+
+"%d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d sekund bude ještì trvat blokace chatu.";
+
+"%d ÃÊ ÈÄ¿¡ ±ºÁÖÀÇ Ãàº¹À» »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù";
+"Za %d vteøin mùeš pouít císaøské poehnání.";
+
+"%d ÃÊ°£ ÄğÅ¸ÀÓÀÌ Àû¿ëÁßÀÔ´Ï´Ù.";
+"Èas èekání pøiblinì %d vteøin.";
+
+"%d ÃÊÈÄ ¸ñÀûÁö·Î ÀÌµ¿µË´Ï´Ù.";
+"%d vteøin po vykonání se dostaneš do místa urèení.";
+
+"%d%% È®·ü·Î °üÅë °ø°İ";
+"Šance na pronikavı útok %d%%";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã °æÇèÄ¡ Ãß°¡ »ó½Â";
+"Zkušenosti budou zvıšeny na %d%% pokud vyhraješ proti nepøíteli.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã µ· 2¹è µå·Ó";
+"Zvıšení Yangù na %d%% pokud vyhraješ proti nepøíteli.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã »ı¸í·Â È¸º¹";
+"%d%% šance na naplnìní bodù ivotní energie, pokud vyhraješ.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã ¾ÆÀÌÅÛ 2¹è µå·Ó";
+"Zvıšení ukoøistìnıch pøedmìtù na %d%% pokud vyhraješ proti nepøíteli.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã Á¤½Å·Â È¸º¹";
+"Body many (MB) budou zvıšeny na %d%% pokud vyhraješi.";
+
+"%d%% È®·ü·Î Ä¡¸íÅ¸ °ø°İ";
+"Šance na kritickı útok %d%%";
+
+"%d%% È®·ü·Î Å¸°İ½Ã »ó´ë Àü½Å·Â ¼Ò¸ğ";
+"Šancí %d%% budou body many (MB) vzaty nepøíteli.";
+
+"%d%% È®·ü·Î ÇÇÇØ½Ã Á¤½Å·Â È¸º¹";
+"Pohlcení bodù many (MB) šancí %d%%";
+
+"%dºĞÀÇ °áÁ¦½Ã°£ÀÌ Ãß°¡ µÇ¾ú½À´Ï´Ù. (°áÁ¦¹øÈ£ %d)";
+"%d herního èasu bylo pøidáno na tvoje konto. (Èíslo platby %d)";
+
+"%dÀÇ °æÇèÄ¡¸¦ È¹µæÇß½À´Ï´Ù.";
+"Obdrel jsi %d bodù zkušeností.";
+
+"%dÃÊ ³²¾Ò½À´Ï´Ù.";
+"%d vteøin do vypnutí.";
+
+"%dÃÊ ¸¸Å­ ÃæÀüµÇ¾ú½À´Ï´Ù.";
+"Bylo pøidáno %d vteøin.";
+
+"%dÃÊ ÈÄ °ÔÀÓÀÌ ¼Ë´Ù¿î µË´Ï´Ù.";
+"Hra bude ukonèena za %d vteøin.";
+
+"%s";
+"%s";
+
+"%s : %d ¸¶¸®";
+"%s: %d";
+
+"%s SP¼Ò¸ğ: %d";
+"%s SB Spotøeba: %d";
+
+"%s earned %d points in a game of okey.";
+"%s ve høe Okey získal %d bodù.";
+
+"%s effect activated.";
+"Efekt %s aktivován.";
+
+"%s effect not activated.";
+"Efekt %s nebyl aktivován.";
+
+"%s emerges from the Transport Box.";
+"%s vyskoèil z pøepravní bedny.";
+
+"%s has been revived.";
+"%s byl oiven.";
+
+"%s has blocked you.";
+"%s tì zablokoval.";
+
+"%s has completed level %u in Sung Mahi Tower!";
+"%s dokonèil úroveò %u ve Vìi Sung Mahi!";
+
+"%s has erected all the outposts and Sung Mahi's control will start in %d minutes.";
+"%s postavil všechny základny a kontrola Sung Mahi zaène za %d minut.";
+
+"%s has evolved to %s! Excellent!";
+"%s se zmìnil na %s! Vynikající!";
+
+"%s has hatched!";
+"%s se právì vylíhl!";
+
+"%s has left the arena. %s wins.";
+"%s opustil arénu. %s vyhrál.";
+
+"%s has occupied %s!";
+"%s obsadil %s!";
+
+"%s has reached level %d!";
+"%s dosáhl úrovnì %d!";
+
+"%s has reached the personal score of %d!";
+"%s dosáhl osobního skóre %d!";
+
+"%s improvement failed.";
+"%s vylepšení selhalo.";
+
+"%s improvement successful.";
+"%s vylepšení se zdaøilo.";
+
+"%s is already being blocked.";
+"%s je ji zablokován.";
+
+"%s is attacking %s!";
+"%s útoèí na %s!";
+
+"%s is currently fast asleep.";
+"%s je momentálnì ospalı.";
+
+"%s is insufficient. You need %d for the next stage of evolution.";
+"Nemáš dostatek %s. Potøebuješ %d pro další evoluèní stupeò.";
+
+"%s is no longer blocked.";
+"%s ji není zablokován.";
+
+"%s is now blocked.";
+"%s je nyní zablokován.";
+
+"%s is now in a Transport Box.";
+"%s je nyní v pøepravní bednì.";
+
+"%s is the tournament victor!";
+"%s je vítìzem turnaje!";
+
+"%s killcount %d mobkillcount %d bosskillcount %d ¼ºÁö ÁøÀÔ¼ö %d";
+"%s zabití %d zabité pøíšery %d zabití bossù %d Èíslo svaté zemì %d";
+
+"%s killed %s.";
+"%s zabil %s.";
+
+"%s recovers from the exhaustion.";
+"%s obnovuje pøi vyèerpání.";
+
+"%s refuses to eat anything!";
+"%s odmítl cokoliv jíst!";
+
+"%s skill activated. HP restored by %d.";
+"Schopnost %s aktivována. ZB zvıšeny o %d.";
+
+"%s skill activated. Slow, poison and bleeding effects were removed.";
+"Schopnost %s aktivována. Zpomalení, otrava a krvácení byly odstranìny.";
+
+"%s skill activated. You will now receive no damage.";
+"Schopnost %s aktivována. Nyní nemùeš bıt zranìn.";
+
+"%s still has %d outposts. (%d/%d)";
+"%s má poøád %d základen. (%d/%d)";
+
+"%s wakes up and dives into the tasty meal.";
+"%s se probudil a pustil se do chutného jídla.";
+
+"%s was successful! A %d%% absorption rate on their new %s. Congratulations!";
+"%s bylo úspìšné! Absorpèní pomìr %d%% na novém %s. Gratulujeme!";
+
+"%s will appear here: %s";
+"%s se objeví zde: %s";
+
+"%s ±ºÁÖ ÈÄº¸¿¡¼­ »èÁ¦ÇÏ¿´½À´Ï´Ù";
+"%s byl smazán jako kandidát na císaøe.";
+
+"%s ±ºÁÖ·Î ÀÔ¸í Çß½À´Ï´Ù.";
+"%s byl nominován na císaøe.";
+
+"%s ±ºÁÖ¸£ Á¦°Å ÇÏ¿´½À´Ï´Ù..";
+"Císaø %s byl vyhoštìn.";
+
+"%s ±ºÁÖ¸¦ Á¦°Å ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Císaø %s nemùe bıt vyhoštìn.";
+
+"%s ±æµå°¡ %s ±æµå¿¡ ¼±ÀüÆ÷°í¸¦ ÇÏ¿´½À´Ï´Ù!";
+"%s cech vyhlásil válku %s cechu!";
+
+"%s ±æµå°¡ %s ±æµå¿ÍÀÇ ÀüÀï¿¡¼­ ½Â¸® Çß½À´Ï´Ù.";
+"Cech %s vyhrál válku proti cechu %s.";
+
+"%s ±æµå°¡ %s ±æµåÀÇ ±ê¹ßÀ» »©¾Ñ¾Ò½À´Ï´Ù!";
+"%s cech ukoøistil vlajku %s cechu!";
+
+"%s ±æµå¿Í %s ±æµå »çÀÌÀÇ ÀüÀïÀÌ ¹«½ÂºÎ·Î ³¡³µ½À´Ï´Ù.";
+"Válka mezi %s a %s skonèila nerozhodnì.";
+
+"%s ±æµå¿Í %s ±æµå »çÀÌÀÇ ÀüÀïÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.";
+"Válka mezi cechem %s a cechem %s byla zrušena.";
+
+"%s ±æµå¿Í %s ±æµå°¡ Àá½Ã ÈÄ ÀüÀïÀ» ½ÃÀÛÇÕ´Ï´Ù!";
+"Cechovní válka mezi %s a %s zapoène za pár vteøin!";
+
+"%s ±æµå¿Í %s ±æµå°¡ ÀüÀïÀ» ½ÃÀÛÇÏ¿´½À´Ï´Ù!";
+"Válka mezi %s a %s zaèala!";
+
+"%s ±æµåÀÇ %sÀÌ %d%% Áõ°¡Çß½À´Ï´Ù!";
+"%s cechu %s bylo zvıšeno na %d%%!";
+
+"%s ±æµåÀÇ %sÀÌ Á¤»óÀ¸·Î µ¹¾Æ¿Ô½À´Ï´Ù.";
+"%s cechu %s je opìt normální.";
+
+"%s ±æµåÀÇ ±ê¹ßÀ» %s ´ÔÀÌ È¹µæÇÏ¿´½À´Ï´Ù.";
+"Vlajka cechu %s byla ukradena hráèem %s.";
+
+"%s ´Â ±ºÁÖ ÈÄº¸°¡ ¾Æ´Õ´Ï´Ù.";
+"%s není kandidát na císaøe.";
+
+"%s ´Â ±ºÁÖ·Î ÀÔ¸íÇÒ¼ö ¾ø½À´Ï´Ù .";
+"%s nemùe bıt nominován na císaøe.";
+
+"%s ´Ô°úÀÇ ±³È¯ÀÌ ¼º»ç µÇ¾ú½À´Ï´Ù.";
+"Obchod s %s byl úspìšnı.";
+
+"%s ´Ô¿¡°Ô ÆÄÆ¼°¡ÀÔ ½ÅÃ»À» Çß½À´Ï´Ù.";
+"Chceš se pøipojit ke skupinì hráèe %s?";
+
+"%s ´ÔÀ¸·Î ºÎÅÍ Ä£±¸ µî·ÏÀ» °ÅºÎ ´çÇß½À´Ï´Ù.";
+"%s odmítl pozvání.";
+
+"%s ´ÔÀº %d Ã¤³Î¿¡ Á¢¼Ó Áß ÀÔ´Ï´Ù. (ÇöÀç Ã¤³Î: %d)";
+"Hráè %s je v tuto chvíli na kanále %d. (Tvùj kanál: %d)";
+
+"%s ´ÔÀº Á¢¼ÓµÇ ÀÖÁö ¾Ê½À´Ï´Ù.";
+"%s není ve høe.";
+
+"%s ´ÔÀº Á¤»óÀûÀ¸·Î Ãâ¸¶¸¦ ÇÏ¿´½À´Ï´Ù.";
+"Hráè %s je ji ve volbì.";
+
+"%s ´ÔÀ» ¼ÒÈ¯ÇÏ¿´½À´Ï´Ù.";
+"Nabral jsi %s hráèe.";
+
+"%s ´ÔÀÌ ´ë·Ã¿¡¼­ ½Â¸®ÇÏ¿´½À´Ï´Ù.";
+"%s vyhrál souboj.";
+
+"%s ´ÔÀÌ ½Â¸®ÇÏ¿´½À´Ï´Ù.";
+"%s vyhrál.";
+
+"%s ºí·°! (%d%%)";
+"%s blok! (%d%%)";
+
+"%s ¾ÆÀÌÅÛ À» È¹µæÇÏ¼Ì½À´Ï´Ù";
+"Vyhrál jsi %s pøedmìt.";
+
+"%s ¾ÆÀÌÅÛÀÌ ÇÊ¿äÇÕ´Ï´Ù";
+"Potøebuješ %s.";
+
+"%s ¿¡°Ô·Î ÀÌµ¿ÇÕ´Ï´Ù";
+"Pøepravit k %s.";
+
+"%s È¸ÇÇ! (%d%%)";
+"%s vyhnout! (%d%%)";
+
+"%s's pet skill has been activated. %s uses Feather Walk.";
+"Byly aktivovány schopnosti mazlíka. %s. %s pouívá Našlapování polehouèku.";
+
+"%s's remaining HP: %d%%";
+"%s ZB: %d%%";
+
+"%s: Á¸ÀçÇÏÁö ¾Ê´Â ±æµå ÀÔ´Ï´Ù.";
+"%s: Tento cech neexistuje.";
+
+"%s:%s_WAS_SET_TO%d%%";
+"%s: %s zvıšeno o %d%%!";
+
+"%s:_%s_IS_NORMAL_AGAIN";
+"%s 's %s je opìt normální.";
+
+"%s[%d]°¡ °ø°İ À§Ä¡: %d %d";
+"%s[%d]s Útoèná pozice: %d %d";
+
+"%s´Ô°úÀÇ ´ë°á ½ÃÀÛ!";
+"Boj s %s zaèal!";
+
+"%s´ÔÀÌ ´ë°á½ÅÃ»À» Çß½À´Ï´Ù. ½Â³«ÇÏ·Á¸é ´ë°áµ¿ÀÇ¸¦ ÇÏ¼¼¿ä.";
+"%s tì vyzval na souboj!";
+
+"%s´ÔÀÌ ÁÖ»çÀ§¸¦ ±¼·Á %d°¡ ³ª¿Ô½À´Ï´Ù. (%d-%d)";
+"%s hodil kostky. Padlo %d (%d-%d).";
+
+"%s¸¦ ±¸¿ü½À´Ï´Ù.";
+"Opekáš %s nad ohnìm.";
+
+"%s¿¡ ¹ÚÇôÀÖ´ø º¸¼®ÀÌ »ç¶óÁı´Ï´Ù.";
+"Drahokam zasazenı v %s zmizel.";
+
+"%s¿¡ ÀüÀïÀÇ ½ÃÀÛÀ» ¾Ë¸®´Â ºÀÈ­°¡ ³ªÅ¸³µ½À´Ï´Ù.";
+"Signální ohnì byly zapáleny v %s aby upozornily na boj.";
+
+"%s¿¡°Ô ´ë°á½ÅÃ»À» Çß½À´Ï´Ù.";
+"Vyzval jsi %s na souboj.";
+
+"%s¿¡¼­ ºÀÈ­¸¦ µÑ·¯½Î°í ÀüÅõ°¡ ÁøÇàÁßÀÔ´Ï´Ù.";
+"V %s je válka na zapálení signálního ohnì.";
+
+"%s¿¡¼­ ¼ÒÄÏ ºüÁú¶§±îÁö ³²Àº ½Ã°£ %d";
+"Do odstranìní úchytu z %s zbıvá èasu: %d";
+
+"%sÀÇ ±ºÁÖ°¡ %s ´ÔÀ¸·Î ±³Ã¼µÇ¾ú½À´Ï´Ù.";
+"Císaø %s se zmìnil na %s.";
+
+"%sÀÌ ¸ğµç ºÀÈ­¸¦ ÆÄ±«ÇÏ¿´½À´Ï´Ù.";
+"%s znièil všechny signální ohnì.";
+
+"%sÀÌ ºÀÈ­¸¦ ÆÄ±«Çß½À´Ï´Ù.";
+"%s znièil signální oheò.";
+
+"%sÀÌ ¼ö¼º¿¡ ¼º°øÇß½À´Ï´Ù.";
+"%s byl schopen se ubránit úspìšnì.";
+
+"%sÀÌ ¼ö¼º¿¡ ½ÇÆĞÇÏ¿© ÀüÀï¿¡ ÆĞ¹èÇÏ¿´½À´Ï´Ù..";
+"%s prohráli válku. Nebyli schopni ubránit hrad.";
+
+"%sÀÌ ÇÊ¿äÇÕ´Ï´Ù.";
+"Pro tuto akci potøebuješ: %s";
+
+"(%s) ±æµå°¡ »ı¼ºµÇ¾ú½À´Ï´Ù. [ÀÓ½Ã]";
+"(%s) Cech vytvoøen. [Doèasnì]";
+
+"(¸¸·áÀÏ : %d³â %d¿ù %dÀÏ)";
+"(Procedura: %d r- %d m - %d d)";
+
+". ³ÊÈñ°¡ ¼ºÁöÀÇ ¼öÈ£ÀÚ¸¦ Àâ°Ô µÈ´Ù¸é ³ÊÈñ´Â ¼ºÁöÀÇ ÁÖÀÎÀÌ µÈ´Ù.[ENTER][ENTER] ";
+"Pokud porazíš stráce svatého místa, staneš se jeho vlastníkem.";
+
+"1-50 »çÀÌÀÇ ¼öÄ¡¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä";
+"Vyber èíslo mezi 1 a 50.";
+
+"10ÃÊµÚ ´ÙÀ½ ÆÇÀ» ½ÃÀÛÇÕ´Ï´Ù.";
+"Další kolo zaène za 10 vteøin.";
+
+"10ÃÊµÚ ´ë·ÃÀÌ ½ÃÀÛµË´Ï´Ù.";
+"Souboj zaène za 10 vteøin.";
+
+"10ÃÊµÚ ¸¶À»·Î µÇµ¹¾Æ°©´Ï´Ù.";
+"Budeš pøesunut do mìsta za 10 vteøin.";
+
+"10ÃÊµÚ ¸¶À»·Î ÀÌµ¿ÇÕ´Ï´Ù.";
+"Za 10 vteøin budeš pøesunut do mìsta.";
+
+"10ÃÊµÚ ÆÇÁ¤ÇÏ°Ú½À´Ï´Ù.";
+"Vısledek bude znám za 10 vteøin.";
+
+"10ÃÊÈÄ ÀÚµ¿À¸·Î Á¢¼ÓÀÌ Á¾·áµÇ¸ç,";
+"Budeš odpojen za 10 vteøin.";
+
+"1ºĞ ÀÌ³»¿¡ ¾Æ¹«µµ Á¢¼ÓÇÏÁö ¾ÊÀ¸¸é ±æµåÀüÀÌ ÀÚµ¿ Á¾·áµË´Ï´Ù.";
+"Pokud nebude nalezen ádnı nepøítel, cechovní válka bude automaticky ukonèena.";
+
+"20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© »óÁ¡À» ¿­¼ö°¡ ¾ø½À´Ï´Ù";
+"Nemùeš obchodovat, protoe neseš více jak 2 Biliony Yangù.";
+
+"20¾ï³ÉÀÌ ÃÊ°úÇÏ¿© ¹°Ç°À» ÆÈ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš obchodovat, protoe neseš více jak 2 Biliony Yangù.";
+
+"5ºĞ ÈÄ¿¡ Á¤»óÀûÀ¸·Î Á¢¼ÓÇÏ½Ç¼ö ÀÖ½À´Ï´Ù.";
+"Mùeš se pøipojit za 5 minut.";
+
+"5ÃÊ µÚ Æ²¸®½Å ºĞµéÀ» ¹Ù±ùÀ¸·Î ÀÌµ¿ ½ÃÅ°°Ú½À´Ï´Ù.";
+"Za 5 vteøin budou všichni kdo špatnì odpovìdìli vyøazeni.";
+
+"<±æµå> %d ½ºÅ³À» »ç¿ëÇÔ (%d, %d) to %u";
+"[Cech] %d -schopnost byla uita (%d, %d) na %u.";
+
+"<±æµå> %s ±æµå°¡ ±æµåÀüÀ» °ÅºÎÇÏ¿´½À´Ï´Ù.";
+"[Cech] %s nepøijal cechovní válku.";
+
+"<±æµå> %uÀÇ °æÇèÄ¡¸¦ ÅõÀÚÇÏ¿´½À´Ï´Ù.";
+"[Cech] Pouito %u zkušeností.";
+
+"<±æµå> %uÀÇ ¿ë½Å·ÂÀ» È¸º¹ÇÏ¿´½À´Ï´Ù.";
+"[Cech] %u bodù draèího ducha bylo obnoveno.";
+
+"<±æµå> [%s] ±æµå°¡ »ı¼ºµÇ¾ú½À´Ï´Ù.";
+"[Cech] [%s] cech byl vytvoøen.";
+
+"<±æµå> °¡Áö°í ÀÖ´Â µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"[Cech] Nemáš dostatek Yangù.";
+
+"<±æµå> °æÇèÄ¡ ÅõÀÚ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Cech] Uití zkušeností selhalo.";
+
+"<±æµå> °øÁö±ÛÀ» ÀÛ¼ºÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Cech] Nemùeš udìlat prohlášení.";
+
+"<±æµå> ±×·¯ÇÑ »ç¶÷À» Ã£À» ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Hledaná osoba nemùe bıt nalezena.";
+
+"<±æµå> ±×·± ±æµå°¡ ¾ø½À´Ï´Ù.";
+"[Cech] Cech s tímto jménem neexistuje.";
+
+"<±æµå> ±æµå ±İ°í¿¡¼± ±æµåÀå¸¸ Ãâ±İÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Cech] Pouze cechovní mistr mùe vybrat Yangy.";
+
+"<±æµå> ±æµå »ı¼º¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Cech] Vytvoøení cechu selhalo.";
+
+"<±æµå> ±æµå ½ºÅ³ ·¹º§À» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Cech]Nejsi oprávnìn mìnit úroveò cechovních schopností.";
+
+"<±æµå> ±æµå ½ºÅ³Àº ±æµåÀü Áß¿¡¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Cech] Tato cechovní schopnost mùe bıt pouita pouze ve válce.";
+
+"<±æµå> ±æµå ÀÌ¸§ÀÌ ÀûÇÕÇÏÁö ¾Ê½À´Ï´Ù.";
+"[Cech] Jméno cechu je neplatné.";
+
+"<±æµå> ±æµå°¡ ÀÌ¹Ì ÃÖ°í ·¹º§ÀÔ´Ï´Ù.";
+"[Cech]Tvùj cech dosáhl maximální úrovnì.";
+
+"<±æµå> ±æµå¸¦ »ı¼ºÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Nemùeš vytvoøit cech.";
+
+"<±æµå> ±æµå¸¦ ÇØ»êÇÑ Áö %dÀÏÀÌ Áö³ªÁö ¾ÊÀº »ç¶÷Àº ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Po novém uspoøádání mùeš opìt pøijímat èleny za %d dní.";
+
+"<±æµå> ±æµå¿¡ ¼ÓÇØÀÖÁö ¾Ê½À´Ï´Ù.";
+"[Cech]Tohle nepatøí cechu.";
+
+"<±æµå> ±æµå¿ø %s ´ÔÀ» °­Á¦ Å»Åğ ½ÃÄ×½À´Ï´Ù.";
+"[Cech] Cechovní èlen %s byl vykopnut z cechu.";
+
+"<±æµå> ±æµå¿øÀ» °­Á¦ Å»Åğ ½ÃÄ×½À´Ï´Ù.";
+"[Cech] Vyhodil jsi èlena cechu.";
+
+"<±æµå> ±æµå¿øÀ» °­Á¦ Å»Åğ ½ÃÅ³ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Cech] Nemùeš vykopnout èleny cechu.";
+
+"<±æµå> ±æµå¿øÀ» ÃÊ´ëÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Cech] Nemùeš pøijímat nikoho do cechu.";
+
+"<±æµå> ±æµåÀåÀ¸·Î Á÷À§¸¦ º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Nemùeš se udìlat cechovním vùdcem.";
+
+"<±æµå> ±æµåÀåÀÇ ±ÇÇÑÀº º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Práva cechovního vùdce nemùou bıt zmìnìny.";
+
+"<±æµå> ±æµåÀåÀÇ Á÷À§ ÀÌ¸§Àº º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Práva cechovního vùdce nemohou bıt zmìnìny.";
+
+"<±æµå> ±æµåÀåÀÇ Á÷À§´Â º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Hodnost cechovního vùdce nemùe bıt zmìnìna.";
+
+"<±æµå> ±æµåÀü¿¡ ´ëÇÑ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Cech] Není oprávnìnı na cechovní válku.";
+
+"<±æµå> ±æµåÀüÀ» ÇÏ±â À§ÇØ¼± ÃÖ¼ÒÇÑ %d¸íÀÌ ÀÖ¾î¾ß ÇÕ´Ï´Ù.";
+"[Cech] Do války cechù se musí pøihlásit minimálnì %d hráèù.";
+
+"<±æµå> ±æµåÀüÀÌ Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"[Cech] Válka cechù byla zrušena.";
+
+"<±æµå> ±æµåÀüÁß¿¡´Â »ç³É¿¡ µû¸¥ ÀÌÀÍÀÌ ¾ø½À´Ï´Ù.";
+"[Cech] Bìhem cechovní války se nepoèítají bodù zkušeností za lov.";
+
+"<±æµå> ´Ù¸¥ Á¦±¹ »ç¶÷À» ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Nemùeš pøijímat do cechu hráèe z jiného království.";
+
+"<±æµå> ´õÀÌ»ó Àå¼ö¸¦ ÁöÁ¤ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Nemùeš vybrat více vùdcù.";
+
+"<±æµå> µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"[Cech] V cechovní pokladnici nemáš dostatek Yangù!";
+
+"<±æµå> ·¡´õ Á¡¼ö°¡ %d Á¡ÀÌ µÇ¾ú½À´Ï´Ù";
+"[Cech] Dosaeno %d bodù.";
+
+"<±æµå> ·¹´õ Á¡¼ö°¡ ¸ğÀÚ¶ó¼­ ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Cechovní úroveò je pøíliš nízká na úèast v cechovní válce.";
+
+"<±æµå> »èÁ¦ÇÒ ¼ö ¾ø´Â ±ÛÀÔ´Ï´Ù.";
+"[Cech] Zpráva nemùe bıt smazána.";
+
+"<±æµå> »ó´ë°¡ %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"[Cech] Hráè je na kanále %d. (Souèasnı kanál: %d)";
+
+"<±æµå> »ó´ë°¡ ¿Â¶óÀÎ »óÅÂ°¡ ¾Æ´Õ´Ï´Ù.";
+"[Cech] Hráè není online.";
+
+"<±æµå> »ó´ë¹æ ±æµå°¡ ÀÌ¹Ì ÀüÀï Áß ÀÔ´Ï´Ù.";
+"[Cech] Tento cech se ji úèastní války.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ±æµå¿ø ¼ö°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Cech nemá dostatek èlenù na úèast ve válce.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ±æµåÀåÀÌ Á¢¼ÓÁßÀÌ ¾Æ´Õ´Ï´Ù.";
+"[Cech]Velitel nepøátelského cechu je offline.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ·¹´õ Á¡¼ö°¡ ¸ğÀÚ¶ó¼­ ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Cech nemá dostatek bodù na úèast ve válce.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ Àüºñ°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Cech nemá dostatek Yangù na úèast cechovní války.";
+
+"<±æµå> »ó´ë¹æÀÌ °°Àº ±æµå°¡ ¾Æ´Õ´Ï´Ù.";
+"[Cech] Tahle osoba není ve stejném cechu.";
+
+"<±æµå> »ó´ë¹æÀÌ ±æµå ÃÊ´ë °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"[Cech] Hráè odmítl pozvání do cechu.";
+
+"<±æµå> »ó´ë¹æÀÌ ÀÌ¹Ì ´Ù¸¥ ±æµå¿¡ ¼ÓÇØÀÖ½À´Ï´Ù.";
+"[Cech] Tato osoba je ji èlenem jiného cechu.";
+
+"<±æµå> »ó´ë¹æÀÌ ÃÊ´ë ½ÅÃ»À» ¹ŞÀ» ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"[Cech]Hráè stojící proti tobì nemùe bıt pozván.";
+
+"<±æµå> ¿ë½Å·Â È¸º¹¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Cech] Draèí duch nebyl obnoven.";
+
+"<±æµå> ¿ë½Å·ÂÀÌ ºÎÁ·ÇÕ´Ï´Ù. (%d, %d)";
+"[Cech] Nedostatek draèího ducha. (%d, %d)";
+
+"<±æµå> ÀÌ¹Ì °°Àº ÀÌ¸§ÀÇ ±æµå°¡ ÀÖ½À´Ï´Ù.";
+"[Cech] Tohle jméno cechu je ji obsazeno.";
+
+"<±æµå> ÀÌ¹Ì ´Ù¸¥ ÀüÀï¿¡ ÂüÀü Áß ÀÔ´Ï´Ù.";
+"[Cech] Tvùj cech se ji úèastní jiné války.";
+
+"<±æµå> ÀÌ¹Ì ÀüÀï ÁßÀÎ ±æµåÀÔ´Ï´Ù.";
+"[Cech] Tento cech se ji úèastní jiné války.";
+
+"<±æµå> ÀÌ¹Ì ÀüÀïÀÌ ¿¹¾àµÈ ±æµå ÀÔ´Ï´Ù.";
+"[Cech] Tento cech je ji pøihlášen na jinou cechovní válku.";
+
+"<±æµå> Àß¸øµÈ ±İ¾×ÀÔ´Ï´Ù.";
+"[Cech] Tohle není správné mnoství Yangù.";
+
+"<±æµå> Àá½ÃÈÄ¿¡ ÀÌ¿ëÇØÁÖ½Ê½Ã¿À";
+"[Cech] Zkus to prosím pozdìji.";
+
+"<±æµå> Àá½ÃÈÄ¿¡ ÀÌ¿ëÇØÁÖ½Ê½Ã¿À.";
+"[Cech] Zkus to prosím pozdìji.";
+
+"<±æµå> Àå±ºÀ» ÁöÁ¤ÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Cech] Nemùeš vybrat vùdce cechu.";
+
+"<±æµå> ÀûÇÕÇÏÁö ¾ÊÀº Á÷À§ ÀÌ¸§ ÀÔ´Ï´Ù.";
+"[Cech] Hodnostní jméno je neplatné.";
+
+"<±æµå> Àüºñ°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Nedostatek Yangù na úèast cechovní války.";
+
+"<±æµå> Á¦°øÇÏ°íÀÚ ÇÏ´Â °æÇèÄ¡°¡ ³²Àº °æÇèÄ¡º¸´Ù ¸¹½À´Ï´Ù.";
+"[Cech] Poskytnuté zkušenosti jsou vìtší ne zbylé zkušenosti.";
+
+"<±æµå> Á÷À§ ±ÇÇÑÀ» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Cech] Nemùeš zmìnit svoji pozici.";
+
+"<±æµå> Á÷À§ ÀÌ¸§À» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Cech] Nemùeš zmìnit své hodnostní jméno.";
+
+"<±æµå> Á÷À§¸¦ º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Cech] Nemùeš zmìnit pozici.";
+
+"<±æµå> ÃÖ´ë ±æµå¿ø ¼ö¸¦ ÃÊ°úÇß½À´Ï´Ù.";
+"[Cech] Kapacita cechu dosáhla nejvyšší úrovnì.";
+
+"<±æµå> ÄğÅ¸ÀÓÀÌ ³¡³ªÁö ¾Ê¾Æ ±æµå ½ºÅ³À» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Nemùeš ještì uít cechovní schopnost.";
+
+"<±æµå> Å»ÅğÇÑ ÈÄ %dÀÏ ÀÌ³»¿¡´Â ±æµå¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Po opuštìní cechu nemùeš zaloit novı po dobu %d dní.";
+
+"<±æµå> Å»ÅğÇÑ ÈÄ %dÀÏÀÌ Áö³ªÁö ¾ÊÀº »ç¶÷Àº ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Tento hráè mùe bıt znovu pozván za %d dní.";
+
+"<±æµå> ÇØ»êÇÑ ÈÄ %dÀÏ ÀÌ³»¿¡´Â ±æµå¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.";
+"[Cech] Po smazání cechu nemùeš vytvoøit novı po dobu %d dní.";
+
+"<±æµå> ÇöÀç ±æµå°¡ ÀüÀï Áß ÀÔ´Ï´Ù.";
+"[Cech] Tento cech se momentálnì úèastní války.";
+
+"<¸Ş½ÅÁ®> %s ´ÔÀ» ¸Ş½ÅÀú¿¡¼­ »èÁ¦ÇÏ¿´½À´Ï´Ù.";
+"[Seznam pøátel] Vymazal jsi %s ze seznamu.";
+
+"<¸Ş½ÅÁ®> %s ´ÔÀ» Ä£±¸·Î Ãß°¡ÇÏ¿´½À´Ï´Ù.";
+"[Seznam pøátel] Pøidal jsi %s jako pøítele.";
+
+"<¸Ş½ÅÁ®> ¿î¿µÀÚ´Â ¸Ş½ÅÁ®¿¡ Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Seznam pøátel]  Nemùes pøidat GM do tvého listu pøátel.";
+
+"<Ã¢°í> °Å¸®°¡ ¸Ö¾î¼­ Ã¢°í¸¦ ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"[Skladištì] Jsi pøíliš daleko na otevøení skladištì.";
+
+"<Ã¢°í> ±âÁ¸ ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù.";
+"[Skladištì] Zadal jsi špatné heslo.";
+
+"<Ã¢°í> ¿Å±æ ¼ö ¾ø´Â À§Ä¡ÀÔ´Ï´Ù.";
+"[Skladištì] Není monı ádnı pøesun.";
+
+"<Ã¢°í> ÀÌ ¾ÆÀÌÅÛÀº ³ÖÀ» ¼ö ¾ø½À´Ï´Ù.";
+"[Skladištì] Pøedmìt nemùe bıt uskladnìn.";
+
+"<Ã¢°í> Àß¸øµÈ ¾ÏÈ£¸¦ ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.";
+"[Skladištì]Vloil jsi špatné heslo.";
+
+"<Ã¢°í> Ã¢°í ºñ¹Ğ¹øÈ£°¡ º¯°æµÇ¾ú½À´Ï´Ù.";
+"[Skladištì] Heslo ke skladišti bylo zmìnìno.";
+
+"<Ã¢°í> Ã¢°í°¡ ÀÌ¹Ì ¿­·ÁÀÖ½À´Ï´Ù.";
+"[Skladištì]Skladištì je ji otevøeno.";
+
+"<Ã¢°í> Ã¢°í·Î ¿Å±æ ¼ö ¾ø´Â ¾ÆÀÌÅÛ ÀÔ´Ï´Ù.";
+"[Sklad]Tento pøedmìt nemùeš pøesunout do skladištì.";
+
+"<Ã¢°í> Ã¢°í¸¦ ´İÀºÁö 10ÃÊ ¾È¿¡´Â ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"[Skladištì]Musíš poèkat 10 vteøin na opìtovné otevøení skladištì.";
+
+"<Äù½ºÆ®> ÀÌÀü¿¡ °°Àº º¸»óÀ» ¹ŞÀº ÀûÀÌ ÀÖ¾î ´Ù½Ã ¹ŞÁö ¾Ê½À´Ï´Ù.";
+"[Úkol] Ji jsi odmìnu obdrel.";
+
+"<ÆÄÆ¼> %s ´ÔÀÌ ÆÄÆ¼ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"[Skupina] %s odmítl pozvání do tvé skupiny.";
+
+"<ÆÄÆ¼> %s´ÔÀÇ ÆÄÆ¼¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"[Skupina] %s se pøipojil k tvé skupinì.";
+
+"<ÆÄÆ¼> %s´ÔÀÌ ÆÄÆ¼ ÃÊ´ë¸¦ °ÅÀıÇÏ¼Ì½À´Ï´Ù.";
+"[Skupina] %s odmítl tvé pozvání.";
+
+"<ÆÄÆ¼> %s´ÔÀÌ ÆÄÆ¼¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"[Skupina] %s se pøipojil k tvé skupinì.";
+
+"<ÆÄÆ¼> -30 ~ +30 ·¹º§ ÀÌ³»ÀÇ »ó´ë¹æ¸¸ ÃÊ´ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Skupina] Pouze hráèi s rozdílem úrovní od -30 do +30 mohou bıt pozváni.";
+
+"<ÆÄÆ¼> °üÀü ¸ğµå¿¡¼± ÆÄÆ¼ ÃÊ´ë¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Nemùeš pozvat hráèe, kdy jsi v pozorovatelském módusu.";
+
+"<ÆÄÆ¼> ´Ù¸¥ Á¦±¹°ú ÆÄÆ¼¸¦ ÀÌ·ê ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Nemùeš vytvoøit skupinu s hráèi z jinıch království.";
+
+"<ÆÄÆ¼> ´Ù¸¥ ÆÄÆ¼¿øÀ» Å»Åğ½ÃÅ³ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Nemùeš vykopnout èleny skupiny.";
+
+"<ÆÄÆ¼> ´ë»óÀ» ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Nemùeš zavolat cíl.";
+
+"<ÆÄÆ¼> ´õ ÀÌ»ó ÆÄÆ¼¿øÀ» ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Nemùeš pozvat více hráèù do své skupiny.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼ ÃÊ´ë¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Na tomto místì nemùeš pozvat hráèe do skupiny.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼ ÃÊ´ë¿¡ ÀÀÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Na tomto místì nemùeš pøijmout pozvání do skupiny.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼¿¡¼­ ³ª°¥ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Na tomto místì nemùeš opustit skupinu.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼¿¡¼­ Ãß¹æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Na tomto místì nemùeš vykopnout hráèe ze skupiny.";
+
+"<ÆÄÆ¼> ´øÁ¯³»¿¡¼­´Â ÆÄÆ¼¸¦ ³ª°¥ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Na tomto místì nemùeš opustit skupinu.";
+
+"<ÆÄÆ¼> ´øÁ¯³»¿¡¼­´Â ÆÄÆ¼¿øÀ» Ãß¹æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Na tomto místì nemùeš vykopnout hráèe ze skupiny.";
+
+"<ÆÄÆ¼> ¸®´õ¸¸ º¯°æÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Skupina] Pouze vùdce skupiny mùe tohle zmìnit.";
+
+"<ÆÄÆ¼> »óÅÂ¸¦ º¯°æÇÏ·Á´Â »ç¶÷ÀÌ ÆÄÆ¼¿øÀÌ ¾Æ´Õ´Ï´Ù.";
+"[Skupina] Cíl není èlen tvé skupiny.";
+
+"<ÆÄÆ¼> ¼­¹ö ¹®Á¦·Î ÆÄÆ¼ °ü·Ã Ã³¸®¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Server nemùe vykonat skupinovou ádost.";
+
+"<ÆÄÆ¼> ¼ÒÈ¯ÇÏ·Á´Â ´ë»óÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Cíl nenalezen.";
+
+"<ÆÄÆ¼> ÀÌ¹Ì %s´ÔÀº ÆÄÆ¼¿¡ ¼ÓÇØ ÀÖ½À´Ï´Ù.";
+"[Skupina] %s je ji ve skupinì.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ ±â¼úÀº ÆÄÆ¼Àå¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Skupina] Jen vedoucí skupiny mùe pouívat skupinové schopnosti.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ ÃÊ´ë¿¡ ÀÀÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Nemùeš pøijmout pozvání.";
+
+"<ÆÄÆ¼> ÆÄÆ¼°¡ ÇØ»ê µÇ¾ú½À´Ï´Ù.";
+"[Skupina] Skupina byla zrušena.";
+
+"<ÆÄÆ¼> ÆÄÆ¼³» ÃÖ°í ·¹º§ º¸´Ù 30·¹º§ÀÌ ³·¾Æ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Nemùeš pozvat tohoto hráèe, jeho úroveò je pøíliš nízká.";
+
+"<ÆÄÆ¼> ÆÄÆ¼³» ÃÖÀú ·¹º§ º¸´Ù 30·¹º§ÀÌ ³ô¾Æ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Nemùeš pozvat tohoto hráèe, jeho úroveò je pøíliš vysoká.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿¡¼­ ³ª°¡¼Ì½À´Ï´Ù.";
+"[Skupina] Opustil jsi skupinu.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿¡¼­ Ãß¹æ´çÇÏ¼Ì½À´Ï´Ù.";
+"[Skupina] Byl jsi vykopnut ze skupiny.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿äÃ»À» ÇÑ Ä³¸¯ÅÍ¸¦ Ã£À»¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Hráè kterı zval, není online.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿øÀ» ÃÊ´ëÇÒ ¼ö ÀÖ´Â ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Skupina] Nemáš právo nìkoho pozvat.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿øÀ» ÇöÀç À§Ä¡·Î ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Nemùeš zavolat èleny skupiny na tvoji souèasnou pozici.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ÀÇ ÀÎ¿øÁ¦ÇÑÀÌ ÃÊ°úÇÏ¿© ÆÄÆ¼¿¡ Âü°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Nemùeš se pøipojit k této skupinì, tato je ji plná.";
+
+"@*** ->%*s - Dice score: %4d ***";
+"@*** ->%*s - skóre: %4d ***";
+
+"@*** Rolling for the following item: %s ***";
+"@*** Házení pro tento pøedmìt: %s ***";
+
+"A level-%d Dragon Portal can now be entered.";
+"Nyní lze vstoupit do Draèího portálu %d. úrovnì.";
+
+"A level-%d Dragon Portal has opened. Take the dungeon by storm!";
+"Otevøel se Draèí portál %d. úrovnì. Zaútoèit na bludištì!!";
+
+"A name has already been registered.";
+"Toto jméno je ji pouito.";
+
+"A player has announced their withdrawal. Kill them to earn more points!";
+"Hráè ohlásil svùj útìk. Zabij je pro zisk více bodù.";
+
+"A special supply pack has been dropped somewhere.";
+"Nìkde byl umístìn speciální balíèek se zásobami.";
+
+"Account limit reached. You cannot open this box.";
+"Dosaen limit úètu. Tuto truhlu nemùeš otevøít.";
+
+"Acquire the Valiant Pet Book for your pet's hero training.";
+"Musíš získat Knihu odváného zvíøete, abys mohl mazlíka poslat na hrdinnı vıcvik.";
+
+"Activate your pet first.";
+"Nejprve musíš aktivovat mazlíka.";
+
+"After using the Tincture of Kingdoms, you cannot accept invitations in this kingdom any more.";
+"Po pouití Tinktury království ji nemùeš v tomto království pøijímat ádná pozvání.";
+
+"All Combat Zone rankings have been reset.";
+"Všechna hodnocení Bitevní zóny byla zresetována.";
+
+"All curses have been lifted.";
+"Tvé prokletí pominulo.";
+
+"All group members have been turned to stone. Mission failed.";
+"Všichni èlenové skupiny byli promìnìni v kámen. Úkol selhal.";
+
+"All group members must be located on the same map to enter.";
+"Všichni èlenové skupiny musí bıt na stejné mapì, aby bylo mono vejít.";
+
+"All levels cleared. You will now be teleported to the bonus level.";
+"Všechny úrovnì dokonèeny. Nyní budeš pøenesen do bonusové úrovnì.";
+
+"All of the outposts in %s have been destroyed and the area is no longer under Sung Mahi's control.";
+"Všechny základny v %s byly znièeny a oblast ji není pod kontrolou Sung Mahi.";
+
+"All slots are occupied.";
+"Všechny pozice jsou obsazeny.";
+
+"An error has occurred. The bonuses could not be changed.";
+"Objevila se chyba. Bonusy nebylo moné zmìnit.";
+
+"An event is running and you will receive double points.";
+"Probíhá akce a proto obdríš dvojnásobek bodù.";
+
+"Ask Sam Pumpkin if you've earned a reward.";
+"Zeptej se dınì Sama, jestli si zaslouíš odmìnu.";
+
+"Battle Royale";
+"Královská bitva";
+
+"Battle Royale Combat Reward. Killed %d opponents or more";
+"Bitevní odmìna za Královskou bitvu. Zabito více ne %d protivníkù";
+
+"Battle Royale Game Reward. Rank: %d";
+"Herní odmìna za Královskou bitvu. Umístìní: %d";
+
+"Battle Royale General Reward.";
+"Obecná odmìna za Královskou bitvu.";
+
+"Battle Royale Season Reward. Season rank: %d";
+"Odmìna za sezónu Královské bitvy. Umístìní: %d";
+
+"Battle Royale participants status: (%u/%u)";
+"Stav úèastníkù Královské bitvy: (%u/%u)";
+
+"Battle not started. Dungeon closed.";
+"Bitva nebyla zahájena. Bludištì uzavøeno.";
+
+"Bonus level: Destroy Metin stones.";
+"Bonusová úroveò: Zniè Kameny Metin.";
+
+"Bonus level: Destroy a Metin stone.";
+"Bonusová úroveò: Zniè Kamen Metin.";
+
+"Bonus level: You have 5 minutes to trade with the merchant and stock up on supplies.";
+"Bonusová úroveò: Máš 5 minut na obchodování a nakoupení zásob.";
+
+"Cannot connect to the channel at this time. Please try again later.";
+"K tomuto kanálu se nyní nelze pøipojit. Zkus to znovu pozdìji.";
+
+"Climb the steps of Sung Mahi Tower and enter the next level.";
+"Vystoupej na další úroveò ve Vìi Sung Mahi!";
+
+"Collect Birch Branches, craft Yut Nori Boards from them and play the exciting minigame.";
+"Sbírej Bøezové vìtve, vyrob z nich desku na Yutnori a zahraj si vzrušující minihru.";
+
+"Comb through the areas and eliminate them. Gather hit points and exchange them for chests.";
+"Projdi oblasti a zabij je. Získávej zásahy a vymìò je za truhly.";
+
+"County Bakra";
+"Hrabství Bakra";
+
+"County Bokjung";
+"Hrabství Bokjung";
+
+"County Yayang";
+"Hrabství Yayang";
+
+"Current participants: %lu";
+"Aktuální úèastníci: %lu";
+
+"Daeyami";
+"Daeyami";
+
+"Defeat 5 Zodiac bosses.";
+"Poraz 5 bossù Zvìrokruhu.";
+
+"Defeat all Zodiac bosses.";
+"Poraz všechny bossy Zvìrokruhu.";
+
+"Defeat all monsters without dying.";
+"Poraz všechny pøíšery, ani bys sám zemøel.";
+
+"Defeat all monsters.";
+"Poraz všechny pøíšery.";
+
+"Defeat monsters.";
+"Poraz pøíšery.";
+
+"Defeat the Zodiac boss without dying.";
+"Poraz bosse Zvìrokruhu, ani bys sám zemøel.";
+
+"Defeat the Zodiac boss.";
+"Poraz bosse Zvìrokruhu.";
+
+"Deliver equipped weapon skin.";
+"Dodat pouívanı vzhled zbranì.";
+
+"Delivered Pumpkin Lanterns: %d";
+"Doruèenıch dıòovıch luceren: %d";
+
+"Destroy Metin stones.";
+"Zniè Kameny Metin.";
+
+"Destroy a Metin stone. If you are successful, you'll receive a bonus buff.";
+"Zniè Kamen Metin. Pokud uspìješ, obdríš bonusové posílení.";
+
+"Destroy all Metin stones and defeat the Zodiac boss.";
+"Zniè všechny Kameny Metin a poraz bosse Zvìrokruhu.";
+
+"Destroy all Metin stones.";
+"Zniè všechny Kameny Metin.";
+
+"Destroy the right Metin stone!";
+"Zniè správnı kámen Metin!";
+
+"Dodge every attack!";
+"Vyhni se všem útokùm!";
+
+"Dong Gwang Plain";
+"Planiny Dong Gwang";
+
+"Doyyumhwan";
+"Doyyumhwan";
+
+"Drag the items into the window.";
+"Pøetáhni pøedmìty do okna.";
+
+"Duel of the Seers Prizes";
+"Ceny za Souboj vìštcù";
+
+"Enchant Item cannot be used on this item.";
+"Na tento pøedmìt nelze pouít Zaèarovat pøedmìt.";
+
+"Enchanted Forest";
+"Zakletı les";
+
+"Enough Pumpkin Lanterns have been collected.";
+"Bylo nasbíráno dostatek dıòovıch luceren.";
+
+"Entering the Combat Zone in %d seconds.";
+"Do bitevní zóny vstoupíš za %d vteøin.";
+
+"Experience has increased to %d points.";
+"Zkušenost se zvıšila na %d bodù.";
+
+"Failed!";
+"Nezdaøilo se!";
+
+"Failure! The %s effect was not activated.";
+"Selhání! Efekt %s nebyl aktivován.";
+
+"Failure! The absorption rate was reduced by 1%.";
+"Selhání! Absorpèní pomìr byl sníen o 1 %.";
+
+"Failure! The attempt to change to the %s effect failed.";
+"Selhání! Pokus o zmìnu efektu %s selhal.";
+
+"Failure! The attempt to upgrade the %s effect to level %d failed.";
+"Selhání! Pokus o vylepšení efektu %s na úroveò%d selhal.";
+
+"Fantastic prizes await!";
+"Fantastické ceny èekají!";
+
+"Final";
+"Finále";
+
+"Find a Sealstone to break the seal!";
+"Najdi Peèetní kámen pro rozbití peèetì!";
+
+"Find the right key to escape!";
+"Najdi správnı klíè pro únik!";
+
+"First level cleared. Return to Monk Milbon.";
+"První úroveò dokonèena. Vra se k mnichovi Milbonovi.";
+
+"Gautama Cliff";
+"Útes Gautama";
+
+"Go and talk to Sam Pumpkin!";
+"Zajdi si promluvit s dıní Samem!";
+
+"Go to the Yut Nori Table to collect your reward.";
+"Jdi ke stolu Yutnori a vyber si vıhru.";
+
+"Grotto of Exile";
+"Jeskynì vyhnanství";
+
+"Grotto of Exile 2";
+"Jeskynì vyhnanství 2";
+
+"Guild [%s]! The final objective has appeared. Destroy all objectives to win this war!";
+"Cech [%s]! Objevil se finální cíl. Zniè všechny cíle, abys vyhrál tuto válku!";
+
+"Hurry! You have %d minutes to travel through the portal to reach the mainland.";
+"Pospìš si! Máš %d minut na projití portálem na kontinent.";
+
+"Hwang Temple";
+"Chrám Hwang";
+
+"If you don't start the sea battle within 1 minute, you will have to leave the ship.";
+"Pokud nezahájíš námoøní bitvu do 1 minuty, budeš muset opustit loï.";
+
+"If you want to change weapons, you must remove the weapon skin first.";
+"Pokud si chceš vymìnit zbraò, tak musíš nejprve odebrat Vzhled zbranì.";
+
+"Imha";
+"Imha";
+
+"In 15 sec. everyone who gave an incorrect answer will be removed.";
+"Za 15 vteøin budou odebrání všichni, kteøí neodpovìdìli správnì.";
+
+"Insufficient space in your inventory. The reward will be sent to your mailbox.";
+"Nedostatek místa v inventáøi. Odmìna bude odeslána do tvé poštovní schránky.";
+
+"Items can only be traded on the same map.";
+"S pøedmìtem lze obchodovat pouze na té samé mapì.";
+
+"Joan";
+"Joan";
+
+"Jungrang";
+"Jungrang";
+
+"Kill a pair of monsters that don't belong together!";
+"Zabij páry pøíšer, které k sobì nepatøí!";
+
+"Kill all the monsters within the time limit!";
+"Zabij všechny pøíšery v èasovém limitu!";
+
+"Kuahlo Dong (Spiders Dungeon)";
+"Kuahlo Dong (Pavouèí podzemí)";
+
+"Land sighted! You have successfully protected the mast and reached the new continent after a long and weary journey. Continue to the portal.";
+"Zemì na obzoru! Úspìšnì jsi ubránil stìeò a po dlouhé cestì jsi dorazil k novému kontinentu. Pokraèuj k portálu.";
+
+"Leaving the Combat Zone in %d seconds.";
+"Bitevní zónu opustíš za %d vteøin.";
+
+"Loot for completing Sung Mahi Tower";
+"Koøist za dokonèení Vìe Sung Mahi";
+
+"Magic penetration of %d%%.";
+"Prùnik kouzla %d%%.";
+
+"Make sure you have enough space in your inventory before you go fishing.";
+"Pøed rybaøením se ujistit, e máš v inventáøi dostatek místa.";
+
+"Maximum absorption rate reached.";
+"Bylo dosaeno maximální absorpèního pomìru.";
+
+"Maximum guild level reached. No more donations possible.";
+"Dosaeno maximální úrovnì cechu. Ji nejsou moné ádné další dary.";
+
+"Miryang";
+"Miryang";
+
+"Mission complete. As soon as the group leader hits the button, you will be teleported directly to level %d.";
+"Úkol dokonèen. Jakmile velitel skupiny klikne na tlaèítko, budeš pøenesen pøímo do úrovnì %d.";
+
+"Monsters have appeared in the Valley of Seungryong, Mount Sohan, Doyyumhwan and in the Yongbi Desert!";
+"Pøíšery se objevily v údolí Seungryong, na hoøe Sohan, v Doyyumhwan a v poušti Yongbi!";
+
+"Mount Sohan";
+"Hora Sohan";
+
+"Mr B and the boss monsters disappear in %d minute(s).";
+"Pan B a bossové zmizí za %d minut.";
+
+"Nam Gwang Chasm";
+"Propast Nam Gwang";
+
+"Nephrite Bay";
+"Nefritovı záliv";
+
+"New absorption rate: %d";
+"Novı absorpèní pomìr: %d";
+
+"Next entry available in %d minute(s).";
+"Další vstup je monı za %d minut.";
+
+"Next entry available in %d second(s).";
+"Další vstup je monı za %d vteøin.";
+
+"No guilds have registered for the territory auction.";
+"Do aukce cechovního území se nezaregistroval ádnı cech.";
+
+"No lease needs to be paid.";
+"Není tøeba platit ádnı pronájem.";
+
+"No winner";
+"Bez vítìze";
+
+"Not possible while transferring bonuses.";
+"Není moné bìhem pøenosu bonusu.";
+
+"O ÀÔ´Ï´Ù";
+"Ano (O)";
+
+"OX ¹®Á¦ ½ºÅ©¸³Æ® ·Îµù ¼º°ø";
+"OX Quiz Skript je nahrán.";
+
+"OX ¹®Á¦ ½ºÅ©¸³Æ® ·Îµù ½ÇÆĞ";
+"OX Quiz Skript nemùe bıt nahrán.";
+
+"OX »óÇ°À» Áö±ŞÇÏ¿´½À´Ï´Ù. ID: %d ¼ö·®: %d";
+"Odmìna soutìe OX byla pøedána. ID: %d Mnoství: %d";
+
+"OX ÀÌº¥Æ®°¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.";
+"Soutì OX zaèala.";
+
+"OX ÀÌº¥Æ®°¡ ÀÌ¹Ì ÁøÇàÁßÀÔ´Ï´Ù(flag: %d)";
+"Událost ji probíhá (Flag: %d)";
+
+"OX ÀÌº¥Æ®¸¦ ¸¶Ä¡°Ù½À´Ï´Ù.";
+"Soutì OX bude konèit.";
+
+"OXÀÌº¥Æ® ¸ÊÀ» ¸ÕÀú ´İ¾Æ ÁÖ¼¼¿ä.(Flag: %d)";
+"Nejdøíve zavøi kartu soutìe OX. (Flag: %d)";
+
+"OXÀÌº¥Æ®°¡ ´İÈ÷Áö ¾Ê¾Ò°Å³ª, ÄûÁî ÃâÁ¦ÁßÀÔ´Ï´Ù.(flag: %d)";
+"Soutì OX ještì neskonèila, objevily se chyby.(flag: %d)";
+
+"OXÀÌº¥Æ®°¡ ¿­·Á ÀÖÁö ¾Ê°Å³ª ¹®Á¦ ÃâÁ¦ÁßÀÔ´Ï´Ù.(Flag: %d)";
+"Soutì OX skonèila, nevyskytly se ádné chyby.(Flag: %d)";
+
+"OXÀÌº¥Æ®¸¦ °­Á¦ Á¾·á ½ÃÅµ´Ï´Ù.";
+"Soutì OX je u konce.";
+
+"OXÀÌº¥Æ®ÀÇ ³ª¸ÓÁö ÀÎ¿ø ±â·ÏÀ» ½ÇÆĞÇß½À´Ï´Ù.";
+"OX Další úèastníci události nejsou uvedeni.";
+
+"OXÀÌº¥Æ®ÀÇ ³ª¸ÓÁö ÀÎ¿øÀ» ±â·ÏÇÏ¿´½À´Ï´Ù.";
+"OX Ostatní úèastníci události jsou uvedeni.";
+
+"Only guilds of level %d or higher can register.";
+"Registrovat se mohou pouze cechy úrovnì %d nebo vyšší.";
+
+"Only the guild leader can register for the territory auction.";
+"Pouze vùdce cechu mùe provést registraci do aukce.";
+
+"Only the guild leader or a member with bank access can pay the lease.";
+"Pouze velitel cechu nebo èlen s pøístupem k pokladnici mùe zaplatit pronájem.";
+
+"Partial success! The absorption rate was reduced by 1%.";
+"Èásteènı úspìch! Absorpèní pomìr byl sníen o 1 %.";
+
+"Participants: %s";
+"Úèastníci: %s";
+
+"Perfect! You have attached the Spirit Stone successfully and you even receive a double stat bonus.";
+"Perfektní! Úspìšnì jsi pøidal Kámen ducha a nyní získáš dvojitı bonus na hodnoty.";
+
+"Please close all other windows to open your mailbox.";
+"Pøed otevøením poštovní schránky musíš nejprve zavøít ostatní okna.";
+
+"Please empty your mailbox to be able to receive new messages.";
+"Sma zprávy v poštovní schránce, abys mohl dostávat nové.";
+
+"Please enter another name.";
+"Prosíme, zadej jiné jméno.";
+
+"Please remove the equipped Dragon Stone before using this item.";
+"Prosíme, odeber nejprve Draèí kámen pøed pouitím tohoto pøedmìtu.";
+
+"Please try again later.";
+"Zkus to prosím pozdìji.";
+
+"Please wait a moment. Changing channel...";
+"Poèkej chvilku. Zmìna kanálu...";
+
+"PvP Tournament";
+"PvP turnaj";
+
+"Pyungmoo";
+"Pyungmoo";
+
+"Receive: %s - %d";
+"Získáš: %s - %d";
+
+"Red Forest";
+"Èervenı les";
+
+"Registration for the Battle Royale has been closed.";
+"Registrace do Královské bitvy byly ukonèeny.";
+
+"Registration for the PvP tournament complete.";
+"Registrace do PvP turnaje dokonèena.";
+
+"Reinforce Item cannot be used on this item.";
+"Na tento pøedmìt nelze pouít Zesílit pøedmìt.";
+
+"Remaining number: %d";
+"Zbıvající poèet: %d";
+
+"Remaining participants: %lu";
+"Zbıvající úèastníci: %lu";
+
+"Remaining time: %.2f | Fish difficulty: %lu | Difficulty reduction: %d";
+"Zbıvající èas: %.2f | Obtínost ryby: %lu | Sníení obtínosti: %d";
+
+"Remove %s from your friends list to continue.";
+"Pro pokraèování odeber %s ze seznamu pøátel.";
+
+"Reward";
+"Odmìna";
+
+"Reward for Ritual of Blood";
+"Odmìna za Krvavı rituál";
+
+"Reward for rank %d";
+"Odmìny za hodnocení %d";
+
+"Reward for winning a round";
+"Odmìny za vıhru v kole";
+
+"Reward for winning a tournament";
+"Odmìny za vıhru v turnaji";
+
+"Round %d is starting";
+"Kolo %d zaèíná.";
+
+"Round %lu";
+"Kolo %lu";
+
+"SOS! The mast has been smashed and your ship is sinking. You will now be teleported to Cape Dragon Fire.";
+"SOS! Tvùj stìeò byl znièen a loï se potápí. Nyní budeš pøenesen do Zálivu draèího ohnì.";
+
+"Sadly you were unable to stop the Apocalypse. You will be teleported back to the Zodiac Temple shortly.";
+"Bohuel se ti nepodaøilo zastavit apokalypsu. Brzy budeš teleportován zpìt do Chrámu Zvìrokruhu.";
+
+"Safe zone has now been deactivated.";
+"Bezpeèná zóna byla právì deaktivována.";
+
+"Seasonal Sung Mahi Tower Reward";
+"Sezónní odmìna Vìe Sung Mahi";
+
+"Seasonal reward for 1st place on level %d in Sung Mahi Tower.";
+"Sezónní odmìna za 1. místo na úrovni %d Vìe Sung Mahi.";
+
+"Semifinal";
+"Semifinále";
+
+"Seo Gwang Wastelands";
+"Pustiny Seo Gwang";
+
+"Snakefield";
+"Hadí pole";
+
+"Songpa";
+"Songpa";
+
+"Spider Dungeon 2";
+"Pavouèí bludištì 2";
+
+"Success!";
+"Úspìšnì!";
+
+"Success! The %s effect has been increased to level %d.";
+"Úspìch! Efekt %s byl zvıšen na úroveò %d.";
+
+"Success! The %s effect is now active.";
+"Úspìch! Efekt %s je nyní aktivní.";
+
+"Success! The bonus was transferred successfully.";
+"Úspìch! Bonus byl úspìšnì pøenesen.";
+
+"Sung Mahi Tower Level %d";
+"Vì Sung Mahi: úroveò %d";
+
+"Sung Mahi's outposts are being erected.";
+"Základny Sung Mahi byly postaveny.";
+
+"Sung Mahi's outposts have been destroyed.";
+"Základny Sung Mahi byly znièeny.";
+
+"TEST : ÇöÀç ±¹°í : %d";
+"TEST: V trezoru tvého království je: %d";
+
+"TEST : È²±İµÎ²¨ºñ°¡ ±¹°í·Î È¯¿øµÇ¾ú½À´Ï´Ù.";
+"TEST: Zlaté pruty byly vráceny zpìt do trezoru tvého království.";
+
+"TEST : È²±İµÎ²¨ºñ¸¦ ±¹°í·Î È¯¿øÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"TEST: Nejsi schopen zaplatit zlaté pruty zpìt do trezoru tvého království.";
+
+"Taxes are set to %d%%.";
+"Danì nastaveny na %d %%.";
+
+"Teleportation to the Plateau of Primal Forces has failed.";
+"Teleport na Náhorní plošinu Prvotních sil selhal.";
+
+"Thanks to the immunity blessing, you are not influenced by Sung Mahi's Presence.";
+"Díky poehnání imunity nejsi ovlivnìn pøítomností Sung Mahi.";
+
+"The %s guild has purchased the territory in the %s area at %d,%d for %d Won.";
+"Cech %s koupil území v oblasti %s na pozici %d,%d za %d Wonù.";
+
+"The 'Ship Defence' dungeon is ready. The fisherman will let you board now.";
+"Bludištì 'Obrana lodi' je pøipraveno. Rybáø tì teï nechá nalodit.";
+
+"The Altar of Blood has appeared.";
+"Objevil se Oltáø krve.";
+
+"The Anniversary Event ends in %d minute(s).";
+"Vıroèní událost konèí za %d minut.";
+
+"The Anniversary Event has started!";
+"Vıroèní událost byla zahájena!";
+
+"The Battle Royale cannot begin, because there are too few participants.";
+"Královská bitva nemùe bıt zahájena, protoe není dostatek úèastníkù.";
+
+"The Battle Royale ends in %d seconds.";
+"Královská bitva konèí za %d vteøin.";
+
+"The Battle Royale has begun!!";
+"Královská bitva zaèala!!!";
+
+"The Battle Royale has begun. The first area will be shown in %d seconds.";
+"Královská bitva zaèala. První oblast bude zobrazena ze %d vteøin.";
+
+"The Battle Royale has ended!!";
+"Královská bitva skonèila!!!";
+
+"The Battle of the Five Shrines ends in %d minute(s).";
+"Bitva pìti oltáøù konèí za %d minut.";
+
+"The Battle of the Five Shrines has begun! It will last %d days.";
+"Bitva pìti oltáøù zaèala! Bude trvat %d dnù.";
+
+"The Battle of the Five Shrines is over. The next battle starts in %d hour(s).";
+"Bitva pìti oltáøù skonèila. Další bitva zaène za %d hodin.";
+
+"The Boss Reaper Event ends in %d minute(s).";
+"Událost Boss Reaper konèí za %d minut.";
+
+"The Combat Zone has been updated. It will be closed off in %d seconds.";
+"Bitevní zóna byla aktualizována. Bude uzavøena za %d vteøin.";
+
+"The Combat Zone is now closed.";
+"Bitevní zóna je nyní zavøena.";
+
+"The Combat Zone is now open.";
+"Bitevní zóna je nyní otevøena.";
+
+"The Combat Zone will be closed off in %d seconds.";
+"Bitevní zóna bude uzavøena za %d vteøin.";
+
+"The Combat Zone will close in %d minute(s).";
+"Bitevní zóna se zavøe za %d minut.";
+
+"The Combat Zone will open in %d minute(s).";
+"Bitevní zóna se otevøe za %d minut.";
+
+"The Compass was used, but the Guard wasn’t found.";
+"Byl pouit Kompas, ale Stránı nebyl nalezen.";
+
+"The Flower Power Event has ended.";
+"Událost Síla kvìtin byla ukonèena.";
+
+"The Flower Power Event has started.";
+"Událost Síla kvìtin byla zahájena!";
+
+"The Halloween Event has begun!";
+"Halloweenská akce zaèala!";
+
+"The Halloween Event has finished. Don't forget to collect your rewards!";
+"Halloweenská akce byla ukonèena. Nezapomeò si vyzvednout odmìny!";
+
+"The Okey Event has started!";
+"Akce Okey byla zahájena!";
+
+"The Okey Event is over!";
+"Akce Okey skonèila!";
+
+"The PvP tournament is over.";
+"PvP turnaj skonèil.";
+
+"The PvP tournament starts in %d min.";
+"PvP turnaj zaèíná za %d minut.";
+
+"The Ramadan Event has started!";
+"Událost Ramadán byla zahájena!";
+
+"The Ramadan Event is over.";
+"Událost Ramadán byla ukonèena.";
+
+"The Ritual Stone only works with items above level 80.";
+"Rituální kámen lze pouít pouze na pøedmìty s úrovní vyšší ne 80.";
+
+"The Ritual of Blood has started. Buy special items to get better rewards.";
+"Krvavı rituál zapoèal. Kup si speciální pøedmìty pro zisk lepších odmìn.";
+
+"The Ritual of Blood is over. Try again another time.";
+"Krvavı rituál skonèil. Zkus to znovu jindy.";
+
+"The Tower Action has been activated.";
+"Událost Vì byla aktivována.";
+
+"The Zodiac Apocalypse has already started.";
+"Apokalypsa Zvìrokruhu ji zaèala.";
+
+"The Zodiac Apocalypse is not currently active.";
+"Apokalypsa Zvìrokruhu není momentálnì aktivní.";
+
+"The answer will appear in 20 seconds.";
+"Odpovìï bude zobrazena za 20 vteøin.";
+
+"The battle has been terminated as a result of an unexpected issue.";
+"Bitva byla ukonèena v dùsledku neoèekávanıch okolností.";
+
+"The battle has begun.";
+"Bitva zaèala.";
+
+"The battle starts in %d seconds.";
+"Bitva zaèíná za %d vteøin.";
+
+"The boss has been defeated! You will be teleported back to the Zodiac Temple shortly.";
+"Boss byl poraen! Brzy budeš teleportován zpìt do Chrámu Zvìrokruhu.";
+
+"The countdown has begun. The Battle Royale starts in %d seconds.";
+"Odpoèítávání bylo zahájeno. Královská bitva zaèíná za %d vteøin.";
+
+"The dungeon will be closed if you do not start the battle within %d minute(s).";
+"Bludištì se uzavøe, pokud do nìj nevstoupíš do %d minut.";
+
+"The electrical field has stopped. The next Combat Zone will be shown in %d seconds.";
+"Elektrické pole pøestalo fungovat. Další Bitevní zóna bude zobrazena za %d vteøin.";
+
+"The event has ended as none of the kingdoms entered.";
+"Akce skonèila a nikdo z království se jí nezúèastnil.";
+
+"The event has started!";
+"Událost byla zahájena!";
+
+"The event in the Combat Zone has finished.";
+"Akce v bitevní zónì byla ukonèena.";
+
+"The event is not currently active.";
+"Událost není momentálnì aktivní.";
+
+"The event is over. You cannot use this item any more.";
+"Událost je u konce. Tento pøedmìt ji nemùeš pouít.";
+
+"The group members are too far away to receive the item.";
+"Èlen skupiny je pøíliš daleko, aby mohl obdret pøedmìt.";
+
+"The guild does not have enough Yang.";
+"Cech nemá dostatek Yangù.";
+
+"The guild war declaration expires in 3 minutes.";
+"Vyhlášení cechovní války vyprší za 3 minuty.";
+
+"The interface cannot be opened while you are mounted.";
+"Rozhraní nelze otevøít, kdy jedeš na zvíøeti.";
+
+"The lease for the guild territory wasn't paid. The guild territory has been abandoned.";
+"Nájemné za cechovní území nebylo zaplaceno. Území cechu bylo opuštìno.";
+
+"The loot from Sung Mahi Tower has been sent to your mailbox.";
+"Koøist z Vìe Sung Mahi ti byla zaslána do poštovní schránky.";
+
+"The maximum bid is %d Won.";
+"Maximální èástka je %d Wonù.";
+
+"The maximum level has already been reached.";
+"Bylo dosaeno maximální úrovnì.";
+
+"The mission was unsuccessful.";
+"Úkol nebyl úspìšnì splnìn.";
+
+"The monster from the current event has appeared.";
+"Objevila se pøíšera z aktuální události.";
+
+"The name entered is too short.";
+"Zadané jméno je pøíliš krátké.";
+
+"The next wave begins in %d sec.";
+"Další vlna pøijde za %d vteøin.";
+
+"The other person is currently busy so you cannot trade right now.";
+"Druhá osoba je momentálnì zaneprázdnìna, take s ní nyní nemùeš obchodovat.";
+
+"The pet's level cannot be higher than the player's.";
+"Úroveò mazlíka nemùe bıt vyšší ne je úroveò hráèe.";
+
+"The player cannot accept your invitation at this time.";
+"Hráè momentálnì nemùe pøijmout tvé pozvání.";
+
+"The portal to the next level is open.";
+"Portál do další úrovnì je otevøenı.";
+
+"The portal to the next room is open.";
+"Portál do další místnosti je otevøenı.";
+
+"The reward from the Duel of the Seers will be delivered by post since your inventory was full.";
+"Odmìna za Souboj vìštcù bude doruèena poštou, protoe tvùj inventáø je plnı.";
+
+"The sash cannot take on any further bonuses.";
+"Šerpa ji nemùe pøijmout ádné další bonusy.";
+
+"The sea battle starts in %d sec.";
+"Námoøní bitva zaèíná za %d vteøin.";
+
+"The soulbind on this item is already in the process of being removed.";
+"Duševní pouto tohoto pøedmìtu se ji odstraòuje.";
+
+"The summer event has started. Visit Summer in town. She'll give you some tasty refreshments.";
+"Letní akce byla zahájena. Navštiv Summer ve mìstì. Dá ti nìjaké chutné osvìení.";
+
+"The summer event will end soon. Summer will keep the towns supplied with tasty refreshments for 7 more days.";
+"Letní akce bude brzy konèit. Summer bude zásobovat mìsto chutnım osvìením ještì 7 dnù.";
+
+"The time to enter the Dragon Portal has expired.";
+"Èas pro vstup do Draèího portálu vypršel!";
+
+"The window is already open.";
+"Okno je ji otevøeno.";
+
+"There are %d Zodiac Temple(s) in the area. Enter the relevant command to teleport to one of them (1-%d).";
+"V oblasti se nachází %d Chrámù Zvìrokruhu. Zadej odpovídající pøíkaz pro pøenesení do jednoho z nich (1-%d).";
+
+"There are no items matching your search.";
+"Pro vyhledávaná kriteria nebyly nalezeny ádné pøedmìty.";
+
+"There are no more Combat Zones. The whole area will be closed off in %d seconds.";
+"Ji nejsou ádné Bitevní zóny. Celá oblast bude uzavøena za %d vteøin.";
+
+"There are no territory auctions right now.";
+"Momentálnì neprobíhá ádná aukce cechovního území.";
+
+"There is no Zodiac Temple on this map.";
+"Na této mapì se nenachází ádnı Chrám Zvìrokruhu.";
+
+"There's nothing to collect.";
+"Není co sebrat.";
+
+"These sashes cannot be combined.";
+"Tyto šerpy nelze zkombinovat.";
+
+"They're attacking again! Ready your weapons!";
+"Útoèí znovu! Pøiprav si zbranì!";
+
+"This action is not possible on this map.";
+"Tato akce není na této mapì moná.";
+
+"This cannot be used on equipped items.";
+"Toto nemùe bıt pouito na právì pouívané pøedmìty!";
+
+"This character isn't available to duel.";
+"Tato postava není k dispozici pro souboj.";
+
+"This command can only be used in the Zodiac Temple.";
+"Tento pøíkaz lze pouít pouze v Chrámu Zvìrokruhu.";
+
+"This command can only be used on the PvP tournament map.";
+"Tento pøíkaz lze pouít pouze na mapì PvP turnaje.";
+
+"This effect is already active.";
+"Efekt je ji aktivní.";
+
+"This function is unavailable as hacking software has been detected.";
+"Tato funkce není dostupná, protoe byl detekován ilegální software.";
+
+"This guild does not exist.";
+"Tento cech neexistuje.";
+
+"This has already been customised.";
+"Toto ji bylo pøizpùsobeno.";
+
+"This is not possible while the other player is transferring bonuses.";
+"Toto není moné, protoe druhı hráè pøenáší bonusy.";
+
+"This is the winner of the Battle Royale: %s";
+"Toto je vítìz Královské bitvy: %s";
+
+"This item cannot be absorbed.";
+"Tento pøedmìt nelze absorbovat.";
+
+"This item cannot be transmuted.";
+"Tento pøedmìt nelze promìnit.";
+
+"This item is already soulbound.";
+"Tento pøedmìt je ji k duši pøipoután.";
+
+"This item is not soulbound.";
+"Tento pøedmìt není pøipoután k duši.";
+
+"This item is only available in Meley’s Lair.";
+"Tento pøedmìt je dostupnı pouze v Doupìti Meley.";
+
+"This player is already trading with someone else.";
+"Tento hráè právì obchoduje s nìkım jinım.";
+
+"This temple's gates open on another day.";
+"Brány tohoto chrámu se otevøou další den.";
+
+"Thunder Mountains";
+"Bouøné hory";
+
+"Time remaining to finish first round: %d minutes.";
+"Zbıvající èas do konce prvního kola: %d minut.";
+
+"Time remaining to finish second round: %d minutes.";
+"Zbıvající èas do konce druhého kola: %d minut.";
+
+"Time remaining until safe zone is deactivated: %d minutes.";
+"Zbıvající èas do deaktivace bezpeèné zóny: %d minut.";
+
+"Time's up.";
+"Èas vypršel.";
+
+"Time's up. Better luck next time.";
+"Èas vypršel. Hodnì štìstí pøi dalším pokusu.";
+
+"Time's up. First round over.";
+"Èas vypršel. První kolo skonèilo.";
+
+"Time's up. Second round over.";
+"Èas vypršel. Druhé kolo skonèilo.";
+
+"Time's up. You're being taken outside.";
+"Èas vypršel. Budeš pøenesen ven.";
+
+"To determine a pet's destiny you need a Pet Destiny Orb.";
+"Pro urèení osudu mazlíky potøebuješ Kámen osudu mazlíka.";
+
+"Total %d: You can still unpack %d.";
+"Z %d dárkù mùeš rozbalit %d.";
+
+"Total Pumpkin Lanterns: %d";
+"Dıòovıch luceren celkem: %d";
+
+"Unblock %s to continue.";
+"Po pokraèování odblokuj %s.";
+
+"Unfortunately you don't have enough space in your inventory.";
+"Bohuel nemáš ve svém inventáøi dostatek místa.";
+
+"Unlucky, there was no treasure in the fish's belly.";
+"Bohuel v bøiše ryby nebyl ádnı poklad.";
+
+"Unpack the next gift in %d minutes.";
+"Další dárek mùeš rozbalit za %d minut.";
+
+"Upgrade change failed.";
+"Vylepšení zmìny selhalo.";
+
+"Valley of Seungryong";
+"Údolí Seungryong";
+
+"Visit %s to collect your reward.";
+"Navštiv %s a vyzvedni si odmìny!";
+
+"Waryong";
+"Waryong";
+
+"Wave %d: For %d sec. you must protect the %s with all your strength.";
+"Vlna %d: Na %d vteøin musíš ochránit %s celou svou silou.";
+
+"Wave %d: While protecting the %s, defeat %s.";
+"Vlna %d: Pøi ochranì %s poraz %s.";
+
+"We're under attack from sea monsters! Get ready to fight!";
+"Útoèí na nás moøské pøíšery! Pøiprav se na boj!";
+
+"We've slain the boss!";
+"Sejmuli jsme bosse!";
+
+"Well done! For reaching rank %d in the Combat Zone rankings, you will be rewarded a special accolade.";
+"Dobrá práce! Za dosaení hodnosti %d v hodnocení bitevní zóny obdríš speciální vyznamenání.";
+
+"While modifying your pet's stats, you cannot trade, sell items, use the storeroom etc.";
+"Bìhem modifikování atributù mazlíka nemùeš obchodovat, prodávat pøedmìty, pouívat skladištì atd.";
+
+"Winner: %s / Loser: %s";
+"Vítìz: %s / Poraenı: %s";
+
+"Wipe out! If no one is revived within one minute, your dungeon adventure will be over.";
+"Zmiz! Pokud nebude nikdo bìhem minuty oiven, tvé dobrodruství v bludišti skonèilo.";
+
+"X ÀÔ´Ï´Ù";
+"Ne (X)";
+
+"Yongan";
+"Yongan";
+
+"Yongbi Desert";
+"Pouš Yongbi";
+
+"You already have the maximum amount of Won.";
+"Ji náš maximální mnoství Wonù.";
+
+"You are entering the Combat Zone. Please wait.";
+"Vstupuješ do bitevní zóny. Prosím èekej.";
+
+"You are facing level %d.";
+"Jsi na úrovni %d.";
+
+"You are leaving the Combat Zone. Please wait.";
+"Opouštíš bitevní zónu. Prosím èekej.";
+
+"You are not a member of any guild.";
+"Nepatøíš k ádnému cechu.";
+
+"You are not cursed.";
+"Nejsi prokletı.";
+
+"You are not the group leader.";
+"Nejsi velitel skupiny.";
+
+"You attacked the wrong monster. Kill all the monsters!";
+"Zaútoèil jsi na špatnou pøíšeru. Zabij všechny pøíšery!";
+
+"You can get back the Won you bid from the guard in the village.";
+"Wony, které jsi nabídl, mùeš získat zpìt u stráce vesnice.";
+
+"You can learn this after reaching the Champion Level.";
+"Toto se mùeš nauèit a po dosaení úrovnì Šampión.";
+
+"You can now wear gloves.";
+"Nyní mùeš nosit rukavice.";
+
+"You can only bid if you have been a member of the guild for more than 24 hours.";
+"Pøihodit mùeš pouze pokud jsi èlenem cechu déle ne 24 hodin.";
+
+"You can only discard the belt when there are no longer any items in its inventory.";
+"Opasek mùeš odebrat pouze pokud v nìm ji nejsou ádné pøedmìty.";
+
+"You can only receive your prize once you have made space in your inventory.";
+"Cenu získáš jen kdy si udìláš místo v inventáøi.";
+
+"You can only use Shoulder Sashes as well as weapons and armour pieces.";
+"Mùeš pouít šerpy stejnì jako zbranì a brnìní.";
+
+"You can only use Shoulder Sashes.";
+"Mùeš pouít pouze šerpy.";
+
+"You can only use this item during the current event.";
+"Tento pøedmìt mùeš pouít pouze bìhem aktuální události.";
+
+"You can only withdraw from the battle in %d sec.";
+"Z bitvy mùeš odejít za%d vteøin.";
+
+"You can open it 3 seconds after closing the menu for modifying pet stats.";
+"Mùeš to otevøít 3 vteøiny po uzavøení nabídky na modifikaci atributù mazlíka.";
+
+"You can take back the Won you bid.";
+"Mùeš si vzít nabídnuté Wony zpìt.";
+
+"You can use a maximum of 200 ingredients at once.";
+"Mùeš pouít maximálnì 200 pøísad najednou.";
+
+"You cannot bind this item to your soul.";
+"Tento pøedmìt nemùeš pøipoutat ke své duši.";
+
+"You cannot block your spouse.";
+"Nemùeš zablokovat svého manela/manelku.";
+
+"You cannot cancel this on the Battle Royale server.";
+"Na serveru Královské bitvy toto nemùeš stornovat.";
+
+"You cannot carry out this action at the moment.";
+"Momentálnì nemùeš tuto akci provést.";
+
+"You cannot carry out this action while fishing.";
+"Pøi rybaøení nemùeš tuto akci provést.";
+
+"You cannot carry out this action while the Shoulder Sash bonus transfer window is open.";
+"Tuto akci nemùeš provést, kdy máš otevøené okno pro pøenos bonusù Šerpy.";
+
+"You cannot carry out this action while the bonus transfer window is open.";
+"Tuto akci nemùeš provést, kdy máš otevøené okno pro pøenos bonusù.";
+
+"You cannot carry out this action while the window for combining or absorbing Shoulder Sashes is open.";
+"Tuto akci nemùeš provést, kdy máš otevøené okno pro kombinování nebo absorbování Šerpy.";
+
+"You cannot change channel.";
+"Nemùeš zmìnit kanál.";
+
+"You cannot change the attributes of a soulbound item.";
+"Pøedmìtu s duševním poutem nelze mìnit atributy.";
+
+"You cannot claim an achievement right now.";
+"Nyní nemùeš úspìch sebrat.";
+
+"You cannot declare a guild war here.";
+"Zde nemùeš vyhlásit cechovní válku.";
+
+"You cannot declare wars in the Combat Zone.";
+"V bitevní zónì nemùeš vyhlásit válku.";
+
+"You cannot discard cards when you have already selected some.";
+"Karty nemùeš zahodit, kdy máš nìjaké oznaèeny.";
+
+"You cannot do that during a Battle Royale.";
+"Toto nemùeš bìhem Královské bitvy udìlat.";
+
+"You cannot do that while the territory auction is ongoing.";
+"Toto nemùeš udìlat bìhem pobíhající aukce cechovního území.";
+
+"You cannot do this while the item is equipped.";
+"Toto nemùeš udìlat, kdy je pøedmìt pouíván.";
+
+"You cannot do this whilst carrying out another action.";
+"Toto nemùeš udìlat, kdy provádíš jinou akci.";
+
+"You cannot do this whilst performing another action.";
+"Toto nemùeš udìlat, kdy provádíš jinou akci.";
+
+"You cannot do this whilst playing okey.";
+"Toto nemùeš udìlat, kdy hraješ Okey.";
+
+"You cannot do this with a user of hacking software.";
+"Pokud uivatel pouívá ilegální software, nemùeš toto udìlat.";
+
+"You cannot donate while your pet is summoned.";
+"Nemùeš darovat, kdy máš pøivolaného mazlíka.";
+
+"You cannot draw any more cards when you have already selected some.";
+"Nemùeš rozdat více karet, kdy máš nìjaké oznaèeny.";
+
+"You cannot draw any more cards.";
+"Nemùeš rozdat více karet.";
+
+"You cannot drop a soulbound item.";
+"Nemùeš zahodit pøedmìt s duševním poutem.";
+
+"You cannot drop items during the bonus transfer.";
+"Bìhem pøenosu bonusu nemùeš vyhazovat pøedmìty.";
+
+"You cannot drop items while modifying your pet's stats.";
+"Nemùeš zahodit pøedmìty, kdy modifikuješ atributy mazlíka.";
+
+"You cannot drop items while the Fortune Chest is open.";
+"Nemùeš zahazovat pøedmìty, kdy je otevøená Truhla Štìstí.";
+
+"You cannot enter the Combat Zone at the moment.";
+"Momentálnì nemùeš do bitevní zóny vstoupit.";
+
+"You cannot enter the Combat Zone from this map.";
+"Z této mapy se do bitevní zóny nedá vstoupit.";
+
+"You cannot enter the PvP tournament combat arena.";
+"Nemùeš vstoupit do arény PvP turnaje.";
+
+"You cannot enter while you are mounted.";
+"Nemùeš vstoupit, kdy jedeš!";
+
+"You cannot enter, because the countdown has already begun.";
+"Nemùeš vstoupit, protoe odpoèítávání ji zaèalo.";
+
+"You cannot equip this item while wearing a Wedding Dress or a Tuxedo.";
+"Tento pøedmìt nemùeš pouít, pokud máš na sobì svatební šaty nebo smoking.";
+
+"You cannot exchange as this would exceed the maximum amount of Won.";
+"Nemùeš pokraèovat ve vımìnì, protoe by byl pøekroèen maximální poèet Wonù.";
+
+"You cannot exchange as this would exceed the maximum amount of Yang.";
+"Nemùeš pokraèovat ve vımìnì, protoe by byl pøekroèen maximální poèet Yangù.";
+
+"You cannot expand your inventory while trading.";
+"Nemùeš rozšíøit inventáø kdy obchoduješ.";
+
+"You cannot feed your pet while the refinement window is open.";
+"Nemùeš nakrmit mazlíka, kdy je otevøeno okno zušlechování.";
+
+"You cannot fish when your pet is hatched.";
+"Nemùeš rybaøit, kdy se snaíš vylíhnout mazlíka.";
+
+"You cannot fish while other windows are open.";
+"Nemùeš rybaøit, kdy máš otevøena jiná okna.";
+
+"You cannot fish while the pet bonus change window is open.";
+"Nemùeš rybaøit, kdy je otevøeno okno se zmìnou bonusù.";
+
+"You cannot fish while your pet is summoned.";
+"Nemùeš rybaøit, kdy máš pøivolaného mazlíka.";
+
+"You cannot give away a soulbound item.";
+"Nemùeš darovat pøedmìt s duševním poutem.";
+
+"You cannot improve a soulbound item.";
+"Nemùeš vylepšit pøedmìt s duševním poutem.";
+
+"You cannot improve your weapon while your pet is summoned.";
+"Nemùeš vylepšit zbraò, kdy máš pøivolaného mazlíka.";
+
+"You cannot leave the Combat Zone when you are dead.";
+"Bitevní zónu nemùeš opustit, pokud jsi mrtvı.";
+
+"You cannot make use of weapon skins while you are wearing a Wedding Dress or a Tuxedo.";
+"Nemùeš pouívat vzhledy zbraní, pokud máš na sobì svatební šaty nebo smoking.";
+
+"You cannot move items during the bonus transfer.";
+"Bìhem pøenosu bonusu nemùeš pøesouvat pøedmìty.";
+
+"You cannot move items while modifying your pet's stats.";
+"Nemùeš pøesunout pøedmìty, kdy modifikuješ atributy mazlíka.";
+
+"You cannot move items while the Fortune Chest is open.";
+"Nemùeš pøesouvat pøedmìty, kdy je otevøená Truhla Štìstí.";
+
+"You cannot move items while the bonus change window is open.";
+"Nemùeš pøesouvat pøedmìty, kdy je otevøeno okno se zmìnou bonusù.";
+
+"You cannot neither trade or move, nor sell, drop or store items while summoning a mount.";
+"Bìhem pøivolávání jezdeckého zvíøete nemùeš obchodovat, pohybovat se ani ukládat nebo zahazovat pøedmìty.";
+
+"You cannot open a private shop while you are trading with others.";
+"Nemùeš otevøít soukromı stánek po dobu obchodování s dalšími lidmi.";
+
+"You cannot open a private shop whilst summoning your pet.";
+"Nemùeš si otevøít soukromı stánek, pokud máš pøivolaného mazlíka.";
+
+"You cannot open a private shop, as this would exceed the maximum amount of %d Won.";
+"Nemùeš otevøít soukromı stánek, protoe by mohlo dojít k pøekroèení maximálního poètu %d Wonù.";
+
+"You cannot open a private shop.";
+"Nemùeš otevøít soukromı stánek.";
+
+"You cannot open a shop while you are turned to stone.";
+"Nemùeš otevøít obchod, kdy jsi promìnìn v kámen.";
+
+"You cannot open this chest because you do not have enough space in your inventory.";
+"Tuto truhlu nemùeš otevøít, protoe nemáš dostatek místa v inventáøi.";
+
+"You cannot participate in the territory auction on the day the guild is founded.";
+"Nemùeš se úèastnit aukce území cechu v den, kdy byl cech zaloen.";
+
+"You cannot register for that on the Battle Royale server.";
+"Na serveru Královské bitvy se pro to nemùeš registrovat.";
+
+"You cannot register for that on this map.";
+"Na této mapì se nemùeš registrovat.";
+
+"You cannot ride in this dungeon.";
+"V tomto bludišti nemùeš jezdit.";
+
+"You cannot sell a soulbound item.";
+"Nemùeš prodat pøedmìt s duševním poutem.";
+
+"You cannot sell items during the bonus transfer.";
+"Bìhem pøenosu bonusu nemùeš prodávat pøedmìty.";
+
+"You cannot sell items you are currently using in a private shop.";
+"V soukromém stánku nemùeš prodat pøedmìty, které aktuálnì pouíváš.";
+
+"You cannot sell soulbound items in a private shop.";
+"Pøedmìty s duševním poutem nelze ve stánku prodat.";
+
+"You cannot soulbind items on this server.";
+"Na tomto serveru nemùeš pøipoutat pøedmìt k duši.";
+
+"You cannot speak with an NPC while modifying your pet's stats.";
+"Nemùeš mluvit s NPC kdy modifikuješ atributy mazlíka.";
+
+"You cannot start a game of okey while trading.";
+"Bìhem obchodování nemùe zahájit hru Okey.";
+
+"You cannot summon your mount/pet right now.";
+"Momentálnì nemùeš vyvolat své zvíøe.";
+
+"You cannot summon your pet whilst trading.";
+"Nemùeš pøivolat mazlíka kdy obchoduješ.";
+
+"You cannot swap this.";
+"Toto nemùeš vymìnit.";
+
+"You cannot take part in the Battle Royale.";
+"Královské bitvy se nemùeš úèastnit.";
+
+"You cannot talk to NPCs while the Fortune Chest is open.";
+"Nemùeš mluvit s NPC, kdy je otevøená Truhla Štìstí.";
+
+"You cannot trade while another window is open.";
+"Nemùeš obchodovat, kdy je otevøené další okno.";
+
+"You cannot trade while the Fortune Chest is open.";
+"Nemùeš obchodovat, kdy je otevøená Truhla Štìstí.";
+
+"You cannot trade while your partner's Fortune Chest is open.";
+"Nemùeš obchodovat, kdy tvùj partner má otevøenou Truhlu Štìstí.";
+
+"You cannot trade while your trading partner is modifying their pet's stats.";
+"Nemùeš obchodovat, kdy obchodní partner modifikuje atributy mazlíka.";
+
+"You cannot trade whilst summoning your pet.";
+"Nemùeš obchodovat, kdy pøivoláváš mazlíka.";
+
+"You cannot trade whilst your partner is summoning their pet.";
+"Nemùeš obchodovat, kdy tvùj partner pøivolává mazlíka.";
+
+"You cannot trade whilst your partner's Incubator is open.";
+"Nemùeš obchodovat, pokud je otevøen Inkubátor tvého partnera.";
+
+"You cannot trade, because the maximum number of %d Won was exceeded.";
+"Nemùeš obchodovat, protoe byl pøekroèen maximální limit %d Wonù.";
+
+"You cannot transfer the bonus as the sashes have different absorption rates.";
+"Nemùeš pøenést bonus, protoe šerpy mají rùznı absorpèní pomìr.";
+
+"You cannot transfer the bonus as the sashes have different grades.";
+"Nemùeš pøenést bonus, protoe šerpy mají rùznı stupeò.";
+
+"You cannot transform at the moment.";
+"Momentálnì se nemùeš promìnit.";
+
+"You cannot transform during the PvP tournament.";
+"Bìhem PvP turnaje se nemùeš promìnit.";
+
+"You cannot use a Scroll of the Location while the window for the Shoulder Sash is open.";
+"Nemùeš pouít Pergamen lokality, protoe je otevøeno okno šerpy.";
+
+"You cannot use a sash with a bonus for the target.";
+"Za cíl nemùeš pouít šerpu s bonusem.";
+
+"You cannot use a sash without a bonus as the source.";
+"Za zdroj nemùeš pouít šerpu bez bonusu.";
+
+"You cannot use a soulbound item.";
+"Nemùeš pouít pøedmìt s duševním poutem.";
+
+"You cannot use any emotions right now.";
+"Nyní nemùeš pouít ádné emoce.";
+
+"You cannot use any soulbound items.";
+"Nemùeš pouít pøedmìty s duševním poutem.";
+
+"You cannot use it at the moment.";
+"Toto momentálnì nemùeš pouít.";
+
+"You cannot use items while modifying your pet's stats.";
+"Nemùeš pouít pøedmìty, kdy modifikuješ atributy mazlíka.";
+
+"You cannot use items while the Fortune Chest is open.";
+"Nemùeš pouívat pøedmìty, kdy je otevøená Truhla Štìstí.";
+
+"You cannot use items while you are turned to stone.";
+"Nemùeš pouívat pøedmìty, kdy jsi promìnìn v kámen.";
+
+"You cannot use that any more.";
+"Toto ji nemùeš pouít.";
+
+"You cannot use that at the moment.";
+"Toto momentálnì nemùeš pouít.";
+
+"You cannot use that at this location.";
+"Toto zde nemùeš pouít.";
+
+"You cannot use that here.";
+"Toto zde nemùeš pouít.";
+
+"You cannot use the Incubator whilst trading or whilst you have your storeroom or private shop open.";
+"Nemùeš otevøít Inkubátor pokud obchoduješ nebo máš otevøen sklad èi privátní stánek.";
+
+"You cannot use the item here.";
+"Zde nemùeš tento pøedmìt pouít.";
+
+"You cannot use this bundle whilst riding.";
+"Tento mìšec nemùeš pouít pøi jízdì.";
+
+"You cannot use this costume for this weapon.";
+"Tento kostım nelze pro tuto zbraò pouít.";
+
+"You cannot use this item during your withdrawal from the Combat Zone.";
+"Tento pøedmìt nemùeš pouít, pokud utíkáš z bitevní zóny.";
+
+"You cannot use this item here.";
+"Tento pøedmìt zde nemùeš pouít.";
+
+"You cannot use this item on soulbound items.";
+"Tento pøedmìt nemùeš na pøedmìt s duševním poutem!";
+
+"You cannot use this item while the windows for absorption and combination are open.";
+"Nemùeš pouít tento pøedmìt, pokud jsou otevøena okna pro kombinování a absorpci.";
+
+"You cannot use this item while wearing another costume.";
+"Tento pøedmìt nemùeš pouít, pokud nosíš jinı kostım.";
+
+"You cannot use this item while you are trading.";
+"Tento pøedmìt nemùeš bìhem obchodování pouít.";
+
+"You cannot wear a Wedding Dress or a Tuxedo when you are already wearing a weapon skin.";
+"Nemùeš si obléct svatební šaty nebo smoking, pokud pouíváš vzhled zbranì.";
+
+"You cannot wear gloves yet.";
+"Zatím nemùeš rukavice nosit.";
+
+"You currently have %d point(s). Your total score is %d.";
+"Momentálnì máš %d bod(ù). Tvé celkové skóre je %d.";
+
+"You destroyed the wrong Metin stone. Defeat all the monsters!";
+"Znièil jsi špatnı kámen Metin. Poraz všechny pøíšery.";
+
+"You do not have enough Yang.";
+"Nemáš dostatek Yangù.";
+
+"You do not have enough money for the combination.";
+"Pro kombinování nemáš dostatek penìz.";
+
+"You don't have an %s to start a game of okey.";
+"Nemáš %s pro zahájení hry Okey.";
+
+"You don't have enough Anniversary Flags.";
+"Nemáš dostatek Vıroèních vlajek.";
+
+"You don't have enough Gaya.";
+"Nemáš dostatek Gaya.";
+
+"You don't have enough Won.";
+"Nemáš dostatek Wonù.";
+
+"You don't have enough Yang to start a game of okey.";
+"Nemáš dostatek Yangù pro zahájení hry Okey.";
+
+"You don't have enough Yang to trade books with me.";
+"Na obchodování se mnou nemáš dost Yangù.";
+
+"You don't have enough Yang.";
+"Nemáš dostatek Yangù.";
+
+"You don't have enough insignia.";
+"Nemáš dostatek insignií.";
+
+"You don't have enough items to revive anyone.";
+"Pro oivení nemáš dostatek pøedmìtù.";
+
+"You don't have enough of the necessary items to play Yut Nori.";
+"Pro hraní Yutnori nemáš dostatek poadovanıch pøedmìtù.";
+
+"You don't have enough space in your inventory.";
+"Bohuel nemáš ve svém inventáøi dostatek místa.";
+
+"You don't receive any points for this player.";
+"Za tohoto hráèe nezískáš ádné body.";
+
+"You have already learned this skill.";
+"Tuto schopnost ses ji nauèil.";
+
+"You have already reached the Champion Level.";
+"Ji jsi dosáhl úrovnì Šampióna.";
+
+"You have already registered for the territory auction.";
+"Ji jsi do aukce cechovního území zaregistrován.";
+
+"You have already submitted your bid.";
+"Ji jsi odeslal svou nabídku.";
+
+"You have already used the Researcher's Elixir.";
+"Ji jsi Vızkumníkùv elixír pouil!";
+
+"You have announced your withdrawal from the Combat Zone and can leave in %d minutes.";
+"Ohlásil jsi svùj útìk z bitevní zóny a mùeš ji opustit za %d minut.";
+
+"You have announced your withdrawal from the Combat Zone and can leave in %d seconds.";
+"Ohlásil jsi svùj odchod z bitevní zóny a mùeš jí opustit za %d vteøin.";
+
+"You have been revived by %s.";
+"Oivil tì %s.";
+
+"You have been revived.";
+"Byl jsi oiven.";
+
+"You have bid %d Won.";
+"Nabídl jsi %d Wonù.";
+
+"You have captured a soul.";
+"Chytil jsi duši.";
+
+"You have dismissed %s.";
+"Odvolal jsi: %s.";
+
+"You have earned your daily target – collect your reward.";
+"Splnil jsi svùj denní cíl - vyber si odmìnu.";
+
+"You have entered an area which is under Sung Mahi's sway and are suffering from his curse.";
+"Vstoupil jsi do oblasti pod vlivem Sung Mahi a cítíš následky prokletí.";
+
+"You have entered the dungeon %s with difficulty %d. The battle starts in %d seconds.";
+"Vstoupil jsi do bludištì %s s obtíností %d. Bitva zaèíná za %d vteøin.";
+
+"You have entered the dungeon %s. The battle starts in %d seconds.";
+"Vstoupil jsi do bludištì %s. Bitva zaèíná za %d vteøin.";
+
+"You have insufficient materials for the upgrade. (Soulbound items cannot be used.)";
+"Pro vylepšení nemáš dostatek materiálu. (Pøedmìty s duševním poutem nelze pouít)";
+
+"You have lost %d points. Remaining points: %d";
+"Ztratil jsi %d bodù. Zbıvající body: %d";
+
+"You have no debuff at the moment.";
+"Momentálnì nemáš ádné záporné posílení.";
+
+"You have not registered for any territory auctions.";
+"Nejsi zaregistrován do ádné aukce cechovního území.";
+
+"You have not registered for the PvP tournament.";
+"Do PvP turnaje nejsi zaregistrován.";
+
+"You have not yet completed all missions.";
+"Ještì jsi nesplnil všechny úkoly.";
+
+"You have paid the %lu-Yang lease for the guild territory.";
+"Zaplatil jsi %lu Yangù za pronájem cechovního území.";
+
+"You have received %d Won.";
+"Obdrel jsi %d Wonù.";
+
+"You have received %lu EXP for your Champion Level.";
+"Obdrel jsi %lu BZK za úroveò šampióna.";
+
+"You have received a storage bonus of %d defence.";
+"Obdrel jsi skladištní bonus %d obrany.";
+
+"You have received a storage bonus of %d%% EXP.";
+"Obdrel jsi skladištní bonus %d%% BZK.";
+
+"You have received a storage bonus of %d%% HP.";
+"Obdrel jsi skladištní bonus %d%% ZB.";
+
+"You have received a storage bonus of %d%% strength against monsters.";
+"Obdrel jsi skladištní bonus %d%% síly proti monstrùm.";
+
+"You have registered for the PvP tournament.";
+"Zaregistroval jsi se do PvP turnaje.";
+
+"You have revived %s.";
+"Obdrel jsi %s.";
+
+"You have successfully protected the mast. Keep it up! Get ready for the next wave.";
+"Úspìšnì jsi ubránil stìeò. Jen pokraèuj! Pøiprav se na další vlnu.";
+
+"You have summoned %s.";
+"Pøivolal jsi: %s.";
+
+"You have to leave your group first.";
+"Nejprve musíš opustit skupinu.";
+
+"You have to wait %d sec. after opening the Mailbox before you can switch channels or teleport.";
+"Po otevøení poštovní schránky musíš èekat %d vteøin, ne mùeš zmìnit kanál nebo se teleportovat.";
+
+"You have transferred the bonuses successfully.";
+"Úspìšnì jsi pøevedl bonusy.";
+
+"You just missed the bonus level.";
+"Právì jsi pøišel o bonusovou úroveò.";
+
+"You must abandon the ship in %d min.";
+"Musíš opustit loï za %d minut.";
+
+"You must abandon the ship in %d sec.";
+"Musíš opustit loï za %d vteøin.";
+
+"You must be level %d to enter the Combat Zone.";
+"Musíš bıt úrovnì alespoò %d, abys mohl vstoupit do bitevní zóny.";
+
+"You must close all windows before entering or leaving the Combat Zone.";
+"Pøed vstupem nebo opuštìním bitevní zóny musíš zavøít všechna okna.";
+
+"You must complete the 'Ship Defence' dungeon.";
+"Nejprve musíš dokonèit bludištì 'Obrana lodi'.";
+
+"You must fill up at least 1 EXP Marble at level 120 to reach Champion Level.";
+"Musíš naplnit alespoò 1 Mramor BZK na úrovni 120, abys dosáhl na úroveò Šampióna.";
+
+"You must leave the ship now as you have not started the sea battle.";
+"Musíš nyní opustit loï, protoe jsi nezahájil námoøní bitvu.";
+
+"You must wait a while before opening your mailbox again.";
+"Pøed opìtovnım otevøením poštovní schránky musíš chvíli poèkat.";
+
+"You need %d perpendicular slots in your inventory to open the Chest.";
+"Pro otevøení truhly potøebuješ %d míst v inventáøi.";
+
+"You need a Battle Royale Ticket to participate.";
+"Pro vstup potøebuješ Propustku do Královské bitvy.";
+
+"You need a Reincarnation item to revive instantly.";
+"Pro okamité oivení potøebuješ pøedmìt Reinkarnace.";
+
+"You need more Aventurine and Aureolin Treasures to receive your reward.";
+"Potøebuješ více Aventurinovıch a Aureolinovıch pokladù, abys získal odmìnu.";
+
+"You need to equip a weapon first.";
+"Nejprve si musíš vzít zbraò.";
+
+"You receive your bonuses.";
+"Získáváš bonusy.";
+
+"You require %s x %d more.";
+"Potøebuješ %s x %d více.";
+
+"You still require %d %s(s).";
+"Stále potøebuješ %d %s.";
+
+"You took back the %d Won you bid.";
+"Vzal sis zpìt %d Wonù, které jsi nabídl.";
+
+"You've taught your pet well! It's quickly learning its new skills!";
+"Vycvièil jsi mazlíka dobøe! Uèí se nové schopnosti opravdu rychle!";
+
+"Your Dragon Stone's bonus has been changed.";
+"Bonus tvého Draèího kamene byl zmìnìn.";
+
+"Your game of okey has started!";
+"Tvá hra Okey byla zahájena!";
+
+"Your guild already has a guild territory.";
+"Tvùj cech ji má cechovní území.";
+
+"Your guild isn't registered for the territory auction.";
+"Tvùj cech není do aukce registrován.";
+
+"Your guild leader has registered for the auction of the territory in the %s area at %d,%d.";
+"Tvùj vùdce cechu se zaregistroval na aukci území v oblasti %s na pozici %d,%d.";
+
+"Your guild's territory will be automatically relinquished in %d hours. Any items in the guild warehouse will be deleted.";
+"Území tvého cechu bude automaticky zrušeno za %d hodin. Všechny pøedmìty v cechovním skladišti budou znièeny.";
+
+"Your immunity has expired and you are again influenced by Sung Mahi's Presence and Curse.";
+"Tvá imunita vypršela a opìt jsi ovlivnìn pøítomností a prokletím Sung Mahi.";
+
+"Your inventory is full.";
+"Tvùj inventáø je plnı.";
+
+"Your inventory is full. Your reward will be delivered by post.";
+"Tvùj inventáø je plnı. Tvá odmìna bude doruèena poštou.";
+
+"Your level is too low to summon the pet.";
+"Pro pøivolání mazlíka máš pøíliš nízkou úroveò.";
+
+"Your mailbox is full.";
+"Tvoje poštovní schránka je plná.";
+
+"Your mast has been smashed. You fought valiantly, but the battle is lost.";
+"Tvùj stìeò byl znièen. Bojoval si stateènì, ale bitva byla ztracena.";
+
+"Your pet enthusiastically tucks into the Protein Snack.";
+"Tvùj mazlík se do proteinové tyèinky pustil s veškerou vervou.";
+
+"Your pet has already learnt this skill and refuses to practice it again.";
+"Tvùj mazlík se ji tuto schopnost nauèil a odmítá se ji uèit znovu.";
+
+"Your pet has already reached the highest stage of evolution.";
+"Tvùj mazlík ji dosáhl nejvyššího evoluèního stupnì.";
+
+"Your pet has gathered enough experience. It now requires Item EXP to reach the next stage of evolution.";
+"Tvùj mazlík získal dostatek zkušeností. Nyní potøebuje Zk. pøedmìtu, aby dosáhl dalšího evoluèního stupnì.";
+
+"Your pet is ready to evolve. Use Pet Books to achieve this.";
+"Tvùj mazlík je pøipraven na evoluci. Pouij knihy zvíøat pro vıvin.";
+
+"Your pet must be %d days old to train and promote it to the next stage of evolution.";
+"Tvùj mazlík musí bıt starı %d dnù pro trénink a vıvin na další evoluèní stupeò.";
+
+"Your pet must be level %d to train and promote it to the next stage of evolution.";
+"Tvùj mazlík musí mít úroveò %d na trénink a vıvin na další evoluèní stupeò.";
+
+"Your pet must have 100% experience to train and promote it to the next stage of evolution.";
+"Tvùj mazlík musí mít 100% zkušeností pro trénink a vıvin na další evoluèní stupeò.";
+
+"Your pet's stats have been modified.";
+"Atributy tvého mazlíka byly zmìnìny.";
+
+"Your withdrawal announcement is active.";
+"Tvé ohlášení útìku je aktivní.";
+
+"Your withdrawal announcement was cancelled.";
+"Tvé ohlášení útìku bylo zrušeno.";
+
+"Yut Nori has finished.";
+"Yutnori byla ukonèena!";
+
+"Yut Nori has started!";
+"Yutnori ještì nebyla zahájena!";
+
+"[%s±ºÁÖ] : %s";
+"[%sPanovník] : %s";
+
+"[%s±ºÁÖ] : %s  º¸À¯±İ¾× %lld";
+"[%sPanovník] : %s Yangù vlastnìno %lld";
+
+"[Aura] Can only be done once an Aura Outfit has been inserted.";
+"[Aura] Lze provést pouze pokud je vloen Kostım s aurou.";
+
+"[Aura] Cannot be evolved.";
+"[Aura] Nelze vyvinout.";
+
+"[Aura] Cannot be improved.";
+"[Aura] Nelze vylepšit.";
+
+"[Aura] Does not work with an Aura Outfit onto which an item has already been transmitted.";
+"[Aura] Nefunguje s Kostımem s aurou, na kterı ji byl pøenesen pøedmìt.";
+
+"[Aura] Does not work with soulbound items.";
+"[Aura] Nefunguje na pøedmìtem s duševním poutem.";
+
+"[Aura] Evolution successful!";
+"[Aura] Evoluce se zdaøila!";
+
+"[Aura] Improvement successful!";
+"[Aura] Vylepšení se zdaøilo!";
+
+"[Aura] Improvement successful. Evolution is now possible.";
+"[Aura] Vylepšení se zdaøilo. Evoluce je nyní moná.";
+
+"[Aura] Only Aura Outfit can be inserted.";
+"[Aura] Lze pouít pouze Kostım s aurou.";
+
+"[Aura] Only Aura Outfit, Shield, Necklace, Earring or Armband can be inserted.";
+"[Aura] Lze vloit pouze kostım, náhrdelník, náušnice nebo náramek s aurou.";
+
+"[Aura] Successful!";
+"[Aura] Úspìch!";
+
+"[Aura] The amount of inserted materials has been adjusted to match the required amount.";
+"[Aura] Mnoství vloenıch materiálù bylo upraveno, aby dosáhlo poadovaného mnoství.";
+
+"[Aura] You cannot evolve your Aura Outfit until you have improved it.";
+"[Aura] Nemùeš vyvinout Kostım s aurou, ne jej vylepšíš.";
+
+"[Aura] You don’t have enough money to evolve your Aura Outfit.";
+"[Aura] Pro vıvoj Kostımu s aurou nemáš dostatek penìz.";
+
+"[Aura] You have to insert items.";
+"[Aura] Musíš vloit pøedmìty!";
+
+"[Aura] Your Aura Outfit has reached the maximum level.";
+"[Aura] Kostım s aurou získal maximální úroveò.";
+
+"[Catch the King] %s earned %d points in Catch the King.";
+"[Chy krále] %s získal %d bodù ve høe Chy krále!";
+
+"[Catch the King] Catch the King has ended.";
+"[Chy krále] Hra Chy krále byla ukonèena!";
+
+"[Catch the King] Defeat monsters to collect King Cards. You need 25 cards for a King Deck.";
+"[Chy krále] Zabíjej pøíšery a sbírej Královské karty. Potøebuješ celkem 25 karet pro Královskou kolekci";
+
+"[Catch the King] If you make it into the top rankings, you'll receive your prize from the game table.";
+"[Chy krále] Pokud se dostaneš na vysokou pozici v hodnocení, získáš skvìlou cenu z herního stolu.";
+
+"[Catch the King] Loads of great prizes await!";
+"[Chy krále] Èeká na tebe spousta cen!";
+
+"[Catch the King] Play a game of Catch the King now!";
+"[Chy krále] Zahraj si Chy krále nyní!";
+
+"[Catch the King] You don't have a complete King Deck or you have insufficient Yang.";
+"[Chy krále] Nemáš nasbíranou Královskou kolekci nebo nemáš dost Yangù.";
+
+"[Catch the King] Your score isn't good enough for a prize.";
+"[Chy krále] Pro cenu nemáš dobré skóre.";
+
+"[DS] Your rank reward";
+"[SV] Odmìna za umístìní";
+
+"[Duel of the Seers] Check your rank and claim your reward.";
+"[Souboj vìštcù] Podívej se na své umístìní a vyber si odmìny.";
+
+"[Duel of the Seers] Rich treasures await!";
+"[Souboj vìštcù] Bohaté odmìny èekají!";
+
+"[Duel of the Seers] The Duel of the Seers has begun!";
+"[Souboj vìštcù] Souboj vìštcù byl zahájen!";
+
+"[Duel of the Seers] The Duel of the Seers is over.";
+"[Souboj vìštcù] Souboj vìštcù skonèil.";
+
+"[Duel of the Seers] You don't have enough Seer Coins.";
+"[Souboj vìštcù] Nemáš dostatek Vìšteckıch mincí.";
+
+"[Duel of the Seers] You have increased your donations count by 1.";
+"[Souboj vìštcù] Zvıšil jsi poèet tvıch darù o 1.";
+
+"[Duel of the Seers] You receive a quest for the minigame.";
+"[Souboj vìštcù] Pro mini hru obdríš úkol.";
+
+"[Flower Power] There isn't enough space in your inventory.";
+"[Síla kvìtin] Nemáš dostatek místa v inventáøi.";
+
+"[Flower Power] This item can no longer be used.";
+"[Síla kvìtin] Pøedmìt ji nelze pouít.";
+
+"[Flower Power] You don't have enough Flower Seeds.";
+"[Síla kvìtin] Nemáš dostatek Semen kvìtin.";
+
+"[Flower Power] You don't have enough shoots.";
+"[Síla kvìtin] Nemáš dostatek vıhonkù.";
+
+"[Flower Power] You have received a Chrysanthemum Shoot.";
+"[Síla kvìtin] Obdrel jsi Vıhonek chryzantémy.";
+
+"[Flower Power] You have received a Daffodil Shoot.";
+"[Síla kvìtin] Obdrel jsi Vıhonek narcisu.";
+
+"[Flower Power] You have received a Lily Shoot.";
+"[Síla kvìtin] Obdrel jsi Vıhonek lilie.";
+
+"[Flower Power] You have received a May Bell Shoot.";
+"[Síla kvìtin] Obdrel jsi Vıhonek konvalinky.";
+
+"[Flower Power] You have received a Sunflower Shoot.";
+"[Síla kvìtin] Obdrel jsi Vıhonek sluneènice.";
+
+"[Flower Power] You received Flower Seeds.";
+"[Síla Kvìtin] Získal jsi Semena kvìtin.";
+
+"[Gaya] Cutting failed.";
+"[Gaya] Øezání selhalo.";
+
+"[Gaya] Cutting successful.";
+"[Gaya] Øezání bylo úspìšné.";
+
+"[Gaya] The Gaya Market is already open.";
+"[Gaya] Gaya trištì je ji otevøeno.";
+
+"[Gaya] The Gaya Market is currently unavailable.";
+"[Gaya] Gaya trištì není nyní dostupné.";
+
+"[Gaya] The item list has been refreshed.";
+"[Gaya] Seznam pøedmìtù byl obnoven.";
+
+"[Gaya] You already have the maximum amount of Gaya.";
+"[Gaya] Ji náš maximální poèet Gaya.";
+
+"[Gaya] You can only open the Gaya Market once you have closed the other windows.";
+"[Gaya] Gaya trištì mùeš otevøít pouze pokud zavøeš všechna ostatní okna.";
+
+"[Gaya] You cannot purchase this item.";
+"[Gaya] Tento pøedmìt nemùeš koupit.";
+
+"[Gaya] You cannot unlock any more slots on the Gaya Market.";
+"[Gaya] Ji nemùeš odemknout další místo na Gaya trišti.";
+
+"[Gaya] You don't have a Refresh Gaya Market item.";
+"[Gaya] Nemáš dostatek pøedmìtù Obnovit Gaya trištì.";
+
+"[Gaya] You don't have enough %s. You need %d more to unlock an additional slot.";
+"[Gaya] Nemáš dostatek %s. Potøebuješ ještì %d pro odemèení dalšího místa.";
+
+"[Gaya] You don't have enough Gaya.";
+"[Gaya] Nemáš dostatek Gaya.";
+
+"[Gaya] You don't have enough Glimmerstones.";
+"[Gaya] Nemáš dostatek Blıskavıch kamenù.";
+
+"[Gaya] You don't have enough Yang to cut Glimmerstones.";
+"[Gaya] Nemáš dostatek Yangù na øezání Blıskavıch kamenù.";
+
+"[Gaya] You must open the Gaya Market first.";
+"[Gaya] Nejprve otevøi Gaya trištì.";
+
+"[Gaya] Your inventory is full.";
+"[Gaya] V inventáøi u není místo.";
+
+"[Group] Please talk to the relevant NPC to enter.";
+"[Skupina] Promluv si s vhodnım NPC o vstupu.";
+
+"[Group] The battle has begun.";
+"[Skupina] Bitva byla zahájena.";
+
+"[Group] The dungeon will close in %d min.";
+"[Skupina] Bludištì se uzavøe za %d minut.";
+
+"[Group] The rankings for groups in Meley's Lair is being compiled.";
+"[Skupina] Hodnocení skupin v doupìti Meley se nyní pøepoèítává.";
+
+"[Group] Time until teleportation: %d min. %d sec.";
+"[Skupina] Èas do teleportace: %d min. %d sek.";
+
+"[Group] You are now registered for Meley's Lair.";
+"[Skupina] Zaregistroval ses do doupìte Meley.";
+
+"[Group] You cannot do this while the group search is active.";
+"[Skupina] Toto nemùeš udìlat, pokud je skupinové hledání aktivní.";
+
+"[Group] You cannot leave the dungeon at the moment.";
+"[Skupina] Momentálnì nemùeš bludištì opustit.";
+
+"[Group] You have 1 hour to complete the dungeon.";
+"[Skupina] Máš 1 hodinu na dokonèení bludištì.";
+
+"[Group] You have completed your task with distinction!";
+"[Skupina] Dokonèil jsi svùj úkol s vyznamenáním!";
+
+"[Group] You have conceded.";
+"[Skupina] Pøiznal jsi to.";
+
+"[Group] You have left the dungeon.";
+"[Skupina] Opustil jsi bludištì.";
+
+"[Group] You will be teleported to the city in 1 minute.";
+"[Skupina] Do 1 minuty budeš teleportován do mìsta.";
+
+"[Group] You will be transported from the dungeon in 10 minutes.";
+"[Skupina] Budeš teleportován z bludištì za 10 minut.";
+
+"[Group] Your time in the dungeon is up.";
+"[Skupina] Tvùj èas v bludišti vypršel.";
+
+"[Guild Territory] Go to the guard and pay the lease of %d Yang for your guild territory.";
+"[Území cechu] Jdi za strácem a zapla %d Yangù za pronájem cechovního území.";
+
+"[Guild] %d EXP has been donated.";
+"[Cech] Bylo darováno %d BZK.";
+
+"[Guild] %d Yang received.";
+"[Cech] Obdreno %d Yangù.";
+
+"[Guild] %s has used %s.";
+"[Cech] %s pouil %s.";
+
+"[Guild] %s has won.";
+"[Cech] %s vyhrál.";
+
+"[Guild] 'Guild Leader Transfer' vote in progress.";
+"[Cech] Probíhá hlasování 'Zmìna velitele'.";
+
+"[Guild] 'Guild Territory Abandonment' vote in progress.";
+"[Cech] Probíhá hlasování 'Opuštìní cechovního území'.";
+
+"[Guild] 'Guild Territory Sale' vote in progress.";
+"[Cech] Probíhá hlasování 'Prodej cechovního území'.";
+
+"[Guild] 'Remove Member' vote in progress.";
+"[Cech] Probíhá hlasování 'Odebrat èlena'.";
+
+"[Guild] A Dragon's Temple fight is running on another channel.";
+"[Cech] Boj o Draèí chrám probíhá na jiném kanále.";
+
+"[Guild] After deduction of %d%% taxes you receive %d Yang.";
+"[Cech] Po sraení danì %d%% obdríš %d Yangù.";
+
+"[Guild] Another guild member is currently using this.";
+"[Cech] Toto je pouíváno jinım èlenem.";
+
+"[Guild] Another member is currently using the guild bank.";
+"[Cech] Cechovní pokladnice je pouívána jinım èlenem.";
+
+"[Guild] As a combatant you cannot spectate your own guild war.";
+"[Cech] Jako úèastník nemùeš sledovat válku svého vlastního cechu.";
+
+"[Guild] Cannot be upgraded as the guild bank is full.";
+"[Cech] Nelze vylepšit, kdy je cechovní pokladnice plná.";
+
+"[Guild] Certain members are offline or on another map.";
+"[Cech] Nìkteøí èlenové jsou offline nebo na jiné mapì.";
+
+"[Guild] Certain members of the enemy guild are offline or on another map.";
+"[Cech] Nìkteøí protivníci jsou offline nebo na jiné mapì.";
+
+"[Guild] Deposited: %d Yang";
+"[Cech] Uloeno: %d Yang";
+
+"[Guild] Draw";
+"[Cech] Remíza";
+
+"[Guild] For your own safety, you will be teleported away from the nest in 1 minute.";
+"[Cech] Pro tvé vlastní bezpeèí budeš teleportován pryè z hnízda za 1 minutu.";
+
+"[Guild] For your own safety, you will be teleported away from the nest in 10 minutes.";
+"[Cech] Pro tvé vlastní bezpeèí budeš teleportován pryè z hnízda za 10 minut.";
+
+"[Guild] Guild %s has purchased territory.";
+"[Cech] Cech %s koupil území.";
+
+"[Guild] Guild [%s] has lost the war against [%s].";
+"[Cech] Cech [%s] prohrál válku s cechem [%s].";
+
+"[Guild] Guild advertisement extended.";
+"[Cech] Cechovní reklama prodlouena.";
+
+"[Guild] Guild advertisement launched.";
+"[Cech] Cechovní reklama spuštìna.";
+
+"[Guild] No applications available.";
+"[Cech] Nejsou ádné ádosti.";
+
+"[Guild] No guild advertisements available.";
+"[Cech] Není dostupná ádná cechovní reklama.";
+
+"[Guild] No guild found.";
+"[Cech] Nebyl nalezen ádnı cech.";
+
+"[Guild] No guild has defeated the dragon yet.";
+"[Cech] ádnı cech zatím draka neporazil.";
+
+"[Guild] No guild present with a guild advertisement.";
+"[Cech] Neexistuje cech s reklamou.";
+
+"[Guild] No guild territory found.";
+"[Cech] Nebylo nalezeno ádné cechovní území.";
+
+"[Guild] Not enough space in the guild bank.";
+"[Cech] V cechovní pokladnici není dostatek místa.";
+
+"[Guild] Object moved successfully.";
+"[Cech] Objekt úspìšnì pøesunut.";
+
+"[Guild] Only available to the guild leader (if a guild territory is being relinquished).";
+"[Cech] Toto je dostupné pouze veliteli cechu (pokud bylo cechovní území zrušeno).";
+
+"[Guild] Player %s has applied to join you.";
+"[Cech] Hráè %s poádal o vstup do cechu.";
+
+"[Guild] Please check enemy members and leaders.";
+"[Cech] Prosím, ovìø èleny a velitele protivníka.";
+
+"[Guild] Please check members and leaders.";
+"[Cech] Prosím, ovìø èleny a velitele.";
+
+"[Guild] Please try again in 10 seconds.";
+"[Cech] Zkus to prosím znovu za 10 vteøin.";
+
+"[Guild] Rankings update.";
+"[Cech] Aktualizace hodností.";
+
+"[Guild] Required time: %d min. %d sec.";
+"[Cech] Poadovanı èas: %d min. %d vteøin";
+
+"[Guild] Starting 'Guild Leader Transfer' vote.";
+"[Cech] Zaèíná hlasování 'Zmìna velitele'.";
+
+"[Guild] Starting 'Guild Territory Abandonment' vote.";
+"[Cech] Zaèíná hlasování 'Opuštìní cechovního území'.";
+
+"[Guild] Starting 'Guild Territory Sale' vote.";
+"[Cech] Zaèíná hlasování 'Prodej cechovního území'.";
+
+"[Guild] Starting 'Remove Member' vote.";
+"[Cech] Zaèíná hlasování 'Odebrat èlena'.";
+
+"[Guild] Successfully registered for Meley's Lair.";
+"[Cech] Úspìšná registrace pro doupì Meley.";
+
+"[Guild] That can only be used in guild wars.";
+"[Cech] Toto lze pouít pouze bìhem cechovní války.";
+
+"[Guild] The Deposit Yang or Withdraw Yang window is already open.";
+"[Cech] Okno pro vloení nebo vıbìr Yangù je ji otevøeno.";
+
+"[Guild] The Guild Warehouse is currently in use.";
+"[Cech] Cechovní skladištì je momentálnì pouíváno.";
+
+"[Guild] The battle against Dragon Queen Meley is starting.";
+"[Cech] Bitva proti draèí královnì Meley zaèíná.";
+
+"[Guild] The character must be at least level 40 to receive the guild leadership.";
+"[Cech] Tvá postava musí bıt alespoò úrovnì 40, aby se mohla stát velitelem.";
+
+"[Guild] The enemy guild is currently fighting in the dragon cave.";
+"[Cech] Nepøátelskı cech momentálnì bojuje v draèí jeskyni.";
+
+"[Guild] The gates to Meley's Lair are open. The time limit in the dungeon is one hour.";
+"[Cech] Brány do doupìte Meley jsou otevøeny. Èasovı limit pobytu v bludišti je jedna hodina.";
+
+"[Guild] The gates to the lair are closed once more.";
+"[Cech] Brány do doupìte Meley jsou opìt zavøeny.";
+
+"[Guild] The guild advertisement will run for %s.";
+"[Cech] Cechovní reklama pobìí %s.";
+
+"[Guild] The guild already owns guild territory.";
+"[Cech] Cech ji cechovní území vlastní.";
+
+"[Guild] The guild has set a minimum level for applicants (min. level: %d).";
+"[Cech] Cech nastavil minimální úroveò pro adatele (min. úroveò: %d).";
+
+"[Guild] The guild leader is offline or on another map.";
+"[Cech] Velitel cechu je offline nebo na jiné mapì.";
+
+"[Guild] The guild level is too low.";
+"[Cech] Úroveò cechu je pøíliš nízká.";
+
+"[Guild] The guild member has been removed from the guild for inactivity.";
+"[Cech] Èlen byl odebrán z cechu pro neaktivitu.";
+
+"[Guild] The guild territory sale cannot be completed as there is insufficient Yang in the guild bank.";
+"[Cech] Prodej cechovního území nemùe bıt dokonèen, protoe v cechovní pokladnici není dostatek Yangù.";
+
+"[Guild] The guild territory sale has failed.";
+"[Cech] Prodej cechovního území se nezdaøil.";
+
+"[Guild] The guild territory sale is complete.";
+"[Cech] Prodej cechovního území je dokonèen.";
+
+"[Guild] The guild's treasury has reached the maximum.";
+"[Cech] Cechovní poklad je na maximální úrovni.";
+
+"[Guild] The lair will close in %d min.";
+"[Cech] Doupì se uzavøe za %d minut.";
+
+"[Guild] The list is being updated. Please try again later.";
+"[Cech] Seznam se aktualizuje. Zkus to znovu pozdìji.";
+
+"[Guild] The logo server is currently undergoing maintenance.";
+"[Cech] Na serveru s logy momentálnì probíhá údrba.";
+
+"[Guild] The member is currently offline.";
+"[Cech] Èlen je momentálnì offline.";
+
+"[Guild] The player is offline or on another map.";
+"[Cech] Hráè je offline nebo je na jiné mapì.";
+
+"[Guild] The purchase was cancelled as you already own guild territory.";
+"[Cech] Nákup byl zrušen, protoe ji vlastníš cechovní území.";
+
+"[Guild] The purchase was cancelled as your guild already owns guild territory.";
+"[Cech] Nákup byl zrušen, protoe tvùj cech ji vlastní cechovní území.";
+
+"[Guild] The vote relating to this player failed. Please try again in %d months, %d days, %d hours and %d minutes.";
+"[Cech] Hlasování o tomto hráèi selhalo. Zkus to znovu za %d mìsícù, %d dnù, %d hodin a %d minut.";
+
+"[Guild] There are no votes in progress.";
+"[Cech] Neprobíhá ádné hlasování.";
+
+"[Guild] There are not enough participants online.";
+"[Cech] Není online dostatek úèastníkù.";
+
+"[Guild] There are still items in the Guild Warehouse.";
+"[Cech] V cechovním skladišti se stále nachází pøedmìty.";
+
+"[Guild] This action is not possible during a war.";
+"[Cech] Tato akce není bìhem války moná.";
+
+"[Guild] This guild does not exist.";
+"[Cech] Tento cech neexistuje.";
+
+"[Guild] This guild is not the one entered in the guild territory sale vote.";
+"[Cech] Tento cech není ten, kterı byl v cechovním hlasování.";
+
+"[Guild] This land belongs to another player.";
+"[Cech] Pùda patøí jinému hráèi.";
+
+"[Guild] Time's up.";
+"[Cech] Èas vypršel.";
+
+"[Guild] Visit the Dragon Watcher Dolnarr to enter the dragon cave.";
+"[Cech] Navštiv draèího stráce Dolnarra pro vstup do draèí jeskynì.";
+
+"[Guild] War ends in 1 minute.";
+"[Cech] Válka konèí za 1 minutu.";
+
+"[Guild] War ends in 5 minutes.";
+"[Cech] Válka konèí za 5 minut.";
+
+"[Guild] You are now in observer mode because you have reached the respawn limit.";
+"[Cech] Nacházíš se v pozorovatelském módu, nebo jsi ji vyèerpal limit oivení.";
+
+"[Guild] You can only construct one Guild Warehouse.";
+"[Cech] Mùeš postavit pouze jedno cechovní skladištì.";
+
+"[Guild] You can only make one transaction every 10 seconds.";
+"[Cech] Mùeš udìlat jednu transakci kadıch 10 vteøin.";
+
+"[Guild] You can use it in 10 seconds.";
+"[Cech] Lze pouít za 10 vteøin.";
+
+"[Guild] You cannot carry out this action during a war.";
+"[Cech] Nemùeš provést tuto akci bìhem války.";
+
+"[Guild] You cannot carry out this action while depositing or withdrawing Yang from the guild account.";
+"[Cech] Tuto akci nemùeš provést, pokud vkládáš nebo vybíráš Yangy z cechovní pokladnice.";
+
+"[Guild] You cannot carry out this action whilst the Guild Warehouse is open.";
+"[Cech] Nemùeš provést tuto akci, kdy je otevøeno cechovní skladištì.";
+
+"[Guild] You cannot change guild leader whilst at war.";
+"[Cech] Nemùeš zmìnit vùdce cechu bìhem války.";
+
+"[Guild] You cannot declare a guild war whilst fighting in the dragon cave.";
+"[Cech] Nemùeš vyhlásit válku, kdy bojuješ v draèí jeskyni.";
+
+"[Guild] You cannot deposit or withdraw Yang from the guild account while another window is open.";
+"[Cech] Nemùeš vloit nebo vybrat Yangy z cechovní pokladnice, pokud je otevøeno jiné okno.";
+
+"[Guild] You cannot deposit or withdraw Yang from the guild account while your pet is summoned.";
+"[Cech] Nemùeš vloit nebo vybrat Yangy z cechovní pokladnice, kdy máš pøivolaného mazlíka.";
+
+"[Guild] You cannot disband the guild whilst a vote is in progress.";
+"[Cech] Nemùeš rozpustit cech, pokud je aktivní hlasování.";
+
+"[Guild] You cannot invite someone to the guild whilst a vote is in progress.";
+"[Cech] Nemùeš nìkoho pozvat do cechu, pokud je aktivní hlasování.";
+
+"[Guild] You cannot kick the guild leader.";
+"[Cech] Nemùeš vyhodit velitele cechu.";
+
+"[Guild] You cannot kick yourself.";
+"[Cech] Nemùeš vyhodit sám sebe.";
+
+"[Guild] You cannot leave the guild while a vote is in progress.";
+"[Cech] Nemùeš opustit cech, pokud je aktivní hlasování.";
+
+"[Guild] You cannot make yourself guild leader.";
+"[Cech] Nemùeš se udìlat velitelem cechu.";
+
+"[Guild] You cannot relinquish guild territory during a guild battle.";
+"[Cech] Nemùeš opustit cechovní území bìhem cechovní bitvy.";
+
+"[Guild] You cannot remove anyone from the guild whilst at war.";
+"[Cech] Nemùeš nikoho bìhem války odebrat z cechu.";
+
+"[Guild] You cannot select combatants whilst the guild is in a war.";
+"[Cech] Nemùeš volit bojovníky, kdy je cech ve válce.";
+
+"[Guild] You cannot sell the guild territory to yourself.";
+"[Cech] Nemùeš prodat cechovní území sám sobì.";
+
+"[Guild] You cannot start a vote during a war.";
+"[Cech] Nemùeš zahájit hlasování bìhem války.";
+
+"[Guild] You cannot start a vote for your own character.";
+"[Cech] Nemùeš zahájit hlasování o své postavì.";
+
+"[Guild] You cannot start a vote to remove the guild leader.";
+"[Cech] Nemùeš zahájit hlasování o odebrání velitele cechu.";
+
+"[Guild] You cannot start a vote to remove yourself from the guild.";
+"[Cech] Nemùeš zahájit hlasování o odebrání sebe sama z cechu.";
+
+"[Guild] You cannot start a war whilst a vote is in progress.";
+"[Cech] Nemùeš vyhlásit válku, pokud je aktivní hlasování.";
+
+"[Guild] You cannot start another vote whilst one is in progress.";
+"[Cech] Nemùeš zahájit další hlasování, kdy jiné ji probíhá.";
+
+"[Guild] You cannot use guild skills in field guild wars.";
+"[Cech] Nemùeš pouít cechovní schopnosti bìhem cechovní války.";
+
+"[Guild] You cannot use the Guild Warehouse whilst a vote is in progress.";
+"[Cech] Nemùeš pouít cechovní skladištì, pokud je aktivní hlasování.";
+
+"[Guild] You cannot use this guild logo. Please try again.";
+"[Cech] Toto cechovní logo nemùeš pouít. Prosím zkus to znovu.";
+
+"[Guild] You cannot withdraw Yang while another window is open.";
+"[Cech] Nemùeš vybrat Yangy, kdy je otevøené další okno.";
+
+"[Guild] You cannot withdraw any Yang as you have more than 2 billion Yang.";
+"[Cech] Nemùeš vybrat ádné Yangy, protoe máš víc jak 2 biliony Yangù.";
+
+"[Guild] You do not have permission to use guild skills.";
+"[Cech] Nemáš právo pouívat cechovní schopnosti.";
+
+"[Guild] You have already applied to this guild.";
+"[Cech] Tomuto cechu jsi ji poslal ádost.";
+
+"[Guild] You have already donated the maximum amount of EXP.";
+"[Cech] Ji jsi daroval maximální mnoství BZK.";
+
+"[Guild] You have cancelled the fight in Meley's Lair.";
+"[Cech] Pøerušil jsi boj v doupìti Meley.";
+
+"[Guild] You have defeated Meley the Dragon Queen!";
+"[Cech] Porazil jsi draèí královnou Meley!";
+
+"[Guild] You have taken part in the current vote.";
+"[Cech] Zúèastnil ses aktuálního hlasování.";
+
+"[Guild] You have voted against.";
+"[Cech] Volil jsi proti.";
+
+"[Guild] You have voted for.";
+"[Cech] Volil jsi pro.";
+
+"[Guild] You must conduct a vote before selling your guild territory.";
+"[Cech] Musíš hlasovat ne prodáš cechovní území.";
+
+"[Guild] You must wait 10 seconds before reopening the Guild Warehouse.";
+"[Cech] Pøed znovuotevøením cechovního skladištì musíš èekat 10 vteøin.";
+
+"[Guild] You must wait at least 12 hours after using the Guild Warehouse before leaving the guild.";
+"[Cech] Po pouití cechovního skladištì musíš poèkat alespoò 12 hodin, ne mùeš cech opustit.";
+
+"[Guild] You need the Ring of Successor to transfer the guild.";
+"[Cech] Pro pøedání cechu potøebuješ Prsten následnictví.";
+
+"[Guild] Your application has been registered.";
+"[Cech] Tvá ádost byla zaregistrována.";
+
+"[Guild] Your guild advertisement will expire soon.";
+"[Cech] Cechovní reklama bude brzy ukonèena.";
+
+"[Guild] Your guild does not have enough Yang in the account. Please deposit more Yang and try again.";
+"[Cech] Tvùj cech nemá na úètu dostatek Yangù. Prosím, ulo více Yangù a zkus to znovu.";
+
+"[Guild] Your guild doesn't have a warehouse.";
+"[Cech] Tvùj cech nemá skladištì.";
+
+"[Guild] Your members rejected the last vote to sell. Try again.";
+"[Cech] Èlen cechu odmítl poslední hlasování o prodeji. Zkus to znovu.";
+
+"[Guild] Your members rejected the last vote. Please try again in %d months, %d days, %d hours and %d minutes.";
+"[Cech] Èlen cechu odmítl poslední hlasování. Zkus to znovu za %d mìsícù, %d dnù, %d hodin a %d minut.";
+
+"[Monster Bash Event] Map %s is reporting sightings of %s.";
+"[Akce mlácení pøíšer] Mapa %s oznamuje spatøení %s.";
+
+"[Monster Card] Mission level: %d. You've defeated the monster: %s.";
+"[Karta pøíšery] Úroveò mise: %d. Porazil jsi pøíšeru: %s.";
+
+"[Monster Card] You can now teleport to the monster's location.";
+"[Karta pøíšery] Nyní se mùeš teleportovat do lokality pøíšery.";
+
+"[Monster Card] You can now transform into the monster.";
+"[Karta pøíšery] Nyní se mùeš pøemìnit na tuto pøíšeru.";
+
+"[Monster Card] You can now watch the monster's movement animation.";
+"[Karta pøíšery] Nyní mùeš sledovat animace pohybu pøíšery.";
+
+"[Monster Card] You don't have enough space in your inventory.";
+"[Karta pøíšery] V inventáøi nemáš dostatek místa.";
+
+"[Monster Card] You've completed your monster mission. Collect your Monster Card now.";
+"[Karta pøíšery] Dokonèil jsi misi. Nyní si seber Kartu pøíšery.";
+
+"[Monster Card] [%s] Level up complete.";
+"[Karta pøíšery] [%s] Vylepšení úrovnì dokonèeno.";
+
+"[Okey Event] Amazing prizes await!";
+"[Událost Okey] Neuvìøitelné ceny èekají!";
+
+"[Okey Event] Defeat monsters, collect cards and play a game of okey.";
+"Událost Okey] Zabíjej pøíšery, sbírek karty a hraj a hru Okey.";
+
+"[Okey Event] If you make it into the top rankings, you have 7 days to collect your prize.";
+"[Událost Okey] Pokud to zvládneš v hodnocení na vrchol, máš pak 7 dnù na sebrání ceny.";
+
+"[Personal Premium Shop] %s has been sold. Please collect your money.";
+"[Osobní prémiovı obchod] Prodalo se: %s Prosím, seber si nyní své peníze.";
+
+"[Personal Premium Shop] A shop has already been opened here. Please find another location to open your shop.";
+"[Osobní prémiovı obchod] Zde ji byl obchod otevøen. Najdi si jiné místo, kde si obchod otevøeš.";
+
+"[Personal Premium Shop] Collectable money will not be updated while you manage items.";
+"[Osobní prémiovı obchod] Peníze, které lze sebrat, nebudou bìhem správy pøedmìtù aktualizovány.";
+
+"[Personal Premium Shop] The shop is being prepared now.";
+"[Osobní prémiovı obchod] Obchod se nyní pøipravuje.";
+
+"[Personal Premium Shop] You can collect items in your personal shop.";
+"[Osobní prémiovı obchod] Ve svém Osobním prémiovém obchodì mùeš sebrat pøedmìty.";
+
+"[Personal Premium Shop] You can collect money in your personal shop.";
+"[Osobní prémiovı obchod] Ve svém Osobním prémiovém obchodì mùeš sebrat peníze.";
+
+"[Personal Premium Shop] You can't open this, because you still have items to collect.";
+"[Osobní prémiovı obchod] Toto nemùeš otevøít, protoe máš stále pøedmìty k sebrání.";
+
+"[Personal Premium Shop] You can't open this, because you still have money to collect.";
+"[Osobní prémiovı obchod] Toto nemùeš otevøít, protoe máš stále peníze k sebrání.";
+
+"[Personal Premium Shop] You cannot do that while managing items.";
+"[Osobní prémiovı obchod] Toto nemùeš bìhem správy pøedmìtù dìlat.";
+
+"[Personal Premium Shop] You cannot duel here.";
+"[Osobní prémiovı obchod] Zde nemùeš bojovat.";
+
+"[Personal Premium Shop] You cannot reopen your shop for %d seconds after closing it.";
+"[Osobní prémiovı obchod] Obchod nemùeš znovu otevøít %d vteøin po jeho zavøení.";
+
+"[Personal Premium Shop] You cannot use items while opening your personal shop.";
+"[Osobní prémiovı obchod] Tento pøedmìt bìhem otevírání Osobního prémiového obchodu nemùeš pouít.";
+
+"[Personal Premium Shop] You cannot use that. Go to the village's Trade Administrator.";
+"[Osobní prémiovı obchod] Toto nemùeš pouít. Jdi do vesnice ke Správkyni obchodù.";
+
+"[Personal Premium Shop] You cannot use the Personal Premium Shop while you have other windows open.";
+"[Osobní prémiovı obchod] Osobní prémiovı obchod nemùeš pouít, kdy máš otevøené jiné okno.";
+
+"[Personal Premium Shop] You don't have enough space in your inventory.";
+"[Osobní prémiovı obchod] V inventáøi nemáš dostatek místa.";
+
+"[Personal Premium Shop] You have already opened your personal shop.";
+"[Osobní prémiovı obchod] Ji sis Osobní prémiovı obchod otevøel.";
+
+"[Relic Bonus] This is not possible while the Soul Relic window is open.";
+"[Bonus relikvie] Tato akce není moná pokud je otevøené okno Relikvie duše.";
+
+"[Relic Bonus] You are already wearing a Soul Relic.";
+"[Bonus relikvie] Ji nosíš Relikvii duše.";
+
+"[Ritual of Blood] You don't have enough Yang.";
+"[Krvavı rituál] Bohuel nemáš dostatek Yangù.";
+
+"[Ritual of Blood] You don't have enough souls.";
+"[Krvavı rituál] Bohuel nemáš dostatek duší.";
+
+"[Ritual of Blood] You don't have enough space in your inventory.";
+"[Krvavı rituál] Bohuel nemáš ve svém inventáøi dostatek místa.";
+
+"[Soul System] %s is already at the highest level.";
+"[Systém duše] %s je ji na nejvyšší úrovni.";
+
+"[Soul System] The soul is active.";
+"[Systém duše] Duše je aktivní.";
+
+"[Soul System] Use %s to receive the effect.";
+"[Systém duše] Pouij %s pro obdrení efektu.";
+
+"[Storeroom] An item that is currently being used cannot be stored.";
+"[Skladištì] Nelze uloit pøedmìt, kterı se právì pouívá.";
+
+"[Sung Mahi Tower] A new ranking cycle has begun.";
+"[Vì Sung Mahi] Novı cyklus hodnocení byl zahájen.";
+
+"[Sung Mahi Tower] Break the seal with Sung Mahi's Sealstone!";
+"[Vì Sung Mahi] Rozbij peèe pomocí Peèetního kamene Sung Mahi!";
+
+"[Sung Mahi Tower] Destroy the Demon Stone!";
+"[Vì Sung Mahi] Zniè kámen Démona!";
+
+"[Sung Mahi Tower] Kill all the monsters within the time limit!";
+"[Vì Sung Mahi] Zabij všechny pøíšery v èasovém limitu!";
+
+"[Sung Mahi Tower] The current ranking cycle has ended.";
+"[Vì Sung Mahi] Aktuální cyklus hodnocení byl ukonèen.";
+
+"[Sung Mahi Tower] The key does not fit. Find another one and try again!";
+"[Vì Sung Mahi] Klíè nesedí. Najdi jinı a zkus to znovu.";
+
+"[Sung Mahi Tower] You completed this level in %d seconds.";
+"[Vì Sung Mahi] Dokonèil jsi tuto úroveò za %d vteøin.";
+
+"[Sung Mahi Tower] You have to break another seal first!";
+"[Vì Sung Mahi] Nejprve musíš rozbít první peèe!";
+
+"[TEST_ONLY]ÇöÀç ±¹°í : %d";
+"[TEST_ONLY]Daò: %d";
+
+"[Transmutation] You cannot equip the transmuted item as it does not match your class.";
+"[Promìna] Nemùeš pouít promìnìnı pøedmìt, nebo je pro jinı typ postavy.";
+
+"[Transmutation] You cannot equip the transmuted item as it does not match your gender.";
+"[Promìna] Nemùeš pouít promìnìnı pøedmìt, nebo je pro druhé pohlaví.";
+
+"[World boss] Caution: the world boss will appear soon!";
+"[Svìtovı boss] Pozor: Svìtovı boss se brzy objeví!";
+
+"[World boss] Event completed";
+"[Svìtovı boss] Událost dokonèena";
+
+"[World boss] Event started";
+"[Svìtovı boss] Událost zaèala";
+
+"[World boss] In Channel %d, %s has appeared and is terrorising the area of %s. Let's go hunting!";
+"[Svìtovı boss] Na kanále %d byl spatøen %s terorizující oblast %s. Tak jdeme lovit!";
+
+"[World boss] Reward for Loot Level I in the rankings: %d";
+"[Svìtovı boss] Odmìna Úrovnì koøisti I za umístìní: %d";
+
+"[World boss] Rewards for Loot Level II in the rankings: %d";
+"[Svìtovı boss] Odmìna Úrovnì koøisti II za umístìní: %d";
+
+"[World boss] Rewards for Loot Level III in the rankings: %d";
+"[Svìtovı boss] Odmìna Úrovnì koøisti III za umístìní: %d";
+
+"[World boss] Rewards for Loot Level IV in the rankings: %d";
+"[Svìtovı boss] Odmìna Úrovnì koøisti IV za umístìní: %d";
+
+"[World boss] The World boss has escaped! Good luck next time.";
+"[Svìtovı boss] Svìtovı boss uprchl! Hodnì štìstí pøi dalším pokusu.";
+
+"[World boss] The world boss in Channel %d has been attacked. Join the hunt now!";
+"[Svìtovı boss] Svìtovı boss na kanále %d byl napaden. Pøidej se k lovu!";
+
+"[World boss] Well done! Here is your reward. Join in next time as well!";
+"[Svìtovı boss] Skvìle! Tady je tvoje odmìna. Pøidej se i pøíštì!";
+
+"[World boss] Well done: %s has been defeated and peace has been restored... for now.";
+"[Svìtovı boss] Vıbornì: %s byl poraen a mír znovu nastolen... na chvíli.";
+
+"[World boss] You can't receive a reward now, because you do not have enough space in your inventory.";
+"[Svìtovı boss] Nyní nemùeš získat odmìnu, protoe nemáš v inventáøi dostatek místa.";
+
+"[World boss] You can't receive a reward now.";
+"[Svìtovı boss] Nyní nemùeš získat odmìnu.";
+
+"the level Heroic";
+"úroveò Hrdinnı";
+
+"the level Valiant";
+"úroveò Odvánı";
+
+"the level Wild";
+"úroveò Divokı";
+
+"the level Young";
+"úroveò Mladı";
+
+"°¡¸¸È÷ ÀÖÀ» ¶§¸¸ Âø¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Pro nasazení tohoto pøedmìtu musíš bıt nehybnı.";
+
+"°¢Á¦±¹ ÁøÇà Á¤º¸";
+"Informace pro království";
+
+"°¨Áö±â¸¦ ÀÛ¿ëÇÏ¿´À¸³ª °¨ÁöµÇ´Â ¿µ¼®ÀÌ ¾ø½À´Ï´Ù.";
+"Momentálnì se na této mapì nenachází ádnı kamen Metin.";
+
+"°©¿ÊÀ» ¹ş¾î¾ß °³ÀÎ »óÁ¡À» ¿­ ¼ö ÀÖ½À´Ï´Ù.";
+"Jsi schopen otevøít stánek pouze pokud se svleèeš.";
+
+"°ªÀ» Àß¸ø ÀÔ·ÂÇÏ¿´½À´Ï´Ù.";
+"Vloil jsi neplatnou hodnotu.";
+
+"°­È­¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Zesílení bylo úspìšné.";
+
+"°­È­¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Zesílení se nezdaøilo.";
+
+"°­È­¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Nemáš všechny suroviny, potøebné pro vylepšení Draèího kamene.";
+
+"°­È­Ã¢À» ¿¬ »óÅÂ¿¡¼­´Â ¾ÆÀÌÅÛÀ» ¿Å±æ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš pøesunout pøedmìt v oknì pro zušlechtìní.";
+
+"°­È­ÇÒ ¼ö ¾ø´Â ¿ëÈ¥¼®ÀÔ´Ï´Ù.";
+"Draèí kámen nelze vyuít pro zesílení.";
+
+"°°Àº °³·®¼­¸¦ ÇÕÄ¥ ¼ö´Â ¾ø½À´Ï´Ù.";
+"Nemùeš kombinovat stejné pergameny na zlepšení.";
+
+"°°Àº Á¾·ùÀÇ ¸ŞÆ¾¼®Àº ¿©·¯°³ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš pøidat více kamenù stejného typu.";
+
+"°°Àº Á¾·ùÀÇ À¯´ÏÅ© ¾ÆÀÌÅÛ µÎ °³¸¦ µ¿½Ã¿¡ ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tento pøedmìt nemùeš nosit dvakrát.";
+
+"°°ÀÌ ÁöÀ» ¼ö ¾ø´Â Á¾·ùÀÇ °Ç¹°ÀÌ Áö¾îÁ® ÀÖ½À´Ï´Ù.";
+"Tenhle typ budovy mùe bıt postaven pouze jednou.";
+
+"°³·®µÈ ÈÄ ¾ÆÀÌÅÛÀÇ ·¹º§ Á¦ÇÑº¸´Ù ·¹º§ÀÌ ³·½À´Ï´Ù.";
+"Tvá úroveò je moc nízká, nemùeš pouít tento pøedmìt.";
+
+"°³·®À» ÇÏ±â À§ÇÑ µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Nedostatek Yangù na zlepšení.";
+
+"°³·®À» ÇÏ±â À§ÇÑ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"Nemáš správnı materiál na vırobu tohoto pøedmìtu.";
+
+"°³ÀÎ»óÁ¡ »ç¿ëÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš pouít Pergamen lokality %d vteøin po otevøení skladištì.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡ Ã¢°í¸¦ ¿­¼ö ¾ø½À´Ï´Ù.";
+"Po skonèení obchodování mùeš otevøít stánek a za %d vteøin.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎµîÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Po obchodování nemùeš pouít Pergamen lokality po dobu %d vteøin.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡´Â ´Ù¸¥Áö¿ªÀ¸·Î ÀÌµ¿ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš jít nikam %d vteøin po obchodu.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš pouít Pergamen lokality pokud máš otevøené další okno.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â ´Ù¸¥°÷À¸·Î ÀÌµ¿,Á¾·á ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Nemùeš jít nikam chvíli po obchodu.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â º¸µû¸®,ºñ´Üº¸µû¸®¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš otevøít skladištì, pokud je ji otevøené jiné okno.";
+
+"°ÅÁş";
+"FALSE";
+
+"°Ç¹° ºñ¿ë Á¤º¸ ÀÌ»óÀ¸·Î °Ç¼³ ÀÛ¾÷¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Stavba selhala kvùli špatné stavební cenì.";
+
+"°Ç¹°À» ÁöÀ» ¼ö ¾ø´Â À§Ä¡ÀÔ´Ï´Ù.";
+"Nemùeš postavit budovu na tomto místì.";
+
+"°Ç¼³ ºñ¿ëÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Tvùj cech nemá dostatek Yangù na stavbu této budovy.";
+
+"°Ç¼³¿¡ ÇÊ¿äÇÑ °Ç¹°ÀÌ Áö¾îÁ® ÀÖÁö ¾Ê½À´Ï´Ù.";
+"Nejdøíve musí bıt postavena základní budova.";
+
+"°ÔÀÓÀ» Á¾·á ÇÕ´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Byl jsi odpojen od serveru. Prosím èekej.";
+
+"°áÀç±â°£ÀÌ %dºĞ ÈÄ ¸¸·á µË´Ï´Ù.";
+"Tvùj herní èas vyprší za %d minut.";
+
+"°áÈ¥ »óÅÂ°¡ ¾Æ´Ï¸é °áÈ¥¹İÁö¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš nosit svatební prsten, pokud nejsi enatı/vdaná.";
+
+"°áÈ¥½ÄÀÌ Á¾·áµË´Ï´Ù.";
+"Svatba brzy skonèí.";
+
+"°áÈ¥ÇÏÁö ¾ÊÀº »óÅÂ¿¡¼­ ¿¹¹°À» Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tento pøedmìt nemùeš pouít, protoe nejsi enatı/vdaná.";
+
+"°æÇèÄ¡ %d%%";
+"Zkušenost %d%%";
+
+"°æÇèÄ¡ %d%% Ãß°¡ È¹µæ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Zkušenostní bonus je momentálnì dalších %d%%.";
+
+"°æÇèÄ¡ ¹èÀ²";
+"Procentová míra bodù zkušeností";
+
+"°æÇèÄ¡°¡ ºÎÁ·ÇÏ¿© Ã¥À» ÀĞÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Tohle nemùeš pøeèíst, máš málo zkušeností.";
+
+"°í±â°¡ ¹Ì³¢¸¸ »©¸Ô°í Àì½Î°Ô µµ¸ÁÄ¨´Ï´Ù.";
+"Ztratil si svoji návnadu.";
+
+"°í±â°¡ ÀâÇû½À´Ï´Ù! (%s)";
+"Chytil jsi rybu! (%s)";
+
+"°í±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"Ryba zmizela do nekoneènıch hlubin vody...";
+
+"°î±ªÀÌ ¼ö·Ãµµ°¡ ÃÖ´ë(%d)°¡ µÇ¾ú½À´Ï´Ù.";
+"Tvé tìební body se zvıšily na maximum. (%d).";
+
+"°î±ªÀÌ°¡ ÃÖ´ë ¼ö·Ãµµ¿¡ µµ´ŞÇÏ¿´½À´Ï´Ù.";
+"Tvé tìební body se zvıšily na nejvyšší úroveò.";
+
+"°î±ªÀÌ¸¦ µé°í ÀÖÁö ¾Ê¾Æ¼­ Ä¶ ¼ö ¾ø½À´Ï´Ù.";
+"Bez krumpáèe nemùeš kopat.";
+
+"°î±ªÀÌ¸¦ ÀåÂøÇÏ¼¼¿ä.";
+"Vezmi si krumpáè.";
+
+"°î±ªÀÌÀÇ ¼ö·Ãµµ°¡ Áõ°¡ÇÏ¿´½À´Ï´Ù! (%d/%d)";
+"Tvé tìební body se zvıšily! (%d/%d)";
+
+"°ñµå µå·Ó·ü %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Kvóta upuštìnıch Yangù je v tuto chvíli plus %d%%";
+
+"°ø°İ·Â +%d";
+"Síla útoku +%d";
+
+"°ø°İ·Â +%d%%";
+"Útok + %d%%";
+
+"°ø°İ¼Óµµ +%d";
+"Rychlost útoku +%d";
+
+"°øºÎÇÏ±â ½È¾îÁö³×.";
+"Nechci se uèit nic dalšího.";
+
+"°üÀü ¸ğµå·Î ±æµåÀü¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"Mùeš se zúèastnit cechovního boje v reimu diváka.";
+
+"°üÀü »óÅÂ¿¡¼­´Â ±³È¯À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš obchodovat pøi pozorování.";
+
+"°üÅë Ãß°¡ µ¥¹ÌÁö %d";
+"Extra poškození bodnou zbraní %d";
+
+"±¹°í¿¡ µ·ÀÌ ºÎÁ·ÇÏ°Å³ª µ·À» °¡Á®¿Ã¼ö ¾ø´Â »óÈ²ÀÔ´Ï´Ù";
+"Nemáš dostatek Yangù.";
+
+"±¹°í¿¡ µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù. ÇöÀç : %u ÇÊ¿ä±İ¾× : %u";
+"Nedostatek daní. Souèasnı kapitál: %u chybìjící kapitál: %u";
+
+"±¹°í¿¡ ÀÚ±İÀÌ ¸ğÀÚ¶ø´Ï´Ù ±¹°í : %d";
+"Nedostatek pøíjmu z daní: %d.";
+
+"±ºÁÖ Á¤º¸";
+"Císaøská informace";
+
+"±ºÁÖ°¡ ³»¸° Ãàº¹À¸·Î ¸ğµç ¿¡³ÊÁö°¡ °¡µæ Ã¤¿öÁı´Ï´Ù";
+"Energie je odráena císaøskım poehnáním.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ë °¡´ÉÇÑ ±â´ÉÀÔ´Ï´Ù";
+"Tato funkce mùe bıt pouita pouze císaøem.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ë°¡´É ÇÑ ±â´ÉÀÔ´Ï´Ù";
+"Pouze císaø mùe tohle pouít.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ëÇÒ¼ö ÀÖ´Â ±â´ÉÀÔ´Ï´Ù";
+"Pouze císaø smí tohle pouít";
+
+"±ºÁÖÀÇ ±İ°­±Ç ¿µÇâÀ¸·Î ÀÌÁö¿ª %s À¯Àú´Â 3ºĞ°£ 10 %% ÀÇ ¹æ¾î·ÂÀÌ  Áõ°¡µË´Ï´Ù";
+"Od císaøe Geum-Gang-Gwon dostává hráè %s o 10%% více brnìní na 3 minuty.";
+
+"±ºÁÖÀÇ »çÀÚÈÄ ¿µÇâÀ¸·Î ÀÌÁö¿ª %s À¯Àú´Â 3ºĞ°£ 10 %% ÀÇ °ø°İ·ÂÀÌ  Áõ°¡µË´Ï´Ù";
+"Od císaøe Sa-Za-Hu dostal hráè %s o 10%% víc útoèné síly na 3 minuty.";
+
+"±ºÁÖÀÇ ÀÚ°İÀ» °¡Áö°í ÀÖÁö ¾Ê½À´Ï´Ù";
+"Nemáte schopnosti stát se císaøem.";
+
+"±ºÁÖÀÇ Ãàº¹À¸·Î ÀÌÁö¿ª %s À¯Àú´Â HP,SP°¡ ¸ğµÎ Ã¤¿öÁı´Ï´Ù.";
+"Pokud pouiješ poehnání císaøe %s ZB a MB budou opìt obnoveny.";
+
+"±ºÁÖÀÇ Ãàº¹À» »ç¿ëÇÏ¿´½À´Ï´Ù.";
+"Poehnání císaøe je aktivní.";
+
+"±ºÁ÷ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nejsi schopen pouít tento pøedmìt, protoe nemáš dostateènou kvalifikaci.";
+
+"±ÍÈ¯¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Pøemístìní selhalo.";
+
+"±×°ÍÀ¸·Î ¼ö·ÃÀº ³¡³­ °Å¾ß!";
+"Trénink je ukonèen.";
+
+"±×·¡, ÀÌ ´À³¦ÀÌ¾ß. Ã¼³»¿¡ ±â°¡ ¾ÆÁÖ Ãæ¸¸ÇØ.";
+"Ano, cítím se skvìle. Mé tìlo je plné Chi.";
+
+"±×·¡, ÃµÃµÈ÷. Á»´õ ÃµÃµÈ÷, ±×·¯³ª ¸·Èû ¾øÀÌ ºü¸£°Ô!";
+"Pomalu... ale stále... bez zastavování!";
+
+"±×·£µå ¸¶½ºÅÍ ¼ö·ÃÀ» ÇÒ ¼ö ¾ø´Â ½ºÅ³ÀÔ´Ï´Ù.";
+"Nemùeš trénovat tuto schopnost na úroveò velmistra.";
+
+"±×·± ¸í·É¾î´Â ¾ø½À´Ï´Ù";
+"Tento rozkaz neexistuje.";
+
+"±×·± »ç¶÷ÀÌ ¾ø½À´Ï´Ù.";
+"Tato osoba neexistuje.";
+
+"±×·± ÀÌ¸§ ¶Ç´Â ¹øÈ£ÀÇ ±æµå°¡ ¾ø½À´Ï´Ù.";
+"Cech s tímto jménem nebo èíslem neexistuje.";
+
+"±Ù·Â +%d";
+"Síla +%d";
+
+"±Ù·ÂÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Na nošení tohoto pøedmìtu nejsi dost silnı.";
+
+"±İ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Neplatnı Yang.";
+
+"±â¾ïµÈ À§Ä¡°¡ Å¸Á¦±¹¿¡ ¼ÓÇØ ÀÖ¾î¼­ ±ÍÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš se pøemístit na bezpeèné místo v cizím království.";
+
+"±â¾ïÇØ µÑ ¼ö ¾ø´Â À§Ä¡ ÀÔ´Ï´Ù.";
+"Nemùeš uloit tuto pozici.";
+
+"±âÀıÇÏÁö ¾ÊÀ½ %d%%";
+"adná závra %d%%";
+
+"±æµå¿¡ °¡ÀÔÇÏÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Nepøipojil jsi se k tomuto cechu.";
+
+"±æµå¿ø";
+"Èlen";
+
+"±æµåÀå";
+"Vùdce";
+
+"±æµåÀü¿¡ Âü°¡ÇÑ »ó´ë¹æ ±æµå¿øÀÌ ¾Æ¹«µµ ¾ø½À´Ï´Ù.";
+"Nejsou ádní nepøátelé.";
+
+"±æµåÀüÀÌ ÀÏÂï Á¾·áµÇ¾î ¹«½ÂºÎ·Î ÆÇÁ¤ µÇ¾ú½À´Ï´Ù. (5ºĞÀÌ Áö³ªÁö ¾ÊÀ½)";
+"Protoe cechovní válka byla ukonèena pøedèasnì, bude posuzována jako remíza.";
+
+"²Ş¼Ó¿¡¼­ ¾î¶»°Ô¿ä?";
+"V mıch snech? Coe?";
+
+"³ª¹«²Û¸¦ ÅëÇØ ´ÙÀ½ ·¹º§ÀÇ °î±ªÀÌ·Î ¾÷±×·¹ÀÌµå ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Mùeš vylepšit svùj krumpáè s pomocí døevorubce Deokbae.";
+
+"³ª¹«¿¡¼­ ºÎÅÍ ½ÅºñÇÑ ºûÀÌ ³ª¿É´Ï´Ù.";
+"Ze stromu pøichází tajemné svìtlo.";
+
+"³ªº¸´Ù ³Ê¹« ³ôÀº ·¹º§ÀÇ ¸ó½ºÅÍ·Î´Â º¯½Å ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš se promìnit v pøíšeru, která má vyšší úroveò ne ty.";
+
+"³ªÀÇ ±ºÁÖ Á¤º¸";
+"Má císaøská informace";
+
+"³ªÀÇ »ï°Å¸® ÁøÇàÁ¤º¸";
+"Informace o stavu bitvy království";
+
+"³¬½Ã Áß¿¡ ¹Ì³¢¸¦ °¥¾Æ³¢¿ï ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš mìnit návnadu zatímco rybaøíš.";
+
+"³¬½Ã´ë°¡ ¾Æ´Ñ ¹°°ÇÀ¸·Î ³¬½Ã¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù!";
+"Nemùeš jít rybaøit bez prutu.";
+
+"³¬½Ã´ë°¡ ÃÖ´ë ¼ö·Ãµµ¿¡ µµ´ŞÇÏ¿´½À´Ï´Ù.";
+"Dosáhl jsi maximálního poètu rybáøskıch bodù.";
+
+"³¬½Ã´ë¸¦ ÀåÂø ÇÏ¼¼¿ä.";
+"Vyber si prut.";
+
+"³¬½Ã´ë¿¡ %s¸¦ ¹Ì³¢·Î ³¢¿ó´Ï´Ù.";
+"Pøipevnil jsi %s na háèek jako návnadu.";
+
+"³¬½Ã´ëÀÇ ¼ö·Ãµµ°¡ Áõ°¡ÇÏ¿´½À´Ï´Ù! (%d/%d)";
+"Tvé rybáøské body se zvıšily! (%d/%d)";
+
+"³¬½Ã¸¦ ÇÒ ¼ö ÀÖ´Â °÷ÀÌ ¾Æ´Õ´Ï´Ù";
+"Tady nemùeš rybaøit.";
+
+"³¬½ÃÀÌº¥Æ®¿ùÃ´ºØ¾î";
+"Rybáøská událost 'Nejlepší Rybáø'";
+
+"³¬½ÃÀÌº¥Æ®À×¾î";
+"Rybáøská událost 'Trpìlivost rùe pøináší'.";
+
+"³²Àº »ı¸í·Â ¾çÀÌ ¸ğÀÚ¶ó »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemáš dostatek ZB.";
+
+"³²Àº ½ºÅÈ Æ÷ÀÎÆ®°¡ ¾ø½À´Ï´Ù.";
+"Nezbyly ádné body vlastností tìla.";
+
+"³²Àº ½ºÅÈ Æ÷ÀÎÆ®°¡ Àû½À´Ï´Ù.";
+"Zbıvá pøíliš málo bodù vlastností tìla.";
+
+"³²Àº Á¤½Å·Â ¾çÀÌ ¸ğÀÚ¶ó »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemáš dostatek bodù magie (MB) na pouití.";
+
+"³Ê¹« °¡±îÀÌ ÀÖ½À´Ï´Ù.";
+"Jsi pøíliš blízko.";
+
+"³Ê¹« ¸Ö¸® ÀÖ½À´Ï´Ù";
+"Jsi pøíliš daleko.";
+
+"³Ñ¾îÁöÁö ¾ÊÀ½ %d%%";
+"ádnı pád %d%%";
+
+"³à¼®µéÀº ÀÌ°÷ ¼ºÁö¿¡ ÀÖÀ» ÀÚ°İÀ» ÀÒ¾ú´Ù. ¸ğµÎ ¼ºÁö¿¡¼­ ¹°·¯³ª°Å¶ó~~[ENTER][ENTER] 10ÃÊ ÈÄ¿¡ ¸ğµÎ ¸¶À»·Î ÀÌµ¿ÇÏ°Ô µË´Ï´Ù.";
+", nemáš ádné právo tu bıt. Tohle je svaté místo. Odtáhni! Pøíslušníci tvého království opustí svaté místo za 10 sekund.";
+
+"´À·ÁÁöÁö ¾ÊÀ½ %d%%";
+"ádné zpomalení %d%%";
+
+"´ÔÀÇ ¸»";
+"Kùò";
+
+"´Ù ÀĞ¾ú´Ù! ÀÌÁ¦ ºñ±Ş¿¡ ÀûÇôÀÖ´Â ´ë·Î Àü½Å¿¡ ±â¸¦ µ¹¸®±â¸¸ ÇÏ¸é,";
+"Pøeèetl jsem to! Nyní mım tìlem protéká Chi.";
+
+"´Ù¸¥ °Å·¡Áß(Ã¢°í,±³È¯,»óÁ¡)¿¡´Â °³ÀÎ»óÁ¡À» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Teï nemùeš pouít soukromı stánek.";
+
+"´Ù¸¥ °Å·¡Áß(Ã¢°í,±³È¯,»óÁ¡)¿¡´Â »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš nic vyrábìt, pokud je jiné okno obchodu/skladištì otevøeno.";
+
+"´Ù¸¥ °Å·¡ÁßÀÏ°æ¿ì °³ÀÎ»óÁ¡À» ¿­¼ö°¡ ¾ø½À´Ï´Ù.";
+"Nemùeš otevøít soukromı stánek, kdy je otevøeno další okno.";
+
+"´Ù¸¥ °Å·¡Ã¢ÀÌ ¿­·ÁÀÖÀ»°æ¿ì °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Pokud je otevøeno okno, nemùeš obchodovat s ostatními.";
+
+"´Ù¸¥ °Å·¡Ã¢ÀÌ ¿­¸°»óÅÂ¿¡¼­´Â »óÁ¡°Å·¡¸¦ ÇÒ¼ö °¡ ¾ø½À´Ï´Ù.";
+"Nemùeš obchodovat, kdy je otevøené další okno.";
+
+"´Ù¸¥ Á¦±¹ À¯Àú´Â ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš nabírat hráèe z jiného království.";
+
+"´Ù¸¥ ÄÄÇ»ÅÍ¿¡¼­ ·Î±×ÀÎ ÇÏ¿© Á¢¼ÓÀ» Á¾·á ÇÕ´Ï´Ù.";
+"Nìkdo se pøihlásil na tvoje konto. Budeš odpojen.";
+
+"´Ù¸¥°Å·¡Ã¢ÀÌ ¿­¸°»óÅÂ¿¡¼­´Â Ã¢°í¸¦ ¿­¼ö°¡ ¾ø½À´Ï´Ù.";
+"Nemùeš otevøít Skladištì, kdy je otevøeno další okno.";
+
+"´ÙÀ½ ¹®Á¦ ÁØºñÇØÁÖ¼¼¿ä.";
+"Pøipraven na další otázku?";
+
+"´ÙÀÌ¾Æ¸óµå·Î ¼ÒÄÏÀ» Ãß°¡ÇØ¾ßÇÕ´Ï´Ù.";
+"Musíš pøidat úchyt, pokud chceš pouít diamant.";
+
+"´Ü°è °³·®¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Vylepšení èirosti bylo úspìšné.";
+
+"´Ü°è °³·®¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Vylepšení èirosti selhalo.";
+
+"´Ü°è °³·®¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Tento pøedmìt není pro zušlechtìní tøeba.";
+
+"´Ü°è °³·®ÇÒ ¼ö ¾ø´Â ¿ëÈ¥¼®ÀÔ´Ï´Ù.";
+"Draèí kámen nelze pro zušlechtìní pouít.";
+
+"´İ±â";
+"Zavøít";
+
+"´ç½ÅÀÌ ÁÖ»çÀ§¸¦ ±¼·Á %d°¡ ³ª¿Ô½À´Ï´Ù. (%d-%d)";
+"Hodils kostky. Padlo ti %d (%d-%d).";
+
+"´ë·Ã °­Á¦ Á¾·á ¼º°ø";
+"Souboj úspìšnì zrušen.";
+
+"´ë·Ã °­Á¦ Á¾·á ½ÇÆĞ";
+"Souboj nezrušen.";
+
+"´ë·Ã »ó´ë°¡ »ç¶óÁ® ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Souboj skonèil, tvùj bojovník zmizel.";
+
+"´ë·Ã ½Ã°£ ÃÊ°ú·Î ´ë·ÃÀ» Áß´ÜÇÕ´Ï´Ù.";
+"Souboj skonèil, èas vypršel.";
+
+"´ë·Ã ½ÃÀÛ¿¡ ¹®Á¦°¡ ÀÖ½À´Ï´Ù.";
+"Problém se zahájením souboje.";
+
+"´ë·Ã Áß¿¡´Â ÀÌ¿ëÇÒ ¼ö ¾ø´Â ¹°Ç°ÀÔ´Ï´Ù.";
+"Tento pøedmìt nemùeš pouít pøi souboji.";
+
+"´ë·ÃÀÌ ¼º°øÀûÀ¸·Î ½ÃÀÛ µÇ¾ú½À´Ï´Ù.";
+"Souboj úspìšnì zahájen.";
+
+"´ë·ÃÀÌ ½ÃÀÛµÇ¾ú½À´Ï´Ù.";
+"Souboj zaèal.";
+
+"´ë·ÃÀÚ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Souboj skonèil kvùli problému se soupeøem.";
+
+"´ë·ÃÀÚ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Áß´ÜÇÕ´Ï´Ù.";
+"Souboj skonèil kvùli problému s arénou.";
+
+"´ë·ÃÀÚ°¡ ¾ø½À´Ï´Ù.";
+"Zde nejsou ádní bojovníci.";
+
+"´ë·ÃÀå ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Souboj skonèil kvùli problému s arénou.";
+
+"´ë·ÃÀå¿¡¼­ »ç¿ëÇÏ½Ç ¼ö ¾ø½À´Ï´Ù.";
+"Tohle nemùeš pouít v této arénì.";
+
+"´ë¹Ú°ñµå µå·Ó·ü %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Momentální šance na padnutí Yangù je o %d%% vyšší.";
+
+"´õ ³ôÀº °æÁöÀÇ ¼ö·ÃÀ» ¼º°øÀûÀ¸·Î ³¡³»¼Ì½À´Ï´Ù.";
+"Dokonèil jsi trénink s knihou úspìšnì.";
+
+"´õ ÀÌ»ó OXÀÌº¥Æ® Âü°¡ÀÚ¸¦ ¹ŞÁö ¾Ê½À´Ï´Ù.";
+"Události OX se nemùe úèastnit více lidí.";
+
+"´õ ÀÌ»ó °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Další zlepšení není moné.";
+
+"´õ ÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"U nemùeš dále vylepšovat tuto schopnost.";
+
+"´õ ÀÌ»ó ½Â¸¶ ¼ö·Ã¼­¸¦ ÀĞÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš èíst více prùvodcù jízdou na koni.";
+
+"´õ ÀÌ»ó ÀÌ ¾ÆÀÌÅÛÀ» ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vìc ji nelze dále vylepšit. Bylo dosaeno maximálního poètu bonusù.";
+
+"´õÀÌ»ó ÀÌ ¾ÆÀÌÅÛÀ» ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Musíš pouít Mramor poehnání, abys mohl pøidat další bonus.";
+
+"´õÀÌ»ó Ä³³¾ ¼ö ¾ø½À´Ï´Ù.";
+"Zde není nic na kopání.";
+
+"´øÀü ¾È¿¡¼­´Â %s%s »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"%s%s nemohou bıt pouity v podzemí.";
+
+"µ¶ ÀúÇ× %d%%";
+"Odolnost proti jedu %d%%";
+
+"µ¶°ø°İ %d";
+"Útok jedem %d";
+
+"µ· %d ³ÉÀ» È¹µæÇß½À´Ï´Ù.";
+"Obdrel jsi %d Yangù.";
+
+"µ· ´ë¹ÚÀÌ ³ª¿Ã È®·ü";
+"Èetnost padání Yangù";
+
+"µ· µå·ÓÀ² %.1f¹è";
+"Šance nalézt Yangy %. 1f";
+
+"µ·ÀÌ ³ª¿Ã È®·ü";
+"Podíl padlıch Yangù";
+
+"µ·ÀÌ ºÎÁ·ÇÏ°Å³ª ¾ÆÀÌÅÛÀÌ Á¦ÀÚ¸®¿¡ ¾ø½À´Ï´Ù.";
+"Nedostatek Yangù, nebo prostoru v inventáøi.";
+
+"µ¿¹°·ù ¸ó½ºÅÍ Å¸°İÄ¡ +%d%%";
+"Síla útoku konì proti nestvùrám +%d%%";
+
+"µ¿ÀÏÇÑ ¸Ó¸® ½ºÅ¸ÀÏ·Î´Â ±³Ã¼ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tento úèes ji máš.";
+
+"µÎ¼Õ°Ë ¹æ¾î %d%%";
+"Obrana proti obouruèním meèùm %d%%";
+
+"µĞ°© Áß¿¡´Â ´É·ÂÀ» ¿Ã¸± ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš mìnit svùj status po dobu tvé pøemìny.";
+
+"µĞ°© Áß¿¡´Â Âø¿ëÁßÀÎ Àåºñ¸¦ º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš mìnit pouívané vìci po dobu tvé pøemìny.";
+
+"µĞ°©¼­ ¼ö·ÃÀ» ¸¶Ãº½À´Ï´Ù. ½Å¼±¿¡°Ô Ã£¾Æ°¡¼¼¿ä.";
+"Pøemìnu jsi se nauèil kompletnì.";
+
+"µĞ°©¿¡ ½ÇÆĞ ÇÏ¿´½À´Ï´Ù";
+"Chyba pøi pøemìòování.";
+
+"µĞ°©ÇÒ ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"Nemùete se promìnit, kdy jedete.";
+
+"µåµğ¾î ³¡ÀÌ º¸ÀÌ´Â °Ç°¡...  ÀÌ ±â¼úÀº ÀÌÇØÇÏ±â°¡ ³Ê¹« Èûµé¾î..";
+"Instrukcím je tìké porozumìt. Musím více studovat.";
+
+"µî±Ş °³·®¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Zušlechtìní o jeden stupeò bylo úspìšné.";
+
+"µî±Ş °³·®¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Zušlechtìní o jeden stupeò selhalo.";
+
+"µî±Ş °³·®¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Tento pøedmìt není pro vylepšení èirosti zapotøebí.";
+
+"¶³¾îÁø ¾ÆÀÌÅÛÀº %dºĞ ÈÄ »ç¶óÁı´Ï´Ù.";
+"Pøedmìt zmizí za %d minut.";
+
+"¶³¾îÁø ¾ÆÀÌÅÛÀº 3ºĞ ÈÄ »ç¶óÁı´Ï´Ù.";
+"Zahozenı pøedmìt zmizí za 5 minut.";
+
+"¶ß°Å¿î ¹«¾ùÀÌ °è¼Ó ¿ë¼ÚÀ½Ä¡°í ÀÖ¾î! ÀÌ°Ç, ÀÌ°ÍÀº!";
+"Zdá se, e trénink funguje...";
+
+"·¹º§ 20 ÀÌÇÏ´Â ÇÚµåÆù ¹øÈ£¸¦ µî·ÏÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tvá úroveò musí bıt vyšší ne 20 na registraci èísla tvého mobilního telefonu.";
+
+"·¹º§ 30ÀÌ µÇ±â Àü¿¡´Â ½ÀµæÇÒ ¼ö ÀÖÀ» °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Musíš mít nejménì úroveò 30, aby jsi této knize porozumìl.";
+
+"·¹º§ 50ÀÌ µÇ±â Àü¿¡´Â ½ÀµæÇÒ ¼ö ÀÖÀ» °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Musíš mít nejménì úroveò 50, aby jsi této knize porozumìl.";
+
+"·¹º§ÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tvá úroveò je pøíliš nízká pro nošení tohoto pøedmìtu.";
+
+"·Î±×ÀÎ È­¸éÀ¸·Î µ¹¾Æ °©´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Návrat do pøihlašovacího okna. Prosím èekej.";
+
+"·í·¿À» µ¹¸³´Ï´Ù. ±İ¾× %d";
+"Zatoèit ruletou za %d Yangù.";
+
+"¸¦";
+"to";
+
+"¸¶¹ı °ø°İ·Â +%d";
+"Magickı útok + %d";
+
+"¸¶¹ı ¹æ¾î·Â +%d";
+"Magická obrana + %d";
+
+"¸¶¹ı ÀúÇ× %d%%";
+"Odolnost proti magii %d%%";
+
+"¸¶À½ÀÌ ¸¼¾ÆÁö´Â±º. °¡½¿À» Áş´©¸£´ø ¹«¾ğ°¡°¡ Á» °¡º­¿öÁø ´À³¦ÀÌ¾ß.";
+"Tvá mysl je èistá. Teï se mùeš dobøe soustøedit.";
+
+"¸¹Àº Âü¿© ºÎÅ¹µå¸³´Ï´Ù.";
+"ádáme úèast mnoha hráèù.";
+
+"¸» ¼ÒÈ¯ ¾ÆÀÌÅÛÀ» »ç¿ëÇÏ¼¼¿ä.";
+"Pouij pøedmìt, abys zavolal konì.";
+
+"¸» ¼ÒÈ¯¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Volání konì selhalo.";
+
+"¸»¿¡°Ô %s%s ÁÖ¾ú½À´Ï´Ù.";
+"Dal jsi %s%s koni.";
+
+"¸»¿¡°Ô »ç·á¸¦ ÁÖ¾ú½À´Ï´Ù.";
+"Nakrmil jsi konì.";
+
+"¸»¿¡°Ô ¼±ÃÊ¸¦ ÁÖ¾ú½À´Ï´Ù.";
+"Nakrmil jsi konì bylinkami.";
+
+"¸»¿¡¼­ ¸ÕÀú ³»·Á¾ß ÇÕ´Ï´Ù.";
+"Musíš sesednout z konì.";
+
+"¸»À» µ¹·Áº¸³Â½À´Ï´Ù.";
+"Poslal jsi zpátky svého konì.";
+
+"¸»À» ¸ÕÀú ¼ÒÈ¯ÇØÁÖ¼¼¿ä.";
+"Nejdøíve si zavolej konì prosím.";
+
+"¸»À» ¼ÒÀ¯ÇÏ°í ÀÖÁö ¾Ê½À´Ï´Ù.";
+"Nemáš konì.";
+
+"¸»À» Åº »ó´ë¿Í °¨Á¤Ç¥ÇöÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš vyjadøovat emoce hráèi, kterı jede na koni.";
+
+"¸»À» Åº »óÅÂ¿¡¼­ °¨Á¤Ç¥ÇöÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš vyjadøovat emoce, pokud jedeš na koni.";
+
+"¸»À» Åº »óÅÂ¿¡¼­ ¿¹º¹À» ÀÔÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Toto nemùeš pouít, kdy jedeš na koni.";
+
+"¸»À» Åº »óÅÂ¿¡¼­´Â ¸ÔÀÌ¸¦ ÁÙ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš nakrmit svého konì kdy na nìm sedíš!";
+
+"¸»ÀÇ ½ºÅ×¹Ì³Ê°¡ ºÎÁ·ÇÏ¿© ¸»À» Å» ¼ö ¾ø½À´Ï´Ù.";
+"Vytrvalost tvého konì je pøíliš malá.";
+
+"¸»ÀÌ ¾ø½À´Ï´Ù. ¸¶±Â°£ °æºñº´À» Ã£¾Æ°¡¼¼¿ä.";
+"Zde není ádnı kùò. Zeptej se pacholka.";
+
+"¸»ÀÌ Á×¾îÀÖ´Â »óÅÂ ÀÔ´Ï´Ù.";
+"Tvùj kùò je mrtvı.";
+
+"¸ÂÀ¸¸é O, Æ²¸®¸é X·Î ÀÌµ¿ÇØÁÖ¼¼¿ä";
+"Pokud je to správnì, jdìte na O. Pokud je to špatnì, jdìte na X.";
+
+"¸Ó´Ï  ·ê·¿ ½ÃÀÛ.";
+"Spustit ruletu Yangù.";
+
+"¸ÕÀú ´ÙÀÌ¾Æ¸óµå·Î ¾Ç¼¼¼­¸®¿¡ ¼ÒÄÏÀ» Ãß°¡ÇØ¾ßÇÕ´Ï´Ù.";
+"Nejprve musíš pøidat úchyt. Na to pouij diamant.";
+
+"¸ÕÀú ¿ëÈ¥¼® Äù½ºÆ®¸¦ ¿Ï·áÇÏ¼Å¾ß ÇÕ´Ï´Ù.";
+"Pøed tím, ne budeš moci otevøít Cor Draconis, musíš dokonèit úkol Draèí kámen a aktivovat Alchymii Draèích kamenù.";
+
+"¸ÕÀú ÀÏ¾î ³ª¼¼¿ä.";
+"Nejprve vstaò.";
+
+"¸ÕÀú Àç°¡ºñ¼­¸¦ ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡½ÃÄÑ ÁÖ¼¼¿ä.";
+"Pokud má vìc ji 4 bonusy, mùete ji vylepšit jen pomocí Mramoru poehnání.";
+
+"¸ŞÆ¾2ÀÎÁõ¹øÈ£: %s";
+"Metin2 Potvrzovací èíslo: %s";
+
+"¸ŞÆ¾¼® ºÎÂø¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Kámen ducha úspìšnì pøidán.";
+
+"¸ŞÆ¾¼® ºÎÂø¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Kámen ducha se pøi pøidávání rozpadl.";
+
+"¸í·É¾î¸¦ ¸ğµÎ ÀÔ·ÂÇÏ¼¼¿ä.";
+"Prosím zadej rozkaz v plném znìní.";
+
+"¸í·É¾îÀÇ ¼­ºê Ä¿¸Çµå°¡ Àß¸ø µÇ¾ú½À´Ï´Ù.";
+"Subordinace rozkazu je neplatná.";
+
+"¸ğ´ÚºÒÀ» ÇÇ¿ï ¼ö ¾ø´Â ÁöÁ¡ÀÔ´Ï´Ù.";
+"Zde nemùeš dìlat táborák.";
+
+"¸ó½ºÅÍ¿¡°Ô °­ÇÔ +%d%%";
+"Síla proti nestvùrám + %d%%";
+
+"¸ö ¼ÓÀÌ ¶ß°Ì±º. ÇÏÁö¸¸ ¾ÆÁÖ Æí¾ÈÇØ. ÀÌ´ë·Î ±â¸¦ ¾ÈÁ¤½ÃÅ°ÀÚ.";
+"Hoøím uvnitø, ale zklidòuje to mé tìlo. Moje Chi se musí stabilizovat.";
+
+"¸ö¿¡¼­ ¹º°¡ ÈûÀÌ ÅÍÁ® ³ª¿À´Â ±âºĞÀÌ¾ß!";
+"Mé tìlo je plné síly!";
+
+"¹«±â¿Í °©¿Ê¿¡¸¸ »ç¿ë °¡´ÉÇÕ´Ï´Ù.";
+"Lze jej pouít pouze na zbraò nebo brnìní.";
+
+"¹«´ç°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% odolnost proti útoku Šamana";
+
+"¹«´ç¿¡°Ô °­ÇÔ +%d%%";
+"Síla proti Šamanùm + %d%%";
+
+"¹«·á °³·® ±âÈ¸´Â 20 ÀÌÇÏÀÇ ¹«±â¸¸ °¡´ÉÇÕ´Ï´Ù";
+"Bezplatné zbraòové zlepšení mohou bıt uity pouze na zbranì do úrovnì 20.";
+
+"¹«»ç°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% odolnost proti útoku váleèníka";
+
+"¹«»ç¿¡°Ô °­ÇÔ +%d%%";
+"Síla proti Váleèníkùm + %d%%";
+
+"¹®ÀÚ ¸Ş¼¼Áö Àü¼Û¿¡´Â 2000¿øÀÌ ÇÊ¿ä ÇÕ´Ï´Ù.";
+"Potøebuješ 2000 DT na poslání textové zprávy.";
+
+"¹®ÀÚ ¸Ş¼¼Áö Àü¼ÛÀº ·¹º§ 20ºÎÅÍ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Musíš mít minimálnì úroveò 20 na posílání textovıch zpráv.";
+
+"¹®ÀÚ ¸Ş¼¼Áö¸¦ Àü¼Û Çß½À´Ï´Ù.";
+"Tvá textová zpráva byla odeslána.";
+
+"¹®Á¦ ÀÔ´Ï´Ù.";
+"Otázka.";
+
+"¹®Á¦¸¦ ÃâÁ¦ÇÏ¿´½À´Ï´Ù.";
+"Objevila se chyba.";
+
+"¹®Á¦¸¦ ÃâÁ¦ÇÏÁö ¸øÇß½À´Ï´Ù.";
+"Nevyskytly se ádné chyby.";
+
+"¹° ¼Ó¿¡ ¸ğ´ÚºÒÀ» ÇÇ¿ï ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš dìlat táborák pod vodou... to pøeci dá rozum.";
+
+"¹°¸®Å¸°İ½Ã ºí·° È®·ü %d%%";
+"%d%% šance na blok útoku boje zblízka.";
+
+"¹°¾à »ç¿ë½Ã %d%% ¼º´É Áõ°¡";
+"Zvıšení síly na %d%% pøi vypití elixíru.";
+
+"¹°¾à Á¦Á¶¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Míchání elixíru bylo neúspìšné.";
+
+"¹°¾à Á¦ÇÑÀÌ ¾ø½À´Ï´Ù.";
+"Není limit na elixíry.";
+
+"¹°¾à Á¶ÇÕÀ» À§ÇÑ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"Nemáš všechny suroviny na vırobu elixíru.";
+
+"¹°¾àÀ» %d °³ ±îÁö »ç¿ë °¡´ÉÇÕ´Ï´Ù.";
+"Mùeš pouít a %d elixírù.";
+
+"¹º°¡ ¸ö ¾È¿¡ ÈûÀÌ »ı±â´Â ±âºĞÀÎ °É.";
+"Cítím se osvìen.";
+
+"¹Ì³¢¸¦ ³¢°í ´øÁ® ÁÖ¼¼¿ä.";
+"Nejdøíve dej návnadu na háèek.";
+
+"¹ÎÃ¸ +%d";
+"Pohyblivost +%d";
+
+"¹ÎÃ¸ÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Na nošení tohoto pøedmìtu nemáš dostateènou pohyblivost.";
+
+"¹Ğ±³·ù Å¸°İÄ¡ +%d%%";
+"Posílení útoku proti Milgyo + %d%%";
+
+"¹Ù¶÷ ÀúÇ× %d%%";
+"Odolnost proti vìtru %d%%";
+
+"¹æ¾î·Â +%d";
+"Brnìní + %d";
+
+"¹æ¾î·Â +%d%%";
+"Obrana + %d%%";
+
+"¹æ¿ï ¹æ¾î %d%%";
+"Obrana proti zvonu %d%%";
+
+"¹è ¼Ó¿¡¼­ Á¶°³°¡ ³ª¿Ô½À´Ï´Ù.";
+"Uvnitø ryby je mušle.";
+
+"¹è ¼Ó¿¡¼­ Áö··ÀÌ°¡ ³ª¿Ô½À´Ï´Ù.";
+"Uvnitø ryby je èerv.";
+
+"¹ö¸± ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Tento pøedmìt nemùeš zahodit.";
+
+"º¯°æÇÒ ¼Ó¼ºÀÌ ¾ø½À´Ï´Ù.";
+"Nemáš ádné vylepšení, které by jsi mohl pøípadnì mìnit.";
+
+"º¯½Å »óÅÂ¿¡¼­´Â ¸»¿¡ Å» ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš jet na koni po dobu tvoji promìny.";
+
+"º¯½ÅÁß¿¡´Â Ã¥À» ÀĞÀ»¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš èíst knihu, dokud jsi v promìnì.";
+
+"ºÎÂøÇÒ ¼ö ÀÖ´Â ½½·ÔÀÌ ¾ø½À´Ï´Ù.";
+"ádné volné úchyty.";
+
+"ºÎÃ¤ ¹æ¾î %d%%";
+"Obrana proti vìjíøi %d%%";
+
+"ºÒ¹ı ÇÁ·Î±×·¥ÀÌ °¨Áö µÇ¾î °ÔÀÓÀÌ Á¾·á µË´Ï´Ù.";
+"Ilegální software rozpoznán. Hra bude ukonèena.";
+
+"ºñ¼Ó¾î³ª Àº¾î°¡ Æ÷ÇÔµÈ »óÁ¡ ÀÌ¸§À¸·Î »óÁ¡À» ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš pojmenovat své skladištì neplatnım jménem.";
+
+"ºó º´ÀÌ ¸ğÀÚ¸¨´Ï´Ù.";
+"Nemáš dostatek prázdnıch lahví.";
+
+"»©³¾ ¼ö ÀÖ´Â ¸ŞÆ¾¼®ÀÌ ¾ø½À´Ï´Ù.";
+"Zde není ádnı kámen na sebrání.";
+
+"»©³¾ ¿µ¼®ÀÌ ¾ø½À´Ï´Ù";
+"Zde není ádnı kámen na vyjmutí.";
+
+"»ç±Í Å¸¿ö ¿Ï·á º¸»óÀº ÇÑ¹ø±îÁö »ç¿ë°¡´ÉÇÕ´Ï´Ù.";
+"Za úkol Vìe Démonù mùeš bıt odmìnìn pouze jednou.";
+
+"»ç¿ë Á¦ÇÑ·®À» ÃÊ°úÇÏ¿´½À´Ï´Ù.";
+"Tohle je pøes limit.";
+
+"»ç¿ë¹ı: transfer <name>";
+"Pouít: transfer <name>";
+
+"»ç¿ë¹ı: warpto <character name>";
+"Pøíkaz: warpto <character name>";
+
+"»ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Teï a zde tato funkce není k dispozici.";
+
+"»ï°Å¸® ¸÷ ¸®Á¨";
+"Poèet pøíšer v Bitvì královstvích:";
+
+"»ï°Å¸® ÀüÅõ Âü°¡Áß¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš pouít Pergamen lokality v prùbìhu bitvy království.";
+
+"»ï°Å¸® ÀüÅõ¿¡¼­ %s ±¹°¡°¡ °¡Àå¸ÕÀú Å»¶ôÀ» ÇÏ¿´½À´Ï´Ù";
+"Království %s bylo poraeno a vypadlo z bitvy království.";
+
+"»ó´ë¹æ Ä³¸¯ÅÍ°¡ Á¢¼ÓÀ» Á¾·áÇÏ¿© ´ë·ÃÀ» ÁßÁöÇÕ´Ï´Ù.";
+"Soupeø byl oddìlenı. Souboj skonèil.";
+
+"»ó´ë¹æ Ä³¸¯ÅÍÀÇ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Tvùj soupeø má problémy. Souboj se ukonèuje.";
+
+"»ó´ë¹æÀÇ µ·ÀÌ ºÎÁ·ÇÏ°Å³ª ¾ÆÀÌÅÛÀÌ Á¦ÀÚ¸®¿¡ ¾ø½À´Ï´Ù.";
+"Druhá osoba nemá dostatek Yangù, nebo místa v inventáøi.";
+
+"»ó´ë¹æÀÇ ¼ÒÁöÇ°¿¡ ºó °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"Druhá osoba nemá dostatek místa v inventáøi.";
+
+"»ó´ë¹æÀÇ ÃÑ±İ¾×ÀÌ 20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© °Å·¡¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù..";
+"Hráè má více jak 2 Biliony Yangù. Nemùeš s ním obchodovat.";
+
+"»ó´ë¹æÀÌ %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"Hráè je na kanále %d. (Ty jsi na kanále %d.)";
+
+"»ó´ë¹æÀÌ ±³È¯ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"Druhá osoba zrušila obchod.";
+
+"»ó´ë¹æÀÌ ´Ù¸¥ °Å·¡¸¦ ÇÏ°í ÀÖ´Â ÁßÀÔ´Ï´Ù.";
+"Tento hráè ji s nìkım obchoduje.";
+
+"»ó´ë¹æÀÌ ´Ù¸¥ °Å·¡ÁßÀÌ¶ó °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Druhá osoba je momentálnì zaneprázdnìna, take s ní nyní nemùeš obchodovat.";
+
+"»ó´ë¹æÀÌ ´ë·ÃÁßÀÔ´Ï´Ù.";
+"Hráè právì bojuje.";
+
+"»ó´ë¹æÀÌ ¸Ş½ÅÁ® Ãß°¡ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"Hráè odmítl bıt pøidán do tvého seznamu pøátel.";
+
+"»ó´ë¹æÀÌ ¿Â¶óÀÎ »óÅÂ°¡ ¾Æ´Õ´Ï´Ù.";
+"Hráè není online.";
+
+"»ó´ë¹æÀÌ ÀÖ´Â °÷À¸·Î ¿öÇÁÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš se pøemístit k hráèi.";
+
+"»ó´ë¹æÀÌ Ä£±¸ Ãß°¡¸¦ ¹ŞÀ» ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"Nemùeš pøidat hráèe, stojícího proti tobì, do seznamu pøátel.";
+
+"»ó´ë¹æÀÌ ÆÄÆ¼¿¡ ¼ÓÇØÀÖÁö ¾Ê½À´Ï´Ù.";
+"Tento hráè není v této skupinì.";
+
+"»óÀÚ°¡ °©ÀÚ±â Æø¹ßÇÏ¿´½À´Ï´Ù! »ı¸í·ÂÀÌ °¨¼ÒÇß½À´Ï´Ù.";
+"Bedna náhle vybuchla! Ztratil jsi body ivota (ZB).";
+
+"»óÀÚ¿¡¼­ %s °¡ %d °³ ³ª¿Ô½À´Ï´Ù.";
+"Obdrel jsi %s, %d kusù";
+
+"»óÀÚ¿¡¼­ %s °¡ ³ª¿Ô½À´Ï´Ù.";
+"V bednì je %s.";
+
+"»óÀÚ¿¡¼­ ³ª¿Â ³ì»ö ¿¬±â¸¦ µéÀÌ¸¶½ÃÀÚ µ¶ÀÌ ¿Â¸öÀ¸·Î ÆÛÁı´Ï´Ù!";
+"Pokud vdechneš zelenı kouø vycházející z bedny, jed se rozšíøí v tvém tìle!";
+
+"»óÀÚ¿¡¼­ ³ª¿Â »¡°£ ¿¬±â¸¦ µéÀÌ¸¶½ÃÀÚ ¿òÁ÷ÀÌ´Â ¼Óµµ°¡ ´À·ÁÁ³½À´Ï´Ù!";
+"Pokud vdechneš rudı kouø vycházející z bedny, budeš rychlejší!";
+
+"»óÀÚ¿¡¼­ ¸ó½ºÅÍ°¡ ³ªÅ¸³µ½À´Ï´Ù!";
+"Podívej, co vypadlo z bedny!";
+
+"»óÀÚ¿¡¼­ ºÎÅÍ ½ÅºñÇÑ ºûÀÌ ³ª¿É´Ï´Ù.";
+"Z této bedny vychází tajemná záøe.";
+
+"»óÁ¡°úÀÇ °Å¸®°¡ ³Ê¹« ¸Ö¾î ¹°°ÇÀ» »ì ¼ö ¾ø½À´Ï´Ù.";
+"Jsi pøíliš daleko od obchodu na nákup.";
+
+"»óÁ¡°úÀÇ °Å¸®°¡ ³Ê¹« ¸Ö¾î ¹°°ÇÀ» ÆÈ ¼ö ¾ø½À´Ï´Ù.";
+"Jsi pøíliš daleko od obchodu na prodej.";
+
+"»óÇ°À» ¹ŞÀ» ÀÎº¥Åä¸®°¡ ºÎÁ·ÇÕ´Ï´Ù. ÀÎº¥Åä¸®¸¦ ºñ¿öÁÖ¼¼¿ä!";
+"Nemùeš pøijmout odmìnu, protoe máš plnı inventáø.";
+
+"»ı°¢¸¸Å­ ÀĞ±â°¡ ½±Áö°¡ ¾Ê±º. ÀÌÇØµµ ¾î·Æ°í ³»¿ëµµ ³­ÇØÇØ.";
+"Je to sloitìjší ne jsem si myslel.";
+
+"»ı¸í·Â È¸º¹ +%d";
+"Obnova ivotní energie +%d";
+
+"¼­¹ö¿¡ Ä¡¸íÀûÀÎ ¿À·ù°¡ ¹ß»ıÇÏ¿© ÀÚµ¿À¸·Î ÀçºÎÆÃµË´Ï´Ù.";
+"Kritická chyba serveru. Server bude automaticky restartován.";
+
+"¼±¾ÇÄ¡°¡ %d Áõ°¡ÇÏ¿´½À´Ï´Ù.";
+"Tvá hodnost se zvıšila o %d bodù.";
+
+"¼±¾ÇÄ¡¸¦ ´õ ÀÌ»ó ¿Ã¸± ¼ö ¾ø½À´Ï´Ù.";
+"Body hodnosti ji nemohou bıt zvyšovány.";
+
+"¼±ÅÃ ¸Ê Á¤º¸ ¼ºÁö %d Åë·Î %d %d %d";
+"Vyber informace mapy svaté zemì %d vstup %d %d %d";
+
+"¼ºº°ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš pouít tento pøedmìt, protoe nejsi správného pohlaví.";
+
+"¼ºº°ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"Tento pøedmìt mùe bıt otevøen pouze druhım pohlavím.";
+
+"¼º¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖ´Â ±â´ÉÀÔ´Ï´Ù.";
+"Tuhle funkci mùeš pouít pouze na hradì.";
+
+"¼ºÁö¿¡¼­ ºÎÈ° ±âÈ¸¸¦ ¸ğµÎ ÀÒ¾ú½À´Ï´Ù! ¸¶À»·Î ÀÌµ¿ÇÕ´Ï´Ù!";
+"Ztratil jsi šanci na oivení. Vrátíš se do mìsta.";
+
+"¼ºÁöÀÇ ¸¶¿Õ: ³ÊÈñ";
+"Ïábel svatého místa: [ENTER][ENTER]";
+
+"¼¼±İÀÌ %d %·Î ¼³Á¤µÇ¾ú½À´Ï´Ù";
+"Danì nastaveny na %d %%.";
+
+"¼Ë´Ù¿îÀÌ %dÃÊ ³²¾Ò½À´Ï´Ù.";
+"%d vteøin do vypnutí.";
+
+"¼ÒÀ¯ µ·ÀÌ 20¾ï³ÉÀ» ³Ñ¾î °Å·¡¸¦ ÇÛ¼ö°¡ ¾ø½À´Ï´Ù.";
+"Máš více jak 2 Bilionù Yangù. Nemùeš obchodovat.";
+
+"¼ÒÁö±İÀÌ ºÎÁ·ÇÏ¿© ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemáš dostatek Yangù na pouití tohoto pøedmìtu.";
+
+"¼ÒÁöÇ°¿¡ ºó °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"Nemáš dostatek místa v inventáøi.";
+
+"¼ÒÁöÇÏ°í ÀÖ´Â ¾ÆÀÌÅÛÀÌ ³Ê¹« ¸¹½À´Ï´Ù.";
+"Máš pøíliš mnoho vìcí v inventáøi.";
+
+"¼ÒÄÏ Ãß°¡¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Úchyt nebyl pøidán.";
+
+"¼ÒÄÏÀÌ ¼º°øÀûÀ¸·Î Ãß°¡µÇ¾ú½À´Ï´Ù.";
+"Úchyt úspìšnì pøidán.";
+
+"¼ÒÈ¯ÇÒ¼ö ¾ø´Â ¸ó½ºÅÍ ÀÔ´Ï´Ù. ¼ÒÈ¯°¡´ÉÇÑ ¸ó½ºÅÍ´Â È¨ÆäÀÌÁö¸¦ ÂüÁ¶ÇÏ¼¼¿ä";
+"Nestvùra nemùe bıt zavolána. Zkontroluj Mob-èíslo.";
+
+"¼Ó¼º Ãß°¡¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Vylepšení úspìšnì pøidáno.";
+
+"¼Ó¼º Ãß°¡¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Vylepšení nebylo pøidáno.";
+
+"¼Ó¼ºÀ» ¹Ù²ÛÁö %dºĞ ÀÌ³»¿¡´Â ´Ù½Ã º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.(%d ºĞ ³²À½)";
+"Tohle mùeš dìlat pouze %d minut po vylepšení. (%d minut zbıvá)";
+
+"¼Ó¼ºÀ» º¯°æÇÏ¿´½À´Ï´Ù.";
+"Zmìnil jsi vylepšení.";
+
+"¼Ó¼ºÀ» º¯°æÇÒ ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Nemùeš mìnit vylepšení tohoto pøedmìtu.";
+
+"¼ö¶ó°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% odolnost proti útoku Sury";
+
+"¼ö¶ó¿¡°Ô °­ÇÔ +%d%%";
+"Síla proti Surùm + %d%%";
+
+"¼ö·ÃÀÌ ½ÇÆĞ·Î ³¡³µ½À´Ï´Ù. ´Ù½Ã µµÀüÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.";
+"Trénink selhal. Zkus to prosím pozdìji.";
+
+"¼ö·ÃÇÒ ¼ö ¾ø´Â ½ºÅ³ÀÔ´Ï´Ù.";
+"Nemùeš trénovat tuto schopnost.";
+
+"½ºÅ³ µ¥¹ÌÁö %d%%";
+"Poškození schopností %d%%";
+
+"½ºÅ³ µ¥¹ÌÁö ÀúÇ× %d%%";
+"Odolnost proti poškození schopností %d%%";
+
+"½ºÅ³ ·¹º§À» ³»¸®´Âµ¥ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Sníil jsi svou úroveò schopností.";
+
+"½ºÅ³ ·¹º§À» ³»¸± ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš sníit svou úroveò schopností.";
+
+"½ºÅÏ +%d";
+"Hvìzda +%d";
+
+"½½·Î¿ì +%d";
+"Sniování rychlosti +%d";
+
+"½Â¸¶ ¼ö·Ã¼­ ÀÌÇØ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Nerozumìl jsi prùvodci jízdou na koni.";
+
+"½Â¸¶ ¼ö·Ã¼­¸¦ ÀĞ¾î ½Â¸¶ ½ºÅ³ Æ÷ÀÎÆ®¸¦ ¾ò¾ú½À´Ï´Ù.";
+"Obdrel jsi body jízdy na koni po pøeètení prùvodce jízdou na koni.";
+
+"½ÃÃ¼·ù Å¸°İÄ¡ +%d%%";
+"Posílení útoku proti Zombie + %d%%";
+
+"½Å¼ö±¹";
+"Království Shinsoo";
+
+"¾²·¯Áø »óÅÂ¿¡¼­´Â ¸»¿¡ Å» ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš naskoèit na konì, kdy se válíš po zemi :)";
+
+"¾²·¯Áø »óÅÂ¿¡¼­´Â ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tohle nemùeš dìlat pokud leíš na zemi.";
+
+"¾Æ´Ï ¾î¶»°Ô µÈ °Ô Á¾ÀÏ ÀĞ¾îµµ ¸Ó¸®¿¡ ¾È µé¾î¿À³Ä.";
+"Ètu ten samı øádek poøád dokola.";
+
+"¾Æ¹«°Íµµ ¾òÀ» ¼ö ¾ø¾ú½À´Ï´Ù.";
+"Nic jsi nedostal.";
+
+"¾ÆÀÌÅÛ °³·®ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš pouít pergamen %d sekund po obchodu.";
+
+"¾ÆÀÌÅÛ µå·Ó·ü  %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Šance na upuštìní pøedmìtù je v tuto chvíli plus %d%%";
+
+"¾ÆÀÌÅÛ µå·ÓÀ² %.1f¹è";
+"Šance nalézt pøedmìt %. 1f";
+
+"¾ÆÀÌÅÛ ·ê·¿ ½ÃÀÛ.";
+"Spustit ruletu pøedmìtù.";
+
+"¾ÆÀÌÅÛ Àü´Ş: %s ´Ô¿¡°Ô %s";
+"Obchod s pøedmìtem: %s, %s";
+
+"¾ÆÀÌÅÛ È¹µæ: %s";
+"%s obdreno.";
+
+"¾ÆÀÌÅÛ È¹µæ: %s ´ÔÀ¸·ÎºÎÅÍ %s";
+"%s získává %s.";
+
+"¾ÆÀÌÅÛ·Î±×°¡ syslog ¿¡ ³²¾Ò½À´Ï´Ù";
+"Záznam pøedmìtu uloen do systémového záznamu.";
+
+"¾ÆÀÌÅÛÀ» °Ç³×ÁÙ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš obchodovat s tímto pøedmìtem.";
+
+"¾ÆÀÌÅÛÀÇ ·¹º§ Á¦ÇÑº¸´Ù ·¹º§ÀÌ ³·½À´Ï´Ù.";
+"Tvá úroveò je pøíliš nízká na pouití tohoto pøedmìtu.";
+
+"¾ÆÀÌÅÛÀÌ ³ª¿Ã È®·ü";
+"Podíl padlıch pøedmìtù";
+
+"¾ÆÁ÷ °ñµå¸¦ ¹ö¸± ¼ö ¾ø½À´Ï´Ù.";
+"Nyní ještì nemùeš zahodit zlato.";
+
+"¾ÆÁ÷ ¸¶À»¿¡¼­ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù. (%d ÃÊ ³²À½)";
+"Stále není monı restart ve mìstì. Poèkej dalších %d vteøin.";
+
+"¾ÆÁ÷ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùe bıt pouito.";
+
+"¾ÆÁ÷ ½Â¸¶ ½ºÅ³À» ¼ö·ÃÇÒ ¼ö ÀÖ´Â ·¹º§ÀÌ ¾Æ´Õ´Ï´Ù.";
+"Potøebuješ minimálnì úroveò 50 na trénink jízdy na koni.";
+
+"¾ÆÁ÷ ÀÌ ¸Ó¸®¸¦ »ç¿ëÇÒ ¼ö ¾ø´Â ·¹º§ÀÔ´Ï´Ù.";
+"Pro nošení tohoto úèesu máš pøíliš nízkou úroveò.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù. (%dÃÊ ³²À½)";
+"Restart není monı. Poèkej dalších %d vteøin.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù.(%dÃÊ ³²À½ )";
+"Novı start není momentálnì monı. Poèkej %d vteøin.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù.(%dÃÊ ³²À½)";
+"Restart není monı. Poèkej dalších %d vteøin.";
+
+"¾Ç¸¶·ù Å¸°İÄ¡ +%d%%";
+"Posílení útoku proti ïáblùm + %d%%";
+
+"¾È³çÇÏ¼¼¿ä. ¸ŞÆ¾2 ÀÔ´Ï´Ù.";
+"Vítejte v Metin2.";
+
+"¾×¼ö°¡ 20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© °Å·¡¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù..";
+"Máš víc jak 2 Biliony Yangù. Nemùeš obchodovat.";
+
+"¾ç¼Õ°Ë ¹æ¾î %d%%";
+"Obrana proti obouruèním meèùm %d%%";
+
+"¾î´ÀÁ¤µµ ÀÌ ±â¼ú¿¡ ´ëÇØ ÀÌÇØ°¡ µÇ¾úÁö¸¸ Á¶±İ ºÎÁ·ÇÑµí ÇÑµ¥..";
+"Lepším se, ale stále nerozumím všemu.";
+
+"¾îºÎ¸¦ ÅëÇØ ´ÙÀ½ ·¹º§ÀÇ ³¬½Ã´ë·Î ¾÷±×·¹ÀÌµå ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Vylepši svùj prut za pomocí rybáøe.";
+
+"¾òÀº Æ÷ÀÎÆ®·Î´Â ½Â¸¶ ½ºÅ³ÀÇ ·¹º§À» ¿Ã¸± ¼ö ÀÖ½À´Ï´Ù.";
+"Tento bod mùeš pouít k vylepšení jezdeckıch schopností.";
+
+"¾ó¸¶ ¾È ³²¾Ò¾î! Á¶±İ¸¸ ´õ!";
+"Skoro hotovo! U jen trochu!";
+
+"¿©ÀÚ¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Pouze eny tohle dokáí.";
+
+"¿¬°è±â´Â ´õÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš trénovat další komba.";
+
+"¿­¼è°¡ ¸ÂÁö ¾Ê´Â °Í °°´Ù.";
+"Zdá se, e klíè nesedí k zámku.";
+
+"¿­¼è´Â ¸ÂÀ¸³ª ¾ÆÀÌÅÛ ÁÖ´Â ºÎºĞ ±¸ÇöÀÌ ¾ÈµÇ¾ú½À´Ï´Ù.";
+"Tohle je správnı klíè.";
+
+"¿­¼è·Î ¿©´Â ¹°°ÇÀÌ ¾Æ´Ñ°Í °°´Ù.";
+"Tento pøedmìt nemùe bıt otevøen klíèem.";
+
+"¿­¼è·Î Àá°Ü ÀÖ¾î¼­ ¿­¸®Áö ¾Ê´Â°Í °°´Ù. ¿­¼è¸¦ ±¸ÇØº¸ÀÚ.";
+"Zavøeno. Mìl bys jít hledat klíè.";
+
+"¿­½ÉÈ÷ ÇÏ´Â ¹è¿òÀ» °¡Áö´Â °Í¸¸ÀÌ ±â¼úÀ» ¹è¿ï¼ö ÀÖ´Â À¯ÀÏÇÑ ±æÀÌ´Ù..";
+"Této kapitole rozumím. Ale musel jsem tvrdì pracovat.";
+
+"¿­Á¤ÀÇ °¡¸éÀ» Âø¿ë½Ã¿¡¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Tohle mùeš provést pokud nosíš masku emocí.";
+
+"¿µ¼® °¨Áö±â°¡ ½Åºñ·Î¿î ºûÀ» ³»¸ç »ç¶óÁı´Ï´Ù.";
+"Kompas kamene Metinu zmizel v magické záøi.";
+
+"¿µ¼® °¨Áö±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"Kompas kamene Metinu zmizel.";
+
+"¿¹º¹À» ÀÔÀº »óÅÂ¿¡¼­ ¸»À» Å» ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš jet na koni pokud máš na sobì svatební šaty, nebo smoking.";
+
+"¿ÜÄ¡±â´Â ·¹º§ %d ÀÌ»ó¸¸ »ç¿ë °¡´É ÇÕ´Ï´Ù.";
+"Potøebuješ minimálnì úroveò %d, abys mohl volat.";
+
+"¿ÜÄ¡±â´Â À¯·áÈ¸¿ø¸¸ »ç¿ëÇÒ¼ö ÀÖ½À´Ï´Ù";
+"Potøebuješ vyšší úroveò, abys mohl volat.";
+
+"¿ë½ÅÀÇ °¡È£·Î °æÇèÄ¡°¡ ¶³¾îÁöÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Neztratil jsi ádné zkušenosti, díky poehnání draèího boha.";
+
+"¿ë½ÅÀÇ º¸È£·Î ¾ÆÀÌÅÛÀÌ ¶³¾îÁöÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Díky ochranì draèího boha, jsi nepustil ádné vìci.";
+
+"¿ë½É ÃßÃâ¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Zbıvající èas Draèího kamene byl odebrán.";
+
+"¿ë½É ÃßÃâ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Odebrání zbıvajícího èasu selhalo.";
+
+"¿ëÈ¥¼® »óÀÚ°¡ È°¼ºÈ­µÇÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Draèí kámen není aktivován.";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Draèí kámen byl odebrán.";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ½ÇÆĞÇÏ¿© %s¸¦ ¾ò¾ú½À´Ï´Ù.";
+"Odebrání Draèího kamene selhalo. Ovšem povedlo se ti získat následující: %s";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Odebrání Draèího kamene selhalo.";
+
+"¿î¿µÀÚ Á¦Á¦·Î Ã¤ÆÃÀÌ ±İÁö µÇ¾ú½À´Ï´Ù.";
+"Tvùj chat byl doèasnì zablokován kvùli spamu.";
+
+"¿õ±ÍÁ· Å¸°İÄ¡ +%d%%";
+"Posílení útoku proti Wonggui + %d%%";
+
+"¿ø·¡ À§Ä¡·Î º¹±Í";
+"Byl jsi pøenesen zpìt na místo poèátku.";
+
+"¿ùº´ ¶Ç´Â Á¾ÀÚ ¸¦ »ç¿ëÇÏ¿´½À´Ï´Ù";
+"Pouitı Mìsíèní koláè, nebo semínko.";
+
+"¿ùº´,Á¾ÀÚ »ç¿ëÈÄ 5ÃÊµ¿¾È »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Mìsíèní koláèek mùeš pouít pouze kadıch 5 vteøin.";
+
+"À¯·áÈ­ ¾ÆÀÌÅÛÀº °³ÀÎ»óÁ¡¿¡¼­ ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš prodat pøedmìt z obchodu doplòkù v soukromém stánku.";
+
+"À»";
+"to";
+
+"À»µÎÁö¸¦ ÅëÇÏ¿© ÀÔÀå °¡´ÉÇÕ´Ï´Ù.";
+"S Urielovım svolením mùeš vstoupit.";
+
+"ÀÌ °³·®¼­·Î °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš zlepšovat s tímto pergamenem.";
+
+"ÀÌ °³·®¼­·Î ´õ ÀÌ»ó °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Pergamen války nefunguje na pøedmìtech +4 nebo lepších.";
+
+"ÀÌ °÷¿¡¼­ ¿µ¼® °¨Áö±â°¡ µ¿ÀÛÇÏÁö ¾Ê´Â°Í °°½À´Ï´Ù.";
+"Kompas kamene Metinu nefunguje v podzemí.";
+
+"ÀÌ °÷¿¡¼± ÀÌº¥Æ®¿ë °¨Áö±â°¡ µ¿ÀÛÇÏÁö ¾Ê´Â°Í °°½À´Ï´Ù.";
+"Nemùeš pouít Detektor událostí z tohoto místa.";
+
+"ÀÌ ¸ŞÆ¾¼®Àº ¹«±â¿¡ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tento kámen ducha nemùeš pøidat na zbraò.";
+
+"ÀÌ ¸ŞÆ¾¼®Àº Àåºñ¿¡ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tento kámen ducha nemùeš pøidat na tento typ pøedmìtu.";
+
+"ÀÌ ½ºÅ³Àº ¾ÆÁ÷ ±×·£µå ¸¶½ºÅÍ ¼ö·ÃÀ» ÇÒ °æÁö¿¡ ÀÌ¸£Áö ¾Ê¾Ò½À´Ï´Ù.";
+"Nemáš dost vysokou úroveò tvé schopnosti pro trénink na velmistra.";
+
+"ÀÌ ½ºÅ³Àº ¾ÆÁ÷ Ã¥À¸·Î ¼ö·ÃÇÒ °æÁö¿¡ ÀÌ¸£Áö ¾Ê¾Ò½À´Ï´Ù.";
+"Tato schopnost není dost vysoká, aby mohla bıt trénována s knihou.";
+
+"ÀÌ ½ºÅ³Àº Ã¥À¸·Î ´õÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"U nemùeš trénovat tuto schopnost s knihou.";
+
+"ÀÌ ¾ÆÀÌÅÛÀ¸·Î ¼ÒÄÏÀ» Ãß°¡ÇÒ ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Tento pøedmìt nemùe mít více úchytù.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº PC¹æ¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Tento pøedmìt mùe bıt pouity pouze v internetové kavárnì.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tento pøedmìt nemùe bıt zlepšen.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº º§Æ® ÀÎº¥Åä¸®·Î ¿Å±æ ¼ö ¾ø½À´Ï´Ù.";
+"Tento pøedmìt si nemùeš na opasek pøidat.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº ÀÌ ¹æ½ÄÀ¸·Î´Â °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tento pøedmìt nemùe bıt zlepšen touto cestou.";
+
+"ÀÌ ¾ÆÀÌÅÛÀ» ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tyto pøedmìty nemohou bıt pouity spolu.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó º¸¼®À» ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Na tento pøedmìt ji nelze pøidat více drahokamù.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó ¼ÒÄÏÀ» Ãß°¡ÇÒ °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"Na tento pøedmìt ji nejde pøidat další úchyt.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó ÀåÂøÇÒ ¼ÒÄÏÀÌ ¾ø½À´Ï´Ù.";
+"Zde nejsou ádné úchyty pro drahokamy.";
+
+"ÀÌ Ã¥À¸·Î´Â ´õ ÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš dále trénovat s touto knihou.";
+
+"ÀÌ Ã¥Àº ³Ê¹« ¾î·Á¿ö ÀÌÇØÇÏ±â°¡ Èûµì´Ï´Ù.";
+"Není jednoduché porozumìt této knize.";
+
+"ÀÌ Ã¥Àº ³Ê¹« ¾î·Á¿ö¼­ ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tato kniha je pøíliš tìká na nauèení.";
+
+"ÀÌ Ã¥Àº ¾Æ¹«¸® ºÁµµ µµ¿òÀÌ µÉ °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Tato kniha Ti nepomùe.";
+
+"ÀÌ Ã¥À» ÀĞÀ¸·Á¸é ·¹º§À» ´õ ¿Ã·Á¾ß ÇÕ´Ï´Ù.";
+"Musíš si zvıšit úroveò, abys porozumìl této knize.";
+
+"ÀÌ Çàµ¿Àº »óÈ£µ¿ÀÇ ÇÏ¿¡ °¡´É ÇÕ´Ï´Ù.";
+"Na tohle potøebuješ souhlas svého spoluhráèe.";
+
+"ÀÌµ¿ µÇ¾îÁú À§Ä¡¿Í ³Ê¹« °¡±î¿ö ±ÍÈ¯ºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš pouít Pergamen lokality, protoe vzdálenost je pøíliš malá.";
+
+"ÀÌµ¿¼Óµµ %d";
+"Rychlost pohybu %d";
+
+"ÀÌµ¿ÇÒ ÁØºñ°¡ µÇ¾îÀÖÀ½À¸·Î ±ÍÈ¯ºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù";
+"Nemùeš pouít Pergamen lokality, protoe jsi pøipraven k teleportu.";
+
+"ÀÌ·¡¼­¾ß °øºÎ°¡ ¾ÈµÈ´Ù±¸.";
+"Nemohu se poøádnì soustøedit. Mìl bych si dát pauzu.";
+
+"ÀÌ¹Ì °°Àº Á¾·ùÀÇ ¿ëÈ¥¼®À» Âø¿ëÇÏ°í ÀÖ½À´Ï´Ù.";
+"Ji nosíš Draèí kámen tohoto typu.";
+
+"ÀÌ¹Ì ²ÈÇôÀÖ´ø ¹Ì³¢¸¦ »©°í %s¸¦ ³¢¿ó´Ï´Ù.";
+"Vymìnil jsi dosavadní návnadu za %s.";
+
+"ÀÌ¹Ì µĞ°©ÁßÀÎ »óÅÂÀÔ´Ï´Ù.";
+"U jsi promìnìn.";
+
+"ÀÌ¹Ì ¼±ÀüÆ÷°í ÁßÀÎ ±æµåÀÔ´Ï´Ù.";
+"Vyhlásil jsi válku tomuto cechu.";
+
+"ÀÌ¹Ì ¿Ïº®ÇÏ°Ô ¾Ë¾ÆµéÀ» ¼ö ÀÖ´Â ¾ğ¾îÀÌ´Ù.";
+"Touto øeèí ji mluvíš plynule.";
+
+"ÀÌ¹Ì ÀÔÈÄº¸µÇ¾îÀÖ½À´Ï´Ù";
+"Zde u je kandidatura.";
+
+"ÀÌ¹Ì Àåºñ¸¦ Âø¿ëÇÏ°í ÀÖ½À´Ï´Ù.";
+"Tento druh Draèího kamene ji máš ve vıbavì.";
+
+"ÀÌ¹Ì ÀüÀïÀÌ ³¡³µ½À´Ï´Ù.";
+"Válka ji skonèila.";
+
+"ÀÌ¹Ì Á¦Á¶Ã¢ÀÌ ¿­·ÁÀÖ½À´Ï´Ù.";
+"Okno vıroby je ji otevøeno.";
+
+"ÀÌ¹Ì Å»°ÍÀ» ÀÌ¿ëÁßÀÔ´Ï´Ù.";
+"Ji jedeš. Nejprve sesedni.";
+
+"ÀÌ¹Ì ÆÄÆ¼¿¡ ¼ÓÇØ ÀÖÀ¸¹Ç·Î °¡ÀÔ½ÅÃ»À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš pøijmout pozvání, protoe u ve skupinì jsi.";
+
+"ÀÌ¹Ì È¿°ú°¡ °É·Á ÀÖ½À´Ï´Ù.";
+"Efekt je ji aktivní.";
+
+"ÀÌ¹ÌÅõÇ¥¸¦ ÇßÀ½";
+"Ji voleno.";
+
+"ÀÌ¹ø¿¡ ÀâÀº ¹°°í±âÀÇ ±æÀÌ´Â %.2fcm";
+"Délka chycené ryby je %.2fcm.";
+
+"ÀÌº¥Æ®¿ë °¨Áö±â°¡ ½Åºñ·Î¿î ºûÀ» ³»¸ç »ç¶óÁı´Ï´Ù.";
+"Detektor událostí zmizel v magické záøi.";
+
+"ÀÌº¥Æ®¿ë °¨Áö±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"Detektor událostí zmizel.";
+
+"ÀÌ¼º°£¿¡¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Tohle mùe udìlat pouze druhé pohlaví.";
+
+"ÀÌÁ¦ Á» ½½½½ °¡´ÚÀÌ ÀâÈ÷´Â °Í °°Àºµ¥.";
+"Nyní rozumím!";
+
+"ÀÌÁ¦ Ã¥ÀÇ ¸¶Áö¸· ÀåÀÌ¾ß! ¼ö·ÃÀÇ ³¡ÀÌ ´«¿¡ º¸ÀÌ°í ÀÖ¾î!";
+"Jsem na poslední stránce knihy! Trénink je témìø ukonèen!";
+
+"ÀÎ°£·ù ¸ó½ºÅÍ Å¸°İÄ¡ +%d%%";
+"Hráèova síla útoku proti nestvùrám +%d%%";
+
+"ÀÎº¥Åä¸®°¡ ²Ë Â÷¼­ ³»¸± ¼ö ¾ø½À´Ï´Ù.";
+"Tvùj inventáø je plnı. Pøedmìt nelze sebrat.";
+
+"ÀÎÁõ¹øÈ£°¡ Æ²·È½À´Ï´Ù. ´Ù½Ã ½ÃµµÇÏ¼¼¿ä.";
+"Vaše potvrzovací èíslo není správné. Prosím zkus to znovu.";
+
+"ÀÔ·ÂÇÏ½Å ÀÌ¸§À» °¡Áø »ç¿ëÀÚ°¡ ¾ø½À´Ï´Ù.";
+"Zde není ádnı uivatel tohoto jména.";
+
+"ÀÚ°´°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% odolnost proti útoku Ninji";
+
+"ÀÚ°´¿¡°Ô °­ÇÔ +%d%%";
+"Síla proti Ninjùm + %d%%";
+
+"ÀÚµ¿À¸·Î ³ª°¡°ÔµË´Ï´Ù.";
+"Bude automaticky opuštìno.";
+
+"ÀÚ½ÅÀ» ¼±ÅÃÇÏ½Ã¸é ¹ÛÀ¸·Î ³ª°¥ ¼ö ÀÖ´Â <°ü¶÷ Á¾·á> ¹öÆ°ÀÌ ³ª¿É´Ï´Ù.";
+"Pøi vıbìru postavy se objeví ikona.";
+
+"ÀÚ½ÅÀ» ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš nabrat sám sebe.";
+
+"ÀÚÀç°¡ ºÎÁ·ÇÏ¿© °Ç¼³ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Na tuto budovu nemáš dostatek surovin.";
+
+"Àß¸øµÈ µĞ°© ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"To je špatnı pøedmìt na promìòování.";
+
+"Àß¸øµÈ ¼±ÅÃÀ» Çß½À´Ï´Ù";
+"Volba není správná.";
+
+"Àá½Ã ÈÄ OX ÀÌº¥Æ®¸¦ ´Ù½Ã ½ÃÀÛÇÏ°Ú½À´Ï´Ù.";
+"Soutì OX bude zakrátko znovu spuštìna.";
+
+"Àá½Ã ÈÄ ¸¶À»·Î ÀÌµ¿µÇ°Ú½À´Ï´Ù.";
+"Hráè bude za chvíli pøemístìn do mìsta.";
+
+"Àá½ÃÈÄ ¸ğµÎ ¸¶À»·Î ÀÌµ¿µË´Ï´Ù.";
+"Všichni budou brzy teleportováni do mìsta.";
+
+"Àá½ÃÈÄ ÇØ´ç ¸¶À»Àº  ¸¶À»·Î ÀÌµ¿µË´Ï´Ù.";
+"Všichni budou zanedlouho teleportováni do mìsta.";
+
+"ÀåºñÁßÀÎ ¾ÆÀÌÅÛÀº °³ÀÎ»óÁ¡¿¡¼­ ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Pouívané pøedmìty nemohou bıt prodány ve stánku.";
+
+"ÀåÂø¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Ozbrojení úspìšné.";
+
+"ÀåÂø¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Ozbrojení selhalo.";
+
+"Àç·á(%s)°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"Nemáš dostatek surovin (%s).";
+
+"ÀúÁÖ µÇµ¹¸®±â È®·ü %d%%";
+"Odraení kletby: %d%%";
+
+"Àû¿ë ·¹º§º¸´Ù ³ô¾Æ »ç¿ëÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.";
+"Úroveò tvého pøedmìtu je pøíliš vysoká.";
+
+"ÀûÇÕÇÏÁö ¾ÊÀº ±æµå ÀÌ¸§ ÀÔ´Ï´Ù.";
+"Jméno cechu je neplatné.";
+
+"Àü±â ÀúÇ× %d%%";
+"Odolnost proti bleskùm %d%%";
+
+"ÀüÀï ¼­¹ö°¡ ¿­·ÁÀÖÁö ¾Ê¾Æ ±æµåÀüÀ» ½ÃÀÛÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Cechovní boj nemùe zaèít, protoe server není online.";
+
+"ÀüÁ¦±¹";
+"Všechna království";
+
+"ÀüÅõ°¡ ½ÃÀÛ µÇ¾î Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"Zrušeno. Vstoupili jste do bitvy.";
+
+"Á¤´äÀº";
+"Správná odpovìï je:";
+
+"Á¤´äÀÔ´Ï´Ù!";
+"Správnì!";
+
+"Á¤»óÀûÀ¸·Î ÅõÇ¥¸¦ÇÏ¿´½À´Ï´Ù.";
+"Øádnì voleno.";
+
+"Á¤½Å·Â È¸º¹ +%d";
+"Obnova bodù many +%d";
+
+"Á¦Á¶ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù";
+"Nemáš správnı materiál.";
+
+"Á¦Á¶¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Vylepšení tvého pøedmìtu selhalo.";
+
+"Á¦Á¶Ã¢ÀÌ ¿­·ÁÀÖÁö ¾Ê½À´Ï´Ù";
+"Okno vıroby není otevøeno.";
+
+"Á¶°³°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"V mušli nic nebylo.";
+
+"Á¶°³¿¡¼­ µ¹Á¶°¢ÀÌ ³ª¿Ô½À´Ï´Ù.";
+"V mušli najdeš jen kousek kamene.";
+
+"Á¶°³¿¡¼­ ¹éÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"V mušli je Bílá perla.";
+
+"Á¶°³¿¡¼­ Ã»ÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"V mušli je Modrá perla.";
+
+"Á¶°³¿¡¼­ ÇÇÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"V mušli je Krvavì rudá perla.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â °Ç¹°ÀÔ´Ï´Ù.";
+"Tato budova neexistuje.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â ¾ÆÀÌÅÛ ÀÔ´Ï´Ù";
+"Tento pøedmìt neexistuje.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â Ä³¸¯ÅÍ ÀÔ´Ï´Ù.";
+"Tato postava neexistuje.";
+
+"ÁÁ¾Æ, ÀÌ ±â¼¼·Î °è¼Ó ³ª°£´Ù!";
+"Dobøe, mìl bych zùstat dále soustøedìnı.";
+
+"ÁÁ¾Ò¾î! Á¶±İ¸¸ ´õ ÀĞÀ¸¸é ³¡ÀÌ´Ù!";
+"Jsem osvícen! Skoro jsem to pøeèetl celé!";
+
+"ÁÖ¾È¼ú¼­¸¦ ÅëÇØ ÁÖÈ­ÀÔ¸¶¿¡¼­ ºüÁ®³ª¿Ô½À´Ï´Ù.";
+"Unikl jsi kletbì zlého ducha za pomoci pergamenu exorcismu.";
+
+"Á×Àº ¸»¿¡°Ô »ç·á¸¦ ¸ÔÀÏ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš krmit mrtvého konì.";
+
+"Á×Àº Á¤º¸ %s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d";
+"%s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d";
+
+"Á×Áö ¾ÊÀº ¸»¿¡°Ô ¼±ÃÊ¸¦ ¸ÔÀÏ ¼ö ¾ø½À´Ï´Ù.";
+"Opièí bylinky nejsou urèeny ke krmení ivıch koní. Jsou pouívány k oivení koní mrtvıch.";
+
+"Áö±İºÎÅÍ %sÀº 30ºĞ°£ ºÀÈ­¸¦ ÆÄ±«ÇÏ¿© º¸»óÀ» È¹µæ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"30 minut od teï mue hráè %s dostat odmìnu, protoe znièil signální oheò.";
+
+"Áö´É +%d";
+"Inteligence +%d";
+
+"Áö´ÉÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Na nošení tohoto pøedmìtu nemáš dostateènou inteligenci.";
+
+"Á÷Á¢ Å¸°İÄ¡ ¹İ»ç È®·ü : %d%%";
+"Odraení pøímého zásahu: %d%%";
+
+"Áø³ë±¹";
+"Království Jinno";
+
+"Âø¿ë ÁßÀÎ ¾ÆÀÌÅÛÀº ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš prodat pøedmìt, kterı pouíváš.";
+
+"Âø¿ë ÁßÀÎ ¿ëÈ¥¼®Àº ÃßÃâÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Draèí kámen nelze odebrat.";
+
+"Âü";
+"TRUE";
+
+"Ã¢°í,°Å·¡Ã¢µîÀÌ ¿­¸° »óÅÂ¿¡¼­´Â °³·®À» ÇÒ¼ö°¡ ¾ø½À´Ï´Ù";
+"Nemùeš nic vylepšit, kdy je otevøené další okno.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Znovu mùeš obchodovat za %d vteøin.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš pouít Pergamen lokality %d vteøin po otevøení skladištì.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â ´Ù¸¥°÷À¸·Î ÀÌµ¿ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Nemùeš jít nikam %d vteøin po otevøení skladištì.";
+
+"Ã¤±¤¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Kopání bylo úspìšné.";
+
+"Ã¤±¤¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Kopání se nezdaøilo.";
+
+"Ã¤±¤À» Áß´ÜÇÏ¿´½À´Ï´Ù.";
+"Kopání dokonèeno.";
+
+"Ã¤ÆÃ ±İÁö »óÅÂÀÔ´Ï´Ù.";
+"Tvùj chat je blokován.";
+
+"Ã¤ÆÃ ±İÁö°¡ Ç®·È½À´Ï´Ù.";
+"Tvá blokace chatu byla zrušena.";
+
+"Ã¥À¸·Î ´õ ³ôÀº °æÁöÀÇ ¼ö·ÃÀ» ¼º°øÀûÀ¸·Î ³¡³»¼Ì½À´Ï´Ù.";
+"Dokonèil jsi trénink s knihou úspìšnì.";
+
+"Ã¥Àåµµ ÀÌÁ¦ ¾ó¸¶ ³²Áö ¾Ê¾Ò±º.";
+"U jen pár stránek zbıvá a budu to mít celé pøeèteno.";
+
+"ÃµÁ¶±¹";
+"Království Chunjo";
+
+"Ã»¼ÒÇÒ ¼®ÀÌ ¹ÚÇôÀÖÁö ¾Ê½À´Ï´Ù.";
+"Nejsou tu ádné odštìpky kamene k odstranìní.";
+
+"Ã¼·Â +%d";
+"Vytrvalost +%d";
+
+"Ã¼·ÂÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Na nošení tohoto pøedmìtu nemáš dostateènou vitalitu.";
+
+"ÃÑ ÄûÁî ¼ö: %d";
+"Celkové èíslo kvízu: %d";
+
+"ÃÖ´ë »ı¸í·Â +%d";
+"Body ivota +%d";
+
+"ÃÖ´ë »ı¸í·Â +%d%%";
+"Horní limit ivotní energie +%d%%";
+
+"ÃÖ´ë Á¤½Å·Â +%d";
+"Body many +%d";
+
+"ÃÖ´ë Á¤½Å·Â +%d%%";
+"Horní limit ivotní energie +%d%%";
+
+"ÃÖ´ë Áö±¸·Â +%d";
+"Maximální vytrvalost + %d";
+
+"Ãàº¹ÀÇ ¼­¿Í ÇöÃ¶À» ÇÕÄ¥ ¼ö ÀÖ½À´Ï´Ù.";
+"Mùete kombinovat Magickı kámen a Poehnanı pergamen.";
+
+"Ãâ¸¶¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù";
+"Nemùe bıt zvolen.";
+
+"ÃæÀüÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tento draèí kámen nemùeš znovu nabít.";
+
+"Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"Tvé odhlášení bylo zrušeno.";
+
+"Ä³¸¯ÅÍ¸¦ ÀüÈ¯ ÇÕ´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Zmìnil jsi osobu. Prosím èekej.";
+
+"ÄğÅ¸ÀÓ -%d";
+"Èas obnovení -%d";
+
+"ÄğÅ¸ÀÓ Àû¿ëÁß  %d ÈÄ »ç¿ë°¡´É";
+"Pøipravuje se. Pouitelné po %d.";
+
+"Äù½ºÆ®¸¦ ·ÎµåÇÏ´Â ÁßÀÔ´Ï´Ù. Àá½Ã¸¸ ±â´Ù·Á ÁÖ½Ê½Ã¿À.";
+"Tvùj poadavek je zavádìn. Prosím èekej.";
+
+"Å©À¹, ±â°¡ ¿ª·ùÇÏ°í ÀÖ¾î! ÀÌ°Å ¼³¸¶ ÁÖÈ­ÀÔ¸¶ÀÎ°¡!? Á¨Àå!";
+"Upsala, tohle nefungovalo. Hrom do toho!";
+
+"Å¬¶óÀÌ¾ğÆ® ¹öÀüÀÌ Æ²·Á ·Î±×¾Æ¿ô µË´Ï´Ù. Á¤»óÀûÀ¸·Î ÆĞÄ¡ ÈÄ Á¢¼ÓÇÏ¼¼¿ä.";
+"Verze herního klienta není správná. Prosíme, nainstaluj poslední patch.";
+
+"Å¸°İÄ¡ %d%% ¸¦ »ı¸í·ÂÀ¸·Î Èí¼ö";
+"Pohlcování ivotní energie %d%% pøi útoku.";
+
+"Å¸·ÂÄ¡ %d%% ¸¦ Á¤½Å·ÂÀ¸·Î Èí¼ö";
+"Pohlcování bodù many (MB) %d%% pøi útoku.";
+
+"Å¸Á¦±¹ À¯Àú´Â ¼ÒÈ¯ ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Nemùeš volat neznámé hráèe.";
+
+"Å¸Á¦±¹ À¯Àú¿¡°Ô´Â ÀÌµ¿ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Nemùeš se pøemístit k neznámému hráèi.";
+
+"Åº »óÅÂ¿¡¼­´Â ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tohle nemùeš dìlat pokud sedíš na koni.";
+
+"Å×½ºÆ® ¼­¹ö ½Ã°£Á¦ÇÑ Åë°ú";
+"Èas vymezenı na testovacím serveru vypršel.";
+
+"ÆÄÆ¼ ÁßÀÌ ¾Æ´Õ´Ï´Ù.";
+"Nejsi v této skupinì.";
+
+"ÆÄÆ¼ÀÇ Çùµ¿·ÂÀÌ ³ô¾ÆÁ® Áö±İºÎÅÍ Ãß°¡ °æÇèÄ¡ º¸³Ê½º¸¦ ¹Ş½À´Ï´Ù.";
+"Skupina skvìle spolupracuje a její èlenové poblí velitele obdrí zkušenostní bonus.";
+
+"ÆÄÆ¼ÀåÀÌ Á¢¼Ó »óÅÂ°¡ ¾Æ´Ï¶ó¼­ ¿äÃ»À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Skupina] Nemùeš provést poadavek, protoe vedoucí skupiny není online.";
+
+"ÆÇ¸Å±İ¾×ÀÇ %d %% °¡ ¼¼±İÀ¸·Î ³ª°¡°ÔµË´Ï´Ù";
+"Daò z prodeje: %d%%.";
+
+"ÆÛÆåÆ® ¸¶½ºÅÍµÈ ½ºÅ³ÀÔ´Ï´Ù. ´õ ÀÌ»ó ¼ö·Ã ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ji jsi mistr této schopnosti. Nemùeš ji dál trénovat.";
+
+"ÆòÅ¸ µ¥¹ÌÁö %d%%";
+"Poškození úderem %d%%";
+
+"ÆòÅ¸ µ¥¹ÌÁö ÀúÇ× %d%%";
+"Odolnost proti úderùm %d%%";
+
+"ÇÃ·¹ÀÌ¾î %d ¿Í ÇÃ·¹ÀÌ¾î  %d¸¦ ÆÄÈ¥½ÃÅµ´Ï´Ù..";
+"Zrušenı kontrakt mezi hráèem %d a hráèem %d.";
+
+"ÇÑ¼Õ°Ë ¹æ¾î %d%%";
+"Obrana proti jednoruèním meèùm %d%%";
+
+"ÇØ´ç À¯Àú´Â %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"Pøidání hráèe %d do kanálu. (Souèasnı Kanál %d)";
+
+"ÇÚµåÆù ¹øÈ£°¡ µî·Ï µÇ¾ú½À´Ï´Ù.";
+"Mobilní telefonní èíslo je registrováno.";
+
+"ÇÚµåÆù ¹øÈ£°¡ µî·ÏµÇ¾î ÀÖÁö ¾Ê½À´Ï´Ù.";
+"Mobilní telefonní èíslo není registrováno.";
+
+"ÇöÀç %s ±¹°í¿¡´Â %d ÀÇ µ·ÀÌ ÀÖ½À´Ï´Ù";
+"%s má stále %d Yangù";
+
+"ÇöÀç %s ±¹°í¿¡´Â %u ÀÇ µ·ÀÌ ÀÖ½À´Ï´Ù";
+"%s má stále %u Yangù.";
+
+"ÇöÀç ³²Àº Âü°¡ÀÚ¼ö : %d";
+"Poèet dalších úèastníkù: %d";
+
+"ÇöÀç ½ºÄÚ¾î ½Å¼ö±¹:%d ÃµÁ¶±¹:%d Áø³ë±¹:%d";
+"Aktuální skóre:  Shinsoo: %d, Chunjo: %d, Jinno: %d";
+
+"ÇöÀç ¿Â¶óÀÎ »óÅÂ ÀÔ´Ï´Ù. ±Ó¸»À» ÀÌ¿ëÇÏ¼¼¿ä.";
+"Hráè je online. Pouij šeptání na rozhovor.";
+
+"ÇöÀç À§Ä¡¿¡¼­ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Tohle nemùeš pouít z této pozice.";
+
+"ÇöÀç ÀÌº¥Æ® Âü°¡ÀÚ ºĞµéÀº ¸¶À»·Î ÀÌµ¿ µÇ°Ú½À´Ï´Ù.";
+"Souèasná událost je omezena jen na jednu oblast.";
+
+"ÇöÀç ÀüÀïÁßÀÎ ±æµå ÀÔ´Ï´Ù";
+"Cech je ve válce.";
+
+"ÇöÀç Çì¾î½ºÅ¸ÀÏ¿¡¼­´Â ¿°»ö°ú Å»»öÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.";
+"Nemùeš obarvit ani odbarvit tvùj souèasnı úèes.";
+
+"È­¿° ÀúÇ× %d%%";
+"Odolnost proti ohni %d%%";
+
+"È° °ø°İ È¸ÇÇ È®·ü %d%%";
+"%d%% šance na blok útoku z dálky.";
+
+"È°°ø°İ ÀúÇ× %d%%";
+"Odolnost proti útoku z dálky %d%%";
+

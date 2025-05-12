@@ -1,0 +1,90 @@
+if game . get_event_flag ( "arena_close" ) > 0 then 
+say_title ( locale_quest ( 38 ) ) 
+say ( locale_quest ( 42 ) ) 
+return 
+end 
+if not npc . lock ( ) then 
+say_title ( locale_quest ( 38 ) ) 
+say ( locale_quest ( 43 ) ) 
+return 
+end 
+local useMinLevel = game . get_event_flag ( "arena_use_min_level" ) 
+if useMinLevel == 0 then 
+useMinLevel = 25 
+end 
+if pc . get_level ( ) < useMinLevel then 
+say_title ( locale_quest ( 38 ) ) 
+say ( string . format ( locale_quest ( 44 ) , useMinLevel ) ) 
+npc . unlock ( ) 
+return 
+else 
+say_title ( locale_quest ( 38 ) ) 
+say ( locale_quest ( 45 ) ) 
+local sname = input ( ) 
+if sname == "" then 
+say_title ( locale_quest ( 38 ) ) 
+say ( locale_quest ( 46 ) ) 
+npc . unlock ( ) 
+return 
+else 
+say_title ( locale_quest ( 38 ) ) 
+say ( string . format ( locale_quest ( 47 ) , pc . get_name ( ) , sname ) ) 
+wait ( "" ) 
+local opp_vid = find_pc_by_name ( sname ) 
+if opp_vid == 0 then 
+say_title ( locale_quest ( 38 ) ) 
+say ( string . format ( locale_quest ( 50 ) , sname ) ) 
+npc . unlock ( ) 
+return 
+elseif opp_vid == pc . get_vid ( ) then 
+say_title ( locale_quest ( 38 ) ) 
+say ( locale_quest ( 27 ) ) 
+npc . unlock ( ) 
+return 
+end 
+local old = pc . select ( opp_vid , opp_vid ) 
+local opp_level = pc . get_level ( ) 
+local opp_locale = pc . get_locale ( ) 
+pc . select ( old , old ) 
+if opp_level < useMinLevel then 
+say_title ( locale_quest ( 38 ) ) 
+say ( string . format ( locale_quest ( 28 ) , useMinLevel ) ) 
+npc . unlock ( ) 
+return 
+end 
+if not npc . is_near_vid ( opp_vid , 10 ) then 
+say_title ( locale_quest ( 38 ) ) 
+say ( string . format ( locale_quest ( 29 ) , sname ) ) 
+npc . unlock ( ) 
+return 
+end 
+local a = arena . is_in_arena ( opp_vid ) 
+if a == 0 then 
+say_title ( locale_quest ( 38 ) ) 
+say ( string . format ( locale_quest ( 30 ) , sname ) ) 
+npc . unlock ( ) 
+return 
+end 
+say_title ( locale_quest ( 31 ) ) 
+say ( string . format ( locale_quest ( 48 ) , pc . get_name ( ) , sname ) ) 
+local agree = confirm ( opp_vid , string . format ( locale_quest ( 49 , opp_locale ) , sname , pc . get_name ( ) ) , 30 ) 
+if agree ~= CONFIRM_OK then 
+say_title ( locale_quest ( 38 ) ) 
+say ( string . format ( locale_quest ( 32 ) , sname ) ) 
+npc . unlock ( ) 
+return 
+end 
+s = arena . start_duel ( sname , 3 ) 
+if s == 0 then 
+say_title ( locale_quest ( 38 ) ) 
+say ( locale_quest ( 33 ) ) 
+elseif s == 2 then 
+say_title ( locale_quest ( 38 ) ) 
+say ( locale_quest ( 34 ) ) 
+elseif s == 3 then 
+say_title ( locale_quest ( 38 ) ) 
+say ( locale_quest ( 35 ) ) 
+end 
+end 
+end 
+npc . unlock ( ) 

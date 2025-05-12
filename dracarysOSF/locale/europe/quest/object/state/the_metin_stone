@@ -1,0 +1,12 @@
+the_metin_stone={["start"]=0,["__COMPLETE__"]=668443392,["back_to_myonghorang"]=101367239,["trigger"]=443223901,meteorite_hunt_kill_count= function ()local total_remaining = 0 
+local current_remaining = 1 - pc . getqf ( "hunted_metin_stone" ) 
+if current_remaining < 0 then 
+current_remaining = 0 
+end 
+total_remaining = total_remaining + current_remaining 
+q . set_counter_value ( total_remaining ) 
+if total_remaining == 0 then 
+notice_multiline ( locale_quest ( 6394 ) , notice ) 
+set_state ( "back_to_myonghorang" ) 
+end 
+end }

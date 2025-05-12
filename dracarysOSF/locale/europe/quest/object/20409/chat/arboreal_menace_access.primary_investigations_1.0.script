@@ -1,0 +1,11 @@
+target . delete ( "__TARGET__" ) 
+say_title ( locale_quest ( 4504 ) ) 
+if pc . getqf ( "passed" ) == 1 then 
+say ( locale_quest ( 4517 ) ) 
+else 
+say ( locale_quest ( 4513 ) ) 
+say ( locale_quest ( 4514 ) ) 
+end 
+select ( locale_quest ( 4515 ) ) 
+say ( locale_quest ( 4516 ) ) 
+set_state ( "primary_investigations_2" ) 

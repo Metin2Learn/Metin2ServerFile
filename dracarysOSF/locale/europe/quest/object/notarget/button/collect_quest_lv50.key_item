@@ -1,0 +1,9 @@
+if pc . count_item ( 30222 ) > 0 then 
+say_title ( locale_quest ( 383 ) ) 
+say ( locale_quest ( 384 ) ) 
+return 
+end 
+say_title ( locale_quest ( 211 ) ) 
+say ( locale_quest ( 385 ) ) 
+say_item_vnum ( 30222 ) 
+say ( locale_quest ( 386 ) ) 

@@ -1,0 +1,28 @@
+if item . get_vnum ( ) == 50926 then say ( string . format ( locale_quest ( 1466 ) , 10 ) ) 
+say ( locale_quest ( 1467 ) ) 
+say ( locale_quest ( 1468 ) ) 
+say ( string . format ( locale_quest ( 1469 ) , 10 , 5000 ) ) 
+say ( locale_quest ( 1470 ) ) 
+if select ( locale_quest ( 1475 ) , locale_quest ( 1476 ) ) == 1 then 
+if pc . get_gold ( ) < 5000 then 
+return say ( locale_quest ( 1471 ) ) 
+end 
+if pc . get_gem ( ) >= ( 999999 - 3 ) then 
+return say ( locale_quest ( 1472 ) ) 
+end 
+if pc . count_item ( 50926 ) < 10 then 
+return say ( string . format ( locale_quest ( 1474 ) , 10 ) ) 
+end 
+local has_stone = false 
+for stone = 28000 , 28345 begin 
+if pc . count_item ( stone ) > 0 then 
+has_stone = true 
+break 
+end 
+end 
+if not has_stone then 
+return say ( locale_quest ( 1473 ) ) 
+end 
+game . open_gem ( ) 
+else return end 
+ return end 

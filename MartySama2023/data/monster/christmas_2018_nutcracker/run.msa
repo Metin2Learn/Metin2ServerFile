@@ -1,0 +1,5 @@
+ScriptType               MotionData
+
+MotionFileName           "D:/Ymir Work/npc_pet/christmas_2018_nutcracker/run.GR2"
+MotionDuration           0.666667
+Accumulation			0.00	0.033333	0.00

@@ -1,0 +1,31 @@
+say_npc ( ) 
+say ( locale_quest ( 9967 ) ) 
+wait ( ) 
+say_npc ( ) 
+say ( locale_quest ( 9968 ) ) 
+wait ( ) 
+say_npc ( ) 
+say ( locale_quest ( 9969 ) ) 
+local s = select ( locale_quest ( 4473 ) , locale_quest ( 3418 ) ) 
+if 2 == s then 
+return 
+end 
+say_npc ( ) 
+say ( locale_quest ( 9970 ) ) 
+wait ( ) 
+if pc . count_item ( 50068 ) > 0 then 
+if horse . get_level ( ) > 1 then 
+say_npc ( ) 
+say ( locale_quest ( 9971 ) ) 
+wait ( ) 
+say ( locale_quest ( 9972 ) ) 
+else 
+say_npc ( ) 
+say ( locale_quest ( 9973 ) ) 
+return 
+end 
+else 
+say_npc ( ) 
+say ( locale_quest ( 9974 ) ) 
+return 
+end 

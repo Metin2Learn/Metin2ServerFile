@@ -1,0 +1,6 @@
+say_title ( mob_name ( 20410 ) ) 
+say ( locale_quest ( 4560 ) ) 
+say ( locale_quest ( 4561 ) ) 
+select ( locale_quest ( 4562 ) ) 
+target . delete ( "__TARGET__" ) 
+set_state ( "secondary_investigations_5" ) 

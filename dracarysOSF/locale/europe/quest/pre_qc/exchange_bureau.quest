@@ -1,0 +1,68 @@
+quest exchange_bureau begin
+	state start begin
+		when 9005.chat.locale_quest(10043) begin
+			local ExchangeString = { locale_quest(10045), locale_quest(10046), locale_quest(10035) }
+			local ExchangeOption = select_table(ExchangeString)
+
+			if ExchangeOption == 1 then
+				say_title(locale_quest(10047))
+				say(string.format(locale_quest(10048), 1, gold_format(100000000)))
+				say(string.format(locale_quest(10049), 1, 19))
+
+				local Cheque = tonumber(input())
+				if is_valid_number(Cheque) and Cheque >= 1 and Cheque <= 19 then
+					local Gold = Cheque * 100000000 -- CHEQUE_VALUE
+
+					say_title(locale_quest(10050))
+					say(string.format(locale_quest(10033), Cheque, gold_format(Gold)))
+					if select(locale_quest(10034), locale_quest(10035)) == 1 then
+						if pc.get_cheque() >= Cheque then
+							if pc.get_gold() + Gold < 10000000000 then
+								pc.change_cheque(-Cheque)
+								pc.change_gold(Gold)
+							else
+								syschat(locale_quest(10060))
+							end
+						else
+							syschat(locale_quest(10060))
+						end
+					else return end
+				else
+					say(string.format(locale_quest(10032), 999, gold_format(10000000000)))
+					return
+				end
+
+			elseif ExchangeOption == 2 then
+				say_title(locale_quest(10036))
+				say(string.format(locale_quest(10037), 1, gold_format(100000000)))
+				say(string.format(locale_quest(10038), 1, 19))
+
+				local Cheque = tonumber(input())
+				if is_valid_number(Cheque) and Cheque >= 1 and Cheque <= 19 then
+					local Gold = Cheque * 100000000 -- CHEQUE_VALUE
+					local Tax = (Gold * 3) / 100
+					local GoldWithTax = Gold + Tax
+
+					say_title(locale_quest(10039))
+					say(string.format(locale_quest(10040), 3))
+					say(string.format(locale_quest(10041), gold_format(GoldWithTax), Cheque))
+					if select(locale_quest(10042), locale_quest(10044)) == 1 then
+						if pc.get_gold() >= GoldWithTax then
+							if pc.get_cheque() + Cheque < 999 then
+								pc.change_gold(-GoldWithTax)
+								pc.change_cheque(Cheque)
+							else
+								syschat(string.format(locale_quest(10062), (999 - 1)))
+							end
+						else
+							syschat(locale_quest(10063))
+						end
+					else return end
+				else
+					say(string.format(locale_quest(10032), 999, gold_format(10000000000)))
+					return
+				end
+			else return end
+		end
+	end
+end

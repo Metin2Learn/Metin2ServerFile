@@ -1,0 +1,12 @@
+91614	I'm just the Land Agent and therefore I can't[ENTER]lower the price. You need more Yang.
+91615	The guild has purchased the land!
+91613	Land Agent:
+91616	Come again when you have decided what to do.[ENTER]First come, first serve.
+91617	I'm the Land Agent and responsible for selling[ENTER]land. Before the monsters occupied the region in[ENTER]the middle of the continent, we did not have[ENTER]shortage of land and everyone was happy. So now[ENTER]I'm only selling land to guild leaders, who use[ENTER]it as land for their guilds. Do you want to buy[ENTER]some land?
+91618	I already told you, I can't sell land to[ENTER]everybody. I hope you understand.
+91619	A guild that already owns land cannot buy another[ENTER]piece of ground.
+91620	An error occurred during the processing of this[ENTER]order.
+91621	To buy this estate, the guild's level has to be[ENTER]over %s. The price is %s.
+91622	Your guild hasn't reached the required level yet.[ENTER]I'm sorry.
+91623	Do you want to purchase this land?
+91624	This piece of land has already been sold to[ENTER]another guild. I'm sorry.

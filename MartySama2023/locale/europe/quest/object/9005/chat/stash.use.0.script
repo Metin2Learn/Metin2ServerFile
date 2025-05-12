@@ -1,0 +1,11 @@
+if pc . getqf ( "open_count" ) < 3 then 
+say_npc ( ) 
+say ( locale_quest ( 10017 ) ) 
+wait ( ) 
+say_npc ( ) 
+say ( locale_quest ( 10018 ) ) 
+wait ( ) 
+pc . setqf ( "open_count" , pc . getqf ( "open_count" ) + 1 ) 
+end 
+setskin ( NOWINDOW ) 
+game . open_safebox ( ) 

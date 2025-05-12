@@ -1,0 +1,2 @@
+if pc . get_level ( ) >= 30 then say ( locale_quest ( 7546 ) ) 
+ return end 

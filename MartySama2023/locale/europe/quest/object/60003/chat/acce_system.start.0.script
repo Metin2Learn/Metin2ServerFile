@@ -1,0 +1,2 @@
+say_title ( mob_name ( 60003 ) ) 
+say ( locale_quest ( 11824 ) ) 

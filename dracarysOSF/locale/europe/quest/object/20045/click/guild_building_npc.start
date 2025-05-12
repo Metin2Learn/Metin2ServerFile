@@ -1,0 +1,7 @@
+if npc . get_guild ( ) == pc . get_guild ( ) then 
+say_title ( locale_quest ( 1679 ) ) 
+say ( locale_quest ( 1680 ) ) 
+else 
+say_title ( locale_quest ( 1679 ) ) 
+say ( locale_quest ( 1681 ) ) 
+end 

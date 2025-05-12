@@ -1,0 +1,5 @@
+say ( locale_quest ( 166 ) ) 
+if select ( locale_quest ( 4473 ) , locale_quest ( 3418 ) ) == 1 then 
+setskin ( NOWINDOW ) 
+game . open_changelook ( 0 ) 
+else return end 

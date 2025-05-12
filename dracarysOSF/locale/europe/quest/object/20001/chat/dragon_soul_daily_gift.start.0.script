@@ -1,0 +1,24 @@
+local event_id = game . get_event_flag ( "ds_dg_id" ) 
+if pc . getqf ( "event_id" ) ~= event_id then 
+say_title ( mob_name ( 20001 ) ) 
+if pc . get_level ( ) < 50 then 
+say ( locale_quest ( 950 ) ) 
+return 
+elseif 0 == ds . is_qualified ( ) then 
+say ( locale_quest ( 951 ) ) 
+return 
+else 
+say ( locale_quest ( 952 ) ) 
+pc . setqf ( "event_id" , event_id ) 
+wait ( ) 
+end 
+end 
+say_title ( mob_name ( 20001 ) ) 
+if 0 == get_today_count ( "dragon_soul_daily_gift" , "gift" ) then 
+say ( locale_quest ( 953 ) ) 
+local gift_vnum = game . get_event_flag ( "ds_dg_item" ) 
+pc . give_item2 ( gift_vnum ) 
+inc_today_count ( "dragon_soul_daily_gift" , "gift" ) 
+else 
+say ( locale_quest ( 954 ) ) 
+end 

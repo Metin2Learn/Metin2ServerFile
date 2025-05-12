@@ -1,0 +1,79 @@
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1769 ) ) 
+local sn = { 
+locale_quest ( 1770 ) , 
+locale_quest ( 1771 ) , 
+locale_quest ( 1772 ) , 
+} 
+table . insert ( sn , locale_quest ( 2426 ) ) 
+local s = select_table ( sn ) 
+if s == 1 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( string . format ( locale_quest ( 1773 ) , 600 ) ) 
+say ( string . format ( locale_quest ( 1774 ) , 300 ) ) 
+say ( string . format ( locale_quest ( 1775 ) , 300 ) ) 
+say ( locale_quest ( 1777 ) ) 
+if select ( locale_quest ( 4473 ) , locale_quest ( 3418 ) ) ~= 1 then 
+return 
+end 
+local result1 , result2 = MeleyLair . Register ( ) 
+if result1 == 0 then 
+return 
+end 
+if guild . is_war ( pc . get_guild ( ) ) then 
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1784 ) ) 
+return 
+end 
+if result1 == 1 and result2 ~= 0 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1780 ) ) 
+return 
+elseif result1 == 2 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1833 ) ) 
+if is_test_server ( ) then 
+say_reward ( string . format ( locale_quest ( 1834 ) , result2 ) ) 
+end 
+return 
+elseif result1 == 3 and result2 ~= 0 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1782 ) ) 
+if is_test_server ( ) then 
+say_reward ( string . format ( "Your guild needs at least level %d." , result2 ) ) 
+end 
+return 
+elseif result1 == 4 and result2 ~= 0 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1781 ) ) 
+if is_test_server ( ) then 
+say_reward ( string . format ( "Your guild needs at least %d rank points." , result2 ) ) 
+end 
+return 
+elseif result1 == 5 then 
+say_title ( mob_name ( 20419 ) ) 
+say_reward ( "REGISTER_ERROR - UNVALID MAP CREATION" ) 
+return 
+elseif result1 == 6 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1779 ) ) 
+return 
+elseif result1 == 7 and result2 ~= 0 then 
+local hours = string . format ( "%02.f" , math . floor ( result2 / 3600 ) ) 
+local minutes = string . format ( "%02.f" , math . floor ( result2 / 60 - ( hours * 60 ) ) ) 
+local seconds = string . format ( "%02.f" , math . floor ( result2 - hours * 3600 - minutes * 60 ) ) 
+local timeConv = string . format ( "%s:%s:%s" , hours , minutes , seconds ) 
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1783 ) ) 
+say_reward ( string . format ( locale_quest ( 2704 ) .. "%s" , timeConv ) ) 
+return 
+else return end 
+elseif s == 2 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1778 ) ) 
+return 
+elseif s == 3 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1778 ) ) 
+return 
+else return end 

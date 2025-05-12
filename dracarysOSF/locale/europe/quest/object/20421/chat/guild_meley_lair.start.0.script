@@ -1,0 +1,20 @@
+local sn = { 
+locale_quest ( 1770 ) , 
+locale_quest ( 1771 ) , 
+locale_quest ( 1772 ) , 
+} 
+table . insert ( sn , locale_quest ( 2426 ) ) 
+local s = select_table ( sn ) 
+if s == 1 then 
+MeleyLair . OpenRanking ( ) 
+setskin ( NOWINDOW ) 
+return 
+elseif s == 2 then 
+say_title ( mob_name ( 20420 ) ) 
+say ( locale_quest ( 1794 ) ) 
+return 
+elseif s == 3 then 
+say_title ( mob_name ( 20420 ) ) 
+say ( locale_quest ( 1794 ) ) 
+return 
+else return end 

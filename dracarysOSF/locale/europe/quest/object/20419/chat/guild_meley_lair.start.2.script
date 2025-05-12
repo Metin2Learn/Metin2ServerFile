@@ -1,0 +1,30 @@
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1786 ) ) 
+if select ( locale_quest ( 2625 ) , locale_quest ( 2600 ) ) ~= 1 then 
+return 
+end 
+local registered , limit = MeleyLair . Enter ( ) 
+if not registered and limit == 0 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1792 ) ) 
+return 
+elseif not registered and limit > 0 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1833 ) ) 
+if is_test_server ( ) then 
+say_reward ( string . format ( locale_quest ( 1834 ) , limit ) ) 
+end 
+return 
+elseif limit == 1 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1790 ) ) 
+return 
+elseif limit == 2 then 
+say_title ( mob_name ( 20419 ) ) 
+say_reward ( "ENTER_ERROR - UNVALID MAP CREATION" ) 
+return 
+elseif limit == 3 then 
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1794 ) ) 
+return 
+else return end 

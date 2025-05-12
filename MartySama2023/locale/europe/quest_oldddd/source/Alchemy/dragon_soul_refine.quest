@@ -1,0 +1,11 @@
+define alchemist 20001
+
+quest dragon_soul_refine begin
+	state start begin
+		when alchemist.chat.locale_quest(961) with ds.is_qualified() != 0 begin
+			say_title(mob_name(alchemist))
+			say(locale_quest(962))
+			ds.open_refine_window()
+		end
+	end
+end

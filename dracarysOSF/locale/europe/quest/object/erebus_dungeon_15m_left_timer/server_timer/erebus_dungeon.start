@@ -1,0 +1,3 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+server_timer ( "erebus_dungeon_5m_left_timer" , 10 * 60 , get_server_timer_arg ( ) ) 
+end 

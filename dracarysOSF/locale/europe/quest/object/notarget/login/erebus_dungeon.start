@@ -1,0 +1,51 @@
+local idx = pc . get_map_index ( ) 
+local setting = erebus_dungeon . setting ( ) 
+if erebus_dungeon . is_erebus ( idx ) then 
+pc . set_warp_location ( 0 , 0 , 0 ) 
+pc . set_warp_location ( 353 , setting . outside_entry_pos [ 1 ] , setting . outside_entry_pos [ 2 ] ) 
+if d . getf ( "dungeon_enter" ) == 0 then 
+if get_global_time ( ) - pc . getf ( "erebus_dungeon" , "exit_time" ) < 120 * 60 then 
+timer ( "erebus_dungeon_warp_timer" , 5 ) 
+return 
+elseif pc . count_item ( 30613 ) < 1 then 
+timer ( "erebus_dungeon_warp_timer" , 5 ) 
+return 
+elseif pc . get_level ( ) < 95 then 
+timer ( "erebus_dungeon_warp_timer" , 5 ) 
+return 
+end 
+if erebus_dungeon . is_erebus ( idx ) and d . getf ( "level" ) == 0 then 
+if party . is_leader ( ) then 
+d . setf ( "level" , 1 ) 
+d . spawn_mob ( 6408 , setting . boss_pos [ 1 ] , setting . boss_pos [ 2 ] ) 
+server_timer ( "erebus_dungeon_45m_left_timer" , 15 * 60 , d . get_map_index ( ) ) 
+local pids = { party . get_member_pids ( ) } 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+local canPass = false 
+if pc . count_item ( 30613 ) >= 1 then 
+canPass = true 
+pc . remove_item ( 30613 , 1 ) 
+end 
+if not canPass then 
+pc . warp ( ( setting . outside_entry_pos [ 1 ] * 100 ) , ( setting . outside_entry_pos [ 2 ] * 100 ) , 353 ) 
+end 
+q . end_other_pc_block ( ) 
+end 
+d . setqf2 ( "erebus_dungeon" , "ticket_delete" , 1 ) 
+d . setf ( "dungeon_enter" , 1 ) 
+party . setf ( "dungeon_index" , d . get_map_index ( ) ) 
+d . setf ( "party_leader_pid" , party . get_leader_pid ( ) ) 
+end 
+end 
+elseif pc . getf ( "erebus_dungeon" , "ticket_delete" ) == 0 then 
+pc . remove_item ( 30613 , 1 ) 
+pc . setf ( "erebus_dungeon" , "ticket_delete" , 1 ) 
+end 
+if pc . getf ( "erebus_dungeon" , "entered" ) ~= 1 then 
+pc . setf ( "erebus_dungeon" , "entered" , 1 ) 
+pc . setf ( "erebus_dungeon" , "enter_time" , get_global_time ( ) ) 
+end 
+else 
+pc . setf ( "erebus_dungeon" , "ticket_delete" , 0 ) 
+end 

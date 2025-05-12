@@ -1,0 +1,2 @@
+say_title ( locale_quest ( 510 ) ) 
+say ( locale_quest ( 511 ) ) 

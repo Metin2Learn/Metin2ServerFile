@@ -1,0 +1,74 @@
+local setting = erebus_dungeon . setting ( ) 
+if party . is_party ( ) then 
+local pids = { party . get_member_pids ( ) } 
+local noTicketMembers = { } 
+local notEnoughLevelMembers = { } 
+local ridingMembers = { } 
+local ticketCheck = true 
+local levelCheck = true 
+local rideCheck = true 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+local canPass = false 
+if pc . count_item ( 30613 ) >= 1 then 
+canPass = true 
+end 
+if not canPass then 
+table . insert ( noTicketMembers , pc . get_name ( ) ) 
+ticketCheck = false 
+end 
+if pc . get_level ( ) < 95 then 
+table . insert ( notEnoughLevelMembers , pc . get_name ( ) ) 
+levelCheck = false 
+end 
+if pc . is_riding ( ) == true then 
+table . insert ( ridingMembers , pc . get_name ( ) ) 
+rideCheck = false 
+end 
+q . end_other_pc_block ( ) 
+end 
+if not ticketCheck then 
+say_title ( mob_name ( 20412 ) ) 
+say ( locale_quest ( 795 ) ) 
+for i , name in next , noTicketMembers , nil begin 
+say ( color ( 1 , 1 , 0 ) , locale_quest ( 796 ) .. "    " .. name ) 
+end 
+return 
+end 
+if not levelCheck then 
+say_title ( mob_name ( 20412 ) ) 
+say ( locale_quest ( 797 ) ) 
+for i , name in next , notEnoughLevelMembers , nil begin 
+say ( color ( 1 , 1 , 0 ) , locale_quest ( 796 ) .. "    " .. name ) 
+end 
+return 
+end 
+if not rideCheck then 
+say_title ( mob_name ( 20412 ) ) 
+say ( locale_quest ( 791 ) ) 
+for i , name in next , ridingMembers , nil begin 
+say ( color ( 1 , 1 , 0 ) , locale_quest ( 796 ) .. "    " .. name ) 
+end 
+return 
+end 
+if party . is_leader ( ) then 
+if party . get_near_count ( ) < 2 then 
+say ( string . format ( locale_quest ( 793 ) , 2 ) ) 
+return 
+end 
+say ( locale_quest ( 794 ) ) 
+local warp = select ( locale_quest ( 4473 ) , locale_quest ( 3418 ) ) 
+if warp == 1 then 
+if party . is_map_member_flag_lt ( "exit_time" , get_global_time ( ) - 120 * 60 ) then 
+party . setf ( "erebus_dungeon_boss_kill_count" , 0 ) 
+erebus_dungeon . make_dungeon ( ) 
+else 
+say ( locale_quest ( 798 ) ) 
+end 
+end 
+else 
+say ( locale_quest ( 792 ) ) 
+end 
+else 
+say ( locale_quest ( 790 ) ) 
+end 

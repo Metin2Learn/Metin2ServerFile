@@ -1,0 +1,12 @@
+91614	Soy sólo el administrador de tierras. No puedo[ENTER]rebajar el precio.[ENTER]Por favor, tráeme más Yang.
+91615	¡El gremio ha adquirido el terreno!
+91613	Administrador de tierras:
+91616	Vuelve cuando decidas qué hacer.[ENTER]El primero en venir, el primero en comprar.
+91617	Soy el administrador de tierras y el responsable[ENTER]de venderlas. Antes de que los monstruos ocuparan[ENTER]la región en el centro del continente, no[ENTER]teníamos escasez de tierras y todo el mundo era[ENTER]feliz. Ahora sólo estoy vendiendo tierras a los[ENTER]líderes de gremios, quienes las usan como tierra[ENTER]para sus gremios. ¿Quieres comprar alguna tierra?
+91618	Ya te lo dije; no puedo venderle tierras a todo[ENTER]el mundo.[ENTER]Espero que lo entiendas.
+91619	Un gremio que ya posee una tierra no puede[ENTER]comprar otro terreno.
+91620	Ha ocurrido un error durante el procesamiento de[ENTER]esta orden.
+91621	Para poder comprar esta tierra, el nivel del[ENTER]gremio tiene que ser superior a %s.[ENTER]El precio es %s
+91622	Tu gremio aun no ha alcanzado el nivel requerido.[ENTER]Lo siento.
+91623	¿Quieres comprar la tierra?
+91624	Este terreno ya ha sido vendido a otro gremio. Lo[ENTER]siento.

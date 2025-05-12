@@ -1,0 +1,6905 @@
+Group	Alpha_Wolf
+{
+	Mob	103
+	Type	drop
+	1	1012	1	0.2 -- Cobra Dagger+2
+	2	4012	1	0.2 -- Nine Blades+2
+	3	11402	1	0.2 -- Azure Suit+2
+	4	16022	1	0.2 -- Copper Necklace+2
+}
+Group	Blue_Wolf
+{
+	Mob	104
+	Type	drop
+	1	32	1	0.2 -- Crescent Sword+2
+	2	52	1	0.2 -- Broad Sword+2
+	3	15002	1	0.2 -- Leather Shoes+2
+	4	2022	1	0.2 -- Composite Bow+2
+	5	16002	1	0.2 -- Wooden Necklace+2
+}
+Group	Alpha_Blue_Wolf
+{
+	Mob	105
+	Type	drop
+	1	11602	1	0.2 -- Requiem Plate Armour+2
+	2	12482	1	0.2 -- Bloody Helmet+2
+	3	15022	1	0.2 -- Bamboo Skin Shoes+2
+	4	16062	1	0.2 -- Golden Necklace+2
+}
+Group	Alpha_Grey_Wolf
+{
+	Mob	107
+	Type	drop
+	1	12342	1	0.2 -- Leather Hood+2
+	2	11401	1	0.2 -- Azure Suit+1
+	3	17022	1	0.2 -- Copper Earrings+2
+	4	17002	1	0.2 -- Wooden Earrings+2
+}
+Group	Red_Wild_Boar
+{
+	Mob	109
+	Type	drop
+	1	11802	1	0.2 -- Crimson Clothing+2
+	2	12622	1	0.2 -- Monk Hat+2
+	3	15042	1	0.2 -- Wooden Shoes+2
+	4	5012	1	0.2 -- Silver Bell+2
+	5	7032	1	0.2 -- Crane Wing Fan+2
+}
+Group	Grizzly_Bear
+{
+	Mob	111
+	Type	drop
+	1	50721	1	1 -- Peach Blossom
+}
+Group	Black_Bear
+{
+	Mob	112
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+}
+Group	Brown_Bear
+{
+	Mob	113
+	Type	drop
+	1	50721	1	1 -- Peach Blossom
+}
+Group	White_Tiger
+{
+	Mob	115
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+}
+Group	Cursed_Wolf
+{
+	Mob	131
+	Type	drop
+	1	50722	1	2 -- Bellflower
+}
+Group	Cursed_Alpha_Wolf
+{
+	Mob	132
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+}
+Group	Cursed_Alpha_Blue_Wolf
+{
+	Mob	134
+	Type	drop
+	Kill_drop	400
+	1	5110	1	25	10 -- Antique Bell+0
+	2	290	1	15	10 -- Full Moon Sword+0
+}
+Group	Cursed_Red_Wild_Boar
+{
+	Mob	138
+	Type	drop
+	Kill_drop	400
+	1	1170	1	25	10 -- Black Leaf Dirk+0
+}
+Group	Cursed_Bear
+{
+	Mob	139
+	Type	drop
+	1	50724	1	1 -- Gango Root
+}
+Group	Cursed_Grizzly_Bear
+{
+	Mob	140
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+}
+Group	Cursed_Black_Bear
+{
+	Mob	141
+	Type	drop
+	Kill_drop	400
+	1	13022	1	25	20 -- Pentagon Shield+2
+	2	13023	1	20	20 -- Pentagon Shield+3
+	3	3210	1	15	10 -- Red Iron Blade+0
+}
+Group	Cursed_Tiger
+{
+	Mob	143
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+}
+Group	Cung-Mok
+{
+	Mob	151
+	Type	drop
+	1	1013	1	4 -- Cobra Dagger+3
+	2	4013	1	4 -- Nine Blades+3
+	3	11403	1	4 -- Azure Suit+3
+	4	16023	1	4 -- Copper Necklace+3
+	5	1014	1	4 -- Cobra Dagger+4
+	6	4014	1	4 -- Nine Blades+4
+	7	11404	1	4 -- Azure Suit+4
+	8	16024	1	4 -- Copper Necklace+4
+}
+Group	Mu-Rang
+{
+	Mob	152
+	Type	drop
+	1	33	1	4 -- Crescent Sword+3
+	2	53	1	4 -- Broad Sword+3
+	3	15003	1	4 -- Leather Shoes+3
+	4	2023	1	4 -- Composite Bow+3
+	5	16003	1	4 -- Wooden Necklace+3
+	6	34	1	4 -- Crescent Sword+4
+	7	54	1	4 -- Broad Sword+4
+	8	15004	1	4 -- Leather Shoes+4
+	9	2024	1	4 -- Composite Bow+4
+	10	16004	1	4 -- Wooden Necklace+4
+}
+Group	Jug-Hyul
+{
+	Mob	153
+	Type	drop
+	1	11803	1	4 -- Crimson Clothing+3
+	2	12623	1	4 -- Monk Hat+3
+	3	15043	1	4 -- Wooden Shoes+3
+	4	5013	1	4 -- Silver Bell+3
+	5	7033	1	4 -- Crane Wing Fan+3
+	6	11804	1	4 -- Crimson Clothing+4
+	7	12624	1	4 -- Monk Hat+4
+	8	15044	1	4 -- Wooden Shoes+4
+	9	5014	1	4 -- Silver Bell+4
+	10	7034	1	4 -- Crane Wing Fan+4
+}
+Group	Young-Ji
+{
+	Mob	154
+	Type	drop
+	1	11211	1	12 -- Iron Plate Armour+1
+	2	11212	1	8 -- Iron Plate Armour+2
+	3	11213	1	4 -- Iron Plate Armour+3
+	4	11411	1	12 -- Ivory Suit+1
+	5	11412	1	8 -- Ivory Suit+2
+	6	11413	1	4 -- Ivory Suit+3
+}
+Group	Li-An
+{
+	Mob	155
+	Type	drop
+	1	11611	1	12 -- Storm Plate Armour+1
+	2	11612	1	8 -- Storm Plate Armour+2
+	3	11613	1	4 -- Storm Plate Armour+3
+	4	11811	1	12 -- Turquoise Clothing+1
+	5	11812	1	8 -- Turquoise Clothing+2
+	6	11813	1	4 -- Turquoise Clothing+3
+}
+Group	Lykos
+{
+	Mob	191
+	Type	drop
+	1	71	1	4 -- Orchid Sword+1
+	2	70	1	8 -- Orchid Sword+0
+	3	11611	1	4 -- Storm Plate Armour+1
+	4	11610	1	8 -- Storm Plate Armour+0
+	5	72	1	0.3 -- Orchid Sword+2
+	6	11612	1	0.2 -- Storm Plate Armour+2
+	7	15002	1	0.4 -- Leather Shoes+2
+	8	16042	1	0.4 -- Silver Necklace+2
+	9	27002	30	100 -- Red Potion (M)
+	10	27003	20	50 -- Red Potion (L)
+	11	27005	20	50 -- Blue Potion (M)
+	12	27006	10	50 -- Blue Potion (L)
+	13	30070	1	400 -- Wolf Fur+
+}
+Group	Scrofa
+{
+	Mob	192
+	Type	drop
+	1	4021	1	4 -- Short Knife+1
+	2	4020	1	8 -- Short Knife+0
+	3	11411	1	4 -- Ivory Suit+1
+	4	11410	1	8 -- Ivory Suit+0
+	5	1031	1	0.3 -- Lucky Knife+1
+	6	1032	1	0.2 -- Lucky Knife+2
+	7	15042	1	0.5 -- Wooden Shoes+2
+	8	27002	30	100 -- Red Potion (M)
+	9	27003	20	50 -- Red Potion (L)
+	10	27005	20	50 -- Blue Potion (M)
+	11	27006	10	50 -- Blue Potion (L)
+	12	30004	1	400 -- Wild Boar Tooth
+}
+Group	Bera
+{
+	Mob	193
+	Type	drop
+	1	7051	1	4 -- Aquatic Fan+1
+	2	7050	1	8 -- Aquatic Fan+0
+	3	11831	1	4 -- Amorous Clothing+1
+	4	11830	1	8 -- Amorous Clothing+0
+	5	7061	1	0.3 -- Stone Fan+1
+	6	7062	1	0.2 -- Stone Fan+2
+	7	15062	1	0.5 -- Gold Threaded Shoes+2
+	8	17042	1	0.5 -- Silver Earrings+2
+	9	27002	30	100 -- Red Potion (M)
+	10	27003	20	50 -- Red Potion (L)
+	11	27005	20	50 -- Blue Potion (M)
+	12	27006	10	50 -- Blue Potion (L)
+	13	30072	1	400 -- Bear Foot Skin+
+}
+Group	Tigris
+{
+	Mob	194
+	Type	drop
+	1	3051	1	4 -- War Scythe+1
+	2	3050	1	8 -- War Scythe+0
+	3	11211	1	4 -- Iron Plate Armour+1
+	4	11210	1	8 -- Iron Plate Armour+0
+	5	3062	1	0.3 -- Battle Pitchfork+2
+	6	11212	1	0.2 -- Iron Plate Armour+2
+	7	15042	1	0.5 -- Wooden Shoes+2
+	8	17022	1	0.5 -- Copper Earrings+2
+	9	27002	30	100 -- Red Potion (M)
+	10	27003	20	50 -- Red Potion (L)
+	11	27005	20	50 -- Blue Potion (M)
+	12	27006	10	50 -- Blue Potion (L)
+	13	30037	1	400 -- Tiger Claw
+}
+Group	White_Oath_Soldier
+{
+	Mob	301
+	Type	drop
+	1	50722	1	2 -- Bellflower
+}
+Group	White_Oath_Archer
+{
+	Mob	302
+	Type	drop
+	1	8001	30	12 -- Bamboo Arrow
+	2	50724	1	1 -- Gango Root
+}
+Group	White_Oath_Commander
+{
+	Mob	304
+	Type	drop
+	Kill_drop	350
+	1	11232	1	65	10 -- Lion Plate Armour+2
+	2	11233	1	35	10 -- Lion Plate Armour+3
+	3	11432	1	65	10 -- Red Ant Suit+2
+	4	11433	1	35	10 -- Red Ant Suit+3
+	5	11632	1	65	10 -- Ghost Plate Armour+2
+	6	11633	1	35	10 -- Ghost Plate Armour+3
+	7	11832	1	65	10 -- Amorous Clothing+2
+	8	11833	1	35	10 -- Amorous Clothing+3
+}
+Group	White_Oath_Soldier
+{
+	Mob	331
+	Type	drop
+	1	16083	1	4 -- Jade Necklace+3
+	2	16103	1	4 -- Ebony Necklace+3
+	3	16123	1	4 -- Pearl Necklace+3
+	4	16143	1	4 -- White Gold Necklace+3
+}
+Group	White_Oath_Archer
+{
+	Mob	332
+	Type	drop
+	1	4021	1	4 -- Short Knife+1
+	2	4020	1	4 -- Short Knife+0
+	3	2051	1	4 -- Horseback Battle Bow+1
+	4	2050	1	4 -- Horseback Battle Bow+0
+	5	15122	1	4 -- Bronze Boots+2
+}
+Group	White_Oath_General
+{
+	Mob	333
+	Type	drop
+	1	3041	1	4 -- Gisarme+1
+	2	3040	1	4 -- Gisarme+0
+	3	2041	1	4 -- Horseback Long Bow+1
+	4	2050	1	4 -- Horseback Battle Bow+0
+	5	15122	1	4 -- Bronze Boots+2
+}
+Group	White_Oath_Commander
+{
+	Mob	334
+	Type	drop
+	1	11234	1	6 -- Lion Plate Armour+4
+	2	11233	1	4 -- Lion Plate Armour+3
+	3	11434	1	6 -- Red Ant Suit+4
+	4	11433	1	4 -- Red Ant Suit+3
+	5	11634	1	6 -- Ghost Plate Armour+4
+	6	11633	1	4 -- Ghost Plate Armour+3
+	7	11834	1	6 -- Amorous Clothing+4
+	8	11833	1	4 -- Amorous Clothing+3
+}
+Group	Mi-Jung
+{
+	Mob	391
+	Type	drop
+	1	61	1	0.2 -- Silver Sword+1
+	2	60	1	0.2 -- Silver Sword+0
+	3	12641	1	0.2 -- Phoenix Hat+1
+	4	12640	1	0.2 -- Phoenix Hat+0
+	5	15062	1	0.2 -- Gold Threaded Shoes+2
+}
+Group	Eun-Jung
+{
+	Mob	392
+	Type	drop
+	1	4021	1	0.2 -- Short Knife+1
+	2	4020	1	0.2 -- Short Knife+0
+	3	2051	1	0.2 -- Horseback Battle Bow+1
+	4	2050	1	0.2 -- Horseback Battle Bow+0
+	5	15122	1	0.1 -- Bronze Boots+2
+}
+Group	Se-Rang
+{
+	Mob	393
+	Type	drop
+	1	3041	1	4 -- Gisarme+1
+	2	3040	1	8 -- Gisarme+0
+	3	2041	1	4 -- Horseback Long Bow+1
+	4	2050	1	8 -- Horseback Battle Bow+0
+	5	15122	1	0.2 -- Bronze Boots+2
+	6	27002	30	100 -- Red Potion (M)
+	7	27003	20	50 -- Red Potion (L)
+	8	27005	20	50 -- Blue Potion (M)
+	9	27006	10	50 -- Blue Potion (L)
+}
+Group	Jin-Hee
+{
+	Mob	394
+	Type	drop
+	1	62	1	4 -- Silver Sword+2
+	2	61	1	8 -- Silver Sword+1
+	3	92	1	4 -- Barbarian Sword+2
+	4	11222	1	8 -- Tiger Plate Armour+2
+	5	15062	1	0.2 -- Gold Threaded Shoes+2
+	6	27002	30	100 -- Red Potion (M)
+	7	27003	20	50 -- Red Potion (L)
+	8	27005	20	50 -- Blue Potion (M)
+	9	27006	10	50 -- Blue Potion (L)
+}
+Group	Black_Wind_Soldier
+{
+	Mob	401
+	Type	drop
+	1	50724	1	1 -- Gango Root
+}
+Group	Black_Wind_Archer
+{
+	Mob	403
+	Type	drop
+	1	50007	1	0.5 -- Silver Treasure Chest
+	2	8001	30	4 -- Bamboo Arrow
+}
+Group	Black_Wind_Jak-To
+{
+	Mob	404
+	Type	drop
+	Kill_drop	800
+	1	5042	1	65	10 -- Fountain Bell+2
+	2	5032	1	35	10 -- Jade Bell+2
+	3	12222	1	35	10 -- Iron Helmet+2
+	4	12223	1	15	10 -- Iron Helmet+3
+	5	12362	1	35	10 -- Chain Hood+2
+	6	12363	1	15	10 -- Chain Hood+3
+	7	12502	1	35	10 -- Mocking Helmet+2
+	8	12503	1	15	10 -- Mocking Helmet+3
+	9	12642	1	35	10 -- Phoenix Hat+2
+	10	12643	1	15	10 -- Phoenix Hat+3
+}
+Group	Black_Wind_To-Su
+{
+	Mob	405
+	Type	drop
+	1	50721	1	1 -- Peach Blossom
+}
+Group	Black_Wind_Gu-Ryung
+{
+	Mob	406
+	Type	drop
+	Kill_drop	300
+	1	82	1	65	10 -- Bastard Sword+2
+	2	83	1	35	10 -- Bastard Sword+3
+}
+Group	Black_Storm_Soldier
+{
+	Mob	431
+	Type	drop
+	1	12222	1	4 -- Iron Helmet+2
+	2	12223	1	4 -- Iron Helmet+3
+	3	12362	1	4 -- Chain Hood+2
+	4	12363	1	4 -- Chain Hood+3
+	5	50009	1	2 -- Silver Key
+}
+Group	Black_Storm_Maniac
+{
+	Mob	432
+	Type	drop
+	1	12502	1	4 -- Mocking Helmet+2
+	2	12503	1	4 -- Mocking Helmet+3
+	3	12642	1	4 -- Phoenix Hat+2
+	4	12643	1	4 -- Phoenix Hat+3
+	5	50009	1	2 -- Silver Key
+}
+Group	Black_Storm_Archer
+{
+	Mob	433
+	Type	drop
+	1	7072	1	4 -- Ocean Fan+2
+	2	7052	1	4 -- Aquatic Fan+2
+	3	4022	1	4 -- Short Knife+2
+	4	1042	1	4 -- Cat Bite Knife+2
+	5	50009	1	2 -- Silver Key
+}
+Group	Black_Storm_Joh-Hwan
+{
+	Mob	434
+	Type	drop
+	1	61	1	4 -- Silver Sword+1
+	2	12640	1	4 -- Phoenix Hat+0
+	3	91	1	4 -- Barbarian Sword+1
+	4	15060	1	4 -- Gold Threaded Shoes+0
+	5	50009	1	2 -- Silver Key
+}
+Group	Black_Storm_Kyuk-Jang
+{
+	Mob	435
+	Type	drop
+	1	16041	1	4 -- Silver Necklace+1
+	2	7050	1	4 -- Aquatic Fan+0
+	3	15141	1	4 -- Jade Shoes+1
+	4	11820	1	4 -- Pink Clothing+0
+	5	50009	1	2 -- Silver Key
+}
+Group	Black_Storm_Pho-Hwan
+{
+	Mob	436
+	Type	drop
+	1	71	1	4 -- Orchid Sword+1
+	2	5040	1	4 -- Fountain Bell+0
+	3	12501	1	4 -- Mocking Helmet+1
+	4	17100	1	4 -- Ebony Earrings+0
+	5	15102	1	4 -- Golden Shoes+2
+	6	50009	1	2 -- Silver Key
+}
+Group	Mahon
+{
+	Mob	491
+	Type	drop
+	1	4021	1	4 -- Short Knife+1
+	2	12360	1	8 -- Chain Hood+0
+	3	13001	1	4 -- Battle Shield+1
+	4	15080	1	8 -- Leather Boots+0
+	5	17082	1	0.2 -- Jade Earrings+2
+	6	27002	30	100 -- Red Potion (M)
+	7	27003	20	50 -- Red Potion (L)
+	8	27005	20	50 -- Blue Potion (M)
+	9	27006	10	50 -- Blue Potion (L)
+}
+Group	Bo
+{
+	Mob	492
+	Type	drop
+	1	61	1	4 -- Silver Sword+1
+	2	12640	1	8 -- Phoenix Hat+0
+	3	91	1	4 -- Barbarian Sword+1
+	4	15060	1	8 -- Gold Threaded Shoes+0
+	5	27002	30	100 -- Red Potion (M)
+	6	27003	20	50 -- Red Potion (L)
+	7	27005	20	50 -- Blue Potion (M)
+	8	27006	10	50 -- Blue Potion (L)
+}
+Group	Goo-Pae
+{
+	Mob	493
+	Type	drop
+	1	16041	1	4 -- Silver Necklace+1
+	2	7050	1	8 -- Aquatic Fan+0
+	3	15141	1	4 -- Jade Shoes+1
+	4	11820	1	8 -- Pink Clothing+0
+	5	27002	30	100 -- Red Potion (M)
+	6	27003	20	50 -- Red Potion (L)
+	7	27005	20	50 -- Blue Potion (M)
+	8	27006	10	50 -- Blue Potion (L)
+}
+Group	Chuong
+{
+	Mob	494
+	Type	drop
+	1	71	1	4 -- Orchid Sword+1
+	2	5040	1	8 -- Fountain Bell+0
+	3	12501	1	4 -- Mocking Helmet+1
+	4	17100	1	8 -- Ebony Earrings+0
+	5	15102	1	0.2 -- Golden Shoes+2
+	6	27002	30	100 -- Red Potion (M)
+	7	27003	20	50 -- Red Potion (L)
+	8	27005	20	50 -- Blue Potion (M)
+	9	27006	10	50 -- Blue Potion (L)
+}
+Group	Savage_Minion
+{
+	Mob	502
+	Type	drop
+	1	50724	1	1 -- Gango Root
+}
+Group	Savage_Archer
+{
+	Mob	503
+	Type	drop
+	Kill_drop	500
+	1	2072	1	10	10 -- Black Ruin Bow+2
+	2	290	1	10	10 -- Full Moon Sword+0
+	3	2150	1	15	10 -- Hornbow+0
+}
+Group	Savage_General
+{
+	Mob	504
+	Type	drop
+	1	50725	1	1 -- Lilac
+}
+Group	Bestial_Soldier
+{
+	Mob	531
+	Type	drop
+	1	17083	1	8 -- Jade Earrings+3
+	2	17103	1	6 -- Ebony Earrings+3
+	3	17123	1	4 -- Pearl Earrings+3
+	4	17143	1	4 -- White Gold Earrings+3
+	5	50008	1	2 -- Gold Key
+}
+Group	Bestial_Maniac
+{
+	Mob	532
+	Type	drop
+	1	16083	1	4 -- Jade Necklace+3
+	2	16103	1	4 -- Ebony Necklace+3
+	3	16123	1	4 -- Pearl Necklace+3
+	4	16143	1	4 -- White Gold Necklace+3
+	5	50008	1	2 -- Gold Key
+}
+Group	Bestial_Archer
+{
+	Mob	533
+	Type	drop
+	1	2073	1	4 -- Black Ruin Bow+3
+	2	292	1	4 -- Full Moon Sword+2
+	3	2152	1	4 -- Hornbow+2
+	4	50008	1	2 -- Gold Key
+}
+Group	Bestial_Specialist
+{
+	Mob	534
+	Type	drop
+	1	3072	1	8 -- Halberd+2
+	2	3073	1	4 -- Halberd+3
+	3	290	1	6 -- Full Moon Sword+0
+	4	2150	1	4 -- Hornbow+0
+	5	11244	1	2 -- Lethal Plate Armour+4
+	6	11243	1	4 -- Lethal Plate Armour+3
+	7	11444	1	2 -- Ant Lion Suit+4
+	8	11443	1	4 -- Ant Lion Suit+3
+	9	11644	1	2 -- Yin and Yang Armour+4
+	10	11643	1	4 -- Yin and Yang Armour+3
+	11	11844	1	2 -- Heavenly Clothing+4
+	12	11843	1	4 -- Heavenly Clothing+3
+	13	50008	1	2 -- Gold Key
+	14	21022	1	8 -- Malachite Plate Armour+2
+	15	21023	1	4 -- Malachite Plate Armour+3
+	16 	21041	1	4 -- Bronze Plate Armour+1
+	17 	21042	1	2 -- Bronze Plate Armour+2
+}
+Group	Bestial_Captain
+{
+	Mob	591
+	Type	drop
+	1	1042	1	0.2 -- Cat Bite Knife+2
+	2	2072	1	0.2 -- Black Ruin Bow+2
+	3	11432	1	0.2 -- Red Ant Suit+2
+	4	15122	1	0.2 -- Bronze Boots+2
+	5	27002	50	100 -- Red Potion (M)
+	6	27003	30	50 -- Red Potion (L)
+	7	27005	30	50 -- Blue Potion (M)
+	8	27006	20	50 -- Blue Potion (L)
+}
+Group	Orc
+{
+	Mob	601
+	Type	drop
+	1	7082	1	8 -- Sting Fan+2
+	2	5052	1	8 -- Apricot Bell+2
+	3	14082	1	4 -- Jade Bracelet+2
+	4	14102	1	4 -- Ebony Bracelet+2
+	5	14122	1	4 -- Pearl Bracelet+2
+	6	14142	1	4 -- White Gold Bracelet+2
+}
+Group	Orc_Scout
+{
+	Mob	602
+	Type	drop
+	1	93	1	8 -- Barbarian Sword+3
+	2	1053	1	8 -- Devil Mask Dagger+3
+	3	1172	1	8 -- Black Leaf Dirk+2
+}
+Group	Orc_Fighter
+{
+	Mob	603
+	Type	drop
+	1	71	1	4 -- Orchid Sword+1
+	2	5040	1	8 -- Fountain Bell+0
+	3	12501	1	4 -- Mocking Helmet+1
+	4	17100	1	8 -- Ebony Earrings+0
+	5	15102	1	4 -- Golden Shoes+2
+}
+Group	Orc_Sorcerer
+{
+	Mob	604
+	Type	drop
+	1	1042	1	4 -- Cat Bite Knife+2
+	2	2072	1	4 -- Black Ruin Bow+2
+	3	11422	1	4 -- Crimson Suit+2
+	4	15122	1	4 -- Bronze Boots+2
+}
+Group	Elite_Orc
+{
+	Mob	631
+	Type	drop
+	1	50722	1	1 -- Bellflower
+}
+Group	Elite_Orc_Scout
+{
+	Mob	632
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+}
+Group	Elite_Orc_Fighter
+{
+	Mob	633
+	Type	drop
+	1	1042	1	0.2 -- Cat Bite Knife+2
+	2	2072	1	0.2 -- Black Ruin Bow+2
+	3	11432	1	0.2 -- Red Ant Suit+2
+	4	15122	1	0.2 -- Bronze Boots+2
+}
+Group	Elite_Orc_Sorcerer
+{
+	Mob	634
+	Type	drop
+	1	1042	1	0.2 -- Cat Bite Knife+2
+	2	2072	1	0.2 -- Black Ruin Bow+2
+	3	11422	1	0.2 -- Crimson Suit+2
+	4	15122	1	0.2 -- Bronze Boots+2
+}
+Group	Elite_Orc_General
+{
+	Mob	635
+	Type	drop
+	1	50722	1	1 -- Bellflower
+}
+Group	Black_Orc
+{
+	Mob	636
+	Type	drop
+	1	50721	1	4 -- Peach Blossom
+}
+Group	Black_Orc_Giant
+{
+	Mob	637
+	Type	drop
+	Kill_drop	900
+	1	5062	1	65	10 -- Magical Bell+2
+	2	5063	1	35	10 -- Magical Bell+3
+}
+Group	Chief_Orc
+{
+	Mob	691
+	Type	drop
+	1	27002	200	400 -- Red Potion (M)
+	2	27003	100	400 -- Red Potion (L)
+	3	27005	200	400 -- Blue Potion (M)
+	4	27006	100	400 -- Blue Potion (L)
+	5	90010	1	40 -- Foundation Stone
+}
+Group	Dark_Fanatic
+{
+	Mob	701
+	Type	drop
+	Kill_drop	300
+	1	2082	1	35	30 -- Red Eye Bow+2
+	2	15162	1	32	10 -- Ecstasy Shoes+2
+	3	15182	1	16	10 -- Nimbus Boots+2
+	4	15202	1	12	10 -- Phoenix Shoes+2
+	5	15222	1	8	10 -- Fire Bird Shoes+2
+}
+Group	Dark_Arahan
+{
+	Mob	702
+	Type	drop
+	1	50725	1	1 -- Lilac
+}
+Group	Esoteric_Arahan_Fighter
+{
+	Mob	703
+	Type	drop
+	1	103	1	0.2 -- Bloody Sword+3
+	2	112	1	0.2 -- Great Sword+2
+	3	1062	1	0.2 -- Devil Fist Dagger+2
+	4	11642	1	0.2 -- Yin and Yang Armour+2
+	5	16162	1	0.2 -- Crystal Necklace+2
+	6	50724	1	1 -- Gango Root
+}
+Group	Chief_Esoteric_Arahan
+{
+	Mob	704
+	Type	drop
+	1	50723	1	2 -- Kaki Blossom
+}
+Group	Esoteric_Executioner
+{
+	Mob	705
+	Type	drop
+	1	50724	1	1 -- Gango Root
+}
+Group	Dark_Tormentor
+{
+	Mob	706
+	Type	drop
+	Kill_drop	100
+	1	102	1	65	10 -- Bloody Sword+2
+	2	103	1	35	10 -- Bloody Sword+3
+	3	12242	1	45	10 -- Ghost Mask Sallet+2
+	4	12243	1	30	10 -- Ghost Mask Sallet+3
+	5	12382	1	35	10 -- Steel Hood+2
+	6	12383	1	20	10 -- Steel Hood+3
+	7	12522	1	25	10 -- Castle Helmet+2
+	8	12523	1	20	10 -- Castle Helmet+3
+	9	12662	1	20	10 -- Sunlight Hat+2
+	10	12663	1	15	10 -- Sunlight Hat+3
+}
+Group	Dark_Summoner
+{
+	Mob	707
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+}
+Group	Proud_Dark_Fanatic
+{
+	Mob	731
+	Type	drop
+	1	50726	1	2 -- Tue Fungus
+}
+Group	Proud_Dark_Fighter
+{
+	Mob	733
+	Type	drop
+	1	50725	1	2 -- Lilac
+}
+Group	Proud_Dark_Colonel
+{
+	Mob	734
+	Type	drop
+	Kill_drop	700
+	1	11260	1	65	20 -- Scale Plate Armour+0
+	2	11261	1	35	20 -- Scale Plate Armour+1
+	3	11460	1	65	20 -- Young Dragon Suit+0
+	4	11461	1	35	20 -- Young Dragon Suit+1
+	5	11660	1	65	20 -- Fog Plate Armour+0
+	6	11661	1	35	20 -- Fog Plate Armour+1
+	7	11860	1	65	20 -- Clothing of Morality+0
+	8	11861	1	35	20 -- Clothing of Morality+1
+}
+Group	Elite_Esoteric_Tormentor
+{
+	Mob	736
+	Type	drop
+	1	50725	1	2 -- Lilac
+}
+Group	Elite_Esoteric_Summoner
+{
+	Mob	737
+	Type	drop
+	1	50727	1	0.8 -- Alpine Rose
+}
+Group	Dark_Leader
+{
+	Mob	791
+	Type	drop
+	1	27002	200	400 -- Red Potion (M)
+	2	27003	100	400 -- Red Potion (L)
+	3	27005	200	400 -- Blue Potion (M)
+	4	27006	100	400 -- Blue Potion (L)
+	5	90012	1	50 -- Plywood
+}
+Group	Dark-Ghost_Leader
+{
+	Mob	792
+	Type	drop
+	1	27002	200	400 -- Red Potion (M)
+	2	27003	100	400 -- Red Potion (L)
+	3	27005	200	400 -- Blue Potion (M)
+	4	27006	100	400 -- Blue Potion (L)
+	5	90012	1	200 -- Plywood
+}
+Group	Dead_Body_Ghost
+{
+	Mob	901
+	Type	drop
+	1	1042	1	0.2 -- Cat Bite Knife+2
+	2	2072	1	0.2 -- Black Ruin Bow+2
+	3	11442	1	0.2 -- Ant Lion Suit+2
+	4	15122	1	0.2 -- Bronze Boots+2
+}
+Group	Plagued_Dog
+{
+	Mob	902
+	Type	drop
+	1	27110	1	1 -- Green Potion (S)
+	2	50008	1	0.2 -- Gold Key
+}
+Group	Plagued_Man
+{
+	Mob	903
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+}
+Group	Plagued_Swordman
+{
+	Mob	904
+	Type	drop
+	1	27110	1	1 -- Green Potion (S)
+	2	50008	1	0.2 -- Gold Key
+}
+Group	Plagued_Spearman
+{
+	Mob	905
+	Type	drop
+	1	27110	1	1 -- Green Potion (S)
+	2	50008	1	0.2 -- Gold Key
+	3	50722	1	2 -- Bellflower
+}
+Group	Plagued_Archer
+{
+	Mob	906
+	Type	drop
+	1	50006	1	1 -- Gold Treasure Chest
+	2	8004	100	20 -- Steel Arrow
+	3	50723	1	2 -- Kaki Blossom
+}
+Group	Plagued_Leader
+{
+	Mob	907
+	Type	drop
+	1	5062	1	0.2 -- Magical Bell+2
+	2	11652	1	0.2 -- Mystic Plate Armour+2
+	3	2092	1	0.2 -- Thorn Leaf Bow+2
+	4	11452	1	0.2 -- Ninja Suit+2
+	5	15122	1	0.2 -- Bronze Boots+2
+	6	70049	1	0.1 -- Lucy's Ring
+	7	50728	1	1 -- Mulberry
+}
+Group	Demon_Soldier
+{
+	Mob	1001
+	Type	drop
+	1	50728	1	1 -- Mulberry
+}
+Group	Demon_Archer
+{
+	Mob	1002
+	Type	drop
+	1	50012	1	0.4 -- Gold Treasure Chest+
+	2	8005	100	20 -- Silver Arrow
+	3	50724	1	1 -- Gango Root
+}
+Group	Demon_Spearman
+{
+	Mob	1003
+	Type	drop
+	1	50721	1	2 -- Peach Blossom
+}
+Group	Demon_Shaman
+{
+	Mob	1004
+	Type	drop
+	Kill_drop	50
+	1	3122	1	65	10 -- Lion Slayer+2
+	2	3123	1	35	10 -- Lion Slayer+3
+}
+Group	Vile_Demon_Archer
+{
+	Mob	1032
+	Type	drop
+	1	50012	1	0.9 -- Gold Treasure Chest+
+	2	8005	100	20 -- Silver Arrow
+}
+Group	Brutal_Demon_Soldier
+{
+	Mob	1061
+	Type	drop
+	1	50724	1	2 -- Gango Root
+	2	30193	1	0.2 -- Finger Bones
+}
+Group	Brutal_Demon_Archer
+{
+	Mob	1062
+	Type	drop
+	Kill_drop	0.0
+	1	30193	1	0.2 -- Finger Bones
+}
+Group	Brutal_Demonspearman
+{
+	Mob	1063
+	Type	drop
+	1	50726	1	2 -- Tue Fungus
+	2	30193	1	0.2 -- Finger Bones
+}
+Group	Brutal_Demon_Shaman
+{
+	Mob	1064
+	Type	drop
+	Kill_drop	10000
+	1	11272	1	1	20 -- Gold Plate Armour+2
+	2	11472	1	1	20 -- Killer Wind Suit+2
+	3	11672	1	1	20 -- Ghost Mask Armour+2
+	4	11872	1	1	20 -- Orange Cat Dress+2
+	5	11271	1	10	20 -- Gold Plate Armour+1
+	6	11471	1	10	20 -- Killer Wind Suit+1
+	7	11671	1	10	20 -- Ghost Mask Armour+1
+	8	11871	1	10	20 -- Orange Cat Dress+1
+}
+Group	Brutal_Ghost_of_Grudge
+{
+	Mob	1065
+	Type	drop
+	1	50728	1	2 -- Mulberry
+}
+Group	Brutal_Ghost_of_Chaos
+{
+	Mob	1066
+	Type	drop
+	1	50724	1	2 -- Gango Root
+}
+Group	Ghost_Sword_Master
+{
+	Mob	1068
+	Type	drop
+	1	14004	1	0.8 -- Wooden Bracelet+4
+	2	14024	1	0.8 -- Copper Bracelet+4
+	3	14044	1	0.8 -- Silver Bracelet+4
+	4	14064	1	0.8 -- Gold Bracelet+4
+	5	1110	1	0.8 -- Lightning Knife+0
+	6	2130	1	0.8 -- Divine Apricot Bow+0
+	7	7140	1	0.8 -- Salvation Fan+0
+	8	13120	1	0.1 -- Dragon Scale Shield+0
+}
+Group	Brutal_Flying_Skull
+{
+	Mob	1069
+	Type	drop
+	1	14084	1	0.8 -- Jade Bracelet+4
+	2	14104	1	0.8 -- Ebony Bracelet+4
+	3	14124	1	0.8 -- Pearl Bracelet+4
+	4	14144	1	0.8 -- White Gold Bracelet+4
+	5	7140	1	0.8 -- Salvation Fan+0
+	6	5100	1	0.8 -- Heaven and Earth Bell+0
+	7	160	1	0.8 -- Nymph Sword+0
+	8	13100	1	0.1 -- Lion Edge Shield+0
+}
+Group	Immortal_Ghost
+{
+	Mob	1070
+	Type	drop
+	1	14084	1	0.8 -- Jade Bracelet+4
+	2	14104	1	0.8 -- Ebony Bracelet+4
+	3	14124	1	0.8 -- Pearl Bracelet+4
+	4	14144	1	0.8 -- White Gold Bracelet+4
+	5	2130	1	0.8 -- Divine Apricot Bow+0
+	6	5100	1	0.8 -- Heaven and Earth Bell+0
+	7	13080	1	0.1 -- Tiger Shield+0
+}
+Group	Demonic_Beast
+{
+	Mob	1071
+	Type	drop
+	1	14164	1	0.8 -- Crystal Bracelet+4
+	2	14184	1	0.8 -- Amethyst Bracelet+4
+	3	14204	1	0.8 -- Heaven's Tear Bracelet+4
+	4	3140	1	0.8 -- Electromagnetic Blade+0
+	5	1110	1	0.8 -- Lightning Knife+0
+	6	2130	1	0.8 -- Divine Apricot Bow+0
+	7	7140	1	0.8 -- Salvation Fan+0
+	8	160	1	0.8 -- Nymph Sword+0
+	9	240	1	0.8 -- Exorcism Sword+0
+	10	13060	1	0.1 -- Falcon Shield+0
+}
+Group	Demon_King
+{
+	Mob	1091
+	Type	drop
+	1	130	1	25 -- Half Moon Sword+0
+	2	1090	1	25 -- Chakram+0
+	3	2120	1	25 -- Giant Wing Bow+0
+	4	7120	1	25 -- Sun Fan+0
+	5	5080	1	25 -- Steel Bug Bell+0
+	6	131	1	20 -- Half Moon Sword+1
+	7	1091	1	20 -- Chakram+1
+	8	2121	1	20 -- Giant Wing Bow+1
+	9	7121	1	20 -- Sun Fan+1
+	10	5081	1	20 -- Steel Bug Bell+1
+	11	132	1	15 -- Half Moon Sword+2
+	12	1092	1	15 -- Chakram+2
+	13	2122	1	15 -- Giant Wing Bow+2
+	14	7122	1	15 -- Sun Fan+2
+	15	5082	1	15 -- Steel Bug Bell+2
+	16	27002	30	150 -- Red Potion (M)
+	17	27003	50	200 -- Red Potion (L)
+	18	27005	30	150 -- Blue Potion (M)
+	19	27006	20	100 -- Blue Potion (L)
+	20	50300	1	400 -- Skill Book
+}
+Group	Proud_Demon_King
+{
+	Mob	1092
+	Type	drop
+	Kill_drop	1Yang
+	1	50081	1	100	0 -- Demon King's Chest
+}
+Group	Death_Reaper
+{
+	Mob	1093
+	Type	drop
+	1	30319	1	100 -- Shrunken Head
+}
+Group	Enchanted_Ice
+{
+	Mob	1101
+	Type	drop
+	1	90011	1	0.9 -- Trunk
+}
+Group	Ice_Killer_Whale
+{
+	Mob	1102
+	Type	drop
+	1	90011	1	0.1 -- Trunk
+	2	50728	1	1 -- Mulberry
+}
+Group	Ice_Bug
+{
+	Mob	1103
+	Type	drop
+	1	102	1	0.2 -- Bloody Sword+2
+	2	112	1	0.2 -- Great Sword+2
+	3	1072	1	0.2 -- Bloody Dagger+2
+	4	11252	1	0.2 -- Dragon Plate Armour+2
+	5	15122	1	0.2 -- Bronze Boots+2
+	6	70050	1	0.1 -- Sage King's Symbol
+	7	90011	1	0.2 -- Trunk
+	8	50722	1	1 -- Bellflower
+}
+Group	Ice_Lion
+{
+	Mob	1104
+	Type	drop
+	1	50723	1	2 -- Kaki Blossom
+}
+Group	Frosty_Ice_Man
+{
+	Mob	1105
+	Type	drop
+	1	2092	1	0.2 -- Thorn Leaf Bow+2
+	2	7092	1	0.2 -- Phoenix Fan+2
+	3	11852	1	0.2 -- Sun Clothing+2
+	4	15142	1	0.2 -- Jade Shoes+2
+	5	70048	1	0.1 -- Cloak of Secrecy
+	6	90011	1	0.3 -- Trunk
+	7	50725	1	2 -- Lilac
+}
+Group	Yeti
+{
+	Mob	1106
+	Type	drop
+	1	102	1	0.2 -- Bloody Sword+2
+	2	112	1	0.2 -- Great Sword+2
+	3	1072	1	0.2 -- Bloody Dagger+2
+	4	11252	1	0.2 -- Dragon Plate Armour+2
+	5	15122	1	0.2 -- Bronze Boots+2
+	6	70051	1	0.1 -- Sage King's Glove
+	7	90011	1	0.4 -- Trunk
+	8	50728	1	1 -- Mulberry
+}
+Group	Ice_Golem
+{
+	Mob	1107
+	Type	drop
+	Kill_drop	300
+	1	3123	1	60	20 -- Lion Slayer+3
+	2	3124	1	30	20 -- Lion Slayer+4
+	3	50009	1	10	0 -- Silver Key
+	4	6023	1	60	20 -- Iron Claw+0
+}
+Group	Underworld_Ice_Splinters
+{
+	Mob	1131
+	Type	drop
+	1	30198	1	0.9 -- Water Crystal
+}
+Group	Underwrld_IceKillerWhale
+{
+	Mob	1132
+	Type	drop
+	1	50060	1	0.8 -- Horse Riding Manual
+	2	27987	1	0.1 -- Clam
+	3	50901	1	2.1 -- Empty Bottle
+	4	30048	1	0.55 -- Piece of Ice
+	5	14085	1	0.9 -- Jade Bracelet+5
+	6	11485	1	0.7 -- Fuchsia Suit+5
+	7	11285	1	0.7 -- Dragon God Armour+5
+	8	50124	1	0.7 -- Rotten Wooden Box
+}
+Group	Underworld_Ice_Bug
+{
+	Mob	1133
+	Type	drop
+	1	50901	1	2.1 -- Empty Bottle
+	2	30088	1	0.8 -- Piece of Ice+
+	3	50060	1	0.8 -- Horse Riding Manual
+	4	27987	1	0.1 -- Clam
+	5	14105	1	0.9 -- Ebony Bracelet+5
+	6	11885	1	0.7 -- Baroness Dress+5
+	7	11685	1	0.7 -- Spirit Plate Armour+5
+	8	50124	1	0.7 -- Rotten Wooden Box
+}
+Group	Underworld_Ice_Lion
+{
+	Mob	1134
+	Type	drop
+	1	50901	1	2.1 -- Empty Bottle
+	2	30089	1	0.32 -- Yeti Fur+
+	3	50060	1	0.8 -- Horse Riding Manual
+	4	70049	1	0.11 -- Lucy's Ring
+	5	16163	1	0.85 -- Crystal Necklace+3
+	6	11485	1	0.7 -- Fuchsia Suit+5
+	7	11285	1	0.7 -- Dragon God Armour+5
+	8	50124	1	0.7 -- Rotten Wooden Box
+}
+Group	Underworld_Ice_Man
+{
+	Mob	1135
+	Type	drop
+	1	50901	1	2.1 -- Empty Bottle
+	2	30090	1	0.55 -- Ice Marble+
+	3	50060	1	0.8 -- Horse Riding Manual
+	4	27987	1	0.1 -- Clam
+	5	16164	1	0.68 -- Crystal Necklace+4
+	6	11886	1	0.4 -- Baroness Dress+6
+	7	11686	1	0.4 -- Spirit Plate Armour+6
+	8	50124	1	0.7 -- Rotten Wooden Box
+}
+Group	Underworld_Yeti
+{
+	Mob	1136
+	Type	drop
+	1	50901	1	2.1 -- Empty Bottle
+	2	30014	1	0.55 -- Yeti Fur
+	3	50060	1	0.8 -- Horse Riding Manual
+	4	27987	1	0.1 -- Clam
+	5	14125	1	0.64 -- Pearl Bracelet+5
+	6	11486	1	0.1 -- Fuchsia Suit+6
+	7	11286	1	0.1 -- Dragon God Armour+6
+	8	50124	1	0.7 -- Rotten Wooden Box
+}
+Group	Underworld_Ice_Golem
+{
+	Mob	1137
+	Type	drop
+	1	30198	1	0.125 -- Water Crystal
+}
+Group	Mighty_Ice_Witch
+{
+	Mob	1192
+	Type	drop
+	1	11294	1	50	15 -- Black Steel Armour+4
+	2	11494	1	50	15 -- Black Wind Suit+4
+	3	11694	1	50	15 -- Magic Plate Armour+4
+	4	11894	1	50	15 -- Black Clothing+4
+	5	13066	1	50	15 -- Falcon Shield+6
+	6	13086	1	50	15 -- Tiger Shield+6
+	7	13106	1	50	15 -- Lion Edge Shield+6
+	8	13126	1	50	15 -- Dragon Scale Shield+6
+	9	15187	1	50	15 -- Nimbus Boots+7
+	10	15167	1	50	15 -- Ecstasy Shoes+7
+	11	15207	1	50	15 -- Phoenix Shoes+7
+	12	15227	1	50	15 -- Fire Bird Shoes+7
+	13	16207	1	50	15 -- Heaven's Tear Necklace+7
+	14	16187	1	50	15 -- Amethyst Necklace+7
+	15	17147	1	50	15 -- White Gold Earrings+7
+	16	17167	1	50	15 -- Crystal Earrings+7
+	17	17187	1	50	15 -- Amethyst Earrings+7
+	18	17207	1	50	15 -- Heaven's Tear Earrings+7
+	19	28430	1	50	15 -- Stone of Penetration+4
+	20	28431	1	50	15 -- Stone of Deathblow+4
+	21	28432	1	50	15 -- Stone of Cooldown+4
+	22	28433	1	50	15 -- Stone against Warriors+4
+	23	28434	1	50	15 -- Stone against Ninjas+4
+	24	28435	1	50	15 -- Stone against Suras+4
+	25	28436	1	50	15 -- Stone against Shamans+4
+	26	28437	1	50	15 -- Stone of Monsters+4
+	27	28438	1	50	15 -- Stone of Evasion+4
+	28	28439	1	50	15 -- Stone of Ducking+4
+	29	28440	1	50	15 -- Stone of Magic+4
+	30	28441	1	50	15 -- Stone of Vitality+4
+	31	28442	1	50	15 -- Stone of Defence+4
+	32	28443	1	50	15 -- Stone of Haste+4
+	33	70031	1	50	15 -- Fencing Pamphlet
+	34	30190	1	400	100 -- Blood Stone
+	35	30190	5	100	10 -- Blood Stone
+}
+Group	Tree_Frog_Soldier
+{
+	Mob	1301
+	Type	drop
+	1	90012	1	0.2 -- Plywood
+	2	12260	1	2.5 -- Fear Mask +0
+	3	12390	1	2.5 -- Orc Hood +0
+	4	12530	1	5 -- Horned Helmet +0
+	5	12670	1	5 -- Cardinal's Hat +0
+}
+Group	Tree_Frog_Leader
+{
+	Mob	1302
+	Type	drop
+	1	90012	1	0.3 -- Plywood
+	2	12260	1	5 -- Fear Mask +0
+	3	12390	1	5 -- Orc Hood +0
+	4	12530	1	2.5 -- Horned Helmet +0
+	5	12670	1	2.5 -- Cardinal's Hat +0
+}
+Group	Leflet_Bogeyman
+{
+	Mob	1303
+	Type	drop
+	1	90012	1	0.1 -- Plywood
+}
+Group	Yellow_Tiger_Ghost
+{
+	Mob	1304
+	Type	drop
+	1	27002	200	400 -- Red Potion (M)
+	2	27003	100	400 -- Red Potion (L)
+	3	27005	200	400 -- Blue Potion (M)
+	4	27006	100	400 -- Blue Potion (L)
+	5	90010	1	300 -- Foundation Stone
+}
+Group	Bullfrog_General
+{
+	Mob	1305
+	Type	drop
+	1	15162	1	0.2 -- Ecstasy Shoes+2
+	2	16162	1	0.2 -- Crystal Necklace+2
+	3	12382	1	0.2 -- Steel Hood+2
+	4	17142	1	0.2 -- White Gold Earrings+2
+	5	90012	1	0.4 -- Plywood
+	6	12260	1	0.75 -- Fear Mask +0
+	7	12390	1	0.75 -- Orc Hood +0
+	8	12530	1	0.75 -- Horned Helmet +0
+	9	12670	1	0.75 -- Cardinal's Hat +0
+}
+Group	Destroyer
+{
+	Mob	1401
+	Type	drop
+	1	50723	1	2 -- Kaki Blossom
+	2	50067	1	4 -- Scroll of Evolution
+	3	50068	1	2 -- Scroll of Mutation
+}
+Group	Axe_Fighter
+{
+	Mob	1402
+	Type	drop
+	1	50067	1	4 -- Scroll of Evolution
+	2	50068	1	2 -- Scroll of Mutation
+}
+Group	Thousand_Fighter
+{
+	Mob	1403
+	Type	drop
+	1	50067	1	16 -- Scroll of Evolution
+	2	50068	1	12 -- Scroll of Mutation
+}
+Group	Stone_Golem
+{
+	Mob	1501
+	Type	drop
+	1	50067	1	3 -- Scroll of Evolution
+	2	50068	1	2 -- Scroll of Mutation
+}
+Group	Stone_Golem
+{
+	Mob	1502
+	Type	drop
+	1	50067	1	3 -- Scroll of Evolution
+	2	50068	1	2 -- Scroll of Mutation
+}
+Group	Giant_Rock_Golem
+{
+	Mob	1503
+	Type	drop
+	1	50723	1	4 -- Kaki Blossom
+	2	50067	1	3 -- Scroll of Evolution
+	3	50068	1	2 -- Scroll of Mutation
+}
+Group	Ogre_Warrior
+{
+	Mob	1601
+	Type	drop
+	1	50067	1	3 -- Scroll of Evolution
+	2	50068	1	2 -- Scroll of Mutation
+}
+Group	Ogre_Butcher
+{
+	Mob	1602
+	Type	drop
+	1	50067	1	4 -- Scroll of Evolution
+	2	50068	1	3 -- Scroll of Mutation
+}
+Group	Ogre_Berserk
+{
+	Mob	1603
+	Type	drop
+	1	50067	1	16 -- Scroll of Evolution
+	2	50068	1	12 -- Scroll of Mutation
+}
+Group	Nine_Tails
+{
+	Mob	1901
+	Type	drop
+	1	27002	200	400 -- Red Potion (M)
+	2	27003	100	400 -- Red Potion (L)
+	3	27005	200	400 -- Blue Potion (M)
+	4	27006	100	400 -- Blue Potion (L)
+	5	90010	1	200 -- Foundation Stone
+}
+Group	Elite_Nine_Tails
+{
+	Mob	1902
+	Type	drop
+	kill_drop	1
+	1	50006	15	30	0 -- Gold Treasure Chest
+	2	50007	20	40	0 -- Silver Treasure Chest
+	3	50012	10	15	0 -- Gold Treasure Chest+
+	4	50013	15	20	0 -- Silver Treasure Chest+
+	5	50011	5	5	0 -- Moonlight Treasure Chest
+}
+Group	Elite_Nine_Tails
+{
+	Mob	1904
+	Type	drop
+	kill_drop	1
+	1	50006	15	30	0 -- Gold Treasure Chest
+	2	50007	20	40	0 -- Silver Treasure Chest
+	3	50012	10	15	0 -- Gold Treasure Chest+
+	4	50013	15	20	0 -- Silver Treasure Chest+
+	5	50011	5	5	0 -- Moonlight Treasure Chest
+}
+Group	Elite_Nine_Tails
+{
+	Mob	1905
+	Type	drop
+	kill_drop	1
+	1	50006	15	30	0 -- Gold Treasure Chest
+	2	50007	20	40	0 -- Silver Treasure Chest
+	3	50012	10	15	0 -- Gold Treasure Chest+
+	4	50013	15	20	0 -- Silver Treasure Chest+
+	5	50011	5	5	0 -- Moonlight Treasure Chest
+}
+Group	Elite_Nine_Tails
+{
+	Mob	1906
+	Type	drop
+	kill_drop	1
+	1	50006	15	30	0 -- Gold Treasure Chest
+	2	50007	20	40	0 -- Silver Treasure Chest
+	3	50012	10	15	0 -- Gold Treasure Chest+
+	4	50013	15	20	0 -- Silver Treasure Chest+
+	5	50011	5	5	0 -- Moonlight Treasure Chest
+}
+Group	Baby_Spider
+{
+	Mob	2001
+	Type	drop
+	1	50721	1	2 -- Peach Blossom
+}
+Group	Poison_Spider
+{
+	Mob	2002
+	Type	drop
+	1	50725	1	1 -- Lilac
+}
+Group	Red_Poison_Spider
+{
+	Mob	2003
+	Type	drop
+	1	50725	1	1 -- Lilac
+	2	50009	1	0.2 -- Silver Key
+}
+Group	Claw_Spider
+{
+	Mob	2004
+	Type	drop
+	1	50721	1	2 -- Peach Blossom
+}
+Group	Soldier_Spider
+{
+	Mob	2005
+	Type	drop
+	1	50727	1	0.8 -- Alpine Rose
+}
+Group	Baby_Poison_Spider
+{
+	Mob	2031
+	Type	drop
+	1	50722	1	1 -- Bellflower
+}
+Group	Red_Angry_Poison_Spider
+{
+	Mob	2033
+	Type	drop
+	1	50727	1	0.8 -- Alpine Rose
+}
+Group	Claw_Poison_Spider
+{
+	Mob	2034
+	Type	drop
+	1	50726	1	2 -- Tue Fungus
+}
+Group	Soldier_Poison_Spider
+{
+	Mob	2035
+	Type	drop
+	1	50726	1	2 -- Tue Fungus
+	2	21040	1	0.1 -- Scale Plate Armour+0
+	3	11260	1	0.1 -- Scale Plate Armour+0
+	4	11460	1	0.1 -- Young Dragon Suit+0
+	5	11660	1	0.1 -- Fog Plate Armour+0
+	6	11860	1	0.1 -- Clothing of Morality+0
+}
+Group	Proud_Soldier_Spider
+{
+	Mob	2036
+	Type	drop
+	Kill_drop	90
+	1	3112	1	65	10 -- Salvation Blade+2
+	2	3113	1	35	10 -- Salvation Blade+3
+}
+Group	Small_Poison_Spider
+{
+	Mob	2061
+	Type	drop
+	1	104	1	0.5 -- Bloody Sword+4
+	2	114	1	0.5 -- Great Sword+4
+	3	124	1	0.5 -- Flying Wizard Sword+4
+	4	134	1	0.5 -- Half Moon Sword+4
+	5	13006	1	0.5 -- Battle Shield+6
+	6	13022	1	0.5 -- Pentagon Shield+4
+	7	13045	1	0.5 -- Black Round Shield+5
+	8	13060	1	0.5 -- Falcon Shield+0
+	9	13100	1	0.5 -- Lion Edge Shield+0
+}
+Group	Deadly_Poison_Spider
+{
+	Mob	2062
+	Type	drop
+	1	1064	1	0.5 -- Devil Fist Dagger+4
+	2	1074	1	0.5 -- Bloody Dagger+4
+	3	1084	1	0.5 -- Rib Knife+4
+	4	1094	1	0.5 -- Chakram+4
+	5	12626	1	0.5 -- Monk Hat+6
+	6	12645	1	0.5 -- Phoenix Hat+5
+	7	12664	1	0.5 -- Sunlight Hat+4
+	8	13080	1	0.5 -- Tiger Shield+0
+	9	13120	1	0.5 -- Dragon Scale Shield+0
+}
+Group	Red_Deadly_Poison_Spider
+{
+	Mob	2063
+	Type	drop
+	1	2094	1	0.5 -- Thorn Leaf Bow+4
+	2	2104	1	0.5 -- Bull's Horn Bow+4
+	3	2114	1	0.5 -- Unicorn Bow+4
+	4	2124	1	0.5 -- Giant Wing Bow+4
+	5	12486	1	0.5 -- Bloody Helmet+6
+	6	12505	1	0.5 -- Mocking Helmet+5
+	7	12524	1	0.5 -- Castle Helmet+4
+	8	13120	1	0.1 -- Dragon Scale Shield+0
+}
+Group	Claw_Poison_Spider
+{
+	Mob	2064
+	Type	drop
+	1	3094	1	0.5 -- Glacial Pick+4
+	2	3104	1	0.5 -- Twelve Spirit Sword+4
+	3	3114	1	0.5 -- Salvation Blade+4
+	4	3124	1	0.5 -- Lion Slayer+4
+	5	12346	1	0.5 -- Leather Hood+6
+	6	12365	1	0.5 -- Chain Hood+5
+	7	12384	1	0.5 -- Steel Hood+4
+	8	13120	1	0.1 -- Dragon Scale Shield+0
+}
+Group	Soldier_Poison_Spider
+{
+	Mob	2065
+	Type	drop
+	1	5064	1	0.5 -- Magical Bell+4
+	2	5074	1	0.5 -- Golden Bug Bell+4
+	3	5084	1	0.5 -- Steel Bug Bell+4
+	4	12206	1	0.5 -- Traditional Helmet+6
+	5	12225	1	0.5 -- Iron Helmet+5
+	6	12244	1	0.5 -- Ghost Mask Sallet+4
+	7	13100	1	0.1 -- Lion Edge Shield+0
+}
+Group	Queen_Spider
+{
+	Mob	2091
+	Type	drop
+	1	30326	1	50-- Spider Queen's Poison
+}
+Group	Desert_Flying_Eye
+{
+	Mob	2102
+	Type	drop
+	1	50722	1	2 -- Bellflower
+}
+Group	King_Scorpion
+{
+	Mob	2103
+	Type	drop
+	1	50721	1	4 -- Peach Blossom
+}
+Group	Young_Scorpion_Man
+{
+	Mob	2104
+	Type	drop
+	1	50724	1	1 -- Gango Root
+}
+Group	Scorpion_Archer
+{
+	Mob	2105
+	Type	drop
+	1	50013	1	1 -- Silver Treasure Chest+
+	2	8002	100	40 -- Stone Arrow
+	3	30081	1	1 -- Scorpion Tail+
+	4	50009	1	0.2 -- Silver Key
+	5	50722	1	2 -- Bellflower
+}
+Group	Snake_Swordsman
+{
+	Mob	2106
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+	2	50009	1	0.2 -- Silver Key
+}
+Group	Snake_Archer
+{
+	Mob	2107
+	Type	drop
+	1	50006	1	0.7 -- Gold Treasure Chest
+	2	8003	50	40 -- Iron Arrow
+	3	30082	1	1 -- Snake Tail+
+	4	50725	1	2 -- Lilac
+}
+Group	Desert_Outlaw
+{
+	Mob	2108
+	Type	drop
+	1	92	1	0.2 -- Barbarian Sword+2
+	2	2082	1	0.2 -- Red Eye Bow+2
+	3	11841	1	0.2 -- Heavenly Clothing+1
+	4	15122	1	0.2 -- Bronze Boots+2
+	5	27002	30	50 -- Red Potion (M)
+	6	27003	20	25 -- Red Potion (L)
+	7	27005	20	50 -- Blue Potion (M)
+	8	27006	10	25 -- Blue Potion (L)
+	9	70008	1	0.1 -- White Flag
+	10	50728	1	0.8 -- Mulberry
+}
+Group	Bestial_Scorpion_Man
+{
+	Mob	2131
+	Type	drop
+	1	50727	1	2 -- Alpine Rose
+}
+Group	Scorpion_Archer
+{
+	Mob	2132
+	Type	drop
+	1	50726	1	4 -- Tue Fungus
+}
+Group	Snake_Swordman
+{
+	Mob	2133
+	Type	drop
+	1	15164	1	0.5 -- Ecstasy Shoes+4
+	2	15184	1	0.5 -- Nimbus Boots+4
+	3	15204	1	0.5 -- Phoenix Shoes+4
+	4	15224	1	0.5 -- Fire Bird Shoes+4
+	5	17104	1	0.5 -- Ebony Earrings+4
+	6	17124	1	0.5 -- Pearl Earrings+4
+	7	17144	1	0.5 -- White Gold Earrings+4
+	8	13080	1	0.1 -- Tiger Shield+0
+	9	50009	1	0.1 -- Silver Key
+}
+Group	Snake_Archer
+{
+	Mob	2134
+	Type	drop
+	1	15084	1	0.5 -- Leather Boots+4
+	2	15104	1	0.5 -- Golden Shoes+4
+	3	15124	1	0.5 -- Bronze Boots+4
+	4	15144	1	0.5 -- Jade Shoes+4
+	5	16164	1	0.5 -- Crystal Necklace+4
+	6	16184	1	0.5 -- Amethyst Necklace+4
+	7	16204	1	0.5 -- Heaven's Tear Necklace+4
+	8	13060	1	0.1 -- Falcon Shield+0
+	9	50009	1	0.1 -- Silver Key
+}
+Group	Desert_Outlaw
+{
+	Mob	2135
+	Type	drop
+	1	50725	1	4 -- Lilac
+}
+Group	Giant_Tortoise
+{
+	Mob	2191
+	Type	drop
+	1	27002	200	400 -- Red Potion (M)
+	2	27003	100	400 -- Red Potion (L)
+	3	27005	200	400 -- Blue Potion (M)
+	4	27006	100	400 -- Blue Potion (L)
+	5	90012	1	80 -- Plywood
+}
+Group	Fighting_Tiger_Minion
+{
+	Mob	2201
+	Type	drop
+	1	90010	1	0.9 -- Foundation Stone
+	2	50722	1	1 -- Bellflower
+}
+Group	Flame_Ghost
+{
+	Mob	2202
+	Type	drop
+	1	90010	1	0.1 -- Foundation Stone
+	2	50727	1	2 -- Alpine Rose
+}
+Group	Fighting_Tiger
+{
+	Mob	2203
+	Type	drop
+	1	90010	1	0.2 -- Foundation Stone
+	2	50728	1	1 -- Mulberry
+}
+Group	Flame
+{
+	Mob	2204
+	Type	drop
+	1	90010	1	0.3 -- Foundation Stone
+	2	12280	1	0.041 -- War Master Helmet +0
+	3	12400	1	0.041 -- Spider Hood +0
+	4	12540	1	0.041 -- Magic Helmet +0
+	5	12680	1	0.041 -- Soul Shard Hat +0
+}
+Group	Flame_Warrior
+{
+	Mob	2205
+	Type	drop
+	1	90010	1	0.4 -- Foundation Stone
+	2	50723	1	4 -- Kaki Blossom
+	3	12280	1	0.041 -- War Master Helmet +0
+	4	12400	1	0.041 -- Spider Hood +0
+	5	12540	1	0.041 -- Magic Helmet +0
+	6	12680	1	0.041 -- Soul Shard Hat +0
+}
+Group	Flame_King
+{
+	Mob	2206
+	Type	drop
+	1	27002	200	400 -- Red Potion (M)
+	2	27003	100	400 -- Red Potion (L)
+	3	27005	200	400 -- Blue Potion (M)
+	4	27006	100	400 -- Blue Potion (L)
+	5	90012	1	200 -- Plywood
+}
+Group	Ghost_Tree
+{
+	Mob	2301
+	Type	drop
+	1	50727	1	2 -- Alpine Rose
+}
+Group	Ghost_Stump
+{
+	Mob	2302
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+	2	30192	1	0.5 -- Plant Sap
+}
+Group	Dryad
+{
+	Mob	2303
+	Type	drop
+	1	50725	1	2 -- Lilac
+	2	30192	1	0.5 -- Plant Sap
+}
+Group	Ghost_Willow
+{
+	Mob	2304
+	Type	drop
+	Kill_drop	15000
+	1	11280	1	1	10 -- Dragon God Armour+0
+	2	11880	1	1	10 -- Baroness Dress+0
+	3	11480	1	1	10 -- Fuchsia Suit+0
+	4	11680	1	1	10 -- Spirit Plate Armour+0
+}
+Group	Evil_Tree
+{
+	Mob	2305
+	Type	drop
+	Kill_drop	10000
+	1	3140	1	1	10 -- Electromagnetic Blade+0
+	2	1110	1	1	10 -- Lightning Knife+0
+	3	2130	1	1	10 -- Divine Apricot Bow+0
+	4	7140	1	1	10 -- Salvation Fan+0
+	5	5100	1	1	10 -- Heaven and Earth Bell+0
+	6	160	1	1	10 -- Nymph Sword+0
+	7	240	1	1	10 -- Exorcism Sword+0
+	8	150	1	1	10 -- Ghost Fang Blade+0
+	9	5090	1	1	10 -- Thunder Bird Bell+0
+	10	140	1	1	10 -- Battle Sword+0
+	11	3130	1	1	10 -- Partisan+0
+	12	1100	1	1	10 -- Dragon Knife+0
+	13	7130	1	1	10 -- Heavenly Bird Fan+0
+	14	2140	1	1	10 -- Yellow Dragon Bow+0
+}
+Group	Red_Ghost_Tree
+{
+	Mob	2311
+	Type	drop
+	1	50728	1	0.8 -- Mulberry
+	2	30197	1	0.3 -- Magic Seeds
+}
+Group	Red_Ghost_Stump
+{
+	Mob	2312
+	Type	drop
+	1	50724	1	1 -- Gango Root
+	2	30197	1	0.3 -- Magic Seeds
+}
+Group	Red_Dryad
+{
+	Mob	2313
+	Type	drop
+	1	17204	1	0.3 -- Heaven's Tear Earrings+4
+	2	17205	1	0.3 -- Heaven's Tear Earrings+5
+	3	17206	1	0.3 -- Heaven's Tear Earrings+6
+	4	3140	1	0.3 -- Electromagnetic Blade+0
+	5	1110	1	0.3 -- Lightning Knife+0
+	6	2130	1	0.3 -- Divine Apricot Bow+0
+	7	7140	1	0.3 -- Salvation Fan+0
+	8	5100	1	0.3 -- Heaven and Earth Bell+0
+	9	160	1	0.3 -- Nymph Sword+0
+	10	240	1	0.3 -- Exorcism Sword+0
+}
+Group	Red_Ghost_Willow
+{
+	Mob	2314
+	Type	drop
+	1	16204	1	0.3 -- Heaven's Tear Necklace+4
+	2	16205	1	0.3 -- Heaven's Tear Necklace+5
+	3	16206	1	0.3 -- Heaven's Tear Necklace+6
+	4	3140	1	0.6 -- Electromagnetic Blade+0
+	5	1110	1	0.6 -- Lightning Knife+0
+	6	2130	1	0.6 -- Divine Apricot Bow+0
+	7	7140	1	0.6 -- Salvation Fan+0
+	8	5100	1	0.6 -- Heaven and Earth Bell+0
+	9	160	1	0.6 -- Nymph Sword+0
+	10	240	1	0.6 -- Exorcism Sword+0
+}
+Group	Red_Evil_Tree
+{
+	Mob	2315
+	Type	drop
+	1	11291	1	0.3 -- Black Steel Armour+1
+	2	11491	1	0.3 -- Black Wind Suit+1
+	3	11891	1	0.3 -- Black Clothing+1
+	4	11691	1	0.3 -- Magic Plate Armour+1
+	5	27987	1	0.9 -- Clam
+	6	14204	1	0.9 -- Heaven's Tear Bracelet+4
+	7	14205	1	0.9 -- Heaven's Tear Bracelet+5
+	8	14206	1	0.9 -- Heaven's Tear Bracelet+6
+	9	3140	1	0.15 -- Electromagnetic Blade+0
+	10	1110	1	0.15 -- Lightning Knife+0
+	11	2130	1	0.15 -- Divine Apricot Bow+0
+	12	7140	1	0.15 -- Salvation Fan+0
+	13	5100	1	0.15 -- Heaven and Earth Bell+0
+	14	160	1	0.15 -- Nymph Sword+0
+	15	240	1	0.15 -- Exorcism Sword+0
+}
+Group	Setaou_Fighter
+{
+	Mob	2401
+	Type	drop
+	1	250	1	0.7 -- Demon Blade+0
+	2	12525	1	0.4 -- Castle Helmet+5
+	3	50060	1	0.4 -- Horse Riding Manual
+	4	27987	1	0.5 -- Clam
+	5	50721	5	0.63 -- Peach Blossom
+	6	50725	5	0.63 -- Lilac
+	7	70050	1	0.2 -- Sage King's Symbol
+	8	166	1	0.8 -- Nymph Sword+6
+	9	164	1	0.17 -- Nymph Sword+4
+	10	15185	1	0.34 -- Nimbus Boots+5
+	11	254	1	0.9 -- Demon Blade+4
+	12	255	1	0.5 -- Demon Blade+5
+	13	70031	1	0.4 -- Fencing Pamphlet
+	14	11485	1	0.1 -- Fuchsia Suit+5
+	15	11285	1	0.1 -- Dragon God Armour+5
+	16	190	1	0.4 -- Lion Sword+0
+	17	180	1	0.4 -- Poison Sword+0
+	18	50124	1	0.2 -- Rotten Wooden Box
+	19	50121	1	0.6 -- Iron Box
+}
+Group	Setaou_Hunter
+{
+	Mob	2402
+	Type	drop
+	1	1120	1	0.7 -- Siamese Knife+0
+	2	2180	1	0.7 -- Blue Dragon Bow+0
+	3	8005	30	0.6 -- Silver Arrow
+	4	8005	60	0.42 -- Silver Arrow
+	5	12385	1	0.4 -- Steel Hood+5
+	6	14184	1	0.25 -- Amethyst Bracelet+4
+	7	27987	1	0.5 -- Clam
+	8	50722	5	0.63 -- Bellflower
+	9	50726	5	0.63 -- Tue Fungus
+	10	1106	1	0.8 -- Dragon Knife+6
+	11	2136	1	0.8 -- Divine Apricot Bow+6
+	12	2184	1	0.9 -- Blue Dragon Bow+4
+	13	1124	1	0.9 -- Siamese Knife+4
+	14	70031	1	0.7 -- Fencing Pamphlet
+	15	11885	1	0.15 -- Baroness Dress+5
+	16	11685	1	0.15 -- Spirit Plate Armour+5
+	17	2170	1	0.4 -- Crow Steel Bow+0
+	18	1130	1	0.4 -- Devil Wing Chakram+0
+	19	50124	1	0.2 -- Rotten Wooden Box
+	20	50120	1	0.6 -- Iron Casket
+
+}
+Group	Setaou_Mystic
+{
+	Mob	2403
+	Type	drop
+	1	7150	1	0.17 -- Ecstasy Fan+0
+	2	12665	1	0.8 -- Sunlight Hat+5
+	3	14164	1	0.34 -- Crystal Bracelet+4
+	4	17163	1	0.85 -- Crystal Earrings+3
+	5	27987	1	0.1 -- Clam
+	6	50723	5	1.25 -- Kaki Blossom
+	7	50727	5	1.25 -- Alpine Rose
+	8	5096	1	0.2 -- Thunder Bird Bell+6
+	9	7136	1	0.2 -- Heavenly Bird Fan+6
+	10	11885	1	0.8 -- Baroness Dress+5
+	11	11685	1	0.4 -- Spirit Plate Armour+5
+	12	15224	1	0.34 -- Fire Bird Shoes+4
+	13	7154	1	0.15 -- Ecstasy Fan+4
+	14	7155	1	0.15 -- Ecstasy Fan+5
+	15	70031	1	0.7 -- Fencing Pamphlet
+	16	5120	1	0.4 -- Bamboo Bell+0
+	17	50124	1	0.2 -- Rotten Wooden Box
+	18	50122	1	0.6 -- Iron Chest
+}
+Group	Setaou_Leader
+{
+	Mob	2404
+	Type	drop
+	1	170	1	0.1 -- Sting Sword+0
+	2	174	1	0.9 -- Sting Sword+4
+	3	50060	1	0.8 -- Horse Riding Manual
+	4	50724	5	1.25 -- Gango Root
+	5	50728	5	1.25 -- Mulberry
+	6	70048	1	0.23 -- Cloak of Secrecy
+	7	70051	1	0.39 -- Sage King's Glove
+	8	3146	1	0.16 -- Electromagnetic Blade+6
+	9	3136	1	0.16 -- Partisan+6
+	10	11285	1	0.60 -- Dragon God Armour+5
+	11	11485	1	0.20 -- Fuchsia Suit+5
+	12	15085	1	0.85 -- Leather Boots+5
+	13	12245	1	0.8 -- Ghost Mask Sallet+5
+	14	3152	1	0.14 -- Soul Stealing Blade+2
+	15	70031	1	0.7 -- Fencing Pamphlet
+	16	181	1	0.5 -- Poison Sword+1
+	17	191	1	0.5 -- Lion Sword+1
+	18	1131	1	0.5 -- Devil Wing Chakram+1
+	19	5121	1	0.5 -- Bamboo Bell+1
+	20	2171	1	0.5 -- Crow Steel Bow+1
+	21	50120	1	0.2 -- Iron Casket
+	22	50121	1	0.2 -- Iron Box
+	23	50122	1	0.2 -- Iron Chest
+}
+Group	Setaou_Soldier
+{
+	Mob	2411
+	Type	drop
+	1	251	1	0.9 -- Demon Blade+1
+	2	12526	1	0.1 -- Castle Helmet+6
+	3	14204	1	0.22 -- Heaven's Tear Bracelet+4
+	4	50060	1	0.8 -- Horse Riding Manual
+	5	27987	1	0.1 -- Clam
+	6	50721	5	0.65 -- Peach Blossom
+	7	50725	5	0.65 -- Lilac
+	8	156	1	0.16 -- Ghost Fang Blade+6
+	9	246	1	0.16 -- Exorcism Sword+6
+	10	2144	1	0.16 -- Yellow Dragon Bow+4
+	11	70031	1	0.1 -- Fencing Pamphlet
+	12	182	1	0.1 -- Poison Sword+2
+	13	192	1	0.1 -- Lion Sword+2
+	14	50121	1	0.6 -- Iron Box
+	15	30196	1	0.2 -- Demon's Ashes
+	16	6051	1	0.1 -- Scarab Claw+1
+}
+Group	Setaou_Archer
+{
+	Mob	2412
+	Type	drop
+	1	1121	1	0.9 -- Siamese Knife+1
+	2	2181	1	0.9 -- Blue Dragon Bow+1
+	3	8005	35	1.6 -- Silver Arrow
+	4	8005	55	0.85 -- Silver Arrow
+	5	12386	1	0.17 -- Steel Hood+6
+	6	14186	1	0.28 -- Amethyst Bracelet+6
+	7	27987	1	0.1 -- Clam
+	8	50009	1	0.34 -- Silver Key
+	9	50722	5	0.75 -- Bellflower
+	10	50726	5	0.75 -- Tue Fungus
+	11	144	1	0.16 -- Battle Sword+4
+	12	1116	1	0.16 -- Lightning Knife+6
+	13	2146	1	0.16 -- Yellow Dragon Bow+6
+	14	70031	1	0.1 -- Fencing Pamphlet
+	15	2170	1	0.1 -- Crow Steel Bow+0
+	16	1130	1	0.1 -- Devil Wing Chakram+0
+	17	50120	1	0.6 -- Iron Casket
+	18	30196	1	0.3 -- Demon's Ashes
+	19	6051	1	0.4 -- Scarab Claw+1
+}
+Group	Setaou_Magistrate
+{
+	Mob	2413
+	Type	drop
+	1	7151	1	0.1 -- Ecstasy Fan+1
+	2	12666	1	0.17 -- Sunlight Hat+6
+	3	14166	1	0.26 -- Crystal Bracelet+6
+	4	15164	1	0.38 -- Ecstasy Shoes+4
+	5	17164	1	0.41 -- Crystal Earrings+4
+	6	17183	1	0.68 -- Amethyst Earrings+3
+	7	27987	1	0.1 -- Clam
+	8	50009	1	0.34 -- Silver Key
+	9	50723	5	1.25 -- Kaki Blossom
+	10	50727	5	1.25 -- Alpine Rose
+	11	154	1	0.16 -- Ghost Fang Blade+4
+	12	5106	1	0.16 -- Heaven and Earth Bell+6
+	13	7146	1	0.26 -- Salvation Fan+6
+	14	7144	1	0.26 -- Salvation Fan+4
+	15	70031	1	0.1 -- Fencing Pamphlet
+	16	5122	1	0.1 -- Bamboo Bell+2
+	17	50122	1	0.6 -- Iron Chest
+}
+Group	Setaou_Commander
+{
+	Mob	2414
+	Type	drop
+	1	182	1	0.2 -- Poison Sword+2
+	2	192	1	0.2 -- Lion Sword+2
+	3	1132	1	0.2 -- Devil Wing Chakram+2
+	4	5122	1	0.2 -- Bamboo Bell+2
+	5	2172	1	0.2	0 -- Crow Steel Bow+2
+	6	50120	1	0.4 -- Iron Casket
+	7	50121	1	0.4 -- Iron Box
+	8	50122	1	0.4 -- Iron Chest
+	9	6072	1	0.2 -- Thorned Claw+0
+}
+Group	Captain_Yonghan
+{
+	Mob	2491
+	Type	drop
+	1	30179	1	400 -- Twisted Key
+	2	30196	1	1 -- Demon's Ashes
+}
+Group	General_Yonghan
+{
+	Mob	2492
+	Type	drop
+	1	30179	1	400 -- Twisted Key
+	2	30179	2	100 -- Twisted Key
+	3	30190	1	100 -- Blood Stone
+	4	13063	1	100 -- Falcon Shield+3
+	5	14206	1	50 -- Heaven's Tear Bracelet+6
+	6	27987	1	100 -- Clam
+	7	70051	1	50 -- Sage King's Glove
+	8	13083	1	100 -- Tiger Shield+3
+	9	70050	1	50 -- Sage King's Symbol
+	10	13103	1	100 -- Lion Edge Shield+3
+	11	15165	1	30 -- Ecstasy Shoes+5
+	12	16203	1	50 -- Heaven's Tear Necklace+3
+	13	17184	1	50 -- Amethyst Earrings+4
+	14	17203	1	30 -- Heaven's Tear Earrings+3
+	15	13123	1	50 -- Dragon Scale Shield+3
+	16	14143	1	30 -- White Gold Bracelet+3
+	17	15204	1	30 -- Phoenix Shoes+4
+	18	16184	1	50 -- Amethyst Necklace+4
+}
+Group	Captain_Huashin
+{
+	Mob	2494
+	Type	drop
+	1	30179	1	400	100 -- Twisted Key
+}
+Group	General_Huashin
+{
+	Mob	2495
+	Type	drop
+	1	30179	1	400 -- Twisted Key
+	2	30179	3	100 -- Twisted Key
+	3	30190	1	100 -- Blood Stone
+	4	11691	1	30 -- Magic Plate Armour+1
+	5	11491	1	30 -- Black Wind Suit+1
+	6	11891	1	30 -- Black Clothing+1
+	7	11291	1	30 -- Black Steel Armour+1
+	8	13064	1	100 -- Falcon Shield+4
+	9	13084	1	30 -- Tiger Shield+4
+	10	13104	1	100 -- Lion Edge Shield+4
+	11	16204	1	50 -- Heaven's Tear Necklace+4
+	12	17204	1	30 -- Heaven's Tear Earrings+4
+	13	13124	1	100 -- Dragon Scale Shield+4
+	14	15205	1	30 -- Phoenix Shoes+5
+	15	70050	1	50 -- Sage King's Symbol
+	16	70051	1	50 -- Sage King's Glove
+	17	50009	1	100 -- Silver Key
+	18	27987	1	100 -- Clam
+}
+Group	Hae-Tae
+{
+	Mob	5002
+	Type	drop
+	1	27002	100	400 -- Red Potion (M)
+	2	27003	50	400 -- Red Potion (L)
+	3	27005	100	400 -- Blue Potion (M)
+	4	27006	50	400 -- Blue Potion (L)
+}
+Group	Pirate_Tanaka
+{
+	Mob	5004
+	Type	drop
+	Kill_drop	1
+	1	30202	1	1	0 -- Tanaka's Ear
+}
+Group	Weak_Ape_Soldier
+{
+	Mob	5101
+	Type	drop
+	1	50722	1	2 -- Bellflower
+}
+Group	Weak_Ape_Thrower
+{
+	Mob	5102
+	Type	drop
+	Kill_drop	250
+	1	50050	1	20	0 -- Horse Medal
+}
+Group	Weak_Ape_Fighter
+{
+	Mob	5103
+	Type	drop
+	Kill_drop	250
+	1	5042	1	65	10 -- Fountain Bell+2
+	2	82	1	65	10 -- Bastard Sword+2
+	3	83	1	35	10 -- Bastard Sword+3
+	4	5032	1	35	10 -- Jade Bell+2
+	5	50050	1	100	0 -- Horse Medal
+}
+Group	Weak_Ape_General
+{
+	Mob	5104
+	Type	drop
+	1	50721	1	1 -- Peach Blossom
+}
+Group	Apesoldier
+{
+	Mob	5111
+	Type	drop
+	1	50723	1	2 -- Kaki Blossom
+}
+Group	Apethrower
+{
+	Mob	5112
+	Type	drop
+	Kill_drop	300
+	1	50050	1	20	0 -- Horse Medal
+}
+Group	Apefighter
+{
+	Mob	5113
+	Type	drop
+	Kill_drop	250
+	1	7083	1	20	10 -- Sting Fan+3
+	2	5053	1	10	10 -- Apricot Bell+3
+	3	50050	1	30	0 -- Horse Medal
+}
+Group	Apegeneral
+{
+	Mob	5114
+	Type	drop
+	1	50722	1	1 -- Bellflower
+}
+Group	Stone_Ape
+{
+	Mob	5115
+	Type	drop
+	1	50725	1	1 -- Lilac
+}
+Group	Ape_Leader
+{
+	Mob	5116
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+}
+Group	Strong_Ape_Soldier
+{
+	Mob	5121
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+}
+Group	Strong_Ape_Thrower
+{
+	Mob	5122
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+}
+Group	Strong_Ape_Fighter
+{
+	Mob	5123
+	Type	drop
+	Kill_drop	250
+	1	7103	1	20	10 -- Triple Fan+3
+	2	50050	1	20	0 -- Horse Medal
+}
+Group	Strong_Ape_General
+{
+	Mob	5124
+	Type	drop
+	Kill_drop	100
+	1	5073	1	20	10 -- Golden Bug Bell+3
+	2	50050	1	20	0 -- Horse Medal
+}
+Group	Strong_Stone_Ape
+{
+	Mob	5125
+	Type	drop
+	1	50724	1	1 -- Gango Root
+}
+Group	Strong_Gold_Ape
+{
+	Mob	5126
+	Type	drop
+	1	50721	1	2 -- Peach Blossom
+}
+Group	Strong_Leader_Ape
+{
+	Mob	5127
+	Type	drop
+	1	50722	1	2 -- Bellflower
+}
+Group	Rock_Ape
+{
+	Mob	5161
+	Type	drop
+	1	50057	1	200 -- Herb of Easy Monkeys
+}
+Group	Walking_Ape
+{
+	Mob	5162
+	Type	drop
+	1	50058	1	200 -- Herb of Normal Monkeys
+}
+Group	Ape_Lord
+{
+	Mob	5163
+	Type	drop
+	1	131	1	4 -- Half Moon Sword+1
+	2	11271	1	4 -- Gold Plate Armour+1
+	3	2121	1	4 -- Giant Wing Bow+1
+	4	11871	1	4 -- Orange Cat Dress+1
+	5	5081	1	4 -- Leather Boots+1
+	6	11471	1	4 -- Killer Wind Suit+1
+	7	50059	1	200 -- Herb of Hard Monkeys
+	8	11672	1	4 -- Ghost Mask Armour+2
+	9	7112	1	4 -- Eyebrow Fan+2
+	10	50513	1	4 -- Soul Stone
+	11	30168	1	4 -- Leaders' Notes
+	12	50050	1	1 -- Horse Medal
+}
+Group	Metin_of_Sorrow
+{
+	Mob	8001
+	Type	drop
+	1	28041	1	10 -Stone of Vitality+0
+	2	28042	1	10 -- Stone of Defence+0
+	3	28043	1	10 -- Stone of Haste+0
+	4	50300	1	100 -- Skill Book
+	5	70024	1	08 -- Blessing Marble
+	6	28040	1	10 -- Stone of Magic+0
+	7	27002	50	60 -- Red Potion (M)
+	8	27003	30	20 -- Red Potion (L)
+	9	27005	30	40 -- Blue Potion (M)
+	10	27006	20	10 -- Blue Potion (L)
+	11	50300	1	100 -- Skill Book
+	12	28130	1	10 -- Stone of Penetration+1
+	13	28131	1	10 -- Stone of Deathblow+1
+	14	28132	1	10 -- Stone of Cooldown+1
+	15	28133	1	10 -- Stone against Warriors+1
+	16	28134	1	10 -- Stone against Ninjas+1
+	17	28135	1	10 -- Stone against Suras+1
+	18	28136	1	10 -- Stone against Shamans+1
+	19	28137	1	10 -- Stone of Monsters+1
+	20	28138	1	10 -- Stone of Evasion+1
+	21	28139	1	10 -- Stone of Ducking+1
+	22	28140	1	10 -- Stone of Magic+1
+	23	28141	1	10 -- Stone of Vitality+1
+	24	28142	1	10 -- Stone of Defence+1
+	25	28143	1	10 -- Stone of Haste+1
+	26	28030	1	10 -- Stone of Penetration+0
+	27	28031	1	10 -- Stone of Deathblow+0
+	28	28032	1	10 -- Stone of Cooldown+0
+	29	28033	1	10 -- Stone against Warriors+0
+	30	28034	1	10 -- Stone against Ninjas+0
+	31	28035	1	10 -- Stone against Suras+0
+	32	28036	1	10 -- Stone against Shamans+0
+	33	28037	1	10 -- Stone of Monsters+0
+	34	28038	1	10 -- Stone of Evasion+0
+	35	28039	1	10 -- Stone of Ducking+0
+	36	50300	1	100 -- Skill Book
+}
+Group	Metin_of_Combat
+{
+	Mob	8002
+	Type	drop
+	1	28034	1	10 -- Stone against Ninjas+0
+	2	28035	1	10 -- Stone against Suras+0
+	3	28036	1	10 -- Stone against Shamans+0
+	4	28037	1	10 -- Stone of Monsters+0
+	5	28038	1	10 -- Stone of Evasion+0
+	6	28039	1	10 -- Stone of Ducking+0
+	7	28040	1	10 -- Stone of Magic+0
+	8	28041	1	10 -- Stone of Vitality+0
+	9	28042	1	10 -- Stone of Defence+0
+	10	28043	1	10 -- Stone of Haste+0
+	11	50300	1	100 -- Skill Book
+	12	50300	1	100 -- Skill Book
+	13	50300	1	75 -- Skill Book
+	14	70024	1	10 -- Blessing Marble
+	15	28033	1	10 -- Stone against Warriors+0
+	16	27002	50	60 -- Red Potion (M)
+	17	27003	30	20 -- Red Potion (L)
+	18	27005	30	40 -- Blue Potion (M)
+	19	27006	20	10 -- Blue Potion (L)
+	20	50300	1	100 -- Skill Book
+	21	28130	1	10 -- Stone of Penetration+1
+	22	28131	1	10 -- Stone of Deathblow+1
+	23	28132	1	10 -- Stone of Cooldown+1
+	24	28133	1	10 -- Stone against Warriors+1
+	25	28134	1	10 -- Stone against Ninjas+1
+	26	28135	1	10 -- Stone against Suras+1
+	27	28136	1	10 -- Stone against Shamans+1
+	28	28137	1	10 -- Stone of Monsters+1
+	29	28138	1	10 -- Stone of Evasion+1
+	30	28139	1	10 -- Stone of Ducking+1
+	31	28140	1	10 -- Stone of Magic+1
+	32	28141	1	10 -- Stone of Vitality+1
+	33	28142	1	10 -- Stone of Defence+1
+	34	28143	1	10 -- Stone of Haste+1
+	35	28030	1	10 -- Stone of Penetration+0
+	36	28031	1	10 -- Stone of Deathblow+0
+	37	28032	1	10 -- Stone of Cooldown+0
+}
+Group	Metin_of_Battle
+{
+	Mob	8003
+	Type	drop
+	1	27002	50	60 -- Red Potion (M)
+	2	27003	30	20 -- Red Potion (L)
+	3	27005	30	40 -- Blue Potion (M)
+	4	27006	20	20 -- Blue Potion (L)
+	5	50300	1	100 -- Skill Book
+	6	28130	1	10 -- Stone of Penetration+1
+	7	28131	1	10 -- Stone of Deathblow+1
+	8	28132	1	10 -- Stone of Cooldown+1
+	9	28133	1	10 -- Stone against Warriors+1
+	10	28134	1	10 -- Stone against Ninjas+1
+	11	28135	1	10 -- Stone against Suras+1
+	12	28136	1	10 -- Stone against Shamans+1
+	13	28137	1	10 -- Stone of Monsters+1
+	14	28138	1	10 -- Stone of Evasion+1
+	15	28139	1	10 -- Stone of Ducking+1
+	16	28140	1	10 -- Stone of Magic+1
+	17	28141	1	10 -- Stone of Vitality+1
+	18	28142	1	10 -- Stone of Defence+1
+	19	28143	1	10 -- Stone of Haste+1
+	20	28030	1	10 -- Stone of Penetration+0
+	21	28031	1	10 -- Stone of Deathblow+0
+	22	28032	1	10 -- Stone of Cooldown+0
+	23	28033	1	10 -- Stone against Warriors+0
+	24	28034	1	10 -- Stone against Ninjas+0
+	25	28035	1	10 -- Stone against Suras+0
+	26	28036	1	10 -- Stone against Shamans+0
+	27	28037	1	10 -- Stone of Monsters+0
+	28	28038	1	10 -- Stone of Evasion+0
+	29	28039	1	10 -- Stone of Ducking+0
+	30	28040	1	10 -- Stone of Magic+0
+	31	28041	1	10 -- Stone of Vitality+0
+	32	28042	1	10 -- Stone of Defence+0
+	33	28043	1	10 -- Stone of Haste+0
+	34	50300	1	100 -- Skill Book
+	35	50300	1	100 -- Skill Book
+	36	70024	1	08 -- Blessing Marble
+}
+Group	Metin_of_Greed
+{
+	Mob	8004
+	Type	drop
+	1	27002	50	60 -- Red Potion (M)
+	2	27003	30	20 -- Red Potion (L)
+	3	27005	30	40 -- Blue Potion (M)
+	4	27006	20	10 -- Blue Potion (L)
+	5	50300	1	100 -- Skill Book
+	6	70014	1	05 -- Blood Pill
+	7	70037	1	05 -- Book of Forgetfulness
+	8	28130	1	10 -- Stone of Penetration+1
+	9	28131	1	10 -- Stone of Deathblow+1
+	10	28132	1	10 -- Stone of Cooldown+1
+	11	28133	1	10 -- Stone against Warriors+1
+	12	28134	1	10 -- Stone against Ninjas+1
+	13	28135	1	10 -- Stone against Suras+1
+	14	28136	1	10 -- Stone against Shamans+1
+	15	28137	1	10 -- Stone of Monsters+1
+	16	28138	1	10 -- Stone of Evasion+1
+	17	28139	1	10 -- Stone of Ducking+1
+	18	28140	1	10 -- Stone of Magic+1
+	19	28141	1	10 -- Stone of Vitality+1
+	20	28142	1	10 -- Stone of Defence+1
+	21	28143	1	10 -- Stone of Haste+1
+	22	28030	1	10 -- Stone of Penetration+0
+	23	28031	1	10 -- Stone of Deathblow+0
+	24	28032	1	10 -- Stone of Cooldown+0
+	25	28033	1	10 -- Stone against Warriors+0
+	26	28034	1	10 -- Stone against Ninjas+0
+	27	28035	1	10 -- Stone against Suras+0
+	28	28036	1	10 -- Stone against Shamans+0
+	29	28037	1	10 -- Stone of Monsters+0
+	30	28038	1	10 -- Stone of Evasion+0
+	31	28039	1	10 -- Stone of Ducking+0
+	32	28040	1	10 -- Stone of Magic+0
+	33	28041	1	10 -- Stone of Vitality+0
+	34	28042	1	10 -- Stone of Defence+0
+	35	28043	1	10 -- Stone of Haste+0
+	36	28230	1	10 -- Stone of Penetration+2
+	37	28231	1	10 -- Stone of Deathblow+2
+	38	28232	1	10 -- Stone of Cooldown+2
+	39	28233	1	10 -- Stone against Warriors+2
+	40	28234	1	10 -- Stone against Ninjas+2
+	41	28235	1	10 -- Stone against Suras+2
+	42	28236	1	10 -- Stone against Shamans+2
+	43	28237	1	10 -- Stone of Monsters+2
+	44	28238	1	10 -- Stone of Evasion+2
+	45	28239	1	10 -- Stone of Ducking+2
+	46	28240	1	10 -- Stone of Magic+2
+	47	28241	1	10 -- Stone of Vitality+2
+	48	28242	1	10 -- Stone of Defence+2
+	49	28243	1	10 -- Stone of Haste+2
+	50	50300	1	100 -- Skill Book
+	51	50300	1	100 -- Skill Book
+	52	70024	1	15 -- Blessing Marble
+}
+Group	Metin_of_Black
+{
+	Mob	8005
+	Type	drop
+	1	27002	50	60 -- Red Potion (M)
+	2	27003	30	20 -- Red Potion (L)
+	3	27005	30	40 -- Blue Potion (M)
+	4	27006	20	10 -- Blue Potion (L)
+	5	50300	1	100 -- Skill Book
+	6	70014	1	10 -- Blood Pill
+	7	70037	1	10 -- Book of Forgetfulness
+	8	28130	1	10 -- Stone of Penetration+1
+	9	28131	1	10 -- Stone of Deathblow+1
+	10	28132	1	10 -- Stone of Cooldown+1
+	11	28133	1	10 -- Stone against Warriors+1
+	12	28134	1	10 -- Stone against Ninjas+1
+	13	28135	1	10 -- Stone against Suras+1
+	14	28136	1	10 -- Stone against Shamans+1
+	15	28137	1	10 -- Stone of Monsters+1
+	16	28138	1	10 -- Stone of Evasion+1
+	17	28139	1	10 -- Stone of Ducking+1
+	18	28140	1	10 -- Stone of Magic+1
+	19	28141	1	10 -- Stone of Vitality+1
+	20	28142	1	10 -- Stone of Defence+1
+	21	28143	1	10 -- Stone of Haste+1
+	22	28030	1	10 -- Stone of Penetration+0
+	23	28031	1	10 -- Stone of Deathblow+0
+	24	28032	1	10 -- Stone of Cooldown+0
+	25	28033	1	10 -- Stone against Warriors+0
+	26	28034	1	10 -- Stone against Ninjas+0
+	27	28035	1	10 -- Stone against Suras+0
+	28	28036	1	10 -- Stone against Shamans+0
+	29	28037	1	10 -- Stone of Monsters+0
+	30	28038	1	10 -- Stone of Evasion+0
+	31	28039	1	10 -- Stone of Ducking+0
+	32	28040	1	10 -- Stone of Magic+0
+	33	28041	1	10 -- Stone of Vitality+0
+	34	28042	1	10 -- Stone of Defence+0
+	35	28043	1	10 -- Stone of Haste+0
+	36	28230	1	10 -- Stone of Penetration+2
+	37	28231	1	10 -- Stone of Deathblow+2
+	38	28232	1	10 -- Stone of Cooldown+2
+	39	28233	1	10 -- Stone against Warriors+2
+	40	28234	1	10 -- Stone against Ninjas+2
+	41	28235	1	10 -- Stone against Suras+2
+	42	28236	1	10 -- Stone against Shamans+2
+	43	28237	1	10 -- Stone of Monsters+2
+	44	28238	1	10 -- Stone of Evasion+2
+	45	28239	1	10 -- Stone of Ducking+2
+	46	28240	1	10 -- Stone of Magic+2
+	47	28241	1	10 -- Stone of Vitality+2
+	48	28242	1	10 -- Stone of Defence+2
+	49	28243	1	10 -- Stone of Haste+2
+	50	50300	1	100 -- Skill Book
+	51	50300	1	100 -- Skill Book
+	52	70024	1	15 -- Blessing Marble
+}
+Group	Metin_of_Darkness
+{
+	Mob	8006
+	Type	drop
+	1	27002	50	60 -- Red Potion (M)
+	2	27003	30	20 -- Red Potion (L)
+	3	27005	30	40 -- Blue Potion (M)
+	4	27006	20	10 -- Blue Potion (L)
+	5	50300	1	10 -- Skill Book
+	6	70014	1	05 -- Blood Pill
+	7	70037	1	05 -- Book of Forgetfulness
+	8	28130	1	04 -- Stone of Penetration+1
+	9	28131	1	04 -- Stone of Deathblow+1
+	10	28132	1	04 -- Stone of Cooldown+1
+	11	28133	1	04 -- Stone against Warriors+1
+	12	28134	1	04 -- Stone against Ninjas+1
+	13	28135	1	04 -- Stone against Suras+1
+	14	28136	1	04 -- Stone against Shamans+1
+	15	28137	1	04 -- Stone of Monsters+1
+	16	28138	1	04 -- Stone of Evasion+1
+	17	28139	1	04 -- Stone of Ducking+1
+	18	28140	1	04 -- Stone of Magic+1
+	19	28141	1	04 -- Stone of Vitality+1
+	20	28142	1	04 -- Stone of Defence+1
+	21	28143	1	04 -- Stone of Haste+1
+	22	28230	1	02 -- Stone of Penetration+2
+	23	28231	1	02 -- Stone of Deathblow+2
+	24	28232	1	02 -- Stone of Cooldown+2
+	25	28233	1	02 -- Stone against Warriors+2
+	26	28234	1	02 -- Stone against Ninjas+2
+	27	28235	1	02 -- Stone against Suras+2
+	28	28236	1	02 -- Stone against Shamans+2
+	29	28237	1	02 -- Stone of Monsters+2
+	30	28238	1	02 -- Stone of Evasion+2
+	31	28239	1	02 -- Stone of Ducking+2
+	32	28240	1	02 -- Stone of Magic+2
+	33	28241	1	02 -- Stone of Vitality+2
+	34	28242	1	02 -- Stone of Defence+2
+	35	28243	1	02 -- Stone of Haste+2
+	36	28330	1	01 -- Stone of Penetration+3
+	37	28331	1	01 -- Stone of Deathblow+3
+	38	28332	1	01 -- Stone of Cooldown+3
+	39	28333	1	01 -- Stone against Warriors+3
+	40	28334	1	01 -- Stone against Ninjas+3
+	41	28335	1	01 -- Stone against Suras+3
+	42	28336	1	01 -- Stone against Shamans+3
+	43	28337	1	01 -- Stone of Monsters+3
+	44	28338	1	01 -- Stone of Evasion+3
+	45	28339	1	01 -- Stone of Ducking+3
+	46	28340	1	01 -- Stone of Magic+3
+	47	28341	1	01 -- Stone of Vitality+3
+	48	28342	1	01 -- Stone of Defence+3
+	49	28343	1	01 -- Stone of Haste+3
+	50	50300	1	100 -- Skill Book
+	51	50300	1	100 -- Skill Book
+	52	70024	1	15 -- Blessing Marble
+	53	50513	1	30 -- Soul Stone
+}
+Group	Metin_of_Jealousy
+{
+	Mob	8007
+	Type	drop
+	1	28241	1	04 -- Stone of Vitality+2
+	2	28242	1	04 -- Stone of Defence+2
+	3	28243	1	04 -- Stone of Haste+2
+	4	28330	1	02 -- Stone of Penetration+3
+	5	28331	1	02 -- Stone of Deathblow+3
+	6	28332	1	02 -- Stone of Cooldown+3
+	7	28333	1	02 -- Stone against Warriors+3
+	8	28334	1	02 -- Stone against Ninjas+3
+	9	28335	1	02 -- Stone against Suras+3
+	10	28336	1	02 -- Stone against Shamans+3
+	11	28337	1	02 -- Stone of Monsters+3
+	12	28338	1	02 -- Stone of Evasion+3
+	13	28339	1	02 -- Stone of Ducking+3
+	14	28340	1	02 -- Stone of Magic+3
+	15	28341	1	02 -- Stone of Vitality+3
+	16	28342	1	02 -- Stone of Defence+3
+	17	28343	1	02 -- Stone of Haste+3
+	18	50300	1	100 -- Skill Book
+	19	50300	1	100 -- Skill Book
+	20	70024	1	15 -- Blessing Marble
+	21	28240	1	04 -- Stone of Magic+2
+	22	27002	50	60 -- Red Potion (M)
+	23	27003	30	20 -- Red Potion (L)
+	24	27005	30	40 -- Blue Potion (M)
+	25	27006	20	10 -- Blue Potion (L)
+	26	50300	1	100 -- Skill Book
+	27	70014	1	05 -- Blood Pill
+	28	70037	1	05 -- Book of Forgetfulness
+	29	28130	1	06 -- Stone of Penetration+1
+	30	28131	1	06 -- Stone of Deathblow+1
+	31	28132	1	06 -- Stone of Cooldown+1
+	32	28133	1	06 -- Stone against Warriors+1
+	33	28134	1	06 -- Stone against Ninjas+1
+	34	28135	1	06 -- Stone against Suras+1
+	35	28136	1	06 -- Stone against Shamans+1
+	36	28137	1	06 -- Stone of Monsters+1
+	37	28138	1	06 -- Stone of Evasion+1
+	38	28139	1	06 -- Stone of Ducking+1
+	39	28140	1	06 -- Stone of Magic+1
+	40	28141	1	06 -- Stone of Vitality+1
+	41	28142	1	06 -- Stone of Defence+1
+	42	28143	1	06 -- Stone of Haste+1
+	43	28230	1	04 -- Stone of Penetration+2
+	44	28231	1	04 -- Stone of Deathblow+2
+	45	28232	1	04 -- Stone of Cooldown+2
+	46	28233	1	04 -- Stone against Warriors+2
+	47	28234	1	04 -- Stone against Ninjas+2
+	48	28235	1	04 -- Stone against Suras+2
+	49	28236	1	04 -- Stone against Shamans+2
+	50	28237	1	04 -- Stone of Monsters+2
+	51	28238	1	40 -- Stone of Evasion+2
+	52	28239	1	04 -- Stone of Ducking+2
+	53	28240	1	04 -- Stone of Magic+2
+	54	50513	1	30 -- Soul Stone
+}
+Group	Metin_of_Soul
+{
+	Mob	8008
+	Type	drop
+	1	28341	1	02 -- Stone of Vitality+3
+	2	28342	1	02 -- Stone of Defence+3
+	3	28343	1	02 -- Stone of Haste+3
+	4	28430	1	01 -- Stone of Penetration+4
+	5	28431	1	01 -- Stone of Deathblow+4
+	6	28432	1	01 -- Stone of Cooldown+4
+	7	28433	1	01 -- Stone against Warriors+4
+	8	28434	1	01 -- Stone against Ninjas+4
+	9	28435	1	01 -- Stone against Suras+4
+	10	28436	1	01 -- Stone against Shamans+4
+	11	28437	1	01 -- Stone of Monsters+4
+	12	28438	1	01 -- Stone of Evasion+4
+	13	28439	1	01 -- Stone of Ducking+4
+	14	28440	1	01 -- Stone of Magic+4
+	15	28441	1	01 -- Stone of Vitality+4
+	16	28442	1	01 -- Stone of Defence+4
+	17	28443	1	01 -- Stone of Haste+4
+	18	50300	1	100 -- Skill Book
+	19	50300	1	100 -- Skill Book
+	20	70024	1	15 -- Blessing Marble
+	21	28340	1	02 -- Stone of Magic+3
+	22	27002	50	60 -- Red Potion (M)
+	23	27003	30	20 -- Red Potion (L)
+	24	27005	30	40 -- Blue Potion (M)
+	25	27006	20	10 -- Blue Potion (L)
+	26	50300	1	100 -- Skill Book
+	27	70014	1	05 -- Blood Pill
+	28	70037	1	05 -- Book of Forgetfulness
+	29	28230	1	04 -- Stone of Penetration+2
+	30	28231	1	04 -- Stone of Deathblow+2
+	31	28232	1	04 -- Stone of Cooldown+2
+	32	28233	1	04 -- Stone against Warriors+2
+	33	28234	1	04 -- Stone against Ninjas+2
+	34	28235	1	04 -- Stone against Suras+2
+	35	28236	1	04 -- Stone against Shamans+2
+	36	28237	1	04 -- Stone of Monsters+2
+	37	28238	1	04 -- Stone of Evasion+2
+	38	28239	1	04 -- Stone of Ducking+2
+	39	28240	1	04 -- Stone of Magic+2
+	40	28241	1	04 -- Stone of Vitality+2
+	41	28242	1	04 -- Stone of Defence+2
+	42	28243	1	04 -- Stone of Haste+2
+	43	28330	1	02 -- Stone of Penetration+3
+	44	28331	1	02 -- Stone of Deathblow+3
+	45	28332	1	02 -- Stone of Cooldown+3
+	46	28333	1	02 -- Stone against Warriors+3
+	47	28334	1	02 -- Stone against Ninjas+3
+	48	28335	1	02 -- Stone against Suras+3
+	49	28336	1	02 -- Stone against Shamans+3
+	50	28337	1	02 -- Stone of Monsters+3
+	51	28338	1	02 -- Stone of Evasion+3
+	52	28339	1	02 -- Stone of Ducking+3
+	53	50513	1	30 -- Soul Stone
+	54	6020	1	05 -- Iron Claw+0
+}
+Group	Metin_of_Shadow
+{
+	Mob	8009
+	Type	drop
+	1	100	1	06 -- Bloody Sword+0
+	2	1060	1	06 -- Devil Fist Dagger+0
+	3	2090	1	06 -- Thorn Leaf Bow+0
+	4	7090	1	06 -- Phoenix Fan+0
+	5	5050	1	06 -- Apricot Bell+0
+	6	101	1	05 -- Bloody Sword+1
+	7	1061	1	05 -- Devil Fist Dagger+1
+	8	2091	1	05 -- Thorn Leaf Bow+1
+	9	7091	1	05 -- Phoenix Fan+1
+	10	5051	1	05 -- Apricot Bell+1
+	11	102	1	05 -- Bloody Sword+2
+	12	1062	1	05 -- Devil Fist Dagger+2
+	13	2092	1	05 -- Thorn Leaf Bow+2
+	14	7092	1	05 -- Phoenix Fan+2
+	15	5052	1	05 -- Apricot Bell+2
+	16	28440	1	01 -- Stone of Magic+4
+	17	28441	1	01 -- Stone of Vitality+4
+	18	28442	1	01 -- Stone of Defence+4
+	19	28443	1	01 -- Stone of Haste+4
+	20	50513	1	40 -- Soul Stone
+	21	50300	1	100 -- Skill Book
+	22	50300	1	100 -- Skill Book
+	23	70024	1	20 -- Blessing Marble
+	24	28439	1	01 -- Stone of Ducking+4
+	25	27002	50	60 -- Red Potion (M)
+	26	27003	30	20 -- Red Potion (L)
+	27	27005	30	40 -- Blue Potion (M)
+	28	27006	20	10 -- Blue Potion (L)
+	29	50300	1	100 -- Skill Book
+	30	70014	1	05 -- Blood Pill
+	31	70037	1	05 -- Book of Forgetfulness
+	32	28230	1	04 -- Stone of Penetration+2
+	33	28231	1	04 -- Stone of Deathblow+2
+	34	28232	1	04 -- Stone of Cooldown+2
+	35	28233	1	04 -- Stone against Warriors+2
+	36	28234	1	04 -- Stone against Ninjas+2
+	37	28235	1	04 -- Stone against Suras+2
+	38	28236	1	04 -- Stone against Shamans+2
+	39	28237	1	04 -- Stone of Monsters+2
+	40	28238	1	04 -- Stone of Evasion+2
+	41	28239	1	04 -- Stone of Ducking+2
+	42	28240	1	04 -- Stone of Magic+2
+	43	28241	1	04 -- Stone of Vitality+2
+	44	28242	1	04 -- Stone of Defence+2
+	45	28243	1	04 -- Stone of Haste+2
+	46	28330	1	02 -- Stone of Penetration+3
+	47	28331	1	02 -- Stone of Deathblow+3
+	48	28332	1	02 -- Stone of Cooldown+3
+	49	28333	1	02 -- Stone against Warriors+3
+	50	28334	1	02 -- Stone against Ninjas+3
+	51	28335	1	02 -- Stone against Suras+3
+	52	28336	1	02 -- Stone against Shamans+3
+	53	28337	1	02 -- Stone of Monsters+3
+	54	28338	1	20 -- Stone of Evasion+3
+	55	28339	1	02 -- Stone of Ducking+3
+	56	28340	1	02 -- Stone of Magic+3
+	57	28341	1	02 -- Stone of Vitality+3
+	58	28342	1	02 -- Stone of Defence+3
+	59	28343	1	02 -- Stone of Haste+3
+	60	28430	1	01 -- Stone of Penetration+4
+	61	28431	1	01 -- Stone of Deathblow+4
+	62	28432	1	01 -- Stone of Cooldown+4
+	63	28433	1	01 -- Stone against Warriors+4
+	64	28434	1	01 -- Stone against Ninjas+4
+	65	28435	1	01 -- Stone against Suras+4
+	66	28436	1	01 -- Stone against Shamans+4
+	67	28437	1	01 -- Stone of Monsters+4
+	68	28438	1	01 -- Stone of Evasion+4
+}
+Group	Metin_of_Toughness
+{
+	Mob	8010
+	Type	drop
+	1	110	1	06 -- Great Sword+0
+	2	1070	1	06 -- Bloody Dagger+0
+	3	2100	1	06 -- Bull's Horn Bow+0
+	4	7100	1	06 -- Triple Fan+0
+	5	5060	1	06 -- Magical Bell+0
+	6	111	1	05 -- Great Sword+1
+	7	1071	1	05 -- Bloody Dagger+1
+	8	2101	1	05 -- Bull's Horn Bow+1
+	9	7101	1	05 -- Triple Fan+1
+	10	5061	1	05 -- Magical Bell+1
+	11	28437	1	01 -- Stone of Monsters+4
+	12	28438	1	01 -- Stone of Evasion+4
+	13	28439	1	01 -- Stone of Ducking+4
+	14	28440	1	01 -- Stone of Magic+4
+	15	28441	1	01 -- Stone of Vitality+4
+	16	28442	1	01 -- Stone of Defence+4
+	17	28443	1	01 -- Stone of Haste+4
+	18	50513	1	40 -- Soul Stone
+	19	50300	1	100 -- Skill Book
+	20	50300	1	100 -- Skill Book
+	21	27002	50	60 -- Red Potion (M)
+	22	27003	30	20 -- Red Potion (L)
+	23	27005	30	40 -- Blue Potion (M)
+	24	27006	20	10 -- Blue Potion (L)
+	25	50300	1	100 -- Skill Book
+	26	70014	1	05 -- Blood Pill
+	27	70037	1	05 -- Book of Forgetfulness
+	28	28230	1	04 -- Stone of Penetration+2
+	29	28231	1	04 -- Stone of Deathblow+2
+	30	28232	1	04 -- Stone of Cooldown+2
+	31	28233	1	04 -- Stone against Warriors+2
+	32	28234	1	04 -- Stone against Ninjas+2
+	33	28235	1	04 -- Stone against Suras+2
+	34	28236	1	04 -- Stone against Shamans+2
+	35	28237	1	04 -- Stone of Monsters+2
+	36	28238	1	04 -- Stone of Evasion+2
+	37	28239	1	04 -- Stone of Ducking+2
+	38	28240	1	04 -- Stone of Magic+2
+	39	28241	1	04 -- Stone of Vitality+2
+	40	28242	1	04 -- Stone of Defence+2
+	41	28243	1	04 -- Stone of Haste+2
+	42	28330	1	02 -- Stone of Penetration+3
+	43	28331	1	02 -- Stone of Deathblow+3
+	44	28332	1	02 -- Stone of Cooldown+3
+	45	28333	1	02 -- Stone against Warriors+3
+	46	28334	1	02 -- Stone against Ninjas+3
+	47	28335	1	02 -- Stone against Suras+3
+	48	28336	1	02 -- Stone against Shamans+3
+	49	28337	1	02 -- Stone of Monsters+3
+	50	28338	1	02 -- Stone of Evasion+3
+	51	28339	1	02 -- Stone of Ducking+3
+	52	28340	1	02 -- Stone of Magic+3
+	53	28341	1	02 -- Stone of Vitality+3
+	54	28342	1	02 -- Stone of Defence+3
+	55	28343	1	02 -- Stone of Haste+3
+	56	28430	1	01 -- Stone of Penetration+4
+	57	28431	1	01 -- Stone of Deathblow+4
+	58	28432	1	01 -- Stone of Cooldown+4
+	59	28433	1	01 -- Stone against Warriors+4
+	60	28434	1	01 -- Stone against Ninjas+4
+	61	28435	1	01 -- Stone against Suras+4
+	62	28436	1	01 -- Stone against Shamans+4
+	63	70024	1	20 -- Blessing Marble
+}
+Group	Metin_of_Devil
+{
+	Mob	8011
+	Type	drop
+	1	120	1	06 -- Flying Wizard Sword+0
+	2	1080	1	06 -- Rib Knife+0
+	3	2110	1	06 -- Unicorn Bow+0
+	4	7110	1	06 -- Eyebrow Fan+0
+	5	5070	1	06 -- Golden Bug Bell+0
+	6	121	1	05 -- Flying Wizard Sword+1
+	7	1081	1	05 -- Rib Knife+1
+	8	2111	1	05 -- Unicorn Bow+1
+	9	7111	1	05 -- Eyebrow Fan+1
+	10	5071	1	05 -- Golden Bug Bell+1
+	11	122	1	05 -- Flying Wizard Sword+2
+	12	1082	1	05 -- Rib Knife+2
+	13	2112	1	05 -- Unicorn Bow+2
+	14	7112	1	05 -- Eyebrow Fan+2
+	15	5072	1	05 -- Golden Bug Bell+2
+	16	27002	50	60 -- Red Potion (M)
+	17	27003	30	20 -- Red Potion (L)
+	18	27005	30	40 -- Blue Potion (M)
+	19	27006	20	10 -- Blue Potion (L)
+	20	50300	1	100 -- Skill Book
+	21	70014	1	05 -- Blood Pill
+	22	70037	1	05 -- Book of Forgetfulness
+	23	28230	1	04 -- Stone of Penetration+2
+	24	28231	1	04 -- Stone of Deathblow+2
+	25	28232	1	04 -- Stone of Cooldown+2
+	26	28233	1	04 -- Stone against Warriors+2
+	27	28234	1	04 -- Stone against Ninjas+2
+	28	28235	1	04 -- Stone against Suras+2
+	29	28236	1	04 -- Stone against Shamans+2
+	30	28237	1	04 -- Stone of Monsters+2
+	31	28238	1	04 -- Stone of Evasion+2
+	32	28239	1	04 -- Stone of Ducking+2
+	33	28240	1	04 -- Stone of Magic+2
+	34	28241	1	04 -- Stone of Vitality+2
+	35	28242	1	04 -- Stone of Defence+2
+	36	28243	1	04 -- Stone of Haste+2
+	37	28330	1	02 -- Stone of Penetration+3
+	38	28331	1	02 -- Stone of Deathblow+3
+	39	28332	1	02 -- Stone of Cooldown+3
+	40	28333	1	02 -- Stone against Warriors+3
+	41	28334	1	02 -- Stone against Ninjas+3
+	42	28335	1	02 -- Stone against Suras+3
+	43	28336	1	02 -- Stone against Shamans+3
+	44	28337	1	02 -- Stone of Monsters+3
+	45	28338	1	02 -- Stone of Evasion+3
+	46	28339	1	02 -- Stone of Ducking+3
+	47	28340	1	02 -- Stone of Magic+3
+	48	28341	1	02 -- Stone of Vitality+3
+	49	28342	1	02 -- Stone of Defence+3
+	50	28343	1	02 -- Stone of Haste+3
+	51	28430	1	01 -- Stone of Penetration+4
+	52	28431	1	01 -- Stone of Deathblow+4
+	53	28432	1	01 -- Stone of Cooldown+4
+	54	28433	1	01 -- Stone against Warriors+4
+	55	28434	1	01 -- Stone against Ninjas+4
+	56	28435	1	01 -- Stone against Suras+4
+	57	28436	1	01 -- Stone against Shamans+4
+	58	28437	1	01 -- Stone of Monsters+4
+	59	28438	1	01 -- Stone of Evasion+4
+	60	28439	1	01 -- Stone of Ducking+4
+	61	28440	1	01 -- Stone of Magic+4
+	62	28441	1	01 -- Stone of Vitality+4
+	63	28442	1	01 -- Stone of Defence+4
+	64	28443	1	01 -- Stone of Haste+4
+	65	50513	1	40 -- Soul Stone
+	66	50300	1	100 -- Skill Book
+	67	50300	1	100 -- Skill Book
+	68	70024	1	20 -- Blessing Marble
+}
+Group	Metin_of_Fall
+{
+	Mob	8012
+	Type	drop
+	1	130	1	06 -- Half Moon Sword+0
+	2	1090	1	06 -- Chakram+0
+	3	2120	1	06 -- Giant Wing Bow+0
+	4	7120	1	06 -- Sun Fan+0
+	5	5080	1	06 -- Steel Bug Bell+0
+	6	131	1	05 -- Half Moon Sword+1
+	7	1091	1	05 -- Chakram+1
+	8	2121	1	05 -- Giant Wing Bow+1
+	9	7121	1	05 -- Sun Fan+1
+	10	5081	1	05 -- Steel Bug Bell+1
+	11	132	1	05 -- Half Moon Sword+2
+	12	1092	1	05 -- Chakram+2
+	13	2122	1	05 -- Giant Wing Bow+2
+	14	7122	1	05 -- Sun Fan+2
+	15	5082	1	05 -- Steel Bug Bell+2
+	16	27002	50	60 -- Red Potion (M)
+	17	27003	30	20 -- Red Potion (L)
+	18	27005	30	40 -- Blue Potion (M)
+	19	27006	20	10 -- Blue Potion (L)
+	20	50300	1	100 -- Skill Book
+	21	70014	1	05 -- Blood Pill
+	22	70037	1	05 -- Book of Forgetfulness
+	23	28230	1	04 -- Stone of Penetration+2
+	24	28231	1	04 -- Stone of Deathblow+2
+	25	28232	1	04 -- Stone of Cooldown+2
+	26	28233	1	04 -- Stone against Warriors+2
+	27	28234	1	04 -- Stone against Ninjas+2
+	28	28235	1	04 -- Stone against Suras+2
+	29	28236	1	04 -- Stone against Shamans+2
+	30	28237	1	04 -- Stone of Monsters+2
+	31	28238	1	04 -- Stone of Evasion+2
+	32	28239	1	04 -- Stone of Ducking+2
+	33	28240	1	04 -- Stone of Magic+2
+	34	28241	1	04 -- Stone of Vitality+2
+	35	28242	1	04 -- Stone of Defence+2
+	36	28243	1	04 -- Stone of Haste+2
+	37	28330	1	02 -- Stone of Penetration+3
+	38	28331	1	02 -- Stone of Deathblow+3
+	39	28332	1	02 -- Stone of Cooldown+3
+	40	28333	1	02 -- Stone against Warriors+3
+	41	28334	1	02 -- Stone against Ninjas+3
+	42	28335	1	02 -- Stone against Suras+3
+	43	28336	1	02 -- Stone against Shamans+3
+	44	28337	1	02 -- Stone of Monsters+3
+	45	28338	1	02 -- Stone of Evasion+3
+	46	28339	1	02 -- Stone of Ducking+3
+	47	28340	1	02 -- Stone of Magic+3
+	48	28341	1	02 -- Stone of Vitality+3
+	49	28342	1	02 -- Stone of Defence+3
+	50	28343	1	02 -- Stone of Haste+3
+	51	28430	1	01 -- Stone of Penetration+4
+	52	28431	1	01 -- Stone of Deathblow+4
+	53	28432	1	01 -- Stone of Cooldown+4
+	54	28433	1	01 -- Stone against Warriors+4
+	55	28434	1	01 -- Stone against Ninjas+4
+	56	28435	1	01 -- Stone against Suras+4
+	57	28436	1	01 -- Stone against Shamans+4
+	58	28437	1	01 -- Stone of Monsters+4
+	59	28438	1	01 -- Stone of Evasion+4
+	60	28439	1	01 -- Stone of Ducking+4
+	61	28440	1	01 -- Stone of Magic+4
+	62	28441	1	01 -- Stone of Vitality+4
+	63	28442	1	01 -- Stone of Defence+4
+	64	28443	1	01 -- Stone of Haste+4
+	65	11272	1	03 -- Gold Plate Armour+2
+	66	11472	1	03 -- Killer Wind Suit+2
+	67	11672	1	03 -- Ghost Mask Armour+2
+	68	11872	1	03 -- Orange Cat Dress+2
+	69	13041	1	06 -- Black Round Shield+1
+	70	50513	1	45 -- Soul Stone
+	71	50300	1	100 -- Skill Book
+	72	50300	1	100 -- Skill Book
+	73	70024	1	20 -- Blessing Marble
+	74	12262	1	07 -- Fear Mask +2
+	75	12392	1	07 -- Orc Hood +2
+	76	12532	1	07 -- Horned Helmet +2
+	77	12672	1	07 -- Cardinal's Hat +2
+}
+Group	Metin_of_Death
+{
+	Mob	8013
+	Type	drop
+	1	130	1	06 -- Half Moon Sword+0
+	2	1090	1	06 -- Chakram+0
+	3	2120	1	06 -- Giant Wing Bow+0
+	4	7120	1	06 -- Sun Fan+0
+	5	5080	1	06 -- Steel Bug Bell+0
+	6	131	1	05 -- Half Moon Sword+1
+	7	1091	1	05 -- Chakram+1
+	8	2121	1	05 -- Giant Wing Bow+1
+	9	7121	1	05 -- Sun Fan+1
+	10	5081	1	05 -- Steel Bug Bell+1
+	11	132	1	05 -- Half Moon Sword+2
+	12	1092	1	05 -- Chakram+2
+	13	2122	1	05 -- Giant Wing Bow+2
+	14	7122	1	05 -- Sun Fan+2
+	15	5082	1	05 -- Steel Bug Bell+2
+	16	27002	50	60 -- Red Potion (M)
+	17	27003	30	20 -- Red Potion (L)
+	18	27005	30	40 -- Blue Potion (M)
+	19	27006	20	10 -- Blue Potion (L)
+	20	50300	1	100 -- Skill Book
+	21	70014	1	05 -- Blood Pill
+	22	70037	1	05 -- Book of Forgetfulness
+	23	28230	1	04 -- Stone of Penetration+2
+	24	28231	1	04 -- Stone of Deathblow+2
+	25	28232	1	04 -- Stone of Cooldown+2
+	26	28233	1	04 -- Stone against Warriors+2
+	27	28234	1	04 -- Stone against Ninjas+2
+	28	28235	1	04 -- Stone against Suras+2
+	29	28236	1	04 -- Stone against Shamans+2
+	30	28237	1	04 -- Stone of Monsters+2
+	31	28238	1	04 -- Stone of Evasion+2
+	32	28239	1	04 -- Stone of Ducking+2
+	33	28240	1	04 -- Stone of Magic+2
+	34	28241	1	04 -- Stone of Vitality+2
+	35	28242	1	04 -- Stone of Defence+2
+	36	28243	1	04 -- Stone of Haste+2
+	37	28330	1	02 -- Stone of Penetration+3
+	38	28331	1	02 -- Stone of Deathblow+3
+	39	28332	1	02 -- Stone of Cooldown+3
+	40	28333	1	02 -- Stone against Warriors+3
+	41	28334	1	02 -- Stone against Ninjas+3
+	42	28335	1	02 -- Stone against Suras+3
+	43	28336	1	02 -- Stone against Shamans+3
+	44	28337	1	02 -- Stone of Monsters+3
+	45	28338	1	02 -- Stone of Evasion+3
+	46	28339	1	02 -- Stone of Ducking+3
+	47	28340	1	02 -- Stone of Magic+3
+	48	28341	1	02 -- Stone of Vitality+3
+	49	28342	1	02 -- Stone of Defence+3
+	50	28343	1	02 -- Stone of Haste+3
+	51	28430	1	01 -- Stone of Penetration+4
+	52	28431	1	01 -- Stone of Deathblow+4
+	53	28432	1	01 -- Stone of Cooldown+4
+	54	28433	1	01 -- Stone against Warriors+4
+	55	28434	1	01 -- Stone against Ninjas+4
+	56	28435	1	01 -- Stone against Suras+4
+	57	28436	1	01 -- Stone against Shamans+4
+	58	28437	1	01 -- Stone of Monsters+4
+	59	28438	1	01 -- Stone of Evasion+4
+	60	28439	1	01 -- Stone of Ducking+4
+	61	28440	1	01 -- Stone of Magic+4
+	62	28441	1	01 -- Stone of Vitality+4
+	63	28442	1	01 -- Stone of Defence+4
+	64	28443	1	01 -- Stone of Haste+4
+	65	11280	1	03 -- Dragon God Armour+0
+	66	11480	1	03 -- Fuchsia Suit+0
+	67	11680	1	03 -- Spirit Plate Armour+0
+	68	11880	1	03 -- Baroness Dress+0
+	69	50513	1	40 -- Soul Stone
+	70	50300	1	100 -- Skill Book
+	71	50300	1	100 -- Skill Book
+	72	70024	1	20 -- Blessing Marble
+}
+Group	Metin_of_Murder
+{
+	Mob	8014
+	Type	drop
+	1	130	1	06 -- Half Moon Sword+0
+	2	1090	1	06 -- Chakram+0
+	3	2120	1	06 -- Giant Wing Bow+0
+	4	7120	1	06 -- Sun Fan+0
+	5	5080	1	06 -- Steel Bug Bell+0
+	6	131	1	05 -- Half Moon Sword+1
+	7	1091	1	05 -- Chakram+1
+	8	2121	1	05 -- Giant Wing Bow+1
+	9	7121	1	05 -- Sun Fan+1
+	10	5081	1	05 -- Steel Bug Bell+1
+	11	132	1	05 -- Half Moon Sword+2
+	12	1092	1	05 -- Chakram+2
+	13	2122	1	05 -- Giant Wing Bow+2
+	14	7122	1	05 -- Sun Fan+2
+	15	5082	1	05 -- Steel Bug Bell+2
+	16	27002	50	60 -- Red Potion (M)
+	17	27003	30	20 -- Red Potion (L)
+	18	27005	30	40 -- Blue Potion (M)
+	19	27006	20	10 -- Blue Potion (L)
+	20	50300	1	100 -- Skill Book
+	21	70014	1	05 -- Blood Pill
+	22	70037	1	05 -- Book of Forgetfulness
+	23	28230	1	04 -- Stone of Penetration+2
+	24	28231	1	04 -- Stone of Deathblow+2
+	25	28232	1	04 -- Stone of Cooldown+2
+	26	28233	1	04 -- Stone against Warriors+2
+	27	28234	1	04 -- Stone against Ninjas+2
+	28	28235	1	04 -- Stone against Suras+2
+	29	28236	1	04 -- Stone against Shamans+2
+	30	28237	1	04 -- Stone of Monsters+2
+	31	28238	1	04 -- Stone of Evasion+2
+	32	28239	1	04 -- Stone of Ducking+2
+	33	28240	1	04 -- Stone of Magic+2
+	34	28241	1	04 -- Stone of Vitality+2
+	35	28242	1	04 -- Stone of Defence+2
+	36	28243	1	04 -- Stone of Haste+2
+	37	28330	1	02 -- Stone of Penetration+3
+	38	28331	1	02 -- Stone of Deathblow+3
+	39	28332	1	02 -- Stone of Cooldown+3
+	40	28333	1	02 -- Stone against Warriors+3
+	41	28334	1	02 -- Stone against Ninjas+3
+	42	28335	1	02 -- Stone against Suras+3
+	43	28336	1	02 -- Stone against Shamans+3
+	44	28337	1	02 -- Stone of Monsters+3
+	45	28338	1	02 -- Stone of Evasion+3
+	46	28339	1	02 -- Stone of Ducking+3
+	47	28340	1	02 -- Stone of Magic+3
+	48	28341	1	02 -- Stone of Vitality+3
+	49	28342	1	02 -- Stone of Defence+3
+	50	28343	1	02 -- Stone of Haste+3
+	51	28430	1	01 -- Stone of Penetration+4
+	52	28431	1	01 -- Stone of Deathblow+4
+	53	28432	1	01 -- Stone of Cooldown+4
+	54	28433	1	01 -- Stone against Warriors+4
+	55	28434	1	01 -- Stone against Ninjas+4
+	56	28435	1	01 -- Stone against Suras+4
+	57	28436	1	01 -- Stone against Shamans+4
+	58	28437	1	01 -- Stone of Monsters+4
+	59	28438	1	01 -- Stone of Evasion+4
+	60	28439	1	01 -- Stone of Ducking+4
+	61	28440	1	01 -- Stone of Magic+4
+	62	28441	1	01 -- Stone of Vitality+4
+	63	28442	1	01 -- Stone of Defence+4
+	64	28443	1	01 -- Stone of Haste+4
+	65	11280	1	03 -- Dragon God Armour+0
+	66	11480	1	03 -- Fuchsia Suit+0
+	67	11680	1	03 -- Spirit Plate Armour+0
+	68	11880	1	03 -- Baroness Dress+0
+	69	11283	1	02 -- Dragon God Armour+3
+	70	11483	1	02 -- Fuchsia Suit+3
+	71	11683	1	02 -- Spirit Plate Armour+3
+	72	11863	1	02 -- Clothing of Morality+3
+	73	50513	1	40 -- Soul Stone
+	74	50300	1	100 -- Skill Book
+	75	50300	1	100 -- Skill Book
+	76	70024	1	25 -- Blessing Marble
+	77	6030	1	06 -- Steel Claw+0
+}
+Group	Metin_of_Toughness
+{
+	Mob	8015
+	Type	drop
+	1	110	1	06 -- Great Sword+0
+	2	1070	1	06 -- Bloody Dagger+0
+	3	2100	1	06 -- Bull's Horn Bow+0
+	4	7100	1	06 -- Triple Fan+0
+	5	5060	1	06 -- Magical Bell+0
+	6	111	1	05 -- Great Sword+1
+	7	1071	1	05 -- Bloody Dagger+1
+	8	2101	1	05 -- Bull's Horn Bow+1
+	9	7101	1	05 -- Triple Fan+1
+	10	5061	1	05 -- Magical Bell+1
+	11	28440	1	01 -- Stone of Magic+4
+	12	28441	1	01 -- Stone of Vitality+4
+	13	28442	1	01 -- Stone of Defence+4
+	14	28443	1	01 -- Stone of Haste+4
+	15	50513	1	40 -- Soul Stone
+	16	50300	1	100 -- Skill Book
+	17	50300	1	100 -- Skill Book
+	18	70024	1	25 -- Blessing Marble
+	19	28439	1	01 -- Stone of Ducking+4
+	20	27002	50	60 -- Red Potion (M)
+	21	27003	30	20 -- Red Potion (L)
+	22	27005	30	40 -- Blue Potion (M)
+	23	27006	20	10 -- Blue Potion (L)
+	24	50300	1	100 -- Skill Book
+	25	70014	1	05 -- Blood Pill
+	26	70037	1	05 -- Book of Forgetfulness
+	27	28230	1	04 -- Stone of Penetration+2
+	28	28231	1	04 -- Stone of Deathblow+2
+	29	28232	1	04 -- Stone of Cooldown+2
+	30	28233	1	04 -- Stone against Warriors+2
+	31	28234	1	04 -- Stone against Ninjas+2
+	32	28235	1	04 -- Stone against Suras+2
+	33	28236	1	04 -- Stone against Shamans+2
+	34	28237	1	04 -- Stone of Monsters+2
+	35	28238	1	04 -- Stone of Evasion+2
+	36	28239	1	04 -- Stone of Ducking+2
+	37	28240	1	04 -- Stone of Magic+2
+	38	28241	1	04 -- Stone of Vitality+2
+	39	28242	1	04 -- Stone of Defence+2
+	40	28243	1	04 -- Stone of Haste+2
+	41	28330	1	02 -- Stone of Penetration+3
+	42	28331	1	02 -- Stone of Deathblow+3
+	43	28332	1	02 -- Stone of Cooldown+3
+	44	28333	1	02 -- Stone against Warriors+3
+	45	28334	1	02 -- Stone against Ninjas+3
+	46	28335	1	02 -- Stone against Suras+3
+	47	28336	1	02 -- Stone against Shamans+3
+	48	28337	1	02 -- Stone of Monsters+3
+	49	28338	1	02 -- Stone of Evasion+3
+	50	28339	1	02 -- Stone of Ducking+3
+	51	28340	1	02 -- Stone of Magic+3
+	52	28341	1	02 -- Stone of Vitality+3
+	53	28342	1	02 -- Stone of Defence+3
+	54	28343	1	02 -- Stone of Haste+3
+	55	28430	1	01 -- Stone of Penetration+4
+	56	28431	1	01 -- Stone of Deathblow+4
+	57	28432	1	01 -- Stone of Cooldown+4
+	58	28433	1	01 -- Stone against Warriors+4
+	59	28434	1	01 -- Stone against Ninjas+4
+	60	28435	1	01 -- Stone against Suras+4
+	61	28436	1	01 -- Stone against Shamans+4
+	62	28437	1	01 -- Stone of Monsters+4
+	63	28438	1	01 -- Stone of Evasion+4
+}
+Group	Metin_of_Devil
+{
+	Mob	8016
+	Type	drop
+	1	120	1	06 -- Flying Wizard Sword+0
+	2	1080	1	06 -- Rib Knife+0
+	3	2110	1	06 -- Unicorn Bow+0
+	4	7110	1	06 -- Eyebrow Fan+0
+	5	5070	1	06 -- Golden Bug Bell+0
+	6	121	1	05 -- Flying Wizard Sword+1
+	7	1081	1	05 -- Rib Knife+1
+	8	2111	1	05 -- Unicorn Bow+1
+	9	7111	1	05 -- Eyebrow Fan+1
+	10	5071	1	05 -- Golden Bug Bell+1
+	11	122	1	05 -- Flying Wizard Sword+2
+	12	1082	1	05 -- Rib Knife+2
+	13	2112	1	05 -- Unicorn Bow+2
+	14	7112	1	05 -- Eyebrow Fan+2
+	15	5072	1	05 -- Golden Bug Bell+2
+	16	27002	50	60 -- Red Potion (M)
+	17	27003	30	20 -- Red Potion (L)
+	18	27005	30	40 -- Blue Potion (M)
+	19	27006	20	10 -- Blue Potion (L)
+	20	50300	1	100 -- Skill Book
+	21	70014	1	05 -- Blood Pill
+	22	70037	1	05 -- Book of Forgetfulness
+	23	28230	1	04 -- Stone of Penetration+2
+	24	28231	1	04 -- Stone of Deathblow+2
+	25	28232	1	04 -- Stone of Cooldown+2
+	26	28233	1	04 -- Stone against Warriors+2
+	27	28234	1	04 -- Stone against Ninjas+2
+	28	28235	1	04 -- Stone against Suras+2
+	29	28236	1	04 -- Stone against Shamans+2
+	30	28237	1	04 -- Stone of Monsters+2
+	31	28238	1	04 -- Stone of Evasion+2
+	32	28239	1	04 -- Stone of Ducking+2
+	33	28240	1	04 -- Stone of Magic+2
+	34	28241	1	04 -- Stone of Vitality+2
+	35	28242	1	04 -- Stone of Defence+2
+	36	28243	1	04 -- Stone of Haste+2
+	37	28330	1	02 -- Stone of Penetration+3
+	38	28331	1	02 -- Stone of Deathblow+3
+	39	28332	1	02 -- Stone of Cooldown+3
+	40	28333	1	02 -- Stone against Warriors+3
+	41	28334	1	02 -- Stone against Ninjas+3
+	42	28335	1	02 -- Stone against Suras+3
+	43	28336	1	02 -- Stone against Shamans+3
+	44	28337	1	02 -- Stone of Monsters+3
+	45	28338	1	02 -- Stone of Evasion+3
+	46	28339	1	02 -- Stone of Ducking+3
+	47	28340	1	02 -- Stone of Magic+3
+	48	28341	1	02 -- Stone of Vitality+3
+	49	28342	1	02 -- Stone of Defence+3
+	50	28343	1	02 -- Stone of Haste+3
+	51	28430	1	01 -- Stone of Penetration+4
+	52	28431	1	01 -- Stone of Deathblow+4
+	53	28432	1	01 -- Stone of Cooldown+4
+	54	28433	1	01 -- Stone against Warriors+4
+	55	28434	1	01 -- Stone against Ninjas+4
+	56	28435	1	01 -- Stone against Suras+4
+	57	28436	1	01 -- Stone against Shamans+4
+	58	28437	1	01 -- Stone of Monsters+4
+	59	28438	1	01 -- Stone of Evasion+4
+	60	28439	1	01 -- Stone of Ducking+4
+	61	28440	1	01 -- Stone of Magic+4
+	62	28441	1	01 -- Stone of Vitality+4
+	63	28442	1	01 -- Stone of Defence+4
+	64	28443	1	01 -- Stone of Haste+4
+	65	11270	1	03 -- Gold Plate Armour+0
+	66	11470	1	03 -- Killer Wind Suit+0
+	67	11670	1	03 -- Ghost Mask Armour+0
+	68	11870	1	03 -- Orange Cat Dress+0
+	69	50513	1	40 -- Soul Stone
+	70	50300	1	100 -- Skill Book
+	71	50300	1	100 -- Skill Book
+	72	70024	1	25 -- Blessing Marble
+}
+Group	Metin_of_Fall
+{
+	Mob	8017
+	Type	drop
+	1	130	1	06 -- Half Moon Sword+0
+	2	1090	1	06 -- Chakram+0
+	3	2120	1	06 -- Giant Wing Bow+0
+	4	7120	1	06 -- Sun Fan+0
+	5	5080	1	06 -- Steel Bug Bell+0
+	6	131	1	05 -- Half Moon Sword+1
+	7	1091	1	05 -- Chakram+1
+	8	2121	1	05 -- Giant Wing Bow+1
+	9	7121	1	05 -- Sun Fan+1
+	10	5081	1	05 -- Steel Bug Bell+1
+	11	132	1	05 -- Half Moon Sword+2
+	12	1092	1	05 -- Chakram+2
+	13	2122	1	05 -- Giant Wing Bow+2
+	14	7122	1	05 -- Sun Fan+2
+	15	5082	1	05 -- Steel Bug Bell+2
+	16	27002	50	60 -- Red Potion (M)
+	17	27003	30	20 -- Red Potion (L)
+	18	27005	30	40 -- Blue Potion (M)
+	19	27006	20	10 -- Blue Potion (L)
+	20	50300	1	100 -- Skill Book
+	21	70014	1	05 -- Blood Pill
+	22	70037	1	05 -- Book of Forgetfulness
+	23	28230	1	04 -- Stone of Penetration+2
+	24	28231	1	04 -- Stone of Deathblow+2
+	25	28232	1	04 -- Stone of Cooldown+2
+	26	28233	1	04 -- Stone against Warriors+2
+	27	28234	1	04 -- Stone against Ninjas+2
+	28	28235	1	04 -- Stone against Suras+2
+	29	28236	1	04 -- Stone against Shamans+2
+	30	28237	1	04 -- Stone of Monsters+2
+	31	28238	1	04 -- Stone of Evasion+2
+	32	28239	1	04 -- Stone of Ducking+2
+	33	28240	1	04 -- Stone of Magic+2
+	34	28241	1	04 -- Stone of Vitality+2
+	35	28242	1	04 -- Stone of Defence+2
+	36	28243	1	04 -- Stone of Haste+2
+	37	28330	1	02 -- Stone of Penetration+3
+	38	28331	1	02 -- Stone of Deathblow+3
+	39	28332	1	02 -- Stone of Cooldown+3
+	40	28333	1	02 -- Stone against Warriors+3
+	41	28334	1	02 -- Stone against Ninjas+3
+	42	28335	1	02 -- Stone against Suras+3
+	43	28336	1	02 -- Stone against Shamans+3
+	44	28337	1	02 -- Stone of Monsters+3
+	45	28338	1	02 -- Stone of Evasion+3
+	46	28339	1	02 -- Stone of Ducking+3
+	47	28340	1	02 -- Stone of Magic+3
+	48	28341	1	02 -- Stone of Vitality+3
+	49	28342	1	02 -- Stone of Defence+3
+	50	28343	1	02 -- Stone of Haste+3
+	51	28430	1	01 -- Stone of Penetration+4
+	52	28431	1	01 -- Stone of Deathblow+4
+	53	28432	1	01 -- Stone of Cooldown+4
+	54	28433	1	01 -- Stone against Warriors+4
+	55	28434	1	01 -- Stone against Ninjas+4
+	56	28435	1	01 -- Stone against Suras+4
+	57	28436	1	01 -- Stone against Shamans+4
+	58	28437	1	01 -- Stone of Monsters+4
+	59	28438	1	01 -- Stone of Evasion+4
+	60	28439	1	01 -- Stone of Ducking+4
+	61	28440	1	01 -- Stone of Magic+4
+	62	28441	1	01 -- Stone of Vitality+4
+	63	28442	1	01 -- Stone of Defence+4
+	64	28443	1	01 -- Stone of Haste+4
+	65	11272	1	03 -- Gold Plate Armour+2
+	66	11472	1	03 -- Killer Wind Suit+2
+	67	11672	1	03 -- Ghost Mask Armour+2
+	68	11872	1	03 -- Orange Cat Dress+2
+	69	13041	1	06 -- Black Round Shield+1
+	70	50513	1	40 -- Soul Stone
+	71	50300	1	100 -- Skill Book
+	72	50300	1	100 -- Skill Book
+	73	70024	1	25 -- Blessing Marble
+}
+Group	Metin_of_Death
+{
+	Mob	8018
+	Type	drop
+	1	130	1	06 -- Half Moon Sword+0
+	2	1090	1	06 -- Chakram+0
+	3	2120	1	06 -- Giant Wing Bow+0
+	4	7120	1	06 -- Sun Fan+0
+	5	5080	1	06 -- Steel Bug Bell+0
+	6	131	1	05 -- Half Moon Sword+1
+	7	1091	1	05 -- Chakram+1
+	8	2121	1	05 -- Giant Wing Bow+1
+	9	7121	1	05 -- Sun Fan+1
+	10	5081	1	05 -- Steel Bug Bell+1
+	11	132	1	05 -- Half Moon Sword+2
+	12	1092	1	05 -- Chakram+2
+	13	2122	1	05 -- Giant Wing Bow+2
+	14	7122	1	05 -- Sun Fan+2
+	15	5082	1	05 -- Steel Bug Bell+2
+	16	27002	50	60 -- Red Potion (M)
+	17	27003	30	20 -- Red Potion (L)
+	18	27005	30	40 -- Blue Potion (M)
+	19	27006	20	10 -- Blue Potion (L)
+	20	50300	1	100 -- Skill Book
+	21	70014	1	05 -- Blood Pill
+	22	70037	1	05 -- Book of Forgetfulness
+	23	28230	1	04 -- Stone of Penetration+2
+	24	28231	1	04 -- Stone of Deathblow+2
+	25	28232	1	04 -- Stone of Cooldown+2
+	26	28233	1	04 -- Stone against Warriors+2
+	27	28234	1	04 -- Stone against Ninjas+2
+	28	28235	1	04 -- Stone against Suras+2
+	29	28236	1	04 -- Stone against Shamans+2
+	30	28237	1	04 -- Stone of Monsters+2
+	31	28238	1	04 -- Stone of Evasion+2
+	32	28239	1	04 -- Stone of Ducking+2
+	33	28240	1	04 -- Stone of Magic+2
+	34	28241	1	04 -- Stone of Vitality+2
+	35	28242	1	04 -- Stone of Defence+2
+	36	28243	1	04 -- Stone of Haste+2
+	37	28330	1	02 -- Stone of Penetration+3
+	38	28331	1	02 -- Stone of Deathblow+3
+	39	28332	1	02 -- Stone of Cooldown+3
+	40	28333	1	02 -- Stone against Warriors+3
+	41	28334	1	02 -- Stone against Ninjas+3
+	42	28335	1	02 -- Stone against Suras+3
+	43	28336	1	02 -- Stone against Shamans+3
+	44	28337	1	02 -- Stone of Monsters+3
+	45	28338	1	02 -- Stone of Evasion+3
+	46	28339	1	02 -- Stone of Ducking+3
+	47	28340	1	02 -- Stone of Magic+3
+	48	28341	1	02 -- Stone of Vitality+3
+	49	28342	1	02 -- Stone of Defence+3
+	50	28343	1	02 -- Stone of Haste+3
+	51	28430	1	01 -- Stone of Penetration+4
+	52	28431	1	01 -- Stone of Deathblow+4
+	53	28432	1	01 -- Stone of Cooldown+4
+	54	28433	1	01 -- Stone against Warriors+4
+	55	28434	1	01 -- Stone against Ninjas+4
+	56	28435	1	01 -- Stone against Suras+4
+	57	28436	1	01 -- Stone against Shamans+4
+	58	28437	1	01 -- Stone of Monsters+4
+	59	28438	1	01 -- Stone of Evasion+4
+	60	28439	1	01 -- Stone of Ducking+4
+	61	28440	1	01 -- Stone of Magic+4
+	62	28441	1	01 -- Stone of Vitality+4
+	63	28442	1	01 -- Stone of Defence+4
+	64	28443	1	01 -- Stone of Haste+4
+	65	11280	1	03 -- Dragon God Armour+0
+	66	11480	1	03 -- Fuchsia Suit+0
+	67	11680	1	03 -- Spirit Plate Armour+0
+	68	11880	1	03 -- Baroness Dress+0
+	69	50513	1	40 -- Soul Stone
+	70	50300	1	100 -- Skill Book
+	71	50300	1	100 -- Skill Book
+	72	70024	1	25 -- Blessing Marble
+}
+Group	Metin_of_Murder
+{
+	Mob	8019
+	Type	drop
+	1	130	1	06 -- Half Moon Sword+0
+	2	1090	1	06 -- Chakram+0
+	3	2120	1	06 -- Giant Wing Bow+0
+	4	7120	1	06 -- Sun Fan+0
+	5	5080	1	06 -- Steel Bug Bell+0
+	6	131	1	05 -- Half Moon Sword+1
+	7	1091	1	05 -- Chakram+1
+	8	2121	1	05 -- Giant Wing Bow+1
+	9	7121	1	05 -- Sun Fan+1
+	10	5081	1	05 -- Steel Bug Bell+1
+	11	132	1	05 -- Half Moon Sword+2
+	12	1092	1	05 -- Chakram+2
+	13	2122	1	05 -- Giant Wing Bow+2
+	14	7122	1	05 -- Sun Fan+2
+	15	5082	1	05 -- Steel Bug Bell+2
+	16	27002	50	60 -- Red Potion (M)
+	17	27003	30	20 -- Red Potion (L)
+	18	27005	30	40 -- Blue Potion (M)
+	19	27006	20	10 -- Blue Potion (L)
+	20	50300	1	100 -- Skill Book
+	21	70014	1	05 -- Blood Pill
+	22	70037	1	05 -- Book of Forgetfulness
+	23	28230	1	04 -- Stone of Penetration+2
+	24	28231	1	04 -- Stone of Deathblow+2
+	25	28232	1	04 -- Stone of Cooldown+2
+	26	28233	1	04 -- Stone against Warriors+2
+	27	28234	1	04 -- Stone against Ninjas+2
+	28	28235	1	04 -- Stone against Suras+2
+	29	28236	1	04 -- Stone against Shamans+2
+	30	28237	1	04 -- Stone of Monsters+2
+	31	28238	1	04 -- Stone of Evasion+2
+	32	28239	1	04 -- Stone of Ducking+2
+	33	28240	1	04 -- Stone of Magic+2
+	34	28241	1	04 -- Stone of Vitality+2
+	35	28242	1	04 -- Stone of Defence+2
+	36	28243	1	04 -- Stone of Haste+2
+	37	28330	1	02 -- Stone of Penetration+3
+	38	28331	1	02 -- Stone of Deathblow+3
+	39	28332	1	02 -- Stone of Cooldown+3
+	40	28333	1	02 -- Stone against Warriors+3
+	41	28334	1	02 -- Stone against Ninjas+3
+	42	28335	1	02 -- Stone against Suras+3
+	43	28336	1	02 -- Stone against Shamans+3
+	44	28337	1	02 -- Stone of Monsters+3
+	45	28338	1	02 -- Stone of Evasion+3
+	46	28339	1	02 -- Stone of Ducking+3
+	47	28340	1	02 -- Stone of Magic+3
+	48	28341	1	02 -- Stone of Vitality+3
+	49	28342	1	02 -- Stone of Defence+3
+	50	28343	1	02 -- Stone of Haste+3
+	51	28430	1	01 -- Stone of Penetration+4
+	52	28431	1	01 -- Stone of Deathblow+4
+	53	28432	1	01 -- Stone of Cooldown+4
+	54	28433	1	01 -- Stone against Warriors+4
+	55	28434	1	01 -- Stone against Ninjas+4
+	56	28435	1	01 -- Stone against Suras+4
+	57	28436	1	01 -- Stone against Shamans+4
+	58	28437	1	01 -- Stone of Monsters+4
+	59	28438	1	01 -- Stone of Evasion+4
+	60	28439	1	01 -- Stone of Ducking+4
+	61	28440	1	01 -- Stone of Magic+4
+	62	28441	1	01 -- Stone of Vitality+4
+	63	28442	1	01 -- Stone of Defence+4
+	64	28443	1	01 -- Stone of Haste+4
+	65	11280	1	03 -- Dragon God Armour+0
+	66	11480	1	03 -- Fuchsia Suit+0
+	67	11680	1	03 -- Spirit Plate Armour+0
+	68	11880	1	03 -- Baroness Dress+0
+	69	11283	1	02 -- Dragon God Armour+3
+	70	11483	1	02 -- Fuchsia Suit+3
+	71	11683	1	02 -- Spirit Plate Armour+3
+	72	11863	1	02 -- Clothing of Morality+3
+	73	50513	1	40 -- Soul Stone
+	74	50300	1	100 -- Skill Book
+	75	50300	1	100 -- Skill Book
+	76	70024	1	25 -- Blessing Marble
+}
+Group	Metin_Pung-Ma
+{
+	Mob	8024
+	Type	drop
+	1	3140	1	10 -- Electromagnetic Blade+0
+	2	3141	1	5 -- Electromagnetic Blade+1
+	3	1110	1	10 -- Lightning Knife+0
+	4	1111	1	5 -- Lightning Knife+1
+	5	2130	1	10 -- Divine Apricot Bow+0
+	6	2131	1	5 -- Divine Apricot Bow+1
+	7	7140	1	10 -- Salvation Fan+0
+	8	7141	1	5 -- Salvation Fan+1
+	9	5100	1	10 -- Heaven and Earth Bell+0
+	10	5101	1	5 -- Heaven and Earth Bell+1
+	11	160	1	10 -- Nymph Sword+0
+	12	161	1	5 -- Nymph Sword+1
+	13	240	1	10 -- Exorcism Sword+0
+	14	241	1	5 -- Exorcism Sword+1
+	15	27002	50	100 -- Red Potion (M)
+	16	27003	30	200 -- Red Potion (L)
+	17	27005	30	100 -- Blue Potion (M)
+	18	27006	20	150 -- Blue Potion (L)
+	19	70014	1	1 -- Blood Pill
+	20	70037	1	1 -- Book of Forgetfulness
+	21	13060	1	05 -- Falcon Shield+0
+	22	13080	1	05 -- Tiger Shield+0
+	23	13080	1	05 -- Tiger Shield+0
+	24	13120	1	05 -- Dragon Scale Shield+0
+	25	50300	1	100 -- Skill Book
+	26	13062	1	2 -- Falcon Shield+2
+	27	13082	1	2 -- Tiger Shield+2
+	28	13082	1	2 -- Tiger Shield+2
+	29	13122	1	2 -- Dragon Scale Shield+2
+	30	28330	1	02 -- Stone of Penetration+3
+	31	28331	1	02 -- Stone of Deathblow+3
+	32	28332	1	02 -- Stone of Cooldown+3
+	33	28333	1	02 -- Stone against Warriors+3
+	34	28334	1	02 -- Stone against Ninjas+3
+	35	28335	1	02 -- Stone against Suras+3
+	36	28336	1	02 -- Stone against Shamans+3
+	37	28337	1	02 -- Stone of Monsters+3
+	38	28338	1	02 -- Stone of Evasion+3
+	39	28339	1	02 -- Stone of Ducking+3
+	40	28340	1	02 -- Stone of Magic+3
+	41	28341	1	02 -- Stone of Vitality+3
+	42	28342	1	02 -- Stone of Defence+3
+	43	28343	1	02 -- Stone of Haste+3
+	44	28430	1	01 -- Stone of Penetration+4
+	45	28431	1	01 -- Stone of Deathblow+4
+	46	28432	1	01 -- Stone of Cooldown+4
+	47	28433	1	01 -- Stone against Warriors+4
+	48	28434	1	01 -- Stone against Ninjas+4
+	49	28435	1	01 -- Stone against Suras+4
+	50	28436	1	01 -- Stone against Shamans+4
+	51	28437	1	01 -- Stone of Monsters+4
+	52	28438	1	01 -- Stone of Evasion+4
+	53	28439	1	01 -- Stone of Ducking+4
+	54	28440	1	01 -- Stone of Magic+4
+	55	28441	1	01 -- Stone of Vitality+4
+	56	28442	1	01 -- Stone of Defence+4
+	57	28443	1	01 -- Stone of Haste+4
+	58	11283	1	03 -- Dragon God Armour+3
+	59	11483	1	03 -- Fuchsia Suit+3
+	60	11683	1	03 -- Spirit Plate Armour+3
+	61	11863	1	03 -- Clothing of Morality+3
+	62	50513	1	50 -- Soul Stone
+	63	70038	1	04 -- Bravery Cape
+	64	70043	1	01 -- Thief's Gloves
+	65	50300	1	100 -- Skill Book
+	66	50300	1	100 -- Skill Book
+	67	70024	1	25 -- Blessing Marble
+	68	6050	1	10 -- Scarab Claw+0
+	69	6051	1	5 -- Scarab Claw+1
+}
+Group	Metin_Ma-An
+{
+	Mob	8025
+	Type	drop
+	1	3140	1	06 -- Electromagnetic Blade+0
+	2	3141	1	05 -- Electromagnetic Blade+1
+	3	1110	1	06 -- Lightning Knife+0
+	4	1111	1	05 -- Lightning Knife+1
+	5	2130	1	06 -- Divine Apricot Bow+0
+	6	2131	1	05 -- Divine Apricot Bow+1
+	7	7140	1	06 -- Salvation Fan+0
+	8	7141	1	05 -- Salvation Fan+1
+	9	5100	1	06 -- Heaven and Earth Bell+0
+	10	5101	1	05 -- Heaven and Earth Bell+1
+	11	160	1	06 -- Nymph Sword+0
+	12	161	1	05 -- Nymph Sword+1
+	13	240	1	06 -- Exorcism Sword+0
+	14	241	1	05 -- Exorcism Sword+1
+	15	27002	50	60 -- Red Potion (M)
+	16	27003	30	20 -- Red Potion (L)
+	17	27005	30	40 -- Blue Potion (M)
+	18	27006	20	10 -- Blue Potion (L)
+	19	70014	1	05 -- Blood Pill
+	20	70037	1	05 -- Book of Forgetfulness
+	21	13060	1	06 -- Falcon Shield+0
+	22	13080	1	06 -- Tiger Shield+0
+	23	13080	1	06 -- Tiger Shield+0
+	24	13120	1	06 -- Dragon Scale Shield+0
+	25	50300	1	100 -- Skill Book
+	26	13062	1	04 -- Falcon Shield+2
+	27	13082	1	04 -- Tiger Shield+2
+	28	13082	1	04 -- Tiger Shield+2
+	29	13122	1	04 -- Dragon Scale Shield+2
+	30	28330	1	02 -- Stone of Penetration+3
+	31	28331	1	02 -- Stone of Deathblow+3
+	32	28332	1	02 -- Stone of Cooldown+3
+	33	28333	1	02 -- Stone against Warriors+3
+	34	28334	1	02 -- Stone against Ninjas+3
+	35	28335	1	02 -- Stone against Suras+3
+	36	28336	1	02 -- Stone against Shamans+3
+	37	28337	1	02 -- Stone of Monsters+3
+	38	28338	1	02 -- Stone of Evasion+3
+	39	28339	1	02 -- Stone of Ducking+3
+	40	28340	1	02 -- Stone of Magic+3
+	41	28341	1	02 -- Stone of Vitality+3
+	42	28342	1	02 -- Stone of Defence+3
+	43	28343	1	02 -- Stone of Haste+3
+	44	28430	1	01 -- Stone of Penetration+4
+	45	28431	1	01 -- Stone of Deathblow+4
+	46	28432	1	01 -- Stone of Cooldown+4
+	47	28433	1	01 -- Stone against Warriors+4
+	48	28434	1	01 -- Stone against Ninjas+4
+	49	28435	1	01 -- Stone against Suras+4
+	50	28436	1	01 -- Stone against Shamans+4
+	51	28437	1	01 -- Stone of Monsters+4
+	52	28438	1	01 -- Stone of Evasion+4
+	53	28439	1	01  -- Stone of Ducking+4
+	54	28440	1	01 -- Stone of Magic+4
+	55	28441	1	01 -- Stone of Vitality+4
+	56	28442	1	01 -- Stone of Defence+4
+	57	28443	1	01 -- Stone of Haste+4
+	58	11283	1	03 -- Dragon God Armour+3
+	59	11483	1	03 -- Fuchsia Suit+3
+	60	11683	1	03 -- Spirit Plate Armour+3
+	61	11863	1	03 -- Clothing of Morality+3
+	62	50513	1	50 -- Soul Stone
+	63	70038	1	04 -- Bravery Cape
+	64	70043	1	02 -- Thief's Gloves
+	65	50300	1	100 -- Skill Book
+	66	50300	1	100 -- Skill Book
+	67	70024	1	30 -- Blessing Marble
+	68	6050	1	10 -- Scarab Claw+0
+	69	6051	1	5 -- Scarab Claw+1
+}
+Group	Metin_Tu-Young
+{
+	Mob	8026
+	Type	drop
+	1	3140	1	06 -- Electromagnetic Blade+0
+	2	3141	1	05 -- Electromagnetic Blade+1
+	3	1110	1	06 -- Lightning Knife+0
+	4	1111	1	05 -- Lightning Knife+1
+	5	2130	1	06 -- Divine Apricot Bow+0
+	6	2131	1	05 -- Divine Apricot Bow+1
+	7	7140	1	06 -- Salvation Fan+0
+	8	7141	1	05 -- Salvation Fan+1
+	9	5100	1	06 -- Heaven and Earth Bell+0
+	10	5101	1	05 -- Heaven and Earth Bell+1
+	11	160	1	06 -- Nymph Sword+0
+	12	161	1	05 -- Nymph Sword+1
+	13	240	1	06 -- Exorcism Sword+0
+	14	241	1	05 -- Exorcism Sword+1
+	15	27002	50	60 -- Red Potion (M)
+	16	27003	30	20 -- Red Potion (L)
+	17	27005	30	40 -- Blue Potion (M)
+	18	27006	20	10 -- Blue Potion (L)
+	19	70014	1	05 -- Blood Pill
+	20	70037	1	05 -- Book of Forgetfulness
+	21	13060	1	06 -- Falcon Shield+0
+	22	13080	1	06 -- Tiger Shield+0
+	23	13080	1	06 -- Tiger Shield+0
+	24	13120	1	06 -- Dragon Scale Shield+0
+	25	50300	1	100 -- Skill Book
+	26	13062	1	05 -- Falcon Shield+2
+	27	13082	1	05 -- Tiger Shield+2
+	28	13082	1	05 -- Tiger Shield+2
+	29	13122	1	05 -- Dragon Scale Shield+2
+	30	28330	1	02 -- Stone of Penetration+3
+	31	28331	1	02 -- Stone of Deathblow+3
+	32	28332	1	02 -- Stone of Cooldown+3
+	33	28333	1	02 -- Stone against Warriors+3
+	34	28334	1	02 -- Stone against Ninjas+3
+	35	28335	1	02 -- Stone against Suras+3
+	36	28336	1	02 -- Stone against Shamans+3
+	37	28337	1	02 -- Stone of Monsters+3
+	38	28338	1	02 -- Stone of Evasion+3
+	39	28339	1	02 -- Stone of Ducking+3
+	40	28340	1	02 -- Stone of Magic+3
+	41	28341	1	02 -- Stone of Vitality+3
+	42	28342	1	02 -- Stone of Defence+3
+	43	28343	1	02 -- Stone of Haste+3
+	44	28430	1	01 -- Stone of Penetration+4
+	45	28431	1	01 -- Stone of Deathblow+4
+	46	28432	1	01 -- Stone of Cooldown+4
+	47	28433	1	01 -- Stone against Warriors+4
+	48	28434	1	01 -- Stone against Ninjas+4
+	49	28435	1	01 -- Stone against Suras+4
+	50	28436	1	01 -- Stone against Shamans+4
+	51	28437	1	01 -- Stone of Monsters+4
+	52	28438	1	01 -- Stone of Evasion+4
+	53	28439	1	01 -- Stone of Ducking+4
+	54	28440	1	01 -- Stone of Magic+4
+	55	28441	1	01 -- Stone of Vitality+4
+	56	28442	1	01 -- Stone of Defence+4
+	57	28443	1	01 -- Stone of Haste+4
+	58	11283	1	05 -- Dragon God Armour+3
+	59	11483	1	05 -- Fuchsia Suit+3
+	60	11683	1	05 -- Spirit Plate Armour+3
+	61	11863	1	05 -- Clothing of Morality+3
+	62	70038	1	05 -- Bravery Cape
+	63	70048	1	08 -- Cloak of Secrecy
+	64	70043	1	20 -- Thief's Gloves
+	65	70005	1	05 -- Experience Ring (1h)
+	66	27992	1	05 -- White Pearl
+	67	27993	1	05 -- Blue Pearl
+	68	27994	1	05 -- Blood-Red Pearl
+	69	50513	1	50 -- Soul Stone
+	70	50300	1	100 -- Skill Book
+	71	50300	1	100 -- Skill Book
+	72	70024	1	30 -- Blessing Marble
+	73	11680	1	02 -- Spirit Plate Armour+0
+	74	11280	1	02 -- Dragon God Armour+0
+	75	11880	1	02 -- Baroness Dress+0
+	76	11480	1	02 -- Fuchsia Suit+0
+	77	25041	1	05 -- Magic Stone
+	78	21060	1	02 -- Firellium Plate Armour+0
+	79	6050	1	05 -- Scarab Claw+1
+}
+Group	Metin_Jeon-Un
+{
+	Mob	8027
+	Type	drop
+	1	3140	1	06 -- Electromagnetic Blade+0
+	2	3141	1	05 -- Electromagnetic Blade+1
+	3	1110	1	06 -- Lightning Knife+0
+	4	1111	1	05 -- Lightning Knife+1
+	5	2130	1	06 -- Divine Apricot Bow+0
+	6	2131	1	05 -- Divine Apricot Bow+1
+	7	7140	1	06 -- Salvation Fan+0
+	8	7141	1	05 -- Salvation Fan+1
+	9	5100	1	06 -- Heaven and Earth Bell+0
+	10	5101	1	05 -- Heaven and Earth Bell+1
+	11	160	1	06 -- Nymph Sword+0
+	12	161	1	05 -- Nymph Sword+1
+	13	240	1	06 -- Exorcism Sword+0
+	14	241	1	05 -- Exorcism Sword+1
+	15	27002	50	60 -- Red Potion (M)
+	16	27003	30	20 -- Red Potion (L)
+	17	27005	30	40 -- Blue Potion (M)
+	18	27006	20	10 -- Blue Potion (L)
+	19	70014	1	05 -- Blood Pill
+	20	70037	1	05 -- Book of Forgetfulness
+	21	13060	1	04 -- Falcon Shield+0
+	22	13080	1	04 -- Tiger Shield+0
+	23	13080	1	04 -- Tiger Shield+0
+	24	13120	1	04 -- Dragon Scale Shield+0
+	25	50300	1	100 -- Skill Book
+	26	13062	1	04 -- Falcon Shield+2
+	27	13082	1	04 -- Tiger Shield+2
+	28	13082	1	04 -- Tiger Shield+2
+	29	13122	1	04 -- Dragon Scale Shield+2
+	30	28330	1	02 -- Stone of Penetration+3
+	31	28331	1	02 -- Stone of Deathblow+3
+	32	28332	1	02 -- Stone of Cooldown+3
+	33	28333	1	02 -- Stone against Warriors+3
+	34	28334	1	02 -- Stone against Ninjas+3
+	35	28335	1	02 -- Stone against Suras+3
+	36	28336	1	02 -- Stone against Shamans+3
+	37	28337	1	02 -- Stone of Monsters+3
+	38	28338	1	02 -- Stone of Evasion+3
+	39	28339	1	02 -- Stone of Ducking+3
+	40	28340	1	02 -- Stone of Magic+3
+	41	28341	1	02 -- Stone of Vitality+3
+	42	28342	1	02 -- Stone of Defence+3
+	43	28343	1	02 -- Stone of Haste+3
+	44	28430	1	01 -- Stone of Penetration+4
+	45	28431	1	01 -- Stone of Deathblow+4
+	46	28432	1	01 -- Stone of Cooldown+4
+	47	28433	1	01 -- Stone against Warriors+4
+	48	28434	1	01 -- Stone against Ninjas+4
+	49	28435	1	01 -- Stone against Suras+4
+	50	28436	1	01 -- Stone against Shamans+4
+	51	28437	1	01 -- Stone of Monsters+4
+	52	28438	1	01 -- Stone of Evasion+4
+	53	28439	1	01 -- Stone of Ducking+4
+	54	28440	1	01 -- Stone of Magic+4
+	55	28441	1	01 -- Stone of Vitality+4
+	56	28442	1	01 -- Stone of Defence+4
+	57	28443	1	01 -- Stone of Haste+4
+	58	11283	1	05 -- Dragon God Armour+3
+	59	11483	1	05 -- Fuchsia Suit+3
+	60	11683	1	05 -- Spirit Plate Armour+3
+	61	11863	1	05 -- Clothing of Morality+3
+	62	70038	1	05 -- Bravery Cape
+	63	70048	1	08 -- Cloak of Secrecy
+	64	70043	1	03 -- Thief's Gloves
+	65	70005	1	20 -- Experience Ring (1h)
+	66	27992	1	05 -- White Pearl
+	67	27993	1	05 -- Blue Pearl
+	68	27994	1	05 -- Blood-Red Pearl
+	69	27987	1	03 -- Clam
+	70	70103	1	03 -- Sutra
+	71	50513	1	50 -- Soul Stone
+	72	50300	1	100 -- Skill Book
+	73	50300	1	100 -- Skill Book
+	74	70024	1	35 -- Blessing Marble
+	75	11290	1	01 -- Black Steel Armour+0
+	76	11490	1	01 -- Black Wind Suit+0
+	77	11690	1	01 -- Magic Plate Armour+0
+	78	11890	1	01 -- Black Clothing+0
+	79	11680	1	02 -- Spirit Plate Armour+0
+	80	7130	1	03 -- Heavenly Bird Fan+0
+	81	7131	1	02 -- Heavenly Bird Fan+1
+	82	7132	1	01 -- Heavenly Bird Fan+2
+	83	2140	1	03 -- Yellow Dragon Bow+0
+	84	2141	1	02 -- Yellow Dragon Bow+1
+	85	2142	1	01 -- Yellow Dragon Bow+2
+	86	140	1	03 -- Battle Sword+0
+	87	141	1	02 -- Battle Sword+1
+	88	142	1	01 -- Battle Sword+2
+	89	3130	1	03 -- Partisan+0
+	90	3131	1	02 -- Partisan+1
+	91	3132	1	01 -- Partisan+2
+	92	1100	1	03 -- Dragon Knife+0
+	93	1101	1	02 -- Dragon Knife+1
+	94	1102	1	01 -- Dragon Knife+2
+	95	5090	1	03 -- Thunder Bird Bell+0
+	96	5091	1	02 -- Thunder Bird Bell+1
+	97	5092	1	01 -- Thunder Bird Bell+2
+	98	150	1	03 -- Ghost Fang Blade+0
+	99	151	1	02 -- Ghost Fang Blade+1
+	100	152	1	01 -- Ghost Fang Blade+2
+	101	11280	1	02 -- Dragon God Armour+0
+	102	11880	1	02 -- Baroness Dress+0
+	103	11480	1	02 -- Fuchsia Suit+0
+	104	25041	1	05 -- Magic Stone
+	105	21060	1	02 -- Firellium Plate Armour+0
+	106	6040	1	05 -- Griffon Claw+0
+}
+Group	Metin_of_Gloom
+{
+	Mob	8051
+	Type	drop
+	1	30500	1	100 -- Ruby Engraving Knife
+	2	30506	1	100 -- Sapphire Engraving Knife
+	3	30512	1	100 -- Red Dragon Steel
+	4	30518	1	100 -- Gold Yarn
+	5	145	1	80 -- Battle Sword+5
+	6	156	1	50 -- Ghost Fang Blade+6
+	7	1107	1	20 -- Dragon Knife+7
+	8	7145	1	80 -- Salvation Fan+5
+	9	11296	1	50 -- Black Steel Armour+6
+	10	11497	1	20 -- Black Wind Suit+7
+	11	70012	1	30 -- Goddess Tear
+	12	39006	1	30 -- Bravery Cape
+	13	25040	1	10 -- Blessing Scroll
+	14	70048	1	40 -- Cloak of Secrecy
+	15	70037	1	50 -- Book of Forgetfulness
+	16	70014	1	50 -- Blood Pill
+	17	72006	1	40 -- Thief's Gloves
+	18	39002	1	40 -- Experience Ring (1h)
+	19	27002	50	100 -- Red Potion (M)
+	20	27003	30	200 -- Red Potion (L)
+	21	27005	30	100 -- Blue Potion (M)
+	22	27006	20	150 -- Blue Potion (L)
+	23	50300	1	400 -- Skill Book
+	24	70014	1	1 -- Blood Pill
+	25	70037	1	1 -- Book of Forgetfulness
+	26	100300	1	1 -- Green Dragon Bean
+	27	6045	1	80 -- Griffon Claw+0
+}
+Group	Metin_of_Ember
+{
+	Mob	8052
+	Type	drop
+	1	30501	1	100 -- Gold Clasp
+	2	30507	1	100 -- Bronze Clasp
+	3	30513	1	100 -- Noble Epaulette
+	4	30519	1	100 -- Golden Hook
+	5	146	1	50 -- Battle Sword+6
+	6	157	1	20 -- Ghost Fang Blade+7
+	7	5105	1	80 -- Heaven and Earth Bell+5
+	8	7146	1	50 -- Salvation Fan+6
+	9	11297	1	20 -- Black Steel Armour+7
+	10	70012	1	30 -- Goddess Tear
+	11	39006	1	30 -- Bravery Cape
+	12	25040	1	10 -- Blessing Scroll
+	13	70048	1	40 -- Cloak of Secrecy
+	14	70037	1	50 -- Book of Forgetfulness
+	15	70014	1	50 -- Blood Pill
+	16	72006	1	40 -- Thief's Gloves
+	17	39002	1	40 -- Experience Ring (1h)
+	18	27002	50	100 -- Red Potion (M)
+	19	27003	30	200 -- Red Potion (L)
+	20	27005	30	100 -- Blue Potion (M)
+	21	27006	20	150 -- Blue Potion (L)
+	22	50300	1	400 -- Skill Book
+	23	70014	1	1 -- Blood Pill
+	24	70037	1	1 -- Book of Forgetfulness
+	25	100300	1	1 -- Green Dragon Bean
+}
+Group	Metin_of_Vanity
+{
+	Mob	8053
+	Type	drop
+	1	30502	1	100 -- Ruby Decoration
+	2	30508	1	100 -- Sapphire Decoration
+	3	30514	1	100 -- Violet Fabric
+	4	30520	1	100 -- Gold Buckle
+	5	147	1	20 -- Battle Sword+7
+	6	3145	1	80 -- Electromagnetic Blade+5
+	7	5106	1	50 -- Heaven and Earth Bell+6
+	8	7147	1	20 -- Salvation Fan+7
+	9	11895	1	80 -- Black Clothing+5
+	10	70012	1	30 -- Goddess Tear
+	11	39006	1	30 -- Bravery Cape
+	12	25040	1	10 -- Blessing Scroll
+	13	70048	1	40 -- Cloak of Secrecy
+	14	70037	1	50 -- Book of Forgetfulness
+	15	70014	1	50 -- Blood Pill
+	16	72006	1	40 -- Thief's Gloves
+	17	39002	1	40 -- Experience Ring (1h)
+	18	27002	50	100 -- Red Potion (M)
+	19	27003	30	200 -- Red Potion (L)
+	20	27005	30	100 -- Blue Potion (M)
+	21	27006	20	150 -- Blue Potion (L)
+	22	50300	1	400 -- Skill Book
+	23	70014	1	1 -- Blood Pill
+	24	70037	1	1 -- Book of Forgetfulness
+	25	100300	1	1 -- Green Dragon Bean
+}
+Group	Metin_of_Wrath
+{
+	Mob	8054
+	Type	drop
+	1	30503	1	100 -- Amethyst Engraving Knife
+	2	30509	1	100 -- Blue Dragon Steel
+	3	30515	1	100 -- Purple Dragon Steel
+	4	30521	1	100 -- Ring Element
+	5	2145	1	80 -- Yellow Dragon Bow+5
+	6	3146	1	50 -- Electromagnetic Blade+6
+	7	5107	1	20 -- Heaven and Earth Bell+7
+	8	11695	1	80 -- Magic Plate Armour+5
+	9	11896	1	50 -- Black Clothing+6
+	10	70012	1	30 -- Goddess Tear
+	11	39006	1	30 -- Bravery Cape
+	12	25040	1	42 -- Blessing Scroll
+	13	70048	1	40 -- Cloak of Secrecy
+	14	70037	1	50 -- Book of Forgetfulness
+	15	70014	1	50 -- Blood Pill
+	16	72006	1	40 -- Thief's Gloves
+	17	39002	1	40 -- Experience Ring (1h)
+	18	27002	50	100 -- Red Potion (M)
+	19	27003	30	200 -- Red Potion (L)
+	20	27005	30	100 -- Blue Potion (M)
+	21	27006	20	150 -- Blue Potion (L)
+	22	50300	1	400 -- Skill Book
+	23	70014	1	1 -- Blood Pill
+	24	70037	1	1 -- Book of Forgetfulness
+	25	100300	1	1 -- Green Dragon Bean
+}
+Group	Metin_of_Calamity
+{
+	Mob	8055
+	Type	drop
+	1	30504	1	100 -- Silver Clasp
+	2	30510	1	100 -- Grand Epaulette
+	3	30516	1	100 -- Antique Epaulette
+	4	30522	1	100 -- Chain Link
+	5	1105	1	80 -- Dragon Knife+5
+	6	2146	1	50 -- Yellow Dragon Bow+6
+	7	3147	1	20 -- Electromagnetic Blade+7
+	8	11495	1	80 -- Black Wind Suit+5
+	9	11696	1	50 -- Magic Plate Armour+6
+	10	11897	1	20 -- Black Clothing+7
+	11	70012	1	30 -- Goddess Tear
+	12	39006	1	30 -- Bravery Cape
+	13	25040	1	10 -- Blessing Scroll
+	14	70048	1	40 -- Cloak of Secrecy
+	15	70037	1	50 -- Book of Forgetfulness
+	16	70014	1	50 -- Blood Pill
+	17	72006	1	40 -- Thief's Gloves
+	18	39002	1	40 -- Experience Ring (1h)
+	19	27002	50	100 -- Red Potion (M)
+	20	27003	30	200 -- Red Potion (L)
+	21	27005	30	100 -- Blue Potion (M)
+	22	27006	20	150 -- Blue Potion (L)
+	23	50300	1	400 -- Skill Book
+	24	70014	1	1 -- Blood Pill
+	25	70037	1	1 -- Book of Forgetfulness
+	26	100300	1	1 -- Green Dragon Bean
+	27	6045	1	30 -- Griffon Claw+5
+}
+Group	Metin_of_Malice
+{
+	Mob	8056
+	Type	drop
+	1	30505	1	100 -- Emerald Decoration
+	2	30511	1	100 -- Red Fabric
+	3	30517	1	100 -- Golden Fabric
+	4	30523	1	100 -- Jewellery Element
+	5	155	1	80 -- Ghost Fang Blade+5
+	6	1106	1	50 -- Dragon Knife+6
+	7	2147	1	20 -- Yellow Dragon Bow+7
+	8	11295	1	80 -- Black Steel Armour+5
+	9	11496	1	50 -- Black Wind Suit+6
+	10	11697	1	20 -- Magic Plate Armour+7
+	11	70012	1	30 -- Goddess Tear
+	12	39006	1	30 -- Bravery Cape
+	13	25040	1	10 -- Blessing Scroll
+	14	70048	1	40 -- Cloak of Secrecy
+	15	70037	1	50 -- Book of Forgetfulness
+	16	70014	1	50 -- Blood Pill
+	17	72006	1	40 -- Thief's Gloves
+	18	39002	1	40 -- Experience Ring (1h)
+	19	27002	50	100 -- Red Potion (M)
+	20	27003	30	200 -- Red Potion (L)
+	21	27005	30	100 -- Blue Potion (M)
+	22	27006	20	150 -- Blue Potion (L)
+	23	50300	1	400 -- Skill Book
+	24	70014	1	1 -- Blood Pill
+	25	70037	1	1 -- Book of Forgetfulness
+	26	100300	1	1 -- Green Dragon Bean
+	27	6045	1	80 -- Griffon Claw+5
+}
+Group	Metin_of_Forests
+{
+	Mob	8061
+	Type	drop
+	1	1100	1	70 -- Dragon Knife+0
+	2	150	1	70 -- Ghost Fang Blade+0
+	3	6046	1	40 -- Griffon Claw+6
+	4	2147	1	10 -- Yellow Dragon Bow+7
+	5	11496	1	40 -- Black Wind Suit+6
+	6	11295	1	70 -- Black Steel Armour+5
+	7	21077	1	10 -- Nightshade Armour+7
+	8	50300	1	100 -- Skill Book
+	9	50525	1	30 -- Soul Stone+
+	10	72004	1	2 -- Thief's Gloves
+	11	71015	1	2 -- Experience Ring
+	12	25040	1	1 -- Blessing Scroll
+	13	55003	1	1 -- Young Pet Book
+	14	55004	1	1 -- Wild Pet Book
+	15	50323	1	1 -- Ward Book Chest
+	16	50515	1	1 -- Ward Manual
+	17	70037	1	1 -- Book of Forgetfulness
+	18	70014	1	5 -- Blood Pill
+	19	70012	1	5 -- Goddess Tear
+	20	39006	20	10 -- Bravery Cape
+	21	70048	1	5 -- Cloak of Secrecy
+	22	30512	1	5 -- Red Dragon Steel
+	23	30506	1	5 -- Sapphire Engraving Knife
+	24	30516	1	5 -- Antique Epaulette
+	25	30522	1	5 -- Chain Link
+	26	27002	50	60 -- Red Potion (M)
+	27	27003	30	20 -- Red Potion (L)
+	28	27005	30	40 -- Blue Potion (M)
+	30	27006	20	10 -- Blue Potion (L)
+	31	28430	1	1 -- Stone of Penetration+4
+	32	28431	1	1 -- Stone of Deathblow+4
+	33	28432	1	1 -- Stone of Cooldown+4
+	34	28433	1	1 -- Stone against Warriors+4
+	35	28434	1	1 -- Stone against Ninjas+4
+	36	28435	1	1 -- Stone against Suras+4
+	37	28436	1	1 -- Stone against Shamans+4
+	38	28437	1	1 -- Stone of Monsters+4
+	39	28438	1	1 -- Stone of Evasion+4
+	40	28439	1	1 -- Stone of Ducking+4
+	41	28440	1	1 -- Stone of Magic+4
+	42	28441	1	1 -- Stone of Vitality+4
+	43	28442	1	1 -- Stone of Defence+4
+	44	28443	1	1 -- Stone of Haste+4
+}
+Group	ºÀÈ­
+{
+	Mob	11506
+	Type	drop
+	1	50117	1	40	30 -- Jewellery Box
+	2	182	1	10	30 -- Poison Sword+2
+	3	192	1	25	30 -- Lion Sword+2
+	4	1132	1	10	30 -- Devil Wing Chakram+2
+	5	2172	1	25	30 -- Crow Steel Bow+2
+	6	3162	1	10	30 -- Grudge Sword+2
+	7	5122	1	25	30 -- Bamboo Bell+2
+	8	183	1	10	30 -- Poison Sword+3
+	9	193	1	25	30 -- Lion Sword+3
+	10	1133	1	10	30 -- Devil Wing Chakram+3
+	11	2173	1	25	30 -- Crow Steel Bow+3
+	12	3163	1	10	30 -- Grudge Sword+3
+	13	5123	1	25	30 -- Bamboo Bell+3
+	14	11293	1	10	30 -- Black Steel Armour+3
+	15	11294	1	50	30 -- Black Steel Armour+4
+	16	11693	1	20	30 -- Magic Plate Armour+3
+	17	11694	1	50	30 -- Magic Plate Armour+4
+	18	11493	1	20	30 -- Black Wind Suit+3
+	19	11494	1	50	30 -- Black Wind Suit+4
+	20	11893	1	20	30 -- Black Clothing+3
+	21	11894	1	50	30 -- Black Clothing+4
+}
+Group	ºÀÈ­
+{
+	Mob	11507
+	Type	drop
+	1	50117	1	40	30 -- Jewellery Box
+	2	182	1	20	30 -- Poison Sword+2
+	3	192	1	20	30 -- Lion Sword+2
+	4	1132	1	20	30 -- Devil Wing Chakram+2
+	5	2172	1	20	30 -- Crow Steel Bow+2
+	6	3162	1	20	30 -- Grudge Sword+2
+	7	5122	1	20	30 -- Bamboo Bell+2
+	8	183	1	20	30 -- Poison Sword+3
+	9	193	1	20	30 -- Lion Sword+3
+	10	1133	1	20	30 -- Devil Wing Chakram+3
+	11	2173	1	20	30 -- Crow Steel Bow+3
+	12	3163	1	20	30 -- Grudge Sword+3
+	13	5123	1	20	30 -- Bamboo Bell+3
+	14	11293	1	20	30 -- Black Steel Armour+3
+	15	11294	1	20	30 -- Black Steel Armour+4
+	16	11693	1	20	30 -- Magic Plate Armour+3
+	17	11694	1	20	30 -- Magic Plate Armour+4
+	18	11493	1	20	30 -- Black Wind Suit+3
+	19	11494	1	20	30 -- Black Wind Suit+4
+	20	11893	1	20	30 -- Black Clothing+3
+	21	11894	1	20	30 -- Black Clothing+4
+}
+Group	ºÀÈ­
+{
+	Mob	11508
+	Type	drop
+	1	50117	1	40	30 -- Jewellery Box
+	2	182	1	20	30 -- Poison Sword+2
+	3	192	1	20	30 -- Lion Sword+2
+	4	1132	1	20	30 -- Devil Wing Chakram+2
+	5	2172	1	20	30 -- Crow Steel Bow+2
+	6	3162	1	20	30 -- Grudge Sword+2
+	7	5122	1	20	30 -- Bamboo Bell+2
+	8	183	1	20	30 -- Poison Sword+3
+	9	193	1	20	30 -- Lion Sword+3
+	10	1133	1	20	30 -- Devil Wing Chakram+3
+	11	2173	1	20	30 -- Crow Steel Bow+3
+	12	3163	1	20	30 -- Grudge Sword+3
+	13	5123	1	20	30 -- Bamboo Bell+3
+	14	11293	1	20	30 -- Black Steel Armour+3
+	15	11294	1	20	30 -- Black Steel Armour+4
+	16	11693	1	20	30 -- Magic Plate Armour+3
+	17	11694	1	20	30 -- Magic Plate Armour+4
+	18	11493	1	20	30 -- Black Wind Suit+3
+	19	11494	1	20	30 -- Black Wind Suit+4
+	20	11893	1	20	30 -- Black Clothing+3
+	21	11894	1	20	30 -- Black Clothing+4
+}
+Group	ºÀÈ­
+{
+	Mob	11509
+	Type	drop
+	1	50117	1	40	30 -- Jewellery Box
+	2	182	1	20	30 -- Poison Sword+2
+	3	192	1	20	30 -- Lion Sword+2
+	4	1132	1	20	30 -- Devil Wing Chakram+2
+	5	2172	1	20	30 -- Crow Steel Bow+2
+	6	3162	1	20	30 -- Grudge Sword+2
+	7	5122	1	20	30 -- Bamboo Bell+2
+	8	183	1	20	30 -- Poison Sword+3
+	9	193	1	20	30 -- Lion Sword+3
+	10	1133	1	20	30 -- Devil Wing Chakram+3
+	11	2173	1	20	30 -- Crow Steel Bow+3
+	12	3163	1	20	30 -- Grudge Sword+3
+	13	5123	1	20	30 -- Bamboo Bell+3
+	14	11293	1	20	30 -- Black Steel Armour+3
+	15	11294	1	20	30 -- Black Steel Armour+4
+	16	11693	1	20	30 -- Magic Plate Armour+3
+	17	11694	1	20	30 -- Magic Plate Armour+4
+	18	11493	1	20	30 -- Black Wind Suit+3
+	19	11494	1	20	30 -- Black Wind Suit+4
+	20	11893	1	20	30 -- Black Clothing+3
+	21	11894	1	20	30 -- Black Clothing+4
+}
+Group	ºÀÈ­
+{
+	Mob	11510
+	Type	drop
+	1	50117	1	40	30 -- Jewellery Box
+	2	182	1	20	30 -- Poison Sword+2
+	3	192	1	20	30 -- Lion Sword+2
+	4	1132	1	20	30 -- Devil Wing Chakram+2
+	5	2172	1	20	30 -- Crow Steel Bow+2
+	6	3162	1	20	30 -- Grudge Sword+2
+	7	5122	1	20	30 -- Bamboo Bell+2
+	8	183	1	20	30 -- Poison Sword+3
+	9	193	1	20	30 -- Lion Sword+3
+	10	1133	1	20	30 -- Devil Wing Chakram+3
+	11	2173	1	20	30 -- Crow Steel Bow+3
+	12	3163	1	20	30 -- Grudge Sword+3
+	13	5123	1	20	30 -- Bamboo Bell+3
+	14	11293	1	20	30 -- Black Steel Armour+3
+	15	11294	1	20	30 -- Black Steel Armour+4
+	16	11693	1	20	30 -- Magic Plate Armour+3
+	17	11694	1	20	30 -- Magic Plate Armour+4
+	18	11493	1	20	30 -- Black Wind Suit+3
+	19	11494	1	20	30 -- Black Wind Suit+4
+	20	11893	1	20	30 -- Black Clothing+3
+	21	11894	1	20	30 -- Black Clothing+4
+}
+Group	ºù¸¶
+{
+	Mob	11041
+	Type	drop
+	1	50726	1	2 -- Tue Fungus
+}
+Group	Setaou-Anf?rer97
+{
+	Mob	2475
+	Type	drop
+	1	171	1	0.7 -- Sting Sword+1
+	2	12246	1	0.12 -- Ghost Mask Sallet+6
+	3	14141	1	0.12 -- White Gold Bracelet+1
+	4	16183	1	0.21 -- Amethyst Necklace+3
+	5	50060	1	0.8 -- Horse Riding Manual
+	6	50009	1	0.34 -- Silver Key
+	7	50724	5	1.25 -- Gango Root
+	8	50728	5	1.25 -- Mulberry
+	9	244	1	0.34 -- Exorcism Sword+4
+	10	146	1	0.27 -- Battle Sword+6
+	11	1114	1	0.34 -- Lightning Knife+4
+	12	5104	1	0.34 -- Heaven and Earth Bell+4
+	13	70031	1	0.1 -- Fencing Pamphlet
+}
+Group	ÃµÀÇº´»ç
+{
+	Mob	2431
+	Type	drop
+	1	13063	1	0.16 -- Falcon Shield+3
+	2	14206	1	0.14 -- Heaven's Tear Bracelet+6
+	3	50060	1	0.8 -- Horse Riding Manual
+	4	27987	1	0.1 -- Clam
+	5	50721	5	1.25 -- Peach Blossom
+	6	50725	5	1.25 -- Lilac
+	7	70051	1	0.39 -- Sage King's Glove
+	8	16065	1	0.48 -- Golden Necklace+5
+	9	70031	1	0.1 -- Fencing Pamphlet
+}
+Group	ÃµÀÇ±Ãº´
+{
+	Mob	2432
+	Type	drop
+	1	13083	1	0.16 -- Tiger Shield+3
+	2	8005	10	0.94 -- Silver Arrow
+	3	8005	20	0.36 -- Silver Arrow
+	4	27987	1	0.1 -- Clam
+	5	50722	5	1.25 -- Bellflower
+	6	50726	5	1.25 -- Tue Fungus
+	7	70050	1	0.39 -- Sage King's Symbol
+	8	17104	1	0.22 -- Ebony Earrings+4
+	9	70031	1	0.1 -- Fencing Pamphlet
+}
+Group	ÃµÀÇ¹ý»ç
+{
+	Mob	2433
+	Type	drop
+	1	13103	1	0.16 -- Lion Edge Shield+3
+	2	15165	1	0.17 -- Ecstasy Shoes+5
+	3	16203	1	0.11 -- Heaven's Tear Necklace+3
+	4	17184	1	0.27 -- Amethyst Earrings+4
+	5	17203	1	0.323 -- Heaven's Tear Earrings+3
+	6	27987	1	0.1 -- Clam
+	7	50723	5	1.25 -- Kaki Blossom
+	8	50727	5	1.25 -- Alpine Rose
+	9	17105	1	0.34 -- Ebony Earrings+5
+	10	70031	1	0.1 -- Fencing Pamphlet
+}
+Group	ÃµÀÇÀå¼ö
+{
+	Mob	2434
+	Type	drop
+	1	13123	1	0.16 -- Dragon Scale Shield+3
+	2	14143	1	0.17 -- White Gold Bracelet+3
+	3	15204	1	0.22 -- Phoenix Shoes+4
+	4	16184	1	0.11 -- Amethyst Necklace+4
+	5	50060	1	0.8 -- Horse Riding Manual
+	6	27987	1	0.1 -- Clam
+	7	50724	5	1.25 -- Gango Root
+	8	50728	5	1.25 -- Mulberry
+	9	70031	1	0.1 -- Fencing Pamphlet
+}
+Group	ÁøÃµÀÇº´»ç
+{
+	Mob	2451
+	Type	drop
+	1	11690	1	0.6 -- Magic Plate Armour+0
+	2	11691	1	0.5 -- Magic Plate Armour+1
+	3	13064	1	0.11 -- Falcon Shield+4
+	4	50060	1	0.8 -- Horse Riding Manual
+	5	27987	1	0.1 -- Clam
+	6	50721	5	1.25 -- Peach Blossom
+	7	50725	5	1.25 -- Lilac
+	8	70031	1	0.1 -- Fencing Pamphlet
+}
+Group	ÁøÃµÀÇ±Ãº´
+{
+	Mob	2452
+	Type	drop
+	1	11490	1	0.6 -- Black Wind Suit+0
+	2	11491	1	0.5 -- Black Wind Suit+1
+	3	13084	1	0.11 -- Tiger Shield+4
+	4	8005	10	0.94 -- Silver Arrow
+	5	8005	20	0.36 -- Silver Arrow
+	6	27987	1	0.1 -- Clam
+	7	50009	1	0.34 -- Silver Key
+	8	50722	5	1.25 -- Bellflower
+	9	50726	5	1.25 -- Tue Fungus
+	10	70031	1	0.1 -- Fencing Pamphlet
+}
+Group	ÁøÃµÀÇ¹ý»ç
+{
+	Mob	2453
+	Type	drop
+	1	11890	1	0.6 -- Black Clothing+0
+	2	11891	1	0.5 -- Black Clothing+1
+	3	13104	1	0.11 -- Lion Edge Shield+4
+	4	16204	1	0.17 -- Heaven's Tear Necklace+4
+	5	17204	1	0.16 -- Heaven's Tear Earrings+4
+	6	27987	1	0.1 -- Clam
+	7	50009	1	0.34 -- Silver Key
+	8	70031	1	0.1 -- Fencing Pamphlet
+}
+Group	ÁøÃµÀÇÀå¼ö
+{
+	Mob	2454
+	Type	drop
+	1	11290	1	0.6 -- Black Steel Armour+0
+	2	11291	1	0.5 -- Black Steel Armour+1
+	3	13124	1	0.11 -- Dragon Scale Shield+4
+	4	15205	1	0.17 -- Phoenix Shoes+5
+	5	50060	1	0.8 -- Horse Riding Manual
+	6	50009	1	0.34 -- Silver Key
+	7	70051	1	0.39 -- Sage King's Glove
+	8	70050	1	0.39 -- Sage King's Symbol
+	9	70031	1	0.1 -- Fencing Pamphlet
+}
+Group	BeranSetaou
+{
+	Mob	2493
+	Type	drop
+	1	54700	1	400 -- Beran-Setaou's Chest
+	2	54700	1	400 -- Beran-Setaou's Chest
+	3	54700	1	400 -- Beran-Setaou's Chest
+	4	54700	1	400 -- Beran-Setaou's Chest
+	5	54700	1	400 -- Beran-Setaou's Chest
+	6	54700	1	400 -- Beran-Setaou's Chest
+	7	54700	1	400 -- Beran-Setaou's Chest
+	8	54700	1	400 -- Beran-Setaou's Chest
+	9	54700	1	80 -- Beran-Setaou's Chest
+	10	54700	1	80 -- Beran-Setaou's Chest
+}
+Group	Jellyfish_of_Hell
+{
+	Mob	2501
+	Type	drop
+	1	50722	1	0.1 -- Bellflower
+}
+Group	Hell_Hound
+{
+	Mob	2502
+	Type	drop
+	1	50723	1	0.1 -- Kaki Blossom
+
+}
+Group	Zombie
+{
+	Mob	2503
+	Type	drop
+	1	50724	1	0.1 -- Gango Root
+}
+Group	Hell_Officer
+{
+	Mob	2504
+	Type	drop
+	1	50725	1	0.1 -- Lilac
+}
+Group	Hell_Guard
+{
+	Mob	2505
+	Type	drop
+	1	50726	1	0.1 -- Tue Fungus
+}
+Group	Double-head_Hell_Archer
+{
+	Mob	2506
+	Type	drop
+	1	50727	1	0.1 -- Alpine Rose
+	2	12260	1	0.2 -- Fear Mask +0
+	3	12390	1	0.2 -- Orc Hood +0
+	4	12530	1	0.2 -- Horned Helmet +0
+	5	12670	1	0.2 -- Cardinal's Hat +0
+	6	11280	1	0.5 -- Dragon God Armour+0
+	7	11880	1	0.5 -- Baroness Dress+0
+	8	11480	1	0.5 -- Fuchsia Suit+0
+	9	11680	1	0.5 -- Spirit Plate Armour+0
+}
+Group	Infernal_Claw
+{
+	Mob	2507
+	Type	drop
+	1	50728	1	0.1 -- Mulberry
+	2	12260	1	0.2 -- Fear Mask +0
+	3	12390	1	0.2 -- Orc Hood +0
+	4	12530	1	0.2 -- Horned Helmet +0
+	5	12670	1	0.2 -- Cardinal's Hat +0
+	6	11280	1	0.5 -- Dragon God Armour+0
+	7	11880	1	0.5 -- Baroness Dress+0
+	8	11480	1	0.5 -- Fuchsia Suit+0
+	9	11680	1	0.5 -- Spirit Plate Armour+0
+}
+Group	Evil_Hell_Warrior
+{
+	Mob	2541
+	Type	drop
+	1	50722	1	0.2 -- Bellflower
+	2	50723	1	0.2 -- Kaki Blossom
+	3	12260	1	0.2 -- Fear Mask +0
+	4	12390	1	0.2 -- Orc Hood +0
+	5	12530	1	0.2 -- Horned Helmet +0
+	6	12670	1	0.2 -- Cardinal's Hat +0
+	7	14180	1	0.5 -- Amethyst Bracelet+0
+	8	14200	1	0.025 -- Heaven's Tear Bracelet+0
+	9	16180	1	0.5 -- Amethyst Necklace+0
+	10	16200	1	0.025 -- Heaven's Tear Necklace+0
+	11	17180	1	0.5 -- Amethyst Earrings+0
+	12	17200	1	0.025 -- Heaven's Tear Earrings+0
+}
+Group	Evil_Hell_Archer
+{
+	Mob	2542
+	Type	drop
+	1	50722	1	0.2 -- Bellflower
+	2	50723	1	0.2 -- Kaki Blossom
+	3	12260	1	0.4 -- Fear Mask +0
+	4	12390	1	0.4 -- Orc Hood +0
+	5	12530	1	0.4 -- Horned Helmet +0
+	6	12670	1	0.4 -- Cardinal's Hat +0
+	7	14220	1	0.1 -- Soul Crystal Bracelet+0
+	8	16220	1	0.1 -- Soul Crystal Necklace+0
+	9	17220	1	0.1 -- Soul Crystal Earrings+0
+}
+Group	Evil_Hell_Spearman
+{
+	Mob	2543
+	Type	drop
+	1	50724	1	0.2 -- Gango Root
+	2	50725	1	0.2 -- Lilac
+	3	13060	1	0.2 -- Falcon Shield+0
+	4	13080	1	0.2 -- Tiger Shield+0
+	5	13100	1	0.2 -- Lion Edge Shield+0
+	6	13120	1	0.2 -- Dragon Scale Shield+0
+	7	14180	1	0.5 -- Amethyst Bracelet+0
+	8	14200	1	0.025 -- Heaven's Tear Bracelet+0
+	9	16180	1	0.5 -- Amethyst Necklace+0
+	10	16200	1	0.025 -- Heaven's Tear Necklace+0
+	11	17180	1	0.5 -- Amethyst Earrings+0
+	12	17200	1	0.025 -- Heaven's Tear Earrings+0
+}
+Group	Evil_Hell_Priest
+{
+	Mob	2544
+	Type	drop
+	1	50724	1	0.2 -- Gango Root
+	2	50725	1	0.2 -- Lilac
+	3	12280	1	0.1 -- War Master Helmet +0
+	4	12400	1	0.1 -- Spider Hood +0
+	5	12540	1	0.1 -- Magic Helmet +0
+	6	12680	1	0.1 -- Soul Shard Hat +0
+}
+Group	Evil_Hell_Major
+{
+	Mob	2545
+	Type	drop
+	1	50726	1	0.2 -- Tue Fungus
+	2	50727	1	0.2 -- Alpine Rose
+	3	13140	1	0.015 -- Titan Shield+0
+	4	13060	1	0.3 -- Falcon Shield+0
+	5	13080	1	0.3 -- Tiger Shield+0
+	6	13100	1	0.3 -- Lion Edge Shield+0
+	7	13120	1	0.3 -- Dragon Scale Shield+0
+}
+Group	Evil_Hell_Slaughterer
+{
+	Mob	2546
+	Type	drop
+	1	50726	1	0.2 -- Tue Fungus
+	2	50727	1	0.2 -- Alpine Rose
+	3	13140	1	0.2 -- Titan Shield+0
+	4	14220	1	0.2 -- Soul Crystal Bracelet+0
+	5	16220	1	0.2 -- Soul Crystal Necklace+0
+	6	17220	1	0.2 -- Soul Crystal Earrings+0
+	7	14180	1	0.5 -- Amethyst Bracelet+0
+	8	14200	1	0.025 -- Heaven's Tear Bracelet+0
+	9	16180	1	0.5 -- Amethyst Necklace+0
+	10	16200	1	0.025 -- Heaven's Tear Necklace+0
+	11	17180	1	0.5 -- Amethyst Earrings+0
+	12	17200	1	0.025 -- Heaven's Tear Earrings+0
+}
+Group	Evil_Hell_General
+{
+	Mob	2547
+	Type	drop
+	1	50728	1	0.2 -- Mulberry
+	2	12280	1	0.025 -- War Master Helmet +0
+	3	12400	1	0.025 -- Spider Hood +0
+	4	12540	1	0.025 -- Magic Helmet +0
+	5	12680	1	0.025 -- Soul Shard Hat +0
+	6	13140	1	0.025 -- Titan Shield+0
+	7	11290	1	0.2 -- Black Steel Armour+0
+	8	11490	1	0.2 -- Black Wind Suit+0
+	9	11890	1	0.2 -- Black Clothing+0
+	10	11690	1	0.2 -- Magic Plate Armour+0
+}
+Group	Tartaros
+{
+	Mob	2591
+	Type	drop
+	1	12281	1	0.5 -- War Master Helmet +1
+	2	12401	1	0.8 -- Spider Hood +1
+	3	12541	1	0.8 -- Magic Helmet +1
+	4	12681	1	0.8 -- Soul Shard Hat +1
+	5	13141	1	0.8 -- Titan Shield+1
+	6	14220	1	0.8 -- Soul Crystal Bracelet+0
+	7	16220	1	0.8 -- Soul Crystal Necklace+0
+	8	17220	1	0.8 -- Soul Crystal Earrings+0
+	9	11291	1	0.1 -- Black Steel Armour+1
+	10	11491	1	0.1 -- Black Wind Suit+1
+	11	11891	1	0.1 -- Black Clothing+1
+	12	11691	1	0.1 -- Magic Plate Armour+1
+}
+Group	Charon
+{
+	Mob	2597
+	Type	drop
+	1	12282	1	0.025 -- War Master Helmet +2
+	2	12402	1	0.1 -- Spider Hood +2
+	3	12542	1	0.1 -- Magic Helmet +2
+	4	12682	1	0.1 -- Soul Shard Hat +2
+	5	13142	1	0.1 -- Titan Shield+2
+	6	14220	1	0.1 -- Soul Crystal Bracelet+0
+	7	16220	1	0.1 -- Soul Crystal Necklace+0
+	8	17220	1	0.1 -- Soul Crystal Earrings+0
+	9	11291	1	0.15 -- Black Steel Armour+1
+	10	11491	1	0.15 -- Black Wind Suit+1
+	11	11891	1	0.15 -- Black Clothing+1
+	12	11691	1	0.15 -- Magic Plate Armour+1
+}
+Group	Azrael
+{
+	Mob	2598
+	Type	drop
+	1	50186	1	100 -- Azrael's Chest
+	2	12283	1	0.2 -- War Master Helmet +3
+	3	12403	1	0.2 -- Spider Hood +3
+	4	12543	1	0.2 -- Magic Helmet +3
+	5	12683	1	0.2 -- Soul Shard Hat +3
+	6	13143	1	0.2 -- Titan Shield+3
+	7	14220	1	0.2 -- Soul Crystal Bracelet+0
+	8	16220	1	0.2 -- Soul Crystal Necklace+0
+	9	17220	1	0.2 -- Soul Crystal Earrings+0
+	10	11291	1	0.25 -- Black Steel Armour+1
+	11	11491	1	0.25 -- Black Wind Suit+1
+	12	11891	1	0.25 -- Black Clothing+1
+	13	11691	1	0.25 -- Magic Plate Armour+1
+	14	3140	1	0.4 -- Electromagnetic Blade+0
+	15	1110	1	0.4 -- Lightning Knife+0
+	16	2130	1	0.4 -- Divine Apricot Bow+0
+	17	7140	1	0.4 -- Salvation Fan+0
+	18	5100	1	0.4 -- Heaven and Earth Bell+0
+	19	160	1	0.4 -- Nymph Sword+0
+	20	240	1	0.4 -- Exorcism Sword+0
+}
+Group	Spider_Baron
+{
+	Mob	2094
+	Type	drop
+	1	30327	1	100 -- Arachnids Whistle
+}
+Group	Best._Baby_Poison_Spider
+{
+	type	limit
+	mob	2071
+	level_limit	60
+	1	104	1	0.5 -- Great Sword+4
+	2	114	1	0.5 -- Great Sword+4
+	3	124	1	0.5 -- Flying Wizard Sword+4
+	4	134	1	0.5 -- Half Moon Sword+4
+	5	13006	1	0.5 -- Battle Shield+6
+	6	13024	1	0.5 -- Pentagon Shield+4
+	7	13045	1	0.5 -- Black Round Shield+5
+	8	13060	1	0.05 -- Falcon Shield+0
+	9	13100	1	0.05 -- Lion Edge Shield+0
+}
+Group	Best_Deadly_Pois_Spider
+{
+	type	limit
+	mob	2072
+	level_limit	60
+	1	1064	1	0.5 -- Devil Fist Dagger+4
+	2	1074	1	0.5 -- Bloody Dagger+4
+	3	1084	1	0.5 -- Rib Knife+4
+	4	1094	1	0.5 -- Chakram+4
+	5	12626	1	0.5 -- Monk Hat+6
+	6	12645	1	0.5 -- Phoenix Hat+5
+	7	12664	1	0.5 -- Sunlight Hat+4
+	8	13080	1	0.05 -- Tiger Shield+0
+	9	13120	1	0.05 -- Dragon Scale Shield+0
+}
+Group	Best_Red_Poison_Spider
+{
+	type	limit
+	mob	2073
+	level_limit	60
+	1	2094	1	0.5 -- Thorn Leaf Bow+4
+	2	2104	1	0.5 -- Bull's Horn Bow+4
+	3	2114	1	0.5 -- Unicorn Bow+4
+	4	2124	1	0.5 -- Giant Wing Bow+4
+	5	12486	1	0.5 -- Bloody Helmet+6
+	6	12505	1	0.5 -- Mocking Helmet+5
+	7	12524	1	0.5 -- Castle Helmet+4
+	8	13120	1	0.1 -- Dragon Scale Shield+0
+}
+Group	Best_Claw_Poison_Spider
+{
+	type	limit
+	mob	2074
+	level_limit	60
+	1	3094	1	0.5 -- Glacial Pick+4
+	2	3104	1	0.5 -- Twelve Spirit Sword+4
+	3	3114	1	0.5 -- Salvation Blade+4
+	4	3124	1	0.5 -- Lion Slayer+4
+	5	12346	1	0.5 -- Leather Hood+6
+	6	12365	1	0.5 -- Chain Hood+5
+	7	12384	1	0.5 -- Steel Hood+4
+	8	13120	1	0.1 -- Dragon Scale Shield+0
+}
+Group	Best_Sold_Pois_Spider
+{
+	type	limit
+	mob	2075
+	level_limit	60
+	1	5064	1	0.5 -- Magical Bell+4
+	2	5074	1	0.5 -- Golden Bug Bell+4
+	3	5084	1	0.5 -- Steel Bug Bell+4
+	4	12206	1	0.5 -- Traditional Helmet+6
+	5	12225	1	0.5 -- Iron Helmet+5
+	6	12244	1	0.5 -- Ghost Mask Sallet+4
+	7	13100	1	0.1 -- Lion Edge Shield+0
+}
+Group	Best_Strg._Poison_Spider
+{
+	type	limit
+	mob	2076
+	level_limit	60
+	1	5064	1	0.5 -- Magical Bell+4
+	2	5074	1	0.5 -- Golden Bug Bell+4
+	3	5084	1	0.5 -- Steel Bug Bell+4
+	4	12206	1	0.5 -- Traditional Helmet+6
+	5	12225	1	0.5 -- Iron Helmet+5
+	6	12244	1	0.5 -- Ghost Mask Sallet+4
+	7	13100	1	0.1 -- Lion Edge Shield+0
+}
+Group	Gnoll_Warrior
+{
+	Mob	3001
+	Type	drop
+	1	50721	1	1 -- Peach Blossom
+}
+Group	Gnoll_Archer
+{
+	Mob	3002
+	Type	drop
+	1	50722	1	1 -- Bellflower
+}
+Group	Gnoll_Defender
+{
+	Mob	3003
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+}
+Group	Gnoll_Magician
+{
+	Mob	3004
+	Type	drop
+	1	50724	1	1 -- Gango Root
+}
+Group	Gnoll_General
+{
+	Mob	3005
+	Type	drop
+	1	50725	1	1 -- Lilac
+}
+Group	Gnoll_Lord
+{
+	Mob	3090
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	100 -- Chest of Darkness
+	17	145	1	15 -- Battle Sword+5
+	18	146	1	10 -- Battle Sword+6
+	19	155	1	15 -- Ghost Fang Blade+5
+	20	156	1	10 -- Ghost Fang Blade+6
+	21	1105	1	15 -- Dragon Knife+5
+	22	1106	1	10 -- Dragon Knife+6
+	23	2145	1	15 -- Yellow Dragon Bow+5
+	24	2146	1	10 -- Yellow Dragon Bow+6
+	25	3145	1	15 -- Electromagnetic Blade+5
+	26	3146	1	10 -- Electromagnetic Blade+6
+	27	5105	1	15 -- Heaven and Earth Bell+5
+	28	5106	1	10 -- Heaven and Earth Bell+6
+	29	7145	1	15 -- Salvation Fan+5
+	30	7146	1	10 -- Salvation Fan+6
+	31	11295	1	15 -- Black Steel Armour+5
+	32	11296	1	10 -- Black Steel Armour+6
+	33	11495	1	15 -- Black Wind Suit+5
+	34	11496	1	10 -- Black Wind Suit+6
+	35	11695	1	15 -- Magic Plate Armour+5
+	36	11696	1	10 -- Magic Plate Armour+6
+	37	11895	1	15 -- Black Clothing+5
+	38	11896	1	10 -- Black Clothing+6
+	48	30500	1	40 -- Ruby Engraving Knife
+	40	30501	1	40 -- Gold Clasp
+	41	30502	1	40 -- Ruby Decoration
+	42	30503	1	40 -- Amethyst Engraving Knife
+	43	30504	1	40 -- Silver Clasp
+	44	30505	1	40 -- Emerald Decoration
+	45	30506	1	40 -- Sapphire Engraving Knife
+	46	30507	1	40 -- Bronze Clasp
+	47	30508	1	40 -- Sapphire Decoration
+	48	30509	1	40 -- Blue Dragon Steel
+	49	30510	1	40 -- Grand Epaulette
+	50	30511	1	40 -- Red Fabric
+	51	30512	1	40 -- Red Dragon Steel
+	52	30513	1	40 -- Noble Epaulette
+	53	30514	1	40 -- Violet Fabric
+	54	30515	1	40 -- Purple Dragon Steel
+	55	30516	1	40 -- Antique Epaulette
+	56	30517	1	40 -- Golden Fabric
+	57	30518	1	40 -- Gold Yarn
+	58	30519	1	40 -- Golden Hook
+	59	30520	1	40 -- Gold Buckle
+	60	30521	1	40 -- Ring Element
+	61	30522	1	40 -- Chain Link
+	62	30523	1	40 -- Jewellery Element
+}
+Group	Supreme_Gnoll_Guard
+{
+	Mob	3091
+	Type	drop
+	1	50727	1	1 -- Alpine Rose
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	400 -- Chest of Darkness
+	17	145	1	15 -- Battle Sword+5
+	18	146	1	10 -- Battle Sword+6
+	19	155	1	15 -- Ghost Fang Blade+5
+	20	156	1	10 -- Ghost Fang Blade+6
+	21	1105	1	15 -- Dragon Knife+5
+	22	1106	1	10 -- Dragon Knife+6
+	23	2145	1	15 -- Yellow Dragon Bow+5
+	24	2146	1	10 -- Yellow Dragon Bow+6
+	25	3145	1	15 -- Electromagnetic Blade+5
+	26	3146	1	10 -- Electromagnetic Blade+6
+	27	5105	1	15 -- Heaven and Earth Bell+5
+	28	5106	1	10 -- Heaven and Earth Bell+6
+	29	7145	1	15 -- Salvation Fan+5
+	30	7146	1	10 -- Salvation Fan+6
+	31	11295	1	15 -- Black Steel Armour+5
+	32	11296	1	10 -- Black Steel Armour+6
+	33	11495	1	15 -- Black Wind Suit+5
+	34	11496	1	10 -- Black Wind Suit+6
+	35	11695	1	15 -- Magic Plate Armour+5
+	36	11696	1	10 -- Magic Plate Armour+6
+	37	11895	1	15 -- Black Clothing+5
+	38	11896	1	10 -- Black Clothing+6
+	39	30500	1	40 -- Ruby Engraving Knife
+	40	30501	1	40 -- Gold Clasp
+	41	30502	1	40 -- Ruby Decoration
+	42	30503	1	40 -- Amethyst Engraving Knife
+	43	30504	1	40 -- Silver Clasp
+	44	30505	1	40 -- Emerald Decoration
+	45	30506	1	40 -- Sapphire Engraving Knife
+	46	30507	1	40 -- Bronze Clasp
+	47	30508	1	40 -- Sapphire Decoration
+	48	30509	1	40 -- Blue Dragon Steel
+	49	30510	1	40 -- Grand Epaulette
+	50	30511	1	40 -- Red Fabric
+	51	30512	1	40 -- Red Dragon Steel
+	52	30513	1	40 -- Noble Epaulette
+	53	30514	1	40 -- Violet Fabric
+	54	30515	1	40 -- Purple Dragon Steel
+	55	30516	1	40 -- Antique Epaulette
+	56	30517	1	40 -- Golden Fabric
+	57	30518	1	40 -- Gold Yarn
+	58	30519	1	40 -- Golden Hook
+	59	30520	1	40 -- Gold Buckle
+	60	30521	1	40 -- Ring Element
+	61	30522	1	40 -- Chain Link
+	62	30523	1	40 -- Jewellery Element
+}
+Group	One-eyed_Slugger
+{
+	Mob	3101
+	Type	drop
+	1	50728	1	1 -- Mulberry
+}
+Group	Cyclops_Soldier
+{
+	Mob	3102
+	Type	drop
+	1	50721	1	1 -- Peach Blossom
+}
+Group	Cyclops_Magician
+{
+	Mob	3103
+	Type	drop
+	1	50722	1	1 -- Bellflower
+}
+Group	Cyclops_Executioner
+{
+	Mob	3104
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+}
+Group	General_Outis
+{
+	Mob	3105
+	Type	drop
+	1	50724	1	1 -- Gango Root
+}
+Group	Arges
+{
+	Mob	3190
+	Type	drop
+	1	50725	1	1 -- Lilac
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	100 -- Chest of Darkness
+	17	145	1	15 -- Battle Sword+5
+	18	146	1	10 -- Battle Sword+6
+	19	155	1	15 -- Ghost Fang Blade+5
+	20	156	1	10 -- Ghost Fang Blade+6
+	21	1105	1	15 -- Dragon Knife+5
+	22	1106	1	10 -- Dragon Knife+6
+	23	2145	1	15 -- Yellow Dragon Bow+5
+	24	2146	1	10 -- Yellow Dragon Bow+6
+	25	3145	1	15 -- Electromagnetic Blade+5
+	26	3146	1	10 -- Electromagnetic Blade+6
+	27	5105	1	15 -- Heaven and Earth Bell+5
+	28	5106	1	10 -- Heaven and Earth Bell+6
+	29	7145	1	15 -- Salvation Fan+5
+	30	7146	1	10 -- Salvation Fan+6
+	31	11295	1	15 -- Black Steel Armour+5
+	32	11296	1	10 -- Black Steel Armour+6
+	33	11495	1	15 -- Black Wind Suit+5
+	34	11496	1	10 -- Black Wind Suit+6
+	35	11695	1	15 -- Magic Plate Armour+5
+	36	11696	1	10 -- Magic Plate Armour+6
+	37	11895	1	15 -- Black Clothing+5
+	38	11896	1	10 -- Black Clothing+6
+	39	30500	1	40 -- Ruby Engraving Knife
+	40	30501	1	40 -- Gold Clasp
+	41	30502	1	40 -- Ruby Decoration
+	42	30503	1	40 -- Amethyst Engraving Knife
+	43	30504	1	40 -- Silver Clasp
+	44	30505	1	40 -- Emerald Decoration
+	45	30506	1	40 -- Sapphire Engraving Knife
+	46	30507	1	40 -- Bronze Clasp
+	47	30508	1	40 -- Sapphire Decoration
+	48	30509	1	40 -- Blue Dragon Steel
+	49	30510	1	40 -- Grand Epaulette
+	50	30511	1	40 -- Red Fabric
+	51	30512	1	40 -- Red Dragon Steel
+	52	30513	1	40 -- Noble Epaulette
+	53	30514	1	40 -- Violet Fabric
+	54	30515	1	40 -- Purple Dragon Steel
+	55	30516	1	40 -- Antique Epaulette
+	56	30517	1	40 -- Golden Fabric
+	57	30518	1	40 -- Gold Yarn
+	58	30519	1	40 -- Golden Hook
+	59	30520	1	40 -- Gold Buckle
+	60	30521	1	40 -- Ring Element
+	61	30522	1	40 -- Chain Link
+	62	30523	1	40 -- Jewellery Element
+}
+Group	Polyphemos
+{
+	Mob	3191
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	400 -- Chest of Darkness
+	17	145	1	30 -- Battle Sword+5
+	18	146	1	20 -- Battle Sword+6
+	19	155	1	30 -- Ghost Fang Blade+5
+	20	156	1	20 -- Ghost Fang Blade+6
+	21	1105	1	30 -- Dragon Knife+5
+	22	1106	1	20 -- Dragon Knife+6
+	23	2145	1	30 -- Yellow Dragon Bow+5
+	24	2146	1	20 -- Yellow Dragon Bow+6
+	25	3145	1	30 -- Electromagnetic Blade+5
+	26	3146	1	20 -- Electromagnetic Blade+6
+	27	5105	1	30 -- Heaven and Earth Bell+5
+	28	5106	1	20 -- Heaven and Earth Bell+6
+	29	7145	1	30 -- Salvation Fan+5
+	30	7146	1	20 -- Salvation Fan+6
+	31	11295	1	30 -- Black Steel Armour+5
+	32	11296	1	20 -- Black Steel Armour+6
+	33	11495	1	30 -- Black Wind Suit+5
+	34	11496	1	20 -- Black Wind Suit+6
+	35	11695	1	30 -- Magic Plate Armour+5
+	36	11696	1	20 -- Magic Plate Armour+6
+	37	11895	1	30 -- Black Clothing+5
+	38	11896	1	20 -- Black Clothing+6
+	39	30500	1	60 -- Ruby Engraving Knife
+	40	30501	1	60 -- Gold Clasp
+	41	30502	1	60 -- Ruby Decoration
+	42	30503	1	60 -- Amethyst Engraving Knife
+	43	30504	1	60 -- Silver Clasp
+	44	30505	1	60 -- Emerald Decoration
+	45	30506	1	60 -- Sapphire Engraving Knife
+	46	30507	1	60 -- Bronze Clasp
+	47	30508	1	60 -- Sapphire Decoration
+	48	30509	1	60 -- Blue Dragon Steel
+	49	30510	1	60 -- Grand Epaulette
+	50	30511	1	60 -- Red Fabric
+	51	30512	1	60 -- Red Dragon Steel
+	52	30513	1	60 -- Noble Epaulette
+	53	30514	1	60 -- Violet Fabric
+	54	30515	1	60 -- Purple Dragon Steel
+	55	30516	1	60 -- Antique Epaulette
+	56	30517	1	60 -- Golden Fabric
+	57	30518	1	60 -- Gold Yarn
+	58	30519	1	60 -- Golden Hook
+	59	30520	1	60 -- Gold Buckle
+	60	30521	1	60 -- Ring Element
+	61	30522	1	60 -- Chain Link
+	62	30523	1	60 -- Jewellery Element
+}
+Group	Manticore_Warrior
+{
+	Mob	3201
+	Type	drop
+	1	50727	1	1 -- Alpine Rose
+}
+Group	Manticore_Soldier
+{
+	Mob	3202
+	Type	drop
+	1	50728	1	1 -- Mulberry
+}
+Group	Manticore_Magus
+{
+	Mob	3203
+	Type	drop
+	1	50721	1	1 -- Peach Blossom
+}
+Group	Manticore_Executioner
+{
+	Mob	3204
+	Type	drop
+	1	50722	1	1 -- Bellflower
+}
+Group	General_Cor
+{
+	Mob	3205
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+}
+Group	Rakshasa
+{
+	Mob	3290
+	Type	drop
+	1	50724	1	1 -- Gango Root
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	100 -- Chest of Darkness
+	17	145	1	15 -- Battle Sword+5
+	18	146	1	10 -- Battle Sword+6
+	19	155	1	15 -- Ghost Fang Blade+5
+	20	156	1	10 -- Ghost Fang Blade+6
+	21	1105	1	15 -- Dragon Knife+5
+	22	1106	1	10 -- Dragon Knife+6
+	23	2145	1	15 -- Yellow Dragon Bow+5
+	24	2146	1	10 -- Yellow Dragon Bow+6
+	25	3145	1	15 -- Electromagnetic Blade+5
+	26	3146	1	10 -- Electromagnetic Blade+6
+	27	5105	1	15 -- Heaven and Earth Bell+5
+	28	5106	1	10 -- Heaven and Earth Bell+6
+	29	7145	1	15 -- Salvation Fan+5
+	30	7146	1	10 -- Salvation Fan+6
+	31	11295	1	15 -- Black Steel Armour+5
+	32	11296	1	10 -- Black Steel Armour+6
+	33	11495	1	15 -- Black Wind Suit+5
+	34	11496	1	10 -- Black Wind Suit+6
+	35	11695	1	15 -- Magic Plate Armour+5
+	36	11696	1	10 -- Magic Plate Armour+6
+	37	11895	1	15 -- Black Clothing+5
+	38	11896	1	10 -- Black Clothing+6
+	39	30500	1	40 -- Ruby Engraving Knife
+	40	30501	1	40 -- Gold Clasp
+	41	30502	1	40 -- Ruby Decoration
+	42	30503	1	40 -- Amethyst Engraving Knife
+	43	30504	1	40 -- Silver Clasp
+	44	30505	1	40 -- Emerald Decoration
+	45	30506	1	40 -- Sapphire Engraving Knife
+	46	30507	1	40 -- Bronze Clasp
+	47	30508	1	40 -- Sapphire Decoration
+	48	30509	1	40 -- Blue Dragon Steel
+	49	30510	1	40 -- Grand Epaulette
+	50	30511	1	40 -- Red Fabric
+	51	30512	1	40 -- Red Dragon Steel
+	52	30513	1	40 -- Noble Epaulette
+	53	30514	1	40 -- Violet Fabric
+	54	30515	1	40 -- Purple Dragon Steel
+	55	30516	1	40 -- Antique Epaulette
+	56	30517	1	40 -- Golden Fabric
+	57	30518	1	40 -- Gold Yarn
+	58	30519	1	40 -- Golden Hook
+	59	30520	1	40 -- Gold Buckle
+	60	30521	1	40 -- Ring Element
+	61	30522	1	40 -- Chain Link
+	62	30523	1	40 -- Jewellery Element
+}
+Group	Martyaxwar
+{
+	Mob	3291
+	Type	drop
+	1	50725	1	1 -- Lilac
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	400 -- Chest of Darkness
+	17	145	1	30 -- Battle Sword+5
+	18	146	1	20 -- Battle Sword+6
+	19	155	1	30 -- Ghost Fang Blade+5
+	20	156	1	20 -- Ghost Fang Blade+6
+	21	1105	1	30 -- Dragon Knife+5
+	22	1106	1	20 -- Dragon Knife+6
+	23	2145	1	30 -- Yellow Dragon Bow+5
+	24	2146	1	20 -- Yellow Dragon Bow+6
+	25	3145	1	30 -- Electromagnetic Blade+5
+	26	3146	1	20 -- Electromagnetic Blade+6
+	27	5105	1	30 -- Heaven and Earth Bell+5
+	28	5106	1	20 -- Heaven and Earth Bell+6
+	29	7145	1	30 -- Salvation Fan+5
+	30	7146	1	20 -- Salvation Fan+6
+	31	11295	1	30 -- Black Steel Armour+5
+	32	11296	1	20 -- Black Steel Armour+6
+	33	11495	1	30 -- Black Wind Suit+5
+	34	11496	1	20 -- Black Wind Suit+6
+	35	11695	1	30 -- Magic Plate Armour+5
+	36	11696	1	20 -- Magic Plate Armour+6
+	37	11895	1	30 -- Black Clothing+5
+	38	11896	1	20 -- Black Clothing+6
+	39	30500	1	60 -- Ruby Engraving Knife
+	40	30501	1	60 -- Gold Clasp
+	41	30502	1	60 -- Ruby Decoration
+	42	30503	1	60 -- Amethyst Engraving Knife
+	43	30504	1	60 -- Silver Clasp
+	44	30505	1	60 -- Emerald Decoration
+	45	30506	1	60 -- Sapphire Engraving Knife
+	46	30507	1	60 -- Bronze Clasp
+	47	30508	1	60 -- Sapphire Decoration
+	48	30509	1	60 -- Blue Dragon Steel
+	49	30510	1	60 -- Grand Epaulette
+	50	30511	1	60 -- Red Fabric
+	51	30512	1	60 -- Red Dragon Steel
+	52	30513	1	60 -- Noble Epaulette
+	53	30514	1	60 -- Violet Fabric
+	54	30515	1	60 -- Purple Dragon Steel
+	55	30516	1	60 -- Antique Epaulette
+	56	30517	1	60 -- Golden Fabric
+	57	30518	1	60 -- Gold Yarn
+	58	30519	1	60 -- Golden Hook
+	59	30520	1	60 -- Gold Buckle
+	60	30521	1	60 -- Ring Element
+	61	30522	1	60 -- Chain Link
+	62	30523	1	60 -- Jewellery Element
+}
+Group	Lemures_Warrior
+{
+	Mob	3301
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+}
+Group	Lemures_Soldier
+{
+	Mob	3302
+	Type	drop
+	1	50727	1	1 -- Alpine Rose
+}
+Group	Lemures_Magician
+{
+	Mob	3303
+	Type	drop
+	1	50728	1	1 -- Mulberry
+}
+Group	Lemures_Executioner
+{
+	Mob	3304
+	Type	drop
+	1	50721	1	1 -- Peach Blossom
+}
+Group	Lemures_General
+{
+	Mob	3305
+	Type	drop
+	1	50722	1	1 -- Bellflower
+}
+Group	Lemures_Prince
+{
+	Mob	3390
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	100 -- Chest of Darkness
+	17	145	1	15 -- Battle Sword+5
+	18	146	1	10 -- Battle Sword+6
+	19	155	1	15 -- Ghost Fang Blade+5
+	20	156	1	10 -- Ghost Fang Blade+6
+	21	1105	1	15 -- Dragon Knife+5
+	22	1106	1	10 -- Dragon Knife+6
+	23	2145	1	15 -- Yellow Dragon Bow+5
+	24	2146	1	10 -- Yellow Dragon Bow+6
+	25	3145	1	15 -- Electromagnetic Blade+5
+	26	3146	1	10 -- Electromagnetic Blade+6
+	27	5105	1	15 -- Heaven and Earth Bell+5
+	28	5106	1	10 -- Heaven and Earth Bell+6
+	29	7145	1	15 -- Salvation Fan+5
+	30	7146	1	10 -- Salvation Fan+6
+	31	11295	1	15 -- Black Steel Armour+5
+	32	11296	1	10 -- Black Steel Armour+6
+	33	11495	1	15 -- Black Wind Suit+5
+	34	11496	1	10 -- Black Wind Suit+6
+	35	11695	1	15 -- Magic Plate Armour+5
+	36	11696	1	10 -- Magic Plate Armour+6
+	37	11895	1	15 -- Black Clothing+5
+	38	11896	1	10 -- Black Clothing+6
+	39	30500	1	40 -- Ruby Engraving Knife
+	40	30501	1	40 -- Gold Clasp
+	41	30502	1	40 -- Ruby Decoration
+	42	30503	1	40 -- Amethyst Engraving Knife
+	43	30504	1	40 -- Silver Clasp
+	44	30505	1	40 -- Emerald Decoration
+	45	30506	1	40 -- Sapphire Engraving Knife
+	46	30507	1	40 -- Bronze Clasp
+	47	30508	1	40 -- Sapphire Decoration
+	48	30509	1	40 -- Blue Dragon Steel
+	49	30510	1	40 -- Grand Epaulette
+	50	30511	1	40 -- Red Fabric
+	51	30512	1	40 -- Red Dragon Steel
+	52	30513	1	40 -- Noble Epaulette
+	53	30514	1	40 -- Violet Fabric
+	54	30515	1	40 -- Purple Dragon Steel
+	55	30516	1	40 -- Antique Epaulette
+	56	30517	1	40 -- Golden Fabric
+	57	30518	1	40 -- Gold Yarn
+	58	30519	1	40 -- Golden Hook
+	59	30520	1	40 -- Gold Buckle
+	60	30521	1	40 -- Ring Element
+	61	30522	1	40 -- Chain Link
+	62	30523	1	40 -- Jewellery Element
+}
+Group	Lemures_Bodyguard
+{
+	Mob	3391
+	Type	drop
+	1	50724	1	1 -- Gango Root
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	400 -- Chest of Darkness
+	17	145	1	30 -- Battle Sword+5
+	18	146	1	20 -- Battle Sword+6
+	19	155	1	30 -- Ghost Fang Blade+5
+	20	156	1	20 -- Ghost Fang Blade+6
+	21	1105	1	30 -- Dragon Knife+5
+	22	1106	1	20 -- Dragon Knife+6
+	23	2145	1	30 -- Yellow Dragon Bow+5
+	24	2146	1	20 -- Yellow Dragon Bow+6
+	25	3145	1	30 -- Electromagnetic Blade+5
+	26	3146	1	20 -- Electromagnetic Blade+6
+	27	5105	1	30 -- Heaven and Earth Bell+5
+	28	5106	1	20 -- Heaven and Earth Bell+6
+	29	7145	1	30 -- Salvation Fan+5
+	30	7146	1	20 -- Salvation Fan+6
+	31	11295	1	30 -- Black Steel Armour+5
+	32	11296	1	20 -- Black Steel Armour+6
+	33	11495	1	30 -- Black Wind Suit+5
+	34	11496	1	20 -- Black Wind Suit+6
+	35	11695	1	30 -- Magic Plate Armour+5
+	36	11696	1	20 -- Magic Plate Armour+6
+	37	11895	1	30 -- Black Clothing+5
+	38	11896	1	20 -- Black Clothing+6
+	39	30500	1	60 -- Ruby Engraving Knife
+	40	30501	1	60 -- Gold Clasp
+	41	30502	1	60 -- Ruby Decoration
+	42	30503	1	60 -- Amethyst Engraving Knife
+	43	30504	1	60 -- Silver Clasp
+	44	30505	1	60 -- Emerald Decoration
+	45	30506	1	60 -- Sapphire Engraving Knife
+	46	30507	1	60 -- Bronze Clasp
+	47	30508	1	60 -- Sapphire Decoration
+	48	30509	1	60 -- Blue Dragon Steel
+	49	30510	1	60 -- Grand Epaulette
+	50	30511	1	60 -- Red Fabric
+	51	30512	1	60 -- Red Dragon Steel
+	52	30513	1	60 -- Noble Epaulette
+	53	30514	1	60 -- Violet Fabric
+	54	30515	1	60 -- Purple Dragon Steel
+	55	30516	1	60 -- Antique Epaulette
+	56	30517	1	60 -- Golden Fabric
+	57	30518	1	60 -- Gold Yarn
+	58	30519	1	60 -- Golden Hook
+	59	30520	1	60 -- Gold Buckle
+	60	30521	1	60 -- Ring Element
+	61	30522	1	60 -- Chain Link
+	62	30523	1	60 -- Jewellery Element
+}
+Group	Tritonic_Moray
+{
+	Mob	3401
+	Type	drop
+	1	50725	1	1 -- Lilac
+}
+Group	Shark_Soldier
+{
+	Mob	3402
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+}
+Group	Tritonic_Magician
+{
+	Mob	3403
+	Type	drop
+	1	50727	1	1 -- Alpine Rose
+}
+Group	Tritonic_Hunter
+{
+	Mob	3404
+	Type	drop
+	1	50728	1	1 -- Mulberry
+}
+Group	Tritonic_Slasher
+{
+	Mob	3405
+	Type	drop
+	1	50721	1	1 -- Peach Blossom
+}
+Group	General_Kappa
+{
+	Mob	3490
+	Type	drop
+	1	50722	1	1 -- Bellflower
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	100 -- Chest of Darkness
+	17	145	1	15 -- Battle Sword+5
+	18	146	1	10 -- Battle Sword+6
+	19	155	1	15 -- Ghost Fang Blade+5
+	20	156	1	10 -- Ghost Fang Blade+6
+	21	1105	1	15 -- Dragon Knife+5
+	22	1106	1	10 -- Dragon Knife+6
+	23	2145	1	15 -- Yellow Dragon Bow+5
+	24	2146	1	10 -- Yellow Dragon Bow+6
+	25	3145	1	15 -- Electromagnetic Blade+5
+	26	3146	1	10 -- Electromagnetic Blade+6
+	27	5105	1	15 -- Heaven and Earth Bell+5
+	28	5106	1	10 -- Heaven and Earth Bell+6
+	29	7145	1	15 -- Salvation Fan+5
+	30	7146	1	10 -- Salvation Fan+6
+	31	11295	1	15 -- Black Steel Armour+5
+	32	11296	1	10 -- Black Steel Armour+6
+	33	11495	1	15 -- Black Wind Suit+5
+	34	11496	1	10 -- Black Wind Suit+6
+	35	11695	1	15 -- Magic Plate Armour+5
+	36	11696	1	10 -- Magic Plate Armour+6
+	37	11895	1	15 -- Black Clothing+5
+	38	11896	1	10 -- Black Clothing+6
+	39	30500	1	40 -- Ruby Engraving Knife
+	40	30501	1	40 -- Gold Clasp
+	41	30502	1	40 -- Ruby Decoration
+	42	30503	1	40 -- Amethyst Engraving Knife
+	43	30504	1	40 -- Silver Clasp
+	44	30505	1	40 -- Emerald Decoration
+	45	30506	1	40 -- Sapphire Engraving Knife
+	46	30507	1	40 -- Bronze Clasp
+	47	30508	1	40 -- Sapphire Decoration
+	48	30509	1	40 -- Blue Dragon Steel
+	49	30510	1	40 -- Grand Epaulette
+	50	30511	1	40 -- Red Fabric
+	51	30512	1	40 -- Red Dragon Steel
+	52	30513	1	40 -- Noble Epaulette
+	53	30514	1	40 -- Violet Fabric
+	54	30515	1	40 -- Purple Dragon Steel
+	55	30516	1	40 -- Antique Epaulette
+	56	30517	1	40 -- Golden Fabric
+	57	30518	1	40 -- Gold Yarn
+	58	30519	1	40 -- Golden Hook
+	59	30520	1	40 -- Gold Buckle
+	60	30521	1	40 -- Ring Element
+	61	30522	1	40 -- Chain Link
+	62	30523	1	40 -- Jewellery Element
+}
+Group	Triton
+{
+	Mob	3491
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	400 -- Chest of Darkness
+	17	145	1	30 -- Battle Sword+5
+	18	146	1	20 -- Battle Sword+6
+	19	155	1	30 -- Ghost Fang Blade+5
+	20	156	1	20 -- Ghost Fang Blade+6
+	21	1105	1	30 -- Dragon Knife+5
+	22	1106	1	20 -- Dragon Knife+6
+	23	2145	1	30 -- Yellow Dragon Bow+5
+	24	2146	1	20 -- Yellow Dragon Bow+6
+	25	3145	1	30 -- Electromagnetic Blade+5
+	26	3146	1	20 -- Electromagnetic Blade+6
+	27	5105	1	30 -- Heaven and Earth Bell+5
+	28	5106	1	20 -- Heaven and Earth Bell+6
+	29	7145	1	30 -- Salvation Fan+5
+	30	7146	1	20 -- Salvation Fan+6
+	31	11295	1	30 -- Black Steel Armour+5
+	32	11296	1	20 -- Black Steel Armour+6
+	33	11495	1	30 -- Black Wind Suit+5
+	34	11496	1	20 -- Black Wind Suit+6
+	35	11695	1	30 -- Magic Plate Armour+5
+	36	11696	1	20 -- Magic Plate Armour+6
+	37	11895	1	30 -- Black Clothing+5
+	38	11896	1	20 -- Black Clothing+6
+	39	30500	1	60 -- Ruby Engraving Knife
+	40	30501	1	60 -- Gold Clasp
+	41	30502	1	60 -- Ruby Decoration
+	42	30503	1	60 -- Amethyst Engraving Knife
+	43	30504	1	60 -- Silver Clasp
+	44	30505	1	60 -- Emerald Decoration
+	45	30506	1	60 -- Sapphire Engraving Knife
+	46	30507	1	60 -- Bronze Clasp
+	47	30508	1	60 -- Sapphire Decoration
+	48	30509	1	60 -- Blue Dragon Steel
+	49	30510	1	60 -- Grand Epaulette
+	50	30511	1	60 -- Red Fabric
+	51	30512	1	60 -- Red Dragon Steel
+	52	30513	1	60 -- Noble Epaulette
+	53	30514	1	60 -- Violet Fabric
+	54	30515	1	60 -- Purple Dragon Steel
+	55	30516	1	60 -- Antique Epaulette
+	56	30517	1	60 -- Golden Fabric
+	57	30518	1	60 -- Gold Yarn
+	58	30519	1	60 -- Golden Hook
+	59	30520	1	60 -- Gold Buckle
+	60	30521	1	60 -- Ring Element
+	61	30522	1	60 -- Chain Link
+	62	30523	1	60 -- Jewellery Element
+}
+Group	Red_Thief_Amazon
+{
+	Mob	3501
+	Type	drop
+	1	50724	1	1 -- Gango Root
+}
+Group	Red_Thief_Assassin
+{
+	Mob	3502
+	Type	drop
+	1	50725	1	1 -- Lilac
+}
+Group	Red_Thief_Magician
+{
+	Mob	3503
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+}
+Group	Red_Thief_Executioner
+{
+	Mob	3504
+	Type	drop
+	1	50727	1	1 -- Alpine Rose
+}
+Group	Black_General
+{
+	Mob	3505
+	Type	drop
+	1	50728	1	1 -- Mulberry
+}
+Group	Bone_Face
+{
+	Mob	3590
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	100 -- Chest of Darkness
+	17	145	1	30 -- Battle Sword+5
+	18	146	1	20 -- Battle Sword+6
+	19	155	1	30 -- Ghost Fang Blade+5
+	20	156	1	20 -- Ghost Fang Blade+6
+	21	1105	1	30 -- Dragon Knife+5
+	22	1106	1	20 -- Dragon Knife+6
+	23	2145	1	30 -- Yellow Dragon Bow+5
+	24	2146	1	20 -- Yellow Dragon Bow+6
+	25	3145	1	30 -- Electromagnetic Blade+5
+	26	3146	1	20 -- Electromagnetic Blade+6
+	27	5105	1	30 -- Heaven and Earth Bell+5
+	28	5106	1	20 -- Heaven and Earth Bell+6
+	29	7145	1	30 -- Salvation Fan+5
+	30	7146	1	20 -- Salvation Fan+6
+	31	11295	1	30 -- Black Steel Armour+5
+	32	11296	1	20 -- Black Steel Armour+6
+	33	11495	1	30 -- Black Wind Suit+5
+	34	11496	1	20 -- Black Wind Suit+6
+	35	11695	1	30 -- Magic Plate Armour+5
+	36	11696	1	20 -- Magic Plate Armour+6
+	37	11895	1	30 -- Black Clothing+5
+	38	11896	1	20 -- Black Clothing+6
+	39	30500	1	60 -- Ruby Engraving Knife
+	40	30501	1	60 -- Gold Clasp
+	41	30502	1	60 -- Ruby Decoration
+	42	30503	1	60 -- Amethyst Engraving Knife
+	43	30504	1	60 -- Silver Clasp
+	44	30505	1	60 -- Emerald Decoration
+	45	30506	1	60 -- Sapphire Engraving Knife
+	46	30507	1	60 -- Bronze Clasp
+	47	30508	1	60 -- Sapphire Decoration
+	48	30509	1	60 -- Blue Dragon Steel
+	49	30510	1	60 -- Grand Epaulette
+	50	30511	1	60 -- Red Fabric
+	51	30512	1	60 -- Red Dragon Steel
+	52	30513	1	60 -- Noble Epaulette
+	53	30514	1	60 -- Violet Fabric
+	54	30515	1	60 -- Purple Dragon Steel
+	55	30516	1	60 -- Antique Epaulette
+	56	30517	1	60 -- Golden Fabric
+	57	30518	1	60 -- Gold Yarn
+	58	30519	1	60 -- Golden Hook
+	59	30520	1	60 -- Gold Buckle
+	60	30521	1	60 -- Ring Element
+	61	30522	1	60 -- Chain Link
+	62	30523	1	60 -- Jewellery Element
+	63	6040	1	20 -- Griffon Claw+0
+}
+Group	Red_Chief
+{
+	Mob	3591
+	Type	drop
+	1	50727	1	1 -- Alpine Rose
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	400 -- Chest of Darkness
+	17	145	1	30 -- Battle Sword+5
+	18	146	1	20 -- Battle Sword+6
+	19	155	1	30 -- Ghost Fang Blade+5
+	20	156	1	20 -- Ghost Fang Blade+6
+	21	1105	1	30 -- Dragon Knife+5
+	22	1106	1	20 -- Dragon Knife+6
+	23	2145	1	30 -- Yellow Dragon Bow+5
+	24	2146	1	20 -- Yellow Dragon Bow+6
+	25	3145	1	30 -- Electromagnetic Blade+5
+	26	3146	1	20 -- Electromagnetic Blade+6
+	27	5105	1	30 -- Heaven and Earth Bell+5
+	28	5106	1	20 -- Heaven and Earth Bell+6
+	29	7145	1	30 -- Salvation Fan+5
+	30	7146	1	20 -- Salvation Fan+6
+	31	11295	1	30 -- Black Steel Armour+5
+	32	11296	1	20 -- Black Steel Armour+6
+	33	11495	1	30 -- Black Wind Suit+5
+	34	11496	1	20 -- Black Wind Suit+6
+	35	11695	1	30 -- Magic Plate Armour+5
+	36	11696	1	20 -- Magic Plate Armour+6
+	37	11895	1	30 -- Black Clothing+5
+	38	11896	1	20 -- Black Clothing+6
+	39	30500	1	60 -- Ruby Engraving Knife
+	40	30501	1	60 -- Gold Clasp
+	41	30502	1	60 -- Ruby Decoration
+	42	30503	1	60 -- Amethyst Engraving Knife
+	43	30504	1	60 -- Silver Clasp
+	44	30505	1	60 -- Emerald Decoration
+	45	30506	1	60 -- Sapphire Engraving Knife
+	46	30507	1	60 -- Bronze Clasp
+	47	30508	1	60 -- Sapphire Decoration
+	48	30509	1	60 -- Blue Dragon Steel
+	49	30510	1	60 -- Grand Epaulette
+	50	30511	1	60 -- Red Fabric
+	51	30512	1	60 -- Red Dragon Steel
+	52	30513	1	60 -- Noble Epaulette
+	53	30514	1	60 -- Violet Fabric
+	54	30515	1	60 -- Purple Dragon Steel
+	55	30516	1	60 -- Antique Epaulette
+	56	30517	1	60 -- Golden Fabric
+	57	30518	1	60 -- Gold Yarn
+	58	30519	1	60 -- Golden Hook
+	59	30520	1	60 -- Gold Buckle
+	60	30521	1	60 -- Ring Element
+	61	30522	1	60 -- Chain Link
+	62	30523	1	60 -- Jewellery Element
+}
+Group	Brutal_Red_Thief_Amazon
+{
+	Mob	3551
+	Type	drop
+	1	50721	1	1 -- Peach Blossom
+}
+Group	Brut._Red_Thief_Assassin
+{
+	Mob	3552
+	Type	drop
+	1	50722	1	1 -- Bellflower
+}
+Group	Brut._Red_Thief_Magician
+{
+	Mob	3553
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+}
+Group	Brut.RedThiefExecutioner
+{
+	Mob	3554
+	Type	drop
+	1	50724	1	1 -- Gango Root
+}
+Group	White_General
+{
+	Mob	3555
+	Type	drop
+	1	50725	1	1 -- Lilac
+}
+Group	Brutal_Bone_Face
+{
+	Mob	3595
+	Type	drop
+	1	50728	1	1 -- Mulberry
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	100 -- Chest of Darkness
+	17	145	1	15 -- Battle Sword+5
+	18	146	1	10 -- Battle Sword+6
+	19	155	1	15 -- Ghost Fang Blade+5
+	20	156	1	10 -- Ghost Fang Blade+6
+	21	1105	1	15 -- Dragon Knife+5
+	22	1106	1	10 -- Dragon Knife+6
+	23	2145	1	15 -- Yellow Dragon Bow+5
+	24	2146	1	10 -- Yellow Dragon Bow+6
+	25	3145	1	15 -- Electromagnetic Blade+5
+	26	3146	1	10 -- Electromagnetic Blade+6
+	27	5105	1	15 -- Heaven and Earth Bell+5
+	28	5106	1	10 -- Heaven and Earth Bell+6
+	29	7145	1	15 -- Salvation Fan+5
+	30	7146	1	10 -- Salvation Fan+6
+	31	11295	1	15 -- Black Steel Armour+5
+	32	11296	1	10 -- Black Steel Armour+6
+	33	11495	1	15 -- Black Wind Suit+5
+	34	11496	1	10 -- Black Wind Suit+6
+	35	11695	1	15 -- Magic Plate Armour+5
+	36	11696	1	10 -- Magic Plate Armour+6
+	37	11895	1	15 -- Black Clothing+5
+	38	11896	1	10 -- Black Clothing+6
+	39	30500	1	40 -- Ruby Engraving Knife
+	40	30501	1	40 -- Gold Clasp
+	41	30502	1	40 -- Ruby Decoration
+	42	30503	1	40 -- Amethyst Engraving Knife
+	43	30504	1	40 -- Silver Clasp
+	44	30505	1	40 -- Emerald Decoration
+	45	30506	1	40 -- Sapphire Engraving Knife
+	46	30507	1	40 -- Bronze Clasp
+	47	30508	1	40 -- Sapphire Decoration
+	48	30509	1	40 -- Blue Dragon Steel
+	49	30510	1	40 -- Grand Epaulette
+	50	30511	1	40 -- Red Fabric
+	51	30512	1	40 -- Red Dragon Steel
+	52	30513	1	40 -- Noble Epaulette
+	53	30514	1	40 -- Violet Fabric
+	54	30515	1	40 -- Purple Dragon Steel
+	55	30516	1	40 -- Antique Epaulette
+	56	30517	1	40 -- Golden Fabric
+	57	30518	1	40 -- Gold Yarn
+	58	30519	1	40 -- Golden Hook
+	59	30520	1	40 -- Gold Buckle
+	60	30521	1	40 -- Ring Element
+	61	30522	1	40 -- Chain Link
+	62	30523	1	40 -- Jewellery Element
+}
+Group	Brutal_Red_Chief
+{
+	Mob	3596
+	Type	drop
+	1	50721	1	1 -- Peach Blossom
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	400 -- Chest of Darkness
+	17	145	1	30 -- Battle Sword+5
+	18	146	1	20 -- Battle Sword+6
+	19	155	1	30 -- Ghost Fang Blade+5
+	20	156	1	20 -- Ghost Fang Blade+6
+	21	1105	1	30 -- Dragon Knife+5
+	22	1106	1	20 -- Dragon Knife+6
+	23	2145	1	30 -- Yellow Dragon Bow+5
+	24	2146	1	20 -- Yellow Dragon Bow+6
+	25	3145	1	30 -- Electromagnetic Blade+5
+	26	3146	1	20 -- Electromagnetic Blade+6
+	27	5105	1	30 -- Heaven and Earth Bell+5
+	28	5106	1	20 -- Heaven and Earth Bell+6
+	29	7145	1	30 -- Salvation Fan+5
+	30	7146	1	20 -- Salvation Fan+6
+	31	11295	1	30 -- Black Steel Armour+5
+	32	11296	1	20 -- Black Steel Armour+6
+	33	11495	1	30 -- Black Wind Suit+5
+	34	11496	1	20 -- Black Wind Suit+6
+	35	11695	1	30 -- Magic Plate Armour+5
+	36	11696	1	20 -- Magic Plate Armour+6
+	37	11895	1	30 -- Black Clothing+5
+	38	11896	1	20 -- Black Clothing+6
+	39	30500	1	60 -- Ruby Engraving Knife
+	40	30501	1	60 -- Gold Clasp
+	41	30502	1	60 -- Ruby Decoration
+	42	30503	1	60 -- Amethyst Engraving Knife
+	43	30504	1	60 -- Silver Clasp
+	44	30505	1	60 -- Emerald Decoration
+	45	30506	1	60 -- Sapphire Engraving Knife
+	46	30507	1	60 -- Bronze Clasp
+	47	30508	1	60 -- Sapphire Decoration
+	48	30509	1	60 -- Blue Dragon Steel
+	49	30510	1	60 -- Grand Epaulette
+	50	30511	1	60 -- Red Fabric
+	51	30512	1	60 -- Red Dragon Steel
+	52	30513	1	60 -- Noble Epaulette
+	53	30514	1	60 -- Violet Fabric
+	54	30515	1	60 -- Purple Dragon Steel
+	55	30516	1	60 -- Antique Epaulette
+	56	30517	1	60 -- Golden Fabric
+	57	30518	1	60 -- Gold Yarn
+	58	30519	1	60 -- Golden Hook
+	59	30520	1	60 -- Gold Buckle
+	60	30521	1	60 -- Ring Element
+	61	30522	1	60 -- Chain Link
+	62	30523	1	60 -- Jewellery Element
+}
+Group	Crab_Warrior
+{
+	Mob	3601
+	Type	drop
+	1	50722	1	1 -- Bellflower
+}
+Group	Scorpion_Marksman
+{
+	Mob	3602
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+}
+Group	Shrimp_Soldier
+{
+	Mob	3603
+	Type	drop
+	1	50724	1	1 -- Gango Root
+}
+Group	Diabolical_Hermit
+{
+	Mob	3604
+	Type	drop
+	1	50725	1	1 -- Lilac
+}
+Group	Armoured_Crab
+{
+	Mob	3605
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+}
+Group	General_Lobster
+{
+	Mob	3690
+	Type	drop
+	1	50727	1	1 -- Alpine Rose
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	100 -- Chest of Darkness
+	17	145	1	15 -- Battle Sword+5
+	18	146	1	10 -- Battle Sword+6
+	19	155	1	15 -- Ghost Fang Blade+5
+	20	156	1	10 -- Ghost Fang Blade+6
+	21	1105	1	15 -- Dragon Knife+5
+	22	1106	1	10 -- Dragon Knife+6
+	23	2145	1	15 -- Yellow Dragon Bow+5
+	24	2146	1	10 -- Yellow Dragon Bow+6
+	25	3145	1	15 -- Electromagnetic Blade+5
+	26	3146	1	10 -- Electromagnetic Blade+6
+	27	5105	1	15 -- Heaven and Earth Bell+5
+	28	5106	1	10 -- Heaven and Earth Bell+6
+	29	7145	1	15 -- Salvation Fan+5
+	30	7146	1	10 -- Salvation Fan+6
+	31	11295	1	15 -- Black Steel Armour+5
+	32	11296	1	10 -- Black Steel Armour+6
+	33	11495	1	15 -- Black Wind Suit+5
+	34	11496	1	10 -- Black Wind Suit+6
+	35	11695	1	15 -- Magic Plate Armour+5
+	36	11696	1	10 -- Magic Plate Armour+6
+	37	11895	1	15 -- Black Clothing+5
+	38	11896	1	10 -- Black Clothing+6
+	39	30500	1	40 -- Ruby Engraving Knife
+	40	30501	1	40 -- Gold Clasp
+	41	30502	1	40 -- Ruby Decoration
+	42	30503	1	40 -- Amethyst Engraving Knife
+	43	30504	1	40 -- Silver Clasp
+	44	30505	1	40 -- Emerald Decoration
+	45	30506	1	40 -- Sapphire Engraving Knife
+	46	30507	1	40 -- Bronze Clasp
+	47	30508	1	40 -- Sapphire Decoration
+	48	30509	1	40 -- Blue Dragon Steel
+	49	30510	1	40 -- Grand Epaulette
+	50	30511	1	40 -- Red Fabric
+	51	30512	1	40 -- Red Dragon Steel
+	52	30513	1	40 -- Noble Epaulette
+	53	30514	1	40 -- Violet Fabric
+	54	30515	1	40 -- Purple Dragon Steel
+	55	30516	1	40 -- Antique Epaulette
+	56	30517	1	40 -- Golden Fabric
+	57	30518	1	40 -- Gold Yarn
+	58	30519	1	40 -- Golden Hook
+	59	30520	1	40 -- Gold Buckle
+	60	30521	1	40 -- Ring Element
+	61	30522	1	40 -- Chain Link
+	62	30523	1	40 -- Jewellery Element
+}
+Group	King_Crab
+{
+	Mob	3691
+	Type	drop
+	1	50728	1	1 -- Mulberry
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	400 -- Chest of Darkness
+	17	145	1	30 -- Battle Sword+5
+	18	146	1	20 -- Battle Sword+6
+	19	155	1	30 -- Ghost Fang Blade+5
+	20	156	1	20 -- Ghost Fang Blade+6
+	21	1105	1	30 -- Dragon Knife+5
+	22	1106	1	20 -- Dragon Knife+6
+	23	2145	1	30 -- Yellow Dragon Bow+5
+	24	2146	1	20 -- Yellow Dragon Bow+6
+	25	3145	1	30 -- Electromagnetic Blade+5
+	26	3146	1	20 -- Electromagnetic Blade+6
+	27	5105	1	30 -- Heaven and Earth Bell+5
+	28	5106	1	20 -- Heaven and Earth Bell+6
+	29	7145	1	30 -- Salvation Fan+5
+	30	7146	1	20 -- Salvation Fan+6
+	31	11295	1	30 -- Black Steel Armour+5
+	32	11296	1	20 -- Black Steel Armour+6
+	33	11495	1	30 -- Black Wind Suit+5
+	34	11496	1	20 -- Black Wind Suit+6
+	35	11695	1	30 -- Magic Plate Armour+5
+	36	11696	1	20 -- Magic Plate Armour+6
+	37	11895	1	30 -- Black Clothing+5
+	38	11896	1	20 -- Black Clothing+6
+	39	30500	1	60 -- Ruby Engraving Knife
+	40	30501	1	60 -- Gold Clasp
+	41	30502	1	60 -- Ruby Decoration
+	42	30503	1	60 -- Amethyst Engraving Knife
+	43	30504	1	60 -- Silver Clasp
+	44	30505	1	60 -- Emerald Decoration
+	45	30506	1	60 -- Sapphire Engraving Knife
+	46	30507	1	60 -- Bronze Clasp
+	47	30508	1	60 -- Sapphire Decoration
+	48	30509	1	60 -- Blue Dragon Steel
+	49	30510	1	60 -- Grand Epaulette
+	50	30511	1	60 -- Red Fabric
+	51	30512	1	60 -- Red Dragon Steel
+	52	30513	1	60 -- Noble Epaulette
+	53	30514	1	60 -- Violet Fabric
+	54	30515	1	60 -- Purple Dragon Steel
+	55	30516	1	60 -- Antique Epaulette
+	56	30517	1	60 -- Golden Fabric
+	57	30518	1	60 -- Gold Yarn
+	58	30519	1	60 -- Golden Hook
+	59	30520	1	60 -- Gold Buckle
+	60	30521	1	60 -- Ring Element
+	61	30522	1	60 -- Chain Link
+	62	30523	1	60 -- Jewellery Element
+}
+Group	Gigantic_Biter
+{
+	Mob	3701
+	Type	drop
+	1	50721	1	1 -- Peach Blossom
+}
+Group	Gigantic_Slaughterer
+{
+	Mob	3702
+	Type	drop
+	1	50722	1	1 -- Bellflower
+}
+Group	Gigantic_Magus
+{
+	Mob	3703
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+}
+Group	Twiant
+{
+	Mob	3704
+	Type	drop
+	1	50724	1	1 -- Gango Root
+}
+Group	Captain_Hooks
+{
+	Mob	3705
+	Type	drop
+	1	50725	1	1 -- Lilac
+}
+Group	Gargoyle
+{
+	Mob	3790
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	100 -- Chest of Darkness
+	17	145	1	15 -- Battle Sword+5
+	18	146	1	10 -- Battle Sword+6
+	19	155	1	15 -- Ghost Fang Blade+5
+	20	156	1	10 -- Ghost Fang Blade+6
+	21	1105	1	15 -- Dragon Knife+5
+	22	1106	1	10 -- Dragon Knife+6
+	23	2145	1	15 -- Yellow Dragon Bow+5
+	24	2146	1	10 -- Yellow Dragon Bow+6
+	25	3145	1	15 -- Electromagnetic Blade+5
+	26	3146	1	10 -- Electromagnetic Blade+6
+	27	5105	1	15 -- Heaven and Earth Bell+5
+	28	5106	1	10 -- Heaven and Earth Bell+6
+	29	7145	1	15 -- Salvation Fan+5
+	30	7146	1	10 -- Salvation Fan+6
+	31	11295	1	15 -- Black Steel Armour+5
+	32	11296	1	10 -- Black Steel Armour+6
+	33	11495	1	15 -- Black Wind Suit+5
+	34	11496	1	10 -- Black Wind Suit+6
+	35	11695	1	15 -- Magic Plate Armour+5
+	36	11696	1	10 -- Magic Plate Armour+6
+	37	11895	1	15 -- Black Clothing+5
+	38	11896	1	10 -- Black Clothing+6
+	39	30500	1	40 -- Ruby Engraving Knife
+	40	30501	1	40 -- Gold Clasp
+	41	30502	1	40 -- Ruby Decoration
+	42	30503	1	40 -- Amethyst Engraving Knife
+	43	30504	1	40 -- Silver Clasp
+	44	30505	1	40 -- Emerald Decoration
+	45	30506	1	40 -- Sapphire Engraving Knife
+	46	30507	1	40 -- Bronze Clasp
+	47	30508	1	40 -- Sapphire Decoration
+	48	30509	1	40 -- Blue Dragon Steel
+	49	30510	1	40 -- Grand Epaulette
+	50	30511	1	40 -- Red Fabric
+	51	30512	1	40 -- Red Dragon Steel
+	52	30513	1	40 -- Noble Epaulette
+	53	30514	1	40 -- Violet Fabric
+	54	30515	1	40 -- Purple Dragon Steel
+	55	30516	1	40 -- Antique Epaulette
+	56	30517	1	40 -- Golden Fabric
+	57	30518	1	40 -- Gold Yarn
+	58	30519	1	40 -- Golden Hook
+	59	30520	1	40 -- Gold Buckle
+	60	30521	1	40 -- Ring Element
+	61	30522	1	40 -- Chain Link
+	62	30523	1	40 -- Jewellery Element
+}
+Group	King_Wubba
+{
+	Mob	3791
+	Type	drop
+	1	50727	1	1 -- Alpine Rose
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	400 -- Chest of Darkness
+	17	145	1	30 -- Battle Sword+5
+	18	146	1	20 -- Battle Sword+6
+	19	155	1	30 -- Ghost Fang Blade+5
+	20	156	1	20 -- Ghost Fang Blade+6
+	21	1105	1	30 -- Dragon Knife+5
+	22	1106	1	20 -- Dragon Knife+6
+	23	2145	1	30 -- Yellow Dragon Bow+5
+	24	2146	1	20 -- Yellow Dragon Bow+6
+	25	3145	1	30 -- Electromagnetic Blade+5
+	26	3146	1	20 -- Electromagnetic Blade+6
+	27	5105	1	30 -- Heaven and Earth Bell+5
+	28	5106	1	20 -- Heaven and Earth Bell+6
+	29	7145	1	30 -- Salvation Fan+5
+	30	7146	1	20 -- Salvation Fan+6
+	31	11295	1	30 -- Black Steel Armour+5
+	32	11296	1	20 -- Black Steel Armour+6
+	33	11495	1	30 -- Black Wind Suit+5
+	34	11496	1	20 -- Black Wind Suit+6
+	35	11695	1	30 -- Magic Plate Armour+5
+	36	11696	1	20 -- Magic Plate Armour+6
+	37	11895	1	30 -- Black Clothing+5
+	38	11896	1	20 -- Black Clothing+6
+	39	30500	1	60 -- Ruby Engraving Knife
+	40	30501	1	60 -- Gold Clasp
+	41	30502	1	60 -- Ruby Decoration
+	42	30503	1	60 -- Amethyst Engraving Knife
+	43	30504	1	60 -- Silver Clasp
+	44	30505	1	60 -- Emerald Decoration
+	45	30506	1	60 -- Sapphire Engraving Knife
+	46	30507	1	60 -- Bronze Clasp
+	47	30508	1	60 -- Sapphire Decoration
+	48	30509	1	60 -- Blue Dragon Steel
+	49	30510	1	60 -- Grand Epaulette
+	50	30511	1	60 -- Red Fabric
+	51	30512	1	60 -- Red Dragon Steel
+	52	30513	1	60 -- Noble Epaulette
+	53	30514	1	60 -- Violet Fabric
+	54	30515	1	60 -- Purple Dragon Steel
+	55	30516	1	60 -- Antique Epaulette
+	56	30517	1	60 -- Golden Fabric
+	57	30518	1	60 -- Gold Yarn
+	58	30519	1	60 -- Golden Hook
+	59	30520	1	60 -- Gold Buckle
+	60	30521	1	60 -- Ring Element
+	61	30522	1	60 -- Chain Link
+	62	30523	1	60 -- Jewellery Element
+}
+Group	Hangork
+{
+	Mob	3801
+	Type	drop
+	1	50728	1	1 -- Mulberry
+}
+Group	Archie_Ogre
+{
+	Mob	3802
+	Type	drop
+	1	50721	1	1 -- Peach Blossom
+}
+Group	Brawl_Ogre
+{
+	Mob	3803
+	Type	drop
+	1	50722	1	1 -- Bellflower
+}
+Group	Ogre_Magus
+{
+	Mob	3804
+	Type	drop
+	1	50723	1	1 -- Kaki Blossom
+}
+Group	General_Ogg
+{
+	Mob	3805
+	Type	drop
+	1	50724	1	1 -- Gango Root
+}
+Group	Captain_Shruk
+{
+	Mob	3890
+	Type	drop
+	1	50725	1	1 -- Lilac
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	27006	20	150 -- Blue Potion (L)
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	100 -- Chest of Darkness
+	17	145	1	15 -- Battle Sword+5
+	18	146	1	10 -- Battle Sword+6
+	19	155	1	15 -- Ghost Fang Blade+5
+	20	156	1	10 -- Ghost Fang Blade+6
+	21	1105	1	15 -- Dragon Knife+5
+	22	1106	1	10 -- Dragon Knife+6
+	23	2145	1	15 -- Yellow Dragon Bow+5
+	24	2146	1	10 -- Yellow Dragon Bow+6
+	25	3145	1	15 -- Electromagnetic Blade+5
+	26	3146	1	10 -- Electromagnetic Blade+6
+	27	5105	1	15 -- Heaven and Earth Bell+5
+	28	5106	1	10 -- Heaven and Earth Bell+6
+	29	7145	1	15 -- Salvation Fan+5
+	30	7146	1	10 -- Salvation Fan+6
+	31	11295	1	15 -- Black Steel Armour+5
+	32	11296	1	10 -- Black Steel Armour+6
+	33	11495	1	15 -- Black Wind Suit+5
+	34	11496	1	10 -- Black Wind Suit+6
+	35	11695	1	15 -- Magic Plate Armour+5
+	36	11696	1	10 -- Magic Plate Armour+6
+	37	11895	1	15 -- Black Clothing+5
+	38	11896	1	10 -- Black Clothing+6
+	39	30500	1	40 -- Ruby Engraving Knife
+	40	30501	1	40 -- Gold Clasp
+	41	30502	1	40 -- Ruby Decoration
+	42	30503	1	40 -- Amethyst Engraving Knife
+	43	30504	1	40 -- Silver Clasp
+	44	30505	1	40 -- Emerald Decoration
+	45	30506	1	40 -- Sapphire Engraving Knife
+	46	30507	1	40 -- Bronze Clasp
+	47	30508	1	40 -- Sapphire Decoration
+	48	30509	1	40 -- Blue Dragon Steel
+	49	30510	1	40 -- Grand Epaulette
+	50	30511	1	40 -- Red Fabric
+	51	30512	1	40 -- Red Dragon Steel
+	52	30513	1	40 -- Noble Epaulette
+	53	30514	1	40 -- Violet Fabric
+	54	30515	1	40 -- Purple Dragon Steel
+	55	30516	1	40 -- Antique Epaulette
+	56	30517	1	40 -- Golden Fabric
+	57	30518	1	40 -- Gold Yarn
+	58	30519	1	40 -- Golden Hook
+	59	30520	1	40 -- Gold Buckle
+	60	30521	1	40 -- Ring Element
+	61	30522	1	40 -- Chain Link
+	62	30523	1	40 -- Jewellery Element
+}
+Group	The_Great_Ogre
+{
+	Mob	3891
+	Type	drop
+	1	50726	1	1 -- Tue Fungus
+	2	70012	1	15 -- Goddess Tear
+	3	39006	1	15 -- Bravery Cape
+	4	25040	1	10 -- Blessing Scroll
+	5	70048	1	20 -- Cloak of Secrecy
+	6	70037	1	25 -- Book of Forgetfulness
+	7	70014	1	25 -- Blood Pill
+	8	70043	1	20 -- Thief's Gloves
+	9	39002	1	20 -- Experience Ring (1h)
+	10	27002	50	100 -- Red Potion (M)
+	11	27003	30	200 -- Red Potion (L)
+	12	27005	30	100 -- Blue Potion (M)
+	13	50300	1	400 -- Skill Book
+	14	70014	1	1 -- Blood Pill
+	15	70037	1	1 -- Book of Forgetfulness
+	16	50254	1	400 -- Chest of Darkness
+	17	145	1	30 -- Battle Sword+5
+	18	146	1	20 -- Battle Sword+6
+	19	155	1	30 -- Ghost Fang Blade+5
+	20	156	1	20 -- Ghost Fang Blade+6
+	21	1105	1	30 -- Dragon Knife+5
+	22	1106	1	20 -- Dragon Knife+6
+	23	2145	1	30 -- Yellow Dragon Bow+5
+	24	2146	1	20 -- Yellow Dragon Bow+6
+	25	3145	1	30 -- Electromagnetic Blade+5
+	26	3146	1	20 -- Electromagnetic Blade+6
+	27	5105	1	30 -- Heaven and Earth Bell+5
+	28	5106	1	20 -- Heaven and Earth Bell+6
+	29	7145	1	30 -- Salvation Fan+5
+	30	7146	1	20 -- Salvation Fan+6
+	31	11295	1	30 -- Black Steel Armour+5
+	32	11296	1	20 -- Black Steel Armour+6
+	33	11495	1	30 -- Black Wind Suit+5
+	34	11496	1	20 -- Black Wind Suit+6
+	35	11695	1	30 -- Magic Plate Armour+5
+	36	11696	1	20 -- Magic Plate Armour+6
+	37	11895	1	30 -- Black Clothing+5
+	38	11896	1	20 -- Black Clothing+6
+	39	30500	1	60 -- Ruby Engraving Knife
+	40	30501	1	60 -- Gold Clasp
+	41	30502	1	60 -- Ruby Decoration
+	42	30503	1	60 -- Amethyst Engraving Knife
+	43	30504	1	60 -- Silver Clasp
+	44	30505	1	60 -- Emerald Decoration
+	45	30506	1	60 -- Sapphire Engraving Knife
+	46	30507	1	60 -- Bronze Clasp
+	47	30508	1	60 -- Sapphire Decoration
+	48	30509	1	60 -- Blue Dragon Steel
+	49	30510	1	60 -- Grand Epaulette
+	50	30511	1	60 -- Red Fabric
+	51	30512	1	60 -- Red Dragon Steel
+	52	30513	1	60 -- Noble Epaulette
+	53	30514	1	60 -- Violet Fabric
+	54	30515	1	60 -- Purple Dragon Steel
+	55	30516	1	60 -- Antique Epaulette
+	56	30517	1	60 -- Golden Fabric
+	57	30518	1	60 -- Gold Yarn
+	58	30519	1	60 -- Golden Hook
+	59	30520	1	60 -- Gold Buckle
+	60	30521	1	60 -- Ring Element
+	61	30522	1	60 -- Chain Link
+	62	30523	1	60 -- Jewellery Element
+}
+Group	Ember_Flame_Ghost
+{
+	Mob	6001
+	Type	drop
+	kill_drop	1000
+	1	30506	1	100	0 -- Sapphire Engraving Knife
+	2	30510	1	100	0 -- Grand Epaulette
+	3	30522	1	100	0 -- Chain Link
+}
+Group	Ember_Flame_Tiger
+{
+	Mob	6002
+	Type	drop
+	kill_drop	1000
+	1	30504	1	100	0 -- Silver Clasp
+	2	30516	1	100	0 -- Antique Epaulette
+	3	30521	1	100	0 -- Ring Element
+}
+Group	Ember_Flame
+{
+	Mob	6003
+	Type	drop
+	kill_drop	500
+	1	30503	1	100	0 -- Amethyst Engraving Knife
+	2	30509	1	100	0 -- Blue Dragon Steel
+	3	30513	1	100	0 -- Noble Epaulette
+}
+Group	Ember_Flame_Warrior
+{
+	Mob	6004
+	Type	drop
+	kill_drop	500
+	1	30506	1	100	0 -- Sapphire Engraving Knife
+	2	30510	1	100	0 -- Grand Epaulette
+	3	30522	1	100	0 -- Chain Link
+}
+Group	Ember_Flame_King
+{
+	Mob	6005
+	Type	drop
+	kill_drop	100
+	1	30504	1	100	0 -- Silver Clasp
+	2	30516	1	100	0 -- Antique Epaulette
+	3	30521	1	100	0 -- Ring Element
+	4	30550	1	10	0 -- Blue Belt
+}
+Group	Ember_Flame_Troll
+{
+	Mob	6006
+	Type	drop
+	kill_drop	100
+	1	30503	1	100	0 -- Amethyst Engraving Knife
+	2	30509	1	100	0 -- Blue Dragon Steel
+	3	30513	1	100	0 -- Noble Epaulette
+	4	30550	1	50	0 -- Blue Belt
+}
+Group	Ember_Flame_Beard
+{
+	Mob	6007
+	Type	drop
+	kill_drop	100
+	1	30506	1	100	0 -- Sapphire Engraving Knife
+	2	30510	1	100	0 -- Grand Epaulette
+	3	30522	1	100	0 -- Chain Link
+	4	30550	1	60	0 -- Blue Belt
+}
+Group	Ember_Flame_General
+{
+	Mob	6008
+	Type	drop
+	kill_drop	50
+	1	30504	1	100	0 -- Silver Clasp
+	2	30516	1	100	0 -- Antique Epaulette
+	3	30521	1	100	0 -- Ring Element
+	4	30550	1	80	0 -- Blue Belt
+}
+Group	Ember_Flame_Chieftain
+{
+	Mob	6009
+	Type	drop
+	kill_drop	50
+	1	30503	1	100	0 -- Amethyst Engraving Knife
+	2	30509	1	100	0 -- Blue Dragon Steel
+	3	30513	1	100	0 -- Noble Epaulette
+	4	30550	1	100	0 -- Blue Belt
+}
+Group	Razador
+{
+	Mob	6091
+	Type	drop
+	1	50726	1	1-- Tue Fungus
+	2	70012	1	15-- Goddess Tear
+	3	39006	1	15-- Bravery Cape
+	4	25040	1	10-- Blessing Scroll
+	5	70048	1	20-- Cloak of Secrecy
+	6	70037	1	25-- Book of Forgetfulness
+	7	70014	1	25-- Blood Pill
+	8	70043	1	20-- Thief's Gloves
+	9	39002	1	20-- Experience Ring (1h)
+	10	27002	50	100-- Red Potion (M)
+	11	27003	30	200-- Red Potion (L)
+	12	27005	30	100-- Blue Potion (M)
+	13	50300	1	400-- Skill Book
+	14	70014	1	1-- Blood Pill
+	15	70037	1	1-- Book of Forgetfulness
+	16	50254	1	400-- Chest of Darkness
+	17	145	1	30-- Battle Sword+5
+	18	146	1	20-- Battle Sword+6
+	19	155	1	30-- Ghost Fang Blade+5
+	20	156	1	20-- Ghost Fang Blade+6
+	21	1105	1	30-- Dragon Knife+5
+	22	1106	1	20-- Dragon Knife+6
+	23	2145	1	30-- Yellow Dragon Bow+5
+	24	2146	1	20-- Yellow Dragon Bow+6
+	25	3145	1	30-- Electromagnetic Blade+5
+	26	3146	1	20-- Electromagnetic Blade+6
+	27	5105	1	30-- Heaven and Earth Bell+5
+	28	5106	1	20-- Heaven and Earth Bell+6
+	29	7145	1	30-- Salvation Fan+5
+	30	7146	1	20-- Salvation Fan+6
+	31	11295	1	30-- Black Steel Armour+5
+	32	11296	1	20-- Black Steel Armour+6
+	33	11495	1	30-- Black Wind Suit+5
+	34	11496	1	20-- Black Wind Suit+6
+	35	11695	1	30-- Magic Plate Armour+5
+	36	11696	1	20-- Magic Plate Armour+6
+	37	11895	1	30-- Black Clothing+5
+	38	11896	1	20-- Black Clothing+6
+	39	30500	1	60-- Ruby Engraving Knife
+	40	30501	1	60-- Gold Clasp
+	41	30502	1	60-- Ruby Decoration
+	42	30503	1	60-- Amethyst Engraving Knife
+	43	30504	1	60-- Silver Clasp
+	44	30505	1	60-- Emerald Decoration
+	45	30506	1	60-- Sapphire Engraving Knife
+	46	30507	1	60-- Bronze Clasp
+	47	30508	1	60-- Sapphire Decoration
+	48	30509	1	60-- Blue Dragon Steel
+	49	30510	1	60-- Grand Epaulette
+	50	30511	1	60-- Red Fabric
+	51	30512	1	60-- Red Dragon Steel
+	52	30513	1	60-- Noble Epaulette
+	53	30514	1	60-- Violet Fabric
+	54	30515	1	60-- Purple Dragon Steel
+	55	30516	1	60-- Antique Epaulette
+	56	30517	1	60-- Golden Fabric
+	57	30518	1	60-- Gold Yarn
+	58	30519	1	60-- Golden Hook
+	59	30520	1	60-- Gold Buckle
+	60	30521	1	60-- Ring Element
+	61	30522	1	60-- Chain Link
+	62	30523	1	60-- Jewellery Element
+}
+Group	Jotun_Thrym
+{
+	Mob	6192
+	Type	drop
+	1	50266	1	400 -- Jotun Thrym Chest
+	2	50266	1	400 -- Jotun Thrym Chest
+	3	50266	1	400 -- Jotun Thrym Chest
+	4	50266	1	400 -- Jotun Thrym Chest
+	5	50266	1	400 -- Jotun Thrym Chest
+	6	50266	1	400 -- Jotun Thrym Chest
+	7	50266	1	400 -- Jotun Thrym Chest
+	8	50266	1	400 -- Jotun Thrym Chest
+	9	50266	1	80 -- Jotun Thrym Chest
+	10	50266	1	80 -- Jotun Thrym Chest
+	11	185	1	10 -- Poison Sword+5
+	12	6075	1	30 -- Thorned Claw+5
+	13	5125	1	30 -- Bamboo Bell+5
+	14	13122	1	30 -- Dragon Scale Shield+2
+	15	13062	1	30 -- Falcon Shield+2
+	16	50324	1	10 -- Boost Book Chest
+	17	50323	1	10 -- Ward Book Chest
+	18	30609	1	20 -- Bronze Sheets
+	19	30510	1	25 -- Grand Epaulette
+	20	50514	1	25 -- Boost Manual
+	21	50515	1	25 -- Ward Manual
+	22	30607	1	50 -- Copper Sheets
+	23	30507	1	50 -- Bronze Clasp
+	24	30500	1	50 -- Ruby Engraving Knife
+	25	30503	1	50 -- Amethyst Engraving Knife
+	26	30517	1	25 -- Golden Fabric
+	27	30518	1	25 -- Gold Yarn
+	28	30523	1	25 -- Jewellery Element
+	29	30605	1	25 -- Gold Sheets
+	30	30606	1	25 -- Silver Sheets
+	31	30604	1	25 -- Grey Dye
+	32	71095	1	25 -- Passage Ticket
+	33	30608	1	25 -- Steel Sheets
+	34	30501	1	25 -- Gold Clasp
+	35	30610	1	25 -- Mithril
+	36	30619	1	25 -- Metallic Gold Dye
+}
+Group	Bagjanamu
+{
+	Mob	6408
+	Type	drop
+	1	145	1	10 -- Battle Sword+5
+	2	146	1	10 -- Battle Sword+6
+	3	3145	1	10 -- Electromagnetic Blade+5
+	4	3146	1	10 -- Electromagnetic Blade+6
+	5	155	1	10 -- Ghost Fang Blade+5
+	6	156	1	10 -- Ghost Fang Blade+6
+	7	1105	1	10 -- Dragon Knife+5
+	8	1106	1	10 -- Dragon Knife+6
+	9	2145	1	10 -- Yellow Dragon Bow+5
+	10	2146	1	10 -- Yellow Dragon Bow+6
+	11	5105	1	10 -- Heaven and Earth Bell+5
+	12	5106	1	10 -- Heaven and Earth Bell+6
+	13	7145	1	10 -- Salvation Fan+5
+	14	7146	1	10 -- Salvation Fan+6
+	15	15433	1	10 -- Kingfisher Shoes +3
+	16	27003	30	40 -- Red Potion (L)
+	17	27102	1	20 -- Green Potion (L)
+	18	54701	1	400 -- Bagjanamu's Chest
+	19	54701	1	400 -- Bagjanamu's Chest
+	20	54701	1	400 -- Bagjanamu's Chest
+	21	54701	1	400 -- Bagjanamu's Chest
+	22	54701	1	400 -- Bagjanamu's Chest
+	23	54701	1	400 -- Bagjanamu's Chest
+	24	54701	1	400 -- Bagjanamu's Chest
+	25	54701	1	400 -- Bagjanamu's Chest
+	26	54701	1	400 -- Bagjanamu's Chest
+	27	54701	1	80 -- Bagjanamu's Chest
+	28	54701	1	80 -- Bagjanamu's Chest
+	29	30600	1	10 -- Sewing Pattern
+	30	30617	1	10 -- Agate
+	31	30611	1	10 -- Tough Straps
+	32	50514	1	25 -- Boost Manual
+	33	30502	1	10 -- Ruby Decoration
+	34	30516	1	50 -- Antique Epaulette
+	35	30614	1	25 -- Black Dye
+	36	30602	1	25 -- Blue Dye
+	37	27124	1	20 -- Bandage
+	38	30601	1	10 -- Armour Design
+	39	30603	1	10 -- Red Dye
+	40	30614	1	10 -- Black Dye
+	41	30615	1	10 -- White Dye
+}
+Group	Ochao_Warrior
+	Mob	6301
+	Type	drop
+	1	2173	1	0.6 -- Crow Steel Bow+3
+	2	30610	1	0.4 -- Mithril
+	3	30605	1	0.4 -- Gold Sheets
+}
+Group	Ochao_Soldier
+	Mob	6302
+	Type	drop
+	1	7153	1	0.6 -- Ecstasy Fan+3
+	2	30604	1	0.4 -- Grey Dye
+	3	30517	1	0.4 -- Golden Fabric
+}
+Group	Ochao_Magician
+	Mob	6303
+	Type	drop
+	1	1133	1	0.4 -- Devil Wing Chakram+3
+	2	27100	3	0.1 -- Green Potion (S)
+}
+Group	Strong_Ochao_Magician
+	Mob	6308
+	Type	drop
+	1	27103	3	0.4 -- Purple Potion (S)
+	2	27100	3	0.4 -- Green Potion (S)
+	3	50722	5	1 -- Bellflower
+}
+Group	Ochao_Bodyguard
+	Mob	6392
+	Type	drop
+	1	2145	1	1 -- Yellow Dragon Bow+5
+	2	2145	1	1 -- Yellow Dragon Bow+5
+	3	11295	1	1 -- Black Steel Armour+5
+	4	11295	1	1 -- Black Steel Armour+5
+	5	11695	1	1 -- Magic Plate Armour+5
+	6	11695	1	1 -- Magic Plate Armour+5
+	7	11495	1	1 -- Black Wind Suit+5
+	8	11495	1	1 -- Black Wind Suit+5
+	9	11895	1	1 -- Black Clothing+5
+	10	11895	1	1 -- Black Clothing+5
+	11	72005	1	1 -- Thief's Gloves
+	12	70038	30	1 -- Bravery Cape
+	13	72001	30	1 -- Experience Ring (1h)
+	14	50324	1	1 -- Boost Book Chest
+	15	50323	1	1 -- Ward Book Chest
+	16	30612	1	1 -- Sturdy Cords
+	17	30600	1	1 -- Sewing Pattern
+	18	30610	1	1 -- Mithril
+	19	30611	1	1 -- Tough Straps
+	20	30523	1	1 -- Jewellery Element
+	21	50513	1	1 -- Soul Stone
+	22	30609	1	1 -- Bronze Sheets
+	23	21070	1	1 -- Nightshade Armour+0
+}
+Group	Strong_Ochao_Bodyguard
+	Mob	6394
+	Type	drop
+	1	50513	1	400 -- Soul Stone
+	2	50728	5	40 -- Mulberry
+	3	50726	5	40 -- Tue Fungus
+	4	50727	5	40 -- Alpine Rose
+	5	50724	5	40 -- Gango Root
+}
+Group	Ochao_Lord
+{
+	Mob	6391
+	Type	drop
+	1	144	1	2 -- Battle Sword+4
+	2	145	1	2 -- Battle Sword+5
+	3	3144	1	2 -- Electromagnetic Blade+4
+	4	3145	1	2 -- Electromagnetic Blade+5
+	5	154	1	5 -- Ghost Fang Blade+4
+	6	155	1	5 -- Ghost Fang Blade+5
+	7	1104	1	5 -- Dragon Knife+4
+	8	1105	1	5 -- Dragon Knife+5
+	9	2144	1	5 -- Yellow Dragon Bow+4
+	10	2145	1	5 -- Yellow Dragon Bow+5
+	11	6044	1	5 -- Griffon Claw+4
+	12	6045	1	5 -- Griffon Claw+5
+	13	7144	1	5 -- Salvation Fan+4
+	14	7145	1	5 -- Salvation Fan+5
+	15	27002	50	100 -- Red Potion (M)
+	16	27003	30	200 -- Red Potion (L)
+	17	27005	30	100 -- Blue Potion (M)
+	18	27006	20	150 -- Blue Potion (L)
+	19	30610	1	5 -- Mithril
+	20	30616	1	5 -- Titanium Dioxide
+	21	50323	1	5 -- Ward Book Chest
+	22	50515	1	5 -- Ward Manual
+	23	50324	1	5 -- Boost Book Chest
+	24	50514	1	5 -- Boost Manual
+	25	30604	1	5 -- Grey Dye
+	26	30612	1	5 -- Sturdy Cords
+	27	30606	1	5 -- Silver Sheets
+	28	30605	1	5 -- Gold Sheets
+	29	30607	1	5 -- Copper Sheets
+	30	30517	1	5 -- Golden Fabric
+	31	30518	1	5 -- Gold Yarn
+	32	30520	1	5 -- Gold Buckle
+	33	50254	1	5 -- Chest of Darkness
+	34	50513	1	5 -- Soul Stone
+	35	6040	1	2 -- Griffon Claw+0
+}
+Group	Strong_Ochao_Lord
+{
+	Mob	6393
+	Type	drop
+	1	144	1	10 -- Battle Sword+4
+	2	145	1	10 -- Battle Sword+5
+	3	3144	1	10 -- Electromagnetic Blade+4
+	4	3145	1	10 -- Electromagnetic Blade+5
+	5	154	1	10 -- Ghost Fang Blade+4
+	6	155	1	10 -- Ghost Fang Blade+5
+	7	1104	1	10 -- Dragon Knife+4
+	8	1105	1	10 -- Dragon Knife+5
+	9	2144	1	10 -- Yellow Dragon Bow+4
+	10	2145	1	10 -- Yellow Dragon Bow+5
+	11	7144	1	10 -- Salvation Fan+4
+	12	7145	1	10 -- Salvation Fan+5
+	13	27002	50	100 -- Red Potion (M)
+	14	27003	30	200 -- Red Potion (L)
+	15	27005	30	100 -- Blue Potion (M)
+	16	27006	20	150 -- Blue Potion (L)
+	17	30610	1	30 -- Mithril
+	18	30604	1	30 -- Grey Dye
+	19	30612	1	30 -- Sturdy Cords
+	20	30605	1	30 -- Gold Sheets
+	21	30606	1	30 -- Silver Sheets
+	22	30607	1	30 -- Copper Sheets
+	32	30517	1	30 -- Golden Fabric
+	33	30520	1	30 -- Gold Buckle
+	34	30518	1	30 -- Gold Yarn
+	35	50254	1	150 -- Chest of Darkness
+	36	50513	1	30 -- Soul Stone
+}
+Group	En-Tai_Warrior
+{
+	Mob	6401
+	Type	drop
+	1	30609	1	0.3 -- Bronze Sheets
+	2	30605	1	0.3 -- Gold Sheets
+	3	30612	1	0.4 -- Sturdy Cords
+}
+Group	En-TaiSoldier
+{
+	Mob	6402
+	Type	drop
+	1	7155	1	0.4 -- Ecstasy Fan+5
+	2	30608	1	0.2 -- Steel Sheets
+	3	30606	1	0.2 -- Silver Sheets
+	4	30612	1	0.2 -- Sturdy Cords
+}
+Group	En-Tai_Druid
+{
+	Mob	6403
+	Type	drop
+	1	30604	1	0.2 -- Grey Dye
+	2	30607	1	0.2 -- Copper Sheets
+	3	30605	1	0.2 -- Gold Sheets
+	4	12680	1	0.4 -- Soul Shard Hat +0
+	5	12400	1	0.4 -- Spider Hood +0
+}
+Group	En-Tai_Guardian
+	Mob	6405
+	Type	drop
+	1	21540	1	50 -- Viridian Wood Helmet+0
+	2	15160	1	40 -- Ecstasy Shoes+0
+	3	27100	3	100 -- Green Potion (S)
+	4	50513	1	60 -- Soul Stone
+}
+Group	En-Tai_Destroyer
+{
+	Mob	6406
+	Type	drop
+	1	30610	1	0.3 -- Mithril
+	2	30611	1	0.3 -- Tough Straps
+	3	30601	1	0.2 -- Armour Design
+	4	30616	1	0.2 -- Titanium Dioxide
+}
+Group	En-Tai_Sovereign
+{
+	Mob	6407
+	Type	drop
+	1	14220	1	30 -- Soul Crystal Bracelet+0
+	2	27003	10	60 -- Red Potion (L)
+	3	27006	10	60 -- Blue Potion (L)
+	4	27102	10	40 -- Green Potion (L)
+	5	27105	10	40 -- Purple Potion (L)
+	6	50300	1	400 -- Skill Book
+	7	50722	5	20 -- Bellflower
+	8	50727	5	10 -- Alpine Rose
+	9	50721	5	10 -- Peach Blossom
+	10	50725	5	10 -- Lilac
+	11	50726	5	10 -- Tue Fungus
+	12	50724	5	10 -- Gango Root
+	13	50723	5	10 -- Kaki Blossom
+	14	50728	5	10 -- Mulberry
+	15	50513	1	80 -- Soul Stone
+	16	30619	5	40 -- Metallic Gold Dye
+}
+
+#################################################################
+##                                                             ##
+##                     CONQEUROR OF YOHARA                     ##
+##                                                             ##
+#################################################################
+
+Group	Kao
+{
+	Mob	6691 -- Kao
+	Type	drop
+	1	50528	1	100 -- Yohara Treasure Chest
+	2	50529	1	100 -- 9th Path Book Chest
+	3	83065	1	100 -- Random Treasure Chest
+}
+
+Group	HellHound
+{
+	Mob	6700 -- Hell Hound
+	Type	drop
+	1	81000	1	0.2 -- STR Will Talisman+0
+	2	81550	1	0.2 -- INT Will Talisman+0
+	3	81250	1	0.2 -- RES Will Talisman+0
+	4	81300	1	0.3 -- VIT Will Talisman+0
+	5	39075	1	0.3 -- Purple Powershard
+	6	39076	1	0.3 -- Red Powershard
+	7	39073	1	0.3 -- Yellow Powershard
+	8	39072	1	0.3 -- Green Powershard
+	9	39070	1	0.3 -- Grey Powershard
+	10	39077	1	0.3 -- Rainbow Powershard
+	11	39071	1	0.3 -- White Powershard
+	12	39074	1	0.3 -- Blue Powershard
+	13	31218	1	0.5 -- Forged Steel Sheet
+	14	31224	1	0.5 -- Jewellery Steel Sheets
+	15	31216	1	0.5 -- Crude Metal Sheet
+	16	72353	1	0.5 -- Will Topaz
+	17	31217	1	0.5 -- Troll Horn
+	18	50739	1	0.5 -- Empty Power Elixir
+	19	50740	1	0.5 -- Empty Resistance Elixir
+	20	50333	1	0.4 -- Mission Book (D. G. Pl.)
+	21	50334	1	0.4 -- Mission Book (N. G. Ch.)
+	22	50335	1	0.4 -- Mission Book (Yilad P.)
+	23	50336	1	0.4 -- Mission book (Nor.W. C.)
+	24	50337	1	0.4 -- Mission Book (Soul G.)
+	25	91051	1	0.8 -- Purple Potion (M)
+	26	72354	1	0.8 -- Portable Jadite Vein
+}
+
+#################################################################
+## Metins
+Group	MetinPerception
+{
+	Mob	8067 -- Metin of Perception
+	Type	drop
+	1	50300	1	60 -- Skill Book
+	2	70037	1	60 -- Book of Forgetfulness
+	3	50325	1	60 -- Book of Precision
+	4	50342	1	60 -- Inspiration of an Adept
+	5	50341	1	60 -- Inspiration of a Rookie
+	6	50343	1	60 -- Inspiration of an Expert
+	7	50569	1	60 -- Earthquake (9th skill)
+	8	50570	1	60 -- Astral Light (9th skill)
+	9	50571	1	60 -- Storm Shot (9th skill)
+	10	50573	1	60 -- Death Wave (9th skill)
+	11	50572	1	60 -- Hell Strike (9th skill)
+	12	50575	1	60 -- Aether Ward (9th skill)
+	13	50323	1	60 -- Ward Book Chest
+	14	50324	1	60 -- Boost Book Chest
+	15	50331	1	60 -- Mission Book (Lord 2)
+	16	50332	1	60 -- Mission Book (Lord 3)
+	17	28046	1	60 -- Demon Stone+0
+	18	28146	1	60 -- Demon Stone+1
+	19	28246	1	60 -- Demon Stone+2
+	20	50513	1	60 -- Soul Stone
+	21	50525	1	60 -- Soul Stone+
+	22	50527	1	60 -- Talent Potion
+	23	70005	1	60 -- Experience Ring (1h)
+	24	50664	2	60 -- Fog Jadite
+	25	70014	1	60 -- Blood Pill
+	26	55003	1	60 -- Young Pet Book
+	27	76029	1	60 -- Green Dragon Bean
+	28	50043	1	60 -- Kelpie Key
+	29	25040	1	60 -- Blessing Scroll
+	30	72354	1	60 -- Portable Jadite Vein
+	31	50739	1	60 -- Empty Power Elixir
+	32	50740	1	60 -- Empty Resistance Elixir
+	33	27007	30	80 -- Red Potion (XXL)
+	34	27008	15	80 -- Blue Potion (XXL)
+}
+
+###############################################################################
+# Reference: https://it-wiki.metin2.gameforge.com/index.php/Tesoro_di_Idra
+Group	HydraChest
+{
+	Mob	3965
+	Type	drop
+	level_limit	120
+	1	20000	1	0.9 -- Devil's Horn Armour+0
+	2	20250	1	0.9 -- Devil's Horn Armour+0
+	3	20500	1	0.9 -- Dragon Rider Suit+0
+	4	20750	1	0.9 -- Golden Clothing+0
+	5	21090	1	0.9 -- Warlord Armour+0
+	6	54705	1	1.0 -- Hydra's Chest
+	7	54705	1	0.8 -- Hydra's Chest
+	8	54705	1	0.6 -- Hydra's Chest
+	9	54705	1	0.4 -- Hydra's Chest
+	10	54705	1	0.2 -- Hydra's Chest
+	11	55410	1	0.8 -- Nessie Egg
+	12	70303	1	1.0 -- Hydran Ring
+	13	70303	1	0.8 -- Hydran Ring
+	14	70303	1	0.6 -- Hydran Ring
+	15	70303	1	0.4 -- Hydran Ring
+	16	70303	1	0.2 -- Hydran Ring
+	17	55003	1	100 -- Young Pet Book
+	18	55004	1	100 -- Wild Pet Book
+	19	55005	1	100 -- Valiant Pet Book
+	20	50113	1	0.5 -- Green Ebony Box
+	21	50114	1	0.5 -- Blue Ebony Box
+	22	50115	1	0.5 -- Crimson Ebony Box
+	23	27992	1	100 -- White Pearl
+	24	27993	1	100 -- Blue Pearl
+	25	27994	1	100 -- Blood-Red Pearl
+	26	39028	1	0.6 -- Enchant Item
+	27	39029	1	0.6 -- Reinforce Item
+	28	39004	1	0.2 -- Blessing Marble
+	29	25040	1	1.0 -- Blessing Scroll
+	30	71015	1	50 -- Anello dell'esperienza
+	31	27987	1	100 -- Clam
+	32	50121	1	1.0 -- Iron Box
+	33	50121	1	0.5 -- Iron Box
+	34	70037	1	50 -- Book of Forgetfulness
+	35	72058	1	100 -- Spirit Stone Bundle
+	36	72058	1	100 -- Spirit Stone Bundle
+	37	72058	1	100 -- Spirit Stone Bundle
+	38	72058	1	100 -- Spirit Stone Bundle
+	39	72058	1	100 -- Spirit Stone Bundle
+	40	72058	1	100 -- Spirit Stone Bundle
+	41	72058	1	100 -- Spirit Stone Bundle
+	42	50926	50	100 -- Glimmerstone
+	43	50926	50	100 -- Glimmerstone
+	44	50926	50	100 -- Glimmerstone
+	45	50926	50	100 -- Glimmerstone
+	46	50926	50	100 -- Glimmerstone
+	47	50926	50	0.5 -- Glimmerstone
+	48	50926	50	0.5 -- Glimmerstone
+	49	50926	50	0.5 -- Glimmerstone
+	50	50094	10	25 -- Catfish Sushi
+	51	50913	10	75 -- Salmon Sushi
+	52	50704	10	60 -- Gango Root
+	53	50705	10	60 -- Lilac
+	54	50706	10	60 -- Tue Fungus
+	55	50707	10	60 -- Alpine Rose
+	56	50708	10	60 -- Mulberry
+	57	50056	10	60 -- Red Ginseng
+	58	31216	1	10 -- Crude Metal Sheet
+	59	90015	1	5 -- Foundation Stone+
+	60	90016	1	5 -- Trunk+
+	61	90017	1	5 -- Plywood+
+	62	28046	1	10 -- Demon Stone+0
+}

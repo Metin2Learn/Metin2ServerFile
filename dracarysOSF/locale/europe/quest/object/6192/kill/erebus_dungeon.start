@@ -1,0 +1,15 @@
+if erebus_dungeon . is_erebus ( d . get_map_index ( ) ) and d . getf ( "level" ) == 2 then local setting = erebus_dungeon . setting ( ) 
+local pids = { party . get_member_pids ( ) } 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+if pc . getf ( "erebus_dungeon" , "enter_time" ) > 0 then 
+d . update_rank ( 353 , ( get_global_time ( ) - pc . getf ( "erebus_dungeon" , "enter_time" ) ) , pc . get_last_damage ( ) ) 
+end 
+q . end_other_pc_block ( ) 
+end 
+server_timer ( "erebus_dungeon_end_timer" , 60 , d . get_map_index ( ) ) 
+erebus_dungeon . level_clear ( ) 
+if party . is_party ( ) then 
+party . setf ( "erebus_dungeon_boss_kill_count" , 1 ) 
+end 
+ return end 

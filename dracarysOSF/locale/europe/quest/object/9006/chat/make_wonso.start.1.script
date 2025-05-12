@@ -1,0 +1,5 @@
+say_title ( locale_quest ( 1419 ) ) 
+say ( locale_quest ( 2685 ) ) 
+pc . removeitem ( 50017 , 1 ) 
+pc . removeitem ( 50019 , 1 ) 
+pc . give_item2 ( 50021 , 1 ) 

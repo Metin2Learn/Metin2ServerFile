@@ -1,0 +1,11 @@
+pc . setqf ( "is_leader" , 0 ) 
+q . done ( ) 
+if pc . get_map_index ( ) == 208 and not pc . is_gm ( ) then 
+dragon_lair_access . warp_from_lair ( ) 
+end 
+if pc . get_map_index ( ) == 208 then 
+if pc . getf ( "dragon_lair_access" , "entered" ) ~= 1 then 
+pc . setf ( "dragon_lair_access" , "entered" , 1 ) 
+pc . setf ( "dragon_lair_access" , "enter_time" , get_global_time ( ) ) 
+end 
+end 

@@ -1,0 +1,11 @@
+if pc . getqf ( "time" ) ~= game . get_event_flag ( "dragon_lair_time" ) or dragon_lair_access . get_time_remaining ( ) <= 0 then 
+set_state ( "start" ) 
+else 
+dragon_lair_access . show_time_remaining ( dragon_lair_access . get_time_remaining ( ) ) 
+end 
+if pc . get_map_index ( ) == 208 then 
+if pc . getf ( "dragon_lair_access" , "entered" ) ~= 1 then 
+pc . setf ( "dragon_lair_access" , "entered" , 1 ) 
+pc . setf ( "dragon_lair_access" , "enter_time" , get_global_time ( ) ) 
+end 
+end 

@@ -1,0 +1,6 @@
+if ride_mount . CanRide ( ) then 
+if not ride_mount . IsRiding ( ) then 
+ride_mount . UnsummonHorse ( ) 
+ride_mount . Ride ( pc . get_special_ride_vnum ( ) ) 
+end 
+end 

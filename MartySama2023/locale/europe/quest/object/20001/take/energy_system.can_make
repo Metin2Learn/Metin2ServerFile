@@ -1,0 +1,47 @@
+if pc . get_level ( ) < 35 then 
+say_title ( mob_name ( 20001 ) ) 
+say ( locale_quest ( 972 ) ) 
+return 
+end 
+local item_vnum = item . vnum local levelLimit = item . get_level_limit ( item_vnum ) 
+local setting = energy_system . setting ( ) 
+if levelLimit == nil then 
+say_title ( mob_name ( 20001 ) ) 
+say ( locale_quest ( 973 ) ) 
+wait ( ) 
+elseif item . get_type ( ) == ITEM_WEAPON and item . get_sub_type ( ) == WEAPON_ARROW then 
+say_title ( mob_name ( 20001 ) ) 
+say ( locale_quest ( 973 ) ) 
+wait ( ) 
+elseif levelLimit < 35 then 
+say_title ( mob_name ( 20001 ) ) 
+say ( locale_quest ( 974 ) ) 
+else 
+say_title ( mob_name ( 20001 ) ) 
+say ( item_name ( item_vnum ) ) 
+if item . get_attribute_count ( ) > 0 then 
+say ( string . format ( locale_quest ( 10822 ) , item . get_attribute_count ( ) ) ) 
+end 
+say ( locale_quest ( 975 ) ) 
+local s = select ( locale_quest ( 976 ) , locale_quest ( 977 ) ) 
+if s == 1 then 
+item . remove ( ) 
+local r = number ( 1 , 100 ) 
+local n 
+if levelLimit >= 35 and levelLimit <= 50 then 
+n = energy_system . getItemNum ( "35to50" , r ) 
+elseif levelLimit > 50 and levelLimit <= 70 then 
+n = energy_system . getItemNum ( "51to70" , r ) 
+else 
+n = energy_system . getItemNum ( "upto70" , r ) 
+end 
+if ( n == 0 ) then 
+say_title ( mob_name ( 20001 ) ) 
+say ( locale_quest ( 978 ) ) 
+else 
+pc . give_item2 ( setting . energy_stone , n ) 
+say_title ( mob_name ( 20001 ) ) 
+say ( string . format ( locale_quest ( 979 ) , n ) ) 
+end 
+end 
+end 

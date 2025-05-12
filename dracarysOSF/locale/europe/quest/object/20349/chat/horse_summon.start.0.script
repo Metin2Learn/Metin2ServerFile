@@ -1,0 +1,17 @@
+say_title ( locale_quest ( 2090 ) ) 
+say ( locale_quest ( 2202 ) ) 
+local b = select ( locale_quest ( 10928 ) , locale_quest ( 10929 ) ) 
+if 1 == b then 
+if pc . get_money ( ) >= 400000 then 
+pc . changemoney ( - 400000 ) 
+say_title ( locale_quest ( 2090 ) ) 
+say ( locale_quest ( 2213 ) ) 
+pc . give_item2 ( 50051 , 1 ) 
+else 
+say_title ( locale_quest ( 2090 ) ) 
+say ( locale_quest ( 2215 ) ) 
+end 
+elseif 2 == b then return 
+else 
+say ( string . format ( locale_quest ( 1298 ) , b ) ) 
+end 

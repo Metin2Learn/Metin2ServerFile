@@ -1,0 +1,24 @@
+say_title ( mob_name ( 20075 ) ) 
+say ( locale_quest ( 848 ) ) 
+wait ( ) 
+if pc . get_level ( ) >= 75 then 
+say_title ( mob_name ( 20075 ) ) 
+say ( locale_quest ( 850 ) ) 
+local s = select ( locale_quest ( 851 ) , locale_quest ( 2426 ) , locale_quest ( 852 ) ) 
+if s == 3 then 
+pc . warp ( 590500 , 110900 ) 
+return 
+end 
+if s == 2 then 
+return 
+end 
+timer ( "devil_jump_7" , 6 ) 
+npc . unlock ( ) 
+d . purge ( ) 
+return 
+end 
+say_title ( mob_name ( 20075 ) ) 
+say ( locale_quest ( 852 ) ) 
+wait ( ) 
+pc . warp ( 590500 , 110500 ) 
+return 

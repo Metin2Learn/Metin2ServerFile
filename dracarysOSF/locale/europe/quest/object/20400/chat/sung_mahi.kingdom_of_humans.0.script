@@ -1,0 +1,5 @@
+target . delete ( "__TARGET__" ) 
+clear_letter ( ) 
+say_title ( mob_name ( 20400 ) ) 
+say ( ) 
+say ( locale_quest ( 6402 ) ) 

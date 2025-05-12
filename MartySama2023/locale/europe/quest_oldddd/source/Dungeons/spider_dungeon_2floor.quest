@@ -1,0 +1,27 @@
+quest spider_dungeon_2floor begin
+	state start begin
+		when login or levelup with pc.get_level() > 0 begin
+			set_state(to_spider_2floor)
+		end
+	end
+
+	state to_spider_2floor begin
+		when 20089.chat.locale_quest(8236) begin
+			say_title(locale_quest(8237))
+			say(locale_quest(8238))
+
+			local a = select(locale_quest(4473), locale_quest(3418))
+			if 1 == a then
+				say_title(locale_quest(8237))
+				say(locale_quest(8239))
+				wait()
+
+				pc.warp(91700, 525300)
+				return
+			end
+
+			say_title(locale_quest(8237))
+			say(locale_quest(8240))
+		end
+	end
+end

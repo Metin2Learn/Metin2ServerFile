@@ -1,0 +1,18 @@
+erebus_dungeon={["start"]=0,setting= function ()return 
+{ 
+[ "dungeon_entry_pos" ] = { 7782 , 15021 } , 
+[ "boss_pos" ] = { 69 , 941 } , 
+[ "outside_entry_pos" ] = { 8298 , 14187 } 
+} 
+end ,is_erebus= function (idx)return idx >= 353 * 10000 and idx < ( 353 + 1 ) * 10000 
+end ,make_dungeon= function ()local setting = erebus_dungeon . setting ( ) 
+d . new_jump_party ( 353 , setting . dungeon_entry_pos [ 1 ] , setting . dungeon_entry_pos [ 2 ] ) 
+end ,level_clear= function ()d . clear_regen ( ) 
+end ,clear_timer= function (inx)clear_server_timer ( "erebus_dungeon_0m_left_timer" , inx ) 
+clear_server_timer ( "erebus_dungeon_1m_left_timer" , inx ) 
+clear_server_timer ( "erebus_dungeon_5m_left_timer" , inx ) 
+clear_server_timer ( "erebus_dungeon_10m_left_timer" , inx ) 
+clear_server_timer ( "erebus_dungeon_15m_left_timer" , inx ) 
+clear_server_timer ( "erebus_dungeon_30m_left_timer" , inx ) 
+clear_server_timer ( "erebus_dungeon_45m_left_timer" , inx ) 
+end }

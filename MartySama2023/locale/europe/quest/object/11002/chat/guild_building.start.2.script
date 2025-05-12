@@ -1,0 +1,9 @@
+say_title ( locale_quest ( 1278 ) ) 
+say ( locale_quest ( 1695 ) ) 
+local s = select ( locale_quest ( 2625 ) , locale_quest ( 2600 ) ) 
+if s == 1 then 
+say_title ( locale_quest ( 1278 ) ) 
+say ( locale_quest ( 1696 ) ) 
+pc . remove_from_guild ( ) 
+pc . setqf ( "new_withdraw_time" , get_global_time ( ) ) 
+end 

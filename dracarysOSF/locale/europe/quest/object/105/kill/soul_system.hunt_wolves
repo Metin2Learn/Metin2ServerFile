@@ -1,0 +1,4 @@
+if math . random ( 1 , 100 ) == 1 then 
+game . drop_item_with_ownership ( 70601 , 1 ) 
+set_state ( "return_to_ahyu" ) 
+end 

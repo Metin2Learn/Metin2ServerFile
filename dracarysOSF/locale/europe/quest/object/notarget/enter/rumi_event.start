@@ -1,0 +1,13 @@
+if game . get_event_flag ( "cards_event" ) ~= 0 then if pc . get_map_index ( ) == 1 or pc . get_map_index ( ) == 21 or pc . get_map_index ( ) == 41 then 
+if find_npc_by_vnum ( 20417 ) == 0 then 
+if pc . get_map_index ( ) == 1 then 
+mob . spawn ( 20417 , 607 , 619 , 0 , 0 ) 
+elseif pc . get_map_index ( ) == 21 then 
+mob . spawn ( 20417 , 595 , 613 , 0 , 0 ) 
+elseif pc . get_map_index ( ) == 41 then 
+mob . spawn ( 20417 , 353 , 741 , 0 , 0 ) 
+end 
+end 
+end 
+cmdchat ( "cards icon 1" ) 
+ return end 

@@ -1,0 +1,18 @@
+local idx = pc . get_map_index ( ) 
+local setting = snow_dungeon . setting ( ) 
+if idx == 352 then 
+pc . warp ( setting . outside_entry_pos [ 1 ] * 100 , setting . outside_entry_pos [ 2 ] * 100 , 61 ) 
+elseif snow_dungeon . is_snowd ( idx ) then 
+pc . set_warp_location ( 61 , setting . outside_entry_pos [ 1 ] , setting . outside_entry_pos [ 2 ] ) 
+if d . getf ( "dungeon_enter" ) == 0 then 
+if get_global_time ( ) - pc . getf ( "snow_dungeon" , "exit_time" ) < 240 * 60 then 
+d . notice ( 1321 ) 
+say ( locale_quest ( 8175 ) ) 
+timer ( "snow_dungeon_warp_timer" , setting . floor_jump_delay ) 
+elseif pc . get_level ( ) < 100 then 
+d . notice ( 8184 ) 
+say ( locale_quest ( 8184 ) ) 
+timer ( "snow_dungeon_warp_timer" , setting . floor_jump_delay ) 
+end 
+end 
+end 

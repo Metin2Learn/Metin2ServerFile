@@ -1,0 +1,2 @@
+if is_test_server ( ) then notice ( locale_quest ( 7442 ) ) 
+ return end 

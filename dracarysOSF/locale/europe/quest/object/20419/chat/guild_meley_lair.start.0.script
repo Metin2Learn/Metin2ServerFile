@@ -1,0 +1,8 @@
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1762 ) ) 
+say ( locale_quest ( 1763 ) ) 
+say ( locale_quest ( 1765 ) ) 
+wait ( ) 
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1766 ) ) 
+say ( locale_quest ( 1767 ) ) 

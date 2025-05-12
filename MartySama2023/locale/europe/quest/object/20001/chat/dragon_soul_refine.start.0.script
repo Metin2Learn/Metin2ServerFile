@@ -1,0 +1,3 @@
+say_title ( mob_name ( 20001 ) ) 
+say ( locale_quest ( 962 ) ) 
+ds . open_refine_window ( ) 

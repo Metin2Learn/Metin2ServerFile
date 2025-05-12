@@ -1,0 +1,97 @@
+quest check_trans_ticket begin
+	state start begin
+		when login or levelup with pc.get_level() > 0 begin
+			set_state(zone_enter)
+		end
+	end
+
+	state zone_enter begin
+		-- Entrance to "Spiders Dungeon"
+		when 20088.chat.locale_quest(174) begin
+			say_title(locale_quest(181))
+			say(locale_quest(184))
+			wait()
+			if pc.get_level() < 40 then
+				-- content for keys "locale_quest(190)":
+				say_reward(locale_quest(12043))
+				return
+			elseif pc.count_item(71095) + pc.count_item(71130) > 0 then
+				say_title(locale_quest(181))
+				say(locale_quest(185))
+				wait()
+				if false == pc.can_warp() then
+					say(locale_quest(183))
+					return
+				end
+				if pc.count_item(71095) + pc.count_item(71130) > 0 then
+					if pc.count_item(71130) >= 1 then -- player get item from mystery box
+						pc.remove_item(71130, 1) -- remove this one
+					elseif pc.count_item(71095) >= 1 then
+						pc.remove_item(71095, 1) -- remove the ItemShop item
+					else
+						return -- This can only happen as a result of cheating
+					end
+					pc.warp(704100, 464100)
+				else
+					return
+				end
+			else
+				say_title(locale_quest(181))
+				say(locale_quest(186))
+				wait()
+			end
+		end
+
+		-- Entrance to "Grotto of Exile"
+		when 20093.chat.locale_quest(187) begin
+			say(locale_quest(188))
+			-- content for keys "locale_quest(189)":
+			say(locale_quest(189))
+			if pc.get_level() < 75 then
+				-- content for keys "locale_quest(190)":
+				say_reward(locale_quest(190))
+				return
+			elseif pc.count_item(30190) + pc.count_item(30191) == 0 then
+				local get_bloodstone = select(locale_quest(191), locale_quest(192))
+				if get_bloodstone == 1 then
+					-- content for keys "locale_quest(193)":
+					say_title(locale_quest(188))
+					say(locale_quest(193))
+					say(locale_quest(194))
+					say_reward(locale_quest(175))
+				else
+					say_title(locale_quest(188))
+					say(locale_quest(176))
+					say(locale_quest(194))
+					say_reward(locale_quest(177))
+				end
+			elseif pc.count_item(30190) + pc.count_item(30191) > 0 then
+				local get_bloodstone = select(locale_quest(178), locale_quest(179))
+
+				if false == pc.can_warp() then
+					say(locale_quest(183))
+					return
+				end
+
+				if get_bloodstone == 1 then
+					say_pc_name()
+					say(string.format(locale_quest(180), pc.get_name()))
+					if pc.count_item(30190) >= 1 then -- when character has Bloodstones from ItemShop and some from keyquest remove the ones from the keyquest first
+						pc.remove_item(30190, 1) -- remove keyquest bloodstone first
+					elseif pc.count_item(30191) >= 1 then
+						pc.remove_item(30191, 1) -- remove ItemShop bloodstone
+					else
+						return -- This can only happen as a result of cheating
+					end
+					wait()
+					say_title(locale_quest(188))
+					say(locale_quest(182))
+					wait()
+					pc.warp(900, 1207800)
+				end
+			else
+				-- notice("This shouldn't happen!") -- debug message
+			end
+		end
+	end -- state
+end -- quest

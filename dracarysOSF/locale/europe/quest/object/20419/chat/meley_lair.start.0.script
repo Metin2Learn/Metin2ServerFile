@@ -1,0 +1,9 @@
+say_title ( mob_name ( 20419 ) ) 
+say ( locale_quest ( 1829 ) ) 
+say ( locale_quest ( 1832 ) ) 
+if select ( locale_quest ( 4473 ) , locale_quest ( 3418 ) ) ~= 1 then 
+return 
+end 
+MeleyLair . Leave ( ) 
+setskin ( NOWINDOW ) 
+return 

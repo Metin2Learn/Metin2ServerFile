@@ -1,0 +1,7 @@
+if ship_defense . in_dungeon ( pc . get_map_index ( ) ) then if ship_defense_mgr . spawn_wood_repair ( ) then 
+if item . get_vnum ( ) == 31107 then 
+ship_defense_mgr . set_alliance_hp_pct ( 1 ) 
+item . remove ( ) 
+end 
+end 
+ return end 

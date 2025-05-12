@@ -1,0 +1,8 @@
+say_title ( mob_name ( 20409 ) ) 
+say ( locale_quest ( 4502 ) ) 
+wait ( ) 
+say_title ( mob_name ( 20409 ) ) 
+say ( locale_quest ( 4503 ) ) 
+select ( locale_quest ( 4491 ) ) 
+pc . remove_item ( 31098 , pc . count_item ( 31098 ) ) 
+set_state ( "talk_to_disciple" ) 

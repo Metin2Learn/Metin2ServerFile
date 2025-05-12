@@ -1,0 +1,42 @@
+say ( locale_quest ( 188 ) ) 
+say ( locale_quest ( 189 ) ) 
+if pc . get_level ( ) < 75 then 
+say_reward ( locale_quest ( 190 ) ) 
+return 
+elseif pc . count_item ( 30190 ) + pc . count_item ( 30191 ) == 0 then 
+local get_bloodstone = select ( locale_quest ( 191 ) , locale_quest ( 192 ) ) 
+if get_bloodstone == 1 then 
+say_title ( locale_quest ( 188 ) ) 
+say ( locale_quest ( 193 ) ) 
+say ( locale_quest ( 194 ) ) 
+say_reward ( locale_quest ( 175 ) ) 
+else 
+say_title ( locale_quest ( 188 ) ) 
+say ( locale_quest ( 176 ) ) 
+say ( locale_quest ( 194 ) ) 
+say_reward ( locale_quest ( 177 ) ) 
+end 
+elseif pc . count_item ( 30190 ) + pc . count_item ( 30191 ) > 0 then 
+local get_bloodstone = select ( locale_quest ( 178 ) , locale_quest ( 179 ) ) 
+if false == pc . can_warp ( ) then 
+say ( locale_quest ( 183 ) ) 
+return 
+end 
+if get_bloodstone == 1 then 
+say_pc_name ( ) 
+say ( string . format ( locale_quest ( 180 ) , pc . get_name ( ) ) ) 
+if pc . count_item ( 30190 ) >= 1 then 
+pc . remove_item ( 30190 , 1 ) 
+elseif pc . count_item ( 30191 ) >= 1 then 
+pc . remove_item ( 30191 , 1 ) 
+else 
+return 
+end 
+wait ( ) 
+say_title ( locale_quest ( 188 ) ) 
+say ( locale_quest ( 182 ) ) 
+wait ( ) 
+pc . warp ( 900 , 1.2078e+06 ) 
+end 
+else 
+end 

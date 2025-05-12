@@ -1,0 +1,31 @@
+quest conqueror_level begin
+	state start begin
+		when 20433.chat.locale_quest(12091) begin
+			say_title(locale_quest(12091))
+			say(locale_quest(12093))
+			if select(locale_quest(12094), locale_quest(12095)) == 1 then
+				if pc.get_conqueror_level() > 0 then
+					say_title(locale_quest(12091))
+					say(locale_quest(12096))
+					wait()
+					pc.warp(512000, 486400)
+				else
+					say_title(locale_quest(12091))
+					say(locale_quest(12618))
+				end
+			else
+				return
+			end
+		end
+
+		when 20433.chat.locale_quest(12649) begin
+			say_title(locale_quest(12649))
+			say(locale_quest(12650))
+			if select(locale_quest(12651), locale_quest(12652)) == 1 then
+				pc.set_conqueror()
+			else
+				return
+			end
+		end
+	end
+end

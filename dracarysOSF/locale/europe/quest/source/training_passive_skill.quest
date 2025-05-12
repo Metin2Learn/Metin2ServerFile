@@ -1,0 +1,386 @@
+-- Revised @ YMD 2020.08.31.Owsap
+quest training_passive_skill begin
+	state start begin
+		when 50514.use begin
+			if training_passive_skill.GetPassiveSkills(2) then
+				return
+			end
+
+			if pc.get_skill_group() == 0 then
+				say_title(item_name(50514))
+				say(locale_quest(7428))
+				return
+			end
+
+			if not training_passive_skill.GetPassiveSkills(1, 19) then
+				say_title(item_name(50514))
+				say(locale_quest(7439))
+				return
+			end
+
+			say_title(item_name(50514))
+			say(locale_quest(7436))
+
+			local result = training_passive_skill.BuildPassiveSkillList(2)
+
+			local vnum_list = result[1]
+			local name_list = result[2]
+
+			local menu_list = {}
+			table.foreach(name_list, function(i, name) table.insert(menu_list, name) end)
+			table.insert(menu_list, locale_quest(2426))
+
+			local s = select_table(menu_list)
+
+			if table.getn(menu_list) == s then
+				return
+			end
+
+			local skill_name = name_list[s]
+			local skill_vnum = vnum_list[s]
+
+			say_title(item_name(50514))
+			say(string.format(locale_quest(7441), skill_name))
+
+			local s = select(locale_quest(4473), locale_quest(2426))
+			if s == 2 then
+				return
+			end
+
+			if pc.count_item(50514) > 0 then
+				say(string.format(locale_quest(7430), skill_name))
+				say(string.format(locale_quest(7431), skill_name))
+
+				pc.remove_item(50514)
+				pc.set_skill_level(skill_vnum, 1)
+			else
+				char_log(0, "HACK 50514", pc.get_name())
+			end
+		end
+
+		when 50515.use begin
+			if pc.get_skill_group() == 0 then
+				say_title(item_name(50515))
+				say(locale_quest(7428))
+				return
+			end
+
+			if training_passive_skill.GetPassiveSkills(1) then
+				say_title(item_name(50515))
+				say(locale_quest(7435))
+				return
+			end
+
+			say_title(item_name(50515))
+			say(locale_quest(7436))
+
+			local result = training_passive_skill.BuildPassiveSkillList(1)
+
+			local vnum_list = result[1]
+			local name_list = result[2]
+
+			local menu_list = {}
+			table.foreach(name_list, function(i, name) table.insert(menu_list, name) end)
+			table.insert(menu_list, locale_quest(2426))
+
+			local s = select_table(menu_list)
+
+			if table.getn(menu_list) == s then
+				return
+			end
+
+			local skill_name = name_list[s]
+			local skill_vnum = vnum_list[s]
+
+			say_title(item_name(50515))
+			say(string.format(locale_quest(7432), skill_name))
+			say(string.format(locale_quest(7433), skill_name))
+
+			local s = select(locale_quest(4473), locale_quest(2426))
+			if s == 2 then
+				return
+			end
+
+			if pc.count_item(50515) > 0 then
+				say(string.format(locale_quest(7437), skill_name))
+				say(string.format(locale_quest(7438), skill_name))
+
+				pc.remove_item(50515)
+				pc.set_skill_level(skill_vnum, 1)
+			else
+				char_log(0, "HACK 50515", pc.get_name())
+			end
+		end
+
+		when 50525.use begin
+			if pc.get_skill_group() == 0 then
+				say_title(locale_quest(9913))
+				say(locale_quest(9924))
+				return
+			end
+
+			if get_time() < pc.getqf("next_time") then
+				if pc.is_skill_book_no_delay() then
+					say_title(locale_quest(9913))
+					say(locale_quest(9935))
+					wait()
+				else
+					say_title(locale_quest(9913))
+					say(locale_quest(9936))
+					return
+				end
+			end
+
+			local result = training_passive_skill.BuildPassiveSkillList(0, true)
+
+			local vnum_list = result[1]
+			local name_list = result[2]
+
+			if table.getn(vnum_list) == 0 then
+				say_title(locale_quest(9913))
+				say(locale_quest(9937))
+				return
+			end
+
+			say_title(locale_quest(9913))
+			say(locale_quest(9938))
+
+			local menu_list = {}
+			table.foreach(name_list, function(i, name) table.insert(menu_list, name) end)
+			table.insert(menu_list, locale_quest(2426))
+
+			local s = select_table(menu_list)
+
+			if table.getn(menu_list) == s then
+				return
+			end
+
+			local skill_name = name_list[s]
+			local skill_vnum = vnum_list[s]
+			local skill_level = pc.get_skill_level(skill_vnum)
+			local cur_alignment = pc.get_real_alignment()
+			local need_alignment = 1000 + 500 * (skill_level - 30)
+
+			if skill_level == 0 then
+				say_title(locale_quest(9913))
+				say(string.format(locale_quest(7429), skill_name))
+				return
+			end
+
+			if skill_level > 0 and skill_level < 20 then
+				say_title(locale_quest(9913))
+				say(locale_quest(7434))
+				return
+			end
+
+			if skill_level >= 40 then
+				say_title(locale_quest(9913))
+				say(locale_quest(7440))
+				return
+			end
+
+			test_chat(string.format(locale_quest(9939), cur_alignment .. locale_quest(9940) .. need_alignment))
+
+			local title = string.format(locale_quest(9941), skill_name, (skill_level -30 + 1))
+
+			say_title(locale_quest(9913))
+			say(locale_quest(9942))
+
+			if cur_alignment < (-19000 + need_alignment) then
+				say_reward(locale_quest(9914))
+				return
+			end
+
+			if cur_alignment < 0 then
+				say_reward(string.format(locale_quest(9915), need_alignment, need_alignment * 2))
+				say_reward(locale_quest(9916))
+				need_alignment = need_alignment * 2
+			elseif cur_alignment < need_alignment then
+				say_reward(string.format(locale_quest(9917), need_alignment))
+				say_reward(locale_quest(9918))
+			else
+				say_reward(string.format(locale_quest(9917), need_alignment))
+			end
+
+			local s = select(locale_quest(2669), locale_quest(2426))
+			if s == 2 then
+				return
+			end
+
+			if cur_alignment >= 0 and cur_alignment < need_alignment then
+				say_title(title)
+				say_reward(locale_quest(9919))
+				say(locale_quest(9920))
+				say_reward(locale_quest(9921))
+				say(locale_quest(9922))
+				local s = input()
+				s = string.gsub(s, "(%a*)%s*", "%1")
+				s = string.lower(string.gsub(s, "(%a*)%s*", "%1"))
+
+				local t = string.gsub(locale_quest(9912), "(%a*)%s*", "%1")
+				t = string.lower(string.gsub(locale_quest(9912), "(%a*)%s*", "%1"))
+
+				if s != t then
+					return
+				end
+			end
+
+			if get_time() < pc.getqf("next_time") then
+				if pc.is_skill_book_no_delay() then
+					pc.remove_skill_book_no_delay()
+				else
+					say_title(locale_quest(9913))
+					return
+				end
+			end
+
+			pc.setqf("next_time", get_time() + time_hour_to_sec(number(8, 12)))
+
+			if need_alignment > 0 then
+				if pc.count_item(50525) > 0 then
+					if pc.learn_grand_master_skill(skill_vnum) then
+						pc.change_alignment(-need_alignment)
+
+						say_title(title)
+						say_reward(locale_quest(9923))
+
+						if 40 == pc.get_skill_level(skill_vnum) then
+							say(locale_quest(9925))
+							say(string.format(locale_quest(9926), skill_name))
+							say(locale_quest(9927))
+						else
+							say(locale_quest(9928))
+							say(string.format(locale_quest(9929), skill_name, (skill_level -30 + 1 + 1)))
+						end
+						say_reward(locale_quest(9930))
+						say_reward(string.format(locale_quest(9931), need_alignment))
+					else
+						say_title(title)
+						say_reward(locale_quest(9932))
+						say(locale_quest(9933))
+						say_reward(locale_quest(9934))
+						pc.change_alignment(-number(need_alignment / 3, need_alignment / 2))
+					end
+					pc.remove_item(50525)
+				else
+					char_log(0, "HACK 50525", pc.get_name())
+				end
+			end
+		end
+
+		when 71000.use begin
+			if not training_passive_skill.GetPassiveSkills(1) or not training_passive_skill.GetPassiveSkills(2) then
+				say_title(locale_quest(8012))
+				say(locale_quest(8013))
+				return
+			end
+
+			say_title(locale_quest(8012))
+			say(locale_quest(8018))
+			local s = select(locale_quest(4473), locale_quest(2426))
+			if s == 2 then
+				return
+			end
+
+			say_title(locale_quest(8012))
+			say(locale_quest(8020))
+			say_reward(locale_quest(8019))
+			local sa = select(locale_quest(4473), locale_quest(2426))
+			if sa == 2 then
+				return
+			end
+
+			say_title(locale_quest(8012))
+			say(locale_quest(8014))
+			wait()
+
+			if pc.count_item(71000) > 0 then
+				say_title(locale_quest(8012))
+				say(locale_quest(8021))
+				say(locale_quest(8022))
+				say_reward(locale_quest(8023))
+
+				pc.remove_item(71000)
+				training_passive_skill.ResetPassiveSkills()
+			else
+				char_log(0, "HACK 71000", pc.get_name())
+			end
+		end
+
+		function ResetPassiveSkills()
+			local skill_list1 = special.passive_skill_list[1]
+			local skill_list2 = special.passive_skill_list[2]
+
+			for i = 1, table.getn(skill_list1) do
+				local skill_vnum = skill_list1[i]
+				pc.set_skill_level(skill_vnum, 0)
+			end
+
+			for i = 1, table.getn(skill_list2) do
+				local skill_vnum = skill_list2[i]
+				pc.set_skill_level(skill_vnum, 0)
+			end
+		end
+
+		function GetPassiveSkills(group, level)
+			level = level or 0
+			local skill_list = special.passive_skill_list[group]
+			for i = 1, table.getn(skill_list) do
+				local skill_vnum = skill_list[i]
+				if pc.get_skill_level(skill_vnum) > level then
+					return true
+				end
+			end
+			return false
+		end
+
+		function BuildPassiveSkillList(group, learn)
+			group = group or 0
+			learn = learn or false
+
+			GRAND_MASTER_SKILL_LEVEL = 30
+			PERFECT_MASTER_SKILL_LEVEL = 40
+
+			local skill_list = {}
+
+			if group != 0 then
+				skill_list = special.passive_skill_list[group]
+			else
+				local tmp_skill_list1 = special.passive_skill_list[1]
+				local tmp_skill_list2 = special.passive_skill_list[2]
+
+				for i = 1, table.getn(tmp_skill_list1) do
+					local skill_vnum = tmp_skill_list1[i]
+					table.insert(skill_list, skill_vnum)
+				end
+
+				for i = 1, table.getn(tmp_skill_list2) do
+					local skill_vnum = tmp_skill_list2[i]
+					table.insert(skill_list, skill_vnum)
+				end
+			end
+
+			local ret_vnum_list = {}
+			local ret_name_list = {}
+
+			table.foreach(skill_list,
+				function(i, skill_vnum)
+					local skill_level = pc.get_skill_level(skill_vnum)
+					local name = skill_name(skill_vnum)
+					if name == nil then name = skill_vnum end
+					if learn == true then
+						if skill_level >= GRAND_MASTER_SKILL_LEVEL and skill_level < PERFECT_MASTER_SKILL_LEVEL then
+							table.insert(ret_vnum_list, skill_vnum)
+							table.insert(ret_name_list, name)
+						end
+					else
+						table.insert(ret_vnum_list, skill_vnum)
+						table.insert(ret_name_list, name)
+					end
+				end
+			)
+
+			return {ret_vnum_list, ret_name_list}
+		end
+	end
+end

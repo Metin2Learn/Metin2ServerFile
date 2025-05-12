@@ -1,0 +1,7 @@
+if game . get_event_flag ( "cards_event" ) ~= 0 then if ( pc . get_level ( ) - npc . get_level ( ) ) <= 15 or 
+( pc . get_level ( ) - npc . get_level ( ) ) <= - 15 then 
+if number ( 1 , 100 ) <= 5 then 
+game . drop_item_with_ownership ( 79505 ) 
+end 
+end 
+ return end 

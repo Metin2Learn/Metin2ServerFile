@@ -1,0 +1,135 @@
+## ShopEX File Structure
+#
+#
+# Group ShopNPC
+# {
+#	#	VNUM	GROUP
+#	1	9010	EXAMPLE # Shop Group
+# }
+#
+# Group EXAMPLE # Shop Group
+# {
+#	Vnum	101 # Shop Vnum
+#	Name	GM1 # Shop Name
+#	sort	Name # Item Sorting ( Asc | Desc | Vnum | Price | Name | Type )
+#	Group	Items # Shop Items
+#	{
+#		price_type
+#			1 = GOLD
+#			2 = SECONDARY_COIN
+#			3 = ITEM
+#			4 = EXP
+#
+#		price_vnum
+#			0 = None
+#			> 0 = ITEM_VNUM
+#
+#		#--# DEFAULT_HEADER
+#		#--#	vnum	count	price	price_type	price_vnum	...
+#		1		12019	1		1000	1			0			0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+#	}
+# }
+##
+
+Group ShopNPC
+{
+	#--# NPC	Group
+	1	20470	GM01
+	2	20470	GM02
+	3	20470	GM03
+	4	20470	GM04
+}
+
+Group GM01
+{
+	Vnum	101
+	Name	GM1
+	#sort	Name
+	Group	Items
+	{
+		# DO NOT REMOVE THE COMENT LINE BELOW #
+		#--#	vnum	count	price	price_type	price_vnum	socket0 socket1 socket2 socket3 socket4 socket5 attr_type0 attr_value0 attr_type1 attr_value1 attr_type2 attr_value2 attr_type3 attr_value3 attr_type4 attr_value4 attr_type5 attr_value5 attr_type6 attr_value6
+		1	50821	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		2	50822	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		3	50823	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		4	50824	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		5	50825	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		6	50826	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		7	927209	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		8	927212	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		9	950821	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		10	950822	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		11	950823	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		12	950824	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		13	950825	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		14	950826	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		15	951002	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		16	939017	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		17	939018	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		18	939019	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		19	939020	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		20	939024	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		21	939025	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		22	950826	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	}
+}
+
+Group GM02
+{
+	Vnum	102
+	Name	GM2
+	Group	Items
+	{
+		# DO NOT REMOVE THE COMENT LINE BELOW #
+		#--#	vnum	count	price	price_type	price_vnum	socket0 socket1 socket2 socket3 socket4 socket5 attr_type0 attr_value0 attr_type1 attr_value1 attr_type2 attr_value2 attr_type3 attr_value3 attr_type4 attr_value4 attr_type5 attr_value5 attr_type6 attr_value6
+		1	12029	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		2	20259	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		3	20779	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		4	20829	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		5	20879	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		6	20929	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		7	12069	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		8	19499	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		9	21245	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	}
+}
+
+Group GM03
+{
+	Vnum	103
+	Name	GM3
+	Group	Items
+	{
+		# DO NOT REMOVE THE COMENT LINE BELOW #
+		#--#	vnum	count	price	price_type	price_vnum	socket0 socket1 socket2 socket3 socket4 socket5 attr_type0 attr_value0 attr_type1 attr_value1 attr_type2 attr_value2 attr_type3 attr_value3 attr_type4 attr_value4 attr_type5 attr_value5 attr_type6 attr_value6
+		1	12039	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		2	20509	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		3	20789	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		4	20839	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		5	20889	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		6	20939	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		7	12079	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		8	19699	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		9	21265	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	}
+}
+
+Group GM04
+{
+	Vnum	104
+	Name	GM4
+	Group	Items
+	{
+		# DO NOT REMOVE THE COMENT LINE BELOW #
+		#--#	vnum	count	price	price_type	price_vnum	socket0 socket1 socket2 socket3 socket4 socket5 attr_type0 attr_value0 attr_type1 attr_value1 attr_type2 attr_value2 attr_type3 attr_value3 attr_type4 attr_value4 attr_type5 attr_value5 attr_type6 attr_value6
+		1	12049	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		2	20759	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		3	20799	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		4	20849	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		5	20899	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		6	20949	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		7	12089	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		8	19899	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+		9	21285	1	1000	1	0	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+	}
+}

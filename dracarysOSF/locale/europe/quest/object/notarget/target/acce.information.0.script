@@ -1,0 +1,18 @@
+target . delete ( "__TARGET__" ) 
+say_title ( mob_name ( 60003 ) ) 
+say ( locale_quest ( 13 ) ) 
+wait ( ) 
+say_title ( mob_name ( 60003 ) ) 
+say ( locale_quest ( 14 ) ) 
+wait ( ) 
+say_title ( mob_name ( 60003 ) ) 
+say ( locale_quest ( 15 ) ) 
+wait ( ) 
+say_title ( mob_name ( 60003 ) ) 
+say ( locale_quest ( 16 ) ) 
+say_show_item ( 80019 ) 
+if select ( locale_quest ( 1475 ) , locale_quest ( 1476 ) ) == 2 then 
+return 
+end 
+notice_multiline ( locale_quest ( 17 ) , notice ) 
+set_state ( "go_to_captain" ) 

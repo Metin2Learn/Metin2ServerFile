@@ -1,0 +1,29 @@
+quest acce_system begin
+	state start begin
+		when 60003.chat.locale_quest(11823) begin
+			say_title(mob_name(60003))
+			say(locale_quest(11824))
+		end
+		when 60003.chat.locale_quest(11825) begin
+			say_title(mob_name(60003))
+			say(locale_quest(11826))
+			if select(locale.yes, locale.no) == 2 then return end
+			setskin(NOWINDOW)
+			game.open_aura_absorb_window()
+		end
+		when 60003.chat.locale_quest(11827) begin
+			say_title(mob_name(60003))
+			say(locale_quest(11828))
+			if select(locale.yes, locale.no) == 2 then return end
+			setskin(NOWINDOW)
+			game.open_aura_growth_window()
+		end
+		when 60003.chat.locale_quest(11829) begin
+			say_title(mob_name(60003))
+			say(locale_quest(11830))
+			if select(locale.yes, locale.no) == 2 then return end
+			setskin(NOWINDOW)
+			game.open_aura_evolve_window()
+		end
+	end
+end

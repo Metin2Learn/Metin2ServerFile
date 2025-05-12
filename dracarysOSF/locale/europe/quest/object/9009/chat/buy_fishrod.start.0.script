@@ -1,0 +1,21 @@
+say_title ( locale_quest ( 112 ) ) 
+say ( locale_quest ( 118 ) ) 
+local b = select ( locale_quest ( 119 ) , locale_quest ( 120 ) ) 
+if 1 == b then 
+if pc . get_money ( ) >= 3980 then 
+pc . changemoney ( - 3980 ) 
+say_title ( locale_quest ( 112 ) ) 
+say ( locale_quest ( 121 ) ) 
+pc . give_item2 ( 27400 , 1 ) 
+pc . give_item2 ( 27800 , 100 ) 
+pc . give_item2 ( 27801 , 20 ) 
+setstate ( "notify_event" ) 
+else 
+say_title ( locale_quest ( 112 ) ) 
+say ( locale_quest ( 122 ) ) 
+end 
+elseif 2 == b then 
+return 
+else 
+say ( string . format ( locale_quest ( 123 ) , b ) ) 
+end 

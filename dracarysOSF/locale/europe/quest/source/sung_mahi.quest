@@ -1,0 +1,93 @@
+define MYONGHORANG_VNUM 20400 -- Myonghorang (Lycan NPC) VNUM
+define ITEM_ONE_REWARD 27001 -- ITEM_ONE (Red Potions (s)) received upon quest completion
+define ITEM_ONE_REWARD_AMOUNT 10 -- Amount (x10) of received ITEM_ONE upon quest completion
+define PORTAL_GUARD_VNUM 20402 -- Portal Guard (Lycan NPC) VNUM
+define URIEL_VNUM 20011 -- Uriel VNUM
+define EXP_AMOUNT_REWARD 300 -- Amount of received exp upon quest completion
+
+quest sung_mahi begin
+	state start begin end
+	state trigger begin
+		when letter begin
+			send_letter(locale_quest(6397))
+			local v = find_npc_by_vnum(MYONGHORANG_VNUM)
+			if 0 ~= v then
+				target.vid("__TARGET__", v, locale_quest(6397))
+			end
+		end
+
+		when button or info begin
+			say_title(locale_quest(6397))
+			say(locale_quest(6406))
+		end
+
+		when __TARGET__.target.click or MYONGHORANG_VNUM.chat.locale_quest(6397) begin
+			target.delete("__TARGET__")
+			clear_letter()
+
+			say_title(mob_name(MYONGHORANG_VNUM))
+			say()
+			say(locale_quest(6398))
+			set_state(kingdom_of_humans)
+		end
+	end
+
+	state kingdom_of_humans begin
+		when letter begin
+			send_letter(locale_quest(6401))
+			local v = find_npc_by_vnum(PORTAL_GUARD_VNUM)
+			if 0 ~= v then
+				target.vid("__TARGET__", v, locale_quest(6401))
+			end
+		end
+
+		when button or info begin
+			say_title(locale_quest(6401))
+			say(locale_quest(6408))
+		end
+
+		when __TARGET__.target.click or MYONGHORANG_VNUM.chat.locale_quest(6401) begin
+			target.delete("__TARGET__")
+			clear_letter()
+
+			say_title(mob_name(MYONGHORANG_VNUM))
+			say()
+			say(locale_quest(6402))
+		end
+
+		when PORTAL_GUARD_VNUM.chat.locale_quest(6401) begin
+			warp_to_village()
+			set_state(find_uriel)
+		end
+	end
+
+	state find_uriel begin
+		when letter begin
+			send_letter(locale_quest(6403))
+			local v = find_npc_by_vnum(URIEL_VNUM)
+			if 0 ~= v then
+				target.vid("__TARGET__", v, locale_quest(6403))
+			end
+		end
+
+		when button or info begin
+			say_title(locale_quest(6403))
+			say(locale_quest(6404))
+		end
+
+		when __TARGET__.target.click or URIEL_VNUM.chat.locale_quest(6403) begin
+			target.delete("__TARGET__")
+			clear_letter()
+
+			say_title(mob_name(URIEL_VNUM))
+			say()
+			say(locale_quest(6405))
+			say_reward(string.format(locale_quest(6882), EXP_AMOUNT_REWARD))
+			pc.give_exp2(EXP_AMOUNT_REWARD)
+			set_state(__COMPLETE__)
+		end
+	end
+
+	state __COMPLETE__ begin
+	end
+end

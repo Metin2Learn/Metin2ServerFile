@@ -1,0 +1,9 @@
+if pc . count_item ( 80019 ) >= 40 then 
+say ( locale_quest ( 19 ) ) 
+say_show_item ( 85005 ) 
+set_state ( "go_to_captain" ) 
+else 
+say_title ( mob_name ( 60003 ) ) 
+say ( locale_quest ( 2 ) ) 
+return 
+end 

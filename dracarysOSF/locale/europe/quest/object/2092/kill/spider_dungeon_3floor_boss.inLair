@@ -1,0 +1,19 @@
+server_timer ( "spider_dead_timer" , 180 ) 
+game . set_event_flag ( "spider_dead" .. get_channel_id ( ) , 1 ) 
+game . set_event_flag ( "spider_key_dropped" .. get_channel_id ( ) , 0 ) 
+notice_in_map ( 8274 ) 
+if party . is_party ( ) then 
+local pids = { party . get_member_pids ( ) } 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+if pc . getf ( "spider_dungeon_3floor_boss" , "enter_time" ) > 0 then 
+d . update_rank ( 217 , ( get_global_time ( ) - pc . getf ( "spider_dungeon_3floor_boss" , "enter_time" ) ) , pc . get_last_damage ( ) ) 
+pc . setf ( "spider_dungeon_3floor_boss" , "exit_time" , get_global_time ( ) ) 
+end 
+q . end_other_pc_block ( ) 
+end 
+else 
+if pc . getf ( "spider_dungeon_3floor_boss" , "enter_time" ) > 0 then 
+d . update_rank ( 217 , ( get_global_time ( ) - pc . getf ( "spider_dungeon_3floor_boss" , "enter_time" ) ) , pc . get_last_damage ( ) ) 
+end 
+end 

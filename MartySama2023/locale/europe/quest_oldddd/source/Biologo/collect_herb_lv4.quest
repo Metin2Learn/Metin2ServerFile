@@ -1,0 +1,133 @@
+quest make_herb_lv4 begin
+	state start begin
+		when login or levelup with pc.get_level() == 4 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter begin
+			local v = find_npc_by_vnum(20084)
+			if v != 0 then
+				target.vid("__TARGET__", v, locale_quest(195))
+			end
+			send_letter(locale_quest(261))
+		end
+
+		when button or info begin
+			say_title(locale_quest(261))
+			say(locale_quest(278))
+		end
+
+		when __TARGET__.target.click or 20084.chat.locale_quest(210) begin
+			target.delete("__TARGET__")
+			say_title(locale_quest(211))
+			say(locale_quest(285))
+			wait()
+			say_title(locale_quest(211))
+			say(locale_quest(272))
+			set_state(go_to_disciple)
+			pc.setqf("collect_count", 0)
+			--pc.setqf("drink_drug", 0)
+		end
+	end
+
+	state go_to_disciple begin
+		when letter begin
+			send_letter(locale_quest(214))
+		end
+
+		when button or info begin
+			say_title(locale_quest(273))
+			say(locale_quest(274))
+			say_item_vnum(50701)
+			say_reward(string.format(locale_quest(275), pc.getqf("collect_count")))
+		end
+
+		--[[
+		when 71035.use begin
+			if pc.getqf("drink_drug") == 1 then
+				say_title(locale_quest(211))
+				say(locale_quest(276))
+				return
+			end
+
+			if pc.count_item(50701) == 0 then
+				say_title(locale_quest(211))
+				say(locale_quest(277))
+				return
+			end
+
+			pc.remove_item(71035, 1)
+			pc.setqf("drink_drug", 1)
+		end
+		]]
+
+		when 173.kill begin
+			if pc.count_item(50701) < 5 - pc.getqf("collect_count") then
+				pc.give_item2(50701, 1)
+			end
+		end
+
+		when 20084.chat.locale_quest(262) with pc.count_item(50701) > 0 begin
+			say_title(locale_quest(201))
+			say(locale_quest(202))
+			pc.remove_item(50701, 1)
+			wait()
+
+			local pass_percent
+			--if pc.getqf("drink_drug") == 0 then
+			if affect.get_apply_value(400) == nil then
+				pass_percent = 90
+			else
+				pass_percent = 100
+			end
+
+			local s = number(1, 100)
+			if s <= pass_percent then
+				if pc.getqf("collect_count") < 4 then
+					local index = pc.getqf("collect_count") + 1
+					pc.setqf("collect_count", index)
+					say_title(locale_quest(211))
+					say(string.format(locale_quest(263), 5 - pc.getqf("collect_count")))
+					--pc.setqf("drink_drug", 0)
+					affect.remove(400)
+					return
+				end
+
+				say_title(locale_quest(211))
+				say(locale_quest(264))
+				say_title(locale_quest(265))
+				say_reward(locale_quest(266))
+				pc.setqf("collect_count", 0)
+				--pc.setqf("drink_drug", 0)
+				affect.remove(400)
+
+				clear_letter()
+				set_state(__complete)
+
+				if pc.get_job() == 3 then
+					pc.give_item2(07004)
+					say_reward(locale_quest(267))
+					return
+				else
+					pc.give_item2(00014)
+					say_reward(locale_quest(268))
+				end
+
+				pc.change_money(1000)
+				pc.give_exp2(500)
+				--set_quest_state("levelup", "run")
+			else
+				say_title(locale_quest(211))
+				say(locale_quest(269))
+				--pc.setqf("drink_drug", 0)
+				affect.remove(400)
+				return
+			end
+		end
+	end
+
+	state __complete begin
+	end
+end

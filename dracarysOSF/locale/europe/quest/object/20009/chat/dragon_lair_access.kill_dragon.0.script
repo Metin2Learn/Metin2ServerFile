@@ -1,0 +1,7 @@
+if pc . getqf ( "time" ) > 0 and pc . getqf ( "time" ) == game . get_event_flag ( "dragon_lair_time" ) then 
+dragon_lair_access . warp_to_lair ( ) 
+else 
+say_title ( locale_quest ( 6685 ) ) 
+say ( locale_quest ( 882 ) ) 
+set_state ( "start" ) 
+end 

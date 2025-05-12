@@ -1,0 +1,7 @@
+say_title ( locale_quest ( 7465 ) ) 
+say ( locale_quest ( 7476 ) ) 
+if math . random ( 2 ) == 1 then 
+wait ( ) 
+say ( pc . get_name ( ) .. ":" ) 
+say ( locale_quest ( 7487 ) ) 
+end 

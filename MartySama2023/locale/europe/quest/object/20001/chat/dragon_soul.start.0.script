@@ -1,0 +1,4 @@
+target . delete ( "__TARGET__" ) 
+say_title ( mob_name ( 20001 ) ) 
+say ( locale_quest ( 933 ) ) 
+set_state ( "state_learning" ) 

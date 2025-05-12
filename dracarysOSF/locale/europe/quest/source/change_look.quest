@@ -1,0 +1,11 @@
+quest change_look begin
+	state start begin
+		when 60003.chat.gameforge[LC()][165] begin
+			say(gameforge[LC()][166])
+			if select(gameforge[LC()][4473], gameforge[LC()][3418]) == 1 then
+				setskin(NOWINDOW)
+				pc.open_changelook(true)
+			else return end
+		end
+	end
+end

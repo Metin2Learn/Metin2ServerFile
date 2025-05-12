@@ -1,0 +1,16 @@
+if snow_dungeon . is_snowd ( pc . get_map_index ( ) ) and d . getf ( "level" ) == 8 then if d . getf ( "level8_use_key" ) > 0 then 
+test_chat ( "TEST : Key already used!" ) 
+return 
+end 
+local setting = snow_dungeon . setting ( ) 
+if setting . need_assassin or setting . need_shaman then 
+if pc . get_job ( ) ~= ASSASSIN and pc . get_job ( ) ~= SHAMAN then 
+return 
+end 
+end 
+snow_dungeon . level_clear ( ) 
+d . setf ( "level8_use_key" , 1 ) 
+d . notice ( 8171 ) 
+server_timer ( "snow_dungeon_floor9_timer" , 5 , get_server_timer_arg ( ) ) 
+item . remove ( ) 
+ return end 

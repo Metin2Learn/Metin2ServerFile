@@ -1,0 +1,20 @@
+if pc . get_playtime ( ) > pc . getqf ( "duration" ) then 
+pc . give_item2 ( 80019 , 1 ) 
+if pc . count_item ( 80019 ) >= 40 then 
+pc . setqf ( "duration" , 0 ) 
+say_title ( mob_name ( 20355 ) ) 
+say ( locale_quest ( 8 ) ) 
+notice_multiline ( locale_quest ( 8 ) , notice ) 
+set_state ( "reward" ) 
+else 
+pc . setqf ( "duration" , ( pc . get_playtime ( ) + ( 60 * 3 ) ) ) 
+say_title ( mob_name ( 20355 ) ) 
+say ( locale_quest ( 7 ) ) 
+end 
+say_show_item ( 80019 ) 
+else 
+say_title ( mob_name ( 20355 ) ) 
+say ( locale_quest ( 9 ) ) 
+say_reward ( string . format ( locale_quest ( 10 ) .. " %s" , get_playtime_duration ( pc . getqf ( "duration" ) - pc . get_playtime ( ) ) ) ) 
+return 
+end 

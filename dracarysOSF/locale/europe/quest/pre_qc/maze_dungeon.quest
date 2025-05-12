@@ -1,0 +1,85 @@
+quest maze_dungeon begin
+	state start begin
+		function settings()
+			return {
+				["outside_base_pos"] = { 1147800, 532600 },
+				["inside_base_pos"] = {
+					{ 768000, 1203200 }, -- Maze Stage 1
+					{ 844800, 1203200 }, -- Maze Stage 2
+					{ 921600, 1203200 }, -- Maze Stage 3
+				},
+			}
+		end
+
+		function is_inside()
+			return pc.get_map_index() >= 382 and pc.get_map_index() <= 384
+		end
+
+		--<< 20836 >>
+		when 20836.chat.locale_quest(12593) begin
+			local settings = maze_dungeon.settings()
+			say(locale_quest(12594))
+			say_red(locale_quest(12621))
+			say(locale_quest(12622))
+			if select(locale_quest(12595),locale_quest(12596)) == 1 then
+				-- Check champion level.
+				if pc.get_conqueror_level() <= 0 then
+					say(locale_quest(12618))
+					return
+				end
+
+				-- Check ticket.
+				local canPass = false
+
+				local ticketGroup = { get_special_item_group(10033) }
+				for i = 1, table.getn(ticketGroup), 2 do
+					if pc.count_item(ticketGroup[i]) >= ticketGroup[i + 1] then
+						canPass = true
+						break
+					end
+				end
+
+				if not canPass then
+					say(locale_quest(12597))
+					return
+				end
+
+				for i = 1, table.getn(ticketGroup), 2 do
+					if pc.count_item(ticketGroup[i]) >= ticketGroup[i + 1] then
+						pc.remove_item(ticketGroup[i], ticketGroup[i + 1])
+						break
+					end
+				end
+
+				pc.warp(settings.inside_base_pos[1][1], settings.inside_base_pos[1][2])
+			else return end
+		end
+
+		--<< 20837 >>
+		when 20837.chat.locale_quest(12593) with maze_dungeon.is_inside() begin
+			local settings = maze_dungeon.settings()
+			say(locale_quest(12598))
+			if select(locale_quest(6555), locale_quest(6556)) == 1 then
+				pc.warp(settings.outside_base_pos[1], settings.outside_base_pos[2])
+			else return end
+		end
+
+		--<< 20838 >>
+		when 20838.chat.locale_quest(12593) with maze_dungeon.is_inside() begin
+			local settings = maze_dungeon.settings()
+			say(locale_quest(12599))
+			if select(locale_quest(6555), locale_quest(6556)) == 1 then
+				pc.warp(settings.inside_base_pos[2][1], settings.inside_base_pos[2][2])
+			else return end
+		end
+
+		--<< 20839 >>
+		when 20839.chat.locale_quest(12593) with maze_dungeon.is_inside() begin
+			local settings = maze_dungeon.settings()
+			say(locale_quest(12600))
+			if select(locale_quest(6555), locale_quest(6556)) == 1 then
+				pc.warp(settings.inside_base_pos[3][1], settings.inside_base_pos[3][2])
+			else return end
+		end
+	end
+end

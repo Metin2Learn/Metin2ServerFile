@@ -1,0 +1,26 @@
+quest beta_notice begin
+	state start begin
+		when login begin
+			timer("show_info1", 8)
+		end
+
+		when show_info1.timer begin
+			notice_mission("OSF V5 - Patch 10")
+			timer("show_info2", 10)
+		end
+
+		when show_info2.timer begin
+			notice_mission("Please report any bugs on Trello Board.")
+			timer("show_info3", 5)
+		end
+
+		when show_info3.timer begin
+			notice_mission("You can find a GM shop in the center of the village.")
+			timer("show_info4", 5)
+		end
+
+		when show_info4.timer begin
+			notice_mission("")
+		end
+	end
+end

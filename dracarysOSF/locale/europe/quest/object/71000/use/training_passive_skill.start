@@ -1,0 +1,31 @@
+if not training_passive_skill . GetPassiveSkills ( 1 ) or not training_passive_skill . GetPassiveSkills ( 2 ) then 
+say_title ( locale_quest ( 8012 ) ) 
+say ( locale_quest ( 8013 ) ) 
+return 
+end 
+say_title ( locale_quest ( 8012 ) ) 
+say ( locale_quest ( 8018 ) ) 
+local s = select ( locale_quest ( 4473 ) , locale_quest ( 2426 ) ) 
+if s == 2 then 
+return 
+end 
+say_title ( locale_quest ( 8012 ) ) 
+say ( locale_quest ( 8020 ) ) 
+say_reward ( locale_quest ( 8019 ) ) 
+local sa = select ( locale_quest ( 4473 ) , locale_quest ( 2426 ) ) 
+if sa == 2 then 
+return 
+end 
+say_title ( locale_quest ( 8012 ) ) 
+say ( locale_quest ( 8014 ) ) 
+wait ( ) 
+if pc . count_item ( 71000 ) > 0 then 
+say_title ( locale_quest ( 8012 ) ) 
+say ( locale_quest ( 8021 ) ) 
+say ( locale_quest ( 8022 ) ) 
+say_reward ( locale_quest ( 8023 ) ) 
+pc . remove_item ( 71000 ) 
+training_passive_skill . ResetPassiveSkills ( ) 
+else 
+char_log ( 0 , "HACK 71000" , pc . get_name ( ) ) 
+end 

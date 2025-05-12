@@ -1,0 +1,12 @@
+say_title ( locale_quest ( 2027 ) ) 
+say ( locale_quest ( 2028 ) ) 
+local a = select ( locale_quest ( 2625 ) , locale_quest ( 2600 ) ) 
+if a == 1 then 
+say_title ( locale_quest ( 2027 ) ) 
+say ( locale_quest ( 2029 ) ) 
+wait ( ) 
+pc . warp ( 284460 , 810495 ) 
+return 
+end 
+say_title ( locale_quest ( 2027 ) ) 
+say ( locale_quest ( 2030 ) ) 

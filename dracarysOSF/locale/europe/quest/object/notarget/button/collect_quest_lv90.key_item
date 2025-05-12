@@ -1,0 +1,11 @@
+if pc . count_item ( 30227 ) > 0 then 
+say_title ( locale_quest ( 595 ) ) 
+say ( locale_quest ( 596 ) ) 
+return 
+end 
+say_title ( locale_quest ( 597 ) ) 
+say ( locale_quest ( 598 ) ) 
+say_item_vnum ( 30227 ) 
+say ( locale_quest ( 599 ) ) 
+say ( string . format ( "%s, %s, %s," , mob_name ( 1304 ) , mob_name ( 1093 ) , mob_name ( 1901 ) ) ) 
+say ( string . format ( "%s, %s, %s" , mob_name ( 3090 ) , mob_name ( 3290 ) , mob_name ( 3590 ) ) ) 

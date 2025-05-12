@@ -1,0 +1,33 @@
+quest temple_ochao_zone begin
+	state start begin
+		when login or levelup with pc.get_level() >= 95 begin
+			set_state(zone_enter)
+		end
+	end
+
+	state zone_enter begin
+		when login with pc.get_map_index() == 354 begin
+			temple_ochao.initialize()
+		end
+
+		when 20408.chat.locale_quest(800) begin
+			say(locale_quest(801))
+			local s = select(locale_quest(4473), locale_quest(3418))
+			if s == 1 then
+				if pc.get_level() >= 95 then
+					pc.warp(854800, 1416500)
+				else
+					say(locale_quest(802))
+				end
+			end
+		end
+
+		when 20415.chat.locale_quest(804) begin
+			say(locale_quest(803))
+			local s = select(locale_quest(4473), locale_quest(3418))
+			if s == 1 then
+				pc.warp(817900, 1505000)
+			end
+		end
+	end
+end

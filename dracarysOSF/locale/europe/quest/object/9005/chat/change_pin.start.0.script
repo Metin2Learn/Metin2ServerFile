@@ -1,0 +1,35 @@
+say_title ( mob_name ( 9005 ) ) 
+say ( "Do you want to change your PIN Code?" ) 
+if select ( "Yes" , "No" ) == 1 then 
+if pc . getqf ( "cooldown" ) > get_global_time ( ) and not pc . is_gm ( ) then 
+say_title ( mob_name ( 9005 ) ) 
+say ( "You have changed your PIN Code recently." ) 
+say_reward ( string . format ( "Time remaining: %s" , wait_time_to_str ( pc . getqf ( "cooldown" ) ) ) ) 
+return 
+end 
+local currentPIN 
+local newPIN 
+repeat 
+say_title ( mob_name ( 9005 ) ) 
+say ( "Insert your current code." ) 
+currentPIN = tonumber ( input ( ) ) 
+say_title ( mob_name ( 9005 ) ) 
+say ( "Insert your new Pin Code." ) 
+newPIN = tonumber ( input ( ) ) 
+if change_pin . isPinCode ( currentPIN ) and change_pin . isPinCode ( newPIN ) then 
+say_title ( mob_name ( 9005 ) ) 
+say_yellow ( string . format ( "%s -> %s" , currentPIN , newPIN ) ) 
+if pc . change_pin ( currentPIN , newPIN ) then 
+say_reward ( "Your Pin Code has been changed." ) 
+pc . setqf ( "cooldown" , get_global_time ( ) + 60 * 60 * 24 * 1 ) 
+else 
+say_reward ( "Your current Pin Code is incorrect." ) 
+if select ( "Try again" , "Cancel" ) == 2 then return end 
+end 
+else 
+say_title ( mob_name ( 9005 ) ) 
+say_reward ( "The Pin Code is invalid." ) 
+if select ( "Try again" , "Cancel" ) == 2 then return end 
+end 
+until change_pin . isPinCode ( currentPIN ) and change_pin . isPinCode ( newPIN ) 
+else return end 

@@ -1,0 +1,292 @@
+quest erebus_dungeon begin
+	state start begin
+		function setting()
+			return
+			{
+				["dungeon_entry_pos"] = { 7782, 15021 },
+				["boss_pos"] = { 69, 941 },
+				["outside_entry_pos"] = { 8298, 14187 }
+			}
+		end
+
+		function is_erebus(idx)
+			return idx >= 353 * 10000 and idx < (353 + 1) * 10000
+		end
+
+		function make_dungeon()
+			local setting = erebus_dungeon.setting()
+			d.new_jump_party(353, setting.dungeon_entry_pos[1], setting.dungeon_entry_pos[2])
+		end
+
+		function level_clear()
+			d.clear_regen()
+		end
+
+		function clear_timer(inx)
+			clear_server_timer("erebus_dungeon_0m_left_timer", inx)
+			clear_server_timer("erebus_dungeon_1m_left_timer", inx)
+			clear_server_timer("erebus_dungeon_5m_left_timer", inx)
+			clear_server_timer("erebus_dungeon_10m_left_timer", inx)
+			clear_server_timer("erebus_dungeon_15m_left_timer", inx)
+			clear_server_timer("erebus_dungeon_30m_left_timer", inx)
+			clear_server_timer("erebus_dungeon_45m_left_timer", inx)
+			--clear_server_timer("erebus_dungeon_ticket_remove", inx)
+		end
+
+		when login begin
+			local idx = pc.get_map_index()
+			local setting = erebus_dungeon.setting()
+			if erebus_dungeon.is_erebus(idx) then
+				pc.set_warp_location(0, 0, 0)
+				pc.set_warp_location(353, setting.outside_entry_pos[1], setting.outside_entry_pos[2])
+
+				if d.getf("dungeon_enter") == 0 then
+					if get_global_time() - pc.getf("erebus_dungeon", "exit_time") < 120 * 60 then
+						timer("erebus_dungeon_warp_timer", 5)
+						return
+					elseif pc.count_item(30613) < 1 then
+						timer("erebus_dungeon_warp_timer", 5)
+						return
+					elseif pc.get_level() < 95 then
+						timer("erebus_dungeon_warp_timer", 5)
+						return
+					end
+
+					if erebus_dungeon.is_erebus(idx) and d.getf("level") == 0 then
+						if party.is_leader() then
+							d.setf("level", 1)
+							d.spawn_mob(6408, setting.boss_pos[1], setting.boss_pos[2])
+							server_timer("erebus_dungeon_45m_left_timer", 15 * 60, d.get_map_index())
+
+							local pids = { party.get_member_pids() }
+							for i, pid in next, pids, nil do
+								q.begin_other_pc_block(pid)
+								local canPass = false
+
+								if pc.count_item(30613) >= 1 then
+									canPass = true
+									pc.remove_item(30613, 1)
+								end
+
+								if not canPass then
+									pc.warp((setting.outside_entry_pos[1] * 100), (setting.outside_entry_pos[2] * 100), 353)
+								end
+								q.end_other_pc_block()
+							end
+
+							d.setqf2("erebus_dungeon", "ticket_delete", 1)
+							d.setf("dungeon_enter", 1)
+
+							party.setf("dungeon_index", d.get_map_index())
+							d.setf("party_leader_pid", party.get_leader_pid())
+						end
+					end
+				elseif pc.getf("erebus_dungeon", "ticket_delete") == 0 then
+					pc.remove_item(30613, 1)
+					pc.setf("erebus_dungeon", "ticket_delete", 1)
+				end
+
+				-- DUNGEON_MANAGER_RANKING
+				if pc.getf("erebus_dungeon", "entered") != 1 then
+					pc.setf("erebus_dungeon", "entered", 1)
+					pc.setf("erebus_dungeon", "enter_time", get_global_time())
+				end
+				-- END_OF_DUNGEON_MANAGER_RANKING
+			else
+				pc.setf("erebus_dungeon", "ticket_delete", 0)
+			end
+		end
+
+		when erebus_dungeon_warp_timer.timer begin
+			local setting = erebus_dungeon.setting()
+			pc.warp((setting.outside_entry_pos[1] * 100), (setting.outside_entry_pos[2] * 100), 353)
+		end
+
+		when logout begin
+			local idx = pc.get_map_index()
+			if erebus_dungeon.is_erebus(idx) then
+				if d.getf("dungeon_enter") == 1 then
+					pc.setf("erebus_dungeon", "exit_time", get_global_time())
+					-- DUNGEON_MANAGER_RANKING
+					pc.setf("erebus_dungeon", "entered", 0)
+					pc.setf("erebus_dungeon", "enter_time", 0)
+					-- END_OF_DUNGEON_MANAGER_RANKING
+				end
+			end
+		end
+
+		when 6408.kill with erebus_dungeon.is_erebus(pc.get_map_index()) and d.getf("level") == 1 begin
+			local setting = erebus_dungeon.setting()
+			erebus_dungeon.level_clear()
+			server_timer("erebus_dungeon_1m_left_to_final_boss_spawn", 60, d.get_map_index())
+			d.setf("level", 2)
+		end
+
+		when erebus_dungeon_1m_left_to_final_boss_spawn.server_timer begin
+			local setting = erebus_dungeon.setting()
+			if d.select(get_server_timer_arg()) then
+				d.spawn_mob(6192, setting.boss_pos[1], setting.boss_pos[2])
+			end
+		end
+
+		when 6192.kill with erebus_dungeon.is_erebus(d.get_map_index()) and d.getf("level") == 2 begin
+			local setting = erebus_dungeon.setting()
+
+			-- DUNGEON_MANAGER_RANKING
+			local pids = { party.get_member_pids() }
+			for i, pid in next, pids, nil do
+				q.begin_other_pc_block(pid)
+				if pc.getf("erebus_dungeon", "enter_time") > 0 then
+					d.update_rank(353, (get_global_time() - pc.getf("erebus_dungeon", "enter_time")), pc.get_last_damage())
+				end
+				q.end_other_pc_block()
+			end
+			-- END_OF_DUNGEON_MANAGER_RANKING
+
+			server_timer("erebus_dungeon_end_timer", 60, d.get_map_index())
+			erebus_dungeon.level_clear()
+
+			if party.is_party() then
+				party.setf("erebus_dungeon_boss_kill_count", 1)
+			end
+		end
+
+		when erebus_dungeon_end_timer.server_timer begin
+			local setting = erebus_dungeon.setting()
+			if d.select(get_server_timer_arg()) then
+				erebus_dungeon.clear_timer(d.get_map_index())
+				d.set_warp_location(353, setting.outside_entry_pos[1], setting.outside_entry_pos[2])
+				d.exit_all()
+				d.setf("party_leader_pid", 0)
+			end
+		end
+
+		when 20412.chat."TEST : Init time limit init" with is_test_server() begin
+			pc.setf("erebus_dungeon", "exit_time", get_global_time() - 120 * 60)
+			say("Done")
+		end
+
+		when 20412.chat.locale_quest(799) with pc.get_map_index() == 353 begin
+			local setting = erebus_dungeon.setting()
+			if party.is_party() then
+				local pids = {party.get_member_pids()}
+				local noTicketMembers = {}
+				local notEnoughLevelMembers = {}
+				local ridingMembers = {}
+				local ticketCheck = true
+				local levelCheck = true
+				local rideCheck = true
+
+				for i, pid in next, pids, nil do
+					q.begin_other_pc_block(pid)
+					local canPass = false
+
+					if pc.count_item(30613) >= 1 then
+						canPass = true
+					end
+
+					if not canPass then
+						table.insert(noTicketMembers, pc.get_name())
+						ticketCheck = false
+					end
+
+					if pc.get_level() < 95 then
+						table.insert(notEnoughLevelMembers, pc.get_name())
+						levelCheck = false
+					end
+
+					if pc.is_riding() == true then
+						table.insert(ridingMembers, pc.get_name())
+						rideCheck = false
+					end
+					q.end_other_pc_block()
+				end
+
+				if not ticketCheck then
+					say_title(mob_name(20412))
+					say(locale_quest(795))
+					for i, name in next, noTicketMembers, nil do
+						say(color(1, 1, 0), locale_quest(796) .. "    " .. name)
+					end
+					return
+				end
+
+				if not levelCheck then
+					say_title(mob_name(20412))
+					say(locale_quest(797))
+					for i, name in next, notEnoughLevelMembers, nil do
+						say(color(1, 1, 0), locale_quest(796) .. "    " .. name)
+					end
+					return
+				end
+
+				if not rideCheck then
+					say_title(mob_name(20412))
+					say(locale_quest(791))
+					for i, name in next, ridingMembers, nil do
+						say(color(1, 1, 0), locale_quest(796) .. "    " .. name)
+					end
+					return
+				end
+
+				if party.is_leader() then
+					if party.get_near_count() < 2 then
+						say(string.format(locale_quest(793), 2))
+						return
+					end
+
+					say(locale_quest(794))
+					local warp = select(locale_quest(4473), locale_quest(3418))
+					if warp == 1 then
+						if party.is_map_member_flag_lt("exit_time", get_global_time() - 120 * 60) then
+							party.setf("erebus_dungeon_boss_kill_count", 0)
+							erebus_dungeon.make_dungeon()
+						else
+							say(locale_quest(798))
+						end
+					end
+				else
+					say(locale_quest(792))
+				end
+			else
+				say(locale_quest(790))
+			end
+		end
+
+		when erebus_dungeon_45m_left_timer.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				server_timer("erebus_dungeon_30m_left_timer", 15 * 60, get_server_timer_arg())
+			end
+		end
+
+		when erebus_dungeon_30m_left_timer.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				server_timer("erebus_dungeon_15m_left_timer", 15 * 60, get_server_timer_arg())
+			end
+		end
+		when erebus_dungeon_15m_left_timer.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				server_timer("erebus_dungeon_5m_left_timer", 10 * 60, get_server_timer_arg())
+			end
+		end
+
+		when erebus_dungeon_5m_left_timer.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				server_timer("erebus_dungeon_1m_left_timer", 4 * 60, get_server_timer_arg())
+			end
+		end
+
+		when erebus_dungeon_1m_left_timer.server_timer begin
+			if d.select(get_server_timer_arg()) then
+				server_timer("erebus_dungeon_0m_left_timer", 60, get_server_timer_arg())
+			end
+		end
+
+		when erebus_dungeon_0m_left_timer.server_timer begin
+			local setting = erebus_dungeon.setting()
+			if d.select(get_server_timer_arg()) then
+				server_timer("erebus_dungeon_end_timer", 10, d.get_map_index())
+			end
+		end
+	end
+end

@@ -1,0 +1,21 @@
+local setting = snow_dungeon . setting ( ) 
+if party . is_leader ( ) then 
+if d . getf ( "started" ) == 0 then 
+say ( locale_quest ( 8168 ) ) 
+d . setf ( "level" , 1 ) 
+d . setf ( "started" , 1 ) 
+d . setf ( "dungeon_enter" , 1 ) 
+if pc . getf ( "snow_dungeon" , "entered" ) ~= 1 then 
+pc . setf ( "snow_dungeon" , "entered" , 1 ) 
+pc . setf ( "snow_dungeon" , "enter_time" , get_global_time ( ) ) 
+end 
+party . setf ( "dungeon_index" , d . get_map_index ( ) ) 
+d . setf ( "party_leader_pid" , party . get_leader_pid ( ) ) 
+server_timer ( "snow_dungeon_45m_left_timer" , 15 * 60 , d . get_map_index ( ) ) 
+d . notice ( 8169 ) 
+d . regen_file ( "data/dungeon/snow_dungeon/" .. "sd_1.txt" ) 
+server_loop_timer ( "snow_dungeon_check_timer" , setting . floor_check_delay , d . get_map_index ( ) ) 
+end 
+else 
+say ( locale_quest ( 8209 ) ) 
+end 

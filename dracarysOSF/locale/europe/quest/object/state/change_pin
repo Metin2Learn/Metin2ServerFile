@@ -1,0 +1,8 @@
+change_pin={["start"]=0,isPinCode= function (pinCode)if not is_valid_number ( pinCode ) then 
+return false 
+end 
+if pinCode > 999 and pinCode < 10000 then 
+return true 
+end 
+return false 
+end }

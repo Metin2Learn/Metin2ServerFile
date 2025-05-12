@@ -1,0 +1,12 @@
+say_title ( locale_quest ( 12780 ) ) 
+say ( locale_quest ( 12783 ) ) 
+say ( locale_quest ( 13174 ) ) 
+if select ( locale_quest ( 12784 ) , locale_quest ( 12785 ) ) == 1 then 
+if pc . get_gold ( ) < 5000 then 
+say_title ( locale_quest ( 12780 ) ) 
+say ( locale_quest ( 13179 ) ) 
+return 
+end 
+pc . changegold ( - 5000 ) 
+pc . warp ( 0 , 358400 ) 
+else return end 

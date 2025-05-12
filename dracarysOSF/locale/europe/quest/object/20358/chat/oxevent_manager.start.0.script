@@ -1,0 +1,75 @@
+local stat = oxevent . get_status ( ) 
+if stat == 0 then 
+say ( locale_quest ( 1006 ) ) 
+local choice = select ( "1> min " .. oxevent_manager . enter_level ( 1 , 1 ) .. " max " .. oxevent_manager . enter_level ( 1 , 2 ) , "2> min " .. oxevent_manager . enter_level ( 2 , 1 ) .. " max " .. oxevent_manager . enter_level ( 2 , 2 ) , "3> min " .. oxevent_manager . enter_level ( 3 , 1 ) .. " max " .. oxevent_manager . enter_level ( 3 , 2 ) , "4> min " .. oxevent_manager . enter_level ( 4 , 1 ) .. " max " .. oxevent_manager . enter_level ( 4 , 2 ) , "5> min " .. oxevent_manager . enter_level ( 5 , 1 ) .. " max " .. oxevent_manager . enter_level ( 5 , 2 ) , locale_quest ( 2426 ) ) 
+if choice == 6 then 
+return 
+end 
+say ( locale_quest ( 1007 ) ) 
+local amount_choice = input_number ( locale_quest ( 1015 ) ) 
+if amount_choice > 200 or amount_choice <= 0 then 
+say ( locale_quest ( 1016 ) ) 
+return 
+end 
+say ( locale_quest ( 7587 ) ) 
+say ( locale_quest ( 1009 ) ) 
+say ( locale_quest ( 1010 ) .. " " .. oxevent_manager . enter_level ( choice , 1 ) .. " - " .. oxevent_manager . enter_level ( choice , 2 ) ) 
+say ( locale_quest ( 1011 ) .. " " .. amount_choice ) 
+local s = select ( locale_quest ( 7588 ) , locale_quest ( 2426 ) ) 
+if s == 1 then 
+local v = oxevent . open ( ) 
+if v == 0 then 
+say ( locale_quest ( 7548 ) ) 
+say_reward ( locale_quest ( 7549 ) ) 
+elseif v == 1 then 
+say ( locale_quest ( 7550 ) ) 
+notice_all ( 7551 ) 
+notice_all ( 7552 ) 
+game . set_event_flag ( "ox_map_level_min" , oxevent_manager . enter_level ( choice , 1 ) ) 
+game . set_event_flag ( "ox_map_level_max" , oxevent_manager . enter_level ( choice , 2 ) ) 
+game . set_event_flag ( "ox_map_player_max" , amount_choice ) 
+else 
+say ( locale_quest ( 7548 ) ) 
+end 
+end 
+elseif stat == 1 then 
+say ( string . format ( locale_quest ( 7553 ) , oxevent . get_attender ( ) ) ) 
+local s = select ( locale_quest ( 7554 ) , locale_quest ( 2426 ) ) 
+if s == 1 then 
+oxevent . close ( ) 
+say ( locale_quest ( 7555 ) ) 
+end 
+elseif stat == 2 then 
+say ( locale_quest ( 7556 ) ) 
+local s = select ( 
+locale_quest ( 7557 ) , 
+locale_quest ( 7558 ) , 
+locale_quest ( 7559 ) , 
+locale_quest ( 2426 ) 
+) 
+if s == 1 then 
+local v = oxevent . quiz ( 1 , 30 ) 
+if v == 0 then 
+say ( locale_quest ( 7561 ) ) 
+elseif v == 1 then 
+say ( locale_quest ( 7562 ) ) 
+else 
+say ( locale_quest ( 7563 ) ) 
+end 
+elseif s == 2 then 
+oxevent_manager . cleanup_event ( ) 
+say ( locale_quest ( 7564 ) ) 
+notice_all ( 7565 ) 
+notice_all ( 7566 ) 
+elseif s == 3 then 
+oxevent_manager . cleanup_event ( ) 
+say ( locale_quest ( 7567 ) ) 
+notice_all ( 7568 ) 
+notice_all ( 7569 ) 
+end 
+elseif stat == 3 then 
+say ( locale_quest ( 7570 ) ) 
+say_reward ( locale_quest ( 7571 ) ) 
+else 
+say ( locale_quest ( 7572 ) ) 
+end 

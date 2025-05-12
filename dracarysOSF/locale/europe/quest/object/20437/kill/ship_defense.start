@@ -1,0 +1,4 @@
+if ship_defense . in_dungeon ( pc . get_map_index ( ) ) then if ship_defense_mgr . spawn_wood_repair ( ) then 
+game . drop_item ( 31107 , 1 ) 
+end 
+ return end 

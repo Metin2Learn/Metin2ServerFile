@@ -1,0 +1,509 @@
+quest skill_group begin
+	state start begin
+		when login or levelup with pc.get_level() >= 5 and pc.get_skill_group() == 0 begin
+			set_state(run)
+		end
+	end
+
+	state run begin
+		when login with pc.get_skill_group() != 0 begin
+			restart_quest()
+		end
+
+		when letter with pc.get_skill_group() == 0 begin
+			send_letter(locale_quest(8077))
+			local job = pc.get_job()
+
+			if job == 0 then
+				local v = pc_find_skill_teacher_vid(1)
+				if 0 != v then target.vid("teacher1", v, locale_quest(8088)) end
+				local v = pc_find_skill_teacher_vid(2)
+				if 0 != v then target.vid("teacher2", v, locale_quest(8099)) end
+			elseif job == 1 then
+				local v = pc_find_skill_teacher_vid(1)
+				if 0 != v then target.vid("teacher3", v, locale_quest(8110)) end
+				local v = pc_find_skill_teacher_vid(2)
+				if 0 != v then target.vid("teacher4", v, locale_quest(8121)) end
+			elseif job == 2 then
+				local v = pc_find_skill_teacher_vid(1)
+				if 0 != v then target.vid("teacher5", v, locale_quest(8132)) end
+				local v = pc_find_skill_teacher_vid(2)
+				if 0 != v then target.vid("teacher6", v, locale_quest(8143)) end
+			elseif job == 3 then
+				local v = pc_find_skill_teacher_vid(1)
+				if 0 != v then target.vid("teacher7", v, locale_quest(8151)) end
+				local v = pc_find_skill_teacher_vid(2)
+				if 0 != v then target.vid("teacher8", v, locale_quest(8152)) end
+			clear_letter()
+			end
+		end
+
+		when leave begin
+			target.delete("teacher1")
+			target.delete("teacher2")
+			target.delete("teacher3")
+			target.delete("teacher4")
+			target.delete("teacher5")
+			target.delete("teacher6")
+			target.delete("teacher7")
+			target.delete("teacher8")
+		end
+
+		when button or info begin
+			if pc.get_job() == 0 then
+				say_title(locale_quest(8078))
+				say(locale_quest(8079))
+			elseif pc.get_job() == 1 then
+				say_title(locale_quest(8080))
+				say(locale_quest(8081))
+			elseif pc.get_job() == 2 then
+				say_title(locale_quest(8082))
+				say(locale_quest(8083))
+			elseif pc.get_job() == 3 then
+				say_title(locale_quest(8084))
+				say(locale_quest(8085))
+			end
+
+			select(locale_quest(2454))
+			setskin(NOWINDOW)
+		end
+
+		when teacher1.target.click or
+			20300.chat.locale_quest(8086) or
+			20320.chat.locale_quest(8086) or
+			20340.chat.locale_quest(8086) begin
+			target.delete("teacher1")
+
+			local pc_job = pc.get_job()
+			if pc_job != 0 then -- !!!
+				say_title(locale_quest(8087))
+
+				say(locale_quest(8089))
+				if pc_job == 0 then
+					say_reward(locale_quest(8090))
+				elseif pc_job == 1 then
+					say_reward(locale_quest(8091))
+				elseif pc_job == 2 then
+					say_reward(locale_quest(8092))
+				elseif pc_job == 3 then
+					say_reward(locale_quest(8093))
+				end
+				return
+			end
+
+			say_title(locale_quest(8094))
+			say(locale_quest(8095))
+			say_reward(locale_quest(8096))
+
+			local s = select(locale_quest(8097), locale_quest(8098))
+
+			if 2 == s then
+				return
+			end
+
+			if pc.get_job() != 0 or pc.get_skill_group() != 0 then
+				test_chat(string.format(locale_quest(8100), bool_to_str(npc_is_same_job()) .. "pc.get_skill_group:" .. pc.get_skill_group().."pc_job:" .. pc.get_job()))
+				return
+			end
+
+			set_state("start")
+			pc.set_skill_group(1) -- !!!
+			pc.clear_skill()
+			char_log(0, "CLEAR_SKILL", "Cleared skill by teacher")
+
+			say_title(locale_quest(8101))
+
+			say(locale_quest(8102))
+			if not pc.is_clear_skill_group() then
+				say(locale_quest(8103))
+				say_title(locale_quest(114))
+				say_reward(locale_quest(8104))
+			else
+				say_reward(locale_quest(8105))
+			end
+			clear_letter()
+		end
+
+		when teacher2.target.click or
+			20301.chat.locale_quest(8106) or
+			20321.chat.locale_quest(8106) or
+			20341.chat.locale_quest(8106) begin
+			target.delete("teacher2")
+
+			local pc_job = pc.get_job()
+			if pc_job != 0 then
+				say_title(locale_quest(8107))
+
+				say(locale_quest(8108))
+				if pc_job == 0 then
+					say_reward(locale_quest(8090))
+				elseif pc_job == 1 then
+					say_reward(locale_quest(8109))
+				elseif pc_job == 2 then
+					say_reward(locale_quest(8092))
+				elseif pc_job == 3 then
+					say_reward(locale_quest(8093))
+				end
+				return
+			end
+
+			say_title(locale_quest(8111))
+			say(locale_quest(8112))
+			say_reward(locale_quest(8096))
+
+			local s = select(locale_quest(8097), locale_quest(8098))
+			if 2 == s then
+				return
+			end
+
+			if pc.get_job() != 0 or pc.get_skill_group() != 0 then
+				test_chat(string.format(locale_quest(8100), bool_to_str(npc_is_same_job()) .. "pc.get_skill_group:" .. pc.get_skill_group() .. "pc_job:" .. pc.get_job()))
+				return
+			end
+
+			set_state("start")
+			pc.set_skill_group(2)
+			pc.clear_skill()
+			char_log(0, "CLEAR_SKILL", "Cleared skill by teacher")
+
+			say_title(locale_quest(8113))
+
+			say(locale_quest(8102))
+			if not pc.is_clear_skill_group() then
+				say(locale_quest(8103))
+				say_title(locale_quest(114))
+				say_reward(locale_quest(8104))
+			else
+				say_reward(locale_quest(8105))
+			end
+			clear_letter()
+		end
+
+		when teacher3.target.click or
+			20302.chat.locale_quest(8114) or
+			20322.chat.locale_quest(8114) or
+			20342.chat.locale_quest(8114) begin
+			target.delete("teacher3")
+
+			local pc_job = pc.get_job()
+			if pc_job != 1 then -- !!!
+				say_title(locale_quest(8087))
+
+				say(locale_quest(8115))
+				if pc_job == 0 then
+					say_reward(locale_quest(8090))
+				elseif pc_job == 1 then
+					say_reward(locale_quest(8091))
+				elseif pc_job == 2 then
+					say_reward(locale_quest(8092))
+				elseif pc_job == 3 then
+					say_reward(locale_quest(8093))
+				end
+				return
+			end
+
+			say_title(locale_quest(8116))
+			say(locale_quest(8117))
+			say_reward(locale_quest(8118))
+
+			local s = select(locale_quest(8097), locale_quest(8098))
+			if 2 == s then
+				return
+			end
+
+			if pc.get_job() != 1 or pc.get_skill_group() != 0 then
+				test_chat(string.format(locale_quest(8100), bool_to_str(npc_is_same_job()) .. "pc.get_skill_group:" .. pc.get_skill_group() .. "pc_job:" .. pc.get_job()))
+				return
+			end
+
+			set_state("start")
+			pc.set_skill_group(1) -- !!!
+			pc.clear_skill()
+			char_log(0, "CLEAR_SKILL", "Cleared skill by teacher")
+
+			say_title(locale_quest(8119))
+
+			say(locale_quest(8102))
+			if not pc.is_clear_skill_group() then
+				say(locale_quest(8120))
+				say_title(locale_quest(114))
+				say_reward(locale_quest(8104))
+			else
+				say_reward(locale_quest(8105))
+			end
+			clear_letter()
+		end
+
+		when teacher4.target.click or
+			20303.chat.locale_quest(8122) or
+			20323.chat.locale_quest(8122) or
+			20343.chat.locale_quest(8122) begin
+			target.delete("teacher4")
+
+			local pc_job = pc.get_job()
+			if pc_job != 1 then -- !!!
+				say_title(locale_quest(8087))
+
+				say(locale_quest(8123))
+				if pc_job == 0 then
+					say_reward(locale_quest(8090))
+				elseif pc_job == 1 then
+					say_reward(locale_quest(8091))
+				elseif pc_job == 2 then
+					say_reward(locale_quest(8092))
+				elseif pc_job == 3 then
+					say_reward(locale_quest(8093))
+				end
+				return
+			end
+
+			say_title(locale_quest(8124))
+			say(locale_quest(8125))
+			say_reward(locale_quest(8118))
+			local s = select(locale_quest(8097), locale_quest(8098))
+			if 2 == s then
+				return
+			end
+
+			if pc.get_job() != 1 or pc.get_skill_group() != 0 then
+				test_chat(string.format(locale_quest(8100), bool_to_str(npc_is_same_job()) .. "pc.get_skill_group:" .. pc.get_skill_group() .. "pc_job:" .. pc.get_job()))
+				return
+			end
+
+			set_state("start")
+			pc.set_skill_group(2) -- !!!
+			pc.clear_skill()
+			char_log(0, "CLEAR_SKILL", "Cleared skill by teacher")
+
+			say_title(locale_quest(8126))
+
+			say(locale_quest(8102))
+			if not pc.is_clear_skill_group() then
+				say(locale_quest(8103))
+				say_title(locale_quest(114))
+				say_reward(locale_quest(8104))
+			else
+				say_reward(locale_quest(8105))
+			end
+			clear_letter()
+		end
+
+		when teacher5.target.click or
+			20304.chat.locale_quest(8127) or
+			20324.chat.locale_quest(8127) or
+			20344.chat.locale_quest(8127) begin
+			target.delete("teacher5")
+
+			local pc_job = pc.get_job()
+			if pc_job != 2 then -- !!!
+				say_title(locale_quest(8107))
+
+				say(locale_quest(8128))
+				if pc_job == 0 then
+					say_reward(locale_quest(8090))
+				elseif pc_job == 1 then
+					say_reward(locale_quest(8091))
+				elseif pc_job == 2 then
+					say_reward(locale_quest(8092))
+				elseif pc_job == 3 then
+					say_reward(locale_quest(8093))
+				end
+				return
+			end
+
+			say_title(locale_quest(8129))
+			say(locale_quest(8130))
+			say_reward(locale_quest(8131))
+			local s = select(locale_quest(8097), locale_quest(8098))
+			if 2 == s then
+				return
+			end
+
+			if pc.get_job() != 2 or pc.get_skill_group() != 0 then
+				test_chat(string.format(locale_quest(8100), bool_to_str(npc_is_same_job()) .. "pc.get_skill_group:" .. pc.get_skill_group() .. "pc_job:" .. pc.get_job()))
+				return
+			end
+
+			set_state("start")
+			pc.set_skill_group(1) -- !!!
+			pc.clear_skill()
+			char_log(0, "CLEAR_SKILL", "Cleared skill by teacher")
+
+			say_title(locale_quest(8133))
+
+			say(locale_quest(8102))
+			if not pc.is_clear_skill_group() then
+				say(locale_quest(8103))
+				say_title(locale_quest(114))
+				say_reward(locale_quest(8104))
+			else
+				say_reward(locale_quest(8105))
+			end
+			clear_letter()
+		end
+
+		when teacher6.target.click or
+			20305.chat.locale_quest(8134) or
+			20325.chat.locale_quest(8134) or
+			20345.chat.locale_quest(8134) begin
+			target.delete("teacher6")
+
+			local pc_job = pc.get_job()
+			if pc_job != 2 then -- !!!
+				say_title(locale_quest(8087))
+
+				say(locale_quest(8135))
+				if pc_job == 0 then
+					say_reward(locale_quest(8090))
+				elseif pc_job == 1 then
+					say_reward(locale_quest(8091))
+				elseif pc_job == 2 then
+					say_reward(locale_quest(8092))
+				elseif pc_job == 3 then
+					say_reward(locale_quest(8093))
+				end
+				return
+			end
+
+			say_title(locale_quest(8136))
+			say(locale_quest(8137))
+			say_reward(locale_quest(8131))
+
+			local s = select(locale_quest(8097), locale_quest(8098))
+			if 2 == s then
+				return
+			end
+
+			if pc.get_job()!=2 or pc.get_skill_group()!=0 then
+				test_chat(string.format(locale_quest(8100), bool_to_str(npc_is_same_job()) .. "pc.get_skill_group:" .. pc.get_skill_group() .. "pc_job:" .. pc.get_job()))
+				return
+			end
+
+			set_state("start")
+			pc.set_skill_group(2) -- !!!
+			pc.clear_skill()
+			char_log(0, "CLEAR_SKILL", "Cleared skill by teacher")
+
+			say_title(locale_quest(8138))
+
+			say(locale_quest(8102))
+			if not pc.is_clear_skill_group() then
+				say(locale_quest(8103))
+				say_title(locale_quest(114))
+				say_reward(locale_quest(8104))
+			else
+				say_reward(locale_quest(8105))
+			end
+			clear_letter()
+		end
+
+		when teacher7.target.click or
+			20306.chat.locale_quest(8139) or
+			20326.chat.locale_quest(8139) or
+			20346.chat.locale_quest(8139) begin
+			target.delete("teacher7")
+
+			local pc_job = pc.get_job()
+			if pc_job != 3 then -- !!!
+				say_title(locale_quest(8087))
+
+				say(locale_quest(8140))
+				if pc_job == 0 then
+					say_reward(locale_quest(8090))
+				elseif pc_job == 1 then
+					say_reward(locale_quest(8091))
+				elseif pc_job == 2 then
+					say_reward(locale_quest(8092))
+				elseif pc_job == 3 then
+					say_reward(locale_quest(8093))
+				end
+				return
+			end
+
+			say_title(locale_quest(8141))
+			say(locale_quest(8142))
+			say_reward(locale_quest(8144))
+
+			local s = select(locale_quest(8097), locale_quest(8098))
+			if 2 == s then
+				return
+			end
+
+			if pc.get_job() != 3 or pc.get_skill_group() != 0 then
+				test_chat(string.format(locale_quest(8100), bool_to_str(npc_is_same_job()) .. " pc.get_skill_group:" .. pc.get_skill_group() .. "pc_job:" .. pc.get_job()))
+				return
+			end
+
+			set_state("start")
+			pc.set_skill_group(1) -- !!!
+			pc.clear_skill()
+			char_log(0, "CLEAR_SKILL", "Cleared skill by teacher")
+
+			say_title(locale_quest(8145))
+
+			say(locale_quest(8102))
+			if not pc.is_clear_skill_group() then
+				say(locale_quest(8103))
+				say_title(locale_quest(114))
+				say_reward(locale_quest(8104))
+			else
+				say_reward(locale_quest(8105))
+			end
+			clear_letter()
+		end
+
+		when teacher8.target.click or
+			20307.chat.locale_quest(8146) or
+			20327.chat.locale_quest(8146) or
+			20347.chat.locale_quest(8146) begin
+			target.delete("teacher8")
+
+			local pc_job = pc.get_job()
+			if pc_job != 3 then -- !!!
+				say_title(locale_quest(8087))
+
+				say(locale_quest(8147))
+				if pc_job == 0 then
+					say_reward(locale_quest(8090))
+				elseif pc_job == 1 then
+					say_reward(locale_quest(8091))
+				elseif pc_job == 2 then
+					say_reward(locale_quest(8092))
+				elseif pc_job == 3 then
+					say_reward(locale_quest(8093))
+				end
+				return
+			end
+
+			say_title(locale_quest(8148))
+			say(locale_quest(8149))
+			say_reward(locale_quest(8144))
+			local s = select(locale_quest(8097), locale_quest(8098))
+			if 2 == s then
+				return
+			end
+
+			if pc.get_job() != 3 or pc.get_skill_group() != 0 then
+				test_chat(string.format(locale_quest(8100), bool_to_str(npc_is_same_job()) .. "pc.get_skill_group:" .. pc.get_skill_group() .. "pc_job:" .. pc.get_job()))
+				return
+			end
+
+			set_state("start")
+			pc.set_skill_group(2) -- !!!
+			pc.clear_skill()
+			char_log(0, "CLEAR_SKILL", "Cleared skill by teacher")
+
+			say_title(locale_quest(8150))
+
+			say(locale_quest(8102))
+			if not pc.is_clear_skill_group() then
+				say(locale_quest(8103))
+				say_title(locale_quest(114))
+				say_reward(locale_quest(8104))
+			else
+				say_reward(locale_quest(8105))
+			end
+			clear_letter()
+		end
+	end -- end_of_state: run
+end -- end_of_quest

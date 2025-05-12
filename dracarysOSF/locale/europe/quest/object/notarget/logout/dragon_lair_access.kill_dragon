@@ -1,0 +1,3 @@
+if pc . get_map_index ( ) == 208 then 
+pc . setf ( "dragon_lair_access" , "exit_time" , get_global_time ( ) ) 
+end 

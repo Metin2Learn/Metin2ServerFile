@@ -1,0 +1,135 @@
+--------------------------------------------------
+-- 2012 olympic event
+--------------------------------------------------
+quest olympic_badge begin
+	state start begin
+		function has_it()
+			local a = pc.count_item(30265)
+			local b = pc.count_item(30266)
+			local c = pc.count_item(30267)
+			local d = pc.count_item(30268)
+			local e = pc.count_item(30269)
+
+			local perfect = a > 0 and b > 0 and c > 0 and d > 0 and e > 0
+			local notyet = a > 0 or b > 0 or c > 0 or d > 0 or e > 0
+			if perfect then
+				return 1
+			elseif notyet then
+				return 0
+			end
+		end
+
+		when login with game.get_event_flag("medal_part_drop") >= 1 begin
+			set_state(information)
+		end
+	end
+
+	state information begin
+		when letter with pc.get_level() >= 30 begin
+			local v = find_npc_by_vnum(20017)
+			if 0 != v then
+				target.vid("__TARGET__", v, "")
+			end
+
+			send_letter(locale_quest(7533))
+		end
+
+		when info or button with pc.get_level() >= 30 begin
+			say(locale_quest(7546))
+		end
+
+		when __TARGET__.target.click or 20017.chat.locale_quest(7528) with game.get_event_flag("medal_part_drop") >= 1 and pc.get_level() >= 30 begin
+			target.delete("__TARGET__")
+
+			say_title(mob_name(20017))
+			say(locale_quest(7529))
+			say(locale_quest(7530))
+			wait()
+			say_title(mob_name(20017))
+			say(locale_quest(7531))
+			say(locale_quest(7532))
+			local s = select(locale_quest(4473), locale_quest(3418))
+			if 2 == s then
+				say(locale_quest(7541))
+				local a = select(locale_quest(4473), locale_quest(3418))
+				if 2 == a then
+					say_title(mob_name(20017))
+					say(locale_quest(7542))
+					return
+				end
+				say_title(mob_name(20017))
+				say(locale_quest(7543))
+				set_state(__GIVEUP__)
+				return
+			end
+
+			say_title(mob_name(20017))
+			say(locale_quest(7544))
+			set_state(step1)
+		end
+	end
+
+	state step1 begin
+		when letter with pc.get_level() >= 30 begin
+			send_letter(locale_quest(7533))
+		end
+
+		when info or button with pc.get_level() >= 30 begin
+			say(locale_quest(7545))
+		end
+
+		when login or enter with game.get_event_flag("medal_part_drop") == 0 begin
+			test = pc.getqf("medal_done")
+			if test != 0 then
+				pc.setqf("medal_done", 0)
+			end
+		end
+
+		when 20017.chat.locale_quest(7533) with game.get_event_flag("medal_part_drop") >= 1 and pc.get_level() >= 30 begin
+			say_title(mob_name(20017))
+			say(locale_quest(7534))
+			wait()
+			if count_item_range(30265, 30269) == 0 then
+				say(locale_quest(7537))
+				return
+			elseif olympic_badge.has_it() == 0 then
+				say(locale_quest(7538))
+				return
+			else
+				say_title(mob_name(20017))
+				say(locale_quest(7539))
+				wait()
+				pc.remove_item(30265)
+				pc.remove_item(30266)
+				pc.remove_item(30267)
+				pc.remove_item(30268)
+				pc.remove_item(30269)
+				if pc.getqf("medal_done") == 0 then
+					say_title(mob_name(20017))
+					say(locale_quest(7540))
+					-- show items
+					say_item_vnum(71158)
+					--say_item_vnum(71159)
+
+					pc.give_item2(71158)
+					if 0 == pc.get_sex() then
+						pc.give_item2(71159)
+						say_item_vnum(71159)
+					else
+						pc.give_item2(71160)
+						say_item_vnum(71160)
+					end
+
+					pc.setqf("medal_done", 1)
+					return
+				end -- if
+
+				say_title(mob_name(20017))
+				say(locale_quest(7540))
+				say_item_vnum(50249)
+				pc.give_item2(50249)
+			end -- if
+		end -- when
+	end -- state
+	state __GIVEUP__ begin end
+end -- quest

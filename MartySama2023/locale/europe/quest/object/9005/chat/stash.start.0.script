@@ -1,0 +1,21 @@
+say_title ( locale_quest ( 10024 ) ) 
+say ( locale_quest ( 10025 ) ) 
+wait ( ) 
+if pc . get_gold ( ) < 500 then 
+say_title ( locale_quest ( 10024 ) ) 
+say ( locale_quest ( 10026 ) ) 
+else 
+local s = select ( locale_quest ( 4443 ) , locale_quest ( 4442 ) ) 
+if s == 1 then 
+pc . change_gold ( - 500 ) 
+game . set_safebox_level ( 1 ) 
+set_state ( "use" ) 
+say_npc ( ) 
+say ( locale_quest ( 10027 ) ) 
+say_reward ( locale_quest ( 10028 ) ) 
+say ( locale_quest ( 10029 ) ) 
+else 
+say_title ( locale_quest ( 10024 ) ) 
+say ( locale_quest ( 10030 ) ) 
+end 
+end 

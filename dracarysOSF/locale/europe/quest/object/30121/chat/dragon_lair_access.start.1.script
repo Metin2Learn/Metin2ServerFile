@@ -1,0 +1,7 @@
+say_title ( locale_quest ( 1477 ) ) 
+say ( locale_quest ( 879 ) ) 
+local warp = select ( locale_quest ( 880 ) , locale_quest ( 881 ) ) 
+if warp == 1 then 
+dragon_lair_access . warp_from_lair ( ) 
+set_state ( "start" ) 
+end 

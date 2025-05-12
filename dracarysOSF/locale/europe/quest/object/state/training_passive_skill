@@ -1,0 +1,58 @@
+training_passive_skill={["start"]=0,ResetPassiveSkills= function ()local skill_list1 = special . passive_skill_list [ 1 ] 
+local skill_list2 = special . passive_skill_list [ 2 ] 
+for i = 1 , table . getn ( skill_list1 ) begin 
+local skill_vnum = skill_list1 [ i ] 
+pc . set_skill_level ( skill_vnum , 0 ) 
+end 
+for i = 1 , table . getn ( skill_list2 ) begin 
+local skill_vnum = skill_list2 [ i ] 
+pc . set_skill_level ( skill_vnum , 0 ) 
+end 
+end ,GetPassiveSkills= function (group,level)level = level or 0 
+local skill_list = special . passive_skill_list [ group ] 
+for i = 1 , table . getn ( skill_list ) begin 
+local skill_vnum = skill_list [ i ] 
+if pc . get_skill_level ( skill_vnum ) > level then 
+return true 
+end 
+end 
+return false 
+end ,BuildPassiveSkillList= function (group,learn)group = group or 0 
+learn = learn or false 
+GRAND_MASTER_SKILL_LEVEL = 30 
+PERFECT_MASTER_SKILL_LEVEL = 40 
+local skill_list = { } 
+if group ~= 0 then 
+skill_list = special . passive_skill_list [ group ] 
+else 
+local tmp_skill_list1 = special . passive_skill_list [ 1 ] 
+local tmp_skill_list2 = special . passive_skill_list [ 2 ] 
+for i = 1 , table . getn ( tmp_skill_list1 ) begin 
+local skill_vnum = tmp_skill_list1 [ i ] 
+table . insert ( skill_list , skill_vnum ) 
+end 
+for i = 1 , table . getn ( tmp_skill_list2 ) begin 
+local skill_vnum = tmp_skill_list2 [ i ] 
+table . insert ( skill_list , skill_vnum ) 
+end 
+end 
+local ret_vnum_list = { } 
+local ret_name_list = { } 
+table . foreach ( skill_list , 
+function ( i , skill_vnum ) 
+local skill_level = pc . get_skill_level ( skill_vnum ) 
+local name = skill_name ( skill_vnum ) 
+if name == nil then name = skill_vnum end 
+if learn == true then 
+if skill_level >= GRAND_MASTER_SKILL_LEVEL and skill_level < PERFECT_MASTER_SKILL_LEVEL then 
+table . insert ( ret_vnum_list , skill_vnum ) 
+table . insert ( ret_name_list , name ) 
+end 
+else 
+table . insert ( ret_vnum_list , skill_vnum ) 
+table . insert ( ret_name_list , name ) 
+end 
+end 
+) 
+return { ret_vnum_list , ret_name_list } 
+end }

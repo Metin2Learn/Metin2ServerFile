@@ -1,0 +1,10 @@
+Item	30618	223	1
+Item	27992	70	1
+Item	71030	293	1
+Item	71225	600	1
+Item	71226	600	1
+Item	71107	833	1
+Item	71030	293	1
+Item	30616	223	1
+Item	71226	600	1
+Slots_Desblock	0	0	0	0	0	0

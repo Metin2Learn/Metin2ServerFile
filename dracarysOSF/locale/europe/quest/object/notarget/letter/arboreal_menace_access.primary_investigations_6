@@ -1,0 +1,5 @@
+local v = find_npc_by_vnum ( 20409 ) 
+if v ~= 0 then 
+target . vid ( "__TARGET__" , v , mob_name ( 20409 ) ) 
+end 
+send_letter ( locale_quest ( 4532 ) ) 

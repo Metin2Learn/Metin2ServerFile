@@ -1,0 +1,12 @@
+91614	Én csak a Telek kezelõ vagyok, ezért nem tudom[ENTER]csökkenteni az árakat. Több Yangra van szükséged.
+91615	A céh megvásárolta a területet!
+91613	Telek kezelõ:
+91616	Gyere újra, ha eldöntötted mit akarsz.[ENTER]Aki elõbb fizet, az vihet.
+91617	Telek kezelõ vagyok, felelõs a területek[ENTER]eladásáért. Mielõtt a szörny a kontinens közepét[ENTER]elfoglalta, nem voltunk szûkében a területnek, és[ENTER]minden jól ment. Most már csak a céhvezetõknek[ENTER]adok el földet, akik céhterületként használják.[ENTER]Meg akarod venni ezt a telket?
+91618	Mint már mondtam, nem adhatok el mindenkinek[ENTER]földet. Remélem megérted.
+91619	Egy céh, amely már rendelkezik földterülettel,[ENTER]nem vehet másikat.
+91620	Hiba történt a megrendelés feldolgozása során.
+91621	E telek megvételéhez a céh szintnek %s felett[ENTER]kell lennie. Az ára %s.
+91622	A céhed még nem érte el ezt a szintet. Sajnálom.
+91623	Szeretnéd megvásárolni ezt a területet?
+91624	Ez a telek már egy másik céhnek lett eladva.[ENTER]Sajnálom!

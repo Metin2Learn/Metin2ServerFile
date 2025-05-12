@@ -1,0 +1,47 @@
+quest rumi_event begin
+	state start begin
+		when login or enter with game.get_event_flag("cards_event") != 0 begin
+			if pc.get_map_index() == 1 or pc.get_map_index() == 21 or pc.get_map_index() == 41 then
+				if find_npc_by_vnum(20417) == 0 then
+					if pc.get_map_index() == 1 then
+						mob.spawn(20417, 607, 619, 0, 0 )
+					elseif pc.get_map_index() == 21 then
+						mob.spawn(20417, 595, 613, 0, 0)
+					elseif pc.get_map_index() == 41 then
+						mob.spawn(20417, 353, 741, 0, 0)
+					end
+				end
+			end
+
+			cmdchat("cards icon 1")
+		end
+
+		when kill with game.get_event_flag("cards_event") != 0 begin
+			if (pc.get_level() - npc.get_level()) <= 15 or
+				(pc.get_level() - npc.get_level()) <= -15 then
+
+				if number(1, 100) <= 5 then
+					game.drop_item_with_ownership(79505)
+				end
+			end
+		end
+
+		when 79505.pick with pc.count_item(79505) >= 24 begin
+			pc.remove_item(79505, 24)
+			pc.give_item2(79506)
+		end
+
+		when 20417.chat.locale_quest(6604) begin
+			local s = select(locale_quest(6606), locale_quest(6607))
+			if s == 1 then
+				say_title(locale_quest(6606))
+				say(pc.get_okey_global_rank())
+			elseif s == 2 then
+				say_title(locale_quest(6607))
+				say(pc.get_okey_rund_rank())
+			else
+				return
+			end
+		end
+	end
+end

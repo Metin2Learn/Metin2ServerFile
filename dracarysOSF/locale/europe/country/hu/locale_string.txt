@@ -1,0 +1,4848 @@
+"$*** Winner of the item %s is: %s ***";
+"$*** A(z) %s tárgy nyertese: %s ***";
+
+"%d guild EXP received!";
+"%d céh EXP került jóváírásra!";
+
+"%d minutes remaining to register for the PvP tournament!";
+"Már csak %d percig lehet jelentkezni a PvP bajnokságra!";
+
+"%d more until the battle begins!";
+"A harc kezdetéig: %d!";
+
+"%d ±ÇÀ» ´õ ÀĞ¾î¾ß ¼ö·ÃÀ» ¿Ï·á ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Még %d készségkönyvet kell elolvasnod, hogy fejlõdjön ez a készséged.";
+
+"%d ³ÉÀ» ÅõÀÚÇÏ¼Ì½À´Ï´Ù.";
+"%d Yangot fektettél be.";
+
+"%d ³ÉÀ» È¹µæÇÏ¼Ì½À´Ï´Ù.";
+"%d Yangot nyertél.";
+
+"%d ·¹º§ÀÌ µÇ¾î¾ß ´Ù½Ã ¿°»öÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.";
+"El kell érned a %d szintet, hogy ismét befesthesd a hajad.";
+
+"%d ºĞ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d perc %d másodperc van még hátra a chat tiltásodból";
+
+"%d ½Ã°£ %d ºĞ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d óra %d perc %d másodperc van még hátra a chat tiltásodból";
+
+"%d ½Ã°£ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d óra %d másodperc van még hátra a chat tiltásodból";
+
+"%d Á¾·ù %d ¸¶¸® ³¬À½";
+"%d-ból %d-t fogtál.";
+
+"%d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d másodperc van hátra a chat tiltásodból";
+
+"%d ÃÊ ÈÄ¿¡ ±ºÁÖÀÇ Ãàº¹À» »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù";
+"%d másodperc után lehet a császár áldását felhasználni.";
+
+"%d ÃÊ°£ ÄğÅ¸ÀÓÀÌ Àû¿ëÁßÀÔ´Ï´Ù.";
+"Újrafelhasználási idõ kb. %d másodperc";
+
+"%d ÃÊÈÄ ¸ñÀûÁö·Î ÀÌµ¿µË´Ï´Ù.";
+"%d másodperccel az indítás után eléred a célhelyet.";
+
+"%d%% È®·ü·Î °üÅë °ø°İ";
+"Átható támadás %d%% eséllyel.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã °æÇèÄ¡ Ãß°¡ »ó½Â";
+"Tapasztalat növekedés %d%%-kal az ellenség feletti gyõzelemnél.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã µ· 2¹è µå·Ó";
+"A zsákmányolt Yang növekedése %d%%-kal az ellenség feletti gyõzelemnél.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã »ı¸í·Â È¸º¹";
+"%d%% esély az életerõ feltöltésére egy gyõzelem után.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã ¾ÆÀÌÅÛ 2¹è µå·Ó";
+"A zsákmányolt tárgyak növekedése %d%%-kal az ellenség feletti gyõzelemnél.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã Á¤½Å·Â È¸º¹";
+"Mana emelkedés %d%%-kal az ellenség feletti gyõzelemnél.";
+
+"%d%% È®·ü·Î Ä¡¸íÅ¸ °ø°İ";
+"Kritikus támadás %d%% eséllyel.";
+
+"%d%% È®·ü·Î Å¸°İ½Ã »ó´ë Àü½Å·Â ¼Ò¸ğ";
+"%d%% valószínûséggel lesz Mana elvéve az ellenségtõl.";
+
+"%d%% È®·ü·Î ÇÇÇØ½Ã Á¤½Å·Â È¸º¹";
+"Mana elnyelõdés %d%% eséllyel.";
+
+"%dºĞÀÇ °áÁ¦½Ã°£ÀÌ Ãß°¡ µÇ¾ú½À´Ï´Ù. (°áÁ¦¹øÈ£ %d)";
+"%d játékidõ lett hozzáadva az eddigiekhez.. (Fizetési szám %d)";
+
+"%dÀÇ °æÇèÄ¡¸¦ È¹µæÇß½À´Ï´Ù.";
+"%d tapasztalatot szereztél.";
+
+"%dÃÊ ³²¾Ò½À´Ï´Ù.";
+"%d másodperc a kilépésig.";
+
+"%dÃÊ ¸¸Å­ ÃæÀüµÇ¾ú½À´Ï´Ù.";
+"%d másodperc hozzáadva.";
+
+"%dÃÊ ÈÄ °ÔÀÓÀÌ ¼Ë´Ù¿î µË´Ï´Ù.";
+"%d másodperc múlva vége a játéknak.";
+
+"%s";
+"%s";
+
+"%s : %d ¸¶¸®";
+"%s: %d";
+
+"%s SP¼Ò¸ğ: %d";
+"%s FP felhasználás: %d";
+
+"%s earned %d points in a game of okey.";
+"%s elért %d pontot az Okey játékban.";
+
+"%s effect activated.";
+"%s hatás aktiválva.";
+
+"%s effect not activated.";
+"%s hatás nincs aktiválva.";
+
+"%s emerges from the Transport Box.";
+"%s elõjön a Szállító dobozból.";
+
+"%s has been revived.";
+"%s fel lett élesztve.";
+
+"%s has blocked you.";
+"%s blokkolt téged.";
+
+"%s has completed level %u in Sung Mahi Tower!";
+"%s teljesítette a %u. szintet Sung Mahi tornyában!";
+
+"%s has erected all the outposts and Sung Mahi's control will start in %d minutes.";
+"%s területén felépült az összes elõõrs és Sung Mahi irányítása alá kerül %d perc múlva.";
+
+"%s has evolved to %s! Excellent!";
+"%s felfejlõdött erre: %s! Kitûnõ!";
+
+"%s has hatched!";
+"%s elõbújt!";
+
+"%s has left the arena. %s wins.";
+"%s elhagyta az arénát. %s nyert.";
+
+"%s has occupied %s!";
+"%s megszállta: %s!";
+
+"%s has reached level %d!";
+"%s elérte ezt a szintet: %d!";
+
+"%s has reached the personal score of %d!";
+"%s elérte a következõ egyéni pontszámot: %d!";
+
+"%s improvement failed.";
+"A %s fejlesztése nem sikerült.";
+
+"%s improvement successful.";
+"A %s fejlesztése sikeres volt.";
+
+"%s is already being blocked.";
+"%s már blokkolva van.";
+
+"%s is attacking %s!";
+"%s támadja: %s!";
+
+"%s is currently fast asleep.";
+"%s jelenleg mélyen alszik.";
+
+"%s is insufficient. You need %d for the next stage of evolution.";
+"%s elégtelen. Erre: %d van szükséged a fejlõdés következõ szakaszához.";
+
+"%s is no longer blocked.";
+"%s nincs többé blokkolva.";
+
+"%s is now blocked.";
+"%s mostantól blokkolva van.";
+
+"%s is now in a Transport Box.";
+"%s már a Szállító dobozban van.";
+
+"%s is the tournament victor!";
+"A bajnokság nyertese %s!";
+
+"%s killcount %d mobkillcount %d bosskillcount %d ¼ºÁö ÁøÀÔ¼ö %d";
+"%s killcount %d mobkillcount %d bosskillcount %d szent föld száma %d";
+
+"%s killed %s.";
+"%s megölte õt: %s.";
+
+"%s recovers from the exhaustion.";
+"%s felépül a kimerültségbõl.";
+
+"%s refuses to eat anything!";
+"%s semmit sem akar enni!";
+
+"%s skill activated. HP restored by %d.";
+"A(z) %s készség aktiválódott. %d TP feltöltésre került.";
+
+"%s skill activated. Slow, poison and bleeding effects were removed.";
+"%s készség aktiválva. A lassítás, mérgezés és vérzés hatások eltávolításra kerültek.";
+
+"%s skill activated. You will now receive no damage.";
+"%s készség aktiválva. Most nem szerzel sebeket.";
+
+"%s still has %d outposts. (%d/%d)";
+"%s területén még %d elõõrs áll. (%d/%d)";
+
+"%s wakes up and dives into the tasty meal.";
+"%s felébred és ráveti magát az ízletes ételre.";
+
+"%s was successful! A %d%% absorption rate on their new %s. Congratulations!";
+"%s sikeres volt! %d%% abszorpciós mértéket ért el az új %s. Gratulálunk!";
+
+"%s will appear here: %s";
+"%s megjelenik itt: %s";
+
+"%s ±ºÁÖ ÈÄº¸¿¡¼­ »èÁ¦ÇÏ¿´½À´Ï´Ù";
+"%s-t törölve lett a császár jelöltek közül.";
+
+"%s ±ºÁÖ·Î ÀÔ¸í Çß½À´Ï´Ù.";
+"%s császárnak van jelölve.";
+
+"%s ±ºÁÖ¸£ Á¦°Å ÇÏ¿´½À´Ï´Ù..";
+"A %s császárt eltávolítják.";
+
+"%s ±ºÁÖ¸¦ Á¦°Å ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"%s császár nem eltávolítható.";
+
+"%s ±æµå°¡ %s ±æµå¿¡ ¼±ÀüÆ÷°í¸¦ ÇÏ¿´½À´Ï´Ù!";
+"A(z) %s céh háborút hirdetett %s ellen.";
+
+"%s ±æµå°¡ %s ±æµå¿ÍÀÇ ÀüÀï¿¡¼­ ½Â¸® Çß½À´Ï´Ù.";
+"%s megnyerte a céhháborút %s ellen.";
+
+"%s ±æµå°¡ %s ±æµåÀÇ ±ê¹ßÀ» »©¾Ñ¾Ò½À´Ï´Ù!";
+"%s megszerezte %s zászlóját.";
+
+"%s ±æµå¿Í %s ±æµå »çÀÌÀÇ ÀüÀïÀÌ ¹«½ÂºÎ·Î ³¡³µ½À´Ï´Ù.";
+"A céhháború döntetlennel végzõdött %s és %s között.";
+
+"%s ±æµå¿Í %s ±æµå »çÀÌÀÇ ÀüÀïÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.";
+"A céhháború %s és %s között törölve lett.";
+
+"%s ±æµå¿Í %s ±æµå°¡ Àá½Ã ÈÄ ÀüÀïÀ» ½ÃÀÛÇÕ´Ï´Ù!";
+"A céhháború pillanatokon belül elkezdõdik %s és %s között!";
+
+"%s ±æµå¿Í %s ±æµå°¡ ÀüÀïÀ» ½ÃÀÛÇÏ¿´½À´Ï´Ù!";
+"A céhháború elkezdõdött %s és %s között.";
+
+"%s ±æµåÀÇ %sÀÌ %d%% Áõ°¡Çß½À´Ï´Ù!";
+"%s a %s céhnek felment %d%%-ra.";
+
+"%s ±æµåÀÇ %sÀÌ Á¤»óÀ¸·Î µ¹¾Æ¿Ô½À´Ï´Ù.";
+"%s a %s céhnek normalizálódott.";
+
+"%s ±æµåÀÇ ±ê¹ßÀ» %s ´ÔÀÌ È¹µæÇÏ¿´½À´Ï´Ù.";
+"A %s céh zászlaját ellopta %s játékos.";
+
+"%s ´Â ±ºÁÖ ÈÄº¸°¡ ¾Æ´Õ´Ï´Ù.";
+"%s nem császár jelölt.";
+
+"%s ´Â ±ºÁÖ·Î ÀÔ¸íÇÒ¼ö ¾ø½À´Ï´Ù .";
+"%s-t nem lehet császárnak jelölni.";
+
+"%s ´Ô°úÀÇ ±³È¯ÀÌ ¼º»ç µÇ¾ú½À´Ï´Ù.";
+"Az üzlet %s személlyel sikerült.";
+
+"%s ´Ô¿¡°Ô ÆÄÆ¼°¡ÀÔ ½ÅÃ»À» Çß½À´Ï´Ù.";
+"Szeretnél %s csoportjába lépni.";
+
+"%s ´ÔÀ¸·Î ºÎÅÍ Ä£±¸ µî·ÏÀ» °ÅºÎ ´çÇß½À´Ï´Ù.";
+"%s elutasította a meghívást.";
+
+"%s ´ÔÀº %d Ã¤³Î¿¡ Á¢¼Ó Áß ÀÔ´Ï´Ù. (ÇöÀç Ã¤³Î: %d)";
+"%s játékos a %d csatornán található. (Te a %d csatornán vagy)";
+
+"%s ´ÔÀº Á¢¼ÓµÇ ÀÖÁö ¾Ê½À´Ï´Ù.";
+"%s nem online.";
+
+"%s ´ÔÀº Á¤»óÀûÀ¸·Î Ãâ¸¶¸¦ ÇÏ¿´½À´Ï´Ù.";
+"%s játékos már a választásban van.";
+
+"%s ´ÔÀ» ¼ÒÈ¯ÇÏ¿´½À´Ï´Ù.";
+"%s játékost választottad ki.";
+
+"%s ´ÔÀÌ ´ë·Ã¿¡¼­ ½Â¸®ÇÏ¿´½À´Ï´Ù.";
+"%s megnyerte a párbajt.";
+
+"%s ´ÔÀÌ ½Â¸®ÇÏ¿´½À´Ï´Ù.";
+"%s nyert.";
+
+"%s ºí·°! (%d%%)";
+"%s blokk! (%d%%)";
+
+"%s ¾ÆÀÌÅÛ À» È¹µæÇÏ¼Ì½À´Ï´Ù";
+"%s tárgyat nyertél.";
+
+"%s ¾ÆÀÌÅÛÀÌ ÇÊ¿äÇÕ´Ï´Ù";
+"Szükséged van %s-re.";
+
+"%s ¿¡°Ô·Î ÀÌµ¿ÇÕ´Ï´Ù";
+"Transzport a %s játékoshoz.";
+
+"%s È¸ÇÇ! (%d%%)";
+"%s kitérés! (%d%%)";
+
+"%s's pet skill has been activated. %s uses Feather Walk.";
+"%s házikedvenc készsége aktiválva lett. %s használja a Pehelykönnyû lépéseket.";
+
+"%s's remaining HP: %d%%";
+"%s maradék TP-je: %d%%";
+
+"%s: Á¸ÀçÇÏÁö ¾Ê´Â ±æµå ÀÔ´Ï´Ù.";
+"%s: Ez a céh nem létezik.";
+
+"%s:%s_WAS_SET_TO%d%%";
+"%s: %s megnövekedett %d%%-kal!";
+
+"%s:_%s_IS_NORMAL_AGAIN";
+"%s %s-a normalizálódott.";
+
+"%s[%d]°¡ °ø°İ À§Ä¡: %d %d";
+"%s[%d] Támadó Pozíciója: %d %d";
+
+"%s´Ô°úÀÇ ´ë°á ½ÃÀÛ!";
+"A harc %s ellen megkezdõdött.";
+
+"%s´ÔÀÌ ´ë°á½ÅÃ»À» Çß½À´Ï´Ù. ½Â³«ÇÏ·Á¸é ´ë°áµ¿ÀÇ¸¦ ÇÏ¼¼¿ä.";
+"%s harcra hívott téged.";
+
+"%s´ÔÀÌ ÁÖ»çÀ§¸¦ ±¼·Á %d°¡ ³ª¿Ô½À´Ï´Ù. (%d-%d)";
+"%s dobott kockával. Dobásának értéke %d (%d-%d).";
+
+"%s¸¦ ±¸¿ü½À´Ï´Ù.";
+"%s-t sütsz a tûz fölött.";
+
+"%s¿¡ ¹ÚÇôÀÖ´ø º¸¼®ÀÌ »ç¶óÁı´Ï´Ù.";
+"Egy drágakõ eltûnt a(z) %s foglalatából.";
+
+"%s¿¡ ÀüÀïÀÇ ½ÃÀÛÀ» ¾Ë¸®´Â ºÀÈ­°¡ ³ªÅ¸³µ½À´Ï´Ù.";
+"Máglyát gyújtottak %s-nél, hogy csatára figyelmeztessenek.";
+
+"%s¿¡°Ô ´ë°á½ÅÃ»À» Çß½À´Ï´Ù.";
+"Harcra hívtad %s-t.";
+
+"%s¿¡¼­ ºÀÈ­¸¦ µÑ·¯½Î°í ÀüÅõ°¡ ÁøÇàÁßÀÔ´Ï´Ù.";
+"Háború van %s-ben a máglya meggyújtásáért.";
+
+"%s¿¡¼­ ¼ÒÄÏ ºüÁú¶§±îÁö ³²Àº ½Ã°£ %d";
+"A %s idõbõl a foglalat eltávolításáig fennmaradó: %d";
+
+"%sÀÇ ±ºÁÖ°¡ %s ´ÔÀ¸·Î ±³Ã¼µÇ¾ú½À´Ï´Ù.";
+"%s császárát lecserálták. Az új császár: %s.";
+
+"%sÀÌ ¸ğµç ºÀÈ­¸¦ ÆÄ±«ÇÏ¿´½À´Ï´Ù.";
+"%s minden máglyát szétrombolt.";
+
+"%sÀÌ ºÀÈ­¸¦ ÆÄ±«Çß½À´Ï´Ù.";
+"%s szétrombolta a máglyát.";
+
+"%sÀÌ ¼ö¼º¿¡ ¼º°øÇß½À´Ï´Ù.";
+"%s sikeresen védekezett.";
+
+"%sÀÌ ¼ö¼º¿¡ ½ÇÆĞÇÏ¿© ÀüÀï¿¡ ÆĞ¹èÇÏ¿´½À´Ï´Ù..";
+"%s elvesztette a háborút, mert nem tudta megvédeni a kastélyt.";
+
+"%sÀÌ ÇÊ¿äÇÕ´Ï´Ù.";
+"Ehhez szükséges : %s";
+
+"(%s) ±æµå°¡ »ı¼ºµÇ¾ú½À´Ï´Ù. [ÀÓ½Ã]";
+"(%s) létre kett hozva. [Átmenetileg]";
+
+"(¸¸·áÀÏ : %d³â %d¿ù %dÀÏ)";
+"(Folyamat: %d j- %d m - %d t)";
+
+". ³ÊÈñ°¡ ¼ºÁöÀÇ ¼öÈ£ÀÚ¸¦ Àâ°Ô µÈ´Ù¸é ³ÊÈñ´Â ¼ºÁöÀÇ ÁÖÀÎÀÌ µÈ´Ù.[ENTER][ENTER] ";
+"Ha legyõzöd a szent hely õrét, te leszel a tulajdonosa.";
+
+"1-50 »çÀÌÀÇ ¼öÄ¡¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä";
+"Válassz egy számot 1 és 50 között.";
+
+"10ÃÊµÚ ´ÙÀ½ ÆÇÀ» ½ÃÀÛÇÕ´Ï´Ù.";
+"10 másodperc múlva kezdõdik a következõ menet.";
+
+"10ÃÊµÚ ´ë·ÃÀÌ ½ÃÀÛµË´Ï´Ù.";
+"A harc 10 másodperc múlva kezdõdik.";
+
+"10ÃÊµÚ ¸¶À»·Î µÇµ¹¾Æ°©´Ï´Ù.";
+"10 másodperc múlva a városba teleportálódsz.";
+
+"10ÃÊµÚ ¸¶À»·Î ÀÌµ¿ÇÕ´Ï´Ù.";
+"10 másodperc múlva a városba teleportálódsz.";
+
+"10ÃÊµÚ ÆÇÁ¤ÇÏ°Ú½À´Ï´Ù.";
+"Az eredmény 10 másodperc múlva következik.";
+
+"10ÃÊÈÄ ÀÚµ¿À¸·Î Á¢¼ÓÀÌ Á¾·áµÇ¸ç,";
+"10 másodperc múlva automatikusan le leszel kapcsolva.";
+
+"1ºĞ ÀÌ³»¿¡ ¾Æ¹«µµ Á¢¼ÓÇÏÁö ¾ÊÀ¸¸é ±æµåÀüÀÌ ÀÚµ¿ Á¾·áµË´Ï´Ù.";
+"Ha nincs ellenség, automatikusan véget fog érni a céhharc.";
+
+"20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© »óÁ¡À» ¿­¼ö°¡ ¾ø½À´Ï´Ù";
+"Több mint 2 milliárd Yang van nálad, ezért nem tudsz kereskedni.";
+
+"20¾ï³ÉÀÌ ÃÊ°úÇÏ¿© ¹°Ç°À» ÆÈ¼ö ¾ø½À´Ï´Ù.";
+"Több mint 2 milliárd Yang van nálad, ezért nem tudsz kereskedni.";
+
+"5ºĞ ÈÄ¿¡ Á¤»óÀûÀ¸·Î Á¢¼ÓÇÏ½Ç¼ö ÀÖ½À´Ï´Ù.";
+"5 perc múlva tudsz csatlakozni.";
+
+"5ÃÊ µÚ Æ²¸®½Å ºĞµéÀ» ¹Ù±ùÀ¸·Î ÀÌµ¿ ½ÃÅ°°Ú½À´Ï´Ù.";
+"5 másodperc múlva minden résztvevõ el lesz távolítva, aki rossz választ adott.";
+
+"<±æµå> %d ½ºÅ³À» »ç¿ëÇÔ (%d, %d) to %u";
+"[Céh] %d képesség felhasználódott (%d, %d) %u-ra";
+
+"<±æµå> %s ±æµå°¡ ±æµåÀüÀ» °ÅºÎÇÏ¿´½À´Ï´Ù.";
+"[Céh] %s visszautasította a céhháborút.";
+
+"<±æµå> %uÀÇ °æÇèÄ¡¸¦ ÅõÀÚÇÏ¿´½À´Ï´Ù.";
+"[Céh] %u tapasztalati pont lett felhasználva.";
+
+"<±æµå> %uÀÇ ¿ë½Å·ÂÀ» È¸º¹ÇÏ¿´½À´Ï´Ù.";
+"[Céh] %u Sárkányszellem-pont visszaállításra került.";
+
+"<±æµå> [%s] ±æµå°¡ »ı¼ºµÇ¾ú½À´Ï´Ù.";
+"[Céh] [%s] létre lett hozva.";
+
+"<±æµå> °¡Áö°í ÀÖ´Â µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"[Céh] Nincs nálad elég Yang.";
+
+"<±æµå> °æÇèÄ¡ ÅõÀÚ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Céh] Nem sikerült a tapasztalat bevetése.";
+
+"<±æµå> °øÁö±ÛÀ» ÀÛ¼ºÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Céh] Nincs jogod bejelentést tenni.";
+
+"<±æµå> ±×·¯ÇÑ »ç¶÷À» Ã£À» ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] A keresett ember nem található.";
+
+"<±æµå> ±×·± ±æµå°¡ ¾ø½À´Ï´Ù.";
+"[Céh] Nincs ilyen nevû céh.";
+
+"<±æµå> ±æµå ±İ°í¿¡¼± ±æµåÀå¸¸ Ãâ±İÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Céh] Csak a céhvezetõ tud Yangot kivenni.";
+
+"<±æµå> ±æµå »ı¼º¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Céh] Céh létrehozása nem sikerült.";
+
+"<±æµå> ±æµå ½ºÅ³ ·¹º§À» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Céh] Nincs jogosultságod a céhképességek megváltoztatására.";
+
+"<±æµå> ±æµå ½ºÅ³Àº ±æµåÀü Áß¿¡¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Céh] A céh képesség csak a háborúban használható.";
+
+"<±æµå> ±æµå ÀÌ¸§ÀÌ ÀûÇÕÇÏÁö ¾Ê½À´Ï´Ù.";
+"[Céh] A céhnév érvénytelen.";
+
+"<±æµå> ±æµå°¡ ÀÌ¹Ì ÃÖ°í ·¹º§ÀÔ´Ï´Ù.";
+"[Céh] A céhed már elérte a maximum szintet.";
+
+"<±æµå> ±æµå¸¦ »ı¼ºÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] Nem hozhatsz létre céhet.";
+
+"<±æµå> ±æµå¸¦ ÇØ»êÇÑ Áö %dÀÏÀÌ Áö³ªÁö ¾ÊÀº »ç¶÷Àº ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] Az átszervezés után csak %d nappal hívhatsz meg új tagokat.";
+
+"<±æµå> ±æµå¿¡ ¼ÓÇØÀÖÁö ¾Ê½À´Ï´Ù.";
+"[Céh] Nem tartozik a céhhez.";
+
+"<±æµå> ±æµå¿ø %s ´ÔÀ» °­Á¦ Å»Åğ ½ÃÄ×½À´Ï´Ù.";
+"[Céh] %s céhtagot kizárták a céhbõl.";
+
+"<±æµå> ±æµå¿øÀ» °­Á¦ Å»Åğ ½ÃÄ×½À´Ï´Ù.";
+"[Céh] Elküldtél egy céhtagot.";
+
+"<±æµå> ±æµå¿øÀ» °­Á¦ Å»Åğ ½ÃÅ³ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Céh] Nincs felhatalmazásod céhtagok elküldésére.";
+
+"<±æµå> ±æµå¿øÀ» ÃÊ´ëÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Céh] Nem vagy jogosult, meghívni valakit a céhbe.";
+
+"<±æµå> ±æµåÀåÀ¸·Î Á÷À§¸¦ º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] Nem változtathatod rangod céhmesterre.";
+
+"<±æµå> ±æµåÀåÀÇ ±ÇÇÑÀº º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] A céh vezetõjének a jogai nem változtathatók meg.";
+
+"<±æµå> ±æµåÀåÀÇ Á÷À§ ÀÌ¸§Àº º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] A céh vezetõ jogai nem változtathatók meg";
+
+"<±æµå> ±æµåÀåÀÇ Á÷À§´Â º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] A céhmester pozíciója nem változtatható meg.";
+
+"<±æµå> ±æµåÀü¿¡ ´ëÇÑ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Céh] Nincs joga senkinek a céhharchoz.";
+
+"<±æµå> ±æµåÀüÀ» ÇÏ±â À§ÇØ¼± ÃÖ¼ÒÇÑ %d¸íÀÌ ÀÖ¾î¾ß ÇÕ´Ï´Ù.";
+"[Céh] Legalább %d játékosnak kell részt vennie a céhháborúban.";
+
+"<±æµå> ±æµåÀüÀÌ Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"[Céh] A céhháború félbeszakadt.";
+
+"<±æµå> ±æµåÀüÁß¿¡´Â »ç³É¿¡ µû¸¥ ÀÌÀÍÀÌ ¾ø½À´Ï´Ù.";
+"[Céh] A céhháború ideje alatt nincs tapasztalati pont vadászatkor.";
+
+"<±æµå> ´Ù¸¥ Á¦±¹ »ç¶÷À» ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] Más birodalom játékosa nem hívható meg a céhbe.";
+
+"<±æµå> ´õÀÌ»ó Àå¼ö¸¦ ÁöÁ¤ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] Nem választhatsz több céhvezetõt.";
+
+"<±æµå> µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"[Céh] Kevés a Yang a céh-kincstárban.";
+
+"<±æµå> ·¡´õ Á¡¼ö°¡ %d Á¡ÀÌ µÇ¾ú½À´Ï´Ù";
+"[Céh] A Céh %d pontot ért el.";
+
+"<±æµå> ·¹´õ Á¡¼ö°¡ ¸ğÀÚ¶ó¼­ ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] A céh szint túl alacsony egy céhháborúban való részvételhez.";
+
+"<±æµå> »èÁ¦ÇÒ ¼ö ¾ø´Â ±ÛÀÔ´Ï´Ù.";
+"[Céh] Az üzenet nem törölhetõ.";
+
+"<±æµå> »ó´ë°¡ %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"[Céh] A játékos %d csatornán van. (Jelenleg a %d csatornán vagy).";
+
+"<±æµå> »ó´ë°¡ ¿Â¶óÀÎ »óÅÂ°¡ ¾Æ´Õ´Ï´Ù.";
+"[Céh] A játékos nem online.";
+
+"<±æµå> »ó´ë¹æ ±æµå°¡ ÀÌ¹Ì ÀüÀï Áß ÀÔ´Ï´Ù.";
+"[Céh] A céh már harcban áll.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ±æµå¿ø ¼ö°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] A céhnek nincs elég tagja, hogy részt tudjon venni egy céhháborúban.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ±æµåÀåÀÌ Á¢¼ÓÁßÀÌ ¾Æ´Õ´Ï´Ù.";
+"[Céh] Az ellenséges céh vezetõje offline.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ·¹´õ Á¡¼ö°¡ ¸ğÀÚ¶ó¼­ ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] A céhnek nincs elég pontja ahhoz, hogy részt tudjon venni egy céhháborúban.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ Àüºñ°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] A céhnek nincs elég Yangja, hogy részt vegyen a céhharcban.";
+
+"<±æµå> »ó´ë¹æÀÌ °°Àº ±æµå°¡ ¾Æ´Õ´Ï´Ù.";
+"[Céh] A személy nem uganahhoz a céhhez tartozik.";
+
+"<±æµå> »ó´ë¹æÀÌ ±æµå ÃÊ´ë °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"[Céh] A játékos elutasította a céh meghívását.";
+
+"<±æµå> »ó´ë¹æÀÌ ÀÌ¹Ì ´Ù¸¥ ±æµå¿¡ ¼ÓÇØÀÖ½À´Ï´Ù.";
+"[Céh] A személy már egy másik céhhez tartozik.";
+
+"<±æµå> »ó´ë¹æÀÌ ÃÊ´ë ½ÅÃ»À» ¹ŞÀ» ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"[Céh] Az ellenfeled nem tudja fogadni a meghívásod.";
+
+"<±æµå> ¿ë½Å·Â È¸º¹¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Céh] A sárkányszellem nem lett újrateremtve.";
+
+"<±æµå> ¿ë½Å·ÂÀÌ ºÎÁ·ÇÕ´Ï´Ù. (%d, %d)";
+"[Céh] Nincs elég sárkány szellem. (%d, %d)";
+
+"<±æµå> ÀÌ¹Ì °°Àº ÀÌ¸§ÀÇ ±æµå°¡ ÀÖ½À´Ï´Ù.";
+"[Céh] Ez a céhnév már foglalt.";
+
+"<±æµå> ÀÌ¹Ì ´Ù¸¥ ÀüÀï¿¡ ÂüÀü Áß ÀÔ´Ï´Ù.";
+"[Céh] A céhed már egy másik harcban vesz részt.";
+
+"<±æµå> ÀÌ¹Ì ÀüÀï ÁßÀÎ ±æµåÀÔ´Ï´Ù.";
+"[Céh] A céh már háborúban áll.";
+
+"<±æµå> ÀÌ¹Ì ÀüÀïÀÌ ¿¹¾àµÈ ±æµå ÀÔ´Ï´Ù.";
+"[Céh] A céh már egy másik háborúban vesz részt.";
+
+"<±æµå> Àß¸øµÈ ±İ¾×ÀÔ´Ï´Ù.";
+"[Céh] Nem megfelelõ Yang mennyiség.";
+
+"<±æµå> Àá½ÃÈÄ¿¡ ÀÌ¿ëÇØÁÖ½Ê½Ã¿À";
+"[Céh] Késõbb próbáld meg újra.";
+
+"<±æµå> Àá½ÃÈÄ¿¡ ÀÌ¿ëÇØÁÖ½Ê½Ã¿À.";
+"[Céh] Próbáld meg újra késõbb.";
+
+"<±æµå> Àå±ºÀ» ÁöÁ¤ÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Céh] Nincs jogod ahhoz hogy céhvezetõt válassz.";
+
+"<±æµå> ÀûÇÕÇÏÁö ¾ÊÀº Á÷À§ ÀÌ¸§ ÀÔ´Ï´Ù.";
+"[Céh] A rangnév érvénytelen.";
+
+"<±æµå> Àüºñ°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] Nincs elég Yang a céhharcban való részvételhez.";
+
+"<±æµå> Á¦°øÇÏ°íÀÚ ÇÏ´Â °æÇèÄ¡°¡ ³²Àº °æÇèÄ¡º¸´Ù ¸¹½À´Ï´Ù.";
+"[Céh] A felkínált tapasztalat nagyobb a megmaradónál.";
+
+"<±æµå> Á÷À§ ±ÇÇÑÀ» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Céh] Nincs jogosultságod a hatalmi pozíciód megváltoztatására.";
+
+"<±æµå> Á÷À§ ÀÌ¸§À» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Céh] Nincs jogosultságod a rangneved megváltoztatására.";
+
+"<±æµå> Á÷À§¸¦ º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Céh] Nem változtathatod meg a pozíciót.";
+
+"<±æµå> ÃÖ´ë ±æµå¿ø ¼ö¸¦ ÃÊ°úÇß½À´Ï´Ù.";
+"[Céh] A maximális céhkapacitás elérve.";
+
+"<±æµå> ÄğÅ¸ÀÓÀÌ ³¡³ªÁö ¾Ê¾Æ ±æµå ½ºÅ³À» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] Még nem tudod a céh képességeit használni.";
+
+"<±æµå> Å»ÅğÇÑ ÈÄ %dÀÏ ÀÌ³»¿¡´Â ±æµå¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] A céh elhagyása után %d napig nem csinálhatsz újat.";
+
+"<±æµå> Å»ÅğÇÑ ÈÄ %dÀÏÀÌ Áö³ªÁö ¾ÊÀº »ç¶÷Àº ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] Ezt a játékost csak %d nap múlva hívhatod meg újra.";
+
+"<±æµå> ÇØ»êÇÑ ÈÄ %dÀÏ ÀÌ³»¿¡´Â ±æµå¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.";
+"[Céh] A céh feloszlatása után %d napig nem csinálhatsz újat.";
+
+"<±æµå> ÇöÀç ±æµå°¡ ÀüÀï Áß ÀÔ´Ï´Ù.";
+"[Céh] Ez a céh éppen egy csatában vesz részt.";
+
+"<¸Ş½ÅÁ®> %s ´ÔÀ» ¸Ş½ÅÀú¿¡¼­ »èÁ¦ÇÏ¿´½À´Ï´Ù.";
+"[Barátok] %s-t törölted a listáról.";
+
+"<¸Ş½ÅÁ®> %s ´ÔÀ» Ä£±¸·Î Ãß°¡ÇÏ¿´½À´Ï´Ù.";
+"[Barátok] %s-t felvetted barátaid közé.";
+
+"<¸Ş½ÅÁ®> ¿î¿µÀÚ´Â ¸Ş½ÅÁ®¿¡ Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Barátok] Nem adhatsz GM-et a listádhoz.";
+
+"<Ã¢°í> °Å¸®°¡ ¸Ö¾î¼­ Ã¢°í¸¦ ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"[Raktár] Túl messze vagy a raktártól, hogy kinyisd.";
+
+"<Ã¢°í> ±âÁ¸ ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù.";
+"[Raktár] Hibás jelszót adtál meg.";
+
+"<Ã¢°í> ¿Å±æ ¼ö ¾ø´Â À§Ä¡ÀÔ´Ï´Ù.";
+"[Raktár] Mozgás nem lehetséges.";
+
+"<Ã¢°í> ÀÌ ¾ÆÀÌÅÛÀº ³ÖÀ» ¼ö ¾ø½À´Ï´Ù.";
+"[Raktár] A tárgy nem raktározható.";
+
+"<Ã¢°í> Àß¸øµÈ ¾ÏÈ£¸¦ ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.";
+"[Raktár] Rossz jelszót adtál meg.";
+
+"<Ã¢°í> Ã¢°í ºñ¹Ğ¹øÈ£°¡ º¯°æµÇ¾ú½À´Ï´Ù.";
+"[Raktár] Raktár jelszó megváltoztatva.";
+
+"<Ã¢°í> Ã¢°í°¡ ÀÌ¹Ì ¿­·ÁÀÖ½À´Ï´Ù.";
+"[Raktár] A raktár már nyitva van.";
+
+"<Ã¢°í> Ã¢°í·Î ¿Å±æ ¼ö ¾ø´Â ¾ÆÀÌÅÛ ÀÔ´Ï´Ù.";
+"[Raktár] Nem helyezheted ezt az elemet a raktáradba.";
+
+"<Ã¢°í> Ã¢°í¸¦ ´İÀºÁö 10ÃÊ ¾È¿¡´Â ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"[Raktár] 10 másodpercet kell várnod, mielõtt újra kinyithatod a raktárt.";
+
+"<Äù½ºÆ®> ÀÌÀü¿¡ °°Àº º¸»óÀ» ¹ŞÀº ÀûÀÌ ÀÖ¾î ´Ù½Ã ¹ŞÁö ¾Ê½À´Ï´Ù.";
+"[Quest] Már megkaptad a jutalmad.";
+
+"<ÆÄÆ¼> %s ´ÔÀÌ ÆÄÆ¼ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"[Csoport] %s visszautasítja a meghívást a csoportodba.";
+
+"<ÆÄÆ¼> %s´ÔÀÇ ÆÄÆ¼¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"[Csoport] %s belépett a csoportodba.";
+
+"<ÆÄÆ¼> %s´ÔÀÌ ÆÄÆ¼ ÃÊ´ë¸¦ °ÅÀıÇÏ¼Ì½À´Ï´Ù.";
+"[Csoport] %s visszautasította a meghívásod.";
+
+"<ÆÄÆ¼> %s´ÔÀÌ ÆÄÆ¼¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"[Csoport] %s belépett a csoportodba.";
+
+"<ÆÄÆ¼> -30 ~ +30 ·¹º§ ÀÌ³»ÀÇ »ó´ë¹æ¸¸ ÃÊ´ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Csoport] Csak -30 és +30 szint közötti játékosok hívhatóak meg.";
+
+"<ÆÄÆ¼> °üÀü ¸ğµå¿¡¼± ÆÄÆ¼ ÃÊ´ë¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Megfigyelõ státuszban nem intézhetsz meghívást.";
+
+"<ÆÄÆ¼> ´Ù¸¥ Á¦±¹°ú ÆÄÆ¼¸¦ ÀÌ·ê ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Egy másik birodalom játékosával nem tudsz csoportot alkotni.";
+
+"<ÆÄÆ¼> ´Ù¸¥ ÆÄÆ¼¿øÀ» Å»Åğ½ÃÅ³ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Nem zárhatod ki csoporttársadat.";
+
+"<ÆÄÆ¼> ´ë»óÀ» ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Nem hívhatod a célt.";
+
+"<ÆÄÆ¼> ´õ ÀÌ»ó ÆÄÆ¼¿øÀ» ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Nem hívhatsz több játékost a csoportodba.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼ ÃÊ´ë¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Kazamatában nem intézhetsz meghívást.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼ ÃÊ´ë¿¡ ÀÀÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Kazamatában nem tudsz elfogadni meghívást.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼¿¡¼­ ³ª°¥ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Nem hagyhatsz el csoportot egy kazamatában.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼¿¡¼­ Ãß¹æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Egy kazamatában nem zárhatsz ki játékost.";
+
+"<ÆÄÆ¼> ´øÁ¯³»¿¡¼­´Â ÆÄÆ¼¸¦ ³ª°¥ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Kazamatában nem hagyhatsz el csoportot.";
+
+"<ÆÄÆ¼> ´øÁ¯³»¿¡¼­´Â ÆÄÆ¼¿øÀ» Ãß¹æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Kazamatában nem zárhatsz ki játékost.";
+
+"<ÆÄÆ¼> ¸®´õ¸¸ º¯°æÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Csoport] Csak a csoportvezetõ változtathatja meg.";
+
+"<ÆÄÆ¼> »óÅÂ¸¦ º¯°æÇÏ·Á´Â »ç¶÷ÀÌ ÆÄÆ¼¿øÀÌ ¾Æ´Õ´Ï´Ù.";
+"[Csoport] A cél nem tagja a csoportodnak.";
+
+"<ÆÄÆ¼> ¼­¹ö ¹®Á¦·Î ÆÄÆ¼ °ü·Ã Ã³¸®¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] A szerver nem tudja feldolgozni a csoport feladatot.";
+
+"<ÆÄÆ¼> ¼ÒÈ¯ÇÏ·Á´Â ´ë»óÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Nem lett megtalálva a cél.";
+
+"<ÆÄÆ¼> ÀÌ¹Ì %s´ÔÀº ÆÄÆ¼¿¡ ¼ÓÇØ ÀÖ½À´Ï´Ù.";
+"[Csoport] %s már a csoportodban van.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ ±â¼úÀº ÆÄÆ¼Àå¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Csoport] A csoport képességei csak a csoportvezetõ rendelkezésére állnak.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ ÃÊ´ë¿¡ ÀÀÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Nem fogadhatod el a meghívást.";
+
+"<ÆÄÆ¼> ÆÄÆ¼°¡ ÇØ»ê µÇ¾ú½À´Ï´Ù.";
+"[Csoport] feloszlott a csoport.";
+
+"<ÆÄÆ¼> ÆÄÆ¼³» ÃÖ°í ·¹º§ º¸´Ù 30·¹º§ÀÌ ³·¾Æ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Nem hívhatod meg a játékost, mert túl alacsony szinten van.";
+
+"<ÆÄÆ¼> ÆÄÆ¼³» ÃÖÀú ·¹º§ º¸´Ù 30·¹º§ÀÌ ³ô¾Æ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Nem hívhatod meg a játékost, mert túl magas szinten van.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿¡¼­ ³ª°¡¼Ì½À´Ï´Ù.";
+"[Csoport] Kiléptél a csoportból.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿¡¼­ Ãß¹æ´çÇÏ¼Ì½À´Ï´Ù.";
+"[Csoport] Kizártak a csoportból.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿äÃ»À» ÇÑ Ä³¸¯ÅÍ¸¦ Ã£À»¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] A játékos aki meghívott, nem online.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿øÀ» ÃÊ´ëÇÒ ¼ö ÀÖ´Â ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Csoport] Nincs jogosultságod meghívót adni.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿øÀ» ÇöÀç À§Ä¡·Î ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Nem hívhatod csoporttársaidat az aktuális pozíciódba.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ÀÇ ÀÎ¿øÁ¦ÇÑÀÌ ÃÊ°úÇÏ¿© ÆÄÆ¼¿¡ Âü°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Nem léphetsz be a csoportba, mert már tele van.";
+
+"@*** ->%*s - Dice score: %4d ***";
+"@*** ->%*s - Kocka pontérték: %4d ***";
+
+"@*** Rolling for the following item: %s ***";
+"@*** Dobni a következõ tárgyért: %s ***";
+
+"A level-%d Dragon Portal can now be entered.";
+"Megnyílt a belépés egy %d. szintû Sárkány portálba.";
+
+"A level-%d Dragon Portal has opened. Take the dungeon by storm!";
+"Egy %d. szintû Sárkány portál nyílt meg. Rohand le a kazamatát!";
+
+"A name has already been registered.";
+"Már meg lett adva egy név.";
+
+"A player has announced their withdrawal. Kill them to earn more points!";
+"Egy játékos bejelentette visszavonulását. Öld meg, hogy több pontot érj el!";
+
+"A special supply pack has been dropped somewhere.";
+"Egy ritka ellátmánycsomagot dobtak le valahova.";
+
+"Account limit reached. You cannot open this box.";
+"Számlakorlát elérve. Nem nyithatod ki ezt a dobozt.";
+
+"Acquire the Valiant Pet Book for your pet's hero training.";
+"Szerezed be a Szelíd házikedvenc-könyvet kedvenced hõsi képzéséhez.";
+
+"Activate your pet first.";
+"Elõbb hívd elõ a házikedvenced.";
+
+"After using the Tincture of Kingdoms, you cannot accept invitations in this kingdom any more.";
+"A Birodalmak oldata használata után többé már nem tudsz meghívásokat fogadni ebbõl a birodalomból.";
+
+"All Combat Zone rankings have been reset.";
+"Az összes ranglista nullázódott a Harci övezetben.";
+
+"All curses have been lifted.";
+"Minden átok hatása semlegesítésre került.";
+
+"All group members have been turned to stone. Mission failed.";
+"Minden csoport tag kõvé változott. A küldetés sikertelen.";
+
+"All group members must be located on the same map to enter.";
+"Minden csoport tagnak ugyanazon a térképen kell lennie a belépéshez.";
+
+"All levels cleared. You will now be teleported to the bonus level.";
+"Minden szint teljesítve. Most a bónusz szintre leszel teleportálva.";
+
+"All of the outposts in %s have been destroyed and the area is no longer under Sung Mahi's control.";
+"A %s területén minden elõõrs el lett pusztítva, így a terület nincs többé Sung Mahi irányítása alatt.";
+
+"All slots are occupied.";
+"Minden hely foglalt.";
+
+"An error has occurred. The bonuses could not be changed.";
+"Hiba történt. A bónuszok nem változtak meg.";
+
+"An event is running and you will receive double points.";
+"Zajlik egy esemény, ezért dupla pontokat kapsz.";
+
+"Ask Sam Pumpkin if you've earned a reward.";
+"Kérdezd meg Sütõtök Samet, nyertél-e díjat.";
+
+"Battle Royale";
+"Battle Royale";
+
+"Battle Royale Combat Reward. Killed %d opponents or more";
+"Battle Royale harcért járó jutalom. %d vagy több ellenfelet öltél meg.";
+
+"Battle Royale Game Reward. Rank: %d";
+"Battle Royale játékért járó jutalom. Helyezés: %d.";
+
+"Battle Royale General Reward.";
+"Battle Royale általános jutalom.";
+
+"Battle Royale Season Reward. Season rank: %d";
+"Battle Royale szezonális jutalom. Helyezés ebben a körben: %d.";
+
+"Battle Royale participants status: (%u/%u)";
+"Battle Royale résztvevõk státusza: (%u/%u)";
+
+"Battle not started. Dungeon closed.";
+"A harc nem kezdõdött el. A kazamata bezárult.";
+
+"Bonus level: Destroy Metin stones.";
+"Bónusz szint: Pusztítsd el a Metinköveket!";
+
+"Bonus level: Destroy a Metin stone.";
+"Bónusz szint: Pusztíts el egy Metinkövet.";
+
+"Bonus level: You have 5 minutes to trade with the merchant and stock up on supplies.";
+"Bónusz szint: 5 perced van vásárolni a kereskedõtõl és feltölteni magad a portékáival.";
+
+"Cannot connect to the channel at this time. Please try again later.";
+"Jelenleg nem lehet ehhez a csatornához csatlakozni. Kérjük, próbáld újra késõbb.";
+
+"Climb the steps of Sung Mahi Tower and enter the next level.";
+"Menj fel a lépcsõkön Sung Mahi tornyában, és lépj be a következõ szintre!";
+
+"Collect Birch Branches, craft Yut Nori Boards from them and play the exciting minigame.";
+"Gyûjts Nyírfa törzseket, készíts Yut Nori táblát és játssz az izgalmas mini-játékkal!";
+
+"Comb through the areas and eliminate them. Gather hit points and exchange them for chests.";
+"Fésüld át a területeket és semmisítsd meg õket! Gyûjts ütéspontokat és váltsd át ládákra!";
+
+"County Bakra";
+"Bakra terület";
+
+"County Bokjung";
+"Bokjung terület";
+
+"County Yayang";
+"Yayang terület";
+
+"Current participants: %lu";
+"Jelenlegi résztvevõk: %lu";
+
+"Daeyami";
+"Daeyami";
+
+"Defeat 5 Zodiac bosses.";
+"Gyõzz le 5 Zodiákus fõszörnyet.";
+
+"Defeat all Zodiac bosses.";
+"Gyõzz le minden Zodiákus fõszörnyet.";
+
+"Defeat all monsters without dying.";
+"Gyõzz le minden szörnyet anélkül, hogy meghalnál.";
+
+"Defeat all monsters.";
+"Gyõzz le minden szörnyet.";
+
+"Defeat monsters.";
+"Gyõzd le a szörnyeket!";
+
+"Defeat the Zodiac boss without dying.";
+"Gyõzd le a Zodiákus fõszörnyet anélkül, hogy meghalnál.";
+
+"Defeat the Zodiac boss.";
+"Gyõzd le a Zodiákus fõszörnyet.";
+
+"Deliver equipped weapon skin.";
+"Felszerelt fegyver-kinézet átadása.";
+
+"Delivered Pumpkin Lanterns: %d";
+"Leszállított Töklámpások: %d";
+
+"Destroy Metin stones.";
+"Pusztítsd el a Metinköveket!";
+
+"Destroy a Metin stone. If you are successful, you'll receive a bonus buff.";
+"Pusztíts el egy Metinkövet. Ha sikerül, egy bónusz hatást kapsz.";
+
+"Destroy all Metin stones and defeat the Zodiac boss.";
+"Pusztíts el minden Metinkövet és gyõzd le a Zodiákus fõszörnyet.";
+
+"Destroy all Metin stones.";
+"Pusztíts el minden Metinkövet.";
+
+"Destroy the right Metin stone!";
+"Pusztítsd el a megfelelõ Metinkövet!";
+
+"Dodge every attack!";
+"Verj vissza minden támadást!";
+
+"Dong Gwang Plain";
+"Dong Gwang síkság";
+
+"Doyyumhwan";
+"Doyyumhwan";
+
+"Drag the items into the window.";
+"Húzd a tárgyakat az ablakba.";
+
+"Duel of the Seers Prizes";
+"Látók párbaja jutalmak";
+
+"Enchant Item cannot be used on this item.";
+"A Megbûvölõ tárgy nem használható ezen a tárgyon.";
+
+"Enchanted Forest";
+"Elvarázsolt erdõ";
+
+"Enough Pumpkin Lanterns have been collected.";
+"Elegendõ Töklámpás lett összegyûjtve.";
+
+"Entering the Combat Zone in %d seconds.";
+"Belépés a Harci övezetbe %d másodperc múlva.";
+
+"Experience has increased to %d points.";
+"A tapasztalat %d pontra nõtt.";
+
+"Failed!";
+"Nem sikerült!";
+
+"Failure! The %s effect was not activated.";
+"Nem sikerült! A %s hatása nem lett aktiválva.";
+
+"Failure! The absorption rate was reduced by 1%.";
+"Nem sikerült! Az abszorpciós mérték 1%-kal csökkent.";
+
+"Failure! The attempt to change to the %s effect failed.";
+"Nem sikerült! A %s hatására való átváltás sikertelen volt.";
+
+"Failure! The attempt to upgrade the %s effect to level %d failed.";
+"Nem sikerült! A %s hatásának fejlesztése a %d. szintre sikertelen volt.";
+
+"Fantastic prizes await!";
+"Fantasztikus nyeremények várnak!";
+
+"Final";
+"Döntõ";
+
+"Find a Sealstone to break the seal!";
+"Találd meg a Pecsétkövet a pecsét feltöréséhez!";
+
+"Find the right key to escape!";
+"Találd meg a helyes kulcsot a meneküléshez!";
+
+"First level cleared. Return to Monk Milbon.";
+"Elsõ szint teljesítve. Menj vissza Milbon szerzeteshez.";
+
+"Gautama Cliff";
+"Gautama-szikla";
+
+"Go and talk to Sam Pumpkin!";
+"Menj és beszélj Sütõtök Sammel!";
+
+"Go to the Yut Nori Table to collect your reward.";
+"Menj a Yut Nori asztalhoz a jutalmad begyûjtéséhez.";
+
+"Grotto of Exile";
+"A Számûzött barlangja";
+
+"Grotto of Exile 2";
+"A Számûzött barlangja 2";
+
+"Guild [%s]! The final objective has appeared. Destroy all objectives to win this war!";
+"[%s] Céh! Megjelent az utolsó cél. A háború megnyeréséhez semmisítsd meg az összes célt!";
+
+"Hurry! You have %d minutes to travel through the portal to reach the mainland.";
+"Siessetek! %d percetek van, hogy a portálon keresztül eljussatok a szárazföldre.";
+
+"Hwang Temple";
+"Hwang templom";
+
+"If you don't start the sea battle within 1 minute, you will have to leave the ship.";
+"Ha nem indítjátok el a tengeri ütközetet 1 percen belül, el kell hagynotok a hajót.";
+
+"If you want to change weapons, you must remove the weapon skin first.";
+"Ha fegyvert akarsz cserélni, elõbb el kell távolítanod a fegyver-kinézetet.";
+
+"Imha";
+"Imha";
+
+"In 15 sec. everyone who gave an incorrect answer will be removed.";
+"15 mp. múlva mindenki el lesz távolítva, aki rossz választ adott.";
+
+"Insufficient space in your inventory. The reward will be sent to your mailbox.";
+"Nincs elég hely a leltáradban. A jutalom a postaládádba kerül kiküldésre.";
+
+"Items can only be traded on the same map.";
+"Csak akkor tudsz tárgyakkal kereskedni, ha azonos térképen vagytok.";
+
+"Joan";
+"Joan";
+
+"Jungrang";
+"Jungrang";
+
+"Kill a pair of monsters that don't belong together!";
+"Ölj meg egy szörnypárost, melyek nem tartoznak össze!";
+
+"Kill all the monsters within the time limit!";
+"Öld meg az összes szörnyet a megadott idõn belül!";
+
+"Kuahlo Dong (Spiders Dungeon)";
+"Kuahlo Dong (Pók kazamata)";
+
+"Land sighted! You have successfully protected the mast and reached the new continent after a long and weary journey. Continue to the portal.";
+"Föld a láthatáron! Sikeresen megvédtétek az árbócot és elértétek az új kontinenst egy hosszú és fárasztó úton. Menjetek tovább a portálhoz!";
+
+"Leaving the Combat Zone in %d seconds.";
+"Harci övezet elhagyása %d másodperc múlva.";
+
+"Loot for completing Sung Mahi Tower";
+"Zsákmány Sung Mahi tornya teljesítéséért";
+
+"Magic penetration of %d%%.";
+"Mágikus áthatolás: %d%%.";
+
+"Make sure you have enough space in your inventory before you go fishing.";
+"Mielõtt belevágsz a horgászatba, gyõzõdj meg róla, hogy van elég helyed a leltáradban.";
+
+"Maximum absorption rate reached.";
+"Maximum abszorpciós mérték elérve.";
+
+"Maximum guild level reached. No more donations possible.";
+"A céh elérte a maximális szintjét. Nem lehetséges többé adományozni.";
+
+"Miryang";
+"Miryang";
+
+"Mission complete. As soon as the group leader hits the button, you will be teleported directly to level %d.";
+"Küldetés teljesítve. Amint a csoport vezetõje megnyomja a gombot, közvetlenül a %d. szintre leszel teleportálva.";
+
+"Monsters have appeared in the Valley of Seungryong, Mount Sohan, Doyyumhwan and in the Yongbi Desert!";
+"Szörnyek jelentek meg a Seungryong-völgyben, a Sohan-hegységben, Doyyumhwanon és a Yongbi sivatagban.";
+
+"Mount Sohan";
+"Sohan-hegység";
+
+"Mr B and the boss monsters disappear in %d minute(s).";
+"%d Perc múlva eltûnik B. úr és a fõszörnyek.";
+
+"Nam Gwang Chasm";
+"Nam Gwang szakadék";
+
+"Nephrite Bay";
+"Nefrit-öböl";
+
+"New absorption rate: %d";
+"Új abszorpciós mérték: %d";
+
+"Next entry available in %d minute(s).";
+"A következõ belépés %d perc múlva válik elérhetõvé.";
+
+"Next entry available in %d second(s).";
+"A következõ belépés %d másodperc múlva válik elérhetõvé.";
+
+"No guilds have registered for the territory auction.";
+"Egyetlen céh sem regisztrált a területaukcióra.";
+
+"No lease needs to be paid.";
+"Nincs kifizetetlen bérleti díj.";
+
+"No winner";
+"Nincs gyõztes";
+
+"Not possible while transferring bonuses.";
+"Nem lehetséges bónuszok átvitele közben.";
+
+"O ÀÔ´Ï´Ù";
+"Igen (O)";
+
+"OX ¹®Á¦ ½ºÅ©¸³Æ® ·Îµù ¼º°ø";
+"OX Quiz Script betöltõdött.";
+
+"OX ¹®Á¦ ½ºÅ©¸³Æ® ·Îµù ½ÇÆĞ";
+"OX Quiz Script nem tölthetõ be.";
+
+"OX »óÇ°À» Áö±ŞÇÏ¿´½À´Ï´Ù. ID: %d ¼ö·®: %d";
+"OX A díjat kiosztották. ID: %d Quantity: %d";
+
+"OX ÀÌº¥Æ®°¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.";
+"OX Esemény elkezdõdött.";
+
+"OX ÀÌº¥Æ®°¡ ÀÌ¹Ì ÁøÇàÁßÀÔ´Ï´Ù(flag: %d)";
+"Az esemény már zajlik (Flag: %d)";
+
+"OX ÀÌº¥Æ®¸¦ ¸¶Ä¡°Ù½À´Ï´Ù.";
+"OX Az esemény lezárult.";
+
+"OXÀÌº¥Æ® ¸ÊÀ» ¸ÕÀú ´İ¾Æ ÁÖ¼¼¿ä.(Flag: %d)";
+"Elõször zárd be az OX eseménykártyát. (Flag: %d)";
+
+"OXÀÌº¥Æ®°¡ ´İÈ÷Áö ¾Ê¾Ò°Å³ª, ÄûÁî ÃâÁ¦ÁßÀÔ´Ï´Ù.(flag: %d)";
+"OX Az esemény még nem fejezõdött be. Hiba történt. (flag: %d)";
+
+"OXÀÌº¥Æ®°¡ ¿­·Á ÀÖÁö ¾Ê°Å³ª ¹®Á¦ ÃâÁ¦ÁßÀÔ´Ï´Ù.(Flag: %d)";
+"OX Esemény befejezõdött. Nem történt hiba.(Flag: %d)";
+
+"OXÀÌº¥Æ®¸¦ °­Á¦ Á¾·á ½ÃÅµ´Ï´Ù.";
+"OX Esemény befejezõdik.";
+
+"OXÀÌº¥Æ®ÀÇ ³ª¸ÓÁö ÀÎ¿ø ±â·ÏÀ» ½ÇÆĞÇß½À´Ï´Ù.";
+"OX A többi esemény résztvevõ nem lett felírva.";
+
+"OXÀÌº¥Æ®ÀÇ ³ª¸ÓÁö ÀÎ¿øÀ» ±â·ÏÇÏ¿´½À´Ï´Ù.";
+"OX Az esemény többi résztvevõje fel van írva.";
+
+"Only guilds of level %d or higher can register.";
+"Csak %d. vagy feletti szintû céhek regisztrálhatnak.";
+
+"Only the guild leader can register for the territory auction.";
+"Csak a céh vezetõ regisztrálhat a területaukcióra.";
+
+"Only the guild leader or a member with bank access can pay the lease.";
+"Csak a céh vezetõ vagy egy bank hozzáféréssel rendelkezõ tag tudja kifizetni a bérleti díjat.";
+
+"Partial success! The absorption rate was reduced by 1%.";
+"Részleges siker! Az abszorpciós mérték 1%-kal csökkent.";
+
+"Participants: %s";
+"Résztvevõk: %s";
+
+"Perfect! You have attached the Spirit Stone successfully and you even receive a double stat bonus.";
+"Tökéletes! Sikeresen felszerelted a Szellemkövet, és még dupla státusz bónuszt is kaptál.";
+
+"Please close all other windows to open your mailbox.";
+"Kérlek, zárj be minden más ablakot a postaládád megnyitásához.";
+
+"Please empty your mailbox to be able to receive new messages.";
+"Kérlek, ürítsd ki a postaládád, hogy fogadhass új üzeneteket.";
+
+"Please enter another name.";
+"Kérjük, írj be másik nevet.";
+
+"Please remove the equipped Dragon Stone before using this item.";
+"Kérjük, távolítsd el a felszerelt Sárkánykövet, mielõtt használod ezt a tárgyat.";
+
+"Please try again later.";
+"Kérjük, próbáld újra késõbb.";
+
+"Please wait a moment. Changing channel...";
+"Kérlek, várj egy pillanatot. Csatorna váltás...";
+
+"PvP Tournament";
+"PvP bajnokság";
+
+"Pyungmoo";
+"Pyungmoo";
+
+"Receive: %s - %d";
+"Kaptál: %s - %d";
+
+"Red Forest";
+"Vörös Erdõ";
+
+"Registration for the Battle Royale has been closed.";
+"A Battle Royalera való jelentkezés lezárásra került.";
+
+"Registration for the PvP tournament complete.";
+"A jelentkezés a PvP bajnokságra lezárult.";
+
+"Reinforce Item cannot be used on this item.";
+"A Tárgy-megerõsítõ nem használható ezen a tárgyon.";
+
+"Remaining number: %d";
+"Maradék mennyiség: %d";
+
+"Remaining participants: %lu";
+"Maradék résztvevõk: %lu";
+
+"Remaining time: %.2f | Fish difficulty: %lu | Difficulty reduction: %d";
+"Hátralevõ idõ: %.2f | Hal nehézsége: %lu | Nehézség csökkentése: %d";
+
+"Remove %s from your friends list to continue.";
+"Elõbb töröld %s-t a barátaid közül.";
+
+"Reward";
+"Jutalom";
+
+"Reward for Ritual of Blood";
+"Jutalom a Vér rituáléért";
+
+"Reward for rank %d";
+"Jutalom a %d. helyezésért";
+
+"Reward for winning a round";
+"Jutalom egy kör megnyeréséért";
+
+"Reward for winning a tournament";
+"Jutalom a bajnokság megnyeréséért";
+
+"Round %d is starting";
+"Kezdõdik a(z) %d. menet";
+
+"Round %lu";
+"%lu. kör";
+
+"SOS! The mast has been smashed and your ship is sinking. You will now be teleported to Cape Dragon Fire.";
+"S.O.S.! Az árbócot összezúzták és a hajó süllyedni kezdett. Most Sárkánytûz-fokra lesztek teleportálva.";
+
+"Sadly you were unable to stop the Apocalypse. You will be teleported back to the Zodiac Temple shortly.";
+"Sajnos nem sikerült megállítanod az Apokalipszist. Hamarosan vissza leszel teleportálva a Zodiákus templomba.";
+
+"Safe zone has now been deactivated.";
+"A biztonságos övezet deaktiválva lett.";
+
+"Seasonal Sung Mahi Tower Reward";
+"Szezonális Sung Mahi tornya jutalom";
+
+"Seasonal reward for 1st place on level %d in Sung Mahi Tower.";
+"Szezonális jutalom a Sung Mahi tornyának %d. szintjén elért 1. helyezésért.";
+
+"Semifinal";
+"Elõdöntõ";
+
+"Seo Gwang Wastelands";
+"Seo Gwang pusztaság";
+
+"Snakefield";
+"Kígyórét";
+
+"Songpa";
+"Songpa";
+
+"Spider Dungeon 2";
+"Pók kazamata 2";
+
+"Success!";
+"Siker!";
+
+"Success! The %s effect has been increased to level %d.";
+"Siker! A %s hatása fejlesztve lett a %d. szintre.";
+
+"Success! The %s effect is now active.";
+"Siker! A %s hatása most már aktív.";
+
+"Success! The bonus was transferred successfully.";
+"Siker! A bónusz sikeresen átvitelre került.";
+
+"Sung Mahi Tower Level %d";
+"Sung Mahi T. %d. szint";
+
+"Sung Mahi's outposts are being erected.";
+"Sung Mahi elõõrsei felállításra kerülnek.";
+
+"Sung Mahi's outposts have been destroyed.";
+"Sung Mahi elõõrseit elpusztították.";
+
+"TEST : ÇöÀç ±¹°í : %d";
+"TEST: A birodalmad széf tartalma: %d";
+
+"TEST : È²±İµÎ²¨ºñ°¡ ±¹°í·Î È¯¿øµÇ¾ú½À´Ï´Ù.";
+"TEST: Az aranyrudakat visszafizették a birodalom széfjébe.";
+
+"TEST : È²±İµÎ²¨ºñ¸¦ ±¹°í·Î È¯¿øÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"TEST: Az aranyrudakat nem tudod visszatenni a birodalom széfjébe.";
+
+"Taxes are set to %d%%.";
+"Az adó %d%%-ra lett beállítva.";
+
+"Teleportation to the Plateau of Primal Forces has failed.";
+"Nem sikerült a teleportálás az Elemi erõk fennsíkjára.";
+
+"Thanks to the immunity blessing, you are not influenced by Sung Mahi's Presence.";
+"Az immunitás-áldásnak köszönhetõen nincs rád hatással Sung Mahi aurája.";
+
+"The %s guild has purchased the territory in the %s area at %d,%d for %d Won.";
+"A %s céh megvásárolta a földet a %s területen (%d,%d) %d Wonért.";
+
+"The 'Ship Defence' dungeon is ready. The fisherman will let you board now.";
+"A 'Hajó megvédése' kazamata elérhetõ. A halász most már engedni fog felszállni a fedélzetre.";
+
+"The Altar of Blood has appeared.";
+"Megjelent a Vér oltára.";
+
+"The Anniversary Event ends in %d minute(s).";
+"Az Évfordulós esemény %d perc múlva véget ér.";
+
+"The Anniversary Event has started!";
+"Az Évfordulós esemény elkezdõdött!";
+
+"The Battle Royale cannot begin, because there are too few participants.";
+"A Battle Royale nem indul el, mert túl kevés résztvevõ van.";
+
+"The Battle Royale ends in %d seconds.";
+"A Battle Royale %d másodperc múlva véget ér.";
+
+"The Battle Royale has begun!!";
+"A Battle Royale elkezdõdött!";
+
+"The Battle Royale has begun. The first area will be shown in %d seconds.";
+"A Battle Royale elkezdõdött. Az elsõ terület %d másodperc múlva jelenik meg.";
+
+"The Battle Royale has ended!!";
+"A Battle Royale véget ért!";
+
+"The Battle of the Five Shrines ends in %d minute(s).";
+"Az öt szentély csatája %d perc múlva véget ér.";
+
+"The Battle of the Five Shrines has begun! It will last %d days.";
+"Az öt szentély csatája elkezdõdött! %d napig fog tartani.";
+
+"The Battle of the Five Shrines is over. The next battle starts in %d hour(s).";
+"Az öt szentély csatája véget ért. A következõ harc %d óra múlva kezdõdik.";
+
+"The Boss Reaper Event ends in %d minute(s).";
+"%d Perc múlva véget ér a Fõszörny-kaszáló esemény.";
+
+"The Combat Zone has been updated. It will be closed off in %d seconds.";
+"A Harci övezet megváltozott. Lezárásra kerül %d másodperc múlva.";
+
+"The Combat Zone is now closed.";
+"A Harci övezet most zárva van.";
+
+"The Combat Zone is now open.";
+"A Harci övezet most nyitva áll.";
+
+"The Combat Zone will be closed off in %d seconds.";
+"A Harci övezet %d másodperc múlva lezárásra kerül.";
+
+"The Combat Zone will close in %d minute(s).";
+"A Harci övezet %d perc múlva zárul.";
+
+"The Combat Zone will open in %d minute(s).";
+"A Harci övezet %d perc múlva nyílik meg.";
+
+"The Compass was used, but the Guard wasn’t found.";
+"Használtad az iránytût, de nem találta meg az Õrt.";
+
+"The Flower Power Event has ended.";
+"A Virág rendezvény véget ért!";
+
+"The Flower Power Event has started.";
+"A Virág rendezvény elkezdõdött!";
+
+"The Halloween Event has begun!";
+"Elkezdõdött a Halloween esemény!";
+
+"The Halloween Event has finished. Don't forget to collect your rewards!";
+"Véget ért a Halloween esemény. Ne felejtsd el begyûjteni a jutalmad!";
+
+"The Okey Event has started!";
+"Elkezdõdött az Okey esemény!";
+
+"The Okey Event is over!";
+"Véget ért az Okey esemény!";
+
+"The PvP tournament is over.";
+"A PvP bajnokság véget ért.";
+
+"The PvP tournament starts in %d min.";
+"A PvP bajnokság %d percen belül kezdõdik.";
+
+"The Ramadan Event has started!";
+"A Ramadán rendezvény elkezdõdött!";
+
+"The Ramadan Event is over.";
+"A Ramadán rendezvény véget ért.";
+
+"The Ritual Stone only works with items above level 80.";
+"A Rituális kõ csak a 80-as szint feletti tárgyakkal mûködik.";
+
+"The Ritual of Blood has started. Buy special items to get better rewards.";
+"A Vér rituálé elkezdõdött. Különleges tárgyak vásárlásával jobb jutalmakat kaphatsz.";
+
+"The Ritual of Blood is over. Try again another time.";
+"A Vér rituálé befejezõdött. Próbáld ki újra máskor!";
+
+"The Tower Action has been activated.";
+"A Torony-rendezvény aktiválásra került.";
+
+"The Zodiac Apocalypse has already started.";
+"A Zodiákus Apokalipszis már elkezdõdött.";
+
+"The Zodiac Apocalypse is not currently active.";
+"A Zodiákus Apokalipszis jelenleg nem aktív.";
+
+"The answer will appear in 20 seconds.";
+"A válasz megjelenik 20 másodperc múlva.";
+
+"The battle has been terminated as a result of an unexpected issue.";
+"A csata véget ért egy váratlan hiba következményeképp.";
+
+"The battle has begun.";
+"A harc elkezdõdött.";
+
+"The battle starts in %d seconds.";
+"A harc %d másodpercen belül indul.";
+
+"The boss has been defeated! You will be teleported back to the Zodiac Temple shortly.";
+"Legyõzted a fõszörnyet! Hamarosan vissza leszel teleportálva a Zodiákus templomba.";
+
+"The countdown has begun. The Battle Royale starts in %d seconds.";
+"A visszaszámlálás elkezdõdött. A Battle Royale %d másodperc múlva indul.";
+
+"The dungeon will be closed if you do not start the battle within %d minute(s).";
+"A kazamata lezárásra kerül, ha nem indítod el a csatát %d percen belül.";
+
+"The electrical field has stopped. The next Combat Zone will be shown in %d seconds.";
+"Az elektromos mezõ megállt. A következõ Harci övezet %d másodperc múlva jelenik meg.";
+
+"The event has ended as none of the kingdoms entered.";
+"Az esemény véget ért, mivel egyik birodalom sem lépett be.";
+
+"The event has started!";
+"Az esemény elkezdõdött!";
+
+"The event in the Combat Zone has finished.";
+"Befejezõdött az esemény a Harci övezetben.";
+
+"The event is not currently active.";
+"A rendezvény jelenleg nem aktív.";
+
+"The event is over. You cannot use this item any more.";
+"A rendezvénynek vége. Nem használhatod már ezt a tárgyat.";
+
+"The group members are too far away to receive the item.";
+"A csoport tagok túl messze vannak, hogy megkapják a tárgyat.";
+
+"The guild does not have enough Yang.";
+"A céhnek nincs elég Yangja.";
+
+"The guild war declaration expires in 3 minutes.";
+"3 perc múlva lejár a céhháború kihirdetése.";
+
+"The interface cannot be opened while you are mounted.";
+"A felület nem nyitható meg, amíg hátason ülsz.";
+
+"The lease for the guild territory wasn't paid. The guild territory has been abandoned.";
+"Nem került befizetésre a bérleti díj a céhterületért. A céhterület elhagyatottá vált.";
+
+"The loot from Sung Mahi Tower has been sent to your mailbox.";
+"A zsákmány Sung Mahi tornyából a postaládádba került elküldésre.";
+
+"The maximum bid is %d Won.";
+"A maximális ajánlat %d Won.";
+
+"The maximum level has already been reached.";
+"Már elérted a maximális szintet.";
+
+"The mission was unsuccessful.";
+"A küldetés sikertelen volt.";
+
+"The monster from the current event has appeared.";
+"Megjelent az aktuális eseményhez tartozó szörny.";
+
+"The name entered is too short.";
+"A megadott név túl rövid.";
+
+"The next wave begins in %d sec.";
+"A következõ hullám %d másodperc múlva indul.";
+
+"The other person is currently busy so you cannot trade right now.";
+"A másik személy épp elfoglalt, ezért most nem tudsz vele kereskedni.";
+
+"The pet's level cannot be higher than the player's.";
+"A házikedvenc szintje nem lehet magasabb a játékosénál.";
+
+"The player cannot accept your invitation at this time.";
+"A játékos jelenleg nem tudja elfogadni a meghívásodat.";
+
+"The portal to the next level is open.";
+"A következõ szinthez vezetõ portál megnyílt.";
+
+"The portal to the next room is open.";
+"A következõ teremhez vezetõ portál megnyílt.";
+
+"The reward from the Duel of the Seers will be delivered by post since your inventory was full.";
+"Mivel a leltárad tele volt, a Látók párbaján szerzett jutalmad postán kerül kézbesítésre.";
+
+"The sash cannot take on any further bonuses.";
+"A pánt nem tud további bónuszokat magába szívni.";
+
+"The sea battle starts in %d sec.";
+"A tengeri ütközet %d másodpercen belül kezdõdik.";
+
+"The soulbind on this item is already in the process of being removed.";
+"Ezen tárgy lélekhez kötésének feloldása már folyamatban van.";
+
+"The summer event has started. Visit Summer in town. She'll give you some tasty refreshments.";
+"Elkezdõdött a nyári esemény. Keresd fel Summer-t a városban! Adni fog némi ízletes frissítõt.";
+
+"The summer event will end soon. Summer will keep the towns supplied with tasty refreshments for 7 more days.";
+"Hamarosan véget ér a nyári esemény. Summer további 7 napig még a városban marad ízletes frissítõivel.";
+
+"The time to enter the Dragon Portal has expired.";
+"Lejárt az idõ a Sárkány portálba való belépéshez.";
+
+"The window is already open.";
+"Az ablak már nyitva van.";
+
+"There are %d Zodiac Temple(s) in the area. Enter the relevant command to teleport to one of them (1-%d).";
+"%d Zodiákus templom van a területen. Írd be a megfelelõ parancsot, hogy teleportálj az egyikükhöz (1-%d).";
+
+"There are no items matching your search.";
+"Nincs a keresésednek megfelelõ tárgy.";
+
+"There are no more Combat Zones. The whole area will be closed off in %d seconds.";
+"Nincs több Harci övezet. Az egész terület lezárásra kerül %d másodperc múlva.";
+
+"There are no territory auctions right now.";
+"Jelenleg nincs folyamatban egyetlen területaukció sem.";
+
+"There is no Zodiac Temple on this map.";
+"Nincs Zodiákus templom ezen a térképen.";
+
+"There's nothing to collect.";
+"Nincs semmi, amit begyûjthetnél.";
+
+"These sashes cannot be combined.";
+"Ezek a pántok nem kombinálhatók.";
+
+"They're attacking again! Ready your weapons!";
+"Ismét támadnak! Készítsétek a fegyvereiteket!";
+
+"This action is not possible on this map.";
+"Ez az akció nem kivitelezhetõ ezen a térképen.";
+
+"This cannot be used on equipped items.";
+"Ezt nem használhatod felszerelt tárgyakon.";
+
+"This character isn't available to duel.";
+"Ez a karakter jelenleg nem tud párbajozni.";
+
+"This command can only be used in the Zodiac Temple.";
+"Ez a parancs csak a Zodiákus templomban használható.";
+
+"This command can only be used on the PvP tournament map.";
+"Ez a parancs csak a PvP bajnokság térképén használható.";
+
+"This effect is already active.";
+"Ez a hatás már aktív.";
+
+"This function is unavailable as hacking software has been detected.";
+"Ez a funkció nem elérhetõ, mert csaló programot észleltünk.";
+
+"This guild does not exist.";
+"Ez a céh nem létezik.";
+
+"This has already been customised.";
+"Ez már egyedivé lett téve.";
+
+"This is not possible while the other player is transferring bonuses.";
+"Ez nem lehetséges, miközben a másik játékos bónuszokat visz át.";
+
+"This is the winner of the Battle Royale: %s";
+"A Battle Royale gyõztese: %s";
+
+"This item cannot be absorbed.";
+"Ez a tárgy nem abszorbeálható.";
+
+"This item cannot be transmuted.";
+"Ez a tárgy nem használható átalakításhoz.";
+
+"This item is already soulbound.";
+"Ez a tárgy már lélekhez kötött.";
+
+"This item is not soulbound.";
+"Ez a tárgy nincs lélekhez kötve.";
+
+"This item is only available in Meley’s Lair.";
+"Ez a tárgy csak Meley barlangjában mûködik.";
+
+"This player is already trading with someone else.";
+"Ez a játékos már mással kereskedik.";
+
+"This temple's gates open on another day.";
+"Ennek a templomnak a kapui egy másik napon lesznek nyitva.";
+
+"Thunder Mountains";
+"Mennydörgés-hegység";
+
+"Time remaining to finish first round: %d minutes.";
+"Az elsõ forduló végéig hátralévõ idõ: %d perc.";
+
+"Time remaining to finish second round: %d minutes.";
+"A második forduló végéig hátralévõ idõ: %d perc.";
+
+"Time remaining until safe zone is deactivated: %d minutes.";
+"A biztonságos övezet deaktiválásáig hátralévõ idõ: %d perc.";
+
+"Time's up.";
+"Lejárt az idõ.";
+
+"Time's up. Better luck next time.";
+"Lejárt az idõ. Sok sikert legközelebb!";
+
+"Time's up. First round over.";
+"Lejárt az idõ. Vége az elsõ fordulónak.";
+
+"Time's up. Second round over.";
+"Lejárt az idõ. Vége a második fordulónak.";
+
+"Time's up. You're being taken outside.";
+"Lejárt az idõ. Ki fogsz teleportálódni innen.";
+
+"To determine a pet's destiny you need a Pet Destiny Orb.";
+"Egy házikedvenc életútjának felfedéséhez szükséged van egy Kedvenc életút-gömbre.";
+
+"Total %d: You can still unpack %d.";
+"Összesen %d: Még kinyitható %d.";
+
+"Total Pumpkin Lanterns: %d";
+"Összes Töklámpás: %d";
+
+"Unblock %s to continue.";
+"Elõbb oldd fel %s-t.";
+
+"Unfortunately you don't have enough space in your inventory.";
+"Sajnos nincs elég hely a leltáradban.";
+
+"Unlucky, there was no treasure in the fish's belly.";
+"Sajnos a hal gyomra nem rejtett semmilyen kincset.";
+
+"Unpack the next gift in %d minutes.";
+"A következõ ajándék %d perc múlva nyitható ki.";
+
+"Upgrade change failed.";
+"A fejlesztés megváltoztatása sikertelen volt.";
+
+"Valley of Seungryong";
+"Seungryong-völgy";
+
+"Visit %s to collect your reward.";
+"Látogasd meg %s-t a jutalmad begyûjtéséhez.";
+
+"Waryong";
+"Waryong";
+
+"Wave %d: For %d sec. you must protect the %s with all your strength.";
+"%d. hullám: minden erõtökkel meg kell védenetek %d másodpercig az %sot.";
+
+"Wave %d: While protecting the %s, defeat %s.";
+"%d. hullám: az %s megvédése mellett le kell gyõznötök %s-t.";
+
+"We're under attack from sea monsters! Get ready to fight!";
+"Támadnak minket a tengeri szörnyek! Készüljetek az ütközetre!";
+
+"We've slain the boss!";
+"Megöltük a fõszörnyet!";
+
+"Well done! For reaching rank %d in the Combat Zone rankings, you will be rewarded a special accolade.";
+"Jó munka volt! A Harci övezet rangsorban elért %d. helyezésért különleges jutalomban részesülsz.";
+
+"While modifying your pet's stats, you cannot trade, sell items, use the storeroom etc.";
+"A kereskedés, tárgyak eladása, raktár használata, stb. nem lehetséges, miközben módosítod kedvenced pontértékeit.";
+
+"Winner: %s / Loser: %s";
+"Gyõztes: %s / Vesztes: %s";
+
+"Wipe out! If no one is revived within one minute, your dungeon adventure will be over.";
+"Mindenki meghalt! Ha senki nem éled fel egy percen belül, a kalandod a kazamatában véget ér.";
+
+"X ÀÔ´Ï´Ù";
+"Nem (X)";
+
+"Yongan";
+"Yongan";
+
+"Yongbi Desert";
+"Yongbi-sivatag";
+
+"You already have the maximum amount of Won.";
+"Nem lehet nálad több Won.";
+
+"You are entering the Combat Zone. Please wait.";
+"Belépsz a Harci övezetbe. Türelmet kérünk!";
+
+"You are facing level %d.";
+"A(z) %d. szinten vagy.";
+
+"You are leaving the Combat Zone. Please wait.";
+"Elhagyod a Harci övezetet. Türelmet kérünk!";
+
+"You are not a member of any guild.";
+"Nem vagy egyetlen céh tagja sem.";
+
+"You are not cursed.";
+"Nincs rajtad átok.";
+
+"You are not the group leader.";
+"Nem te vagy a csoport vezetõ.";
+
+"You attacked the wrong monster. Kill all the monsters!";
+"Rossz szörnyet támadtál meg. Öld meg az összes szörnyet!";
+
+"You can get back the Won you bid from the guard in the village.";
+"Az ajánlatodban tett Wont visszakaphatod a faluban található õrtõl.";
+
+"You can learn this after reaching the Champion Level.";
+"Ezt a Bajnokszint elérése után tanulhatod meg.";
+
+"You can now wear gloves.";
+"Most már viselhetsz kesztyûket.";
+
+"You can only bid if you have been a member of the guild for more than 24 hours.";
+"Csak akkor tehetsz ajánlatot, ha már legalább 24 órája a céh tagja vagy.";
+
+"You can only discard the belt when there are no longer any items in its inventory.";
+"Az övet csak akkor lehet levenni, ha már semmilyen tárgy nincs a leltárában.";
+
+"You can only receive your prize once you have made space in your inventory.";
+"Csak akkor kaphatod meg a nyereményed, ha van üres hely a leltáradban.";
+
+"You can only use Shoulder Sashes as well as weapons and armour pieces.";
+"Csak úgy használhatod a Vállpántokat is, mint a fegyvereket és a páncéldarabokat.";
+
+"You can only use Shoulder Sashes.";
+"Csak Vállpántokat használhatsz.";
+
+"You can only use this item during the current event.";
+"Ezt a tárgyat csak az aktuális rendezvény során használhatod.";
+
+"You can only withdraw from the battle in %d sec.";
+"Csak %d másodperc múlva tudsz visszavonulni a harcból.";
+
+"You can open it 3 seconds after closing the menu for modifying pet stats.";
+"3 másodperccel a házikedvenc pontérték módosító ablak bezárása után nyithatod meg újra.";
+
+"You can take back the Won you bid.";
+"Visszaveheted az ajánlatként feltett Wont.";
+
+"You can use a maximum of 200 ingredients at once.";
+"Egyszerre legfeljebb 200 hozzávalót használhatsz fel.";
+
+"You cannot bind this item to your soul.";
+"Ezt a tárgyat nem tudod a lelkedhez kötni.";
+
+"You cannot block your spouse.";
+"Nem blokkolhatod a házastársadat.";
+
+"You cannot cancel this on the Battle Royale server.";
+"Ezt nem vonhatod vissza a Battle Royale szerveren.";
+
+"You cannot carry out this action at the moment.";
+"Jelenleg nem hajthatod végre ezt az akciót.";
+
+"You cannot carry out this action while fishing.";
+"Ezt nem tudod megtenni, miközben horgászol.";
+
+"You cannot carry out this action while the Shoulder Sash bonus transfer window is open.";
+"Nem tudod ezt megtenni, amíg a Vállpánt bónusz átvivõ ablak nyitva van.";
+
+"You cannot carry out this action while the bonus transfer window is open.";
+"Nem tudod ezt megtenni, amíg a bónusz átvivõ ablak nyitva van.";
+
+"You cannot carry out this action while the window for combining or absorbing Shoulder Sashes is open.";
+"Nem tudod ezt megtenni, amíg a Vállpánt kombináló vagy abszorbeáló ablak nyitva van.";
+
+"You cannot change channel.";
+"Nem válthatsz csatornát.";
+
+"You cannot change the attributes of a soulbound item.";
+"Nem változtathatod meg egy lélekhez kötött tárgy tulajdonságait.";
+
+"You cannot claim an achievement right now.";
+"Nem válthatsz be most eredményeket.";
+
+"You cannot declare a guild war here.";
+"Innen nem hirdethetsz céh háborút.";
+
+"You cannot declare wars in the Combat Zone.";
+"Nem tudsz háborút hirdetni a Harci övezetben.";
+
+"You cannot discard cards when you have already selected some.";
+"Nem tudsz kártyákat elutasítani, ha már kiválasztottál néhányat.";
+
+"You cannot do that during a Battle Royale.";
+"Ezt nem tudod megtenni Battle Royale közben.";
+
+"You cannot do that while the territory auction is ongoing.";
+"Ezt nem tudod megtenni, miközben folyamatban van a területaukció.";
+
+"You cannot do this while the item is equipped.";
+"Ezt nem tudod megtenni, amíg a tárgy fel van szerelve.";
+
+"You cannot do this whilst carrying out another action.";
+"Ezt nem tudod megtenni, miközben egy másik mûveletet hajtasz végre.";
+
+"You cannot do this whilst performing another action.";
+"Ezt nem tudod megtenni, miközben egy másik mûveletet hajtasz végre.";
+
+"You cannot do this whilst playing okey.";
+"Ezt nem tudod megtenni, amíg Okey-t játszol.";
+
+"You cannot do this with a user of hacking software.";
+"Ezt nem teheted meg egy csaló programot használó felhasználóval.";
+
+"You cannot donate while your pet is summoned.";
+"Nem adományozhatsz, amíg kedvenced melletted van.";
+
+"You cannot draw any more cards when you have already selected some.";
+"Nem tudsz több kártyát húzni, ha már kiválasztottál néhányat.";
+
+"You cannot draw any more cards.";
+"Nem húzhatsz több kártyát.";
+
+"You cannot drop a soulbound item.";
+"Nem tudod eldobni a lélekhez kötött tárgyat.";
+
+"You cannot drop items during the bonus transfer.";
+"Nem dobhatsz el tárgyakat bónusz átvitel közben.";
+
+"You cannot drop items while modifying your pet's stats.";
+"Nem dobhatsz el tárgyakat, miközben módosítod a kedvenced pontértékeit.";
+
+"You cannot drop items while the Fortune Chest is open.";
+"Nem dobhatsz el tárgyakat, amíg a Szerencse-láda nyitva van.";
+
+"You cannot enter the Combat Zone at the moment.";
+"Most nem tudsz belépni a Harci övezetbe.";
+
+"You cannot enter the Combat Zone from this map.";
+"Errõl a térképrõl nem tudsz belépni a Harci övezetbe.";
+
+"You cannot enter the PvP tournament combat arena.";
+"Nem léphetsz be a PvP bajnokság harcterére.";
+
+"You cannot enter while you are mounted.";
+"Nem léphetsz be, amíg hátason ülsz.";
+
+"You cannot enter, because the countdown has already begun.";
+"Nem léphetsz be, mert már elkezdõdött a visszaszámlálás.";
+
+"You cannot equip this item while wearing a Wedding Dress or a Tuxedo.";
+"Nem szerelheted fel ezt a tárgyat, amíg Menyasszonyi ruhát vagy Szmokingot viselsz.";
+
+"You cannot exchange as this would exceed the maximum amount of Won.";
+"Nem tudod beváltani, mivel ez túllépné a Won maximális mennyiségét.";
+
+"You cannot exchange as this would exceed the maximum amount of Yang.";
+"Nem tudod beváltani, mivel ez túllépné a Yang maximális mennyiségét.";
+
+"You cannot expand your inventory while trading.";
+"Kereskedés közben nem tudod bõvíteni a leltárad.";
+
+"You cannot feed your pet while the refinement window is open.";
+"Nem etetheted a kedvenced, amíg a fejlesztési ablak nyitva van.";
+
+"You cannot fish when your pet is hatched.";
+"Nem horgászhatsz, amikor épp kikel a házikedvenced.";
+
+"You cannot fish while other windows are open.";
+"Nem horgászhatsz, amíg más ablakok nyitva vannak.";
+
+"You cannot fish while the pet bonus change window is open.";
+"Nem horgászhatsz, amíg a házikedvenc-bónusz váltó ablak nyitva van.";
+
+"You cannot fish while your pet is summoned.";
+"Nem horgászhatsz, amíg kedvenced melletted van.";
+
+"You cannot give away a soulbound item.";
+"Nem tudod átadni a lélekhez kötött tárgyat.";
+
+"You cannot improve a soulbound item.";
+"Nem tudsz fejleszteni lélekhez kötött tárgyat.";
+
+"You cannot improve your weapon while your pet is summoned.";
+"Nem fejlesztheted a fegyvered, amíg kedvenced melletted van.";
+
+"You cannot leave the Combat Zone when you are dead.";
+"Nem tudod elhagyni a Harci övezetet, ha halott vagy.";
+
+"You cannot make use of weapon skins while you are wearing a Wedding Dress or a Tuxedo.";
+"Nem használhatsz fegyver-kinézetet, amíg menyasszonyi ruhát, vagy szmokingot viselsz.";
+
+"You cannot move items during the bonus transfer.";
+"Nem mozgathatsz tárgyakat bónusz átvitel közben.";
+
+"You cannot move items while modifying your pet's stats.";
+"Nem mozgathatsz tárgyakat, miközben módosítod a kedvenced pontértékeit.";
+
+"You cannot move items while the Fortune Chest is open.";
+"Nem mozgathatsz tárgyakat, amíg a Szerencse-láda nyitva van.";
+
+"You cannot move items while the bonus change window is open.";
+"Nem mozgathatsz tárgyakat, amíg a bónusz váltó ablak nyitva van.";
+
+"You cannot neither trade or move, nor sell, drop or store items while summoning a mount.";
+"Nem kereskedhetsz tárgyakkal, illetve nem mozgathatsz, adhatsz el, dobhatsz el vagy tárolhatsz tárgyakat, miközben megidézed a hátasod.";
+
+"You cannot open a private shop while you are trading with others.";
+"Nem nyithatsz saját boltot addig, amíg másokkal kereskedsz.";
+
+"You cannot open a private shop whilst summoning your pet.";
+"Nem nyithatsz magánboltot, amíg házikedvenced elõ van hívva.";
+
+"You cannot open a private shop, as this would exceed the maximum amount of %d Won.";
+"Nem tudsz magánboltot nyitni, mivel ezzel túllépnéd a maximálisan engedélyezett %d Won mennyiséget.";
+
+"You cannot open a private shop.";
+"Nem nyithatsz magánboltot.";
+
+"You cannot open a shop while you are turned to stone.";
+"Nem nyithatsz boltot, amíg kõvé vagy változva.";
+
+"You cannot open this chest because you do not have enough space in your inventory.";
+"Nem tudod kinyitni ezt a ládát, mert leltáradban nincs elég hely.";
+
+"You cannot participate in the territory auction on the day the guild is founded.";
+"Nem tudsz részt venni a területaukción azon a napon, amikor a céhet alapították.";
+
+"You cannot register for that on the Battle Royale server.";
+"Ezt nem teheted meg a Battle Royale szerveren.";
+
+"You cannot register for that on this map.";
+"Erre nem jelentkezhetsz ezen a térképen.";
+
+"You cannot ride in this dungeon.";
+"Nem tudsz lovagolni ebben a kazamatában.";
+
+"You cannot sell a soulbound item.";
+"Nem adhatsz el lélekhez kötött tárgyat.";
+
+"You cannot sell items during the bonus transfer.";
+"Nem adhatsz el tárgyakat bónusz átvitel közben.";
+
+"You cannot sell items you are currently using in a private shop.";
+"Nem adhatsz el magánboltban tárgyakat, melyeket jelenleg használsz.";
+
+"You cannot sell soulbound items in a private shop.";
+"Nem adhatsz el lélekhez kötött tárgyat magánboltban.";
+
+"You cannot soulbind items on this server.";
+"Ezen a szerveren nem tudsz tárgyakat lélekhez kötni.";
+
+"You cannot speak with an NPC while modifying your pet's stats.";
+"Nem beszélhetsz NPC-vel, miközben módosítod a kedvenced pontértékeit.";
+
+"You cannot start a game of okey while trading.";
+"Nem indíthatsz Okey játékot kereskedés közben.";
+
+"You cannot summon your mount/pet right now.";
+"Most nem tudod megidézni hátasod/házikedvenced.";
+
+"You cannot summon your pet whilst trading.";
+"Nem idézheted meg házikedvenced kereskedés közben.";
+
+"You cannot swap this.";
+"Ezt nem cserélheted.";
+
+"You cannot take part in the Battle Royale.";
+"Nem vehetsz részt a Battle Royalen.";
+
+"You cannot talk to NPCs while the Fortune Chest is open.";
+"Nem beszélhetsz NPC-vel, amíg a Szerencse-láda nyitva van.";
+
+"You cannot trade while another window is open.";
+"Nem kereskedhetsz, amíg másik ablak nyitva van.";
+
+"You cannot trade while the Fortune Chest is open.";
+"Nem kereskedhetsz, amíg a Szerencse-láda nyitva van.";
+
+"You cannot trade while your partner's Fortune Chest is open.";
+"Nem kereskedhetsz, amíg partnerednél a Szerencse-láda nyitva van.";
+
+"You cannot trade while your trading partner is modifying their pet's stats.";
+"Nem kereskedhetsz, miközben a partnered a házikedvence pontértékeit módosítja.";
+
+"You cannot trade whilst summoning your pet.";
+"Nem kereskedhetsz, amíg házikedvenced elõ van hívva.";
+
+"You cannot trade whilst your partner is summoning their pet.";
+"Nem nyithatsz magánboltot, amíg partnered házikedvence elõ van hívva.";
+
+"You cannot trade whilst your partner's Incubator is open.";
+"Nem kereskedhetsz, amíg partnered Inkubátora nyitva van.";
+
+"You cannot trade, because the maximum number of %d Won was exceeded.";
+"Nem tudsz kereskedni, mert túllépted a maximálisan engedélyezett %d Wont.";
+
+"You cannot transfer the bonus as the sashes have different absorption rates.";
+"Nem viheted át a bónuszt, mivel a pántoknak különbözõ az abszorpciós mértékük.";
+
+"You cannot transfer the bonus as the sashes have different grades.";
+"Nem viheted át a bónuszt, mivel a pántoknak különbözõ a minõségük.";
+
+"You cannot transform at the moment.";
+"Jelenleg nem tudsz átváltozni.";
+
+"You cannot transform during the PvP tournament.";
+"Nem változhatsz át PvP bajnokság közben.";
+
+"You cannot use a Scroll of the Location while the window for the Shoulder Sash is open.";
+"Nem használhatsz Visszaszállítót tekercset, amíg a Vállpánt ablaka nyitva van.";
+
+"You cannot use a sash with a bonus for the target.";
+"Nem használhatsz célként egy bónusszal rendelkezõ pántot.";
+
+"You cannot use a sash without a bonus as the source.";
+"Nem használhatsz kiindulásként egy bónusz nélküli pántot.";
+
+"You cannot use a soulbound item.";
+"Nem tudod használni a lélekhez kötött tárgyat.";
+
+"You cannot use any emotions right now.";
+"Nem használhatsz most érzelmeket.";
+
+"You cannot use any soulbound items.";
+"Nem használhatsz lélekhez kötött tárgyakat.";
+
+"You cannot use it at the moment.";
+"Jelenleg nem használhatod.";
+
+"You cannot use items while modifying your pet's stats.";
+"Nem használhatsz tárgyakat, miközben módosítod a kedvenced pontértékeit.";
+
+"You cannot use items while the Fortune Chest is open.";
+"Nem használhatsz tárgyakat, amíg a Szerencse-láda nyitva van.";
+
+"You cannot use items while you are turned to stone.";
+"Nem használhatsz tárgyakat, amíg kõvé vagy változva.";
+
+"You cannot use that any more.";
+"Nem használhatod már ezt.";
+
+"You cannot use that at the moment.";
+"Jelenleg nem használhatod ezt.";
+
+"You cannot use that at this location.";
+"Nem használhatod ezt ezen a helyen.";
+
+"You cannot use that here.";
+"Ezt nem tudod itt használni.";
+
+"You cannot use the Incubator whilst trading or whilst you have your storeroom or private shop open.";
+"Nem használhatod az Inkubátorod képzés idején, sem amíg raktárad vagy magánboltod nyitva van.";
+
+"You cannot use the item here.";
+"Itt nem tudod használni ezt a tárgyat.";
+
+"You cannot use this bundle whilst riding.";
+"Nem használhatod ezt a csomót, amíg lovagolsz.";
+
+"You cannot use this costume for this weapon.";
+"Nem használhatod ezt az öltözéket ehhez a fegyverhez.";
+
+"You cannot use this item during your withdrawal from the Combat Zone.";
+"Nem használhatod ezt a tárgyat a Harci övezetbõl való visszavonulásod idején.";
+
+"You cannot use this item here.";
+"Ezt a tárgyat nem használhatod itt.";
+
+"You cannot use this item on soulbound items.";
+"Nem használhatod ezt a tárgyat lélekhez kötött tárgyakon.";
+
+"You cannot use this item while the windows for absorption and combination are open.";
+"Nem használhatod ezt a tárgyat, amíg az abszorpció és kombináció ablaka nyitva van.";
+
+"You cannot use this item while wearing another costume.";
+"Nem használhatod ezt a tárgyat, amíg egy másik öltözéket viselsz.";
+
+"You cannot use this item while you are trading.";
+"Nem használhatod ezt a tárgyat addig, amíg kereskedsz.";
+
+"You cannot wear a Wedding Dress or a Tuxedo when you are already wearing a weapon skin.";
+"Nem vehetsz fel menyasszonyi ruhát vagy szmokingot, ha már fegyver-kinézetet viselsz.";
+
+"You cannot wear gloves yet.";
+"Még nem viselhetsz kesztyûket.";
+
+"You currently have %d point(s). Your total score is %d.";
+"Jelenleg %d pontod van. Teljes pontszámod ennyi: %d.";
+
+"You destroyed the wrong Metin stone. Defeat all the monsters!";
+"Rossz Metinkövet semmisítettél meg. Gyõzz le minden szörnyet!";
+
+"You do not have enough Yang.";
+"Nincs elegendõ Yangod.";
+
+"You do not have enough money for the combination.";
+"Nincs elegendõ pénzed a kombináláshoz.";
+
+"You don't have an %s to start a game of okey.";
+"Nincs %s-ed Okey játék kezdéséhez.";
+
+"You don't have enough Anniversary Flags.";
+"Nincs elég Évfordulós Zászlód.";
+
+"You don't have enough Gaya.";
+"Nincs nálad elég Gaya.";
+
+"You don't have enough Won.";
+"Nincs elegendõ Wonod.";
+
+"You don't have enough Yang to start a game of okey.";
+"Nincs elegendõ Yangod Okey játék kezdéséhez.";
+
+"You don't have enough Yang to trade books with me.";
+"Nincs elegendõ Yangod ahhoz, hogy könyvekkel üzletelj velem.";
+
+"You don't have enough Yang.";
+"Nincs elegendõ Yangod.";
+
+"You don't have enough insignia.";
+"Nincs nálad elég jelvény.";
+
+"You don't have enough items to revive anyone.";
+"Nincs nálad elég tárgy, hogy felélessz bárkit.";
+
+"You don't have enough of the necessary items to play Yut Nori.";
+"Nincs nálad elég minden szükséges tárgyból a Yut Nori játékhoz.";
+
+"You don't have enough space in your inventory.";
+"Nincs elég helyed a leltáradban.";
+
+"You don't receive any points for this player.";
+"Nem kapsz pontot ezért a játékosért.";
+
+"You have already learned this skill.";
+"Már megtanultad ezt a készséget.";
+
+"You have already reached the Champion Level.";
+"Már elérted a Bajnokszintet.";
+
+"You have already registered for the territory auction.";
+"Már regisztráltál a területaukcióra.";
+
+"You have already submitted your bid.";
+"Már beküldted az ajánlatod.";
+
+"You have already used the Researcher's Elixir.";
+"Már használtad a Kutatói elixírt.";
+
+"You have announced your withdrawal from the Combat Zone and can leave in %d minutes.";
+"Bejelentetted visszavonulásod a Harci övezetbõl és %d perc múlva elhagyhatod azt.";
+
+"You have announced your withdrawal from the Combat Zone and can leave in %d seconds.";
+"Bejelentetted visszavonulásod a Harci övezetbõl és %d másodperc múlva elhagyhatod azt.";
+
+"You have been revived by %s.";
+"%s felélesztett téged.";
+
+"You have been revived.";
+"Felélesztettek téged.";
+
+"You have bid %d Won.";
+"Beküldtél ajánlatként %d Wont.";
+
+"You have captured a soul.";
+"Elfogtál egy lelket.";
+
+"You have dismissed %s.";
+"Elküldted %s-t.";
+
+"You have earned your daily target – collect your reward.";
+"Elérted napi célod – gyûjtsd be a jutalmad!";
+
+"You have entered an area which is under Sung Mahi's sway and are suffering from his curse.";
+"Olyan területre léptél be, ami Sung Mahi befolyása alatt áll, ezért rád is hatással van az átka.";
+
+"You have entered the dungeon %s with difficulty %d. The battle starts in %d seconds.";
+"Beléptél a %s kazamatába ezen a nehézségi fokozaton: %d. A harc %d másodpercen belül indul.";
+
+"You have entered the dungeon %s. The battle starts in %d seconds.";
+"Beléptél a %s kazamatába. A harc %d másodpercen belül indul.";
+
+"You have insufficient materials for the upgrade. (Soulbound items cannot be used.)";
+"Nincs megfelelõ anyagod a fejlesztéshez. (Lélekhez kötött tárgyak nem használhatók.)";
+
+"You have lost %d points. Remaining points: %d";
+"Elveszítettél %d pontot. Megmaradt pontok: %d";
+
+"You have no debuff at the moment.";
+"Jelenleg nincs rajtad negatív hatás.";
+
+"You have not registered for any territory auctions.";
+"Nem regisztráltál egyetlen területaukcióra sem.";
+
+"You have not registered for the PvP tournament.";
+"Nem jelentkeztél a PvP bajnokságra.";
+
+"You have not yet completed all missions.";
+"Még nem teljesítetted az összes feladatot.";
+
+"You have paid the %lu-Yang lease for the guild territory.";
+"Befizettél %lu Yang bérleti díjat a céhterületért.";
+
+"You have received %d Won.";
+"%d Wont kaptál.";
+
+"You have received %lu EXP for your Champion Level.";
+"Kaptál %lu EXP-t a Bajnokszintedhez.";
+
+"You have received a storage bonus of %d defence.";
+"Raktár bónuszként %d védelmet kaptál.";
+
+"You have received a storage bonus of %d%% EXP.";
+"Raktár bónuszként %d%% EXP-t kaptál.";
+
+"You have received a storage bonus of %d%% HP.";
+"Raktár bónuszként %d%% TP-t kaptál.";
+
+"You have received a storage bonus of %d%% strength against monsters.";
+"Raktár bónuszként %d%% szörnyek elleni erõt kaptál.";
+
+"You have registered for the PvP tournament.";
+"Jelentkeztél a PvP bajnokságra.";
+
+"You have revived %s.";
+"Felélesztetted %s-t.";
+
+"You have successfully protected the mast. Keep it up! Get ready for the next wave.";
+"Sikeresen megvédtétek az árbócot. Csak így tovább! Készüljetek fel a következõ hullámra!";
+
+"You have summoned %s.";
+"Megidézted %s-t.";
+
+"You have to leave your group first.";
+"Elõbb ki kell lépned a csoportodból.";
+
+"You have to wait %d sec. after opening the Mailbox before you can switch channels or teleport.";
+"Várnod kell %d másodpercet a Postaláda megnyitása után, mielõtt csatornát váltanál vagy teleportálnál.";
+
+"You have transferred the bonuses successfully.";
+"Sikeresen áthelyezted a bónuszokat.";
+
+"You just missed the bonus level.";
+"Elszalasztottad a bónusz szintet.";
+
+"You must abandon the ship in %d min.";
+"El kell hagynotok a hajót %d percen belül.";
+
+"You must abandon the ship in %d sec.";
+"El kell hagynotok a hajót %d másodpercen belül.";
+
+"You must be level %d to enter the Combat Zone.";
+"%d szintûnek kell lenned a Harci övezetbe való belépéshez.";
+
+"You must close all windows before entering or leaving the Combat Zone.";
+"Minden ablakot be kell zárnod, mielõtt a Harci övezetre belépsz, vagy elhagyod azt.";
+
+"You must complete the 'Ship Defence' dungeon.";
+"Teljesítened kell a Hajó megvédése kihívást.";
+
+"You must fill up at least 1 EXP Marble at level 120 to reach Champion Level.";
+"A Bajnokszint eléréséhez legalább 1 EXP gömböt fel kell töltened a 120-as szinten.";
+
+"You must leave the ship now as you have not started the sea battle.";
+"Mivel nem indítottátok el a tengeri ütközetet, el kell hagynotok a hajót.";
+
+"You must wait a while before opening your mailbox again.";
+"Várnod kell egy kicsit, mielõtt ismét megnyithatod a postaládád.";
+
+"You need %d perpendicular slots in your inventory to open the Chest.";
+"Szükséged van %d függõlegesen egybefüggõ helyre a leltáradban a láda kinyitásához.";
+
+"You need a Battle Royale Ticket to participate.";
+"A részvételhez szükséged van egy Battle Royale jegyre.";
+
+"You need a Reincarnation item to revive instantly.";
+"Szükséged van egy Újraélesztõ tárgyra az azonnali újraéledéshez.";
+
+"You need more Aventurine and Aureolin Treasures to receive your reward.";
+"Több Aventurin és Aureolin kincsre van szükséged, hogy megkapd a jutalmad.";
+
+"You need to equip a weapon first.";
+"Elõbb fel kell szerelned egy fegyvert.";
+
+"You receive your bonuses.";
+"Megkapod bónuszaidat.";
+
+"You require %s x %d more.";
+"Még szükséged van a %s tárgyból %d darabra.";
+
+"You still require %d %s(s).";
+"Még szükséged van %d %sra.";
+
+"You took back the %d Won you bid.";
+"Visszavetted az ajánlatként feltett %d Wont.";
+
+"You've taught your pet well! It's quickly learning its new skills!";
+"Jól tanítottad házikedvenced! Gyorsan megtanulja új készségeit!";
+
+"Your Dragon Stone's bonus has been changed.";
+"A Sárkányköved bónusza megváltozott.";
+
+"Your game of okey has started!";
+"Okey játékod elkezdõdött!";
+
+"Your guild already has a guild territory.";
+"A céhednek már van egy céhterülete.";
+
+"Your guild isn't registered for the territory auction.";
+"A céhed nincs regisztrálva a területaukcióra.";
+
+"Your guild leader has registered for the auction of the territory in the %s area at %d,%d.";
+"A céh vezetõd regisztrált az aukcióra egy földért a %s területen (%d,%d).";
+
+"Your guild's territory will be automatically relinquished in %d hours. Any items in the guild warehouse will be deleted.";
+"A céhterületed automatikusan elhagyatottá válik %d óra múlva. A céhraktárban minden tárgy törlésre fog kerülni.";
+
+"Your immunity has expired and you are again influenced by Sung Mahi's Presence and Curse.";
+"Az immunitásod véget ért, és ismét hatással van rád Sung Mahi aurája és átka.";
+
+"Your inventory is full.";
+"Leltárad tele van.";
+
+"Your inventory is full. Your reward will be delivered by post.";
+"Megtelt a leltárad. A jutalmad postán kerül kézbesítésre.";
+
+"Your level is too low to summon the pet.";
+"Ezen házikedvenc megidézéséhez túl alacsony a szinted.";
+
+"Your mailbox is full.";
+"A postaládád tele van.";
+
+"Your mast has been smashed. You fought valiantly, but the battle is lost.";
+"Az árbócotokat összezúzták. Bátran küzdöttetek, de a harcot elvesztettétek.";
+
+"Your pet enthusiastically tucks into the Protein Snack.";
+"Házikedvenced nagy lelkesedéssel fogyasztja el a Protein Snack-et.";
+
+"Your pet has already learnt this skill and refuses to practice it again.";
+"Házikedvenced már megtanulta ezt a készséget és nem akarja újra gyakorolni.";
+
+"Your pet has already reached the highest stage of evolution.";
+"Házikedvenced már elérte a legmagasabb fejlõdési szakaszt.";
+
+"Your pet has gathered enough experience. It now requires Item EXP to reach the next stage of evolution.";
+"Házikedvenced elegendõ tapasztalatot gyûjtött. Most Tárgy EXP-re van szüksége, hogy a fejlõdés következõ szakaszához érjen.";
+
+"Your pet is ready to evolve. Use Pet Books to achieve this.";
+"Házikedvenced kész a fejlõdésre. Ennek eléréséhez használj Házikedvenc-könyveket.";
+
+"Your pet must be %d days old to train and promote it to the next stage of evolution.";
+"Házikedvencednek %d nap idõsnek kell lennie képzéséhez és a fejlõdésének következõ szintjére lépéséhez.";
+
+"Your pet must be level %d to train and promote it to the next stage of evolution.";
+"Házikedvencednek %d szintûnek kell lennie képzéséhez és a fejlõdésének következõ szintjére lépéséhez.";
+
+"Your pet must have 100% experience to train and promote it to the next stage of evolution.";
+"Házikedvencednek 100% tapasztalatának kell lennie képzéséhez és a fejlõdésének következõ szintjére lépéséhez.";
+
+"Your pet's stats have been modified.";
+"A házikedvenced pontértékei módosultak.";
+
+"Your withdrawal announcement is active.";
+"Visszavonulási bejelentésed aktív.";
+
+"Your withdrawal announcement was cancelled.";
+"Visszavonulási bejelentésed törölve lett.";
+
+"Yut Nori has finished.";
+"A Yut Nori véget ért.";
+
+"Yut Nori has started!";
+"A Yut Nori elkezdõdött!";
+
+"[%s±ºÁÖ] : %s";
+"[%sMonarch] : %s";
+
+"[%s±ºÁÖ] : %s  º¸À¯±İ¾× %lld";
+"[%sMonarch] : %s Yanggal rendelkezik %lld";
+
+"[Aura] Can only be done once an Aura Outfit has been inserted.";
+"[Aura] Csak egy Aura öltözék beillesztése után teheted meg.";
+
+"[Aura] Cannot be evolved.";
+"[Aura] Nem lehetséges a feljavítás.";
+
+"[Aura] Cannot be improved.";
+"[Aura] Nem lehetséges a fejlesztés.";
+
+"[Aura] Does not work with an Aura Outfit onto which an item has already been transmitted.";
+"[Aura] Nem mûködik olyan Aura öltözékkel, amibe már átvitelre került egy tárgy.";
+
+"[Aura] Does not work with soulbound items.";
+"[Aura] Nem mûködik lélekhez kötött tárgyakkal.";
+
+"[Aura] Evolution successful!";
+"[Aura] Sikeres feljavítás!";
+
+"[Aura] Improvement successful!";
+"[Aura] Sikeres fejlesztés!";
+
+"[Aura] Improvement successful. Evolution is now possible.";
+"[Aura] Sikeres fejlesztés. Most már lehetséges a feljavítása.";
+
+"[Aura] Only Aura Outfit can be inserted.";
+"[Aura] Csak Aura öltözék illeszthetõ be.";
+
+"[Aura] Only Aura Outfit, Shield, Necklace, Earring or Armband can be inserted.";
+"[Aura] Csak Aura öltözék, pajzs, nyaklánc, fülbevaló vagy karkötõ illeszthetõ be.";
+
+"[Aura] Successful!";
+"[Aura] Sikeres!";
+
+"[Aura] The amount of inserted materials has been adjusted to match the required amount.";
+"[Aura] A beillesztett anyagok mennyisége hozzáigazításra került a szükséges anyagok mennyiségéhez.";
+
+"[Aura] You cannot evolve your Aura Outfit until you have improved it.";
+"[Aura] Nem javíthatod fel az Aura öltözéked, amíg nem fejlesztetted.";
+
+"[Aura] You don’t have enough money to evolve your Aura Outfit.";
+"[Aura] Nincs elég pénzed feljavítani az Aura öltözéked.";
+
+"[Aura] You have to insert items.";
+"[Aura] Be kell helyezned tárgyakat.";
+
+"[Aura] Your Aura Outfit has reached the maximum level.";
+"[Aura] Az Aura öltözéked elérte a maximális szintet.";
+
+"[Catch the King] %s earned %d points in Catch the King.";
+"[Kapd el a Királyt] %s %d pontot ért el a Kapd el a Királyt játékban.";
+
+"[Catch the King] Catch the King has ended.";
+"[Kapd el a Királyt] A Kapd el a Királyt játék véget ért.";
+
+"[Catch the King] Defeat monsters to collect King Cards. You need 25 cards for a King Deck.";
+"[Kapd el a Királyt] Vadássz szörnyekre és gyûjts Királykártyákat! Egy Királypaklihoz 25 kártyára van szükséged.";
+
+"[Catch the King] If you make it into the top rankings, you'll receive your prize from the game table.";
+"[Kapd el a Királyt] Ha bejutsz a helyezettek közé, a játék asztalnál kaphatod meg a jutalmad.";
+
+"[Catch the King] Loads of great prizes await!";
+"[Kapd el a Királyt] Rengeteg nagyszerû nyeremény vár!";
+
+"[Catch the King] Play a game of Catch the King now!";
+"[Kapd el a Királyt] Játssz egy kört a Kapd el a Királyt játékkal most!";
+
+"[Catch the King] You don't have a complete King Deck or you have insufficient Yang.";
+"[Kapd el a Királyt] Nincs egy teljes Királypaklid vagy nincs elég Yangod.";
+
+"[Catch the King] Your score isn't good enough for a prize.";
+"[Kapd el a Királyt] Nem értél el elég pontot, hogy jutalmat kapj.";
+
+"[DS] Your rank reward";
+"[LP] Helyezés jutalmad";
+
+"[Duel of the Seers] Check your rank and claim your reward.";
+"[Látók párbaja] Nézd meg a helyezésed, és gyûjtsd be a jutalmad!";
+
+"[Duel of the Seers] Rich treasures await!";
+"[Látók párbaja] Értékes kincsek várnak!";
+
+"[Duel of the Seers] The Duel of the Seers has begun!";
+"[Látók párbaja] A Látók párbaja elkezdõdött!";
+
+"[Duel of the Seers] The Duel of the Seers is over.";
+"[Látók párbaja] A Látók párbaja véget ért.";
+
+"[Duel of the Seers] You don't have enough Seer Coins.";
+"[Látók párbaja] Nincs nálad elég Látók érméje.";
+
+"[Duel of the Seers] You have increased your donations count by 1.";
+"[Látók párbaja] 1-el növelted az adományaid számát.";
+
+"[Duel of the Seers] You receive a quest for the minigame.";
+"[Látók párbaja] Egy küldetést kaptál a minijátékhoz.";
+
+"[Flower Power] There isn't enough space in your inventory.";
+"[Virágok ereje] Nincs elég hely a leltáradban.";
+
+"[Flower Power] This item can no longer be used.";
+"[Virágok ereje] Ez a tárgy már nem használható.";
+
+"[Flower Power] You don't have enough Flower Seeds.";
+"[Virágok ereje] Nincs nálad elég Virágmag.";
+
+"[Flower Power] You don't have enough shoots.";
+"[Virágok ereje] Nincs nálad elég hajtás.";
+
+"[Flower Power] You have received a Chrysanthemum Shoot.";
+"[Virágok ereje] Krizantém hajtást kaptál.";
+
+"[Flower Power] You have received a Daffodil Shoot.";
+"[Virágok ereje] Nárcisz hajtást kaptál.";
+
+"[Flower Power] You have received a Lily Shoot.";
+"[Virágok ereje] Liliom hajtást kaptál.";
+
+"[Flower Power] You have received a May Bell Shoot.";
+"[Virágok ereje] Gyöngyvirág hajtást kaptál.";
+
+"[Flower Power] You have received a Sunflower Shoot.";
+"[Virágok ereje] Napraforgó hajtást kaptál.";
+
+"[Flower Power] You received Flower Seeds.";
+"[Virágok ereje] Virágmagot kaptál.";
+
+"[Gaya] Cutting failed.";
+"[Gaya] A finomítás sikertelen volt.";
+
+"[Gaya] Cutting successful.";
+"[Gaya] A finomítás sikeres volt.";
+
+"[Gaya] The Gaya Market is already open.";
+"[Gaya] A Gaya piac már meg van nyitva.";
+
+"[Gaya] The Gaya Market is currently unavailable.";
+"[Gaya] A Gaya piac jelenleg nem elérhetõ.";
+
+"[Gaya] The item list has been refreshed.";
+"[Gaya] A tárgy lista frissítve lett.";
+
+"[Gaya] You already have the maximum amount of Gaya.";
+"[Gaya] Nem lehet nálad több Gaya.";
+
+"[Gaya] You can only open the Gaya Market once you have closed the other windows.";
+"[Gaya] Csak a többi ablak bezárása után tudod megnyitni a Gaya piacot.";
+
+"[Gaya] You cannot purchase this item.";
+"[Gaya] Nem tudod megvásárolni ezt a tárgyat.";
+
+"[Gaya] You cannot unlock any more slots on the Gaya Market.";
+"[Gaya] Nem oldható föl több hely a Gaya piacon.";
+
+"[Gaya] You don't have a Refresh Gaya Market item.";
+"[Gaya] Nincs nálad Gaya piac frissítõ.";
+
+"[Gaya] You don't have enough %s. You need %d more to unlock an additional slot.";
+"[Gaya] Nincs nálad elég %s. %d darabra van szükséged egy újabb hely feloldásához.";
+
+"[Gaya] You don't have enough Gaya.";
+"[Gaya] Nincs nálad elég Gaya.";
+
+"[Gaya] You don't have enough Glimmerstones.";
+"[Gaya] Nincs nálad elég Fénylõ kõdarab.";
+
+"[Gaya] You don't have enough Yang to cut Glimmerstones.";
+"[Gaya] Nincs nálad elég Yang a Fénylõ kõdarabok finomításához.";
+
+"[Gaya] You must open the Gaya Market first.";
+"[Gaya] Elõbb nyisd meg a Gaya piacot.";
+
+"[Gaya] Your inventory is full.";
+"[Gaya] A leltárad megtelt.";
+
+"[Group] Please talk to the relevant NPC to enter.";
+"[Csoport] Kérlek beszélj a megfelelõ NPC-vel a belépéshez.";
+
+"[Group] The battle has begun.";
+"[Csoport] A csata megkezdõdött.";
+
+"[Group] The dungeon will close in %d min.";
+"[Csoport] A kazamata %d perc múlva lezárul.";
+
+"[Group] The rankings for groups in Meley's Lair is being compiled.";
+"[Csoport] A Meley barlangja csoport ranglista feldolgozás alatt van.";
+
+"[Group] Time until teleportation: %d min. %d sec.";
+"[Csoport] Hátralévõ idõ a teleportálásig: %d perc %d mp.";
+
+"[Group] You are now registered for Meley's Lair.";
+"[Csoport] Sikeresen jelentkeztél a Meley barlangjába.";
+
+"[Group] You cannot do this while the group search is active.";
+"[Csoport] Nem tudod ezt megtenni, miközben a csoport keresés aktív.";
+
+"[Group] You cannot leave the dungeon at the moment.";
+"[Csoport] Jelenleg nem hagyhatod el a kazamatát.";
+
+"[Group] You have 1 hour to complete the dungeon.";
+"[Csoport] 1 órátok van a kazamata teljesítésére.";
+
+"[Group] You have completed your task with distinction!";
+"[Csoport] Kiválóan teljesítettétek a feladatot!";
+
+"[Group] You have conceded.";
+"[Csoport] Feladtátok a küzdelmet.";
+
+"[Group] You have left the dungeon.";
+"[Csoport] Kiléptél a kazamatából.";
+
+"[Group] You will be teleported to the city in 1 minute.";
+"[Csoport] A városba leszel teleportálva 1 perc múlva.";
+
+"[Group] You will be transported from the dungeon in 10 minutes.";
+"[Csoport] Ki lesztek teleportálva a kazamatából 10 perc múlva.";
+
+"[Group] Your time in the dungeon is up.";
+"[Csoport] Lejárt az idõtök a kazamatában.";
+
+"[Guild Territory] Go to the guard and pay the lease of %d Yang for your guild territory.";
+"[Céhterület] Menj az õrhöz, és fizesd be a %d Yang bérleti díjat a céhterületért!";
+
+"[Guild] %d EXP has been donated.";
+"[Céh] %d EXP került adományozásra.";
+
+"[Guild] %d Yang received.";
+"[Céh] %d Yang érkezett.";
+
+"[Guild] %s has used %s.";
+"[Céh] %s használt %s-t.";
+
+"[Guild] %s has won.";
+"[Céh] %s nyert.";
+
+"[Guild] 'Guild Leader Transfer' vote in progress.";
+"[Céh] 'Céhvezetés átadása' szavazás folyamatban.";
+
+"[Guild] 'Guild Territory Abandonment' vote in progress.";
+"[Céh] 'Céhterület elhagyása' szavazás folyamatban.";
+
+"[Guild] 'Guild Territory Sale' vote in progress.";
+"[Céh] 'Céhterület eladása' szavazás folyamatban.";
+
+"[Guild] 'Remove Member' vote in progress.";
+"[Céh] 'Céhtag eltávolítása' szavazás folyamatban.";
+
+"[Guild] A Dragon's Temple fight is running on another channel.";
+"[Céh] Sárkány Temploma-küzdelem folyik egy másik csatornán.";
+
+"[Guild] After deduction of %d%% taxes you receive %d Yang.";
+"[Céh] %d%% adó levonása után %d Yangot kapsz.";
+
+"[Guild] Another guild member is currently using this.";
+"[Céh] Egy másik tag már használja ezt.";
+
+"[Guild] Another member is currently using the guild bank.";
+"[Céh] Egy másik tag már használja a céhbankot.";
+
+"[Guild] As a combatant you cannot spectate your own guild war.";
+"[Céh] Bajtársként nem nézheted saját céhháborúd.";
+
+"[Guild] Cannot be upgraded as the guild bank is full.";
+"[Céh] Nem fejleszthetõ, mivel a céhbank tele van.";
+
+"[Guild] Certain members are offline or on another map.";
+"[Céh] Bizonyos tagok offline-ok, vagy másik térképen vannak.";
+
+"[Guild] Certain members of the enemy guild are offline or on another map.";
+"[Céh] Az ellenséges céh bizonyos tagjai offline-ok, vagy másik térképen vannak.";
+
+"[Guild] Deposited: %d Yang";
+"[Céh] Betéve: %d Yang";
+
+"[Guild] Draw";
+"[Céh] Döntetlen";
+
+"[Guild] For your own safety, you will be teleported away from the nest in 1 minute.";
+"[Céh] Saját biztonságod érdekében 1 perc múlva ki leszel teleportálva a fészekbõl.";
+
+"[Guild] For your own safety, you will be teleported away from the nest in 10 minutes.";
+"[Céh] Saját biztonságod érdekében 10 perc múlva ki leszel teleportálva a fészekbõl.";
+
+"[Guild] Guild %s has purchased territory.";
+"[Céh] A(z) %s céh területet vásárolt.";
+
+"[Guild] Guild [%s] has lost the war against [%s].";
+"[Céh] [%s] céh elvesztette a háborút [%s] ellen.";
+
+"[Guild] Guild advertisement extended.";
+"[Céh] Céh-hirdetmény meghosszabbítva.";
+
+"[Guild] Guild advertisement launched.";
+"[Céh] Céh-hirdetmény elindítva.";
+
+"[Guild] No applications available.";
+"[Céh] Nincs elérhetõ jelentkezés.";
+
+"[Guild] No guild advertisements available.";
+"[Céh] Nem érhetõ el céh-hirdetmény.";
+
+"[Guild] No guild found.";
+"[Céh] Nem található céh.";
+
+"[Guild] No guild has defeated the dragon yet.";
+"[Céh] Egyetlen céh sem gyõzte még le a sárkányt.";
+
+"[Guild] No guild present with a guild advertisement.";
+"[Céh] Nincs jelen céh céh-hirdetménnyel.";
+
+"[Guild] No guild territory found.";
+"[Céh] Nem található céhterület.";
+
+"[Guild] Not enough space in the guild bank.";
+"[Céh] Nincs elég hely a céhbankban.";
+
+"[Guild] Object moved successfully.";
+"[Céh] Cél sikeresen mozgatva.";
+
+"[Guild] Only available to the guild leader (if a guild territory is being relinquished).";
+"[Céh] Csak a céh vezetõ részére érhetõ el (ha a céhterület feladásra került).";
+
+"[Guild] Player %s has applied to join you.";
+"[Céh] %s játékos csatlakozásra jelentkezett.";
+
+"[Guild] Please check enemy members and leaders.";
+"[Céh] Ellenõrizd az ellenfél tagokat és vezéreket!";
+
+"[Guild] Please check members and leaders.";
+"[Céh] Ellenõrizd a tagokat és vezéreket!";
+
+"[Guild] Please try again in 10 seconds.";
+"[Céh] Próbáld újra 10 másodperc múlva.";
+
+"[Guild] Rankings update.";
+"[Céh] Helyezések frissítése.";
+
+"[Guild] Required time: %d min. %d sec.";
+"[Céh] Szükséges idõ: %d min. %d sec.";
+
+"[Guild] Starting 'Guild Leader Transfer' vote.";
+"[Céh] 'Céhvezetés átadása' szavazás kezdése.";
+
+"[Guild] Starting 'Guild Territory Abandonment' vote.";
+"[Céh] 'Céhterület elhagyása' szavazás kezdése.";
+
+"[Guild] Starting 'Guild Territory Sale' vote.";
+"[Céh] 'Céhterület eladása' szavazás kezdése.";
+
+"[Guild] Starting 'Remove Member' vote.";
+"[Céh] 'Céhtag eltávolítása' szavazás kezdése.";
+
+"[Guild] Successfully registered for Meley's Lair.";
+"[Céh] Sikeresen regisztráltál Meley barlangjához.";
+
+"[Guild] That can only be used in guild wars.";
+"[Céh] Ez csak céh háborúkban használható.";
+
+"[Guild] The Deposit Yang or Withdraw Yang window is already open.";
+"[Céh] A Yang betét vagy Yang kivét ablak már nyitva van.";
+
+"[Guild] The Guild Warehouse is currently in use.";
+"[Céh] A Céhraktár jelenleg használatban van.";
+
+"[Guild] The battle against Dragon Queen Meley is starting.";
+"[Céh] Kezdõdik a csata a Sárkánykirálynõ Meley ellen.";
+
+"[Guild] The character must be at least level 40 to receive the guild leadership.";
+"[Céh] A karakternek legalább 40-as szintûnek kell lennie, hogy megkaphassa a céhvezérséget.";
+
+"[Guild] The enemy guild is currently fighting in the dragon cave.";
+"[Céh] Az ellenséges céh jelenleg a sárkánybarlangban küzd.";
+
+"[Guild] The gates to Meley's Lair are open. The time limit in the dungeon is one hour.";
+"[Céh] Meley barlangjának kapui nyitva vannak. A kazamata idõkorlátja egy óra.";
+
+"[Guild] The gates to the lair are closed once more.";
+"[Céh] A barlangba vezetõ kapuk újra bezárultak.";
+
+"[Guild] The guild advertisement will run for %s.";
+"[Céh] A céh-hirdetmény eddig fut: %s.";
+
+"[Guild] The guild already owns guild territory.";
+"[Céh] A céhnek már van céhterülete.";
+
+"[Guild] The guild has set a minimum level for applicants (min. level: %d).";
+"[Céh] A céh beállított egy minimális szintet a jelentkezéshez (min. szint: %d).";
+
+"[Guild] The guild leader is offline or on another map.";
+"[Céh] A céh vezetõje offline, vagy másik térképen van.";
+
+"[Guild] The guild level is too low.";
+"[Céh] A céhszint túl alacsony.";
+
+"[Guild] The guild member has been removed from the guild for inactivity.";
+"[Céh] A céhtag inaktivitás miatt el lett távolítva a céhbõl.";
+
+"[Guild] The guild territory sale cannot be completed as there is insufficient Yang in the guild bank.";
+"[Céh] A céhterület eladása nem fejezhetõ be, mert nincs elegendõ Yang a céhbankban.";
+
+"[Guild] The guild territory sale has failed.";
+"[Céh] A céhterület eladása sikertelen volt.";
+
+"[Guild] The guild territory sale is complete.";
+"[Céh] A céhterület eladása befejezõdött.";
+
+"[Guild] The guild's treasury has reached the maximum.";
+"[Céh] A céh kincstára elérte a maximumot.";
+
+"[Guild] The lair will close in %d min.";
+"[Céh] A barlang %d perc múlva lezárul.";
+
+"[Guild] The list is being updated. Please try again later.";
+"[Céh] A lista frissítés alatt. Próbáld újra késõbb.";
+
+"[Guild] The logo server is currently undergoing maintenance.";
+"[Céh] A logó-szerver jelenleg karbantartás alatt áll.";
+
+"[Guild] The member is currently offline.";
+"[Céh] A tag jelenleg offline.";
+
+"[Guild] The player is offline or on another map.";
+"[Céh] A játékos offline, vagy másik térképen van.";
+
+"[Guild] The purchase was cancelled as you already own guild territory.";
+"[Céh] A vásárlás nem valósult meg, mivel már rendelkezel céh területtel.";
+
+"[Guild] The purchase was cancelled as your guild already owns guild territory.";
+"[Céh] A vásárlás nem valósult meg, mivel a céhed már rendelkezik céh területtel.";
+
+"[Guild] The vote relating to this player failed. Please try again in %d months, %d days, %d hours and %d minutes.";
+"[Céh] Az ezzel a játékossal kapcsolatos szavazás sikertelen. Próbáld újra %d hónap, %d nap, %d óra és %d perc múlva.";
+
+"[Guild] There are no votes in progress.";
+"[Céh] Nincs folyamatban lévõ szavazás.";
+
+"[Guild] There are not enough participants online.";
+"[Céh] Nincs elegendõ résztvevõ bejelentkezve.";
+
+"[Guild] There are still items in the Guild Warehouse.";
+"[Céh] Még mindig vannak tárgyak a Céhraktárban.";
+
+"[Guild] This action is not possible during a war.";
+"[Céh] Ez az akció nem lehetséges háború idején.";
+
+"[Guild] This guild does not exist.";
+"[Céh] Ez a céh nem létezik.";
+
+"[Guild] This guild is not the one entered in the guild territory sale vote.";
+"[Céh] Nem ez a céh volt megadva a céhterület eladási szavazásban.";
+
+"[Guild] This land belongs to another player.";
+"[Céh] Ez a terület másik játékoshoz tartozik.";
+
+"[Guild] Time's up.";
+"[Céh] Lejárt az idõ.";
+
+"[Guild] Visit the Dragon Watcher Dolnarr to enter the dragon cave.";
+"[Céh] Keresd fel a Sárkányfigyelõ Dolnarr-t, hogy belépj a sárkánybarlangba.";
+
+"[Guild] War ends in 1 minute.";
+"[Céh] 1 perc múlva véget ér a háború.";
+
+"[Guild] War ends in 5 minutes.";
+"[Céh] 5 perc múlva véget ér a háború.";
+
+"[Guild] You are now in observer mode because you have reached the respawn limit.";
+"[Céh] Most megfigyelõ módban vagy, mivel elérted az újraéledési korlátot.";
+
+"[Guild] You can only construct one Guild Warehouse.";
+"[Céh] Csak egyetlen Céhraktárt építhetsz.";
+
+"[Guild] You can only make one transaction every 10 seconds.";
+"[Céh] Csak 10 másodpercenként végezhetsz tranzakciót.";
+
+"[Guild] You can use it in 10 seconds.";
+"[Céh] 10 másodperc múlva használhatod.";
+
+"[Guild] You cannot carry out this action during a war.";
+"[Céh] Nem kivitelezheted ezt az akciót háború idején.";
+
+"[Guild] You cannot carry out this action while depositing or withdrawing Yang from the guild account.";
+"[Céh] Nem tudod ezt megtenni, miközben Yangot teszel be vagy veszel ki a céh számláról.";
+
+"[Guild] You cannot carry out this action whilst the Guild Warehouse is open.";
+"[Céh] Nem kivitelezheted ezt az akciót, amíg a Céhraktár nyitva van.";
+
+"[Guild] You cannot change guild leader whilst at war.";
+"[Céh] Nem válthatsz céhvezért háború idején.";
+
+"[Guild] You cannot declare a guild war whilst fighting in the dragon cave.";
+"[Céh] Nem hirdethetsz háborút, amíg a sárkánybarlangban küzdesz!";
+
+"[Guild] You cannot deposit or withdraw Yang from the guild account while another window is open.";
+"[Céh] Nem tudsz Yangot betenni vagy kivenni a céh számláról, amíg egy másik ablak nyitva van.";
+
+"[Guild] You cannot deposit or withdraw Yang from the guild account while your pet is summoned.";
+"[Céh] Nem tudsz Yangot betenni vagy kivenni a céh számláról, amíg kedvenced veled van.";
+
+"[Guild] You cannot disband the guild whilst a vote is in progress.";
+"[Céh] Nem oszlathatod fel a céhet, amíg szavazás van folyamatban.";
+
+"[Guild] You cannot invite someone to the guild whilst a vote is in progress.";
+"[Céh] Nem hívhatsz meg valakit a céhbe, amíg szavazás van folyamatban.";
+
+"[Guild] You cannot kick the guild leader.";
+"[Céh] Nem rúghatod ki a céh vezetõt.";
+
+"[Guild] You cannot kick yourself.";
+"[Céh] Nem rúghatod ki saját magad.";
+
+"[Guild] You cannot leave the guild while a vote is in progress.";
+"[Céh] Nem hagyhatod el a céhet, amíg szavazás van folyamatban.";
+
+"[Guild] You cannot make yourself guild leader.";
+"[Céh] Nem nevezheted ki magadat céh vezetõnek.";
+
+"[Guild] You cannot relinquish guild territory during a guild battle.";
+"[Céh] Nem adhatsz fel egy céhterületet céh harc közben.";
+
+"[Guild] You cannot remove anyone from the guild whilst at war.";
+"[Céh] Nem távolíthatsz el senkit a céhbõl háború idején.";
+
+"[Guild] You cannot select combatants whilst the guild is in a war.";
+"[Céh] Nem tudsz bajtársakat választani, amíg a céh háborúzik.";
+
+"[Guild] You cannot sell the guild territory to yourself.";
+"[Céh] Nem adhatod el a céhterületet magadnak.";
+
+"[Guild] You cannot start a vote during a war.";
+"[Céh] Nem kezdeményezhetsz szavazást háború idején.";
+
+"[Guild] You cannot start a vote for your own character.";
+"[Céh] Nem kezdeményezhetsz szavazást a saját karakteredért.";
+
+"[Guild] You cannot start a vote to remove the guild leader.";
+"[Céh] Nem kezdeményezhetsz szavazást a céhvezér eltávolítására.";
+
+"[Guild] You cannot start a vote to remove yourself from the guild.";
+"[Céh] Nem kezdeményezhetsz szavazást önmagad eltávolítására a céhbõl.";
+
+"[Guild] You cannot start a war whilst a vote is in progress.";
+"[Céh] Nem indíthatsz háborút, amíg szavazás van folyamatban.";
+
+"[Guild] You cannot start another vote whilst one is in progress.";
+"[Céh] Nem tudsz új szavazást kezdeni, amíg egy másik folyamatban van.";
+
+"[Guild] You cannot use guild skills in field guild wars.";
+"[Céh] Nem használhatsz céh készségeket harcmezõs céh harcokban.";
+
+"[Guild] You cannot use the Guild Warehouse whilst a vote is in progress.";
+"[Céh] Nem használhatod a Céhraktárat, amíg szavazás van folyamatban.";
+
+"[Guild] You cannot use this guild logo. Please try again.";
+"[Céh] Nem használhatod ezt a céhlogót. Próbáld újra!";
+
+"[Guild] You cannot withdraw Yang while another window is open.";
+"[Céh] Nem tudsz Yangot kivenni, amíg másik ablak nyitva van.";
+
+"[Guild] You cannot withdraw any Yang as you have more than 2 billion Yang.";
+"[Céh] Nem tudsz Yangot kivenni, mivel több, mint 2 milliárd Yangod van.";
+
+"[Guild] You do not have permission to use guild skills.";
+"[Céh] Nincs jogosultságod a céh-készségek használatára.";
+
+"[Guild] You have already applied to this guild.";
+"[Céh] Már jelentkeztél ebbe a céhbe.";
+
+"[Guild] You have already donated the maximum amount of EXP.";
+"[Céh] Már beadtad a maximális mennyiségû EXP-et.";
+
+"[Guild] You have cancelled the fight in Meley's Lair.";
+"[Céh] Megszakítottad a harcot Meley barlangjában.";
+
+"[Guild] You have defeated Meley the Dragon Queen!";
+"[Céh] Legyõzted a Sárkánykirálynõ Meley-t!";
+
+"[Guild] You have taken part in the current vote.";
+"[Céh] Részt vettél a jelenlegi szavazáson.";
+
+"[Guild] You have voted against.";
+"[Céh] Ellene szavaztál.";
+
+"[Guild] You have voted for.";
+"[Céh] Mellette szavaztál.";
+
+"[Guild] You must conduct a vote before selling your guild territory.";
+"[Céh] Céhterületed eladása elõtt szavazást kell kezdeményezned.";
+
+"[Guild] You must wait 10 seconds before reopening the Guild Warehouse.";
+"[Céh] Várnod kell 10 másodpercet a Céhraktár újranyitása elõtt.";
+
+"[Guild] You must wait at least 12 hours after using the Guild Warehouse before leaving the guild.";
+"[Céh] Legalább 12 órát kell várnod a Céhraktár használata után, mielõtt elhagyod a céhet.";
+
+"[Guild] You need the Ring of Successor to transfer the guild.";
+"[Céh] A céh átadásához szükséged van az Utód gyûrûjére.";
+
+"[Guild] Your application has been registered.";
+"[Céh] Jelentkezésed regisztrálva lett.";
+
+"[Guild] Your guild advertisement will expire soon.";
+"[Céh] Hamarosan lejár a céh-hirdetményed.";
+
+"[Guild] Your guild does not have enough Yang in the account. Please deposit more Yang and try again.";
+"[Céh] A céhnek nincs elég Yangja a számlán. Fizess be több Yangot és próbáld újra!";
+
+"[Guild] Your guild doesn't have a warehouse.";
+"[Céh] Céhednek nincs raktára.";
+
+"[Guild] Your members rejected the last vote to sell. Try again.";
+"[Céh] Tagjaid elutasították a legutóbbi szavazást az eladásról. Próbáld újra!";
+
+"[Guild] Your members rejected the last vote. Please try again in %d months, %d days, %d hours and %d minutes.";
+"[Céh] Tagjaid elutasították a legutóbbi szavazást. Próbáld újra %d hónap, %d nap, %d óra és %d perc múlva.";
+
+"[Monster Bash Event] Map %s is reporting sightings of %s.";
+"[Szörny-vadászat rendezvény] A %s térképen %s megjelenését észlelték!";
+
+"[Monster Card] Mission level: %d. You've defeated the monster: %s.";
+"[Szörnykártya] Megbízás-szint: %d Legyõzted a szörnyet: %s.";
+
+"[Monster Card] You can now teleport to the monster's location.";
+"[Szörnykártya]: Most már elteleportálhatsz a szörny területére.";
+
+"[Monster Card] You can now transform into the monster.";
+"[Szörnykártya]: Most már átváltozhatsz a szörnnyé.";
+
+"[Monster Card] You can now watch the monster's movement animation.";
+"[Szörnykártya] Most már megnézheted a szörny mozgó animációját.";
+
+"[Monster Card] You don't have enough space in your inventory.";
+"[Szörnykártya] Nincs elég helyed a leltárban.";
+
+"[Monster Card] You've completed your monster mission. Collect your Monster Card now.";
+"[Szörnykártya] Teljesítetted szörny-megbízásod. Gyûjtsd be a Szörnykártyád most!";
+
+"[Monster Card] [%s] Level up complete.";
+"[Szörnykártya] [%s] Szintlépés teljesítve.";
+
+"[Okey Event] Amazing prizes await!";
+"[Okey rendezvény] Nagyszerû díjak várnak!";
+
+"[Okey Event] Defeat monsters, collect cards and play a game of okey.";
+"[Okey rendezvény] Vadássz szörnyekre, gyûjts kártyákat, és játssz egy kört okeyt!";
+
+"[Okey Event] If you make it into the top rankings, you have 7 days to collect your prize.";
+"[Okey rendezvény] Ha bejutsz a helyezettek közé, 7 napod lesz begyûjteni a jutalmad.";
+
+"[Personal Premium Shop] %s has been sold. Please collect your money.";
+"[Prémium magánbolt] %s eladásra került. Kérjük, gyûjtsd be a pénzed.";
+
+"[Personal Premium Shop] A shop has already been opened here. Please find another location to open your shop.";
+"[Prémium magánbolt] Itt már nyitottak egy boltot. Kérünk, keress egy másik helyet a boltod megnyitásához.";
+
+"[Personal Premium Shop] Collectable money will not be updated while you manage items.";
+"[Prémium magánbolt] A begyûjthetõ pénz nem frissül, amíg a tárgyakat rendezed.";
+
+"[Personal Premium Shop] The shop is being prepared now.";
+"[Prémium magánbolt] A bolt épp elõkészítés alatt áll.";
+
+"[Personal Premium Shop] You can collect items in your personal shop.";
+"[Prémium magánbolt] A magánboltodban begyûjthetsz tárgyakat.";
+
+"[Personal Premium Shop] You can collect money in your personal shop.";
+"[Prémium magánbolt] A magánboltodban begyûjthetsz pénzt.";
+
+"[Personal Premium Shop] You can't open this, because you still have items to collect.";
+"[Prémium magánbolt] Nem nyithatod meg ezt, mert még van begyûjtésre váró tárgyad.";
+
+"[Personal Premium Shop] You can't open this, because you still have money to collect.";
+"[Prémium magánbolt] Nem nyithatod meg ezt, mert még van begyûjtésre váró pénzed.";
+
+"[Personal Premium Shop] You cannot do that while managing items.";
+"[Prémium magánbolt] Ezt nem tudod megtenni, míg a tárgyakat rendezed.";
+
+"[Personal Premium Shop] You cannot duel here.";
+"[Prémium magánbolt] Itt nem párbajozhatsz.";
+
+"[Personal Premium Shop] You cannot reopen your shop for %d seconds after closing it.";
+"[Prémium magánbolt] Nem tudod újranyitni a boltodat a bezárása után %d másodpercig.";
+
+"[Personal Premium Shop] You cannot use items while opening your personal shop.";
+"[Prémium magánbolt] Nem tudsz tárgyakat használni a magánboltod megnyitása közben.";
+
+"[Personal Premium Shop] You cannot use that. Go to the village's Trade Administrator.";
+"[Prémium magánbolt] Nem használhatod ezt. Menj a faluban a Kereskedésirányítóhoz.";
+
+"[Personal Premium Shop] You cannot use the Personal Premium Shop while you have other windows open.";
+"[Prémium magánbolt] Ezt nem tudod megtenni, amíg nyitva van egy másik ablak.";
+
+"[Personal Premium Shop] You don't have enough space in your inventory.";
+"[Prémium magánbolt] Nincs elég hely a leltáradban.";
+
+"[Personal Premium Shop] You have already opened your personal shop.";
+"[Prémium magánbolt] Már megnyitottad a magánboltod.";
+
+"[Relic Bonus] This is not possible while the Soul Relic window is open.";
+"[Ereklyebónusz] Ezt nem tudod megtenni, míg a Lélekereklye ablak nyitva van.";
+
+"[Relic Bonus] You are already wearing a Soul Relic.";
+"[Ereklyebónusz] Már viselsz egy Lélekereklyét.";
+
+"[Ritual of Blood] You don't have enough Yang.";
+"[Vér rituálé] Nincs nálad elég Yang.";
+
+"[Ritual of Blood] You don't have enough souls.";
+"[Vér rituálé] Nincs nálad elég lélek.";
+
+"[Ritual of Blood] You don't have enough space in your inventory.";
+"[Vér rituálé] Nincs elég helyed a leltáradban.";
+
+"[Soul System] %s is already at the highest level.";
+"[Lélek rendszer] A(z) %s már a legmagasabb szinten van.";
+
+"[Soul System] The soul is active.";
+"[Lélek rendszer] A lélek aktív.";
+
+"[Soul System] Use %s to receive the effect.";
+"[Lélek rendszer] Használd a %s-t, hogy megkapd a hatást.";
+
+"[Storeroom] An item that is currently being used cannot be stored.";
+"[Raktár] Nem tudsz eltárolni egy használatban levõ tárgyat.";
+
+"[Sung Mahi Tower] A new ranking cycle has begun.";
+"[Sung Mahi tornya] Egy új versenykör indult.";
+
+"[Sung Mahi Tower] Break the seal with Sung Mahi's Sealstone!";
+"[Sung Mahi tornya] Törd fel a pecsétet Sung Mahi Pecsétkövével!";
+
+"[Sung Mahi Tower] Destroy the Demon Stone!";
+"[Sung Mahi tornya] Pusztítsd el a Démon követ!";
+
+"[Sung Mahi Tower] Kill all the monsters within the time limit!";
+"[Sung Mahi tornya] Öld meg az összes szörnyet a megadott idõn belül!";
+
+"[Sung Mahi Tower] The current ranking cycle has ended.";
+"[Sung Mahi tornya] A jelenlegi versenykör véget ért.";
+
+"[Sung Mahi Tower] The key does not fit. Find another one and try again!";
+"[Sung Mahi tornya] A kulcs nem passzol. Találj egy másikat, és próbáld újra!";
+
+"[Sung Mahi Tower] You completed this level in %d seconds.";
+"[Sung Mahi tornya] Ezt a szintet %d másodperc alatt teljesítetted.";
+
+"[Sung Mahi Tower] You have to break another seal first!";
+"[Sung Mahi tornya] Elõbb fel kell törnöd egy másik pecsétet!";
+
+"[TEST_ONLY]ÇöÀç ±¹°í : %d";
+"[TEST_ONLY]Adó nagysága: %d";
+
+"[Transmutation] You cannot equip the transmuted item as it does not match your class.";
+"[Átalakítás] Nem szerelheted fel az átalakított tárgyat, mert nem egyezik az osztályoddal.";
+
+"[Transmutation] You cannot equip the transmuted item as it does not match your gender.";
+"[Átalakítás] Nem szerelheted fel az átalakított tárgyat, mert nem egyezik a nemeddel.";
+
+"[World boss] Caution: the world boss will appear soon!";
+"[Megafõszörny] Figyelem: a megafõszörny hamarosan megjelenik!";
+
+"[World boss] Event completed";
+"[Megafõszörny] A rendezvény befejezõdött";
+
+"[World boss] Event started";
+"[Megafõszörny] A rendezvény elkezdõdött";
+
+"[World boss] In Channel %d, %s has appeared and is terrorising the area of %s. Let's go hunting!";
+"[Megafõszörny] A %d. csatornán megjelent %s és %s területét tartja félelemben. Vadászatra fel!";
+
+"[World boss] Reward for Loot Level I in the rankings: %d";
+"[Megafõszörny] I. szintû zsákmány jutalom a ranglistán: %d";
+
+"[World boss] Rewards for Loot Level II in the rankings: %d";
+"[Megafõszörny] II. szintû zsákmány jutalom a ranglistán: %d";
+
+"[World boss] Rewards for Loot Level III in the rankings: %d";
+"[Megafõszörny] III. szintû zsákmány jutalom a ranglistán: %d";
+
+"[World boss] Rewards for Loot Level IV in the rankings: %d";
+"[Megafõszörny] IV. szintû zsákmány jutalom a ranglistán: %d";
+
+"[World boss] The World boss has escaped! Good luck next time.";
+"[Megafõszörny] A megafõszörny elmenekült! Sok szerencsét a következõ alkalomra!";
+
+"[World boss] The world boss in Channel %d has been attacked. Join the hunt now!";
+"[Megafõszörny] A megafõszörnyet megtámadták a %d. csatornán. Csatlakozz a vadászathoz most!";
+
+"[World boss] Well done! Here is your reward. Join in next time as well!";
+"[Megafõszörny] Szép munka! Itt a jutalmad. Csatlakozz következõ alkalommal is!";
+
+"[World boss] Well done: %s has been defeated and peace has been restored... for now.";
+"[Megafõszörny] Szép munka: %s legyõzésre került és ismét béke uralkodik... egyelõre.";
+
+"[World boss] You can't receive a reward now, because you do not have enough space in your inventory.";
+"[Megafõszörny] Most nem kaphatsz jutalmat, mert nincs elég helyed a leltáradban.";
+
+"[World boss] You can't receive a reward now.";
+"[Megafõszörny] Most nem kaphatsz jutalmat.";
+
+"the level Heroic";
+"Hõsies szint";
+
+"the level Valiant";
+"Szelíd szint";
+
+"the level Wild";
+"Vad szint";
+
+"the level Young";
+"Fiatal szint";
+
+"°¡¸¸È÷ ÀÖÀ» ¶§¸¸ Âø¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Nyugton kell maradnod a tárgy felszereléséhez.";
+
+"°¢Á¦±¹ ÁøÇà Á¤º¸";
+"Birodalmi információk";
+
+"°¨Áö±â¸¦ ÀÛ¿ëÇÏ¿´À¸³ª °¨ÁöµÇ´Â ¿µ¼®ÀÌ ¾ø½À´Ï´Ù.";
+"Pillanatnyilag nincs Metinkõ ezen a térképen.";
+
+"°©¿ÊÀ» ¹ş¾î¾ß °³ÀÎ »óÁ¡À» ¿­ ¼ö ÀÖ½À´Ï´Ù.";
+"Csak akkor tudod kinyitni a boltot, ha leveszed a felszerelésed.";
+
+"°ªÀ» Àß¸ø ÀÔ·ÂÇÏ¿´½À´Ï´Ù.";
+"Rossz értéket adtál meg.";
+
+"°­È­¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Sikeres volt az erõsítés.";
+
+"°­È­¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Nem sikerült az erõsítés.";
+
+"°­È­¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Nincsenek nálad a szükséges anyagok a Sárkánykõ erõsítéséhez.";
+
+"°­È­Ã¢À» ¿¬ »óÅÂ¿¡¼­´Â ¾ÆÀÌÅÛÀ» ¿Å±æ ¼ö ¾ø½À´Ï´Ù.";
+"Nem mozdíthatod el a tárgyat a finomítási ablakon belül.";
+
+"°­È­ÇÒ ¼ö ¾ø´Â ¿ëÈ¥¼®ÀÔ´Ï´Ù.";
+"Ez a Sárkánykõ nem használható erõsítéshez.";
+
+"°°Àº °³·®¼­¸¦ ÇÕÄ¥ ¼ö´Â ¾ø½À´Ï´Ù.";
+"Nem kapcsolhatsz össze azonos javító tekercseket.";
+
+"°°Àº Á¾·ùÀÇ ¸ŞÆ¾¼®Àº ¿©·¯°³ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem tudsz több azonos fajta szellemkövet felerõsíteni.";
+
+"°°Àº Á¾·ùÀÇ À¯´ÏÅ© ¾ÆÀÌÅÛ µÎ °³¸¦ µ¿½Ã¿¡ ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem szerelheted fel ezt a tárgyat kétszer.";
+
+"°°ÀÌ ÁöÀ» ¼ö ¾ø´Â Á¾·ùÀÇ °Ç¹°ÀÌ Áö¾îÁ® ÀÖ½À´Ï´Ù.";
+"Ezt az épülettípust csak egyszer lehet megépíteni.";
+
+"°³·®µÈ ÈÄ ¾ÆÀÌÅÛÀÇ ·¹º§ Á¦ÇÑº¸´Ù ·¹º§ÀÌ ³·½À´Ï´Ù.";
+"Túl alacsony a szinted ahhoz, hogy használd ezt a tárgyat.";
+
+"°³·®À» ÇÏ±â À§ÇÑ µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Nincs elég Yang a javításhoz.";
+
+"°³·®À» ÇÏ±â À§ÇÑ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"Nincs megfelelõ anyagod, hogy megcsináld.";
+
+"°³ÀÎ»óÁ¡ »ç¿ëÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"A raktár megnyitása után nem használhatod a Visszaszállító tekercset további %d másodpercig.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡ Ã¢°í¸¦ ¿­¼ö ¾ø½À´Ï´Ù.";
+"Kereskedés után %d másodpercet kell várnod, hogy boltot nyithass.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎµîÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Kereskedés után nem használhatsz Visszaszállító tekercset %d másodpercig.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡´Â ´Ù¸¥Áö¿ªÀ¸·Î ÀÌµ¿ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"%d másodpercig a kereskedés után nem tudsz máshova menni.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Nem használhatod a Visszaszállító tekercset, amíg egy másik ablak nyitva van.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â ´Ù¸¥°÷À¸·Î ÀÌµ¿,Á¾·á ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Kereskedés után egy ideig nem mehetsz máshova.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â º¸µû¸®,ºñ´Üº¸µû¸®¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Nem nyithatod ki a raktárat, amíg más ablak nyitva van.";
+
+"°ÅÁş";
+"FALSE";
+
+"°Ç¹° ºñ¿ë Á¤º¸ ÀÌ»óÀ¸·Î °Ç¼³ ÀÛ¾÷¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Hibás árazás miatt nem sikerült az építkezés.";
+
+"°Ç¹°À» ÁöÀ» ¼ö ¾ø´Â À§Ä¡ÀÔ´Ï´Ù.";
+"Ezen a helyen nem lehet építkezni.";
+
+"°Ç¼³ ºñ¿ëÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Céhednek nincs elég Yangja, hogy felépítse ezt az épületet.";
+
+"°Ç¼³¿¡ ÇÊ¿äÇÑ °Ç¹°ÀÌ Áö¾îÁ® ÀÖÁö ¾Ê½À´Ï´Ù.";
+"A fõépületet kell elõször megépíteni.";
+
+"°ÔÀÓÀ» Á¾·á ÇÕ´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Lekapcsolódás a szerverrõl. Kérlek várj!";
+
+"°áÀç±â°£ÀÌ %dºĞ ÈÄ ¸¸·á µË´Ï´Ù.";
+"A játékidõd %d perc múlva lejár.";
+
+"°áÈ¥ »óÅÂ°¡ ¾Æ´Ï¸é °áÈ¥¹İÁö¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem hordhatsz Jegygyûrût, ha nem vagy házas.";
+
+"°áÈ¥½ÄÀÌ Á¾·áµË´Ï´Ù.";
+"Mindjárt vége az esküvõnek.";
+
+"°áÈ¥ÇÏÁö ¾ÊÀº »óÅÂ¿¡¼­ ¿¹¹°À» Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem használhatod ezt a tárgyat, mert nem vagy házas.";
+
+"°æÇèÄ¡ %d%%";
+"Tapasztalat %d%%";
+
+"°æÇèÄ¡ %d%% Ãß°¡ È¹µæ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"A tapasztalat bónusz jelenleg további %d%%.";
+
+"°æÇèÄ¡ ¹èÀ²";
+"Tapasztalati pontok százaléka";
+
+"°æÇèÄ¡°¡ ºÎÁ·ÇÏ¿© Ã¥À» ÀĞÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Hiányos tapasztalat miatt nem tudod elolvasni.";
+
+"°í±â°¡ ¹Ì³¢¸¸ »©¸Ô°í Àì½Î°Ô µµ¸ÁÄ¨´Ï´Ù.";
+"Elveszítetted csalidat.";
+
+"°í±â°¡ ÀâÇû½À´Ï´Ù! (%s)";
+"Halat fogtál. (%s)";
+
+"°í±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"A hal a víz mélyén eltûnt.";
+
+"°î±ªÀÌ ¼ö·Ãµµ°¡ ÃÖ´ë(%d)°¡ µÇ¾ú½À´Ï´Ù.";
+"A bányász pontjaid elérték a maximumot (%d).";
+
+"°î±ªÀÌ°¡ ÃÖ´ë ¼ö·Ãµµ¿¡ µµ´ŞÇÏ¿´½À´Ï´Ù.";
+"A bányász pontjaid elérték a maximumot.";
+
+"°î±ªÀÌ¸¦ µé°í ÀÖÁö ¾Ê¾Æ¼­ Ä¶ ¼ö ¾ø½À´Ï´Ù.";
+"Csákány nélkül nem bányászhatsz.";
+
+"°î±ªÀÌ¸¦ ÀåÂøÇÏ¼¼¿ä.";
+"Szükséged van egy csákányra hogy ércet szerezz!";
+
+"°î±ªÀÌÀÇ ¼ö·Ãµµ°¡ Áõ°¡ÇÏ¿´½À´Ï´Ù! (%d/%d)";
+"Bányász pontjaid nõttek. (%d/%d)";
+
+"°ñµå µå·Ó·ü %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"A Yang eldobás hányada pillanatnyilag plusz %d%%";
+
+"°ø°İ·Â +%d";
+"Támadóerõ + %d";
+
+"°ø°İ·Â +%d%%";
+"Támadás + %d%%";
+
+"°ø°İ¼Óµµ +%d";
+"Támadósebesség +%d";
+
+"°øºÎÇÏ±â ½È¾îÁö³×.";
+"Nem akarok tovább tanulni.";
+
+"°üÀü ¸ğµå·Î ±æµåÀü¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"A céhháborúban megfigyelõként részt vehetsz.";
+
+"°üÀü »óÅÂ¿¡¼­´Â ±³È¯À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Megfigyelésnél nem kereskedhetsz.";
+
+"°üÅë Ãß°¡ µ¥¹ÌÁö %d";
+"További szúrófegyver sérülések %d";
+
+"±¹°í¿¡ µ·ÀÌ ºÎÁ·ÇÏ°Å³ª µ·À» °¡Á®¿Ã¼ö ¾ø´Â »óÈ²ÀÔ´Ï´Ù";
+"Nincs elég Yangod.";
+
+"±¹°í¿¡ µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù. ÇöÀç : %u ÇÊ¿ä±İ¾× : %u";
+"Adóhiány. Jelenlegi tõke: %u hiányzó tõke: %u";
+
+"±¹°í¿¡ ÀÚ±İÀÌ ¸ğÀÚ¶ø´Ï´Ù ±¹°í : %d";
+"Nem elég az adóbevétel: %d";
+
+"±ºÁÖ Á¤º¸";
+"Császár információk";
+
+"±ºÁÖ°¡ ³»¸° Ãàº¹À¸·Î ¸ğµç ¿¡³ÊÁö°¡ °¡µæ Ã¤¿öÁı´Ï´Ù";
+"A császár áldása miatt visszaverõdik az energia.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ë °¡´ÉÇÑ ±â´ÉÀÔ´Ï´Ù";
+"Ezt a funkciót csak a császár használhatja.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ë°¡´É ÇÑ ±â´ÉÀÔ´Ï´Ù";
+"Csak a császár használhatja.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ëÇÒ¼ö ÀÖ´Â ±â´ÉÀÔ´Ï´Ù";
+"Csak császárok használhatják.";
+
+"±ºÁÖÀÇ ±İ°­±Ç ¿µÇâÀ¸·Î ÀÌÁö¿ª %s À¯Àú´Â 3ºĞ°£ 10 %% ÀÇ ¹æ¾î·ÂÀÌ  Áõ°¡µË´Ï´Ù";
+"Geum-Gang-Gwon uralkodó által a %s játékoshoz ezen a területen 3 percen át 10 %%  felszerelés adódik.";
+
+"±ºÁÖÀÇ »çÀÚÈÄ ¿µÇâÀ¸·Î ÀÌÁö¿ª %s À¯Àú´Â 3ºĞ°£ 10 %% ÀÇ °ø°İ·ÂÀÌ  Áõ°¡µË´Ï´Ù";
+"Sa-Za-Hu uralkodó által %s játékosnak ezen a területen 3 percen keresztül 10%%-kal nõ a támadó ererje.";
+
+"±ºÁÖÀÇ ÀÚ°İÀ» °¡Áö°í ÀÖÁö ¾Ê½À´Ï´Ù";
+"Nincs császári kiképzésed.";
+
+"±ºÁÖÀÇ Ãàº¹À¸·Î ÀÌÁö¿ª %s À¯Àú´Â HP,SP°¡ ¸ğµÎ Ã¤¿öÁı´Ï´Ù.";
+"Az %s uralkodó áldásának felhasználásánál a TP és MP helyreállítódik.";
+
+"±ºÁÖÀÇ Ãàº¹À» »ç¿ëÇÏ¿´½À´Ï´Ù.";
+"A császári áldás aktív.";
+
+"±ºÁ÷ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem használhatod ezt a tárgyat, mert nincsenek meg az elõfeltételek.";
+
+"±ÍÈ¯¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"A teleportálás sikertelen.";
+
+"±×°ÍÀ¸·Î ¼ö·ÃÀº ³¡³­ °Å¾ß!";
+"A tréning lezárult.";
+
+"±×·¡, ÀÌ ´À³¦ÀÌ¾ß. Ã¼³»¿¡ ±â°¡ ¾ÆÁÖ Ãæ¸¸ÇØ.";
+"Igen, jó érzés. Tele vagyok Chi-vel.";
+
+"±×·¡, ÃµÃµÈ÷. Á»´õ ÃµÃµÈ÷, ±×·¯³ª ¸·Èû ¾øÀÌ ºü¸£°Ô!";
+"Kicsit lassan... de folyamatosan... megállás nélkül!";
+
+"±×·£µå ¸¶½ºÅÍ ¼ö·ÃÀ» ÇÒ ¼ö ¾ø´Â ½ºÅ³ÀÔ´Ï´Ù.";
+"Ezt a készséget nem fejlesztheted nagymester szintre.";
+
+"±×·± ¸í·É¾î´Â ¾ø½À´Ï´Ù";
+"Ez a parancs nem létezik.";
+
+"±×·± »ç¶÷ÀÌ ¾ø½À´Ï´Ù.";
+"Ez a személy nem létezik.";
+
+"±×·± ÀÌ¸§ ¶Ç´Â ¹øÈ£ÀÇ ±æµå°¡ ¾ø½À´Ï´Ù.";
+"Nem létezik céh ezzel a névvel vagy számmal.";
+
+"±Ù·Â +%d";
+"Erõ +%d";
+
+"±Ù·ÂÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem vagy elég erõs, hogy magadra vedd ezt a tárgyat.";
+
+"±İ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Érvénytelen Yang.";
+
+"±â¾ïµÈ À§Ä¡°¡ Å¸Á¦±¹¿¡ ¼ÓÇØ ÀÖ¾î¼­ ±ÍÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Egy idegen birodalomban nem tudod magad biztonságos helyre teleportálni.";
+
+"±â¾ïÇØ µÑ ¼ö ¾ø´Â À§Ä¡ ÀÔ´Ï´Ù.";
+"Nem mentheted ezt a helyszínt.";
+
+"±âÀıÇÏÁö ¾ÊÀ½ %d%%";
+"Nincs szédülés %d%%";
+
+"±æµå¿¡ °¡ÀÔÇÏÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Nem léptél be a céhbe.";
+
+"±æµå¿ø";
+"Tag";
+
+"±æµåÀå";
+"Vezetõ";
+
+"±æµåÀü¿¡ Âü°¡ÇÑ »ó´ë¹æ ±æµå¿øÀÌ ¾Æ¹«µµ ¾ø½À´Ï´Ù.";
+"Nincs ellenfél.";
+
+"±æµåÀüÀÌ ÀÏÂï Á¾·áµÇ¾î ¹«½ÂºÎ·Î ÆÇÁ¤ µÇ¾ú½À´Ï´Ù. (5ºĞÀÌ Áö³ªÁö ¾ÊÀ½)";
+"Mivel a céhháború hamarabb befejezõdött, az eredmény döntetlennek számít.";
+
+"²Ş¼Ó¿¡¼­ ¾î¶»°Ô¿ä?";
+"Az álmaimban? Hogyan?";
+
+"³ª¹«²Û¸¦ ÅëÇØ ´ÙÀ½ ·¹º§ÀÇ °î±ªÀÌ·Î ¾÷±×·¹ÀÌµå ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Deokbae favágónál tudod fejleszteni a csákányod.";
+
+"³ª¹«¿¡¼­ ºÎÅÍ ½ÅºñÇÑ ºûÀÌ ³ª¿É´Ï´Ù.";
+"Egy misztikus fény jelent meg a fáról.";
+
+"³ªº¸´Ù ³Ê¹« ³ôÀº ·¹º§ÀÇ ¸ó½ºÅÍ·Î´Â º¯½Å ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem változhatsz át olyan szörnnyé, aki magasabb szintû nálad.";
+
+"³ªÀÇ ±ºÁÖ Á¤º¸";
+"A császárom információi";
+
+"³ªÀÇ »ï°Å¸® ÁøÇàÁ¤º¸";
+"Információ a birodalmi csatáról.";
+
+"³¬½Ã Áß¿¡ ¹Ì³¢¸¦ °¥¾Æ³¢¿ï ¼ö ¾ø½À´Ï´Ù.";
+"Horgászat közben nem cserélhetsz csalit.";
+
+"³¬½Ã´ë°¡ ¾Æ´Ñ ¹°°ÇÀ¸·Î ³¬½Ã¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù!";
+"Bot nélkül nem tudsz horgászni.";
+
+"³¬½Ã´ë°¡ ÃÖ´ë ¼ö·Ãµµ¿¡ µµ´ŞÇÏ¿´½À´Ï´Ù.";
+"Elérted a halászati pontok maximális számát.";
+
+"³¬½Ã´ë¸¦ ÀåÂø ÇÏ¼¼¿ä.";
+"Válassz ki egy horgászbotot.";
+
+"³¬½Ã´ë¿¡ %s¸¦ ¹Ì³¢·Î ³¢¿ó´Ï´Ù.";
+"Egy %s lett csaliként a horogra tûzve.";
+
+"³¬½Ã´ëÀÇ ¼ö·Ãµµ°¡ Áõ°¡ÇÏ¿´½À´Ï´Ù! (%d/%d)";
+"A horgászpontjaid nõttek! (%d/%d)";
+
+"³¬½Ã¸¦ ÇÒ ¼ö ÀÖ´Â °÷ÀÌ ¾Æ´Õ´Ï´Ù";
+"Itt nem horgászhatsz.";
+
+"³¬½ÃÀÌº¥Æ®¿ùÃ´ºØ¾î";
+"Horgászverseny 'Legjobb horgász'";
+
+"³¬½ÃÀÌº¥Æ®À×¾î";
+"'Nyugodt erõ' horgászverseny";
+
+"³²Àº »ı¸í·Â ¾çÀÌ ¸ğÀÚ¶ó »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nincs elég TP-d.";
+
+"³²Àº ½ºÅÈ Æ÷ÀÎÆ®°¡ ¾ø½À´Ï´Ù.";
+"Nem maradt státuszpont";
+
+"³²Àº ½ºÅÈ Æ÷ÀÎÆ®°¡ Àû½À´Ï´Ù.";
+"Túl kevés státuszpont maradt.";
+
+"³²Àº Á¤½Å·Â ¾çÀÌ ¸ğÀÚ¶ó »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nincs elég Manád, hogy használd.";
+
+"³Ê¹« °¡±îÀÌ ÀÖ½À´Ï´Ù.";
+"Túl közel vagy.";
+
+"³Ê¹« ¸Ö¸® ÀÖ½À´Ï´Ù";
+"Túl közel vagy.";
+
+"³Ñ¾îÁöÁö ¾ÊÀ½ %d%%";
+"Nincs leesés %d%%";
+
+"³à¼®µéÀº ÀÌ°÷ ¼ºÁö¿¡ ÀÖÀ» ÀÚ°İÀ» ÀÒ¾ú´Ù. ¸ğµÎ ¼ºÁö¿¡¼­ ¹°·¯³ª°Å¶ó~~[ENTER][ENTER] 10ÃÊ ÈÄ¿¡ ¸ğµÎ ¸¶À»·Î ÀÌµ¿ÇÏ°Ô µË´Ï´Ù.";
+", nincs jogod itt lenni! Birodalmad tagjai 10 másodperc múlva elhagyják ezt a megszentelt helyet.";
+
+"´À·ÁÁöÁö ¾ÊÀ½ %d%%";
+"Nincs lelassulás %d%%";
+
+"´ÔÀÇ ¸»";
+"Ló";
+
+"´Ù ÀĞ¾ú´Ù! ÀÌÁ¦ ºñ±Ş¿¡ ÀûÇôÀÖ´Â ´ë·Î Àü½Å¿¡ ±â¸¦ µ¹¸®±â¸¸ ÇÏ¸é,";
+"Olvastam! A Chi-nek most el kell oszlania a testemben.";
+
+"´Ù¸¥ °Å·¡Áß(Ã¢°í,±³È¯,»óÁ¡)¿¡´Â °³ÀÎ»óÁ¡À» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem használhatsz magán boltot.";
+
+"´Ù¸¥ °Å·¡Áß(Ã¢°í,±³È¯,»óÁ¡)¿¡´Â »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem termelhetsz, amíg egy másik kereskedõ/raktárablak nyitva van.";
+
+"´Ù¸¥ °Å·¡ÁßÀÏ°æ¿ì °³ÀÎ»óÁ¡À» ¿­¼ö°¡ ¾ø½À´Ï´Ù.";
+"Nem nyithatsz magánboltot, amíg meg van nyitva egy másik ablak.";
+
+"´Ù¸¥ °Å·¡Ã¢ÀÌ ¿­·ÁÀÖÀ»°æ¿ì °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Amíg az ablak nyitva van, nem kereskedhetsz másokkal.";
+
+"´Ù¸¥ °Å·¡Ã¢ÀÌ ¿­¸°»óÅÂ¿¡¼­´Â »óÁ¡°Å·¡¸¦ ÇÒ¼ö °¡ ¾ø½À´Ï´Ù.";
+"Nem kereskedhetsz, amíg egy másik ablak nyitva van.";
+
+"´Ù¸¥ Á¦±¹ À¯Àú´Â ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem választhatsz ki játékost mást birodalomból.";
+
+"´Ù¸¥ ÄÄÇ»ÅÍ¿¡¼­ ·Î±×ÀÎ ÇÏ¿© Á¢¼ÓÀ» Á¾·á ÇÕ´Ï´Ù.";
+"Valaki belépett a felhasználó neveddel. Lekapcsolunk a szerverrõl.";
+
+"´Ù¸¥°Å·¡Ã¢ÀÌ ¿­¸°»óÅÂ¿¡¼­´Â Ã¢°í¸¦ ¿­¼ö°¡ ¾ø½À´Ï´Ù.";
+"Nem nyithatod meg a raktárat, amíg meg van nyitva egy másik ablak.";
+
+"´ÙÀ½ ¹®Á¦ ÁØºñÇØÁÖ¼¼¿ä.";
+"Készen állsz a következõ kérdésre?";
+
+"´ÙÀÌ¾Æ¸óµå·Î ¼ÒÄÏÀ» Ãß°¡ÇØ¾ßÇÕ´Ï´Ù.";
+"Egy foglalatot kell hozzáadnod, amikor egy gyémántot akarsz használni.";
+
+"´Ü°è °³·®¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Sikeres volt a csiszolási tisztaság növelése.";
+
+"´Ü°è °³·®¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Nem sikerült a csiszolási tisztaság emelése.";
+
+"´Ü°è °³·®¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Ez a tárgy nem szükséges a finomításhoz.";
+
+"´Ü°è °³·®ÇÒ ¼ö ¾ø´Â ¿ëÈ¥¼®ÀÔ´Ï´Ù.";
+"Ezt a Sárkánykövet nem lehet finomításhoz használni.";
+
+"´İ±â";
+"Bezár";
+
+"´ç½ÅÀÌ ÁÖ»çÀ§¸¦ ±¼·Á %d°¡ ³ª¿Ô½À´Ï´Ù. (%d-%d)";
+"Dobtál kockával. Dobásod értéke %d (%d-%d).";
+
+"´ë·Ã °­Á¦ Á¾·á ¼º°ø";
+"A párbaj sikeresen félbeszakadt.";
+
+"´ë·Ã °­Á¦ Á¾·á ½ÇÆĞ";
+"A párbaj sikertelenül félbeszakadt.";
+
+"´ë·Ã »ó´ë°¡ »ç¶óÁ® ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"A párbaj befejezõdött, az ellenséged eltûnt.";
+
+"´ë·Ã ½Ã°£ ÃÊ°ú·Î ´ë·ÃÀ» Áß´ÜÇÕ´Ï´Ù.";
+"A párbaj idõtúllépés miatt befejezõdik.";
+
+"´ë·Ã ½ÃÀÛ¿¡ ¹®Á¦°¡ ÀÖ½À´Ï´Ù.";
+"Probléma merült fel a párbaj kezdetével.";
+
+"´ë·Ã Áß¿¡´Â ÀÌ¿ëÇÒ ¼ö ¾ø´Â ¹°Ç°ÀÔ´Ï´Ù.";
+"A párbajban nem használhatod ezt a tárgyat.";
+
+"´ë·ÃÀÌ ¼º°øÀûÀ¸·Î ½ÃÀÛ µÇ¾ú½À´Ï´Ù.";
+"A párbaj kezdete sikeres volt.";
+
+"´ë·ÃÀÌ ½ÃÀÛµÇ¾ú½À´Ï´Ù.";
+"A párbaj megkezdõdött.";
+
+"´ë·ÃÀÚ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"A párbaj befejezõdik, mert probléma van a párbajozókkal.";
+
+"´ë·ÃÀÚ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Áß´ÜÇÕ´Ï´Ù.";
+"A párbajt megállítják, mert probléma van az arénával.";
+
+"´ë·ÃÀÚ°¡ ¾ø½À´Ï´Ù.";
+"Nincsenek párbajozók.";
+
+"´ë·ÃÀå ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"A párbaj befejezõdik, probléma van az arénával.";
+
+"´ë·ÃÀå¿¡¼­ »ç¿ëÇÏ½Ç ¼ö ¾ø½À´Ï´Ù.";
+"Nem használhatod ezen a területen.";
+
+"´ë¹Ú°ñµå µå·Ó·ü %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Az esély Yang-esõre jelenleg %d%%-kal magasabb.";
+
+"´õ ³ôÀº °æÁöÀÇ ¼ö·ÃÀ» ¼º°øÀûÀ¸·Î ³¡³»¼Ì½À´Ï´Ù.";
+"Sikeresen befejezted a tréninget a könyv segítségével.";
+
+"´õ ÀÌ»ó OXÀÌº¥Æ® Âü°¡ÀÚ¸¦ ¹ŞÁö ¾Ê½À´Ï´Ù.";
+"OX esemény nem fogad el több jelentkezést.";
+
+"´õ ÀÌ»ó °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem lehetséges további fejlesztés.";
+
+"´õ ÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem tudod tovább fejleszteni ezt a képességedet.";
+
+"´õ ÀÌ»ó ½Â¸¶ ¼ö·Ã¼­¸¦ ÀĞÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Nem olvashatsz további lovaglás leírást.";
+
+"´õ ÀÌ»ó ÀÌ ¾ÆÀÌÅÛÀ» ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ez a tárgy már nem fejleszthetõ. A bónuszok maximális mennyisége el lett érve.";
+
+"´õÀÌ»ó ÀÌ ¾ÆÀÌÅÛÀ» ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"A Megáldó márványt kell használnod, hogy további bónuszt adj ehhez a tárgyhoz.";
+
+"´õÀÌ»ó Ä³³¾ ¼ö ¾ø½À´Ï´Ù.";
+"Nincs mit bányászni.";
+
+"´øÀü ¾È¿¡¼­´Â %s%s »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"%s%s nem használható a kazamatában.";
+
+"µ¶ ÀúÇ× %d%%";
+"Méreg ellenállás %d%%";
+
+"µ¶°ø°İ %d";
+"Méreg támadás %d";
+
+"µ· %d ³ÉÀ» È¹µæÇß½À´Ï´Ù.";
+"%d Yangot kaptál.";
+
+"µ· ´ë¹ÚÀÌ ³ª¿Ã È®·ü";
+"Esély Yang-esõre";
+
+"µ· µå·ÓÀ² %.1f¹è";
+"Esély Yang találására %. 1f";
+
+"µ·ÀÌ ³ª¿Ã È®·ü";
+"Yang-dobási arány százalékban";
+
+"µ·ÀÌ ºÎÁ·ÇÏ°Å³ª ¾ÆÀÌÅÛÀÌ Á¦ÀÚ¸®¿¡ ¾ø½À´Ï´Ù.";
+"Nincs elég Yang, vagy nincs hely a leltárban.";
+
+"µ¿¹°·ù ¸ó½ºÅÍ Å¸°İÄ¡ +%d%%";
+"A ló szörnyekkel szembeni támadóereje +%d%%";
+
+"µ¿ÀÏÇÑ ¸Ó¸® ½ºÅ¸ÀÏ·Î´Â ±³Ã¼ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Már most is ilyen frizurád van.";
+
+"µÎ¼Õ°Ë ¹æ¾î %d%%";
+"Kétkezes kard védelem %d%%";
+
+"µĞ°© Áß¿¡´Â ´É·ÂÀ» ¿Ã¸± ¼ö ¾ø½À´Ï´Ù.";
+"Nem változtathatod meg a státuszod, amíg át vagy változtatva.";
+
+"µĞ°© Áß¿¡´Â Âø¿ëÁßÀÎ Àåºñ¸¦ º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem cserélheted le a felszerelt tárgyat, amíg át vagy változtatva.";
+
+"µĞ°©¼­ ¼ö·ÃÀ» ¸¶Ãº½À´Ï´Ù. ½Å¼±¿¡°Ô Ã£¾Æ°¡¼¼¿ä.";
+"Teljesen kitanultad az átváltozást.";
+
+"µĞ°©¿¡ ½ÇÆĞ ÇÏ¿´½À´Ï´Ù";
+"Hiba az átváltozásnál";
+
+"µĞ°©ÇÒ ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"Nem változhatsz át miközben lovagolsz.";
+
+"µåµğ¾î ³¡ÀÌ º¸ÀÌ´Â °Ç°¡...  ÀÌ ±â¼úÀº ÀÌÇØÇÏ±â°¡ ³Ê¹« Èûµé¾î..";
+"Nehéz megérteni ezeket az utasításokat. Folytatnom kell a tanulást.";
+
+"µî±Ş °³·®¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Egy osztály finomítása volt sikeres.";
+
+"µî±Ş °³·®¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Nem sikerült egy osztály finomítása.";
+
+"µî±Ş °³·®¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Ez a tárgy nem szükséges a csiszolási tisztaság emeléséhez.";
+
+"¶³¾îÁø ¾ÆÀÌÅÛÀº %dºĞ ÈÄ »ç¶óÁı´Ï´Ù.";
+"Az eldobott tárgy el fog tûnni %d perc múlva.";
+
+"¶³¾îÁø ¾ÆÀÌÅÛÀº 3ºĞ ÈÄ »ç¶óÁı´Ï´Ù.";
+"Az eldobott tárgy 5 perc múlva eltûnik.";
+
+"¶ß°Å¿î ¹«¾ùÀÌ °è¼Ó ¿ë¼ÚÀ½Ä¡°í ÀÖ¾î! ÀÌ°Ç, ÀÌ°ÍÀº!";
+"Úgy tûnik, már folyik a képzés...";
+
+"·¹º§ 20 ÀÌÇÏ´Â ÇÚµåÆù ¹øÈ£¸¦ µî·ÏÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"20-nál magasabb szinten kell állnod, hogy mobiltelefonszámod regisztrálni tudd.";
+
+"·¹º§ 30ÀÌ µÇ±â Àü¿¡´Â ½ÀµæÇÒ ¼ö ÀÖÀ» °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Legalább 30-as szintre van szükséged a könyv megértéséhez.";
+
+"·¹º§ 50ÀÌ µÇ±â Àü¿¡´Â ½ÀµæÇÒ ¼ö ÀÖÀ» °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Legalább 50-es szintre van szükséged a könyv megértéséhez.";
+
+"·¹º§ÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Túl alacsony a szinted ezen tárgy felszereléséhez.";
+
+"·Î±×ÀÎ È­¸éÀ¸·Î µ¹¾Æ °©´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Vissza a bejelentkezõ ablakhoz. Kérlek várj!";
+
+"·í·¿À» µ¹¸³´Ï´Ù. ±İ¾× %d";
+"Rulett pörgetés %d Yangért.";
+
+"¸¦";
+"a";
+
+"¸¶¹ı °ø°İ·Â +%d";
+"Mágikus támadás + %d";
+
+"¸¶¹ı ¹æ¾î·Â +%d";
+"Mágikus védelem + %d";
+
+"¸¶¹ı ÀúÇ× %d%%";
+"Mágia ellenállás %d%%";
+
+"¸¶À½ÀÌ ¸¼¾ÆÁö´Â±º. °¡½¿À» Áş´©¸£´ø ¹«¾ğ°¡°¡ Á» °¡º­¿öÁø ´À³¦ÀÌ¾ß.";
+"Szellemed tiszta. Jól tudsz koncentrálni.";
+
+"¸¹Àº Âü¿© ºÎÅ¹µå¸³´Ï´Ù.";
+"Sok játékos részvételét kérjük.";
+
+"¸» ¼ÒÈ¯ ¾ÆÀÌÅÛÀ» »ç¿ëÇÏ¼¼¿ä.";
+"Használj egy tárgyat a ló hívásához.";
+
+"¸» ¼ÒÈ¯¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"A ló hívása sikertelen.";
+
+"¸»¿¡°Ô %s%s ÁÖ¾ú½À´Ï´Ù.";
+"Megetetted a lovad %s%s-val.";
+
+"¸»¿¡°Ô »ç·á¸¦ ÁÖ¾ú½À´Ï´Ù.";
+"Megetetted a lovat.";
+
+"¸»¿¡°Ô ¼±ÃÊ¸¦ ÁÖ¾ú½À´Ï´Ù.";
+"Növényekkel etetted a lovat.";
+
+"¸»¿¡¼­ ¸ÕÀú ³»·Á¾ß ÇÕ´Ï´Ù.";
+"Le kell szállnod.";
+
+"¸»À» µ¹·Áº¸³Â½À´Ï´Ù.";
+"Elküldted a lovadat.";
+
+"¸»À» ¸ÕÀú ¼ÒÈ¯ÇØÁÖ¼¼¿ä.";
+"Elõbb a lovadat hívd kérlek!";
+
+"¸»À» ¼ÒÀ¯ÇÏ°í ÀÖÁö ¾Ê½À´Ï´Ù.";
+"Nincs lovad.";
+
+"¸»À» Åº »ó´ë¿Í °¨Á¤Ç¥ÇöÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem tudsz érzelmi kifejezéseket mutatni olyan játékosnak aki lovagol.";
+
+"¸»À» Åº »óÅÂ¿¡¼­ °¨Á¤Ç¥ÇöÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem tudsz érzelmi kifejezéseket mutatni míg lovagolsz.";
+
+"¸»À» Åº »óÅÂ¿¡¼­ ¿¹º¹À» ÀÔÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Nem tudod használni, amíg lovagolsz.";
+
+"¸»À» Åº »óÅÂ¿¡¼­´Â ¸ÔÀÌ¸¦ ÁÙ ¼ö ¾ø½À´Ï´Ù.";
+"Nem etetheted a lovadat amikor rajta ülsz.";
+
+"¸»ÀÇ ½ºÅ×¹Ì³Ê°¡ ºÎÁ·ÇÏ¿© ¸»À» Å» ¼ö ¾ø½À´Ï´Ù.";
+"A lovad kitartása túl alacsony.";
+
+"¸»ÀÌ ¾ø½À´Ï´Ù. ¸¶±Â°£ °æºñº´À» Ã£¾Æ°¡¼¼¿ä.";
+"Nincs rendelkezésre álló ló. Kérdezd a Lovászinast!";
+
+"¸»ÀÌ Á×¾îÀÖ´Â »óÅÂ ÀÔ´Ï´Ù.";
+"A lovad halott.";
+
+"¸ÂÀ¸¸é O, Æ²¸®¸é X·Î ÀÌµ¿ÇØÁÖ¼¼¿ä";
+"Ha helyes menj erre: O, ha helytelen akkor erre: X.";
+
+"¸Ó´Ï  ·ê·¿ ½ÃÀÛ.";
+"Yang rulett indítása";
+
+"¸ÕÀú ´ÙÀÌ¾Æ¸óµå·Î ¾Ç¼¼¼­¸®¿¡ ¼ÒÄÏÀ» Ãß°¡ÇØ¾ßÇÕ´Ï´Ù.";
+"Elõször egy foglalatot kell hozzáadnod, ehhez használj gyémántot.";
+
+"¸ÕÀú ¿ëÈ¥¼® Äù½ºÆ®¸¦ ¿Ï·áÇÏ¼Å¾ß ÇÕ´Ï´Ù.";
+"Mielõtt kinyitsz egy Cor Draconis-t, teljesítened kell a Sárkánykõ-küldetést és aktiválnod kell a Sárkánykõ-alkímiát.";
+
+"¸ÕÀú ÀÏ¾î ³ª¼¼¿ä.";
+"Elõször állj fel.";
+
+"¸ÕÀú Àç°¡ºñ¼­¸¦ ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡½ÃÄÑ ÁÖ¼¼¿ä.";
+"A Megáldó márványt csak olyan tárgyon használhatod, amelynek már van 4 bónusza.";
+
+"¸ŞÆ¾2ÀÎÁõ¹øÈ£: %s";
+"Metin2 Visszaigazolásszám: %s";
+
+"¸ŞÆ¾¼® ºÎÂø¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Sikeresen felszerelted a szellemkövet.";
+
+"¸ŞÆ¾¼® ºÎÂø¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"A szellemkõ eltört felszerelés közben.";
+
+"¸í·É¾î¸¦ ¸ğµÎ ÀÔ·ÂÇÏ¼¼¿ä.";
+"Teljes hosszában add meg rendelésed.";
+
+"¸í·É¾îÀÇ ¼­ºê Ä¿¸Çµå°¡ Àß¸ø µÇ¾ú½À´Ï´Ù.";
+"A parancs egy része hibás.";
+
+"¸ğ´ÚºÒÀ» ÇÇ¿ï ¼ö ¾ø´Â ÁöÁ¡ÀÔ´Ï´Ù.";
+"Itt nem csinálhatsz tábortüzet.";
+
+"¸ó½ºÅÍ¿¡°Ô °­ÇÔ +%d%%";
+"Szörnyek elleni erõ + %d%%";
+
+"¸ö ¼ÓÀÌ ¶ß°Ì±º. ÇÏÁö¸¸ ¾ÆÁÖ Æí¾ÈÇØ. ÀÌ´ë·Î ±â¸¦ ¾ÈÁ¤½ÃÅ°ÀÚ.";
+"Belül égek, de ez megnyugtatja a testem. A Chi-met stabilizálni kell.";
+
+"¸ö¿¡¼­ ¹º°¡ ÈûÀÌ ÅÍÁ® ³ª¿À´Â ±âºĞÀÌ¾ß!";
+"A testem tele van erõvel!";
+
+"¹«±â¿Í °©¿Ê¿¡¸¸ »ç¿ë °¡´ÉÇÕ´Ï´Ù.";
+"Csak fegyveren és vérten használható.";
+
+"¹«´ç°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% ellenállás sámán támadással szemben";
+
+"¹«´ç¿¡°Ô °­ÇÔ +%d%%";
+"Sámánok elleni erõ + %d%%";
+
+"¹«·á °³·® ±âÈ¸´Â 20 ÀÌÇÏÀÇ ¹«±â¸¸ °¡´ÉÇÕ´Ï´Ù";
+"Az ingyenes fegyverjavítás csak a 20-as szint alatti fegyverekre alkalmazható.";
+
+"¹«»ç°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% ellenállás harcos támadással szemben";
+
+"¹«»ç¿¡°Ô °­ÇÔ +%d%%";
+"Harcosok elleni erõ + %d%%";
+
+"¹®ÀÚ ¸Ş¼¼Áö Àü¼Û¿¡´Â 2000¿øÀÌ ÇÊ¿ä ÇÕ´Ï´Ù.";
+"Legalább 2000 DT-re van szükség az sms küldéshez.";
+
+"¹®ÀÚ ¸Ş¼¼Áö Àü¼ÛÀº ·¹º§ 20ºÎÅÍ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Legalább 20-as szinten kell állnod, hogy sms-t tudj küldeni.";
+
+"¹®ÀÚ ¸Ş¼¼Áö¸¦ Àü¼Û Çß½À´Ï´Ù.";
+"El lett küldve az sms-ed.";
+
+"¹®Á¦ ÀÔ´Ï´Ù.";
+"Kérdés.";
+
+"¹®Á¦¸¦ ÃâÁ¦ÇÏ¿´½À´Ï´Ù.";
+"Hiba történt.";
+
+"¹®Á¦¸¦ ÃâÁ¦ÇÏÁö ¸øÇß½À´Ï´Ù.";
+"Nem lépett fel hiba.";
+
+"¹° ¼Ó¿¡ ¸ğ´ÚºÒÀ» ÇÇ¿ï ¼ö ¾ø½À´Ï´Ù.";
+"Nem csinálhatsz vízben tábortüzet.";
+
+"¹°¸®Å¸°İ½Ã ºí·° È®·ü %d%%";
+"%d%% esély közelharci támadás blokkolására.";
+
+"¹°¾à »ç¿ë½Ã %d%% ¼º´É Áõ°¡";
+"A teljesítmény növekedése %d%%-kal az ital által.";
+
+"¹°¾à Á¦Á¶¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Nem sikerült az ital elõállítása.";
+
+"¹°¾à Á¦ÇÑÀÌ ¾ø½À´Ï´Ù.";
+"Az italok nincsenek limitálva.";
+
+"¹°¾à Á¶ÇÕÀ» À§ÇÑ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"Anyag hiányzik az italok keveréséhez.";
+
+"¹°¾àÀ» %d °³ ±îÁö »ç¿ë °¡´ÉÇÕ´Ï´Ù.";
+"Legfeljebb %d italt használhatsz.";
+
+"¹º°¡ ¸ö ¾È¿¡ ÈûÀÌ »ı±â´Â ±âºĞÀÎ °É.";
+"Felfrissültem.";
+
+"¹Ì³¢¸¦ ³¢°í ´øÁ® ÁÖ¼¼¿ä.";
+"Elõször a csalit rögzítsd a horogra.";
+
+"¹ÎÃ¸ +%d";
+"Ügyesség +%d";
+
+"¹ÎÃ¸ÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem elegendõ az ügyességed ezen tárgy felszereléséhez.";
+
+"¹Ğ±³·ù Å¸°İÄ¡ +%d%%";
+"Támadás erõsítés Milgyo-val szemben + %d%%";
+
+"¹Ù¶÷ ÀúÇ× %d%%";
+"Szél ellenállás %d%%";
+
+"¹æ¾î·Â +%d";
+"Felszerelés + %d";
+
+"¹æ¾î·Â +%d%%";
+"Védekezés + %d%%";
+
+"¹æ¿ï ¹æ¾î %d%%";
+"Harang védelem %d%%";
+
+"¹è ¼Ó¿¡¼­ Á¶°³°¡ ³ª¿Ô½À´Ï´Ù.";
+"A halban egy kagyló van.";
+
+"¹è ¼Ó¿¡¼­ Áö··ÀÌ°¡ ³ª¿Ô½À´Ï´Ù.";
+"A halban egy Giliszta van.";
+
+"¹ö¸± ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Nem dobhatod el ezt a tárgyat.";
+
+"º¯°æÇÒ ¼Ó¼ºÀÌ ¾ø½À´Ï´Ù.";
+"Nincs olyan javításod, amit meg tudsz változtatni.";
+
+"º¯½Å »óÅÂ¿¡¼­´Â ¸»¿¡ Å» ¼ö ¾ø½À´Ï´Ù.";
+"Nem tudsz lovagolni, amíg át vagy változtatva.";
+
+"º¯½ÅÁß¿¡´Â Ã¥À» ÀĞÀ»¼ö ¾ø½À´Ï´Ù.";
+"Nem olvashatsz könyvet, amíg át vagy változva.";
+
+"ºÎÂøÇÒ ¼ö ÀÖ´Â ½½·ÔÀÌ ¾ø½À´Ï´Ù.";
+"Nincs szabad nyílás";
+
+"ºÎÃ¤ ¹æ¾î %d%%";
+"Legyezõ védelem %d%%";
+
+"ºÒ¹ı ÇÁ·Î±×·¥ÀÌ °¨Áö µÇ¾î °ÔÀÓÀÌ Á¾·á µË´Ï´Ù.";
+"Illegális szoftvert fedeztünk fel. Vége a játékodnak!";
+
+"ºñ¼Ó¾î³ª Àº¾î°¡ Æ÷ÇÔµÈ »óÁ¡ ÀÌ¸§À¸·Î »óÁ¡À» ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"Nem adhatsz érvénytelen nevet a boltodnak.";
+
+"ºó º´ÀÌ ¸ğÀÚ¸¨´Ï´Ù.";
+"Nincs elég üres üveged.";
+
+"»©³¾ ¼ö ÀÖ´Â ¸ŞÆ¾¼®ÀÌ ¾ø½À´Ï´Ù.";
+"Nincs kivehetõ kõ.";
+
+"»©³¾ ¿µ¼®ÀÌ ¾ø½À´Ï´Ù";
+"Nincs eltávolítható kõ.";
+
+"»ç±Í Å¸¿ö ¿Ï·á º¸»óÀº ÇÑ¹ø±îÁö »ç¿ë°¡´ÉÇÕ´Ï´Ù.";
+"Csak egyszer kaphatsz jutalmat a Démon-torony megbízatásért.";
+
+"»ç¿ë Á¦ÇÑ·®À» ÃÊ°úÇÏ¿´½À´Ï´Ù.";
+"Túl van a határértéken.";
+
+"»ç¿ë¹ı: transfer <name>";
+"Használd: transfer <name>";
+
+"»ç¿ë¹ı: warpto <character name>";
+"Rendelés: warpto <character name>";
+
+"»ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Ez a funkció itt és most nem elérhetõ.";
+
+"»ï°Å¸® ¸÷ ¸®Á¨";
+"Szörnyek a birodalmi csatában";
+
+"»ï°Å¸® ÀüÅõ Âü°¡Áß¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Birodalmi csata résztvevõjeként nem használhatod a Visszaszállító tekercset.";
+
+"»ï°Å¸® ÀüÅõ¿¡¼­ %s ±¹°¡°¡ °¡Àå¸ÕÀú Å»¶ôÀ» ÇÏ¿´½À´Ï´Ù";
+"A %s vereséget szenvedett és kiesik a Birodalmi Csatából.";
+
+"»ó´ë¹æ Ä³¸¯ÅÍ°¡ Á¢¼ÓÀ» Á¾·áÇÏ¿© ´ë·ÃÀ» ÁßÁöÇÕ´Ï´Ù.";
+"A párbajozókat szétválasztották. A párbajnak vége.";
+
+"»ó´ë¹æ Ä³¸¯ÅÍÀÇ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"A párbaj ellenfélnek problémái vannak. A párbajnak vége.";
+
+"»ó´ë¹æÀÇ µ·ÀÌ ºÎÁ·ÇÏ°Å³ª ¾ÆÀÌÅÛÀÌ Á¦ÀÚ¸®¿¡ ¾ø½À´Ï´Ù.";
+"A másik személynek nincs elég Yangja, vagy nincs elég helye a leltárban.";
+
+"»ó´ë¹æÀÇ ¼ÒÁöÇ°¿¡ ºó °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"A másik személynek nincs elég helye a leltárban.";
+
+"»ó´ë¹æÀÇ ÃÑ±İ¾×ÀÌ 20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© °Å·¡¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù..";
+"A játékos több mint 2 milliárd Yanggal rendelkezik. Nem kereskedhetsz vele.";
+
+"»ó´ë¹æÀÌ %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"A játékos a %d csatornán van. (Te a %d csatornán vagy).";
+
+"»ó´ë¹æÀÌ ±³È¯ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"A másik személy félbehagyta a kereskedést.";
+
+"»ó´ë¹æÀÌ ´Ù¸¥ °Å·¡¸¦ ÇÏ°í ÀÖ´Â ÁßÀÔ´Ï´Ù.";
+"A játékos egy másikkal üzletel.";
+
+"»ó´ë¹æÀÌ ´Ù¸¥ °Å·¡ÁßÀÌ¶ó °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"A másik személy épp elfoglalt, ezért most nem tudsz vele kereskedni.";
+
+"»ó´ë¹æÀÌ ´ë·ÃÁßÀÔ´Ï´Ù.";
+"A játékos épp párbajozik.";
+
+"»ó´ë¹æÀÌ ¸Ş½ÅÁ® Ãß°¡ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"A játékos elutasította a kérésed, hogy hozzáadd a barátlistádhoz.";
+
+"»ó´ë¹æÀÌ ¿Â¶óÀÎ »óÅÂ°¡ ¾Æ´Õ´Ï´Ù.";
+"Nem online a játékos.";
+
+"»ó´ë¹æÀÌ ÀÖ´Â °÷À¸·Î ¿öÇÁÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem teleportálhatod magad a játékoshoz.";
+
+"»ó´ë¹æÀÌ Ä£±¸ Ãß°¡¸¦ ¹ŞÀ» ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"Az ellenfeledet nem adhatod hozzá a barátaidhoz.";
+
+"»ó´ë¹æÀÌ ÆÄÆ¼¿¡ ¼ÓÇØÀÖÁö ¾Ê½À´Ï´Ù.";
+"A játékos nincs a csoportodban.";
+
+"»óÀÚ°¡ °©ÀÚ±â Æø¹ßÇÏ¿´½À´Ï´Ù! »ı¸í·ÂÀÌ °¨¼ÒÇß½À´Ï´Ù.";
+"A doboz hirtelen felrobban! Életerõt (TP) vesztettél.";
+
+"»óÀÚ¿¡¼­ %s °¡ %d °³ ³ª¿Ô½À´Ï´Ù.";
+"Kaptál %s, %d egységet.";
+
+"»óÀÚ¿¡¼­ %s °¡ ³ª¿Ô½À´Ï´Ù.";
+"%s van a dobozban.";
+
+"»óÀÚ¿¡¼­ ³ª¿Â ³ì»ö ¿¬±â¸¦ µéÀÌ¸¶½ÃÀÚ µ¶ÀÌ ¿Â¸öÀ¸·Î ÆÛÁı´Ï´Ù!";
+"Ha belélegzed a zöld füstöt a dobozból, méreg fog szétáradni testedben.";
+
+"»óÀÚ¿¡¼­ ³ª¿Â »¡°£ ¿¬±â¸¦ µéÀÌ¸¶½ÃÀÚ ¿òÁ÷ÀÌ´Â ¼Óµµ°¡ ´À·ÁÁ³½À´Ï´Ù!";
+"Ha belélegzed a piros füstöt a ládából, növekszik a gyorsaságod.";
+
+"»óÀÚ¿¡¼­ ¸ó½ºÅÍ°¡ ³ªÅ¸³µ½À´Ï´Ù!";
+"Nézd, mi jött elõ a ládából!";
+
+"»óÀÚ¿¡¼­ ºÎÅÍ ½ÅºñÇÑ ºûÀÌ ³ª¿É´Ï´Ù.";
+"Misztikus fény jön a ládából.";
+
+"»óÁ¡°úÀÇ °Å¸®°¡ ³Ê¹« ¸Ö¾î ¹°°ÇÀ» »ì ¼ö ¾ø½À´Ï´Ù.";
+"Túl messze vagy a bolttól, hogy vásárolj.";
+
+"»óÁ¡°úÀÇ °Å¸®°¡ ³Ê¹« ¸Ö¾î ¹°°ÇÀ» ÆÈ ¼ö ¾ø½À´Ï´Ù.";
+"Túl messze vagy a bolttól, hogy eladj.";
+
+"»óÇ°À» ¹ŞÀ» ÀÎº¥Åä¸®°¡ ºÎÁ·ÇÕ´Ï´Ù. ÀÎº¥Åä¸®¸¦ ºñ¿öÁÖ¼¼¿ä!";
+"Nincs elég helyed a tárolódban hogy elfogadd a jutalmat.";
+
+"»ı°¢¸¸Å­ ÀĞ±â°¡ ½±Áö°¡ ¾Ê±º. ÀÌÇØµµ ¾î·Æ°í ³»¿ëµµ ³­ÇØÇØ.";
+"Ez bonyolultabb és nehezebben érthetõ, mint ahogy gondoltam.";
+
+"»ı¸í·Â È¸º¹ +%d";
+"Energia visszaszerzés +%d";
+
+"¼­¹ö¿¡ Ä¡¸íÀûÀÎ ¿À·ù°¡ ¹ß»ıÇÏ¿© ÀÚµ¿À¸·Î ÀçºÎÆÃµË´Ï´Ù.";
+"Kritikus szerver hiba lépett fel. A szerver automatikusan újraindul.";
+
+"¼±¾ÇÄ¡°¡ %d Áõ°¡ÇÏ¿´½À´Ï´Ù.";
+"A rangod ennyi ponttal növekedett: %d";
+
+"¼±¾ÇÄ¡¸¦ ´õ ÀÌ»ó ¿Ã¸± ¼ö ¾ø½À´Ï´Ù.";
+"A rangpontok nem növelhetõk tovább.";
+
+"¼±ÅÃ ¸Ê Á¤º¸ ¼ºÁö %d Åë·Î %d %d %d";
+"Válaszd a Szent föld térkép információit %d átjáró %d %d %d";
+
+"¼ºº°ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem használhatod ezt a tárgyat, mert a nemed nem megfelelõ hozzá.";
+
+"¼ºº°ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"A tárgyat csak a másik nem képviselõje tudja kinyitni.";
+
+"¼º¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖ´Â ±â´ÉÀÔ´Ï´Ù.";
+"Ez a funkció csak a kastélyban használható.";
+
+"¼ºÁö¿¡¼­ ºÎÈ° ±âÈ¸¸¦ ¸ğµÎ ÀÒ¾ú½À´Ï´Ù! ¸¶À»·Î ÀÌµ¿ÇÕ´Ï´Ù!";
+"Lejárt a várakozási idõ. A városban leszel újraindítva.";
+
+"¼ºÁöÀÇ ¸¶¿Õ: ³ÊÈñ";
+"A megszentelt hely ördöge: [ENTER][ENTER]";
+
+"¼¼±İÀÌ %d %·Î ¼³Á¤µÇ¾ú½À´Ï´Ù";
+"Az adó %d %%-ra van meghatározva.";
+
+"¼Ë´Ù¿îÀÌ %dÃÊ ³²¾Ò½À´Ï´Ù.";
+"%d másodperc a kilépésig.";
+
+"¼ÒÀ¯ µ·ÀÌ 20¾ï³ÉÀ» ³Ñ¾î °Å·¡¸¦ ÇÛ¼ö°¡ ¾ø½À´Ï´Ù.";
+"Több, mint 2 milliárd Yang van nálad. Nem kereskedhetsz.";
+
+"¼ÒÁö±İÀÌ ºÎÁ·ÇÏ¿© ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nincs nálad elég Yang, hogy ezt a tárgyat használd.";
+
+"¼ÒÁöÇ°¿¡ ºó °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"Nincs elég hely a leltárban.";
+
+"¼ÒÁöÇÏ°í ÀÖ´Â ¾ÆÀÌÅÛÀÌ ³Ê¹« ¸¹½À´Ï´Ù.";
+"Túl sok tárgyat tartasz magadnál.";
+
+"¼ÒÄÏ Ãß°¡¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Nem lett foglalat hozzáadva.";
+
+"¼ÒÄÏÀÌ ¼º°øÀûÀ¸·Î Ãß°¡µÇ¾ú½À´Ï´Ù.";
+"A foglalat sikeresen hozzá lett adva.";
+
+"¼ÒÈ¯ÇÒ¼ö ¾ø´Â ¸ó½ºÅÍ ÀÔ´Ï´Ù. ¼ÒÈ¯°¡´ÉÇÑ ¸ó½ºÅÍ´Â È¨ÆäÀÌÁö¸¦ ÂüÁ¶ÇÏ¼¼¿ä";
+"A szörny nem hívható, ellenõrizd a Mob-számot.";
+
+"¼Ó¼º Ãß°¡¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"A javítás sikeresen hozzáadódott.";
+
+"¼Ó¼º Ãß°¡¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Nincs hozzáadott fejlesztés.";
+
+"¼Ó¼ºÀ» ¹Ù²ÛÁö %dºĞ ÀÌ³»¿¡´Â ´Ù½Ã º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.(%d ºĞ ³²À½)";
+"Ezt csak %d perccel a javítás után teheted. (%d perc van hátra)";
+
+"¼Ó¼ºÀ» º¯°æÇÏ¿´½À´Ï´Ù.";
+"Megváltoztattad a javítást.";
+
+"¼Ó¼ºÀ» º¯°æÇÒ ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"A tárgy javítását nem tudod megváltoztatni.";
+
+"¼ö¶ó°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% ellenállás Sura támadással szemben";
+
+"¼ö¶ó¿¡°Ô °­ÇÔ +%d%%";
+"Surák elleni erõ + %d%%";
+
+"¼ö·ÃÀÌ ½ÇÆĞ·Î ³¡³µ½À´Ï´Ù. ´Ù½Ã µµÀüÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.";
+"A tréning nem sikerült. Próbáld újra késõbb!";
+
+"¼ö·ÃÇÒ ¼ö ¾ø´Â ½ºÅ³ÀÔ´Ï´Ù.";
+"Nem fejlesztheted ezt a képességet.";
+
+"½ºÅ³ µ¥¹ÌÁö %d%%";
+"Képesség romlás %d%%";
+
+"½ºÅ³ µ¥¹ÌÁö ÀúÇ× %d%%";
+"Ellenállás képességromlás ellen %d%%";
+
+"½ºÅ³ ·¹º§À» ³»¸®´Âµ¥ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Csökkentetted készséged szintjét.";
+
+"½ºÅ³ ·¹º§À» ³»¸± ¼ö ¾ø½À´Ï´Ù.";
+"Nem tudod csökkenteni készséged szintjét.";
+
+"½ºÅÏ +%d";
+"Csillag +%d";
+
+"½½·Î¿ì +%d";
+"Sebesség csökkenés +%d";
+
+"½Â¸¶ ¼ö·Ã¼­ ÀÌÇØ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Nem értetted a lovaglási leírást.";
+
+"½Â¸¶ ¼ö·Ã¼­¸¦ ÀĞ¾î ½Â¸¶ ½ºÅ³ Æ÷ÀÎÆ®¸¦ ¾ò¾ú½À´Ï´Ù.";
+"Elolvastad a Lovaglás könyvét, és szereztél egy lovagló pontot.";
+
+"½ÃÃ¼·ù Å¸°İÄ¡ +%d%%";
+"Élõholtak elleni támadás növelése + %d%%";
+
+"½Å¼ö±¹";
+"Shinsoo birodalom";
+
+"¾²·¯Áø »óÅÂ¿¡¼­´Â ¸»¿¡ Å» ¼ö ¾ø½À´Ï´Ù.";
+"Nem tudsz felszállni a lóra amíg a földön fekszel.";
+
+"¾²·¯Áø »óÅÂ¿¡¼­´Â ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem teheted meg, amíg a földön fekszel.";
+
+"¾Æ´Ï ¾î¶»°Ô µÈ °Ô Á¾ÀÏ ÀĞ¾îµµ ¸Ó¸®¿¡ ¾È µé¾î¿À³Ä.";
+"Mindig ugyanazokat a sorokat olvasom.";
+
+"¾Æ¹«°Íµµ ¾òÀ» ¼ö ¾ø¾ú½À´Ï´Ù.";
+"Nem kaptál semmit.";
+
+"¾ÆÀÌÅÛ °³·®ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Kereskedés után nem használhatod a tekercset %d másodpercig.";
+
+"¾ÆÀÌÅÛ µå·Ó·ü  %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"A tárgy eldobás hányada a pillanatban plusz %d%%";
+
+"¾ÆÀÌÅÛ µå·ÓÀ² %.1f¹è";
+"Esély egy tárgy találására %. 1f";
+
+"¾ÆÀÌÅÛ ·ê·¿ ½ÃÀÛ.";
+"Rulett indítása.";
+
+"¾ÆÀÌÅÛ Àü´Ş: %s ´Ô¿¡°Ô %s";
+"Tárgy kereskedés: %s, %s";
+
+"¾ÆÀÌÅÛ È¹µæ: %s";
+"%s kapott";
+
+"¾ÆÀÌÅÛ È¹µæ: %s ´ÔÀ¸·ÎºÎÅÍ %s";
+"%s ezt kapta: %s.";
+
+"¾ÆÀÌÅÛ·Î±×°¡ syslog ¿¡ ³²¾Ò½À´Ï´Ù";
+"A tárgylog a syslogba lett helyezve.";
+
+"¾ÆÀÌÅÛÀ» °Ç³×ÁÙ ¼ö ¾ø½À´Ï´Ù.";
+"Nem adhatod át ezt a tárgyat.";
+
+"¾ÆÀÌÅÛÀÇ ·¹º§ Á¦ÇÑº¸´Ù ·¹º§ÀÌ ³·½À´Ï´Ù.";
+"Túl alacsony szinten vagy, hogy használd ezt a tárgyat.";
+
+"¾ÆÀÌÅÛÀÌ ³ª¿Ã È®·ü";
+"Tárgy leejtési gyakoriságának aránya";
+
+"¾ÆÁ÷ °ñµå¸¦ ¹ö¸± ¼ö ¾ø½À´Ï´Ù.";
+"Még nem tudod eldobni az aranyat.";
+
+"¾ÆÁ÷ ¸¶À»¿¡¼­ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù. (%d ÃÊ ³²À½)";
+"Még nem tudsz újraindulni a városban. Várj további %d másodpercet.";
+
+"¾ÆÁ÷ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Még nem használható.";
+
+"¾ÆÁ÷ ½Â¸¶ ½ºÅ³À» ¼ö·ÃÇÒ ¼ö ÀÖ´Â ·¹º§ÀÌ ¾Æ´Õ´Ï´Ù.";
+"Legalább 50-es szintûnek kell lenned a lovas kiképzéshez.";
+
+"¾ÆÁ÷ ÀÌ ¸Ó¸®¸¦ »ç¿ëÇÒ ¼ö ¾ø´Â ·¹º§ÀÔ´Ï´Ù.";
+"Túl alacsony szinten vagy egy ilyen frizura viseléséhez.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù. (%dÃÊ ³²À½)";
+"Még nem lehet újraindítani. Kérünk, várj további %d másodpercet.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù.(%dÃÊ ³²À½ )";
+"Pillanatnyilag nem lehet újrakezdeni. Kérünk, várj %d másodpercet.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù.(%dÃÊ ³²À½)";
+"Még nem lehet újraindítani. Kérünk, várj további %d másodpercet.";
+
+"¾Ç¸¶·ù Å¸°İÄ¡ +%d%%";
+"Ördög elleni támadás növelése + %d%%";
+
+"¾È³çÇÏ¼¼¿ä. ¸ŞÆ¾2 ÀÔ´Ï´Ù.";
+"Üdvözlünk a Metin2-ben!";
+
+"¾×¼ö°¡ 20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© °Å·¡¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù..";
+"Több mint 2 milliárd Yangod van. Nem tudsz kereskedni.";
+
+"¾ç¼Õ°Ë ¹æ¾î %d%%";
+"Kétkezes kard védelem %d%%";
+
+"¾î´ÀÁ¤µµ ÀÌ ±â¼ú¿¡ ´ëÇØ ÀÌÇØ°¡ µÇ¾úÁö¸¸ Á¶±İ ºÎÁ·ÇÑµí ÇÑµ¥..";
+"Elõrébb jutottam, de még mindig nem értettem meg mindent.";
+
+"¾îºÎ¸¦ ÅëÇØ ´ÙÀ½ ·¹º§ÀÇ ³¬½Ã´ë·Î ¾÷±×·¹ÀÌµå ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Menj a halászhoz, és fejleszd a horgászbotod!";
+
+"¾òÀº Æ÷ÀÎÆ®·Î´Â ½Â¸¶ ½ºÅ³ÀÇ ·¹º§À» ¿Ã¸± ¼ö ÀÖ½À´Ï´Ù.";
+"Ezt a pontot a lovaglási képességed növelésére használhatod.";
+
+"¾ó¸¶ ¾È ³²¾Ò¾î! Á¶±İ¸¸ ´õ!";
+"Majdnem sikerült. Még egy picit!";
+
+"¿©ÀÚ¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Ezt csak nõk tehetik.";
+
+"¿¬°è±â´Â ´õÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem tudsz további kombót kiképezni.";
+
+"¿­¼è°¡ ¸ÂÁö ¾Ê´Â °Í °°´Ù.";
+"Úgy tûnik, ez a kulcs nem a megfelelõ.";
+
+"¿­¼è´Â ¸ÂÀ¸³ª ¾ÆÀÌÅÛ ÁÖ´Â ºÎºĞ ±¸ÇöÀÌ ¾ÈµÇ¾ú½À´Ï´Ù.";
+"Ez a helyes kulcs.";
+
+"¿­¼è·Î ¿©´Â ¹°°ÇÀÌ ¾Æ´Ñ°Í °°´Ù.";
+"Ez a tárgy nem nyitható kulccsal.";
+
+"¿­¼è·Î Àá°Ü ÀÖ¾î¼­ ¿­¸®Áö ¾Ê´Â°Í °°´Ù. ¿­¼è¸¦ ±¸ÇØº¸ÀÚ.";
+"Zárva. Meg kell keresned a kulcsot.";
+
+"¿­½ÉÈ÷ ÇÏ´Â ¹è¿òÀ» °¡Áö´Â °Í¸¸ÀÌ ±â¼úÀ» ¹è¿ï¼ö ÀÖ´Â À¯ÀÏÇÑ ±æÀÌ´Ù..";
+"Értem ezt a fejezetet, de keményen kell dolgoznom.";
+
+"¿­Á¤ÀÇ °¡¸éÀ» Âø¿ë½Ã¿¡¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Akkor teheted meg, ha érzelem maszkot viselsz.";
+
+"¿µ¼® °¨Áö±â°¡ ½Åºñ·Î¿î ºûÀ» ³»¸ç »ç¶óÁı´Ï´Ù.";
+"A Metinkõ iránytû egy titokzatos fénnyel eltûnt.";
+
+"¿µ¼® °¨Áö±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"A Metinkõ iránytû eltûnt.";
+
+"¿¹º¹À» ÀÔÀº »óÅÂ¿¡¼­ ¸»À» Å» ¼ö ¾ø½À´Ï´Ù.";
+"Nem tudsz lovagolni, amíg menyasszonyi ruhát, vagy szmokingot viselsz.";
+
+"¿ÜÄ¡±â´Â ·¹º§ %d ÀÌ»ó¸¸ »ç¿ë °¡´É ÇÕ´Ï´Ù.";
+"Legalább %d szintûnek kell lenned, hogy hívni tudj.";
+
+"¿ÜÄ¡±â´Â À¯·áÈ¸¿ø¸¸ »ç¿ëÇÒ¼ö ÀÖ½À´Ï´Ù";
+"Magasabb szintûnek kell lenned, hogy hívni tudj.";
+
+"¿ë½ÅÀÇ °¡È£·Î °æÇèÄ¡°¡ ¶³¾îÁöÁö ¾Ê¾Ò½À´Ï´Ù.";
+"A Sárkányisten áldása miatt nem vesztettél tapasztalatot.";
+
+"¿ë½ÅÀÇ º¸È£·Î ¾ÆÀÌÅÛÀÌ ¶³¾îÁöÁö ¾Ê¾Ò½À´Ï´Ù.";
+"A sárkány isten védelme által nem dobtál el egy tárgyat sem.";
+
+"¿ë½É ÃßÃâ¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"A Sárkánykõ fennmaradó idõtartama ki lett nyerve.";
+
+"¿ë½É ÃßÃâ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Sikertelen a fennmaradó élettartam meghosszabbítása.";
+
+"¿ëÈ¥¼® »óÀÚ°¡ È°¼ºÈ­µÇÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Nincs aktiválva a Sárkánykõ.";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"A Sárkánykõ el lett távolítva.";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ½ÇÆĞÇÏ¿© %s¸¦ ¾ò¾ú½À´Ï´Ù.";
+"Nem sikerült a Sárkánykõ eltávolítása, de ezt kaptad: %s";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Nem sikerült a Sárkánykõ eltávolítása.";
+
+"¿î¿µÀÚ Á¦Á¦·Î Ã¤ÆÃÀÌ ±İÁö µÇ¾ú½À´Ï´Ù.";
+"A chated ideiglenesen tiltásra került spamelés miatt.";
+
+"¿õ±ÍÁ· Å¸°İÄ¡ +%d%%";
+"Támadó erõsítés Wonggui-val szemben +%d%%";
+
+"¿ø·¡ À§Ä¡·Î º¹±Í";
+"Az eredeti helyszínre leszel visszatéve.";
+
+"¿ùº´ ¶Ç´Â Á¾ÀÚ ¸¦ »ç¿ëÇÏ¿´½À´Ï´Ù";
+"Használt hold süti vagy mag.";
+
+"¿ùº´,Á¾ÀÚ »ç¿ëÈÄ 5ÃÊµ¿¾È »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Csak 5 másodpercenként használhatsz Hold sütit.";
+
+"À¯·áÈ­ ¾ÆÀÌÅÛÀº °³ÀÎ»óÁ¡¿¡¼­ ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem adhatsz el magán boltban Tárgy bolt terméket.";
+
+"À»";
+"a";
+
+"À»µÎÁö¸¦ ÅëÇÏ¿© ÀÔÀå °¡´ÉÇÕ´Ï´Ù.";
+"Uriel engedélyével a belépés megengedett.";
+
+"ÀÌ °³·®¼­·Î °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem javíthatsz tárgyakat ezzel a tekerccsel.";
+
+"ÀÌ °³·®¼­·Î ´õ ÀÌ»ó °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"A Harci tekercs nem mûködik +4 vagy afeletti tárgyaknál.";
+
+"ÀÌ °÷¿¡¼­ ¿µ¼® °¨Áö±â°¡ µ¿ÀÛÇÏÁö ¾Ê´Â°Í °°½À´Ï´Ù.";
+"A Metinkõ iránytû nem mûködik a kazamatákban.";
+
+"ÀÌ °÷¿¡¼± ÀÌº¥Æ®¿ë °¨Áö±â°¡ µ¿ÀÛÇÏÁö ¾Ê´Â°Í °°½À´Ï´Ù.";
+"Az esemény érzékelõt nem lehet innen irányítani.";
+
+"ÀÌ ¸ŞÆ¾¼®Àº ¹«±â¿¡ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ezt a szellemkövet nem szerelheted fel fegyverre.";
+
+"ÀÌ ¸ŞÆ¾¼®Àº Àåºñ¿¡ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ez a szellemkõ nem erõsíthetõ fel erre a fajta tárgyra.";
+
+"ÀÌ ½ºÅ³Àº ¾ÆÁ÷ ±×·£µå ¸¶½ºÅÍ ¼ö·ÃÀ» ÇÒ °æÁö¿¡ ÀÌ¸£Áö ¾Ê¾Ò½À´Ï´Ù.";
+"Készséged nem elég nagy ahhoz, hogy nagymesterré válj.";
+
+"ÀÌ ½ºÅ³Àº ¾ÆÁ÷ Ã¥À¸·Î ¼ö·ÃÇÒ °æÁö¿¡ ÀÌ¸£Áö ¾Ê¾Ò½À´Ï´Ù.";
+"Nem elég jó ez a képességed, hogy könyv segítségével fejleszd.";
+
+"ÀÌ ½ºÅ³Àº Ã¥À¸·Î ´õÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem fejlesztheted többé ezt a képességedet könyv segítségével.";
+
+"ÀÌ ¾ÆÀÌÅÛÀ¸·Î ¼ÒÄÏÀ» Ãß°¡ÇÒ ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Ehhez a tárgyhoz nem adhatsz foglalatot.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº PC¹æ¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Ezt a tárgyat csak egy internet kávézóban lehet használni.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ez a tárgy nem javítható.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº º§Æ® ÀÎº¥Åä¸®·Î ¿Å±æ ¼ö ¾ø½À´Ï´Ù.";
+"Nem tudod beletenni ezt a tárgyat az öv-leltáradba.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº ÀÌ ¹æ½ÄÀ¸·Î´Â °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ez a tárgy ilyen módon nem javítható.";
+
+"ÀÌ ¾ÆÀÌÅÛÀ» ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ezeket a tárgyakat nem lehet együtt használni.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó º¸¼®À» ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ehhez a tárgyhoz nem adható több drágakõ.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó ¼ÒÄÏÀ» Ãß°¡ÇÒ °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"Ehhez a tárgyhoz nem lehet több foglalatot adni.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó ÀåÂøÇÒ ¼ÒÄÏÀÌ ¾ø½À´Ï´Ù.";
+"Ebben a tartozékban nincs foglalat drágakövek számára.";
+
+"ÀÌ Ã¥À¸·Î´Â ´õ ÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ezzel a könyvvel nem tudsz tovább gyakorolni.";
+
+"ÀÌ Ã¥Àº ³Ê¹« ¾î·Á¿ö ÀÌÇØÇÏ±â°¡ Èûµì´Ï´Ù.";
+"Ezt a könyvet nehéz megérteni.";
+
+"ÀÌ Ã¥Àº ³Ê¹« ¾î·Á¿ö¼­ ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Túl nehéz a könyv a tanuláshoz.";
+
+"ÀÌ Ã¥Àº ¾Æ¹«¸® ºÁµµ µµ¿òÀÌ µÉ °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Ez a könyv nem segít neked tovább.";
+
+"ÀÌ Ã¥À» ÀĞÀ¸·Á¸é ·¹º§À» ´õ ¿Ã·Á¾ß ÇÕ´Ï´Ù.";
+"Meg kell növelni szintedet, hogy el tudd olvasni ezt a könyvet.";
+
+"ÀÌ Çàµ¿Àº »óÈ£µ¿ÀÇ ÇÏ¿¡ °¡´É ÇÕ´Ï´Ù.";
+"Ehhez az akcióhoz szükséged van játékostársad beleegyezésére.";
+
+"ÀÌµ¿ µÇ¾îÁú À§Ä¡¿Í ³Ê¹« °¡±î¿ö ±ÍÈ¯ºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Nem használhatod a Visszaszállító tekercset, mivel túl kicsi a távolság.";
+
+"ÀÌµ¿¼Óµµ %d";
+"Mozgási sebesség %d";
+
+"ÀÌµ¿ÇÒ ÁØºñ°¡ µÇ¾îÀÖÀ½À¸·Î ±ÍÈ¯ºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù";
+"Készen állsz a teleportra, ezért nem tudod használni a Visszaszállító tekercset.";
+
+"ÀÌ·¡¼­¾ß °øºÎ°¡ ¾ÈµÈ´Ù±¸.";
+"Nehéz koncentrálnom. Szünetet kellene tartanom.";
+
+"ÀÌ¹Ì °°Àº Á¾·ùÀÇ ¿ëÈ¥¼®À» Âø¿ëÇÏ°í ÀÖ½À´Ï´Ù.";
+"Már használsz egy ilyen típusú Sárkánykövet.";
+
+"ÀÌ¹Ì ²ÈÇôÀÖ´ø ¹Ì³¢¸¦ »©°í %s¸¦ ³¢¿ó´Ï´Ù.";
+"Kicseréled a jelenlegi csalit. Az új csali: %s.";
+
+"ÀÌ¹Ì µĞ°©ÁßÀÎ »óÅÂÀÔ´Ï´Ù.";
+"Már át vagy változva.";
+
+"ÀÌ¹Ì ¼±ÀüÆ÷°í ÁßÀÎ ±æµåÀÔ´Ï´Ù.";
+"Háborút hirdettél e céh ellen.";
+
+"ÀÌ¹Ì ¿Ïº®ÇÏ°Ô ¾Ë¾ÆµéÀ» ¼ö ÀÖ´Â ¾ğ¾îÀÌ´Ù.";
+"Már megérted ezt a nyelvet.";
+
+"ÀÌ¹Ì ÀÔÈÄº¸µÇ¾îÀÖ½À´Ï´Ù";
+"Már van egy jelölés.";
+
+"ÀÌ¹Ì Àåºñ¸¦ Âø¿ëÇÏ°í ÀÖ½À´Ï´Ù.";
+"Már van felszerelve ilyen fajta Sárkánykõ.";
+
+"ÀÌ¹Ì ÀüÀïÀÌ ³¡³µ½À´Ï´Ù.";
+"A háborúnak már vége.";
+
+"ÀÌ¹Ì Á¦Á¶Ã¢ÀÌ ¿­·ÁÀÖ½À´Ï´Ù.";
+"A gyártó ablak már nyitva van.";
+
+"ÀÌ¹Ì Å»°ÍÀ» ÀÌ¿ëÁßÀÔ´Ï´Ù.";
+"Épp lovagolsz. Elõbb szállj le a hátasról.";
+
+"ÀÌ¹Ì ÆÄÆ¼¿¡ ¼ÓÇØ ÀÖÀ¸¹Ç·Î °¡ÀÔ½ÅÃ»À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem fogadhatod el a meghívást, mivel már a csoportban vagy.";
+
+"ÀÌ¹Ì È¿°ú°¡ °É·Á ÀÖ½À´Ï´Ù.";
+"Ez a hatás már aktív.";
+
+"ÀÌ¹ÌÅõÇ¥¸¦ ÇßÀ½";
+"Már szavazott.";
+
+"ÀÌ¹ø¿¡ ÀâÀº ¹°°í±âÀÇ ±æÀÌ´Â %.2fcm";
+"A kifogott hal hossza %.2cm.";
+
+"ÀÌº¥Æ®¿ë °¨Áö±â°¡ ½Åºñ·Î¿î ºûÀ» ³»¸ç »ç¶óÁı´Ï´Ù.";
+"Az esemény érzékelõ a misztikus fénnyel eltûnt.";
+
+"ÀÌº¥Æ®¿ë °¨Áö±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"Eltûnt az esemény érzékelõ.";
+
+"ÀÌ¼º°£¿¡¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Ezt az akciót csak egy másik nemûvel együtt hajthatod végre.";
+
+"ÀÌÁ¦ Á» ½½½½ °¡´ÚÀÌ ÀâÈ÷´Â °Í °°Àºµ¥.";
+"Már értem!";
+
+"ÀÌÁ¦ Ã¥ÀÇ ¸¶Áö¸· ÀåÀÌ¾ß! ¼ö·ÃÀÇ ³¡ÀÌ ´«¿¡ º¸ÀÌ°í ÀÖ¾î!";
+"A könyv utolsó oldalán járok. Mindjárt vége a tréningnek!";
+
+"ÀÎ°£·ù ¸ó½ºÅÍ Å¸°İÄ¡ +%d%%";
+"A játékos szörnyekkel szembeni támadóereje +%d%%";
+
+"ÀÎº¥Åä¸®°¡ ²Ë Â÷¼­ ³»¸± ¼ö ¾ø½À´Ï´Ù.";
+"Megtelt a leltárad. Nem lehet több tárgyat felvenni.";
+
+"ÀÎÁõ¹øÈ£°¡ Æ²·È½À´Ï´Ù. ´Ù½Ã ½ÃµµÇÏ¼¼¿ä.";
+"A visszaigazolásszámod hibás. Próbáld meg újra!";
+
+"ÀÔ·ÂÇÏ½Å ÀÌ¸§À» °¡Áø »ç¿ëÀÚ°¡ ¾ø½À´Ï´Ù.";
+"Nincs játékos az általad megadott névvel.";
+
+"ÀÚ°´°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% ellenállás nindzsa támadással szemben";
+
+"ÀÚ°´¿¡°Ô °­ÇÔ +%d%%";
+"Nindzsák elleni erõ + %d%%";
+
+"ÀÚµ¿À¸·Î ³ª°¡°ÔµË´Ï´Ù.";
+"Automatikusan kilép.";
+
+"ÀÚ½ÅÀ» ¼±ÅÃÇÏ½Ã¸é ¹ÛÀ¸·Î ³ª°¥ ¼ö ÀÖ´Â <°ü¶÷ Á¾·á> ¹öÆ°ÀÌ ³ª¿É´Ï´Ù.";
+"A karakter kiválasztásánál megjelenik egy ikon.";
+
+"ÀÚ½ÅÀ» ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem toborozhatod be saját magad.";
+
+"ÀÚÀç°¡ ºÎÁ·ÇÏ¿© °Ç¼³ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nincs elég építõanyagod az építkezéshez.";
+
+"Àß¸øµÈ µĞ°© ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Nem megfelelõ átváltoztató tárgy.";
+
+"Àß¸øµÈ ¼±ÅÃÀ» Çß½À´Ï´Ù";
+"A kiválasztás hibás.";
+
+"Àá½Ã ÈÄ OX ÀÌº¥Æ®¸¦ ´Ù½Ã ½ÃÀÛÇÏ°Ú½À´Ï´Ù.";
+"Hamarosan újraindul az OX Esemény.";
+
+"Àá½Ã ÈÄ ¸¶À»·Î ÀÌµ¿µÇ°Ú½À´Ï´Ù.";
+"A játékos rövidesen teleportálodik a városba.";
+
+"Àá½ÃÈÄ ¸ğµÎ ¸¶À»·Î ÀÌµ¿µË´Ï´Ù.";
+"Minden ember a városba lesz teleportálva hamarosan.";
+
+"Àá½ÃÈÄ ÇØ´ç ¸¶À»Àº  ¸¶À»·Î ÀÌµ¿µË´Ï´Ù.";
+"Hamarosan mindenki a városba teleportálódik.";
+
+"ÀåºñÁßÀÎ ¾ÆÀÌÅÛÀº °³ÀÎ»óÁ¡¿¡¼­ ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Felszerelt tárgyakat nem adhatsz el a magánboltodban.";
+
+"ÀåÂø¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Sikeres felszerelés.";
+
+"ÀåÂø¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Felszerelés nem sikerült.";
+
+"Àç·á(%s)°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"Nincs elég anyagod (%s).";
+
+"ÀúÁÖ µÇµ¹¸®±â È®·ü %d%%";
+"Átok visszaverés: %d%%";
+
+"Àû¿ë ·¹º§º¸´Ù ³ô¾Æ »ç¿ëÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.";
+"A tárgyad szintje túl magas.";
+
+"ÀûÇÕÇÏÁö ¾ÊÀº ±æµå ÀÌ¸§ ÀÔ´Ï´Ù.";
+"A céh neve érvénytelen.";
+
+"Àü±â ÀúÇ× %d%%";
+"Villám ellenállás %d%%";
+
+"ÀüÀï ¼­¹ö°¡ ¿­·ÁÀÖÁö ¾Ê¾Æ ±æµåÀüÀ» ½ÃÀÛÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"A céhháború nem kezdhetõ, mert a szerver nem online.";
+
+"ÀüÁ¦±¹";
+"Összes királyság";
+
+"ÀüÅõ°¡ ½ÃÀÛ µÇ¾î Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"Cselekvés visszavonva. Beléptél a harcba.";
+
+"Á¤´äÀº";
+"A helyes válasz:";
+
+"Á¤´äÀÔ´Ï´Ù!";
+"Helyes!";
+
+"Á¤»óÀûÀ¸·Î ÅõÇ¥¸¦ÇÏ¿´½À´Ï´Ù.";
+"Szabályszerûen szavazott.";
+
+"Á¤½Å·Â È¸º¹ +%d";
+"Mana visszanyerés +%d";
+
+"Á¦Á¶ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù";
+"Nincs megfelelõ anyagod.";
+
+"Á¦Á¶¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Tárgyad fejlesztése sikertelen volt.";
+
+"Á¦Á¶Ã¢ÀÌ ¿­·ÁÀÖÁö ¾Ê½À´Ï´Ù";
+"Nincs nyitva az elõállítási ablak.";
+
+"Á¶°³°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"A kagyló eltûnt.";
+
+"Á¶°³¿¡¼­ µ¹Á¶°¢ÀÌ ³ª¿Ô½À´Ï´Ù.";
+"Egy egyszerû kõdarabot találsz a kagylóban.";
+
+"Á¶°³¿¡¼­ ¹éÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"A kagylóban egy fehér gyöngy van.";
+
+"Á¶°³¿¡¼­ Ã»ÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"A kagylóban egy kék gyöngy van.";
+
+"Á¶°³¿¡¼­ ÇÇÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"A kagylóban egy Vérvörös Gyöngy van.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â °Ç¹°ÀÔ´Ï´Ù.";
+"Nem létezik az épület.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â ¾ÆÀÌÅÛ ÀÔ´Ï´Ù";
+"Nincs ilyen eszköz.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â Ä³¸¯ÅÍ ÀÔ´Ï´Ù.";
+"Nem létezik a karakter.";
+
+"ÁÁ¾Æ, ÀÌ ±â¼¼·Î °è¼Ó ³ª°£´Ù!";
+"Ok, tovább kell koncentrálnom!";
+
+"ÁÁ¾Ò¾î! Á¶±İ¸¸ ´õ ÀĞÀ¸¸é ³¡ÀÌ´Ù!";
+"Értem! Majdnem átolvastam!";
+
+"ÁÖ¾È¼ú¼­¸¦ ÅëÇØ ÁÖÈ­ÀÔ¸¶¿¡¼­ ºüÁ®³ª¿Ô½À´Ï´Ù.";
+"Megúsztad a gonosz lélek átkot az ördögûzõ tekercs segítségével.";
+
+"Á×Àº ¸»¿¡°Ô »ç·á¸¦ ¸ÔÀÏ ¼ö ¾ø½À´Ï´Ù.";
+"Halott lovat nem etethetsz.";
+
+"Á×Àº Á¤º¸ %s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d";
+"%s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d";
+
+"Á×Áö ¾ÊÀº ¸»¿¡°Ô ¼±ÃÊ¸¦ ¸ÔÀÏ ¼ö ¾ø½À´Ï´Ù.";
+"Eleven lovakat nem etethetsz majom növénnyel. Ez halott lovak feltámasztására való.";
+
+"Áö±İºÎÅÍ %sÀº 30ºĞ°£ ºÀÈ­¸¦ ÆÄ±«ÇÏ¿© º¸»óÀ» È¹µæ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Mostantól 30 percen át kaphat %s jutalmat a máglya szétrombolásáért.";
+
+"Áö´É +%d";
+"Intelligencia +%d";
+
+"Áö´ÉÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem elegendõ az intelligenciád ezen tárgy felszereléséhez.";
+
+"Á÷Á¢ Å¸°İÄ¡ ¹İ»ç È®·ü : %d%%";
+"Közvetlen támadás visszaverése: %d%%";
+
+"Áø³ë±¹";
+"Jinno-birodalom";
+
+"Âø¿ë ÁßÀÎ ¾ÆÀÌÅÛÀº ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem adhatsz el felszelt tárgyakat.";
+
+"Âø¿ë ÁßÀÎ ¿ëÈ¥¼®Àº ÃßÃâÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem távolítható el a Sárkánykõ.";
+
+"Âü";
+"TRUE";
+
+"Ã¢°í,°Å·¡Ã¢µîÀÌ ¿­¸° »óÅÂ¿¡¼­´Â °³·®À» ÇÒ¼ö°¡ ¾ø½À´Ï´Ù";
+"Nem tudsz fejleszteni, amíg egy másik ablak nyitva van.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"%d másodperc múlva tudsz ismét kereskedni.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"A raktár megnyitása után %d másodpercig nem használhatod a Visszaszállító tekercset.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â ´Ù¸¥°÷À¸·Î ÀÌµ¿ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"A raktár megnyitása után %d másodpercig nem mehetsz máshova.";
+
+"Ã¤±¤¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Sikeres volt a bányászat.";
+
+"Ã¤±¤¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"A bányászat sikertelen volt.";
+
+"Ã¤±¤À» Áß´ÜÇÏ¿´½À´Ï´Ù.";
+"A bányászat befejezõdött.";
+
+"Ã¤ÆÃ ±İÁö »óÅÂÀÔ´Ï´Ù.";
+"A csetelésed le van tiltva.";
+
+"Ã¤ÆÃ ±İÁö°¡ Ç®·È½À´Ï´Ù.";
+"A cseted tiltása fel lett oldva.";
+
+"Ã¥À¸·Î ´õ ³ôÀº °æÁöÀÇ ¼ö·ÃÀ» ¼º°øÀûÀ¸·Î ³¡³»¼Ì½À´Ï´Ù.";
+"Sikeresen befejezted a tanfolyamot a könyv segítségével.";
+
+"Ã¥Àåµµ ÀÌÁ¦ ¾ó¸¶ ³²Áö ¾Ê¾Ò±º.";
+"Már csak néhány oldal, és elolvastam mindent.";
+
+"ÃµÁ¶±¹";
+"Chunjo-birodalom";
+
+"Ã»¼ÒÇÒ ¼®ÀÌ ¹ÚÇôÀÖÁö ¾Ê½À´Ï´Ù.";
+"Nincs eltávolítani való kõszilánk.";
+
+"Ã¼·Â +%d";
+"Kitartás +%d";
+
+"Ã¼·ÂÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem elegendõ az életerõd ezen tárgy felszereléséhez.";
+
+"ÃÑ ÄûÁî ¼ö: %d";
+"A kvíz összértéke: %d";
+
+"ÃÖ´ë »ı¸í·Â +%d";
+"Életerõ +%d";
+
+"ÃÖ´ë »ı¸í·Â +%d%%";
+"Maximális élet +%d%%";
+
+"ÃÖ´ë Á¤½Å·Â +%d";
+"Mana pontok +%d";
+
+"ÃÖ´ë Á¤½Å·Â +%d%%";
+"Maximális élet +%d%%";
+
+"ÃÖ´ë Áö±¸·Â +%d";
+"Maximális kitartás + %d";
+
+"Ãàº¹ÀÇ ¼­¿Í ÇöÃ¶À» ÇÕÄ¥ ¼ö ÀÖ½À´Ï´Ù.";
+"Egyesíteni tudod az Áldástekercset a Mágikus vasérccel.";
+
+"Ãâ¸¶¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù";
+"Nem lehet rá szavazni.";
+
+"ÃæÀüÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem tudod újratölteni ezt a Sárkánykövet.";
+
+"Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"A kijelentkezés félbeszakadt.";
+
+"Ä³¸¯ÅÍ¸¦ ÀüÈ¯ ÇÕ´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Karaktert cserélsz. Kérlek várj!";
+
+"ÄğÅ¸ÀÓ -%d";
+"Várakozási idõ -%d";
+
+"ÄğÅ¸ÀÓ Àû¿ëÁß  %d ÈÄ »ç¿ë°¡´É";
+"Elõ van készítve. Használható %d után.";
+
+"Äù½ºÆ®¸¦ ·ÎµåÇÏ´Â ÁßÀÔ´Ï´Ù. Àá½Ã¸¸ ±â´Ù·Á ÁÖ½Ê½Ã¿À.";
+"A kérés teljesítése folyamatban. Türelmet kérünk!";
+
+"Å©À¹, ±â°¡ ¿ª·ùÇÏ°í ÀÖ¾î! ÀÌ°Å ¼³¸¶ ÁÖÈ­ÀÔ¸¶ÀÎ°¡!? Á¨Àå!";
+"Ó, nem sikerült! Francba!";
+
+"Å¬¶óÀÌ¾ğÆ® ¹öÀüÀÌ Æ²·Á ·Î±×¾Æ¿ô µË´Ï´Ù. Á¤»óÀûÀ¸·Î ÆĞÄ¡ ÈÄ Á¢¼ÓÇÏ¼¼¿ä.";
+"A kliensverziód hibás. Installáld a rendes patch-et.";
+
+"Å¸°İÄ¡ %d%% ¸¦ »ı¸í·ÂÀ¸·Î Èí¼ö";
+"Energia elnyelõdés %d%% támadásnál.";
+
+"Å¸·ÂÄ¡ %d%% ¸¦ Á¤½Å·ÂÀ¸·Î Èí¼ö";
+"Mana elnyelõdés %d%% támadásnál.";
+
+"Å¸Á¦±¹ À¯Àú´Â ¼ÒÈ¯ ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Nem hívhatsz ismeretlen játékosokat.";
+
+"Å¸Á¦±¹ À¯Àú¿¡°Ô´Â ÀÌµ¿ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Nem transzportálhatsz egy idegen birodalom játékosához.";
+
+"Åº »óÅÂ¿¡¼­´Â ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nem teheted meg, amíg lovon ülsz.";
+
+"Å×½ºÆ® ¼­¹ö ½Ã°£Á¦ÇÑ Åë°ú";
+"Az idõkorlát a test szerveren meg lett haladva.";
+
+"ÆÄÆ¼ ÁßÀÌ ¾Æ´Õ´Ï´Ù.";
+"Nem vagy a csoportban.";
+
+"ÆÄÆ¼ÀÇ Çùµ¿·ÂÀÌ ³ô¾ÆÁ® Áö±İºÎÅÍ Ãß°¡ °æÇèÄ¡ º¸³Ê½º¸¦ ¹Ş½À´Ï´Ù.";
+"A csoportod jól dolgozik együtt, és a csoport vezetõ közelében levõ csoport tagok tapasztalat bónuszt kapnak.";
+
+"ÆÄÆ¼ÀåÀÌ Á¢¼Ó »óÅÂ°¡ ¾Æ´Ï¶ó¼­ ¿äÃ»À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Csoport] Nem intézhetsz kérést, mert a csoportvezetõ nem online.";
+
+"ÆÇ¸Å±İ¾×ÀÇ %d %% °¡ ¼¼±İÀ¸·Î ³ª°¡°ÔµË´Ï´Ù";
+"Az eladás %d%%-kal van megadóztatva.";
+
+"ÆÛÆåÆ® ¸¶½ºÅÍµÈ ½ºÅ³ÀÔ´Ï´Ù. ´õ ÀÌ»ó ¼ö·Ã ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Már mestere vagy ennek a képességnek. Nem fejlesztheted már.";
+
+"ÆòÅ¸ µ¥¹ÌÁö %d%%";
+"Ütés romlás %d%%";
+
+"ÆòÅ¸ µ¥¹ÌÁö ÀúÇ× %d%%";
+"Ellenállás ütéssel szemben %d%%";
+
+"ÇÃ·¹ÀÌ¾î %d ¿Í ÇÃ·¹ÀÌ¾î  %d¸¦ ÆÄÈ¥½ÃÅµ´Ï´Ù..";
+"Felbontott szerzõdés %d játékos és %d játékos között.";
+
+"ÇÑ¼Õ°Ë ¹æ¾î %d%%";
+"Egykezes kard védelem %d%%";
+
+"ÇØ´ç À¯Àú´Â %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"Játékos hozzáadása a %d csatornára. (Jelenlegi castorna %d)";
+
+"ÇÚµåÆù ¹øÈ£°¡ µî·Ï µÇ¾ú½À´Ï´Ù.";
+"A telefonszám regisztrálva van.";
+
+"ÇÚµåÆù ¹øÈ£°¡ µî·ÏµÇ¾î ÀÖÁö ¾Ê½À´Ï´Ù.";
+"A telefonszám nincs regisztrálva.";
+
+"ÇöÀç %s ±¹°í¿¡´Â %d ÀÇ µ·ÀÌ ÀÖ½À´Ï´Ù";
+"%s-nak még %d Yangja van.";
+
+"ÇöÀç %s ±¹°í¿¡´Â %u ÀÇ µ·ÀÌ ÀÖ½À´Ï´Ù";
+"%s-nak még %u Yangja van.";
+
+"ÇöÀç ³²Àº Âü°¡ÀÚ¼ö : %d";
+"A maradék résztvevõk száma: %d";
+
+"ÇöÀç ½ºÄÚ¾î ½Å¼ö±¹:%d ÃµÁ¶±¹:%d Áø³ë±¹:%d";
+"Aktuális pontszám: Shinsoo %d, Chunjo %d, Jinno: %d";
+
+"ÇöÀç ¿Â¶óÀÎ »óÅÂ ÀÔ´Ï´Ù. ±Ó¸»À» ÀÌ¿ëÇÏ¼¼¿ä.";
+"A játékos online. Használd a suttogást.";
+
+"ÇöÀç À§Ä¡¿¡¼­ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Jelenlegi pozíciódból nem tudod kihasználni.";
+
+"ÇöÀç ÀÌº¥Æ® Âü°¡ÀÚ ºĞµéÀº ¸¶À»·Î ÀÌµ¿ µÇ°Ú½À´Ï´Ù.";
+"Az ajándék esemény egy területre van korlátozva.";
+
+"ÇöÀç ÀüÀïÁßÀÎ ±æµå ÀÔ´Ï´Ù";
+"Ez a céh harcban áll.";
+
+"ÇöÀç Çì¾î½ºÅ¸ÀÏ¿¡¼­´Â ¿°»ö°ú Å»»öÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.";
+"Jelenlegi frizurádat nem tudod festeni vagy szõkíteni.";
+
+"È­¿° ÀúÇ× %d%%";
+"Tûz ellenállás %d%%";
+
+"È° °ø°İ È¸ÇÇ È®·ü %d%%";
+"%d%% esély távolsági támadás blokkolására.";
+
+"È°°ø°İ ÀúÇ× %d%%";
+"Táv támadás ellenállás %d%%";
+

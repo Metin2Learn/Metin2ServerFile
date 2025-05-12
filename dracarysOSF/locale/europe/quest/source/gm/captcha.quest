@@ -1,0 +1,8 @@
+quest captcha begin
+	state start begin
+		when 20503.chat."<GM Captcha>" with pc.is_gm() and pc.get_gm_level() == 5 begin
+			setskin(NOWINDOW)
+			cmdchat(string.format("ShowCaptcha %d", 30))
+		end
+	end
+end

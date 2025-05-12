@@ -1,0 +1,1176 @@
+Group	Alpha_Wolf
+{
+	Mob	103
+	Type	drop
+	1	11802	1	0.2 -- Ropaje azul+2
+	2	11602	1	0.2 -- Placas requiem +2
+	3	11402	1	0.2 -- Azure Suit+2
+	4	11202	1	0.2 -- Armadura monje+2
+	5	27005	1	0.2 -- Pocion azul
+	6	27002	1	0.2 -- Pocion roja
+	7	30027	1	0.2 -- Piel de lobo
+}
+Group	Blue_Wolf
+{
+	Mob	104
+	Type	drop
+	1	7010	1	0.2 -- Fan de hierro
+	2	5000	1	0.2 -- Campana de plata
+	3	2010	1	0.2 -- Arco largo
+	4	4000	1	0.2 -- Amija
+	5	3010	1	0.2 -- Lanza
+	6	20		1	0.2 -- Espada larga
+	7	11802	1	0.2 -- Ropaje azul+2
+	8	11602	1	0.2 -- Placas requiem +2
+	9	11402	1	0.2 -- Azure Suit+2
+	10	11202	1	0.2 -- Armadura monje+2
+	11	27005	1	0.2 -- Pocion azul
+	12	27002	1	0.2 -- Pocion roja
+	13	50705	1	0.2 -- lila investigacion biolog
+	14	30029	1	0.2 -- Higado de lobo biolog
+}
+Group	Alpha_Blue_Wolf
+{
+	Mob	105
+	Type	drop
+	1	7020	1	0.2 -- Fan de hierro
+	2	5010	1	0.2 -- Campana de plata
+	3	2020	1	0.2 -- Arco largo
+	4	1010	1	0.2 -- Daga cobra
+	5	3020	1	0.2 -- Lanza
+	6	30		1	0.2 -- Espada creciente
+	7	11810	1	0.2 -- Ropaje azul+2
+	8	11610	1	0.2 -- Placas requiem +2
+	9	11410	1	0.2 -- Azure Suit+2
+	10	11210	1	0.2 -- Armadura monje+2
+	11	15020	1	0.2 -- zapatos bambu
+	12	27005	1	0.2 -- Pocion azul
+	13	27002	1	0.2 -- Pocion roja
+}
+Group	Grey_Wolf
+{
+	Mob	106
+	Type	drop
+	1	7030	1	0.2 -- Fan grulla
+	2	5020	1	0.2 -- Campana dorada
+	3	2030	1	0.2 -- Arco de batalla
+	4	4010	1	0.2 -- Nueve hojas
+	5	3030	1	0.2 -- Lanza araña
+	6	40		1	0.2 -- Espada bambu
+	7	11810	1	0.2 -- Ropaje azul+2
+	8	11610	1	0.2 -- Placas requiem +2
+	9	11410	1	0.2 -- Azure Suit+2
+	10	11210	1	0.2 -- Armadura monje+2
+	11	16022	1	0.2 -- Copper Necklace+2
+	12	27005	1	0.2 -- Pocion azul
+	13	27002	1	0.2 -- Pocion roja
+	14	30028	1	0.2 -- Garra de lobo
+	15	30070	1	0.2 -- Piel de lobo+
+}
+Group	Alpha_Grey_Wolf
+{
+	Mob	107
+	Type	drop
+	1	11821	1	0.2 -- Ropaje rosa
+	2	11621	1	0.2 -- Armadura desgracia
+	3	11421	1	0.2 -- Traje carmesi
+	4	11221	1	0.2 -- Armadura de tigre
+	5	27005	1	0.2 -- Pocion azul
+	6	27002	1	0.2 -- Pocion roja
+	7	17020	1	0.2 -- Pendientes de cobre
+}
+Group	Jabali
+{
+	Mob	108
+	Type	drop
+	1	7020	1	0.2 -- Fan de hierro
+	2	5010	1	0.2 -- Campana de plata
+	3	2020	1	0.2 -- Arco largo
+	4	1010	1	0.2 -- Daga cobra
+	5	3020	1	0.2 -- Lanza
+	6	30		1	0.2 -- Espada creciente
+	7	11810	1	0.2 -- Ropaje azul+2
+	8	11610	1	0.2 -- Placas requiem +2
+	9	11410	1	0.2 -- Azure Suit+2
+	10	11210	1	0.2 -- Armadura monje+2
+	11	27005	1	0.2 -- Pocion azul
+	12	27002	1	0.2 -- Pocion roja
+	13	15060	1	0.2 -- zapatos adorno de oro
+	14	30004	1	0.2 -- Diente de jabali
+}
+Group	Jabali_rojo
+{
+	Mob	109
+	Type	drop
+	1	7030	1	0.2 -- Fan grulla
+	2	5020	1	0.2 -- Campana dorada
+	3	2030	1	0.2 -- Arco de batalla
+	4	4010	1	0.2 -- Nueve hojas
+	5	3030	1	0.2 -- Lanza araña
+	6	40		1	0.2 -- Espada bambu
+	7	11810	1	0.2 -- Ropaje azul+2
+	8	11610	1	0.2 -- Placas requiem +2
+	9	11410	1	0.2 -- Azure Suit+2
+	10	11210	1	0.2 -- Armadura monje+2
+	11	30003	1	0.2 -- Nariz
+	12	30004	1	0.2 -- Diente 
+}
+Group	Oso
+{
+	Mob	110
+	Type	drop
+	1	7020	1	0.2 -- Fan de hierro
+	2	5010	1	0.2 -- Campana de plata
+	3	2020	1	0.2 -- Arco largo
+	4	1010	1	0.2 -- Daga cobra
+	5	3020	1	0.2 -- Lanza
+	6	30		1	0.2 -- Espada creciente
+	7	11810	1	0.2 -- Ropaje azul+2
+	8	11610	1	0.2 -- Placas requiem +2
+	9	11410	1	0.2 -- Azure Suit+2
+	10	11210	1	0.2 -- Armadura monje+2
+	11	50007	1	0.2 -- Caja plateada
+	12	17020	1	0.2 -- pendientes cobre
+	13	30010	1	0.2 -- Bilis de oso 
+}
+Group	Oso_pardo
+{
+	Mob	111
+	Type	drop
+	1	7020	1	0.2 -- Fan de hierro
+	2	5010	1	0.2 -- Campana de plata
+	3	2020	1	0.2 -- Arco largo
+	4	1010	1	0.2 -- Daga cobra
+	5	3020	1	0.2 -- Lanza
+	6	30		1	0.2 -- Espada creciente
+	7	50007	1	0.2 -- Caja plateada
+	8	17040	1	0.2 -- Pendientes de plata
+	9	30071	1	0.2 -- Bilis de oso+
+	10	30072	1	0.2 -- piel de pie de oso+
+}
+Group	Oso_negro
+{
+	Mob	112
+	Type	drop
+	1	7030	1	0.2 -- Fan grulla
+	2	5020	1	0.2 -- Campana dorada
+	3	2030	1	0.2 -- Arco de batalla
+	4	4010	1	0.2 -- Nueve hojas
+	5	3030	1	0.2 -- Lanza araña
+	6	40		1	0.2 -- Espada bambu
+	7	11821	1	0.2 -- Ropaje rosa
+	8	11621	1	0.2 -- Armadura desgracia
+	9	11421	1	0.2 -- Traje carmesi
+	10	11221	1	0.2 -- Armadura de tigre
+	11	17040	1	0.2 -- Pendientes de plata
+	12	14060	1	0.2 -- Brazalete de oro
+	13	30053	1	0.2 -- piel de pie de oso
+}
+Group	Tigre
+{
+	Mob	114
+	Type	drop
+	1	7040	1	0.2 -- fan real
+	2	5020	1	0.2 -- campana dorada
+	3	2040	1	0.2 -- Arco de monta
+	4	1020	1	0.2 -- daga tijera
+	5	3040	1	0.2 -- gisame
+	6	50		1	0.2 -- Espada ancha
+	7	17060	1	0.2 -- pendiente de oro
+	8	30038	1	0.2 -- piel de tigre
+	9	30042	1	0.2 -- colmillo tigre
+}
+Group	Tigre
+{
+	Mob	115
+	Type	drop
+	1	7050	1	0.2 -- fan real
+	2	5030	1	0.2 -- campana dorada
+	3	2050	1	0.2 -- Arco de monta
+	4	4020	1	0.2 -- cuchillo corto
+	5	3050	1	0.2 -- guadana de guerra
+	6	60		1	0.2 -- Espada de plata
+	7	16040	1	0.2 -- collar de plata
+	8	30023	1	0.2 -- piel de tigre blaca
+}
+Group	lobo_hambriento
+{
+	Mob	172
+	Type	drop
+	1	7030	1	0.2 -- Fan grulla
+	2	5020	1	0.2 -- Campana dorada
+	3	2030	1	0.2 -- Arco de batalla
+	4	4010	1	0.2 -- Nueve hojas
+	5	3030	1	0.2 -- Lanza araña
+	6	40		1	0.2 -- Espada bambu
+	7	30028	1	0.2 -- garra de lobo
+}
+Group	lobo_alfa_hambriento
+{
+	Mob	173
+	Type	drop
+	1	7030	1	0.2 -- Fan grulla
+	2	5020	1	0.2 -- Campana dorada
+	3	2030	1	0.2 -- Arco de batalla
+	4	4010	1	0.2 -- Nueve hojas
+	5	3030	1	0.2 -- Lanza araña
+	6	40		1	0.2 -- Espada bambu
+	7	50723	1	0.2 -- flor kaki
+	8	17061	1	0.2 -- pendiente de oro
+	9	30069	1	0.2 -- garra lobo+
+}
+Group	lobo_azul_hambriento
+{
+	Mob	174
+	Type	drop
+	1	7020	1	0.2 -- Fan de hierro
+	2	5010	1	0.2 -- Campana de plata
+	3	2020	1	0.2 -- Arco largo
+	4	1010	1	0.2 -- Daga cobra
+	5	3020	1	0.2 -- Lanza
+	6	30		1	0.2 -- Espada creciente
+	7	11802	1	0.2 -- Ropaje azul+2
+	8	11602	1	0.2 -- Placas requiem +2
+	9	11402	1	0.2 -- Azure Suit+2
+	10	11202	1	0.2 -- Armadura monje+2
+	11	27100	2	0.2 -- Pocion verde
+	12	27103	2	0.2 -- Pocion morada
+}
+Group	lobo_AlfaAzul_hambriento
+{
+	Mob	175
+	Type	drop
+	1	7030	1	0.2 -- Fan grulla
+	2	5020	1	0.2 -- Campana dorada
+	3	2030	1	0.2 -- Arco de batalla
+	4	4010	1	0.2 -- Nueve hojas
+	5	3030	1	0.2 -- Lanza araña
+	6	40		1	0.2 -- Espada bambu
+	7	12620	1	0.2 -- Ropaje azul+2
+	8	12480	1	0.2 -- Placas requiem +2
+	9	12340	1	0.2 -- Azure Suit+2
+	10	12200	1	0.2 -- casco tradicional
+	11	27100	2	0.2 -- Pocion verde
+	12	27103	2	0.2 -- Pocion morada
+	13	50721	1	0.2 -- Flor melocoton
+}
+Group	Lobo_gris_hambriento
+{
+	Mob	176
+	Type	drop
+	1	7030	1	0.2 -- Fan grulla
+	2	5020	1	0.2 -- Campana dorada
+	3	2030	1	0.2 -- Arco de batalla
+	4	4010	1	0.2 -- Nueve hojas
+	5	3030	1	0.2 -- Lanza araña
+	6	40		1	0.2 -- Espada bambu
+	7	15040	1	0.2 -- zapatos de madera
+	11	27100	2	0.2 -- Pocion verde
+	12	27103	2	0.2 -- Pocion morada
+	13	30070	1	0.2 -- piel de lobo+
+}
+Group	Lobo_Alfagris_hambriento
+{
+	Mob	177
+	Type	drop
+	1	7040	1	0.2 -- fan real
+	2	5020	1	0.2 -- campana dorada
+	3	2040	1	0.2 -- Arco largo
+	4	1020	1	0.2 -- daga tijera
+	5	3040	1	0.2 -- gisame
+	6	50		1	0.2 -- Espada ancha
+	7	11821	1	0.2 -- Ropaje rosa
+	8	11621	1	0.2 -- Armadura desgracia
+	9	11421	1	0.2 -- Traje carmesi
+	10	11221	1	0.2 -- Armadura de tigre
+	11	15000	1	0.2 -- zapatos de cuero
+	12	50723	1	0.2 -- flor kaki
+}
+Group	Jabali_hambriento
+{
+	Mob	178
+	Type	drop
+	1	7030	1	0.2 -- Fan grulla
+	2	5020	1	0.2 -- Campana dorada
+	3	2030	1	0.2 -- Arco de batalla
+	4	4010	1	0.2 -- Nueve hojas
+	5	3030	1	0.2 -- Lanza araña
+	6	40		1	0.2 -- Espada bambu
+	7	11810	1	0.2 -- Ropaje azul+2
+	8	11610	1	0.2 -- Placas requiem +2
+	9	11410	1	0.2 -- Azure Suit+2
+	10	11210	1	0.2 -- Armadura monje+2
+	11	30003	1	0.2 -- Nariz
+	12	30004	1	0.2 -- Diente 
+}
+Group	Jabali_rojo_hambriento
+{
+	Mob	179
+	Type	drop
+	1	7050	1	0.2 -- fan real
+	2	5030	1	0.2 -- campana dorada
+	3	2050	1	0.2 -- Arco de monta
+	4	4020	1	0.2 -- cuchillo corto
+	5	3050	1	0.2 -- guadana de guerra
+	6	60		1	0.2 -- Espada de plata
+	7	11810	1	0.2 -- Ropaje azul+2
+	8	11610	1	0.2 -- Placas requiem +2
+	9	11410	1	0.2 -- Azure Suit+2
+	10	11210	1	0.2 -- Armadura monje+2
+	11	30003	1	0.2 -- Nariz
+	12	30004	1	0.2 -- Diente 
+}
+Group	Oso_hambriento
+{
+	Mob	180
+	Type	drop
+	1	7050	1	0.2 -- fan real
+	2	5030	1	0.2 -- campana dorada
+	3	2050	1	0.2 -- Arco de monta
+	4	4020	1	0.2 -- cuchillo corto
+	5	3050	1	0.2 -- guadana de guerra
+	6	60		1	0.2 -- Espada de plata
+	7	17060	1	0.2 -- Pendientes de oro
+	8	30071	1	0.2 -- Bilis de oso+
+	9	30053	1	0.2 -- piel de pie de oso
+}
+Group	Oso_pardo_hambriento
+{
+	Mob	181
+	Type	drop
+	1	7050	1	0.2 -- fan real
+	2	5030	1	0.2 -- campana dorada
+	3	2050	1	0.2 -- Arco de monta
+	4	4020	1	0.2 -- cuchillo corto
+	5	3050	1	0.2 -- guadana de guerra
+	6	60		1	0.2 -- Espada de plata
+	7	16060	1	0.2 -- collar de oro
+	9	30072	1	0.2 -- piel de pie de oso+
+}
+Group	Oso_negro_hambriento
+{
+	Mob	182
+	Type	drop
+	1	7050	1	0.2 -- fan real
+	2	5030	1	0.2 -- campana dorada
+	3	2050	1	0.2 -- Arco de monta
+	4	4020	1	0.2 -- cuchillo corto
+	5	3050	1	0.2 -- guadana de guerra
+	6	60		1	0.2 -- Espada de plata
+	7	16060	1	0.2 -- collar de oro
+	8	30071	1	0.2 -- Bilis de oso+
+	9	30053	1	0.2 -- piel de pie de oso
+	10	50725	1	0.2 -- Lila
+}
+Group	Oso_marron_hambriento
+{
+	Mob	183
+	Type	drop
+	1	7040	1	0.2 -- fan real
+	2	5020	1	0.2 -- campana dorada
+	3	2040	1	0.2 -- Arco largo
+	4	1020	1	0.2 -- daga tijera
+	5	3040	1	0.2 -- gisame
+	6	50		1	0.2 -- Espada ancha
+	7	30071	1	0.2 -- Bilis de oso+
+	8	30072	1	0.2 -- piel de pie de oso+
+}
+Group	Tigre_Hambriento
+{
+	Mob	184
+	Type	drop
+	1	7040	1	0.2 -- fan real
+	2	5020	1	0.2 -- campana dorada
+	3	2040	1	0.2 -- Arco largo
+	4	1020	1	0.2 -- daga tijera
+	5	3040	1	0.2 -- gisame
+	6	50		1	0.2 -- Espada ancha
+	7	30038	1	0.2 -- piel de tigre
+}
+Group	Tigre_blanco_Hambriento
+{
+	Mob	185
+	Type	drop
+	1	7040	1	0.2 -- fan real
+	2	5020	1	0.2 -- campana dorada
+	3	2040	1	0.2 -- Arco largo
+	4	1020	1	0.2 -- daga tijera
+	5	3040	1	0.2 -- gisame
+	6	50		1	0.2 -- Espada ancha
+	7	12620	1	0.2 -- sombrero de monje
+	8	12480	1	0.2 -- yelmo sangriento
+	9	12340	1	0.2 -- capucha de cuero
+	10	12200	1	0.2 -- casco tradicional
+	11	30023	1	0.2 -- piel de tigre blanca
+}
+Group	Lykos
+{
+	Mob	191
+	Type	drop
+	1	7050	1	0.2 -- fan real
+	2	5030	1	0.2 -- campana dorada
+	3	2050	1	0.2 -- Arco de monta
+	4	4020	1	0.2 -- cuchillo corto
+	5	3050	1	0.2 -- guadana de guerra
+	6	60		1	0.2 -- Espada de plata
+	7	11821	1	0.2 -- Ropaje rosa
+	8	11621	1	0.2 -- Armadura desgracia
+	9	11421	1	0.2 -- Traje carmesi
+	10	11221	1	0.2 -- Armadura de tigre
+	11	16040	1	0.2 -- collar de plata
+	12	71084	5	0.2 -- objeto encantado
+	13	71085	2	0.2 -- objeto de cocaccion
+}
+Group	scrofa
+{
+	Mob	192
+	Type	drop
+	1	7040	1	0.2 -- fan real
+	2	5020	1	0.2 -- campana dorada
+	3	2040	1	0.2 -- Arco largo
+	4	1020	1	0.2 -- daga tijera
+	5	3040	1	0.2 -- gisame
+	6	50		1	0.2 -- Espada ancha
+	7	11821	1	0.2 -- Ropaje rosa
+	8	11621	1	0.2 -- Armadura desgracia
+	9	11421	1	0.2 -- Traje carmesi
+	10	11221	1	0.2 -- Armadura de tigre
+	11	15043	1	0.2 -- zapatos de madera
+	12	71084	5	0.2 -- objeto encantado
+	13	71085	2	0.2 -- objeto de cocaccion
+	14	30004	1	0.2 -- Diente de jabali
+}
+Group	Bera
+{
+	Mob	193
+	Type	drop
+	1	7040	1	0.2 -- fan real
+	2	5020	1	0.2 -- campana dorada
+	3	2040	1	0.2 -- Arco largo
+	4	1020	1	0.2 -- daga tijera
+	5	3040	1	0.2 -- gisame
+	6	50		1	0.2 -- Espada ancha
+	7	11821	1	0.2 -- Ropaje rosa
+	8	11621	1	0.2 -- Armadura desgracia
+	9	11421	1	0.2 -- Traje carmesi
+	10	11221	1	0.2 -- Armadura de tigre
+	11	15063	1	0.2 -- zapatos de oro blanco
+	12	71084	5	0.2 -- objeto encantado
+	13	71085	2	0.2 -- objeto de cocaccion
+	14	30072	1	0.2 -- piel de pie oso+
+}
+Group	Tigris
+{
+	Mob	194
+	Type	drop
+	1	7040	1	0.2 -- fan real
+	2	5020	1	0.2 -- campana dorada
+	3	2040	1	0.2 -- Arco largo
+	4	1020	1	0.2 -- daga tijera
+	5	3040	1	0.2 -- gisame
+	6	50		1	0.2 -- Espada ancha
+	7	11811	1	0.2 -- Ropaje rosa
+	8	11611	1	0.2 -- Armadura desgracia
+	9	11411	1	0.2 -- Traje carmesi
+	10	11211	1	0.2 -- Armadura de tigre
+	11	15082	1	0.2 -- botas de cuero
+	12	71084	5	0.2 -- objeto encantado
+	13	71085	2	0.2 -- objeto de cocaccion
+	14	30037	1	0.2 -- Garra de tigre
+}
+Group	Soldado_juramento_blanco
+{
+	Mob	301
+	Type	drop
+	1	7050	1	0.2 -- fan real
+	2	5030	1	0.2 -- campana dorada
+	3	2050	1	0.2 -- Arco de monta
+	4	4020	1	0.2 -- cuchillo corto
+	5	3050	1	0.2 -- guadana de guerra
+	6	60		1	0.2 -- Espada de plata
+	7	11813	1	0.2 -- Ropaje rosa
+	8	11613	1	0.2 -- Armadura desgracia
+	9	11413	1	0.2 -- Traje carmesi
+	10	11213	1	0.2 -- Armadura de tigre
+	11	16040	1	0.2 -- collar de plata
+	12	15040	1	0.2 -- zapatos de madera
+	13	30034	1	0.2 -- coletero blanco
+	14	8001	30	0.2 -- flecha bambu
+}
+Group	Arquera_juramento_blanco
+{
+	Mob	302
+	Type	drop
+	1	7010	1	0.2 -- Fan de hierro
+	2	5000	1	0.2 -- Campana de plata
+	3	2010	1	0.2 -- Arco de monta
+	4	4000	1	0.2 -- Amija
+	5	3010	1	0.2 -- Lanza
+	6	20		1	0.2 -- Espada larga
+	7	11823	1	0.2 -- Ropaje rosa
+	8	11623	1	0.2 -- Armadura desgracia
+	9	11423	1	0.2 -- Traje carmesi
+	10	11223	1	0.2 -- Armadura de tigre
+	11	16080	1	0.2 -- collar de jade
+	12	15140	1	0.2 -- zapatos de jade
+	13	70027	1	0.2 -- montar a caballo
+	14	8001	30	0.2 -- flecha bambu
+}
+Group	Arquera_juramento_blanco
+{
+	Mob	304
+	Type	drop
+	1	11830	1	0.2 -- Ropaje amoroso
+	2	11630	1	0.2 -- Placas fantasma
+	3	11430	1	0.2 -- Traje Hormiga roja
+	4	11230	1	0.2 -- Armadura plachas leon
+	5	8000	30	0.2 -- flecha madera
+}
+Group	Soldado_Jura_Bl_Cobarde
+{
+	Mob	351
+	Type	drop
+	1	30034	1	0.2 -- coletero blanco
+}
+Group	Arquera_Jura_Bl_Cobarde
+{
+	Mob	352
+	Type	drop
+	1	7040	1	0.2 -- fan real
+	2	5020	1	0.2 -- campana dorada
+	3	2040	1	0.2 -- Arco largo
+	4	1020	1	0.2 -- daga tijera
+	5	3040	1	0.2 -- gisame
+	6	50		1	0.2 -- Espada ancha
+}
+Group	Gener_Jura_Bl_Cobarde
+{
+	Mob	353
+	Type	drop
+	1	30011	1	0.2 -- madeja
+	2	16060	1	0.2 -- collar de oro
+}
+Group	Mi_Jung
+{
+	Mob	391
+	Type	drop
+	1	12640	1	0.2 -- sombrero fenix
+	2	12500	1	0.2 -- yelmo burlon
+	3	12360	1	0.2 -- capucha de cadena
+	4	12220	1	0.2 -- Casco de hierro
+	5	11821	1	0.2 -- placas de tigre
+	6	11621	1	0.2 -- Ropaje rosa
+	7	11421	1	0.2 -- Traje carmesi
+	8	11221	1	0.2 -- placas de tigre
+	9	30018	1	0.2 -- Coletero rojo
+}
+Group	Eun_Jung
+{
+	Mob	392
+	Type	drop
+	1	7040	1	0.2 -- fan real
+	2	5020	1	0.2 -- campana dorada
+	3	2040	1	0.2 -- Arco largo
+	4	1020	1	0.2 -- daga tijera
+	5	3040	1	0.2 -- gisame
+	6	12640	1	0.2 -- sombrero fenix
+	7	12500	1	0.2 -- yelmo burlon
+	8	12360	1	0.2 -- capucha de cadena
+	9	12220	1	0.2 -- Casco de hierro
+	10	50		1	0.2 -- Espada ancha
+	11	30034	1	0.2 -- Coletero blanco
+	12	30073	1	0.2 -- coletero blanco+
+	13	30035	1	0.2 -- crema facial
+}
+
+Group	Se_Rang
+{
+	Mob	393
+	Type	drop
+	1	27006	50	0.2 -- Pocion grande
+	2	27003	50	0.2 -- Pocion grande
+	3	30035	1	0.2 -- crema facial
+}
+Group	Jin_Hee
+{
+	Mob	394
+	Type	drop
+	1	11830	1	0.2 -- Ropaje amoroso
+	2	11630	1	0.2 -- Placas fantasma
+	3	11430	1	0.2 -- Traje Hormiga roja
+	4	11230	1	0.2 -- Armadura plachas leon
+	5	16080	1	0.2 -- collar de jade
+	6	14080	1	0.2 -- brazalete de jade
+	7	15060	1	0.2 -- zapatos adorno de oro
+	8	17080	1	0.2 -- pendiente de jade
+	9	30035	1	0.2 -- crema facial
+}
+Group	Mi_Jung_Desanimada
+{
+	Mob	395
+	Type	drop
+	1	30018	1	0.2 -- Coletero rojo
+}
+Group	Eun_Jung_Desanimada
+{
+	Mob	396
+	Type	drop
+	1	7010	1	0.2 -- Fan de hierro
+	2	5000	1	0.2 -- Campana de plata
+	3	2010	1	0.2 -- Arco largo
+	4	4000	1	0.2 -- Amija
+	5	3010	1	0.2 -- Lanza
+	6	20		1	0.2 -- Espada larga
+}
+Group	Se_Rang_Desanimada
+{
+	Mob	397
+	Type	drop
+	1	7040	1	0.2 -- fan real
+	2	5020	1	0.2 -- campana dorada
+	3	2040	1	0.2 -- Arco largo
+	4	1020	1	0.2 -- daga tijera
+	5	3040	1	0.2 -- gisame
+	6	50		1	0.2 -- Espada ancha
+	7	17023	1	0.2 -- Pendientes de cobre
+	8	30035	1	0.2 -- crema facial
+}
+Group	Jin_Hee_Desanimada
+{
+	Mob	398
+	Type	drop
+	1	30073	1	0.2 -- coletero blanco+
+}
+Group	Soldado_Viento_Negro
+{
+	Mob	401
+	Type	drop
+	1	7060	1	0.2 -- Fan piedra
+	2	5030	1	0.2 -- Campana de jade
+	3	2060	1	0.2 -- Arco artesanal
+	4	1030	1	0.2 -- Daga afortunada
+	5	3060	1	0.2 -- Horca de batalla
+	6	70		1	0.2 -- Espada orquidea
+	7	16101	1	0.2 -- collar de ebano
+	8	15100	1	0.2 -- zapatos dorados
+	9	30032	1	0.2 -- uniforme negro
+}
+Group	Maniaco_Viento_Negro
+{
+	Mob	402
+	Type	drop
+	1	11830	1	0.2 -- Ropaje amoroso
+	2	11630	1	0.2 -- placas fantasma
+	3	11430	1	0.2 -- Traje hormiga
+	4	11230	1	0.2 -- Placas de leon
+	5	17120	1	0.2 -- pendientes de perlas
+	6	15120	1	0.2 -- botas de bronce
+	7	30074	1	0.2 -- uniforme negro+
+}
+Group	Arquero_Viento_Negro
+{
+	Mob	403
+	Type	drop
+	1	7070	1	0.2 -- Fan oceano
+	2	5040	1	0.2 -- Campana fuente
+	3	2070	1	0.2 -- Arco Ruina Negra
+	4	1040	1	0.2 -- Daga mordisco gato
+	5	3070	1	0.2 -- Halberd
+	6	80		1	0.2 -- Espada bastarda
+	7	11840	1	0.2 -- Vestido divino
+	8	11640	1	0.2 -- Armadura ying yang
+	9	11440	1	0.2 -- Traje leon
+	10	11240	1	0.2 -- Placas mortales
+	11	17120	1	0.2 -- pendientes de perlas
+	12	15120	1	0.2 -- botas de bronce
+}
+Group	Jak_To_Viento_Negro
+{
+	Mob	404
+	Type	drop
+	1	12640	1	0.2 -- Sombrero fenix
+	2	12500	1	0.2 -- Yelmo Burlon
+	3	12360	1	0.2 -- capucha de cadena
+	4	12220	1	0.2 -- casco de hierro
+	5	11840	1	0.2 -- Vestido divino
+	6	11640	1	0.2 -- Armadura ying yang
+	7	11440	1	0.2 -- Traje leon
+	8	11240	1	0.2 -- Placas mortales
+	9	17123	1	0.2 -- pendientes de perlas
+	10	30005	1	0.2 -- Trozo de armadura rota
+	11	30021	1	0.2 -- Trozo de gema
+}
+Group	To_Su_Viento_Negro
+{
+	Mob	405
+	Type	drop
+	1	7070	1	0.2 -- Fan oceano
+	2	5040	1	0.2 -- Campana fuente
+	3	2070	1	0.2 -- Arco Ruina Negra
+	4	1040	1	0.2 -- Daga mordisco gato
+	5	3070	1	0.2 -- Halberd
+	6	80		1	0.2 -- Espada bastarda
+	7	11830	1	0.2 -- Ropaje amoroso
+	8	11630	1	0.2 -- Armadura placas fantasma
+	9	11430	1	0.2 -- Traje hormiga roja
+	10	11230	1	0.2 -- Placas de leon
+	11	15100	1	0.2 -- zapatos dorados
+	12	17140	1	0.2 -- pendientes de oro blanco
+	13	30005	1	0.2 -- Trozo de armadura rota
+}
+Group	Gu_Ryung_Viento_Negro
+{
+	Mob	406
+	Type	drop
+	1	7070	1	0.2 -- Fan oceano
+	2	5040	1	0.2 -- Campana fuente
+	3	2070	1	0.2 -- Arco Ruina Negra
+	4	1040	1	0.2 -- Daga mordisco gato
+	5	3070	1	0.2 -- Halberd
+	6	80		1	0.2 -- Espada bastarda
+	7	30030	1	0.2 -- Hoja oxidada
+}
+Group	Soldado_Tormenta_Negra
+{
+	Mob	431
+	Type	drop
+	1	12640	1	0.2 -- Sombrero fenix
+	2	12500	1	0.2 -- Yelmo Burlon
+	3	12360	1	0.2 -- capucha de cadena
+	4	12220	1	0.2 -- casco de hierro
+	5	30030	1	0.2 -- Hoja oxidada
+}
+Group	Maníaco_Tormenta_Negra
+{
+	Mob	432
+	Type	drop
+	1	7060	1	0.2 -- Fan piedra
+	2	5030	1	0.2 -- Campana de jade
+	3	2060	1	0.2 -- Arco artesanal
+	4	1030	1	0.2 -- Daga afortunada
+	5	3060	1	0.2 -- Horca de batalla
+	6	70		1	0.2 -- Espada orquidea
+	7	12640	1	0.2 -- Sombrero fenix
+	8	12500	1	0.2 -- Yelmo Burlon
+	9	12360	1	0.2 -- capucha de cadena
+	10	12220	1	0.2 -- casco de hierro
+}
+Group	Arquero_Tormenta_Negra
+{
+	Mob	433
+	Type	drop
+	1	7060	1	0.2 -- Fan piedra
+	2	5030	1	0.2 -- Campana de jade
+	3	2060	1	0.2 -- Arco artesanal
+	4	1030	1	0.2 -- Daga afortunada
+	5	3060	1	0.2 -- Horca de batalla
+	6	70		1	0.2 -- Espada orquidea
+}
+Group	Joh_Hwan_Tormenta_Negra
+{
+	Mob	434
+	Type	drop
+	1	12640	1	0.2 -- Sombrero fenix
+	2	12500	1	0.2 -- Yelmo Burlon
+	3	12360	1	0.2 -- capucha de cadena
+	4	12220	1	0.2 -- casco de hierro
+	5	11850	1	0.2 -- Ropaje solar
+	6	11650	1	0.2 -- Placas Misticas
+	7	11450	1	0.2 -- Traje de asesino
+	8	11250	1	0.2 -- Placas dragon
+	9	15060	1	0.2 -- zapatos adorno de oro
+	10	15100	1	0.2 -- zapatos dorados
+	11	30021	1	0.2 -- Trozo de gema
+}
+Group	Kyuk_Jang_Tormenta_Negra
+{
+	Mob	435
+	Type	drop
+	1	7060	1	0.2 -- Fan piedra
+	2	5030	1	0.2 -- Campana de jade
+	3	2060	1	0.2 -- Arco artesanal
+	4	1030	1	0.2 -- Daga afortunada
+	5	3060	1	0.2 -- Horca de batalla
+	6	70		1	0.2 -- Espada orquidea
+	7	15140	1	0.2 -- zapatos de jade
+	8	16040	1	0.2 -- collar de plata
+	9	30005	1	0.2 -- Trozo de armadura rota
+}
+Group	Pho_Hwan_Tormenta_Negra
+{
+	Mob	436
+	Type	drop
+	1	12640	1	0.2 -- Sombrero fenix
+	2	12500	1	0.2 -- Yelmo Burlon
+	3	12360	1	0.2 -- capucha de cadena
+	4	12220	1	0.2 -- casco de hierro
+	5	7080	1	0.2 -- Fan picadura
+	6	5050	1	0.2 -- Campana albaricoque
+	7	2080	1	0.2 -- Arco ojo rojo
+	8	1050	1	0.2 -- Daga Mascara diablo
+	9	3080	1	0.2 -- Hacha gigante
+	10	90		1	0.2 -- Espada barbara
+	11	15100	1	0.2 -- zapatos dorados
+	12	17100	1	0.2 -- Pendientes de ebano
+	13	17120	1	0.2 -- Pendientes de perlas 
+}
+Group	Soldado_Torm_Negra_Mal
+{
+	Mob	451
+	Type	drop
+	1	30032	1	0.2 -- uniforme negro
+}
+Group	Maníaco_Torm_Negra_Mal
+{
+	Mob	452
+	Type	drop
+	1	30005	1	0.2 -- Trozo de armadura rota
+}
+Group	Arquero_Torm_Negra_Mal
+{
+	Mob	453
+	Type	drop
+	1	7080	1	0.2 -- Fan picadura
+	2	5050	1	0.2 -- Campana albaricoque
+	3	2080	1	0.2 -- Arco ojo rojo
+	4	1050	1	0.2 -- Daga Mascara diablo
+	5	3080	1	0.2 -- Hacha gigante
+	6	90		1	0.2 -- Espada barbara
+	7	11830	1	0.2 -- Ropaje amoroso
+	8	11630	1	0.2 -- Armadura placas fantasma
+	9	11430	1	0.2 -- Traje hormiga roja
+	10	11230	1	0.2 -- Placas de leon
+	11	16080	1	0.2 -- collar de jade
+	12	17120	1	0.2 -- pendientes de cobre
+	13	15140	1	0.2 -- pendientes de oro blanco
+}
+Group	Joh_Hwan_Torm_Negra_Mal
+{
+	Mob	454
+	Type	drop
+	1	7050	1	0.2 -- fan real
+	2	5030	1	0.2 -- campana dorada
+	3	2050	1	0.2 -- Arco de monta
+	4	4020	1	0.2 -- cuchillo corto
+	5	3050	1	0.2 -- guadana de guerra
+	6	60		1	0.2 -- Espada de plata
+	7	11840	1	0.2 -- Vestido divino
+	8	11640	1	0.2 -- Armadura ying yang
+	9	11440	1	0.2 -- Traje leon
+	10	11240	1	0.2 -- Placas mortales
+	11	17100	1	0.2 -- Pendientes de ebano
+	12	16100	1	0.2 -- collar de ebano
+	13	16060	1	0.2 -- collar de oro
+	14	30021	1	0.2 -- Trozo de gema
+}
+Group	Kyuk_Ja_Torm_Negra_Mal
+{
+	Mob	455
+	Type	drop
+	1	7080	1	0.2 -- Fan picadura
+	2	5050	1	0.2 -- Campana albaricoque
+	3	2080	1	0.2 -- Arco ojo rojo
+	4	1050	1	0.2 -- Daga Mascara diablo
+	5	3080	1	0.2 -- Hacha gigante
+	6	90		1	0.2 -- Espada barbara
+	7	30005	1	0.2 -- Trozo de armadura rota
+}
+Group	Pho_Hwa_Torm_Negra_Mal
+{
+	Mob	456
+	Type	drop
+	1	7080	1	0.2 -- Fan picadura
+	2	5050	1	0.2 -- Campana albaricoque
+	3	2080	1	0.2 -- Arco ojo rojo
+	4	1050	1	0.2 -- Daga Mascara diablo
+	5	3080	1	0.2 -- Hacha gigante
+	6	90		1	0.2 -- Espada barbara
+	7	11850	1	0.2 -- Ropaje solar
+	8	11650	1	0.2 -- Placas Misticas
+	9	11450	1	0.2 -- Traje de asesino
+	10	11250	1	0.2 -- Placas dragon
+	11	15080	1	0.2 -- botas de cuero
+	12	15060	1	0.2 -- zapatos adorno de oro
+}
+Group	Sold_Infantería_Salvaje
+{
+	Mob	501
+	Type	drop
+	1	7070	1	0.2 -- Fan oceano
+	2	5040	1	0.2 -- Campana fuente
+	3	2070	1	0.2 -- Arco Ruina Negra
+	4	1040	1	0.2 -- Daga mordisco gato
+	5	3070	1	0.2 -- Halberd
+	6	80		1	0.2 -- Espada bastarda
+}
+Group	Siervo_Salvaje
+{
+	Mob	502
+	Type	drop
+	1	7070	1	0.2 -- Fan oceano
+	2	5040	1	0.2 -- Campana fuente
+	3	2070	1	0.2 -- Arco Ruina Negra
+	4	1040	1	0.2 -- Daga mordisco gato
+	5	3070	1	0.2 -- Halberd
+	6	80		1	0.2 -- Espada bastarda
+	7	11850	1	0.2 -- Ropaje solar
+	8	11650	1	0.2 -- Placas Misticas
+	9	11450	1	0.2 -- Traje de asesino
+	10	11250	1	0.2 -- Placas dragon
+	11	15100	1	0.2 -- zapatos dorados
+	12	15020	1	0.2 -- zapatos corteza bambu
+	13	16023	1	0.2 -- collar de cobre
+	14	16043	1	0.2 -- collar de plata
+	15	16100	1	0.2 -- collar de ebano
+	16	17080	1	0.2 -- pendientes de jade
+	17	30041	1	0.2 -- Shuriken
+}
+Group	Metin_of_Black
+{
+	Mob	8005
+	Type	drop
+	1	27002	50	60 -- Red Potion (M)
+	2	27003	30	20 -- Red Potion (L)
+	3	27005	30	40 -- Blue Potion (M)
+	4	27006	20	10 -- Blue Potion (L)
+	5	50300	1	100 -- Skill Book
+	6	70014	1	10 -- Blood Pill
+	7	50300	1	100 -- Skill Book
+	8	50300	1	100 -- Skill Book
+	9	70024	1	15 -- Blessing Marble
+	10	71084	2	50 -- enchanted object
+	11	71085	1	50 -- Object of duress
+}
+
+Group	Metin_of_darkness
+{
+	Mob	8006
+	Type	drop
+	1	27002	50	60 -- Red Potion (M)
+	2	27003	30	20 -- Red Potion (L)
+	3	27005	30	40 -- Blue Potion (M)
+	4	27006	20	10 -- Blue Potion (L)
+	5	50300	1	100 -- Skill Book
+	6	70014	1	10 -- Blood Pill
+	7	50300	1	100 -- Skill Book
+	8	50300	1	100 -- Skill Book
+	9	70024	1	15 -- Blessing Marble
+	10	71084	2	50 -- enchanted object
+	11	71085	1	50 -- Object of duress
+}
+
+Group	Metin_of_jealousy
+{
+	Mob	8007
+	Type	drop
+	1	50513	1	60 -- soul stone
+	2	27002	50	60 -- Red Potion (M)
+	3	27003	30	20 -- Red Potion (L)
+	4	27005	30	40 -- Blue Potion (M)
+	5	27006	20	10 -- Blue Potion (L)
+	6	50300	1	100 -- Skill Book
+	7	70014	1	10 -- Blood Pill
+	8	50300	1	100 -- Skill Book
+	9	50300	1	100 -- Skill Book
+	10	70024	1	15 -- Blessing Marble
+	11	71084	2	50 -- enchanted object
+	12	71085	1	50 -- Object of duress
+}
+
+Group	Metin_of_Soul
+{
+	Mob	8008
+	Type	drop
+	1	50513	1	70 -- soul stone
+	2	27002	50	60 -- Red Potion (M)
+	3	27003	30	20 -- Red Potion (L)
+	4	27005	30	40 -- Blue Potion (M)
+	5	27006	20	10 -- Blue Potion (L)
+	6	50300	1	100 -- Skill Book
+	7	70014	1	10 -- Blood Pill
+	8	50300	1	100 -- Skill Book
+	9	50300	1	100 -- Skill Book
+	10	70024	1	15 -- Blessing Marble
+	11	71084	2	50 -- enchanted object
+	12	71085	1	50 -- Object of duress
+}
+
+Group	Metin_of_shadow
+{
+	Mob	8009
+	Type	drop
+	1	50513	2	70 -- soul stone
+	2	27002	50	60 -- Red Potion (M)
+	3	27003	30	20 -- Red Potion (L)
+	4	27005	30	40 -- Blue Potion (M)
+	5	27006	20	10 -- Blue Potion (L)
+	6	50300	1	100 -- Skill Book
+	7	70014	1	10 -- Blood Pill
+	8	50300	1	100 -- Skill Book
+	9	50300	1	100 -- Skill Book
+	10	70024	1	15 -- Blessing Marble
+	11	71084	2	50 -- enchanted object
+	12	71085	1	50 -- Object of duress
+}
+
+Group	Metin_of_hardness
+{
+	Mob	8010
+	Type	drop
+	1	50513	2	70 -- soul stone
+	2	27002	50	60 -- Red Potion (M)
+	3	27003	30	20 -- Red Potion (L)
+	4	27005	30	40 -- Blue Potion (M)
+	5	27006	20	10 -- Blue Potion (L)
+	6	50300	1	100 -- Skill Book
+	7	70014	1	10 -- Blood Pill
+	8	50300	1	100 -- Skill Book
+	9	50300	1	100 -- Skill Book
+	10	70024	1	15 -- Blessing Marble
+	11	71084	5	60 -- enchanted object
+	12	71085	2	60 -- Object of duress
+}
+
+Group	Metin_of_demon
+{
+	Mob	8011
+	Type	drop
+	1	50513	2	70 -- soul stone
+	2	27002	50	60 -- Red Potion (M)
+	3	27003	30	20 -- Red Potion (L)
+	4	27005	30	40 -- Blue Potion (M)
+	5	27006	20	10 -- Blue Potion (L)
+	6	50300	1	100 -- Skill Book
+	7	70014	1	10 -- Blood Pill
+	8	50300	1	100 -- Skill Book
+	9	50300	1	100 -- Skill Book
+	10	70024	1	15 -- Blessing Marble
+	11	71084	5	60 -- enchanted object
+	12	71085	2	60 -- Object of duress
+}
+
+Group	Metin_of_fall
+{
+	Mob	8012
+	Type	drop
+	1	50513	2	70 -- soul stone
+	2	27002	50	60 -- Red Potion (M)
+	3	27003	30	20 -- Red Potion (L)
+	4	27005	30	40 -- Blue Potion (M)
+	5	27006	20	10 -- Blue Potion (L)
+	6	50300	1	100 -- Skill Book
+	7	70014	1	10 -- Blood Pill
+	8	50300	1	100 -- Skill Book
+	9	50300	1	100 -- Skill Book
+	10	70024	1	15 -- Blessing Marble
+	11	71084	5	60 -- enchanted object
+	12	71085	2	60 -- Object of duress
+}
+
+Group	Metin_of_death
+{
+	Mob	8013
+	Type	drop
+	1	50513	2	70 -- soul stone
+	2	27002	50	60 -- Red Potion (M)
+	3	27003	30	20 -- Red Potion (L)
+	4	27005	30	40 -- Blue Potion (M)
+	5	27006	20	10 -- Blue Potion (L)
+	6	50300	1	100 -- Skill Book
+	7	70014	1	10 -- Blood Pill
+	8	50300	1	100 -- Skill Book
+	9	50300	1	100 -- Skill Book
+	10	70024	1	15 -- Blessing Marble
+	11	71084	5	60 -- enchanted object
+	12	71085	2	60 -- Object of duress
+}
+
+Group	Metin_of_killer
+{
+	Mob	8014
+	Type	drop
+	1	50513	2	50 -- soul stone
+	2	27002	50	60 -- Red Potion (M)
+	3	27003	30	20 -- Red Potion (L)
+	4	27005	30	40 -- Blue Potion (M)
+	5	27006	20	10 -- Blue Potion (L)
+	6	50300	1	100 -- Skill Book
+	7	70014	1	10 -- Blood Pill
+	8	50300	1	100 -- Skill Book
+	9	50300	1	100 -- Skill Book
+	10	70024	1	15 -- Blessing Marble
+	11	71084	5	60 -- enchanted object
+	12	71085	2	60 -- Object of duress
+}
+
+Group	Metin_Pung-Ma
+{
+	Mob	8024
+	Type	drop
+	1	50513	4	70 -- soul stone
+	2	27002	50	60 -- Red Potion (M)
+	3	27003	30	20 -- Red Potion (L)
+	4	27005	30	40 -- Blue Potion (M)
+	5	27006	20	10 -- Blue Potion (L)
+	6	50300	1	100 -- Skill Book
+	7	70014	1	10 -- Blood Pill
+	8	50300	1	100 -- Skill Book
+	9	50300	1	100 -- Skill Book
+	10	70024	1	15 -- Blessing Marble
+	11	71084	8	80 -- enchanted object
+	12	71085	3	80 -- Object of duress
+}
+
+Group	Metin_Ma-An
+{
+	Mob	8025
+	Type	drop
+	1	50513	4	70 -- soul stone
+	2	27002	50	60 -- Red Potion (M)
+	3	27003	30	20 -- Red Potion (L)
+	4	27005	30	40 -- Blue Potion (M)
+	5	27006	20	10 -- Blue Potion (L)
+	6	50300	1	100 -- Skill Book
+	7	70014	1	10 -- Blood Pill
+	8	50300	1	100 -- Skill Book
+	9	50300	1	100 -- Skill Book
+	10	70024	1	15 -- Blessing Marble
+	11	71084	8	80 -- enchanted object
+	12	71085	3	80 -- Object of duress
+}
+
+Group	Metin_Tu-Young
+{
+	Mob	8026
+	Type	drop
+	1	50513	4	70 -- soul stone
+	2	27002	50	60 -- Red Potion (M)
+	3	27003	30	20 -- Red Potion (L)
+	4	27005	30	40 -- Blue Potion (M)
+	5	27006	20	10 -- Blue Potion (L)
+	6	50300	1	100 -- Skill Book
+	7	70014	1	10 -- Blood Pill
+	8	50300	1	100 -- Skill Book
+	9	50300	1	100 -- Skill Book
+	10	70024	1	15 -- Blessing Marble
+	11	71084	8	80 -- enchanted object
+	12	71085	3	80 -- Object of duress
+}
+
+Group	Metin_Jeon-Un
+{
+	Mob	8027
+	Type	drop
+	1	50513	4	70 -- soul stone
+	2	27002	50	60 -- Red Potion (M)
+	3	27003	30	20 -- Red Potion (L)
+	4	27005	30	40 -- Blue Potion (M)
+	5	27006	20	10 -- Blue Potion (L)
+	6	50300	1	100 -- Skill Book
+	7	70014	1	10 -- Blood Pill
+	8	50300	1	100 -- Skill Book
+	9	50300	1	100 -- Skill Book
+	10	70024	1	15 -- Blessing Marble
+	11	71084	8	80 -- enchanted object
+	12	71085	3	80 -- Object of duress
+}

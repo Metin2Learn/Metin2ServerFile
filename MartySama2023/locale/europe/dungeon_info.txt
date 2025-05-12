@@ -1,0 +1,198 @@
+#
+# Dungeon Information File
+# Each block starts with 'dungeon' and ends with 'end'.
+#
+# dungeon
+#	TYPE	< number >
+#	^ Type of the dungeon
+#	* 0 : Solo
+#	* 1 : Party
+#	* 2 : Guild
+#
+#	MAP_INDEX	< number >
+#	^ Map index of the dungeon < map_index >
+#
+#	ENTRY_MAP_INDEX	< number >
+#	^ Map index of the entry (outside of the dungeon) < map_index >
+#
+#	BOSS_VNUM	< number >
+#	^ Virtual number of the monster < mob_vnum >
+#
+#	LEVEL_LIMIT	< number_min, number_max >
+#	^ Level limit of the dungeon < min, max >
+#
+#	MEMBER_LIMIT	< number_min, number_max >
+#	^ Member limit of the dungeon < min, max >
+#
+#	REQUIRED_ITEM	< number, number >
+#	^ Required item to access the dungeon < item_vnum, item_count >
+#	* You can only add 3 of REQUIRED_ITEM
+#
+#	DURATION	< number of seconds >
+#	^ Default duration of the dungeon (This is just  how long you can be inside the dungeon)
+#
+#	ELEMENT	< number >
+#	^ Shows which elements are in the dungeon ( ice, fire, fark, earth, etc... )
+#
+#	QUEST	< text, text, number >
+#	^ Quest of the dungeon < quest_name, flag_name, flag_type >
+#	* 0 : PC
+#	* 1 : GLOBAL
+#	Example : flame_dungeon	exit_time	0
+#
+#	BONUS_ATT
+#	^ Attack bonus ID
+#	* You can add multiple BONUS_ATT
+#
+#	BONUS_DEF
+#	^ Defense/Resistance bonus ID
+#	* You can add multiple BONUS_DEF
+#
+#	BOSS_DROP_ITEM	< number, number >
+#	^ Top items (16) that can be dropped from the boss < item_vnum, item_count >
+#	* You can add multiple BOSS_DROP_ITEM
+#
+# end
+#
+
+# metin2_map_deviltower1
+dungeon
+	TYPE	0
+	MAP_INDEX	66
+	ENTRY_MAP_INDEX	65
+	ENTRY_BASE_POSITION	5908	1112
+	BOSS_VNUM	1093
+	LEVEL_LIMIT	45	120
+	MEMBER_LIMIT	1	8
+
+	REQUIRED_ITEM	0	0
+	REQUIRED_ITEM	0	0
+	REQUIRED_ITEM	0	0
+
+	DURATION	0
+
+	ELEMENT	6
+
+	BONUS_ATT	21
+	BONUS_DEF	89
+	BONUS_DEF	37
+	BONUS_DEF	34
+end
+
+# metin2_map_devilcatacomb
+dungeon
+	TYPE	1
+	MAP_INDEX	216
+	ENTRY_MAP_INDEX	65
+	ENTRY_BASE_POSITION	5917	999
+	BOSS_VNUM	2598
+	LEVEL_LIMIT	75	120
+	MEMBER_LIMIT	2	8
+
+	REQUIRED_ITEM	30319	1
+	REQUIRED_ITEM	0	0
+	REQUIRED_ITEM	0	0
+
+	DURATION	3600
+
+	ELEMENT	6
+
+	BONUS_ATT	21
+	BONUS_DEF	89
+	BONUS_DEF	34
+end
+
+# metin2_map_spiderdungeon_03
+dungeon
+	TYPE	0
+	MAP_INDEX	217
+	ENTRY_MAP_INDEX	217
+	ENTRY_BASE_POSITION	691	6108
+	BOSS_VNUM	2092
+	LEVEL_LIMIT	50	120
+	MEMBER_LIMIT	1	8
+
+	REQUIRED_ITEM	30324	1
+	REQUIRED_ITEM	0	0
+	REQUIRED_ITEM	0	0
+
+	DURATION	3600
+
+	ELEMENT	4
+end
+
+# metin2_map_skipia_dungeon_boss
+dungeon
+	TYPE	1
+	MAP_INDEX	208
+	ENTRY_MAP_INDEX	73
+	ENTRY_BASE_POSITION	1812	12208
+	BOSS_VNUM	2493
+	LEVEL_LIMIT	104	120
+	MEMBER_LIMIT	1	8
+
+	REQUIRED_ITEM	30179	3
+	REQUIRED_ITEM	0	0
+	REQUIRED_ITEM	0	0
+
+	DURATION	3600
+
+	QUEST	dragon_lair_access	dragon_lair_time	1
+
+	ELEMENT	1
+
+	BONUS_ATT	22
+
+	BONUS_DEF	34
+	BONUS_DEF	36
+end
+
+# metin2_map_n_flame_dungeon_01
+dungeon
+	TYPE	1
+	MAP_INDEX	351
+	ENTRY_MAP_INDEX	62
+	ENTRY_BASE_POSITION	6142	7068
+	BOSS_VNUM	6091
+	LEVEL_LIMIT	104	120
+	MEMBER_LIMIT	2	8
+
+	REQUIRED_ITEM	71175	3
+	REQUIRED_ITEM	0	0
+	REQUIRED_ITEM	0	0
+
+	DURATION	3600
+
+	QUEST	flame_dungeon	exit_time	0
+
+	ELEMENT	2
+
+	BONUS_ATT	0
+
+	BONUS_DEF	35
+end
+
+# metin2_map_n_snow_dungeon_01
+dungeon
+	TYPE	1
+	MAP_INDEX	352
+	ENTRY_MAP_INDEX	61
+	ENTRY_BASE_POSITION	4325	1649
+	BOSS_VNUM	6191
+	LEVEL_LIMIT	104	120
+	MEMBER_LIMIT	2	8
+
+	REQUIRED_ITEM	0	0
+	REQUIRED_ITEM	0	0
+	REQUIRED_ITEM	0	0
+
+	DURATION	3600
+
+	QUEST	snow_dungeon	exit_time	0
+
+	ELEMENT	3
+
+	BONUS_ATT	0
+
+	BONUS_DEF	87
+end

@@ -1,0 +1,11 @@
+target . delete ( "__TARGET__" ) 
+if pc . count_item ( 30227 ) > 0 then 
+say_title ( mob_name ( 20084 ) ) 
+say ( locale_quest ( 604 ) ) 
+pc . remove_item ( 30227 , 1 ) 
+set_state ( "__reward" ) 
+else 
+say_title ( mob_name ( 20084 ) ) 
+say ( string . format ( "%s" .. " " .. locale_quest ( 605 ) , item_name ( 30227 ) ) ) 
+return 
+end 

@@ -1,0 +1,23 @@
+quest acce_combine begin
+	state start begin
+		when 60003.chat.locale_quest(20) begin
+			say(locale_quest(21))
+		end
+
+		when 60003.chat.locale_quest(22) begin
+			say(locale_quest(23))
+			if select(locale_quest(4473), locale_quest(3418)) == 1 then
+				setskin(NOWINDOW)
+				pc.open_acce(true)
+			else return end
+		end
+
+		when 60003.chat.locale_quest(24) begin
+			say(locale_quest(25))
+			if select(locale_quest(4473), locale_quest(3418)) == 1 then
+				setskin(NOWINDOW)
+				pc.open_acce(false)
+			else return end
+		end
+	end
+end

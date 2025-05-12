@@ -1,0 +1,15 @@
+local settings = dragon_lair_access . get_settings ( ) 
+purge_area ( settings . room_area . first . x , settings . room_area . first . y , settings . room_area . last . x , settings . room_area . last . y ) 
+notice_all ( 875 , pc . get_name ( ) ) 
+if pc . get_map_index ( ) == 208 then 
+if pc . getf ( "dragon_lair_access" , "entered" ) ~= 1 then 
+pc . setf ( "dragon_lair_access" , "entered" , 1 ) 
+pc . setf ( "dragon_lair_access" , "enter_time" , get_global_time ( ) ) 
+end 
+end 
+regen_in_map ( 208 , "data/dungeon/dragon_lair.txt" ) 
+game . set_event_flag ( "dragon_lair_alive" , 1 ) 
+char_log ( pc . get_player_id ( ) , "LAIR" , pc . get_channel_id ( ) .. " SPAWN DRAGON" ) 
+notice_multiline ( string . format ( locale_quest ( 885 ) , game . get_event_flag ( "dragon_lair_password" ) ) , notice ) 
+dragon_lair_access . show_time_remaining ( settings . cooldown_time ) 
+set_state ( "kill_dragon" ) 

@@ -1,0 +1,8 @@
+if ship_defense_mgr . is_running ( ) then 
+say ( locale_quest ( 10115 ) ) 
+else 
+say ( locale_quest ( 10108 ) ) 
+end 
+if select ( locale_quest ( 10065 ) , locale_quest ( 10066 ) ) == 1 then 
+ship_defense_mgr . leave ( ) 
+end 

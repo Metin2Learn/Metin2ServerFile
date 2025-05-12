@@ -1,0 +1,9 @@
+if d . select ( get_server_timer_arg ( ) ) then 
+local setting = snow_dungeon . setting ( ) 
+local level = 10 
+d . setf ( "level" , level ) 
+d . jump_all ( setting . floor_pos [ level ] [ 1 ] , setting . floor_pos [ level ] [ 2 ] ) 
+d . regen_file ( "data/dungeon/snow_dungeon/" .. "sd_10.txt" ) 
+d . spawn_mob ( 6191 , setting . final_boss_poss [ 1 ] , setting . final_boss_poss [ 2 ] ) 
+d . notice ( 8213 ) 
+end 

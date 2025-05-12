@@ -1,0 +1,157 @@
+define MYONGHORANG_VNUM 20400 -- Myonghorang (Lycan NPC) VNUM
+define ITEM_ONE_REWARD 27001 -- ITEM_ONE (Red Potions (s)) received upon quest completion
+define ITEM_ONE_REWARD_AMOUNT 10 -- Amount (x10) of received ITEM_ONE upon quest completion
+define PORTAL_GUARD_VNUM 20402 -- Portal Guard (Lycan NPC) VNUM
+define EXP_AMOUNT_REWARD 300 -- Amount of received exp upon quest completion
+define HUNTED_BEAR_AMOUNT_FLAG "hunted_bears" -- Quest flag name for the hunter bears amount
+define BEAR_VNUM 5204 -- Bear VNUM (It's a specific level 4 bear for e1 map)
+define BEAR_HUNT_AMOUNT 1 -- Amount of bear to hunt (one)
+define EXP_AMOUNT_REWARD_SECOND 450 -- Amount of received exp upon the second quest completion
+define METEORITE_HUNT_AMOUNT 1 -- Amount of meteorite to hunt in the meteorite_hunt.quest (one)
+
+quest source_of_the_devil begin
+	state start begin end
+	state trigger begin
+		when letter begin
+			send_letter(locale_quest(6370))
+			local v = find_npc_by_vnum(MYONGHORANG_VNUM)
+			if 0 ~= v then
+				target.vid("__TARGET__", v, locale_quest(6370))
+			end
+		end
+
+		when button or info begin
+			say_title(locale_quest(6370))
+			say(locale_quest(6385))
+		end
+
+		when __TARGET__.target.click or MYONGHORANG_VNUM.chat.locale_quest(6370) begin
+			target.delete("__TARGET__")
+			clear_letter()
+
+			say_title(mob_name(MYONGHORANG_VNUM))
+			say()
+			say(locale_quest(6371))
+			wait()
+			say_title(mob_name(MYONGHORANG_VNUM))
+			say()
+			say(locale_quest(6372))
+			say_reward(string.format(locale_quest(5043), item_name(ITEM_ONE_REWARD),ITEM_ONE_REWARD_AMOUNT))
+			pc.give_item2(ITEM_ONE_REWARD, ITEM_ONE_REWARD_AMOUNT)
+			set_state(traces_of_evil)
+		end
+	end
+
+	state traces_of_evil begin
+		when letter begin
+			send_letter(locale_quest(6373))
+			local v = find_npc_by_vnum(PORTAL_GUARD_VNUM)
+			if 0 ~= v then
+				target.vid("__TARGET__", v, locale_quest(6370))
+			end
+		end
+
+		when button or info begin
+			say_title(locale_quest(6373))
+			say(locale_quest(6410))
+		end
+
+		when __TARGET__.target.click or PORTAL_GUARD_VNUM.chat.locale_quest(6373) begin
+			target.delete("__TARGET__")
+			clear_letter()
+
+			say_title(mob_name(PORTAL_GUARD_VNUM))
+			say()
+			say(locale_quest(6374))
+			say_reward(string.format(locale_quest(6882), EXP_AMOUNT_REWARD))
+			pc.give_exp2(EXP_AMOUNT_REWARD)
+			set_state(bear_hunt)
+		end
+	end
+
+	-- The whole state can be way easier to create if we stick to the official way (one bear)
+	-- But it won't allow for any flexibility in the code.
+	-- So let's do it the "maintainable" way
+	state bear_hunt begin
+		when enter begin
+			pc.setqf(HUNTED_BEAR_AMOUNT_FLAG, 0)
+		end
+
+		when letter begin
+			send_letter(locale_quest(6411))
+			q.set_counter_name(locale_quest(6412))
+			source_of_the_devil.bear_hunt_kill_count()
+		end
+
+		when button or info begin
+			say_title(locale_quest(6411))
+			say(locale_quest(6376))
+		end
+
+		when BEAR_VNUM.kill begin
+			local kill_count = pc.getqf(HUNTED_BEAR_AMOUNT_FLAG)
+			pc.setqf(HUNTED_BEAR_AMOUNT_FLAG, kill_count + 1)
+			source_of_the_devil.bear_hunt_kill_count()
+		end
+
+		function bear_hunt_kill_count()
+			local total_remaining = 0
+			local current_remaining = BEAR_HUNT_AMOUNT - pc.getqf(HUNTED_BEAR_AMOUNT_FLAG)
+
+			if current_remaining < 0 then
+				current_remaining = 0
+			end
+
+			total_remaining = total_remaining + current_remaining
+			q.set_counter_value(total_remaining)
+			if total_remaining == 0 then
+				say_title(locale_quest(6379))
+				say(locale_quest(6378))
+				set_state("back_to_the_guard")
+			end
+		end
+
+		when leave begin
+			pc.setqf(HUNTED_BEAR_AMOUNT_FLAG, 0)
+			q.done()
+		end
+	end
+
+	state back_to_the_guard begin
+		when letter begin
+			send_letter(locale_quest(6379))
+			local v = find_npc_by_vnum(PORTAL_GUARD_VNUM)
+			if 0 ~= v then
+				target.vid("__TARGET__", v, locale_quest(6379))
+			end
+		end
+
+		when button or info begin
+			say_title(locale_quest(6379))
+			say(locale_quest(6378))
+		end
+
+		when __TARGET__.target.click or PORTAL_GUARD_VNUM.chat.locale_quest(6379) begin
+			target.delete("__TARGET__")
+			clear_letter()
+
+			say_title(mob_name(PORTAL_GUARD_VNUM))
+			say()
+			say(locale_quest(6396))
+			say_reward(string.format(locale_quest(5043), item_name(ITEM_ONE_REWARD), ITEM_ONE_REWARD_AMOUNT))
+			say_reward(string.format(locale_quest(6882), EXP_AMOUNT_REWARD_SECOND))
+			say()
+			pc.give_exp2(EXP_AMOUNT_REWARD_SECOND)
+			pc.give_item2(ITEM_ONE_REWARD, ITEM_ONE_REWARD_AMOUNT)
+			wait()
+			say_title(mob_name(PORTAL_GUARD_VNUM))
+			say()
+			say(string.format(locale_quest(6380), METEORITE_HUNT_AMOUNT))
+			set_state(__COMPLETE__)
+			set_quest_state("meteorite_hunt", "trigger")
+		end
+	end
+
+	state __COMPLETE__ begin
+	end
+end

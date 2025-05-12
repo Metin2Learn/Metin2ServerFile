@@ -1,0 +1,5 @@
+say ( locale_quest ( 25 ) ) 
+if select ( locale_quest ( 4473 ) , locale_quest ( 3418 ) ) == 1 then 
+setskin ( NOWINDOW ) 
+pc . open_acce ( false ) 
+else return end 

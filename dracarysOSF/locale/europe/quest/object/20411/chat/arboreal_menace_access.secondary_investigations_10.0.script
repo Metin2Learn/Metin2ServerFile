@@ -1,0 +1,8 @@
+say_title ( mob_name ( 20411 ) ) 
+say ( locale_quest ( 4583 ) ) 
+say_reward ( locale_quest ( 4584 ) ) 
+wait ( ) 
+say ( locale_quest ( 4585 ) ) 
+select ( locale_quest ( 4586 ) ) 
+target . delete ( "__TARGET__" ) 
+set_state ( "secondary_investigations_11" ) 

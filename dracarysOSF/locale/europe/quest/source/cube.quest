@@ -1,0 +1,42 @@
+quest cube begin
+	state start begin
+		when 20018.chat.locale_quest(210) with pc.get_level() >= 15 begin
+			say_title(locale_quest(321))
+			say(locale_quest(706))
+			wait()
+			setskin(NOWINDOW)
+			command("cube open")
+		end
+
+		when 20017.chat.locale_quest(210) with pc.get_level() >= 30 begin
+			say_title(locale_quest(38))
+			say(locale_quest(707))
+			wait()
+			setskin(NOWINDOW)
+			command("cube open")
+		end
+
+		when 20022.chat.locale_quest(708) with pc.get_level() >= 45 begin
+			say_title(locale_quest(709))
+			say(locale_quest(710))
+			wait()
+			setskin(NOWINDOW)
+			command("cube open")
+		end
+
+		when 20018.chat.locale_quest(705) with pc.get_level() >= 15 begin
+			setskin(NOWINDOW)
+			command("cube make all")
+		end
+
+		when 20017.chat.locale_quest(705) with pc.get_level() >= 30 begin
+			setskin(NOWINDOW)
+			command("cube make all")
+		end
+
+		when 20022.chat.locale_quest(705) with pc.get_level() >= 45 begin
+			setskin(NOWINDOW)
+			command("cube make all")
+		end
+	end
+end

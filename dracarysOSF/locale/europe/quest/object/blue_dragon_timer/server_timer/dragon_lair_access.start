@@ -1,0 +1,7 @@
+game . set_event_flag ( "dragon_lair_timer_used" , 0 ) 
+if game . get_event_flag ( "dragon_lair_alive" ) == 1 then 
+notice_all ( 886 ) 
+else 
+notice_all ( 887 ) 
+end 
+dragon_lair_access . warp_all_from_lair ( ) 

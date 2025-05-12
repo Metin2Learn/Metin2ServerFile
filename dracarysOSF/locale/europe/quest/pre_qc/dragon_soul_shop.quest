@@ -1,0 +1,8 @@
+quest dragon_soul_shop begin
+	state start begin
+		when 20001.chat.locale_quest(929) with ds.is_qualified() begin
+			say(locale_quest(939))
+			npc.open_shop(12)
+		end
+	end
+end

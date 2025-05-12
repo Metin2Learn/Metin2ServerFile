@@ -1,0 +1,4 @@
+say_title ( locale_quest ( 97 ) ) 
+say ( locale_quest ( 98 ) ) 
+say_title ( locale_quest ( 99 ) ) 
+say_reward ( locale_quest ( 100 ) ) 

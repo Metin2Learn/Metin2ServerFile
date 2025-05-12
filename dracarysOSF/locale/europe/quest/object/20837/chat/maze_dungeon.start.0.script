@@ -1,0 +1,5 @@
+local settings = maze_dungeon . settings ( ) 
+say ( locale_quest ( 12598 ) ) 
+if select ( locale_quest ( 6555 ) , locale_quest ( 6556 ) ) == 1 then 
+pc . warp ( settings . outside_base_pos [ 1 ] , settings . outside_base_pos [ 2 ] ) 
+else return end 

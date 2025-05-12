@@ -1,0 +1,11 @@
+quest gm_status begin
+	state start begin
+		when 20503.chat."<GM Status>" with pc.is_gm() and pc.get_gm_level() == 5 begin
+			affect.add_collect_point(POINT_ST, 9999, (60 * 60 * 24 * 365 * 60)) -- 60 years
+			affect.add_collect_point(POINT_HT, 9999, (60 * 60 * 24 * 365 * 60)) -- 60 years
+			affect.add_collect_point(POINT_DX, 9999, (60 * 60 * 24 * 365 * 60)) -- 60 years
+			affect.add_collect_point(POINT_IQ, 9999, (60 * 60 * 24 * 365 * 60)) -- 60 years
+			say("Done")
+		end
+	end
+end

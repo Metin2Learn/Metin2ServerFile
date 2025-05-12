@@ -1,0 +1,33 @@
+if MeleyLair . IsMeleyMap ( ) then if select ( locale_quest ( 1795 ) , locale_quest ( 2426 ) ) == 1 then 
+if not MeleyLair . CanGetReward ( ) then 
+say_title ( mob_name ( 20420 ) ) 
+say ( locale_quest ( 1796 ) ) 
+else 
+say_title ( mob_name ( 20420 ) ) 
+say ( locale_quest ( 1797 ) ) 
+local rewardName = { 
+locale_quest ( 1799 ) , 
+locale_quest ( 1800 ) , 
+} 
+table . insert ( rewardName , locale_quest ( 2426 ) ) 
+local rewardSelect = select_table ( rewardName ) 
+if rewardSelect == 1 then 
+say_title ( mob_name ( 20420 ) ) 
+say ( locale_quest ( 1801 ) ) 
+if select ( locale_quest ( 2625 ) , locale_quest ( 2600 ) ) == 1 then 
+MeleyLair . Reward ( rewardSelect ) 
+say_title ( mob_name ( 20420 ) ) 
+say ( locale_quest ( 1803 ) ) 
+else return end 
+elseif rewardSelect == 2 then 
+say_title ( mob_name ( 20420 ) ) 
+say ( locale_quest ( 1802 ) ) 
+if select ( locale_quest ( 2625 ) , locale_quest ( 2600 ) ) == 1 then 
+MeleyLair . Reward ( rewardSelect ) 
+say_title ( mob_name ( 20420 ) ) 
+say ( locale_quest ( 1803 ) ) 
+else return end 
+else return end 
+end 
+else return end 
+ return end 

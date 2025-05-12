@@ -1,0 +1,3 @@
+say_title ( locale_quest ( 7517 ) ) 
+say ( locale_quest ( 7523 ) ) 
+say ( locale_quest ( 7524 ) ) 

@@ -1,0 +1,4 @@
+say_title ( locale_quest ( 649 ) ) 
+say ( locale_quest ( 650 ) ) 
+say_item_vnum ( 30252 ) 
+say_reward ( string . format ( locale_quest ( 651 ) , pc . getqf ( "collect_count" ) ) ) 

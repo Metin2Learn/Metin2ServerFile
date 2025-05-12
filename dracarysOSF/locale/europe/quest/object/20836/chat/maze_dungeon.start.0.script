@@ -1,0 +1,29 @@
+local settings = maze_dungeon . settings ( ) 
+say ( locale_quest ( 12594 ) ) 
+say_red ( locale_quest ( 12621 ) ) 
+say ( locale_quest ( 12622 ) ) 
+if select ( locale_quest ( 12595 ) , locale_quest ( 12596 ) ) == 1 then 
+if pc . get_conqueror_level ( ) <= 0 then 
+say ( locale_quest ( 12618 ) ) 
+return 
+end 
+local canPass = false 
+local ticketGroup = { get_special_item_group ( 10033 ) } 
+for i = 1 , table . getn ( ticketGroup ) , 2 begin 
+if pc . count_item ( ticketGroup [ i ] ) >= ticketGroup [ i + 1 ] then 
+canPass = true 
+break 
+end 
+end 
+if not canPass then 
+say ( locale_quest ( 12597 ) ) 
+return 
+end 
+for i = 1 , table . getn ( ticketGroup ) , 2 begin 
+if pc . count_item ( ticketGroup [ i ] ) >= ticketGroup [ i + 1 ] then 
+pc . remove_item ( ticketGroup [ i ] , ticketGroup [ i + 1 ] ) 
+break 
+end 
+end 
+pc . warp ( settings . inside_base_pos [ 1 ] [ 1 ] , settings . inside_base_pos [ 1 ] [ 2 ] ) 
+else return end 

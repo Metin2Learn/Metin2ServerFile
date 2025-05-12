@@ -1,0 +1,176 @@
+quest dragon_soul begin
+	state start begin
+		when levelup or letter with pc.get_level() >= 30 begin
+			send_letter(locale_quest(930))
+			local v = find_npc_by_vnum(20001)
+
+			if 0 != v then
+				target.vid("__TARGET__", v, mob_name(20001))
+			end
+		end
+
+		when info or button begin
+			say(locale_quest(931))
+		end
+
+		when 20001.chat.locale_quest(932) with pc.get_level() >= 30 begin
+			target.delete("__TARGET__")
+			say_title(mob_name(20001))
+			say(locale_quest(933))
+			set_state(state_learning)
+		end
+	end
+
+	state state_learning begin
+		when letter begin
+			send_letter(locale_quest(934))
+		end
+
+		when info or button begin
+			say(locale_quest(935))
+		end
+
+		when kill begin
+			if npc.is_pc() then
+				return
+			end
+
+			if pc.count_item(30270) < 10 then
+				if drop_gamble_with_flag("ds_drop") then
+					local level_difference = 15
+					local min_limit = npc.get_level() - level_difference
+					local max_limit = npc.get_level() + level_difference
+
+					if pc.get_level() >= min_limit and pc.get_level() <= max_limit then
+						game.drop_item_with_ownership(30270, 1, 300)
+					end
+				end
+			end
+		end
+
+		when 20001.chat.locale_quest(934) begin
+			say_title(mob_name(20001))
+			if pc.count_item(30270) >= 10 then
+				say(string.format(locale_quest(936), 9))
+				pc.remove_item(30270, 10)
+				ds.give_qualification()
+				char_log(pc.get_player_id(), "DS_QUALIFICATION", "SUCCESS")
+				pc.give_item2(50255)
+				local today = math.floor(get_global_time() / 86400)
+				pc.setf("dragon_soul", "eye_timestamp", today)
+				pc.setf("dragon_soul", "eye_left", 9)
+				set_state(state_farming)
+			else
+				say(locale_quest(937))
+			end
+		end
+	end
+
+	state state_farming begin
+		when letter begin
+			send_letter(locale_quest(938))
+		end
+
+		when info or button begin
+			say(string.format(locale_quest(940), pc.getf("dragon_soul", "eye_left")))
+		end
+
+		when kill begin
+			if npc.is_pc() then
+				return
+			end
+
+			if drop_gamble_with_flag("ds_drop") then
+				local eye_left = pc.getf("dragon_soul", "eye_left")
+				local haved_gemstone_number = pc.count_item(30270)
+
+				local level_difference = 15
+				local min_limit = npc.get_level() - level_difference
+				local max_limit = npc.get_level() + level_difference
+
+				if pc.get_level() >= min_limit and pc.get_level() <= max_limit then
+					if eye_left > haved_gemstone_number / 10 then
+						game.drop_item_with_ownership(30270, 1, 300)
+					end
+				end
+			end
+		end
+
+		when 30270.pick begin
+			local eye_left = pc.getf("dragon_soul", "eye_left")
+			if eye_left <= 0 then
+				return
+			end
+
+			if pc.count_item(30270) >= 10 then
+				pc.setf("dragon_soul", "eye_left", eye_left - 1)
+				pc.remove_item(30270, 10)
+				pc.give_item2(50255)
+				if 1 == eye_left then
+					notice_multiline(locale_quest(941), notice)
+					set_state(state_closed_season)
+				end
+			end
+		end
+
+		when 20001.chat.locale_quest(942) begin
+			say_title(mob_name(20001))
+			local today = math.floor(get_global_time() / 86400)
+			if today == pc.getf("dragon_soul", "eye_timestamp") then
+				say(locale_quest(943))
+			else
+				say(locale_quest(944))
+				pc.setf("dragon_soul", "eye_timestamp", today)
+				pc.setf("dragon_soul", "eye_left", 10)
+			end
+		end
+	end
+
+	state state_closed_season begin
+		when letter begin
+			send_letter(locale_quest(945))
+		end
+
+		when info or button begin
+			say(locale_quest(946))
+			local today = math.floor(get_global_time() / 86400)
+			if today == pc.getf("dragon_soul", "eye_timestamp") then
+				say(locale_quest(947))
+			else
+				say(locale_quest(948))
+			end
+		end
+
+		when 20001.chat.locale_quest(938) begin
+			say_title(mob_name(20001))
+			local today = math.floor(get_global_time() / 86400)
+			if today == pc.getf("dragon_soul", "eye_timestamp") then
+				say(locale_quest(943))
+			else
+				say(locale_quest(944))
+				pc.setf("dragon_soul", "eye_timestamp", today)
+				pc.setf("dragon_soul", "eye_left", 10)
+				set_state(state_farming)
+			end
+		end
+	end
+
+	-- deprecated states. so, jump to new state.
+	state state_1 begin
+		when login begin
+			set_state(state_learning)
+		end
+	end
+
+	state state_2 begin
+		when login begin
+			set_state(state_learning)
+		end
+	end
+
+	state state_3 begin
+		when login begin
+			set_state(state_closed_season)
+		end
+	end
+end

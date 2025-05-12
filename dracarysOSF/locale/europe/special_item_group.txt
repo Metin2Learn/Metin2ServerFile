@@ -1,0 +1,239 @@
+#
+# This file is part of "special_item_group.txt" and has
+# been broken down into groups that contain special
+# item attributes (rings).
+#
+# When we finish editing this file we must merge it
+# again into the file "special_item_group.txt"
+#
+# We have separated groups of items into other files
+# so the main "special_item_group.txt" does not get
+# huge and confusing to edit.
+#
+
+Group	스폐셜
+{
+	Vnum	10050
+	type	special
+	1	71148	100000	1
+	2	71149	100001	1
+	3	71158	100002	1
+	4	71135	100003	1
+	5	71136	100004	1
+	6	71143	100005	1
+	7	71145	100006	1
+	8	71188	100007	1
+	9	71199	100008	1
+	10	71202	100009	1
+	11	72054	100010	1
+	12	76030	100011	1
+	13	76047	100011	1
+	14	72062	100012	1
+	15	72062	100012	1
+}
+
+Group	속성
+{
+	Vnum	100000
+	type	ATTR
+	1	66	30	-- APPLY_MALL_EXPBONUS
+	2	78	20	-- APPLY_RESIST_WARRIOR
+	3	79	20	-- APPLY_RESIST_ASSASSIN
+	4	95	20	-- APPLY_RESIST_WOLFMAN
+	5	63	30	-- APPLY_ATT_BONUS_TO_MONSTER
+	6	69	10	-- APPLY_MAX_HP_PCT
+	7	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성2
+{
+	Vnum	100001
+	type	ATTR
+	1	66	30	-- APPLY_MALL_EXPBONUS
+	2	80	20	-- APPLY_RESIST_SURA
+	3	81	20	-- APPLY_RESIST_SHAMAN
+	4	95	20	-- APPLY_RESIST_WOLFMAN
+	5	63	30	-- APPLY_ATT_BONUS_TO_MONSTER
+	6	69	10	-- APPLY_MAX_HP_PCT
+	7	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성3
+{
+	Vnum	100002
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	64	30	-- APPLY_MALL_ATTBONUS
+	3	7	20	-- APPLY_ATT_SPEED
+	4	9	20	-- APPLY_CAST_SPEED
+	5	69	10	-- APPLY_MAX_HP_PCT
+	6	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성4
+{
+	Vnum	100003
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	7	20	-- APPLY_ATT_SPEED
+	3	9	20	-- APPLY_CAST_SPEED
+	4	64	30	-- APPLY_MALL_ATTBONUS
+	5	69	10	-- APPLY_MAX_HP_PCT
+	6	70	10	-- APPLY_MAX_SP_PCT
+	7	84	5	-- APPLY_COSTUME_ATTR_BONUS
+}
+
+Group	속성5
+{
+	Vnum	100004
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	64	30	-- APPLY_MALL_ATTBONUS
+	3	7	20	-- APPLY_ATT_SPEED
+	4	9	20	-- APPLY_CAST_SPEED
+	5	69	10	-- APPLY_MAX_HP_PCT
+	6	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성6
+{
+	Vnum	100005
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	7	20	-- APPLY_ATT_SPEED
+	3	9	20	-- APPLY_CAST_SPEED
+	4	63	30	-- APPLY_ATT_BONUS_TO_MONSTER
+	5	69	10	-- APPLY_MAX_HP_PCT
+	6	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성7
+{
+	Vnum	100006
+	type	ATTR
+	1	66	30	-- APPLY_MALL_EXPBONUS
+	2	7	10	-- APPLY_ATT_SPEED
+	3	9	10	-- APPLY_CAST_SPEED
+	4	69	5	-- APPLY_MAX_HP_PCT
+	5	70	5	-- APPLY_MAX_SP_PCT
+	6	63	10	-- APPLY_ATT_BONUS_TO_MONSTER
+}
+
+Group	속성8
+{
+	Vnum	100007
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	55	30	-- APPLY_MAGIC_ATT_GRADE
+	3	7	20	-- APPLY_ATT_SPEED
+	4	9	20	-- APPLY_CAST_SPEED
+	5	69	10	-- APPLY_MAX_HP_PCT
+	6	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성9
+{
+	Vnum	100008
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	7	20	-- APPLY_ATT_SPEED
+	3	9	20	-- APPLY_CAST_SPEED
+	4	63	10	-- APPLY_ATT_BONUS_TO_MONSTER
+	5	69	10	-- APPLY_MAX_HP_PCT
+	6	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성10
+{
+	Vnum	100009
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	7	20	-- APPLY_ATT_SPEED
+	3	9	20	-- APPLY_CAST_SPEED
+	4	63	10	-- APPLY_ATT_BONUS_TO_MONSTER
+	5	64	30	-- APPLY_MALL_ATTBONUS
+	6	55	30	-- APPLY_MAGIC_ATT_GRADE
+}
+
+Group	속성11
+{
+	Vnum	100010
+	type	ATTR
+	1	64	30	-- APPLY_MALL_ATTBONUS
+	2	55	30	-- APPLY_MAGIC_ATT_GRADE
+	3	7	20	-- APPLY_ATT_SPEED
+	4	9	20	-- APPLY_CAST_SPEED
+	5	115	10	-- APPLY_RESIST_HUMAN
+	6	73	10	-- APPLY_SKILL_DEFEND_BONUS
+}
+
+Group	속성12
+{
+	Vnum	100011
+	type	ATTR
+	1	66	50	-- APPLY_MALL_EXPBONUS
+	2	7	20	-- APPLY_ATT_SPEED
+	3	9	20	-- APPLY_CAST_SPEED
+	4	63	10	-- APPLY_ATT_BONUS_TO_MONSTER
+	5	69	10	-- APPLY_MAX_HP_PCT
+	6	70	10	-- APPLY_MAX_SP_PCT
+}
+
+Group	속성13
+{
+	Vnum	100012
+	type	ATTR
+	1	66	200	-- APPLY_MALL_EXPBONUS
+}
+
+Group	이동반지
+{
+	Vnum	10031
+	Type	Quest
+	1	70058	1	1 -- Teleportation Ring
+	2	76042	1	1 -- Teleportation Ring
+}
+
+Group	TicketGroup
+{
+	Vnum	10033
+	1	70007	1	1
+	2	71095	1	1
+	3	71174	1	1
+	4	71175	1	1
+	5	76019	1	1
+}
+
+###############################################################################
+# Reference: https://it-wiki.metin2.gameforge.com/index.php/Baule_di_Idra
+Group	HydraChest
+{
+	Vnum	54705 -- Chief Orc's Box
+	1	55410	1	100 -- Nessie Egg
+	2	25041	1	100 -- Magic Stone
+	3	72051	1	100 -- Scroll - M. Ice Witch
+	4	72052	1	100 -- Scroll - General Yonghan
+	5	50926	200	100 -- Glimmerstone
+	6	76019	1	100 -- Passage Ticket
+	7	76031	1	100 -- Protein Snack
+	8	72058	3	100 -- Spirit Stone Bundle
+	9	71001	2	100 -- Exorcism Scroll
+	10	70303	1	100 -- Hydran Ring
+	11	30251	5	100 -- Malevolence Jewel
+	12	30252	5	100 -- Wisdom Jewel
+	13	30167	5	100 -- Red Ghost Tree Branch
+	14	30168	5	100 -- Leaders' Notes
+	15	71142	1	100 -- Royal Tiger (white)
+	16	27992	1	100 -- White Pearl
+	17	27993	1	100 -- Blue Pearl
+	18	27994	1	100 -- Blood-Red Pearl
+	19	72301	1	100 -- Blessing Scroll
+	20	76028	1	100 -- Stone Handbook
+	21	55400	1	100 -- Mystery Box
+	22	72727	1	100 -- Moon Elixir (S)
+	23	76021	1	100 -- Sun Elixir (S)
+	24	85003	1	100 -- Lord Sash (noble)
+	25	39029	1	100 -- Reinforce Item
+	26	38060	1	100 -- Bag of Emotions
+	27	100700	1	100 -- Flame of the Dragon (B)
+}

@@ -1,0 +1,237 @@
+# Item Vnum Mask Table
+# OriginalItemVnum	NewItemVnum
+
+# Experience Rings
+70005	39002
+70005	72001
+70005	72002
+70005	72003
+70005	72303
+
+# Third Hand
+71010	72016
+71010	72017
+71010	72018
+71010	76053
+71010	70002
+
+# Thief's Gloves
+70043	72004
+70043	72005
+70043	72006
+
+# Magic Stone
+25041	39001
+
+# Peach Flower Wine
+70020	39003
+70020	76000
+
+# Blessing Marble
+70024	39004
+70024	72304
+70024	76015
+
+# Magic Copper Ore
+70035	39005
+70035	72308
+
+# Bravery Cape
+70038	39006
+70057	76007
+
+# Blacksmith Handbook
+70039	39007
+70039	72309
+
+# Exorcism Scroll
+71001	39008
+71001	72310
+71001	76026
+
+# Skill Reset Document
+71003	39009
+71003	50003
+
+# Potion of Attack +10
+71014	39010
+71014	76017
+
+# Blessing of Life
+71018	39011
+
+# Blessing of Magic
+71019	39012
+
+# Blessing of the Dragon
+71020	39013
+71020	72311
+
+# Scroll of War
+71021	39014
+
+# Stone of the Blacksmith
+71025	39015
+
+# Magic Iron Ore
+71026	39016
+
+# Dragon God Life
+71027	39017
+71027	72037
+71027	72038
+71027	72039
+71027	76035
+
+# Dragon God Attack
+71028	39018
+71028	72031
+71028	72032
+71028	72312
+71028	76036
+
+# Dragon God Intelligence
+71029	39019
+71029	72040
+71029	72041
+71029	72042
+
+# Dragon God Defence
+71030	39020
+71030	72034
+71030	72035
+71030	72036
+71030	72313
+
+# Dragon God Support
+71031	39021
+
+# Dragon Scroll
+71032	39022
+71032	72314
+71032	76009
+
+# Researcher's Elixir
+71035	39023
+71035	76020
+
+# Critical Strike
+71044	39024
+71044	72025
+71044	72026
+71044	72027
+
+# Piercing Strike
+71045	39025
+
+# Potion of Speed
+71050	39026
+71050	76012
+
+# Stone Handbook
+71083	39027
+71083	76028
+
+# Enchant Item
+71084	39028
+
+# Reinforce Item
+71085	39029
+
+# Concentrated Reading
+71094	39030
+71094	76034
+
+# Potion of Haste
+71101	39031
+71101	76003
+
+# Fruit of Life
+71107	39032
+
+# Scroll of Correction
+71109	39033
+
+# Horse Sugar
+71110	39034
+
+# Glass of Insight
+71113	39035
+
+# Wind Shoes
+72701	39036
+72701	76025
+
+# Sun Elixir (S)
+72723	39037
+72723	76021
+
+# Sun Elixir (M)
+72724	39038
+72724	76022
+
+# Sun Elixir (L)
+72725	39039
+
+# Moon Elixir (S)
+72727	39040
+72727	76004
+
+# Moon Elixir (M)
+72728	39041
+72728	76005
+
+# Moon Elixir (L)
+72729	39042
+
+# Scroll of the Location
+22010	39043
+22010	22011
+
+# Shrunken Head
+30320	76002
+30320	30319
+
+# Blessing Scroll
+25040	72301
+25040	76016
+
+# Book of the Leader
+70003	72302
+70003	71012
+70003	72043
+70003	72044
+70003	72045
+70003	76011
+
+# Vanishing Mirror
+70026	72305
+
+# Blacksmith's Memo
+70027	72306
+
+# Wise Man's Memo
+70028	72307
+
+# Blood Stone
+30190	76010
+30190	30191
+
+# Passage Ticket
+71095	76019
+71095	71130
+71095	71174
+71095	71175
+71095	71176
+
+# Shrunken Head
+30319	76002
+30319	30320
+
+# Emotion Mask
+71011	38059
+71011	71033
+71011	72028
+71011	72029
+71011	72030
+71011	76054

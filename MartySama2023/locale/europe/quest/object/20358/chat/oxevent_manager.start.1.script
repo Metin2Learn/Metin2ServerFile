@@ -1,0 +1,7 @@
+say ( locale_quest ( 7575 ) ) 
+local s = select ( locale_quest ( 7576 ) , locale_quest ( 2426 ) ) 
+if s == 1 then 
+oxevent . end_event_force ( ) 
+game . set_event_flag ( "ox_map_login_counter" , 0 ) 
+say ( locale_quest ( 7577 ) ) 
+end 

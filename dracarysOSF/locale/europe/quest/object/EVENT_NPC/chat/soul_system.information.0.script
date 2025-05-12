@@ -1,0 +1,12 @@
+say_title ( locale_quest ( 8223 ) ) 
+say ( locale_quest ( 8224 ) ) 
+say ( locale_quest ( 8225 ) ) 
+say ( locale_quest ( 8226 ) ) 
+local s = select ( locale_quest ( 8227 ) , locale_quest ( 8228 ) ) 
+if s ~= 1 then 
+say ( locale_quest ( 8229 ) ) 
+else 
+say ( locale_quest ( 8230 ) ) 
+set_state ( "hunt_wolves" ) 
+end 
+target . delete ( "__TARGET__" ) 

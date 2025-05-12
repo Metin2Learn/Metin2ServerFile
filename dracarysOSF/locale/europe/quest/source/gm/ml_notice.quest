@@ -1,0 +1,10 @@
+quest ml_notice begin
+	state start begin
+		when 9010.chat."Test notice_all(id, arg)" begin
+			notice_all(1388, 666)
+		end
+		when 9010.chat."Test notice_multiline(gf.id, arg)" begin
+			notice_multiline(string.format(gameforge[LC()][1388], 666), notice_all)
+		end
+	end
+end

@@ -1,0 +1,25 @@
+quest horse_exchange_ticket begin
+	state start begin
+		when 20349.chat.locale_quest(2089) with pc.count_item(50005) >= 1 begin
+			say_title(locale_quest(2090))
+			say(locale_quest(2091))
+			local b = select(locale_quest(2092), locale_quest(39))
+			if 1 == b then
+				if pc.count_item(50005) >= 1 then
+					pc.removeitem(50005, 1)
+					pc.give_item2(50050, 1)
+					say(locale_quest(2093))
+				end
+			elseif 2 == b then
+			else
+				say(string.format(locale_quest(123), b))
+			end
+		end
+	end
+
+	state __COMPLETE__ begin
+		when enter begin
+			q.done()
+		end
+	end
+end

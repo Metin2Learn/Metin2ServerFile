@@ -1,0 +1,23 @@
+if snow_dungeon . is_snowd ( pc . get_map_index ( ) ) and d . getf ( "level" ) == 2 then if d . getf ( "level2_use_key" ) > 0 then 
+test_chat ( "TEST : Key already used!" ) 
+return 
+end 
+local setting = snow_dungeon . setting ( ) 
+if setting . need_shaman then 
+if pc . get_job ( ) ~= SHAMAN then 
+say ( locale_quest ( 8190 ) ) 
+return 
+end 
+end 
+local rand = number ( 1 , 100 ) 
+local chance = 30 
+if rand <= chance or is_test_server ( ) then 
+snow_dungeon . level_clear ( ) 
+d . setf ( "level2_use_key" , 1 ) 
+d . notice ( 8191 ) 
+server_timer ( "snow_dungeon_floor3_timer" , setting . floor_jump_delay , get_server_timer_arg ( ) ) 
+else 
+say ( locale_quest ( 8192 ) ) 
+end 
+item . remove ( ) 
+ return end 

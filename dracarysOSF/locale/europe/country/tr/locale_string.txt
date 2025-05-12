@@ -1,0 +1,4848 @@
+"$*** Winner of the item %s is: %s ***";
+"$*** %s nesnesinin kazananı: %s ***";
+
+"%d guild EXP received!";
+"%d Lonca EXP aldın!";
+
+"%d minutes remaining to register for the PvP tournament!";
+"PvP turnuvasına kaydolmak için %d dakika kaldı!";
+
+"%d more until the battle begins!";
+"Savaşın başlamasına %d kaldı!";
+
+"%d ±ÇÀ» ´õ ÀĞ¾î¾ß ¼ö·ÃÀ» ¿Ï·á ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Bu yeteneği geliştirmek için %d Yetenek Kitabı daha okumalısınız.";
+
+"%d ³ÉÀ» ÅõÀÚÇÏ¼Ì½À´Ï´Ù.";
+"%d Yang yatırdın.";
+
+"%d ³ÉÀ» È¹µæÇÏ¼Ì½À´Ï´Ù.";
+"%d Yang kazandın.";
+
+"%d ·¹º§ÀÌ µÇ¾î¾ß ´Ù½Ã ¿°»öÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.";
+"Saçını tekrar boyayabilmek için %d. seviyeye ulaşman gerekli.";
+
+"%d ºĞ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"Sohbet bloklamanızın kalkmasına %d dakika %d saniye kaldı";
+
+"%d ½Ã°£ %d ºĞ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"Sohbet bloklamanızın kalkmasına %d saat %d dakika %d saniye kaldı";
+
+"%d ½Ã°£ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"Sohbet bloklamanızın kalkmasına %d saat %d saniye kaldı";
+
+"%d Á¾·ù %d ¸¶¸® ³¬À½";
+"%d nın %d Yakaladın.";
+
+"%d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"Sohbet engelinizin kalkmasına %d saniye kaldı";
+
+"%d ÃÊ ÈÄ¿¡ ±ºÁÖÀÇ Ãàº¹À» »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù";
+"%d saniye sonra İmparator Kutsamasını kullanabilirsin.";
+
+"%d ÃÊ°£ ÄğÅ¸ÀÓÀÌ Àû¿ëÁßÀÔ´Ï´Ù.";
+"Dinlenme Süresi yaklaşık %d saniye";
+
+"%d ÃÊÈÄ ¸ñÀûÁö·Î ÀÌµ¿µË´Ï´Ù.";
+"%d saniye içinde hedefte olacaksın.";
+
+"%d%% È®·ü·Î °üÅë °ø°İ";
+"Delici saldırı şansı %%%d";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã °æÇèÄ¡ Ãß°¡ »ó½Â";
+"Eğer kazanırsan tecrübe %%%d artacak.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã µ· 2¹è µå·Ó";
+"Eğer kazanırsan Yang %%%d artacak.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã »ı¸í·Â È¸º¹";
+"Kazandıktan sonra hayat puanın %%%d oranında artacak.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã ¾ÆÀÌÅÛ 2¹è µå·Ó";
+"Eğer kazanırsan ele geçirilen nesne %%%d artacak.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã Á¤½Å·Â È¸º¹";
+"Eğer kazanırsan SP %%%d artacak.";
+
+"%d%% È®·ü·Î Ä¡¸íÅ¸ °ø°İ";
+"Kritik saldırı şansı %%%d";
+
+"%d%% È®·ü·Î Å¸°İ½Ã »ó´ë Àü½Å·Â ¼Ò¸ğ";
+"%%%d oranında SP düşmandan çalma şansı.";
+
+"%d%% È®·ü·Î ÇÇÇØ½Ã Á¤½Å·Â È¸º¹";
+"Oranında SP emiliyor %%%d.";
+
+"%dºĞÀÇ °áÁ¦½Ã°£ÀÌ Ãß°¡ µÇ¾ú½À´Ï´Ù. (°áÁ¦¹øÈ£ %d)";
+"%d oyun süresi hesabınıza eklendi. (Ödeme Numarası %d)";
+
+"%dÀÇ °æÇèÄ¡¸¦ È¹µæÇß½À´Ï´Ù.";
+"%d Tecrübe Puanı kazandın.";
+
+"%dÃÊ ³²¾Ò½À´Ï´Ù.";
+"%d saniye sonra oyun kapanacak.";
+
+"%dÃÊ ¸¸Å­ ÃæÀüµÇ¾ú½À´Ï´Ù.";
+"%d saniye eklendi.";
+
+"%dÃÊ ÈÄ °ÔÀÓÀÌ ¼Ë´Ù¿î µË´Ï´Ù.";
+"Oyun %d saniye sonra kapanacak.";
+
+"%s";
+"%s";
+
+"%s : %d ¸¶¸®";
+"%s: %d";
+
+"%s SP¼Ò¸ğ: %d";
+"%s FP Kullanımı: %d";
+
+"%s earned %d points in a game of okey.";
+"%s bir okey turunda %d puan topladı.";
+
+"%s effect activated.";
+"%s etkisi etkinleştirildi.";
+
+"%s effect not activated.";
+"%s etkisi etkinleştirilmedi.";
+
+"%s emerges from the Transport Box.";
+"%s nakliye kutusundan çıkıyor.";
+
+"%s has been revived.";
+"%s diriltildi.";
+
+"%s has blocked you.";
+"%s seni engelledi.";
+
+"%s has completed level %u in Sung Mahi Tower!";
+"%s, Sung Mahi'nin Cehennem Kulesi'nde %u. katı geçti!";
+
+"%s has erected all the outposts and Sung Mahi's control will start in %d minutes.";
+"%s bölgesi tüm karakolları kurdu ve Sung Mahi'nin kontrolü %d dakika sonra başlayacak.";
+
+"%s has evolved to %s! Excellent!";
+"%s %s erişti! Harika!";
+
+"%s has hatched!";
+"%s yumurtadan çıktı!";
+
+"%s has left the arena. %s wins.";
+"%s Arena'yı terk etti. %s kazandı.";
+
+"%s has occupied %s!";
+"%s, %s noktasını işgal etti!";
+
+"%s has reached level %d!";
+"%s %d. seviyeye erişti!";
+
+"%s has reached the personal score of %d!";
+"%s, %d kişisel puan durumuna erişti!";
+
+"%s improvement failed.";
+"%s Geliştirme başarısız.";
+
+"%s improvement successful.";
+"%s Geliştirme başarılı.";
+
+"%s is already being blocked.";
+"%s zaten senin tarafından engellendi.";
+
+"%s is attacking %s!";
+"%s, %s noktasına saldırıyor!";
+
+"%s is currently fast asleep.";
+"%s şimdi derin uykuda.";
+
+"%s is insufficient. You need %d for the next stage of evolution.";
+"%s yeterli değil. Bir sonraki gelişme aşaması için ihtyiacın olan: %d.";
+
+"%s is no longer blocked.";
+"%s artık engellenmeyecek.";
+
+"%s is now blocked.";
+"%s şu andan itibaren engellenecek.";
+
+"%s is now in a Transport Box.";
+"%s şimdi bir nakliye kutusunda.";
+
+"%s is the tournament victor!";
+"Turnuvanın galibi %s!";
+
+"%s killcount %d mobkillcount %d bosskillcount %d ¼ºÁö ÁøÀÔ¼ö %d";
+"%s öldürülen %d öldürülen mob %d öldürülen lider %d Kutsal alan numarası %d";
+
+"%s killed %s.";
+"%s öldürdü: %s.";
+
+"%s recovers from the exhaustion.";
+"%s yorgunluğunu atıyor.";
+
+"%s refuses to eat anything!";
+"%s beslenmeyi reddediyor!";
+
+"%s skill activated. HP restored by %d.";
+"%s becerisi etkinleştirildi. %d HP yüklendi.";
+
+"%s skill activated. Slow, poison and bleeding effects were removed.";
+"%s etkisi etkinleştirildi. Yavaşlama, zehir ve kanama etkileri kaldırıldı.";
+
+"%s skill activated. You will now receive no damage.";
+"%s becerisi etkinleştirildi. Artık hasar almayacaksın.";
+
+"%s still has %d outposts. (%d/%d)";
+"%s bölgesinde %d karakol kaldı. (%d/%d)";
+
+"%s wakes up and dives into the tasty meal.";
+"%s uyanıyor ve hemen lezzetli öğününe dalıyor.";
+
+"%s was successful! A %d%% absorption rate on their new %s. Congratulations!";
+"%s başarılı! %%%d Emiş oranı ile yeni %s. Tebrikler!";
+
+"%s will appear here: %s";
+"%s şurada görülür: %s";
+
+"%s ±ºÁÖ ÈÄº¸¿¡¼­ »èÁ¦ÇÏ¿´½À´Ï´Ù";
+"İmparator adayı olarak %s silindi.";
+
+"%s ±ºÁÖ·Î ÀÔ¸í Çß½À´Ï´Ù.";
+"%s İmparator adayı olarak gösterildi.";
+
+"%s ±ºÁÖ¸£ Á¦°Å ÇÏ¿´½À´Ï´Ù..";
+"%s İmparatorluk görevini bıraktı.";
+
+"%s ±ºÁÖ¸¦ Á¦°Å ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"%s İmparatoru görevi bırakamaz.";
+
+"%s ±æµå°¡ %s ±æµå¿¡ ¼±ÀüÆ÷°í¸¦ ÇÏ¿´½À´Ï´Ù!";
+"%s, %s loncasına karşı savaş ilan etti!";
+
+"%s ±æµå°¡ %s ±æµå¿ÍÀÇ ÀüÀï¿¡¼­ ½Â¸® Çß½À´Ï´Ù.";
+"Lonca savaşında %s, %s loncasına karşı kazandı.";
+
+"%s ±æµå°¡ %s ±æµåÀÇ ±ê¹ßÀ» »©¾Ñ¾Ò½À´Ï´Ù!";
+"%s Loncası %s Loncasının bayrağını ele geçirdi!";
+
+"%s ±æµå¿Í %s ±æµå »çÀÌÀÇ ÀüÀïÀÌ ¹«½ÂºÎ·Î ³¡³µ½À´Ï´Ù.";
+"%s ile %s arasındaki lonca savaşı berabere sonuçlandı!";
+
+"%s ±æµå¿Í %s ±æµå »çÀÌÀÇ ÀüÀïÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.";
+"%s ile %s arasındaki lonca savaşı iptal oldu!";
+
+"%s ±æµå¿Í %s ±æµå°¡ Àá½Ã ÈÄ ÀüÀïÀ» ½ÃÀÛÇÕ´Ï´Ù!";
+"%s ile %s arasındaki lonca savaşı birkaç dakika içinde başlayacak!";
+
+"%s ±æµå¿Í %s ±æµå°¡ ÀüÀïÀ» ½ÃÀÛÇÏ¿´½À´Ï´Ù!";
+"%s ile %s arasında lonca savaşı başladı!";
+
+"%s ±æµåÀÇ %sÀÌ %d%% Áõ°¡Çß½À´Ï´Ù!";
+"Loncanın %s %s %%%d derecesine yükseldi!";
+
+"%s ±æµåÀÇ %sÀÌ Á¤»óÀ¸·Î µ¹¾Æ¿Ô½À´Ï´Ù.";
+"Loncanın %s %s tekrar normal.";
+
+"%s ±æµåÀÇ ±ê¹ßÀ» %s ´ÔÀÌ È¹µæÇÏ¿´½À´Ï´Ù.";
+"%s loncasının bayrağı, %s tarafından çalındı.";
+
+"%s ´Â ±ºÁÖ ÈÄº¸°¡ ¾Æ´Õ´Ï´Ù.";
+"%s İmparator olmak için bir aday değil.";
+
+"%s ´Â ±ºÁÖ·Î ÀÔ¸íÇÒ¼ö ¾ø½À´Ï´Ù .";
+"%s İmparatorluğa aday olamaz.";
+
+"%s ´Ô°úÀÇ ±³È¯ÀÌ ¼º»ç µÇ¾ú½À´Ï´Ù.";
+"%s ile olan ticaret başarıyla gerçekleşti.";
+
+"%s ´Ô¿¡°Ô ÆÄÆ¼°¡ÀÔ ½ÅÃ»À» Çß½À´Ï´Ù.";
+"%s Grubuna katılmak istiyor musun?";
+
+"%s ´ÔÀ¸·Î ºÎÅÍ Ä£±¸ µî·ÏÀ» °ÅºÎ ´çÇß½À´Ï´Ù.";
+"%s daveti reddetti.";
+
+"%s ´ÔÀº %d Ã¤³Î¿¡ Á¢¼Ó Áß ÀÔ´Ï´Ù. (ÇöÀç Ã¤³Î: %d)";
+"%s şuanda %d kanalında. (Kanalınız: %d)";
+
+"%s ´ÔÀº Á¢¼ÓµÇ ÀÖÁö ¾Ê½À´Ï´Ù.";
+"%s çevrimiçi değil.";
+
+"%s ´ÔÀº Á¤»óÀûÀ¸·Î Ãâ¸¶¸¦ ÇÏ¿´½À´Ï´Ù.";
+"%s oyuncu zaten oylamada.";
+
+"%s ´ÔÀ» ¼ÒÈ¯ÇÏ¿´½À´Ï´Ù.";
+"%s oyuncuları iyileştirdin.";
+
+"%s ´ÔÀÌ ´ë·Ã¿¡¼­ ½Â¸®ÇÏ¿´½À´Ï´Ù.";
+"Düelloyu %s kazandı.";
+
+"%s ´ÔÀÌ ½Â¸®ÇÏ¿´½À´Ï´Ù.";
+"%s kazandı.";
+
+"%s ºí·°! (%d%%)";
+"%s engelle! (%%%d)";
+
+"%s ¾ÆÀÌÅÛ À» È¹µæÇÏ¼Ì½À´Ï´Ù";
+"%s eşyasını kazandın.";
+
+"%s ¾ÆÀÌÅÛÀÌ ÇÊ¿äÇÕ´Ï´Ù";
+"%s gerekli.";
+
+"%s ¿¡°Ô·Î ÀÌµ¿ÇÕ´Ï´Ù";
+"%s yanına naklet.";
+
+"%s È¸ÇÇ! (%d%%)";
+"%s kaç! (%%%d)";
+
+"%s's pet skill has been activated. %s uses Feather Walk.";
+"Pet becerisi %s etkinleştirildi - %s hafif adım kullanıyor.";
+
+"%s's remaining HP: %d%%";
+"%s ögesinden kalan HP: %%%d";
+
+"%s: Á¸ÀçÇÏÁö ¾Ê´Â ±æµå ÀÔ´Ï´Ù.";
+"%s: Lonca bulunamadı.";
+
+"%s:%s_WAS_SET_TO%d%%";
+"%s: %s, %%%d oranında yükseldi!";
+
+"%s:_%s_IS_NORMAL_AGAIN";
+"%s 's %s tekrar normal.";
+
+"%s[%d]°¡ °ø°İ À§Ä¡: %d %d";
+"%s[%d] Saldırı pozisyonu: %d %d";
+
+"%s´Ô°úÀÇ ´ë°á ½ÃÀÛ!";
+"%s ile olan savaş başladı!";
+
+"%s´ÔÀÌ ´ë°á½ÅÃ»À» Çß½À´Ï´Ù. ½Â³«ÇÏ·Á¸é ´ë°áµ¿ÀÇ¸¦ ÇÏ¼¼¿ä.";
+"%s seni savaşa davet ediyor!";
+
+"%s´ÔÀÌ ÁÖ»çÀ§¸¦ ±¼·Á %d°¡ ³ª¿Ô½À´Ï´Ù. (%d-%d)";
+"%s zar attı. Sonuç %d (%d-%d).";
+
+"%s¸¦ ±¸¿ü½À´Ï´Ù.";
+"Ateşte %s kızartıyorsun.";
+
+"%s¿¡ ¹ÚÇôÀÖ´ø º¸¼®ÀÌ »ç¶óÁı´Ï´Ù.";
+"%s Mücevherinden bir değerli taş kayboldu.";
+
+"%s¿¡ ÀüÀïÀÇ ½ÃÀÛÀ» ¾Ë¸®´Â ºÀÈ­°¡ ³ªÅ¸³µ½À´Ï´Ù.";
+"%s de savaş yüzünden bir uyarı ateşi yakıldı.";
+
+"%s¿¡°Ô ´ë°á½ÅÃ»À» Çß½À´Ï´Ù.";
+"%s savaşa davet ettiniz.";
+
+"%s¿¡¼­ ºÀÈ­¸¦ µÑ·¯½Î°í ÀüÅõ°¡ ÁøÇàÁßÀÔ´Ï´Ù.";
+"Ateşleri yakmak için %s savaşları var.";
+
+"%s¿¡¼­ ¼ÒÄÏ ºüÁú¶§±îÁö ³²Àº ½Ã°£ %d";
+"%sgirişinin silinmesine kalan süre : %d";
+
+"%sÀÇ ±ºÁÖ°¡ %s ´ÔÀ¸·Î ±³Ã¼µÇ¾ú½À´Ï´Ù.";
+"%s İmparatoru %s oldu.";
+
+"%sÀÌ ¸ğµç ºÀÈ­¸¦ ÆÄ±«ÇÏ¿´½À´Ï´Ù.";
+"%s ateşi yok etti.";
+
+"%sÀÌ ºÀÈ­¸¦ ÆÄ±«Çß½À´Ï´Ù.";
+"%s ateşi yok etti.";
+
+"%sÀÌ ¼ö¼º¿¡ ¼º°øÇß½À´Ï´Ù.";
+"%s başarıyla savundu.";
+
+"%sÀÌ ¼ö¼º¿¡ ½ÇÆĞÇÏ¿© ÀüÀï¿¡ ÆĞ¹èÇÏ¿´½À´Ï´Ù..";
+"%s kaleyi koruyamadığı için savaşı kaybetti.";
+
+"%sÀÌ ÇÊ¿äÇÕ´Ï´Ù.";
+"Bu hareket için gereken: %s";
+
+"(%s) ±æµå°¡ »ı¼ºµÇ¾ú½À´Ï´Ù. [ÀÓ½Ã]";
+"(%s) Lonca kuruldu. [Temporary]";
+
+"(¸¸·áÀÏ : %d³â %d¿ù %dÀÏ)";
+"(Prosedür: %d y- %d m - %d d)";
+
+". ³ÊÈñ°¡ ¼ºÁöÀÇ ¼öÈ£ÀÚ¸¦ Àâ°Ô µÈ´Ù¸é ³ÊÈñ´Â ¼ºÁöÀÇ ÁÖÀÎÀÌ µÈ´Ù.[ENTER][ENTER] ";
+"Eğer Kutsal Alanın Bekçisini öldürürsen, onun sahibi olacaksın.";
+
+"1-50 »çÀÌÀÇ ¼öÄ¡¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä";
+"1 - 50 arasında bir rakam seç.";
+
+"10ÃÊµÚ ´ÙÀ½ ÆÇÀ» ½ÃÀÛÇÕ´Ï´Ù.";
+"Bir sonraki raund 10 saniye içerisinde başlayacak.";
+
+"10ÃÊµÚ ´ë·ÃÀÌ ½ÃÀÛµË´Ï´Ù.";
+"Savaş 10 saniye içerisinde başlayacak.";
+
+"10ÃÊµÚ ¸¶À»·Î µÇµ¹¾Æ°©´Ï´Ù.";
+"10 saniye içerisinde şehre ışınlanmış olacaksınız.";
+
+"10ÃÊµÚ ¸¶À»·Î ÀÌµ¿ÇÕ´Ï´Ù.";
+"10 Saniye içerisinde şehre ışınlanmış olacaksınız.";
+
+"10ÃÊµÚ ÆÇÁ¤ÇÏ°Ú½À´Ï´Ù.";
+"Sonucu 10 saniye içinde alacaksın.";
+
+"10ÃÊÈÄ ÀÚµ¿À¸·Î Á¢¼ÓÀÌ Á¾·áµÇ¸ç,";
+"10 saniye içinde bağlantınız kesilecek.";
+
+"1ºĞ ÀÌ³»¿¡ ¾Æ¹«µµ Á¢¼ÓÇÏÁö ¾ÊÀ¸¸é ±æµåÀüÀÌ ÀÚµ¿ Á¾·áµË´Ï´Ù.";
+"Eğer düşman bulunamazsa Lonca Savaşı otomatik olarak biter.";
+
+"20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© »óÁ¡À» ¿­¼ö°¡ ¾ø½À´Ï´Ù";
+"Beraberinde 2 milyardan fazla Yang taşıyorsun. Bu nedenle ticaret yapamazsın.";
+
+"20¾ï³ÉÀÌ ÃÊ°úÇÏ¿© ¹°Ç°À» ÆÈ¼ö ¾ø½À´Ï´Ù.";
+"Beraberinde 2 milyardan fazla Yang taşıyorsun. Bu nedenle ticaret yapamazsın.";
+
+"5ºĞ ÈÄ¿¡ Á¤»óÀûÀ¸·Î Á¢¼ÓÇÏ½Ç¼ö ÀÖ½À´Ï´Ù.";
+"5 dakika sonra tekrar bağlanabilirsiniz.";
+
+"5ÃÊ µÚ Æ²¸®½Å ºĞµéÀ» ¹Ù±ùÀ¸·Î ÀÌµ¿ ½ÃÅ°°Ú½À´Ï´Ù.";
+"Yanlış cevap veren katılımcılar 5 saniye sonra silinecekler.";
+
+"<±æµå> %d ½ºÅ³À» »ç¿ëÇÔ (%d, %d) to %u";
+"[Guild] %d becerisi (%d, %d) %u üzerine uygulandı.";
+
+"<±æµå> %s ±æµå°¡ ±æµåÀüÀ» °ÅºÎÇÏ¿´½À´Ï´Ù.";
+"[Guild] %s Lonca savaşını reddetti.";
+
+"<±æµå> %uÀÇ °æÇèÄ¡¸¦ ÅõÀÚÇÏ¿´½À´Ï´Ù.";
+"[Guild] %u Tecrübe kullanıldı.";
+
+"<±æµå> %uÀÇ ¿ë½Å·ÂÀ» È¸º¹ÇÏ¿´½À´Ï´Ù.";
+"[Guild] %u oranında Ejderha Hayaleti Puanı yüklendi.";
+
+"<±æµå> [%s] ±æµå°¡ »ı¼ºµÇ¾ú½À´Ï´Ù.";
+"[Guild] [%s] Lonca kuruldu.";
+
+"<±æµå> °¡Áö°í ÀÖ´Â µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"[Guild] Yeterli Yang yok.";
+
+"<±æµå> °æÇèÄ¡ ÅõÀÚ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Guild] Tecrübe kullanımı başarısız oldu.";
+
+"<±æµå> °øÁö±ÛÀ» ÀÛ¼ºÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guild] Duyuru yapamazsın.";
+
+"<±æµå> ±×·¯ÇÑ »ç¶÷À» Ã£À» ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] İstenen oyuncu bulunamadı.";
+
+"<±æµå> ±×·± ±æµå°¡ ¾ø½À´Ï´Ù.";
+"[Guild] Bu isimde bir Lonca bulunamadı.";
+
+"<±æµå> ±æµå ±İ°í¿¡¼± ±æµåÀå¸¸ Ãâ±İÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Guild] Sadece Lonca lideri Yang çekebilir.";
+
+"<±æµå> ±æµå »ı¼º¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Guild] Lonca kurulamadı.";
+
+"<±æµå> ±æµå ½ºÅ³ ·¹º§À» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guild] Lonca Becerilerinin Seviyesini değiştiremezsin.";
+
+"<±æµå> ±æµå ½ºÅ³Àº ±æµåÀü Áß¿¡¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Guild] Bu Lonca Becerisi sadece savaşlarda kullanılabilir.";
+
+"<±æµå> ±æµå ÀÌ¸§ÀÌ ÀûÇÕÇÏÁö ¾Ê½À´Ï´Ù.";
+"[Guild] Lonca adı hatalı.";
+
+"<±æµå> ±æµå°¡ ÀÌ¹Ì ÃÖ°í ·¹º§ÀÔ´Ï´Ù.";
+"[Lonca] Loncanız zaten en yüksek seviyeye ulaştı.";
+
+"<±æµå> ±æµå¸¦ »ı¼ºÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Lonca kuramazsın.";
+
+"<±æµå> ±æµå¸¦ ÇØ»êÇÑ Áö %dÀÏÀÌ Áö³ªÁö ¾ÊÀº »ç¶÷Àº ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Düzenlemeden sonraki  %d gün içinde üyeleri davet edebilirsin.";
+
+"<±æµå> ±æµå¿¡ ¼ÓÇØÀÖÁö ¾Ê½À´Ï´Ù.";
+"[Guild] Bu Loncaya ait değil.";
+
+"<±æµå> ±æµå¿ø %s ´ÔÀ» °­Á¦ Å»Åğ ½ÃÄ×½À´Ï´Ù.";
+"[Guild] Lonca Üyesi %s Loncadan atıldı.";
+
+"<±æµå> ±æµå¿øÀ» °­Á¦ Å»Åğ ½ÃÄ×½À´Ï´Ù.";
+"[Guild] Lonca üyesini attın.";
+
+"<±æµå> ±æµå¿øÀ» °­Á¦ Å»Åğ ½ÃÅ³ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guild] Lonca Üyelerini atamazsın.";
+
+"<±æµå> ±æµå¿øÀ» ÃÊ´ëÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guild] Loncaya birini davet edemezsin.";
+
+"<±æµå> ±æµåÀåÀ¸·Î Á÷À§¸¦ º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Kendini Lonca lideri yapamazsın.";
+
+"<±æµå> ±æµåÀåÀÇ ±ÇÇÑÀº º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Lonca Liderinin yetkileri değiştirilemez.";
+
+"<±æµå> ±æµåÀåÀÇ Á÷À§ ÀÌ¸§Àº º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Lonca Liderinin gücü değiştirilemez.";
+
+"<±æµå> ±æµåÀåÀÇ Á÷À§´Â º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Lonca liderinin rütbesi değiştirilemez.";
+
+"<±æµå> ±æµåÀü¿¡ ´ëÇÑ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guild] Lonca savaşı için kimse yetkilendirilmedi.";
+
+"<±æµå> ±æµåÀüÀ» ÇÏ±â À§ÇØ¼± ÃÖ¼ÒÇÑ %d¸íÀÌ ÀÖ¾î¾ß ÇÕ´Ï´Ù.";
+"[Guild] Lonca savaşına en az %d oyuncu katılması gerekiyor.";
+
+"<±æµå> ±æµåÀüÀÌ Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"[Guild] Lonca savaşı iptal oldu.";
+
+"<±æµå> ±æµåÀüÁß¿¡´Â »ç³É¿¡ µû¸¥ ÀÌÀÍÀÌ ¾ø½À´Ï´Ù.";
+"[Guild] Lonca savaşı sırasında avlanma, Tecrübe Puanı kazandırmıyor.";
+
+"<±æµå> ´Ù¸¥ Á¦±¹ »ç¶÷À» ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Diğer Krallıklardan olan oyuncuları Loncaya davet edemezsin.";
+
+"<±æµå> ´õÀÌ»ó Àå¼ö¸¦ ÁöÁ¤ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Daha fazla Lider seçemezsin.";
+
+"<±æµå> µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"[Lonca] Lonca kasasında yeterli Yang yok.";
+
+"<±æµå> ·¡´õ Á¡¼ö°¡ %d Á¡ÀÌ µÇ¾ú½À´Ï´Ù";
+"[Guild] Sıralama %d Puana yükseldi.";
+
+"<±æµå> ·¹´õ Á¡¼ö°¡ ¸ğÀÚ¶ó¼­ ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Sıralama Lonca Savaşına katılabilmek için çok düşük.";
+
+"<±æµå> »èÁ¦ÇÒ ¼ö ¾ø´Â ±ÛÀÔ´Ï´Ù.";
+"[Guild] Mesaj silinemez.";
+
+"<±æµå> »ó´ë°¡ %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"[Guild]  Oyuncu şu an %d kanalında. (Bulunulan kanal: %d)";
+
+"<±æµå> »ó´ë°¡ ¿Â¶óÀÎ »óÅÂ°¡ ¾Æ´Õ´Ï´Ù.";
+"[Guild] Oyuncu çevrim dışı.";
+
+"<±æµå> »ó´ë¹æ ±æµå°¡ ÀÌ¹Ì ÀüÀï Áß ÀÔ´Ï´Ù.";
+"[Guild] Bu Lonca zaten bir savaşa katılıyor.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ±æµå¿ø ¼ö°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Lonca, Lonca Savaşına katılabilmek için yeterli üyeye sahip değil.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ±æµåÀåÀÌ Á¢¼ÓÁßÀÌ ¾Æ´Õ´Ï´Ù.";
+"[Lonca] Düşman lonca lideri çevrimdışı.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ·¹´õ Á¡¼ö°¡ ¸ğÀÚ¶ó¼­ ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Lonca bir savaşta yer almak için yeterli Sıralama Puanına sahip değil.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ Àüºñ°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Bu Lonca, Lonca savaşı yapmak için yeterli Yang'a sahip değil.";
+
+"<±æµå> »ó´ë¹æÀÌ °°Àº ±æµå°¡ ¾Æ´Õ´Ï´Ù.";
+"[Guild] Oyuncu aynı Loncada değil.";
+
+"<±æµå> »ó´ë¹æÀÌ ±æµå ÃÊ´ë °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"[Guild] Oyuncu Lonca davetini reddetti.";
+
+"<±æµå> »ó´ë¹æÀÌ ÀÌ¹Ì ´Ù¸¥ ±æµå¿¡ ¼ÓÇØÀÖ½À´Ï´Ù.";
+"[Guild] Bu oyuncu zaten başka bir Loncaya üye.";
+
+"<±æµå> »ó´ë¹æÀÌ ÃÊ´ë ½ÅÃ»À» ¹ŞÀ» ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"[Guild] Karşındaki kişi davetiyeyi alamıyor.";
+
+"<±æµå> ¿ë½Å·Â È¸º¹¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Guild] Ejderha hayaleti yüklenemedi.";
+
+"<±æµå> ¿ë½Å·ÂÀÌ ºÎÁ·ÇÕ´Ï´Ù. (%d, %d)";
+"[Guild] Yeterli Ejderha hayaleti yok. (%d, %d)";
+
+"<±æµå> ÀÌ¹Ì °°Àº ÀÌ¸§ÀÇ ±æµå°¡ ÀÖ½À´Ï´Ù.";
+"[Guild] Bu Lonca adı zaten kullanılıyor.";
+
+"<±æµå> ÀÌ¹Ì ´Ù¸¥ ÀüÀï¿¡ ÂüÀü Áß ÀÔ´Ï´Ù.";
+"[Guild] Loncanız zaten başka bir savaşa katılıyor.";
+
+"<±æµå> ÀÌ¹Ì ÀüÀï ÁßÀÎ ±æµåÀÔ´Ï´Ù.";
+"[Guild] Loncanız zaten başka bir savaşa katılıyor.";
+
+"<±æµå> ÀÌ¹Ì ÀüÀïÀÌ ¿¹¾àµÈ ±æµå ÀÔ´Ï´Ù.";
+"[Guild] Bu Lonca zaten başka bir Lonca savaşı için kayıt edilmiş.";
+
+"<±æµå> Àß¸øµÈ ±İ¾×ÀÔ´Ï´Ù.";
+"[Guild] Yanlış Yang toplamı.";
+
+"<±æµå> Àá½ÃÈÄ¿¡ ÀÌ¿ëÇØÁÖ½Ê½Ã¿À";
+"[Guild] Lütfen daha sonra tekrar deneyin.";
+
+"<±æµå> Àá½ÃÈÄ¿¡ ÀÌ¿ëÇØÁÖ½Ê½Ã¿À.";
+"[Guild] Lütfen daha sonra tekrar deneyin.";
+
+"<±æµå> Àå±ºÀ» ÁöÁ¤ÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guild] Lideri seçemezsin.";
+
+"<±æµå> ÀûÇÕÇÏÁö ¾ÊÀº Á÷À§ ÀÌ¸§ ÀÔ´Ï´Ù.";
+"[Guild] Bu rütbe ismi geçersiz.";
+
+"<±æµå> Àüºñ°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Lonca savaşına katılmak için yeterli Yang yok.";
+
+"<±æµå> Á¦°øÇÏ°íÀÚ ÇÏ´Â °æÇèÄ¡°¡ ³²Àº °æÇèÄ¡º¸´Ù ¸¹½À´Ï´Ù.";
+"[Guild] Sağlanan tecrübe kaybedilenden tecrübeden daha fazla.";
+
+"<±æµå> Á÷À§ ±ÇÇÑÀ» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guild] Pozisyonunu değiştiremezsin.";
+
+"<±æµå> Á÷À§ ÀÌ¸§À» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guild] Rütbe ismini değiştiremezsin.";
+
+"<±æµå> Á÷À§¸¦ º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guild] Pozisyonunu değiştiremezsin.";
+
+"<±æµå> ÃÖ´ë ±æµå¿ø ¼ö¸¦ ÃÊ°úÇß½À´Ï´Ù.";
+"[Guild] Lonca kapasitesi maximum seviyeye ulaştı.";
+
+"<±æµå> ÄğÅ¸ÀÓÀÌ ³¡³ªÁö ¾Ê¾Æ ±æµå ½ºÅ³À» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Henüz Lonca Becerilerini kullanamazsın.";
+
+"<±æµå> Å»ÅğÇÑ ÈÄ %dÀÏ ÀÌ³»¿¡´Â ±æµå¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Bir Loncadan ayrıldıktan sonra  %d gün yeni Lonca kuramazsın.";
+
+"<±æµå> Å»ÅğÇÑ ÈÄ %dÀÏÀÌ Áö³ªÁö ¾ÊÀº »ç¶÷Àº ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Lonca] Bu oyuncuyu %d gün sonra tekrar davet edebilirsin.";
+
+"<±æµå> ÇØ»êÇÑ ÈÄ %dÀÏ ÀÌ³»¿¡´Â ±æµå¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.";
+"[Guild] Lonca silindikten sonra, %d gün yeni Lonca kuramazsın.";
+
+"<±æµå> ÇöÀç ±æµå°¡ ÀüÀï Áß ÀÔ´Ï´Ù.";
+"[Lonca] Bu lonca şu anda savaşta.";
+
+"<¸Ş½ÅÁ®> %s ´ÔÀ» ¸Ş½ÅÀú¿¡¼­ »èÁ¦ÇÏ¿´½À´Ï´Ù.";
+"[Friends] %s listenden silindi.";
+
+"<¸Ş½ÅÁ®> %s ´ÔÀ» Ä£±¸·Î Ãß°¡ÇÏ¿´½À´Ï´Ù.";
+"[Friends] %s arkadaş olarak eklendi.";
+
+"<¸Ş½ÅÁ®> ¿î¿µÀÚ´Â ¸Ş½ÅÁ®¿¡ Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Friends] Listene bir GM ekleyemezsin.";
+
+"<Ã¢°í> °Å¸®°¡ ¸Ö¾î¼­ Ã¢°í¸¦ ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"[Storeroom] Depoya uzak olduğun için açamıyorsun.";
+
+"<Ã¢°í> ±âÁ¸ ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù.";
+"[Storages] Yanlış şifre girdin.";
+
+"<Ã¢°í> ¿Å±æ ¼ö ¾ø´Â À§Ä¡ÀÔ´Ï´Ù.";
+"[Storages] Hareket mümkün değil.";
+
+"<Ã¢°í> ÀÌ ¾ÆÀÌÅÛÀº ³ÖÀ» ¼ö ¾ø½À´Ï´Ù.";
+"[Storages] Eşya depolanamaz.";
+
+"<Ã¢°í> Àß¸øµÈ ¾ÏÈ£¸¦ ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.";
+"[Storages] Yanlış şifre girdin.";
+
+"<Ã¢°í> Ã¢°í ºñ¹Ğ¹øÈ£°¡ º¯°æµÇ¾ú½À´Ï´Ù.";
+"[Storeroom] Depo şifresi değişti.";
+
+"<Ã¢°í> Ã¢°í°¡ ÀÌ¹Ì ¿­·ÁÀÖ½À´Ï´Ù.";
+"[Storages] Depo zaten açık.";
+
+"<Ã¢°í> Ã¢°í·Î ¿Å±æ ¼ö ¾ø´Â ¾ÆÀÌÅÛ ÀÔ´Ï´Ù.";
+"[Storeroom] Bu eşyayı depona süremezsin.";
+
+"<Ã¢°í> Ã¢°í¸¦ ´İÀºÁö 10ÃÊ ¾È¿¡´Â ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"[Storages] Yeniden depo açmak için 10 saniye beklemelisin.";
+
+"<Äù½ºÆ®> ÀÌÀü¿¡ °°Àº º¸»óÀ» ¹ŞÀº ÀûÀÌ ÀÖ¾î ´Ù½Ã ¹ŞÁö ¾Ê½À´Ï´Ù.";
+"[Quest] Ödülünü aldın zaten.";
+
+"<ÆÄÆ¼> %s ´ÔÀÌ ÆÄÆ¼ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"[Group] %s Grup davetini reddetti.";
+
+"<ÆÄÆ¼> %s´ÔÀÇ ÆÄÆ¼¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"[Group] %s Grubunuza katıldı.";
+
+"<ÆÄÆ¼> %s´ÔÀÌ ÆÄÆ¼ ÃÊ´ë¸¦ °ÅÀıÇÏ¼Ì½À´Ï´Ù.";
+"[Group] %s davetini reddetti.";
+
+"<ÆÄÆ¼> %s´ÔÀÌ ÆÄÆ¼¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"[Group] %s Grubunuza katıldı.";
+
+"<ÆÄÆ¼> -30 ~ +30 ·¹º§ ÀÌ³»ÀÇ »ó´ë¹æ¸¸ ÃÊ´ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Group] -30 ile +30 Seviye aralığında olan oyuncuları davet edebilirsin.";
+
+"<ÆÄÆ¼> °üÀü ¸ğµå¿¡¼± ÆÄÆ¼ ÃÊ´ë¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] İzleyici modundayken oyuncu davet edemezsin.";
+
+"<ÆÄÆ¼> ´Ù¸¥ Á¦±¹°ú ÆÄÆ¼¸¦ ÀÌ·ê ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Diğer Krallıktan olan oyuncularla grup oluşturamazsın.";
+
+"<ÆÄÆ¼> ´Ù¸¥ ÆÄÆ¼¿øÀ» Å»Åğ½ÃÅ³ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Grup üyelerini atamazsın.";
+
+"<ÆÄÆ¼> ´ë»óÀ» ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grup] Hedefi çağıramazsın.";
+
+"<ÆÄÆ¼> ´õ ÀÌ»ó ÆÄÆ¼¿øÀ» ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Gruba daha fazla oyuncu davet edemezsin.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼ ÃÊ´ë¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Zindandayken oyuncu davet edemezsin.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼ ÃÊ´ë¿¡ ÀÀÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Zindandayken davet kabul edemezsin.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼¿¡¼­ ³ª°¥ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Zindandayken gruptan ayrılamazsın.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼¿¡¼­ Ãß¹æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Zindandayken oyuncu atamazsın.";
+
+"<ÆÄÆ¼> ´øÁ¯³»¿¡¼­´Â ÆÄÆ¼¸¦ ³ª°¥ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Zindandayken gruptan ayrılamazsın.";
+
+"<ÆÄÆ¼> ´øÁ¯³»¿¡¼­´Â ÆÄÆ¼¿øÀ» Ãß¹æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Zindandayken oyuncu atamazsın.";
+
+"<ÆÄÆ¼> ¸®´õ¸¸ º¯°æÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Group] Bunu sadece Grup Lideri değiştirebilir.";
+
+"<ÆÄÆ¼> »óÅÂ¸¦ º¯°æÇÏ·Á´Â »ç¶÷ÀÌ ÆÄÆ¼¿øÀÌ ¾Æ´Õ´Ï´Ù.";
+"[Group] Hedef grubunuzun üyesi değil.";
+
+"<ÆÄÆ¼> ¼­¹ö ¹®Á¦·Î ÆÄÆ¼ °ü·Ã Ã³¸®¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Sunucu grup isteğini gerçekleştiremedi.";
+
+"<ÆÄÆ¼> ¼ÒÈ¯ÇÏ·Á´Â ´ë»óÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Hedef bulunamadı.";
+
+"<ÆÄÆ¼> ÀÌ¹Ì %s´ÔÀº ÆÄÆ¼¿¡ ¼ÓÇØ ÀÖ½À´Ï´Ù.";
+"[Group] %s zaten bu grupta.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ ±â¼úÀº ÆÄÆ¼Àå¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Group] Grup Becerilerini sadece grup lideri kullanabilir.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ ÃÊ´ë¿¡ ÀÀÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Daveti kabul edemezsin.";
+
+"<ÆÄÆ¼> ÆÄÆ¼°¡ ÇØ»ê µÇ¾ú½À´Ï´Ù.";
+"[Grup] Grup silindi.";
+
+"<ÆÄÆ¼> ÆÄÆ¼³» ÃÖ°í ·¹º§ º¸´Ù 30·¹º§ÀÌ ³·¾Æ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Bu oyuncuyu seviyesi çok düşük olduğu için davet edemezsin.";
+
+"<ÆÄÆ¼> ÆÄÆ¼³» ÃÖÀú ·¹º§ º¸´Ù 30·¹º§ÀÌ ³ô¾Æ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Bu oyuncuyu seviyesi çok yüksek olduğu için davet edemezsin.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿¡¼­ ³ª°¡¼Ì½À´Ï´Ù.";
+"[Group] Gruptan ayrıldın.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿¡¼­ Ãß¹æ´çÇÏ¼Ì½À´Ï´Ù.";
+"[Group] Gruptan atıldın.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿äÃ»À» ÇÑ Ä³¸¯ÅÍ¸¦ Ã£À»¼ö ¾ø½À´Ï´Ù.";
+"[Group] Davet edilen oyuncu çevrimiçi değil.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿øÀ» ÃÊ´ëÇÒ ¼ö ÀÖ´Â ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Grup] Birini davet etmek için yetkin yok.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿øÀ» ÇöÀç À§Ä¡·Î ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Grup] Bulunduğun pozisyonda grup üyelerini çağıramazsın.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ÀÇ ÀÎ¿øÁ¦ÇÑÀÌ ÃÊ°úÇÏ¿© ÆÄÆ¼¿¡ Âü°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Bu grup dolu olduğu için katılamazsın.";
+
+"@*** ->%*s - Dice score: %4d ***";
+"@*** ->%*s - Zar sonucu: %4d ***";
+
+"@*** Rolling for the following item: %s ***";
+"@*** Zar büyük nesne için atılıyor: %s ***";
+
+"A level-%d Dragon Portal can now be entered.";
+"Seviye %d ejderha portalına şimdi girilebilir.";
+
+"A level-%d Dragon Portal has opened. Take the dungeon by storm!";
+"Seviye %d ejderha portalı açıldı. Haydi zindana!";
+
+"A name has already been registered.";
+"Zaten bir isim kayıtlı.";
+
+"A player has announced their withdrawal. Kill them to earn more points!";
+"Bir oyuncu geri çekileceğini bildirdi. Daha fazla puan almak için onu öldür!";
+
+"A special supply pack has been dropped somewhere.";
+"Bir yere özel bir tedarik paketi atıldı.";
+
+"Account limit reached. You cannot open this box.";
+"Hesap limiti erişildi. Bu kutuyu açamazsın.";
+
+"Acquire the Valiant Pet Book for your pet's hero training.";
+"Petinin kahraman eğitimi için cesur pet kitabını edin.";
+
+"Activate your pet first.";
+"Önce petini etkinleştir.";
+
+"After using the Tincture of Kingdoms, you cannot accept invitations in this kingdom any more.";
+"Krallıkların izini uyguladıktan sonra artık bu krallıktaki davetleri kabul edemezsin.";
+
+"All Combat Zone rankings have been reset.";
+"Savaş Bölgesinin tüm rütbe sıralamaları sıfırlandı.";
+
+"All curses have been lifted.";
+"Tüm lanetler kaldırıldı.";
+
+"All group members have been turned to stone. Mission failed.";
+"Tüm üyeler taşa döndü. Misyon başarısız oldu.";
+
+"All group members must be located on the same map to enter.";
+"Giriş yapmak için tüm grup üyeleri aynı haritada bulunmak zorundadır.";
+
+"All levels cleared. You will now be teleported to the bonus level.";
+"Tüm katlar halloldu. Şimdi bonus katına ışınlanıyorsunuz.";
+
+"All of the outposts in %s have been destroyed and the area is no longer under Sung Mahi's control.";
+"%s bölgesindeki tüm karakollar imha edildi ve bölge artık Sung Mahi'nin kontrolü altında değil.";
+
+"All slots are occupied.";
+"Tüm slotlar dolu.";
+
+"An error has occurred. The bonuses could not be changed.";
+"Bir hata oluştu. Maalesef bonuslar değiştirilemedi.";
+
+"An event is running and you will receive double points.";
+"Aktif bir etkinlik var ve iki katı puan alabilirsin.";
+
+"Ask Sam Pumpkin if you've earned a reward.";
+"Bir ödülü hak edip hak etmediğini Sam Pumpkin'e sor.";
+
+"Battle Royale";
+"Battle Royale";
+
+"Battle Royale Combat Reward. Killed %d opponents or more";
+"Battle Royale Savaş Ödülü. Öldürülen rakipler %d veya daha fazla";
+
+"Battle Royale Game Reward. Rank: %d";
+"Battle Royale Oyun Ödülü. Sıralama: %d";
+
+"Battle Royale General Reward.";
+"Battle Royale Genel Ödül";
+
+"Battle Royale Season Reward. Season rank: %d";
+"Battle Royale Sezon Ödülü. Sezon sıralaması: %d";
+
+"Battle Royale participants status: (%u/%u)";
+"Battle Royale katılımcı durumu: (%u/%u)";
+
+"Battle not started. Dungeon closed.";
+"Savaş başlatılmadı. Zindan kapandı.";
+
+"Bonus level: Destroy Metin stones.";
+"Bonus katı: Metin taşlarını imha et";
+
+"Bonus level: Destroy a Metin stone.";
+"Bonus katı: Bir Metin taşı imha et.";
+
+"Bonus level: You have 5 minutes to trade with the merchant and stock up on supplies.";
+"Bonus katı: Şimdi 5 dakika boyunca tüccardan alışveriş yaparak stoklarınızı doldurabilirsiniz.";
+
+"Cannot connect to the channel at this time. Please try again later.";
+"Şu an kanalla bağlantı kurulamıyor. Lütfen daha sonra tekrar dene.";
+
+"Climb the steps of Sung Mahi Tower and enter the next level.";
+"Sung Mahi'nin Cehennem Kulesi'nin basamaklarını çık ve bir üst kata gir.";
+
+"Collect Birch Branches, craft Yut Nori Boards from them and play the exciting minigame.";
+"Huş gövdeleri toplayıp bunlardan Yutnori oyun tahtaları yap ve heyecanlı mini oyuna katıl.";
+
+"Comb through the areas and eliminate them. Gather hit points and exchange them for chests.";
+"Bölgeleri tarayın ve onları yok edin. Hayat puanı toplayın ve bunları sandıklarla takas edin.";
+
+"County Bakra";
+"Bakra Şehri";
+
+"County Bokjung";
+"Bokjung Şehri";
+
+"County Yayang";
+"Jayang Şehri";
+
+"Current participants: %lu";
+"Mevcut katılımcı: %lu";
+
+"Daeyami";
+"Daeyami";
+
+"Defeat 5 Zodiac bosses.";
+"5 Zodyak patronu alt et.";
+
+"Defeat all Zodiac bosses.";
+"Tüm Zodyak patronlarını alt et.";
+
+"Defeat all monsters without dying.";
+"Tüm canavarları hiç ölmeden alt et.";
+
+"Defeat all monsters.";
+"Tüm canavarları alt et.";
+
+"Defeat monsters.";
+"Canavarları yen.";
+
+"Defeat the Zodiac boss without dying.";
+"Zodyak patronunu hiç ölmeden alt et.";
+
+"Defeat the Zodiac boss.";
+"Zodyak patronunu alt et.";
+
+"Deliver equipped weapon skin.";
+"Kuşanılan silah görünümünü naklet.";
+
+"Delivered Pumpkin Lanterns: %d";
+"Verilen bal kabağı fenerleri: %d";
+
+"Destroy Metin stones.";
+"Metin taşlarını imha et.";
+
+"Destroy a Metin stone. If you are successful, you'll receive a bonus buff.";
+"Bir Metin taşı imha et! Başarılı olursan bir bonus güçlendirici kazanırsın.";
+
+"Destroy all Metin stones and defeat the Zodiac boss.";
+"Tüm Metin taşlarını imha et ve Zodyak patronunu öldür.";
+
+"Destroy all Metin stones.";
+"Tüm Metin taşlarını imha et.";
+
+"Destroy the right Metin stone!";
+"Doğru Metin taşını imha et!";
+
+"Dodge every attack!";
+"Tüm saldırıları savuştur!";
+
+"Dong Gwang Plain";
+"Dongan ovası";
+
+"Doyyumhwan";
+"Doyyumhwan";
+
+"Drag the items into the window.";
+"Nesneleri pencereye çek.";
+
+"Duel of the Seers Prizes";
+"Kahin Yarışması Ödülleri";
+
+"Enchant Item cannot be used on this item.";
+"Efsun nesnesi bu nesneye uygulanamaz.";
+
+"Enchanted Forest";
+"Efsunlu Orman";
+
+"Enough Pumpkin Lanterns have been collected.";
+"Yeterince bal kabağı feneri toplandı.";
+
+"Entering the Combat Zone in %d seconds.";
+"Savaş Bölgesi'ne girişe %d saniye kaldı.";
+
+"Experience has increased to %d points.";
+"Deneyim %d puana yükseldi.";
+
+"Failed!";
+"Olmadı!";
+
+"Failure! The %s effect was not activated.";
+"Başarısız! %s etkisi etkinleştirilmedi.";
+
+"Failure! The absorption rate was reduced by 1%.";
+"Başarısız! Emiş oranı %1 düşürüldü.";
+
+"Failure! The attempt to change to the %s effect failed.";
+"Başarısız! %s üzerindeki etkilerin değişikliği başarısız.";
+
+"Failure! The attempt to upgrade the %s effect to level %d failed.";
+"Başarısız! %s etkisinin şu seviyeye yükseltilmesi başarısız: %d";
+
+"Fantastic prizes await!";
+"Harika ödüller seni bekliyor!";
+
+"Final";
+"Final";
+
+"Find a Sealstone to break the seal!";
+"Mührü çözmek için bir Mühür Taşı bul!";
+
+"Find the right key to escape!";
+"Kaçmak için doğru anahtarı bul!";
+
+"First level cleared. Return to Monk Milbon.";
+"1. kat halloldu. Keşiş Milbon'a geri dönün.";
+
+"Gautama Cliff";
+"Gautama Uçurumu";
+
+"Go and talk to Sam Pumpkin!";
+"Sam Pumpkin'le konuş!";
+
+"Go to the Yut Nori Table to collect your reward.";
+"Ödülünü almak için Yutnori masasına git.";
+
+"Grotto of Exile";
+"Sürgün Mağarası";
+
+"Grotto of Exile 2";
+"Sürgün Mağarası 2";
+
+"Guild [%s]! The final objective has appeared. Destroy all objectives to win this war!";
+"[%s] Loncası! Son hedef belirdi. Tüm hedefleri yok edin ve bu savaşı kazanın!";
+
+"Hurry! You have %d minutes to travel through the portal to reach the mainland.";
+"Acele edin! Portal üzerinden karaya ulaşmanız için %d dak. kaldı.";
+
+"Hwang Temple";
+"Hwang Tapınağı";
+
+"If you don't start the sea battle within 1 minute, you will have to leave the ship.";
+"Deniz savaşını 1 dakika içinde başlatmazsanız, gemiyi terk etmek zorundasınız.";
+
+"If you want to change weapons, you must remove the weapon skin first.";
+"Silahı değiştirmek istediğinde önce silah görünümünü çıkarmalısın.";
+
+"Imha";
+"Imha";
+
+"In 15 sec. everyone who gave an incorrect answer will be removed.";
+"Yanlış cevap veren tüm katılımcılar 15 saniye sonra silinecek.";
+
+"Insufficient space in your inventory. The reward will be sent to your mailbox.";
+"Envanterde yeterli alan yok. Ödül, posta kutuna gönderilecek.";
+
+"Items can only be traded on the same map.";
+"Nesne ticareti sadece aynı harita üzerinde yapılabilir.";
+
+"Joan";
+"Joan";
+
+"Jungrang";
+"Jungrang";
+
+"Kill a pair of monsters that don't belong together!";
+"Birbirine ait olmayan bir canavar çiftini öldür!";
+
+"Kill all the monsters within the time limit!";
+"Tüm canavarları zaman sınırı esnasında öldür!";
+
+"Kuahlo Dong (Spiders Dungeon)";
+"Kuahlo Dong (Örümcek Zindanı)";
+
+"Land sighted! You have successfully protected the mast and reached the new continent after a long and weary journey. Continue to the portal.";
+"Kara göründü! Gemi direğini başarıyla savundunuz ve uzun bir yolculuktan sonra yeni kıtaya ulaştınız. Portala gidin.";
+
+"Leaving the Combat Zone in %d seconds.";
+"Savaş Bölgesi'nden çıkışa %d saniye kaldı.";
+
+"Loot for completing Sung Mahi Tower";
+"Sung Mahi'nin Cehennem Kulesini tamamlama ganimeti";
+
+"Magic penetration of %d%%.";
+"Büyü bozma %%%d.";
+
+"Make sure you have enough space in your inventory before you go fishing.";
+"Balığa çıkmadan önce envanterinde yeterince yer olduğundan emin ol.";
+
+"Maximum absorption rate reached.";
+"Maksimum emiş oranına ulaşıldı.";
+
+"Maximum guild level reached. No more donations possible.";
+"Maksimum lonca seviyesine ulaşıldı. Daha fazla bağış mümkün değil.";
+
+"Miryang";
+"Miryang";
+
+"Mission complete. As soon as the group leader hits the button, you will be teleported directly to level %d.";
+"Misyon tamamlandı. Grup lideri atla butonunu kullandığı anda, doğrudan %d. kata ışınlanırsınız.";
+
+"Monsters have appeared in the Valley of Seungryong, Mount Sohan, Doyyumhwan and in the Yongbi Desert!";
+"Seungryong Vadisi, Sohan Dağı, Doyyumhwan ve Yongbi Çölü canavar dolu!";
+
+"Mount Sohan";
+"Sohan Dağı";
+
+"Mr B and the boss monsters disappear in %d minute(s).";
+"Bay B. ve patron canavar %d dakika içinde kaybolacak).";
+
+"Nam Gwang Chasm";
+"Namgan Yarığı";
+
+"Nephrite Bay";
+"Nefrit Körfezi";
+
+"New absorption rate: %d";
+"Yeni emiş oranı: %d";
+
+"Next entry available in %d minute(s).";
+"Bir sonraki giriş %d dakika sonra mümkün.";
+
+"Next entry available in %d second(s).";
+"Bir sonraki giriş %d saniye sonra mümkün.";
+
+"No guilds have registered for the territory auction.";
+"Hiçbir lonca, bölge müzayedesine kaydolmadı.";
+
+"No lease needs to be paid.";
+"Kira ödenmesi gerekmiyor.";
+
+"No winner";
+"Kazanan yok";
+
+"Not possible while transferring bonuses.";
+"Bonus transferi esnasında bu mümkün değil.";
+
+"O ÀÔ´Ï´Ù";
+"Evet (O)";
+
+"OX ¹®Á¦ ½ºÅ©¸³Æ® ·Îµù ¼º°ø";
+"OX Quiz metni yüklendi.";
+
+"OX ¹®Á¦ ½ºÅ©¸³Æ® ·Îµù ½ÇÆĞ";
+"OX Quiz metni yüklenemedi.";
+
+"OX »óÇ°À» Áö±ŞÇÏ¿´½À´Ï´Ù. ID: %d ¼ö·®: %d";
+"OX Ödül verildi. İsim: %d Değer: %d";
+
+"OX ÀÌº¥Æ®°¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.";
+"OX Etkinlik başladı.";
+
+"OX ÀÌº¥Æ®°¡ ÀÌ¹Ì ÁøÇàÁßÀÔ´Ï´Ù(flag: %d)";
+"Etkinlik başladı bile. (Flag: %d)";
+
+"OX ÀÌº¥Æ®¸¦ ¸¶Ä¡°Ù½À´Ï´Ù.";
+"OX Etkinliği sona eriyor.";
+
+"OXÀÌº¥Æ® ¸ÊÀ» ¸ÕÀú ´İ¾Æ ÁÖ¼¼¿ä.(Flag: %d)";
+"Önce OX Etkinlik haritasını kapat. (Flag: %d)";
+
+"OXÀÌº¥Æ®°¡ ´İÈ÷Áö ¾Ê¾Ò°Å³ª, ÄûÁî ÃâÁ¦ÁßÀÔ´Ï´Ù.(flag: %d)";
+"OX Etkinlik henüz bitmedi. Hatalar oluştu. (Flag: %d)";
+
+"OXÀÌº¥Æ®°¡ ¿­·Á ÀÖÁö ¾Ê°Å³ª ¹®Á¦ ÃâÁ¦ÁßÀÔ´Ï´Ù.(Flag: %d)";
+"OX Etkinlik bitti. Herhangi bir hata oluşmadı. (Flag: %d)";
+
+"OXÀÌº¥Æ®¸¦ °­Á¦ Á¾·á ½ÃÅµ´Ï´Ù.";
+"OX Etkinlik bitti.";
+
+"OXÀÌº¥Æ®ÀÇ ³ª¸ÓÁö ÀÎ¿ø ±â·ÏÀ» ½ÇÆĞÇß½À´Ï´Ù.";
+"OX Etkinlikteki diğer katılımcılar listelenemedi.";
+
+"OXÀÌº¥Æ®ÀÇ ³ª¸ÓÁö ÀÎ¿øÀ» ±â·ÏÇÏ¿´½À´Ï´Ù.";
+"OX Etkinlikteki diğer katılımcılar listelendi.";
+
+"Only guilds of level %d or higher can register.";
+"Sadece seviye %d veya üstü loncalar kaydolabilir.";
+
+"Only the guild leader can register for the territory auction.";
+"Sadece lonca lideri bölge müzayedesine kaydolabilir.";
+
+"Only the guild leader or a member with bank access can pay the lease.";
+"Sadece lonca lideri veya banka erişimi olan bir üye kirayı ödeyebilir.";
+
+"Partial success! The absorption rate was reduced by 1%.";
+"Kısmen başarılı! Emiş oranı %1 düşürüldü.";
+
+"Participants: %s";
+"Katılımcı: %s";
+
+"Perfect! You have attached the Spirit Stone successfully and you even receive a double stat bonus.";
+"Şimdi oldu! Zihin taşını başarıyla taktın ve iki katı değer bonusu alacaksın.";
+
+"Please close all other windows to open your mailbox.";
+"Posta kutunu açmak için lütfen diğer tüm pencereleri kapat.";
+
+"Please empty your mailbox to be able to receive new messages.";
+"Yeni mesajlar almak için lütfen posta kutunu boşalt.";
+
+"Please enter another name.";
+"Lütfen başka bir isim gir.";
+
+"Please remove the equipped Dragon Stone before using this item.";
+"Bu nesneyi kullanmadan önce lütfen donatılmış ejderha taşını kaldır.";
+
+"Please try again later.";
+"Lütfen daha sonra tekrar dene.";
+
+"Please wait a moment. Changing channel...";
+"Biraz bekle lütfen. Kanal değiştiriliyor.";
+
+"PvP Tournament";
+"PvP Turnuvası";
+
+"Pyungmoo";
+"Pyungmo";
+
+"Receive: %s - %d";
+"Al: %s - %d";
+
+"Red Forest";
+"Kızıl Orman";
+
+"Registration for the Battle Royale has been closed.";
+"Battle Royale kayıtları kapandı.";
+
+"Registration for the PvP tournament complete.";
+"PvP turnuvasına kayıtlar kapandı.";
+
+"Reinforce Item cannot be used on this item.";
+"Arttırma kağıdı bu nesneye uygulanamaz.";
+
+"Remaining number: %d";
+"Kalan Sayı: %d";
+
+"Remaining participants: %lu";
+"Kalan katılımcı: %lu";
+
+"Remaining time: %.2f | Fish difficulty: %lu | Difficulty reduction: %d";
+"Kalan zaman: %.2f | Balık zorluk derecesi: %lu | Zorluk seviyesi düşüşü: %d";
+
+"Remove %s from your friends list to continue.";
+"Devam etmek için %s karakterini arkadaş listenden sil.";
+
+"Reward";
+"Ödül";
+
+"Reward for Ritual of Blood";
+"Kan Ritüeli ödülü";
+
+"Reward for rank %d";
+"%d Rütbesi için ödül";
+
+"Reward for winning a round";
+"Tur galibiyeti ödülü";
+
+"Reward for winning a tournament";
+"Turnuva galibiyeti ödülü";
+
+"Round %d is starting";
+"%d. tur başlıyor.";
+
+"Round %lu";
+"%lu. Tur";
+
+"SOS! The mast has been smashed and your ship is sinking. You will now be teleported to Cape Dragon Fire.";
+"SOS! Direk parçalandı ve geminiz batıyor. Şimdi Ejderha Ateşi Burnu'na ışınlanacaksınız.";
+
+"Sadly you were unable to stop the Apocalypse. You will be teleported back to the Zodiac Temple shortly.";
+"Ne yazık ki kıyameti önleyemedin. En yakın zamanda Zodyak Tapınağı'na geri ışınlanacaksın.";
+
+"Safe zone has now been deactivated.";
+"Güvenli Alan devre dışı.";
+
+"Seasonal Sung Mahi Tower Reward";
+"Cehennem Kulesi sezon ödülü";
+
+"Seasonal reward for 1st place on level %d in Sung Mahi Tower.";
+"Cehennem Kulesi'nin %d. katındaki 1.'lik için sezon ödülün.";
+
+"Semifinal";
+"Yarı Final";
+
+"Seo Gwang Wastelands";
+"Seogan Çorağı";
+
+"Snakefield";
+"Yılan Vadisi";
+
+"Songpa";
+"Songpa";
+
+"Spider Dungeon 2";
+"Örümcek Zindanı 2";
+
+"Success!";
+"Oldu!";
+
+"Success! The %s effect has been increased to level %d.";
+"Başarılı! %s etkisi şu seviyeye yükseltildi: %d";
+
+"Success! The %s effect is now active.";
+"Başarılı! %s etkisi şu andan itibaren etkin.";
+
+"Success! The bonus was transferred successfully.";
+"Tamamen başarılı! Bonus, istenilen şekilde aktarıldı.";
+
+"Sung Mahi Tower Level %d";
+"Cehennem Kulesi: Kat %d";
+
+"Sung Mahi's outposts are being erected.";
+"Sung Mahi'nin karakolları kuruluyor.";
+
+"Sung Mahi's outposts have been destroyed.";
+"Sung Mahi'nin karakolları yıkıldı.";
+
+"TEST : ÇöÀç ±¹°í : %d";
+"TEST: Krallığınızın kasasında bulunan: %d";
+
+"TEST : È²±İµÎ²¨ºñ°¡ ±¹°í·Î È¯¿øµÇ¾ú½À´Ï´Ù.";
+"TEST: Altın külçe krallığınızın kasasına geri ödendi.";
+
+"TEST : È²±İµÎ²¨ºñ¸¦ ±¹°í·Î È¯¿øÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"TEST: Altın külçeyi krallığınızın kasasına gönderme yetkiniz yok.";
+
+"Taxes are set to %d%%.";
+"Vergi %%%d olarak ayarlandı.";
+
+"Teleportation to the Plateau of Primal Forces has failed.";
+"İlkel Kuvvetler Platosu'na ışınlanma başarısız.";
+
+"Thanks to the immunity blessing, you are not influenced by Sung Mahi's Presence.";
+"Bağışıklık kutsaması sayesinde Sung Mahi'nin etkisinden kurtuldun.";
+
+"The %s guild has purchased the territory in the %s area at %d,%d for %d Won.";
+"%s Loncası %s bölgesinde %d ülkesini, %d %d Won karşılığında aldı.";
+
+"The 'Ship Defence' dungeon is ready. The fisherman will let you board now.";
+"Gemi savunması zindanı hazır. Balıkçı sizi gemiye alacak.";
+
+"The Altar of Blood has appeared.";
+"Kan Sunağı belirdi.";
+
+"The Anniversary Event ends in %d minute(s).";
+"Yıl dönümü etkinliği %d dakika içinde sona erecek.";
+
+"The Anniversary Event has started!";
+"Yıl dönümü etkinliği başladı!";
+
+"The Battle Royale cannot begin, because there are too few participants.";
+"Çok az katılımcı olduğu için Battle Royale başlatılamıyor.";
+
+"The Battle Royale ends in %d seconds.";
+"Battle Royale %d saniye sonra sona erecek.";
+
+"The Battle Royale has begun!!";
+"Battle Royale başladı!!";
+
+"The Battle Royale has begun. The first area will be shown in %d seconds.";
+"Battle Royale başladı. İlk bölge %d saniye sonra gösterilecek.";
+
+"The Battle Royale has ended!!";
+"Battle Royale sona erdi!!";
+
+"The Battle of the Five Shrines ends in %d minute(s).";
+"Beş Tapınağın Savaşı %d dakika sonra sona erecek.";
+
+"The Battle of the Five Shrines has begun! It will last %d days.";
+"Beş Tapınağın Savaşı başladı! %d gün sürecek.";
+
+"The Battle of the Five Shrines is over. The next battle starts in %d hour(s).";
+"Beş Tapınağın Savaşı sona erdi. Bir sonraki savaş %d saat sonra başlayacak.";
+
+"The Boss Reaper Event ends in %d minute(s).";
+"Patron Avcısı etkinliği %d dakika içinde sona erecek.";
+
+"The Combat Zone has been updated. It will be closed off in %d seconds.";
+"Savaş Bölgesi güncellendi. %d saniye sonra sınırlanacak.";
+
+"The Combat Zone is now closed.";
+"Savaş Bölgesi kapatıldı.";
+
+"The Combat Zone is now open.";
+"Savaş Bölgesi açıldı.";
+
+"The Combat Zone will be closed off in %d seconds.";
+"Savaş Bölgesi %d saniyeliğine sınırlanacak.";
+
+"The Combat Zone will close in %d minute(s).";
+"Savaş Bölgesi %d dakika sonra kapatılacak.";
+
+"The Combat Zone will open in %d minute(s).";
+"Savaş Bölgesi %d dakika sonra açılacak.";
+
+"The Compass was used, but the Guard wasn’t found.";
+"Pusula kullanıldı, ancak bekçi bulunamadı.";
+
+"The Flower Power Event has ended.";
+"Çiçek çocuklar etkinliği sonlandırıldı.";
+
+"The Flower Power Event has started.";
+"Çiçek çocuklar etkinliği başladı.";
+
+"The Halloween Event has begun!";
+"Cadılar Bayramı başlıyor!";
+
+"The Halloween Event has finished. Don't forget to collect your rewards!";
+"Cadılar Bayramı sona eriyor. Ödüllerinizi teslim almayı unutmayın!";
+
+"The Okey Event has started!";
+"Okey etkinliği başlıyor!";
+
+"The Okey Event is over!";
+"Okey etkinliği sona erdi!";
+
+"The PvP tournament is over.";
+"PvP turnuvası bitti.";
+
+"The PvP tournament starts in %d min.";
+"PvP turnuvası %d dakika içinde başlayacak.";
+
+"The Ramadan Event has started!";
+"Ramazan Etkinliği başlıyor!";
+
+"The Ramadan Event is over.";
+"Ramazan etkinliği sona erdi.";
+
+"The Ritual Stone only works with items above level 80.";
+"Bu ritüel taşı sadece seviye 80 üzerindeki nesnelerde çalışır.";
+
+"The Ritual of Blood has started. Buy special items to get better rewards.";
+"Kan Ritüeli başlıyor. Daha iyi ödüller için özel eşyalar satın al.";
+
+"The Ritual of Blood is over. Try again another time.";
+"Kan Ritüeli sona erdi. Lütfen daha sonra tekrar dene.";
+
+"The Tower Action has been activated.";
+"Cehennem Kulesi aksiyonu etkinleştirildi.";
+
+"The Zodiac Apocalypse has already started.";
+"Zodyak kıyameti zaten başladı.";
+
+"The Zodiac Apocalypse is not currently active.";
+"Şu anda Zodyak kıyameti yok.";
+
+"The answer will appear in 20 seconds.";
+"Yanıtın 20 saniye içinde belirecek.";
+
+"The battle has been terminated as a result of an unexpected issue.";
+"Beklenmedik bir sorun nedeniyle savaş sona erdi.";
+
+"The battle has begun.";
+"Savaş başladı.";
+
+"The battle starts in %d seconds.";
+"Savaş %d saniye içinde başlayacak.";
+
+"The boss has been defeated! You will be teleported back to the Zodiac Temple shortly.";
+"Patron yenildi! En yakın zamanda Zodyak Tapınağı'na geri ışınlanacaksın.";
+
+"The countdown has begun. The Battle Royale starts in %d seconds.";
+"Geri sayım başladı. Battle Royale %d saniye sonra başlayacak.";
+
+"The dungeon will be closed if you do not start the battle within %d minute(s).";
+"Savaşı %d dakika içinde başlatmazsan portal kapanır.";
+
+"The electrical field has stopped. The next Combat Zone will be shown in %d seconds.";
+"Elektrik alanı durduruldu. Bir sonra Savaş Bölgesi %d saniye sonra gösterilecek.";
+
+"The event has ended as none of the kingdoms entered.";
+"İki krallık da katılmadığı için etkinlik sonlandırıldı.";
+
+"The event has started!";
+"Etkinlik başladı!";
+
+"The event in the Combat Zone has finished.";
+"Savaş Bölgesi'ndeki etkinlik sona erdi.";
+
+"The event is not currently active.";
+"Şu anda bir etkinlik yok.";
+
+"The event is over. You cannot use this item any more.";
+"Etkinlik sonlandırıldı. Bu nesneyi artık kullanamazsın.";
+
+"The group members are too far away to receive the item.";
+"Grup üyeleri eşyayı alamayacak kadar uzakta.";
+
+"The guild does not have enough Yang.";
+"Loncada yeterli Yang yok.";
+
+"The guild war declaration expires in 3 minutes.";
+"Lonca savaş ilanı 3 dakika sonra devre dışı.";
+
+"The interface cannot be opened while you are mounted.";
+"Sürüş esnasında UI açılamaz.";
+
+"The lease for the guild territory wasn't paid. The guild territory has been abandoned.";
+"Lonca bölesinin kirası ödenmedi. Lonca bölgesinden vazgeçildi.";
+
+"The loot from Sung Mahi Tower has been sent to your mailbox.";
+"Sung Mahi'nin Cehennem Kulesi'nin ganimeti posta kutuna gönderildi.";
+
+"The maximum bid is %d Won.";
+"Maksimum teklif %d Won.";
+
+"The maximum level has already been reached.";
+"Maksimum seviyeye zaten ulaşıldı.";
+
+"The mission was unsuccessful.";
+"Misyon başarılı olmadı.";
+
+"The monster from the current event has appeared.";
+"Güncel etkinliğin canavarı belirdi.";
+
+"The name entered is too short.";
+"Girilen isim çok kısa.";
+
+"The next wave begins in %d sec.";
+"Bir sonraki dalga %d sn. içinde başlayacak.";
+
+"The other person is currently busy so you cannot trade right now.";
+"Diğer oyuncu şu an meşgul, bu nedenle onunla şimdi ticaret yapamazsın.";
+
+"The pet's level cannot be higher than the player's.";
+"Petin seviyesi oyuncunun seviyesinden daha yüksek olamaz.";
+
+"The player cannot accept your invitation at this time.";
+"Bu oyuncu şu anda davetini kabul edemiyor.";
+
+"The portal to the next level is open.";
+"Bir sonraki katın portalı açık.";
+
+"The portal to the next room is open.";
+"Bir sonraki odanın portalı açık.";
+
+"The reward from the Duel of the Seers will be delivered by post since your inventory was full.";
+"Envanterin dolu olduğu için Kahin Yarışması ödülü posta yoluyla iletildi.";
+
+"The sash cannot take on any further bonuses.";
+"Bu kuşak başka bonus ememez.";
+
+"The sea battle starts in %d sec.";
+"Deniz savaşı %d sn. içinde başlayacak";
+
+"The soulbind on this item is already in the process of being removed.";
+"Bu obje, ruhtan ayrılma sürecinde.";
+
+"The summer event has started. Visit Summer in town. She'll give you some tasty refreshments.";
+"Yaz Etkinliği başlıyor. Şehir'de Summer'i ziyaret edin. Sizlere serinletici lezzetler sunacak.";
+
+"The summer event will end soon. Summer will keep the towns supplied with tasty refreshments for 7 more days.";
+"Yaz Etkinliği yakında son bulacak. Summer Şehir'lere 7 gün daha serinletici lezzetler sunacak.";
+
+"The time to enter the Dragon Portal has expired.";
+"Ejderha portalına giriş süresi sona erdi.";
+
+"The window is already open.";
+"Penceren zaten açık.";
+
+"There are %d Zodiac Temple(s) in the area. Enter the relevant command to teleport to one of them (1-%d).";
+"Çevrede %d Zodyak tapınağı var. Birine ışınlanmak için ilgili komutu gir (1- %d).";
+
+"There are no items matching your search.";
+"Aramana uygun bir nesne yok.";
+
+"There are no more Combat Zones. The whole area will be closed off in %d seconds.";
+"Başka Savaş Bölgesi yok. Tüm bölge %d saniye sonra sınırlanacak.";
+
+"There are no territory auctions right now.";
+"Şu anda bir bölge müzayedesi yok.";
+
+"There is no Zodiac Temple on this map.";
+"Bu haritada Zodyak tapınağı yok.";
+
+"There's nothing to collect.";
+"Alınacak bir şey yok.";
+
+"These sashes cannot be combined.";
+"Bu kuşaklar birbiriyle kombine edilemez.";
+
+"They're attacking again! Ready your weapons!";
+"Yine saldırıyorlar! Savaşmaya hazır olun!";
+
+"This action is not possible on this map.";
+"Bu eylem bu haritada mümkün değil.";
+
+"This cannot be used on equipped items.";
+"Bu kuşanılmış nesneler üzerinde uygulanamaz.";
+
+"This character isn't available to duel.";
+"Bu karakter bir düello için mevcut değil.";
+
+"This command can only be used in the Zodiac Temple.";
+"Bu komut sadece Zodyak tapınağında uygulanabilir.";
+
+"This command can only be used on the PvP tournament map.";
+"Bu komut sadece PvP turnuvasının haritasında uygulanabilir.";
+
+"This effect is already active.";
+"Bu efekt zaten etkin.";
+
+"This function is unavailable as hacking software has been detected.";
+"Bu özellik, bir hack programı bulunduğu için kullanılamıyor.";
+
+"This guild does not exist.";
+"Bu lonca yok.";
+
+"This has already been customised.";
+"Bu kişiye özel üretimdir.";
+
+"This is not possible while the other player is transferring bonuses.";
+"Diğer kişi bonus transferi yaparken bu mümkün değil.";
+
+"This is the winner of the Battle Royale: %s";
+"Battle Royale galibi: %s";
+
+"This item cannot be absorbed.";
+"Nesne alınamıyor.";
+
+"This item cannot be transmuted.";
+"Bu nesne dönüştürülemez.";
+
+"This item is already soulbound.";
+"Bu obje zaten ruha bağlı.";
+
+"This item is not soulbound.";
+"Bu obje, ruha bağlı bir obje değil.";
+
+"This item is only available in Meley’s Lair.";
+"Bu eşya sadece Meley'in İni'nde mevcut.";
+
+"This player is already trading with someone else.";
+"Bu oyuncu başka bir oyuncuyla ticaret yapıyor.";
+
+"This temple's gates open on another day.";
+"Bu tapınağın kapısı başka bir gün açılır.";
+
+"Thunder Mountains";
+"Yıldırım Dağları";
+
+"Time remaining to finish first round: %d minutes.";
+"İlk turu tamamlamak için kalan süre: %d dakika.";
+
+"Time remaining to finish second round: %d minutes.";
+"İkinci turu tamamlamak için kalan süre: %d dakika.";
+
+"Time remaining until safe zone is deactivated: %d minutes.";
+"Güvenli Alan'ın devre dışı bırakılmasına kalan süre: %d dakika.";
+
+"Time's up.";
+"Zaman doldu.";
+
+"Time's up. Better luck next time.";
+"Zaman doldu. Şansını bir dahaki sefer dene.";
+
+"Time's up. First round over.";
+"Süre doldu. İlk tur sona erdi.";
+
+"Time's up. Second round over.";
+"Süre doldu. İkinci tur sona erdi.";
+
+"Time's up. You're being taken outside.";
+"Süre doldu. Dışarı götürülüyorsun.";
+
+"To determine a pet's destiny you need a Pet Destiny Orb.";
+"Bir pet belirlemek için pet belirleme küresine ihtiyacın var.";
+
+"Total %d: You can still unpack %d.";
+"%d üyesinden: %d tane daha açabilirsin.";
+
+"Total Pumpkin Lanterns: %d";
+"Toplam bal kabağı feneri sayısı: %d";
+
+"Unblock %s to continue.";
+"Devam etmek için %s üzerindeki engellemeyi kaldır.";
+
+"Unfortunately you don't have enough space in your inventory.";
+"Ne yazıkki envanterinde yeterince yer yok.";
+
+"Unlucky, there was no treasure in the fish's belly.";
+"Şansın yaver gitmedi. Balığın karnında hazine yoktu.";
+
+"Unpack the next gift in %d minutes.";
+"Bir sonraki hediyeyi %d dakika sonra aç.";
+
+"Upgrade change failed.";
+"Yükseltme değişikliği başarısız.";
+
+"Valley of Seungryong";
+"Seungryong Vadisi";
+
+"Visit %s to collect your reward.";
+"Ödülünü alacağın yer: %s.";
+
+"Waryong";
+"Waryong";
+
+"Wave %d: For %d sec. you must protect the %s with all your strength.";
+"%d. Dalga: %d sn. boyunca tüm gücünüzle %s ögesini savunun.";
+
+"Wave %d: While protecting the %s, defeat %s.";
+"%d. Dalga: %s savunması esnasında, %s kişisini mağlup edin.";
+
+"We're under attack from sea monsters! Get ready to fight!";
+"Deniz canavarları tarafından saldırıya uğruyoruz! Savaşa hazırlanın!";
+
+"We've slain the boss!";
+"Patronu öldürdük!";
+
+"Well done! For reaching rank %d in the Combat Zone rankings, you will be rewarded a special accolade.";
+"Harika! Savaş Bölgesi sıralamasında %d. sıraya ulaştın. Bunun için özel bir ödül alacaksın.";
+
+"While modifying your pet's stats, you cannot trade, sell items, use the storeroom etc.";
+"Petinin değerlerini değiştirirken, ticaret yapamaz, eşya satamaz ve depoyu kullanamazsın vb.";
+
+"Winner: %s / Loser: %s";
+"Kazanan: %s / Kaybeden: %s";
+
+"Wipe out! If no one is revived within one minute, your dungeon adventure will be over.";
+"İşi bitti! Bir dakika içerisinde kimse diriltilmezse zindandaki süreniz dolar.";
+
+"X ÀÔ´Ï´Ù";
+"Hayır (X)";
+
+"Yongan";
+"Yongan";
+
+"Yongbi Desert";
+"Yongbi Çölü";
+
+"You already have the maximum amount of Won.";
+"Zaten maksimum Won miktarına sahipsin.";
+
+"You are entering the Combat Zone. Please wait.";
+"Savaş Bölgesi'ne giriyorsun. Lütfen bekle.";
+
+"You are facing level %d.";
+"%d. Katta savaşacaksın.";
+
+"You are leaving the Combat Zone. Please wait.";
+"Savaş Bölgesi'ni terk ediyorsun. Lütfen bekle.";
+
+"You are not a member of any guild.";
+"Bir Loncaya üye değilsin.";
+
+"You are not cursed.";
+"Üzerinde lanet yok.";
+
+"You are not the group leader.";
+"Grup lideri değilsin.";
+
+"You attacked the wrong monster. Kill all the monsters!";
+"Yanlış canavara saldırdın. Tüm canavarları öldür!";
+
+"You can get back the Won you bid from the guard in the village.";
+"Yatırdığın Won miktarını köydeki bekçiden geri alabilirsin.";
+
+"You can learn this after reaching the Champion Level.";
+"Bunu şampiyon seviyesine ulaştıktan sonra öğrenebilirsin.";
+
+"You can now wear gloves.";
+"Artık eldiven takabilirsin.";
+
+"You can only bid if you have been a member of the guild for more than 24 hours.";
+"Yalnızca loncada 24 saatten uzun bir süredir bulunuyorsan teklif verebilirsin.";
+
+"You can only discard the belt when there are no longer any items in its inventory.";
+"Eşyaya ait envanter tamamen boş olmadığı sürece kemeri çıkaramazsın.";
+
+"You can only receive your prize once you have made space in your inventory.";
+"Ödülünü ancak envanterinde yer açılınca teslim alabilirsin.";
+
+"You can only use Shoulder Sashes as well as weapons and armour pieces.";
+"Sadece omuz kuşakları, silah ve zırhlar kullanabilirsin.";
+
+"You can only use Shoulder Sashes.";
+"Sadece omuz kuşakları kullanabilirsin.";
+
+"You can only use this item during the current event.";
+"Bu eşyayı sadece devam eden etkinlik esnasında kullanabilirsin.";
+
+"You can only withdraw from the battle in %d sec.";
+"Ancak %d sn. içinde savaştan çekilebilirsin.";
+
+"You can open it 3 seconds after closing the menu for modifying pet stats.";
+"Petler için değer dönüştürme penceresini kapattıktan 3 saniye sonra açabilirsin.";
+
+"You can take back the Won you bid.";
+"Yatırdığın Won miktarını geri alabilirsin.";
+
+"You can use a maximum of 200 ingredients at once.";
+"Aynı anda maksimum 200 bileşen kullanabilirsin.";
+
+"You cannot bind this item to your soul.";
+"Bu objeyi ruhuna bağlayamazsın.";
+
+"You cannot block your spouse.";
+"Eşini engelleyemezsin.";
+
+"You cannot cancel this on the Battle Royale server.";
+"Bunu Battle Royale sunucusunda iptal edemezsin.";
+
+"You cannot carry out this action at the moment.";
+"Bu eylem şu anda yapılamaz.";
+
+"You cannot carry out this action while fishing.";
+"Balık tutarken bu işlemi gerçekleştiremezsin.";
+
+"You cannot carry out this action while the Shoulder Sash bonus transfer window is open.";
+"Omuz kuşağı için bonus transferler penceresi açıkken bu işlemi gerçekleştiremezsin.";
+
+"You cannot carry out this action while the bonus transfer window is open.";
+"Bonus transferler penceresi açıkken bu işlemi gerçekleştiremezsin.";
+
+"You cannot carry out this action while the window for combining or absorbing Shoulder Sashes is open.";
+"Omuz kuşağı birleştirme veya alma pencereleri açıkken bu işlemi gerçekleştiremezsin.";
+
+"You cannot change channel.";
+"Kanalı değiştiremezsin.";
+
+"You cannot change the attributes of a soulbound item.";
+"Ruha bağlı bir objenin özelliklerini değiştiremezsin.";
+
+"You cannot claim an achievement right now.";
+"Şu anda bir başarı talep edemezsin.";
+
+"You cannot declare a guild war here.";
+"Burada lonca savaşı ilan edemezsin.";
+
+"You cannot declare wars in the Combat Zone.";
+"Savaş Bölgesi'nde savaş ilan edemezsin.";
+
+"You cannot discard cards when you have already selected some.";
+"Kartları seçtiğinde kart atamazsın.";
+
+"You cannot do that during a Battle Royale.";
+"Bunu bir Battle Royale esnasında yapamazsın.";
+
+"You cannot do that while the territory auction is ongoing.";
+"Bölge müzayedesi mevcut olduğu sürece bunu yapamazsın.";
+
+"You cannot do this while the item is equipped.";
+"Bu nesneyi kuşandığın sürece bu eylemi gerçekleştiremezsin.";
+
+"You cannot do this whilst carrying out another action.";
+"Başka bir eylemi gerçekleştirirken bunu yapamazsın.";
+
+"You cannot do this whilst performing another action.";
+"Başka bir eylem gerçekleştirirken bunu yapamazsın.";
+
+"You cannot do this whilst playing okey.";
+"Okey oynarken bu eylemi gerçekleştiremezsin.";
+
+"You cannot do this with a user of hacking software.";
+"Bunu bir hack programı kullanıcısıyla yapamazsın.";
+
+"You cannot donate while your pet is summoned.";
+"Petin çağrıldığı esnada bağış yapamazsın.";
+
+"You cannot draw any more cards when you have already selected some.";
+"Kartları seçtiğinde başka kart çekemezsin.";
+
+"You cannot draw any more cards.";
+"Başka kart çekemezsin.";
+
+"You cannot drop a soulbound item.";
+"Ruha bağlı bir objeyi düşüremezsin.";
+
+"You cannot drop items during the bonus transfer.";
+"Bonus transferi esnasında eşya düşüremezsin.";
+
+"You cannot drop items while modifying your pet's stats.";
+"Petinin değerlerini değiştirirken, eşya düşüremezsin.";
+
+"You cannot drop items while the Fortune Chest is open.";
+"Şans kutusu açıkken eşya düşüremezsin.";
+
+"You cannot enter the Combat Zone at the moment.";
+"Şu anda Savaş Bölgesi'ne girilemiyor.";
+
+"You cannot enter the Combat Zone from this map.";
+"Maalesef bu harita üzerinden Savaş Bölgesi'ne giremezsin.";
+
+"You cannot enter the PvP tournament combat arena.";
+"PvP turnuvasının savaş arenasına giriş yapamazsın.";
+
+"You cannot enter while you are mounted.";
+"Binek hayvanın üzerindeyken giremezsin.";
+
+"You cannot enter, because the countdown has already begun.";
+"Geri sayım başladığı için katılamazsın.";
+
+"You cannot equip this item while wearing a Wedding Dress or a Tuxedo.";
+"Gelinlik veya Smokin giyerken bu eşyayı kuşanamazsın.";
+
+"You cannot exchange as this would exceed the maximum amount of Won.";
+"Won üst sınırı aşıldığı için dönüştürme yapamazsın.";
+
+"You cannot exchange as this would exceed the maximum amount of Yang.";
+"Yang üst sınırı aşıldığı için dönüştürme yapamazsın.";
+
+"You cannot expand your inventory while trading.";
+"Ticaret yaparken envanteri genişletemezsin.";
+
+"You cannot feed your pet while the refinement window is open.";
+"Arındırma Paneli açıkken petini besleyemezsin.";
+
+"You cannot fish when your pet is hatched.";
+"Petin yumurtadan çıkmışsa, balıkçılık yapamazsın.";
+
+"You cannot fish while other windows are open.";
+"Diğer pencereler açıkken balıkçılık yapamazsın.";
+
+"You cannot fish while the pet bonus change window is open.";
+"Pet bonusu dönüşüm penceresi açıkken balıkçılık yapamazsın.";
+
+"You cannot fish while your pet is summoned.";
+"Petin çağrıldığı esnada balıkçılık yapamazsın.";
+
+"You cannot give away a soulbound item.";
+"Ruha bağlı bir objeyi başkasına veremezsin.";
+
+"You cannot improve a soulbound item.";
+"Ruha bağlı bir objeyi geliştiremezsin.";
+
+"You cannot improve your weapon while your pet is summoned.";
+"Petin çağrıldığı esnada silahını geliştiremezsin.";
+
+"You cannot leave the Combat Zone when you are dead.";
+"Ölü iken Savaş Bölgesi'ni terk edemezsin.";
+
+"You cannot make use of weapon skins while you are wearing a Wedding Dress or a Tuxedo.";
+"Gelinlik veya smokin giyerken silah görünümlerini kullanamazsın.";
+
+"You cannot move items during the bonus transfer.";
+"Bonus transferi esnasında eşya kaydıramazsın.";
+
+"You cannot move items while modifying your pet's stats.";
+"Petinin değerlerini değiştirirken, eşya kaydıramazsın.";
+
+"You cannot move items while the Fortune Chest is open.";
+"Şans kutusu açıkken eşyaları taşıyamazsın.";
+
+"You cannot move items while the bonus change window is open.";
+"Bonus dönüşüm penceresi açıkken, eşyaları taşıyamazsın.";
+
+"You cannot neither trade or move, nor sell, drop or store items while summoning a mount.";
+"Bir binek çağırdığında ticaret yapamaz, hareket edemez ve eşya satamazsın, düşüremez veya depolayamazsın.";
+
+"You cannot open a private shop while you are trading with others.";
+"Başkasıyla ticaret yaparken özel depo açamazsın.";
+
+"You cannot open a private shop whilst summoning your pet.";
+"Petini çağırırken özel dükkan açamazsın.";
+
+"You cannot open a private shop, as this would exceed the maximum amount of %d Won.";
+"Bu, %d Won üst sınırını aşacağı için özel dükkan açamazsın.";
+
+"You cannot open a private shop.";
+"Özel dükkan açamazsın.";
+
+"You cannot open a shop while you are turned to stone.";
+"Taş gibi donduğun sürece dükkan açamazsın.";
+
+"You cannot open this chest because you do not have enough space in your inventory.";
+"Envanterinde yeterince yerin olmadığından, sandığı açamazsın.";
+
+"You cannot participate in the territory auction on the day the guild is founded.";
+"Loncanın kurulduğu gün bölge müzayedesine katılamazsınız.";
+
+"You cannot register for that on the Battle Royale server.";
+"Bunun için Battle Royale sunucusuna giriş yapamazsın.";
+
+"You cannot register for that on this map.";
+"Bunun için bu haritaya giriş yapamazsın.";
+
+"You cannot ride in this dungeon.";
+"Bu zindanda binek kullanamazsın.";
+
+"You cannot sell a soulbound item.";
+"Ruha bağlı bir objeyi satamazsın.";
+
+"You cannot sell items during the bonus transfer.";
+"Bonus transferi esnasında eşya satamazsın.";
+
+"You cannot sell items you are currently using in a private shop.";
+"Şu an kullandığın hiçbir eşyayı özel bir dükkanda satamazsın.";
+
+"You cannot sell soulbound items in a private shop.";
+"Ruha bağlı bir objeyi özel markette satamazsın.";
+
+"You cannot soulbind items on this server.";
+"Bu sunucuda ruhuna obje bağlayamazsın.";
+
+"You cannot speak with an NPC while modifying your pet's stats.";
+"Petinin değerlerini değiştirirken, YZK ile konuşamazsın.";
+
+"You cannot start a game of okey while trading.";
+"Ticaret yaparken okey turu başlatamazsın.";
+
+"You cannot summon your mount/pet right now.";
+"Şu anda binek/petini çağıramazsın.";
+
+"You cannot summon your pet whilst trading.";
+"Ticaret yaparken petini çağıramazsın.";
+
+"You cannot swap this.";
+"Bunu takas edemezsin.";
+
+"You cannot take part in the Battle Royale.";
+"Şu anda Battle Royale'e katılamazsın.";
+
+"You cannot talk to NPCs while the Fortune Chest is open.";
+"Şans kutusu açıkken, hiçbir YZK ile konuşamazsın.";
+
+"You cannot trade while another window is open.";
+"Başka bir pencere açık olunca ticaret yapamazsın.";
+
+"You cannot trade while the Fortune Chest is open.";
+"Şans kutusu açıkken ticaret yapamazsın.";
+
+"You cannot trade while your partner's Fortune Chest is open.";
+"Karşındaki kullanıcının şans kutusu açıkken birbirinizle ticaret yapamazsınız.";
+
+"You cannot trade while your trading partner is modifying their pet's stats.";
+"Ticaret ortağın petinin değerlerini değiştirirken, onunla ticaret yapamazsın.";
+
+"You cannot trade whilst summoning your pet.";
+"Petini çağırırken ticaret yapamazsın.";
+
+"You cannot trade whilst your partner is summoning their pet.";
+"Karşındaki kişi petini çağırırken ticaret yapamazsın.";
+
+"You cannot trade whilst your partner's Incubator is open.";
+"Karşındaki kişinin kuluçka makinesi açıkken ticaret yapamazsın.";
+
+"You cannot trade, because the maximum number of %d Won was exceeded.";
+"Bu, %d Won üst sınırını aşacağı için ticaret yapamazsın.";
+
+"You cannot transfer the bonus as the sashes have different absorption rates.";
+"Bonusu transfer edemezsin çünkü emiş oranları uyuşmuyor.";
+
+"You cannot transfer the bonus as the sashes have different grades.";
+"Bonusu transfer edemezsin çünkü kuşakların derecesi uyuşmuyor.";
+
+"You cannot transform at the moment.";
+"Şu an kendini dönüştüremezsin.";
+
+"You cannot transform during the PvP tournament.";
+"PvP turnuvasında kendini dönüştüremezsin.";
+
+"You cannot use a Scroll of the Location while the window for the Shoulder Sash is open.";
+"Omuz kuşağı penceresi açıkken geri dönüş kağıdı kullanamazsın.";
+
+"You cannot use a sash with a bonus for the target.";
+"Bonus içeren bir kuşak, transfer esnasında alıcı olamaz.";
+
+"You cannot use a sash without a bonus as the source.";
+"Bonus içermeyen bir kuşak, transfer esnasında orijinal olarak kullanılamaz.";
+
+"You cannot use a soulbound item.";
+"Ruha bağlı bir objeyi kullanamazsın.";
+
+"You cannot use any emotions right now.";
+"Şu anda bir duygu kullanamazsın.";
+
+"You cannot use any soulbound items.";
+"Ruha bağlı nesne kullanamazsın.";
+
+"You cannot use it at the moment.";
+"Bunu şu an kullanamazsın.";
+
+"You cannot use items while modifying your pet's stats.";
+"Petinin değerlerini değiştirirken, eşya kullanamazsın.";
+
+"You cannot use items while the Fortune Chest is open.";
+"Şans kutusu açıkken eşya kullanamazsın.";
+
+"You cannot use items while you are turned to stone.";
+"Taş gibi donduğun sürece nesne kullanamazsın.";
+
+"You cannot use that any more.";
+"Bunu artık kullanamazsın.";
+
+"You cannot use that at the moment.";
+"Bunu şu anda kullanamazsın.";
+
+"You cannot use that at this location.";
+"Bunu burada kullanamazsın.";
+
+"You cannot use that here.";
+"Bunu burada kullanamazsın.";
+
+"You cannot use the Incubator whilst trading or whilst you have your storeroom or private shop open.";
+"Ticaret yaparken, kampın ya da özel dükkanın açıkken kuluçka makinesini kullanamazsın.";
+
+"You cannot use the item here.";
+"Eşyayı burada kullanamazsın.";
+
+"You cannot use this bundle whilst riding.";
+"Bineğinin sırtındayken bu paketi kullanamazsın.";
+
+"You cannot use this costume for this weapon.";
+"Bu kostümü bu silah için alamazsın.";
+
+"You cannot use this item during your withdrawal from the Combat Zone.";
+"Bu nesneyi Savaş Bölgesi'nden geri çekilirken kullanamazsın.";
+
+"You cannot use this item here.";
+"Bu eşyayı burada kullanamazsın.";
+
+"You cannot use this item on soulbound items.";
+"Bu eşyayı ruha bağlı eşyalarda kullanamazsın.";
+
+"You cannot use this item while the windows for absorption and combination are open.";
+"Emiş ve kombinasyon pencereleri açıkken bu nesneyi kullanamazsın.";
+
+"You cannot use this item while wearing another costume.";
+"Başka bir kostüm taşırken bu nesneyi kullanamazsın.";
+
+"You cannot use this item while you are trading.";
+"Ticaret yaparken bu nesneyi kullanamazsın.";
+
+"You cannot wear a Wedding Dress or a Tuxedo when you are already wearing a weapon skin.";
+"Silah görünümü taşırken gelinlik veya smokin giyemezsin.";
+
+"You cannot wear gloves yet.";
+"Henüz eldiven takamazsın.";
+
+"You currently have %d point(s). Your total score is %d.";
+"Şu anda %d puanın var. Toplam puanın %d.";
+
+"You destroyed the wrong Metin stone. Defeat all the monsters!";
+"Yanlış Metin Taşını yok ettin. Tüm canavarları alt et!";
+
+"You do not have enough Yang.";
+"Yeterli Yang'a sahip değilsin.";
+
+"You do not have enough money for the combination.";
+"Kombinasyon için yeterli paran yok.";
+
+"You don't have an %s to start a game of okey.";
+"%s sahibi olmadığın için okey turu başlatamazsın.";
+
+"You don't have enough Anniversary Flags.";
+"Yeterince yıl dönümü bayrağına sahip değilsin.";
+
+"You don't have enough Gaya.";
+"Yetersiz Gaya.";
+
+"You don't have enough Won.";
+"Won'un yetersiz.";
+
+"You don't have enough Yang to start a game of okey.";
+"Bir okey turu başlatmaya yetecek kadar Yang'ın yok.";
+
+"You don't have enough Yang to trade books with me.";
+"Sahip olduğun Yang benimle kitap takas etmeye yetmiyor.";
+
+"You don't have enough Yang.";
+"Yang'ın yetersiz.";
+
+"You don't have enough insignia.";
+"Yeterli nişanın yok.";
+
+"You don't have enough items to revive anyone.";
+"Diriltme işlemi için yeterince nesnen yok.";
+
+"You don't have enough of the necessary items to play Yut Nori.";
+"Yutnori oynamak için yeterli nesnen yok.";
+
+"You don't have enough space in your inventory.";
+"Envanterde yeterli alan yok.";
+
+"You don't receive any points for this player.";
+"Bu oyuncu için puan alamazsın.";
+
+"You have already learned this skill.";
+"Bu beceriyi zaten öğrenmiştin.";
+
+"You have already reached the Champion Level.";
+"Zaten şampiyon seviyesine ulaştın.";
+
+"You have already registered for the territory auction.";
+"Zaten bir bölge müzayedesine kaydoldun.";
+
+"You have already submitted your bid.";
+"Zaten bir teklif verdin.";
+
+"You have already used the Researcher's Elixir.";
+"Araştırmacının özütünü zaten kullandın.";
+
+"You have announced your withdrawal from the Combat Zone and can leave in %d minutes.";
+"Geri çekileceğini bildirdin ve %d dakika sonra Savaş Bölgesi'ni terk edebilirsin.";
+
+"You have announced your withdrawal from the Combat Zone and can leave in %d seconds.";
+"Geri çekileceğini bildirdin, Savaş Bölgesi'ni %d saniye sonra terk edebilirsin.";
+
+"You have been revived by %s.";
+"%s tarafından diriltildin.";
+
+"You have been revived.";
+"Diriltildin.";
+
+"You have bid %d Won.";
+"%d Won teklif ettin.";
+
+"You have captured a soul.";
+"Bir Ruh yakaladın.";
+
+"You have dismissed %s.";
+"Geri gönderdin: %s";
+
+"You have earned your daily target – collect your reward.";
+"Günlük hedefine ulaştın - ödülünü al.";
+
+"You have entered an area which is under Sung Mahi's sway and are suffering from his curse.";
+"Sung Mahi'nin etkisinin altında olan bir bölgeye girdin ve lanetlendin.";
+
+"You have entered the dungeon %s with difficulty %d. The battle starts in %d seconds.";
+"%s zindanına girdin. Zorluk seviyesi %d. Savaş %d sn. içinde başlayacak.";
+
+"You have entered the dungeon %s. The battle starts in %d seconds.";
+"%s Zindanına girdin. Savaş %d sn. içinde başlayacak";
+
+"You have insufficient materials for the upgrade. (Soulbound items cannot be used.)";
+"Yükseltme için yeterli malzemen yok. (Ruha bağlı nesneler kullanılamaz)";
+
+"You have lost %d points. Remaining points: %d";
+"%d Puan kaybettin. Kalan puanlar: %d";
+
+"You have no debuff at the moment.";
+"Şu anda bir Debuffın yok.";
+
+"You have not registered for any territory auctions.";
+"Bir bölge müzayedesine kayıtlı değilsin.";
+
+"You have not registered for the PvP tournament.";
+"PvP turnuvasına kaydolmadın.";
+
+"You have not yet completed all missions.";
+"Henüz tüm görevleri yerine getirmedin.";
+
+"You have paid the %lu-Yang lease for the guild territory.";
+"Lonca bölgesi için %lu Yang kira ödedin.";
+
+"You have received %d Won.";
+"%d Won aldın.";
+
+"You have received %lu EXP for your Champion Level.";
+"Şampiyon seviyen için %lu EXP aldın.";
+
+"You have received a storage bonus of %d defence.";
+"Bir adet %d savunma depo bonusu aldın.";
+
+"You have received a storage bonus of %d%% EXP.";
+"Bir adet %%%d EXP depo bonusu aldın.";
+
+"You have received a storage bonus of %d%% HP.";
+"Bir adet %%%d HP depo bonusu aldın.";
+
+"You have received a storage bonus of %d%% strength against monsters.";
+"Bir adet %%%d canavarlara karşı güçlü depo bonusu aldın.";
+
+"You have registered for the PvP tournament.";
+"PvP turnuvasına kaydoldun.";
+
+"You have revived %s.";
+"%s karakterini dirilttin.";
+
+"You have successfully protected the mast. Keep it up! Get ready for the next wave.";
+"Direği başarıyla savundunuz. Aferin! Bir sonraki dalgaya hazırlanın.";
+
+"You have summoned %s.";
+"Çağırdın: %s";
+
+"You have to leave your group first.";
+"Önce grubunu terketmelisin.";
+
+"You have to wait %d sec. after opening the Mailbox before you can switch channels or teleport.";
+"Kanalı değiştirmek veya ışınlanmak için posta kutusunu açtıktan sonra %d saniye beklemelisin.";
+
+"You have transferred the bonuses successfully.";
+"Bonusları başarıyla aktardın.";
+
+"You just missed the bonus level.";
+"Bonus katını kıl payıyla kaçırdın.";
+
+"You must abandon the ship in %d min.";
+"Gemiden %d dk.";
+
+"You must abandon the ship in %d sec.";
+"Gemiden %d sn. içinde vazgeçmelisiniz.";
+
+"You must be level %d to enter the Combat Zone.";
+"Savaş Bölgesine seviye %d itibarıyla girebilirsin.";
+
+"You must close all windows before entering or leaving the Combat Zone.";
+"Savaş bölgesine girmek veya onu terk etmek için bütün pencereleri kapatmalısın.";
+
+"You must complete the 'Ship Defence' dungeon.";
+"Gemi savunması zindanını temizlemelisin.";
+
+"You must fill up at least 1 EXP Marble at level 120 to reach Champion Level.";
+"Şampiyon seviyesine ulaşabilmek için seviye 120'de en az 1 EXP küresi doldurmalısın.";
+
+"You must leave the ship now as you have not started the sea battle.";
+"Deniz savaşını başlatmamış olduğunuz için şimdi gemiyi terk etmelisiniz.";
+
+"You must wait a while before opening your mailbox again.";
+"Posta kutunu tekrar açmadan önce biraz beklemelisin.";
+
+"You need %d perpendicular slots in your inventory to open the Chest.";
+"Sandığı açmak için envanterinde %d dikey alana ihtiyacın var.";
+
+"You need a Battle Royale Ticket to participate.";
+"Katılım için bir Battle Royale biletine ihtiyacın var.";
+
+"You need a Reincarnation item to revive instantly.";
+"Hemen dirilmek için bir Reenkarnasyon nesnesine ihtiyacın var.";
+
+"You need more Aventurine and Aureolin Treasures to receive your reward.";
+"Ödülünü almak için daha fazla Aventurin ve Aurelin hazinesine ihtiyacın var.";
+
+"You need to equip a weapon first.";
+"Bunun için öncelikle bir silah kuşanman gerekiyor.";
+
+"You receive your bonuses.";
+"Bonusların sende kalacak.";
+
+"You require %s x %d more.";
+"Daha %s x %d fazlasına ihtiyacın var.";
+
+"You still require %d %s(s).";
+"Daha ihtiyacın var: %d %s.";
+
+"You took back the %d Won you bid.";
+"Yatırılan %d Won'u geri aldın.";
+
+"You've taught your pet well! It's quickly learning its new skills!";
+"Petini iyi eğitiyorsun, yeni becerilerini çabuk öğreniyor!";
+
+"Your Dragon Stone's bonus has been changed.";
+"Ejderha taşı bonusun değiştirildi.";
+
+"Your game of okey has started!";
+"Okey turun başladı!";
+
+"Your guild already has a guild territory.";
+"Loncanın zaten bir lonca bölgesi var.";
+
+"Your guild isn't registered for the territory auction.";
+"Loncan bölge müzayedesi için kayıtlı değil.";
+
+"Your guild leader has registered for the auction of the territory in the %s area at %d,%d.";
+"Lonca liderin %s bölgesinde %d,%d ülkesinin müzayedesine kaydoldu.";
+
+"Your guild's territory will be automatically relinquished in %d hours. Any items in the guild warehouse will be deleted.";
+"Loncanın bölgesi %d saat sonra otomatik olarak bırakılacak. Lonca deposundaki nesneler silinecek.";
+
+"Your immunity has expired and you are again influenced by Sung Mahi's Presence and Curse.";
+"Bağışıklık kutsamanın süresi doldu ve tekrar Sung Mahi'nin etkisi ve laneti altındasın.";
+
+"Your inventory is full.";
+"Envanterin dolu.";
+
+"Your inventory is full. Your reward will be delivered by post.";
+"Envanterin dolu. Ödülün sana posta yoluyla iletildi.";
+
+"Your level is too low to summon the pet.";
+"Pet çağırmak için seviyen çok düşük.";
+
+"Your mailbox is full.";
+"Posta kutun dolu.";
+
+"Your mast has been smashed. You fought valiantly, but the battle is lost.";
+"Direğiniz parçalandı. Cesurca savaştınız, ama savaşı kaybettiniz.";
+
+"Your pet enthusiastically tucks into the Protein Snack.";
+"Petin heyecanla protein lokmalarını yiyor.";
+
+"Your pet has already learnt this skill and refuses to practice it again.";
+"Petin bu beceriyi zaten öğrendi ve eğitimi reddediyor.";
+
+"Your pet has already reached the highest stage of evolution.";
+"Petin zaten en yüksek gelişme aşamasına ulaştı.";
+
+"Your pet has gathered enough experience. It now requires Item EXP to reach the next stage of evolution.";
+"Petin yeterli deneyim topladı. Bir sonraki gelişme aşamasına ulaşması için şimdi de nesne EXP'ye ihtiyacı var.";
+
+"Your pet is ready to evolve. Use Pet Books to achieve this.";
+"Petin bir sonraki gelişme aşamasına hazır değil. Bunun için pet kitaplarını kullan.";
+
+"Your pet must be %d days old to train and promote it to the next stage of evolution.";
+"Petin, eğitim ve bir sonraki gelişme aşamasına yükselmek için %d günlük olmalı.";
+
+"Your pet must be level %d to train and promote it to the next stage of evolution.";
+"Petin, eğitilmesi ve bir sonraki gelişme aşamasına yükselmesi için %d. seviyede olmalı.";
+
+"Your pet must have 100% experience to train and promote it to the next stage of evolution.";
+"Petin, eğitilmesi ve bir sonraki gelişme aşamasına yükselmesi için %100 deneyime sahip olmalı.";
+
+"Your pet's stats have been modified.";
+"Petinin değerleri değiştirildi.";
+
+"Your withdrawal announcement is active.";
+"Geri çekilme bildirimin etkin.";
+
+"Your withdrawal announcement was cancelled.";
+"Geri çekilme bildirimin kaldırıldı.";
+
+"Yut Nori has finished.";
+"Yutnori bitti.";
+
+"Yut Nori has started!";
+"Yutnori başladı!";
+
+"[%s±ºÁÖ] : %s";
+"[%sHükümdar] : %s";
+
+"[%s±ºÁÖ] : %s  º¸À¯±İ¾× %lld";
+"[%sHükümdar] : %s Yang Sahip olunan %lld";
+
+"[Aura] Can only be done once an Aura Outfit has been inserted.";
+"[Aura] Bir aura giysisi eklendikten sonra yapılabilir.";
+
+"[Aura] Cannot be evolved.";
+"[Aura] Geliştirilemez.";
+
+"[Aura] Cannot be improved.";
+"[Aura] Yükseltilemez.";
+
+"[Aura] Does not work with an Aura Outfit onto which an item has already been transmitted.";
+"[Aura] Üzerine zaten bir eşya aktarılmış olan bir aura giysisi ile çalışmaz.";
+
+"[Aura] Does not work with soulbound items.";
+"[Aura] Ruha bağlı eşyalarla çalışmaz.";
+
+"[Aura] Evolution successful!";
+"[Aura] Gelişim başarılı!";
+
+"[Aura] Improvement successful!";
+"[Aura] Yükseltme başarılı!";
+
+"[Aura] Improvement successful. Evolution is now possible.";
+"[Aura] Yükseltme başarılı. Gelişim şimdi mümkün.";
+
+"[Aura] Only Aura Outfit can be inserted.";
+"[Aura] Sadece aura giysileri eklenebilir.";
+
+"[Aura] Only Aura Outfit, Shield, Necklace, Earring or Armband can be inserted.";
+"[Aura] Sadece aura giysisi, kalkan, kolye, küpe ve bileklik eklenebilir.";
+
+"[Aura] Successful!";
+"[Aura] Başarılı!";
+
+"[Aura] The amount of inserted materials has been adjusted to match the required amount.";
+"[Aura] Eklenen malzemelerin sayısı gerekli miktara göre ayarlandı.";
+
+"[Aura] You cannot evolve your Aura Outfit until you have improved it.";
+"[Aura] Aura giysini ancak onu yükselttikten sonra geliştirebilirsin.";
+
+"[Aura] You don’t have enough money to evolve your Aura Outfit.";
+"[Aura] Aura giysini geliştirmek için yeterli paran yok.";
+
+"[Aura] You have to insert items.";
+"[Aura] Eşya eklemelisin.";
+
+"[Aura] Your Aura Outfit has reached the maximum level.";
+"[Aura] Aura giysin maksimum seviyeye ulaştı.";
+
+"[Catch the King] %s earned %d points in Catch the King.";
+"[Kralı yakala] %s Kralı yakala'da %d puan aldı.";
+
+"[Catch the King] Catch the King has ended.";
+"[Kralı yakala] Kralı yakala sona erdi!";
+
+"[Catch the King] Defeat monsters to collect King Cards. You need 25 cards for a King Deck.";
+"[Kralı yakala] Kral kartları toplamak için canavarları yen. Bir kral destesi için 25 karta ihtiyacın var.";
+
+"[Catch the King] If you make it into the top rankings, you'll receive your prize from the game table.";
+"[Kralı yakala] Eğer en iyiler listesine girmeyi başardıysan, oyun masasında ödülünü alırsın.";
+
+"[Catch the King] Loads of great prizes await!";
+"[Kralı yakala] Çok sayıda harika ödül seni bekliyor!";
+
+"[Catch the King] Play a game of Catch the King now!";
+"[Kralı yakala] Şimdi bir tur Kralı yakala oyna!";
+
+"[Catch the King] You don't have a complete King Deck or you have insufficient Yang.";
+"[Kralı yakala] Henüz eksiksiz bir kral desten veya yeterli Yang'ın yok.";
+
+"[Catch the King] Your score isn't good enough for a prize.";
+"[Kralı yakala] Puanın bir ödül için yeterli değil.";
+
+"[DS] Your rank reward";
+"[KY] Rütbe ödülün";
+
+"[Duel of the Seers] Check your rank and claim your reward.";
+"[Kahin Yarışması] Rütbeni kontrol et ve ödülünü iste.";
+
+"[Duel of the Seers] Rich treasures await!";
+"[Kahin Yarışması] Seni değerli ganimetler bekliyor!";
+
+"[Duel of the Seers] The Duel of the Seers has begun!";
+"[Kahin Yarışması] Kahin Yarışması başladı!";
+
+"[Duel of the Seers] The Duel of the Seers is over.";
+"[Kahin Yarışması] Kahin Yarışması sona erdi.";
+
+"[Duel of the Seers] You don't have enough Seer Coins.";
+"[Kahin Yarışması] Bunun için yeterli Kahin Jetonun yok.";
+
+"[Duel of the Seers] You have increased your donations count by 1.";
+"[Kahin Yarışması] Bağış sayını 1 oranında artırdın.";
+
+"[Duel of the Seers] You receive a quest for the minigame.";
+"[Kahin Yarışması] Mini oyun için bir görev alacaksın";
+
+"[Flower Power] There isn't enough space in your inventory.";
+"[Çiçek Çocuklar] Envanterinde yeterli alan yok.";
+
+"[Flower Power] This item can no longer be used.";
+"[Çiçek Çocuklar] Bu eşya artık kullanılamaz.";
+
+"[Flower Power] You don't have enough Flower Seeds.";
+"[Çiçek Çocuklar] Yetersiz çiçek tohumu.";
+
+"[Flower Power] You don't have enough shoots.";
+"[Çiçek Çocuklar] Yetersiz filiz.";
+
+"[Flower Power] You have received a Chrysanthemum Shoot.";
+"[Çiçek Çocuklar] Bir kasımpatı filizi kazandın.";
+
+"[Flower Power] You have received a Daffodil Shoot.";
+"[Çiçek Çocuklar] Bir nergiz filizi kazandın.";
+
+"[Flower Power] You have received a Lily Shoot.";
+"[Çiçek Çocuklar] Bir zambak filizi kazandın.";
+
+"[Flower Power] You have received a May Bell Shoot.";
+"[Çiçek Çocuklar] Bir inci çiçeği filizi kazandın.";
+
+"[Flower Power] You have received a Sunflower Shoot.";
+"[Çiçek Çocuklar] bir ayçiçeği filizi kazandın.";
+
+"[Flower Power] You received Flower Seeds.";
+"[Çiçek Çocuklar] Çiçek tohumu kazandın.";
+
+"[Gaya] Cutting failed.";
+"[Gaya] Bileme işlemi başarısız oldu.";
+
+"[Gaya] Cutting successful.";
+"[Gaya] Bileme işlemi başarılı oldu.";
+
+"[Gaya] The Gaya Market is already open.";
+"[Gaya] Gaya mağazası zaten açık.";
+
+"[Gaya] The Gaya Market is currently unavailable.";
+"[Gaya] Gaya mağazası şu anda kullanılamıyor.";
+
+"[Gaya] The item list has been refreshed.";
+"[Gaya] Eşya listesi yenilendi.";
+
+"[Gaya] You already have the maximum amount of Gaya.";
+"[Gaya] Zaten maksimum sayıda Gayaya sahipsin.";
+
+"[Gaya] You can only open the Gaya Market once you have closed the other windows.";
+"[Gaya] Gaya mağazasını ancak diğer pencerelerini kapattığında açabilirsin.";
+
+"[Gaya] You cannot purchase this item.";
+"[Gaya] Bu nesneyi satın alamazsın.";
+
+"[Gaya] You cannot unlock any more slots on the Gaya Market.";
+"[Gaya] Gaya mağazasında başka yer açamazsın.";
+
+"[Gaya] You don't have a Refresh Gaya Market item.";
+"[Gaya] 'Gaya mağazasını sıfırlaya' sahip değilsin.";
+
+"[Gaya] You don't have enough %s. You need %d more to unlock an additional slot.";
+"[Gaya] Yeterli %s yok. Bir yer daha açabilmek için daha çok %d lazım.";
+
+"[Gaya] You don't have enough Gaya.";
+"[Gaya] Yeterli Gayaya sahip değilsin.";
+
+"[Gaya] You don't have enough Glimmerstones.";
+"[Gaya] Yeterli süs taşına sahip değilsin.";
+
+"[Gaya] You don't have enough Yang to cut Glimmerstones.";
+"[Gaya] Süs taşı biletmeye yetecek kadar Yang'ın yok.";
+
+"[Gaya] You must open the Gaya Market first.";
+"[Gaya] Önce Gaya mağazasını açman gerekiyor.";
+
+"[Gaya] Your inventory is full.";
+"[Gaya] Envanterin dolu.";
+
+"[Group] Please talk to the relevant NPC to enter.";
+"[Grup] Giriş yapmak için yetkili YZK'ya başvurun.";
+
+"[Group] The battle has begun.";
+"[Grup] Savaş başladı.";
+
+"[Group] The dungeon will close in %d min.";
+"[Grup] Zindan %d dak. sonra sona erecek.";
+
+"[Group] The rankings for groups in Meley's Lair is being compiled.";
+"[Grup] Meley'in İni'ndeki grup dövüşündeki en iyiler listesi hazırlanıyor.";
+
+"[Group] Time until teleportation: %d min. %d sec.";
+"[Grup] Işınlanmaya kalan süre: %d dak. %d san.";
+
+"[Group] You are now registered for Meley's Lair.";
+"[Grup] Şimdi Meley'in İni için kaydoldunuz.";
+
+"[Group] You cannot do this while the group search is active.";
+"[Grup] Grup araması etkinken bu işlemi gerçekleştiremezsin.";
+
+"[Group] You cannot leave the dungeon at the moment.";
+"[Grup] Şu anda bu zindandan çıkamazsın.";
+
+"[Group] You have 1 hour to complete the dungeon.";
+"[Grup] Zindanı başarıyla tamamlamak için 1 saatiniz var.";
+
+"[Group] You have completed your task with distinction!";
+"[Grup] Görevinizi takdirle başardınız!";
+
+"[Group] You have conceded.";
+"[Grup] Pes ettiniz.";
+
+"[Group] You have left the dungeon.";
+"[Grup] Zindandan çıktın.";
+
+"[Group] You will be teleported to the city in 1 minute.";
+"[Grup] Bir dakika içerisinde şehre taşınacaksın.";
+
+"[Group] You will be transported from the dungeon in 10 minutes.";
+"[Grup] 10 dakika içinde zindandan ışınlanırsınız.";
+
+"[Group] Your time in the dungeon is up.";
+"[Grup] Zindan süresi doldu.";
+
+"[Guild Territory] Go to the guard and pay the lease of %d Yang for your guild territory.";
+"[Lonca bölgesi] Bekçiye git ve lonca bölgeniz için %d Yang kira öde.";
+
+"[Guild] %d EXP has been donated.";
+"[Lonca] %d EXP bağışlandı.";
+
+"[Guild] %d Yang received.";
+"[Lonca] %d Yang alındı.";
+
+"[Guild] %s has used %s.";
+"[Lonca]%s %s kullandı.";
+
+"[Guild] %s has won.";
+"[Lonca] %s kazandı.";
+
+"[Guild] 'Guild Leader Transfer' vote in progress.";
+"[Lonca] 'Lonca lideri transferi' anketi başlıyor.";
+
+"[Guild] 'Guild Territory Abandonment' vote in progress.";
+"[Lonca] 'Lonca bölgesini kapat' anketi devam ediyor.";
+
+"[Guild] 'Guild Territory Sale' vote in progress.";
+"[Lonca] 'Lonca bölgesini sat' anketi devam ediyor.";
+
+"[Guild] 'Remove Member' vote in progress.";
+"[Lonca] 'Üyeyi çıkar anketi' devam ediyor.";
+
+"[Guild] A Dragon's Temple fight is running on another channel.";
+"[Lonca] Başka bir kanalda bir Ejderha Tapınağı yapılıyor.";
+
+"[Guild] After deduction of %d%% taxes you receive %d Yang.";
+"[Lonca] Kesilen %%%d vergiden sonra %d Yang alırsın.";
+
+"[Guild] Another guild member is currently using this.";
+"[Lonca] Başka bir lonca üyesi bunu zaten kullanıyor.";
+
+"[Guild] Another member is currently using the guild bank.";
+"[Lonca] Başka bir üye şu anda lonca bankasını kullanıyor.";
+
+"[Guild] As a combatant you cannot spectate your own guild war.";
+"[Lonca] Bir savaşçı olarak kendi lonca savaşını izleyemezsin.";
+
+"[Guild] Cannot be upgraded as the guild bank is full.";
+"[Lonca] Lonca bankası dolu olduğu için geliştirme mümkün değil.";
+
+"[Guild] Certain members are offline or on another map.";
+"[Lonca] Bazı üyeler çevrim dışı ya da başka bir haritada.";
+
+"[Guild] Certain members of the enemy guild are offline or on another map.";
+"[Lonca] Rakip loncanın bazı üyeleri çevrim dışı ya da başka bir haritada.";
+
+"[Guild] Deposited: %d Yang";
+"[Lonca] Yatırdı: %d Yang";
+
+"[Guild] Draw";
+"[Lonca] Berabere";
+
+"[Guild] For your own safety, you will be teleported away from the nest in 1 minute.";
+"[Lonca] Güvenliğiniz için 1 dakika sonra İn'den ışınlanacaksınız.";
+
+"[Guild] For your own safety, you will be teleported away from the nest in 10 minutes.";
+"[Lonca] Güvenliğiniz için 10 dakika sonra İn'den ışınlanacaksınız.";
+
+"[Guild] Guild %s has purchased territory.";
+"[Lonca] %s loncası bölge satın aldı.";
+
+"[Guild] Guild [%s] has lost the war against [%s].";
+"[Lonca] [%s] loncası [%s] loncasına karşı savaşı kaybetti.";
+
+"[Guild] Guild advertisement extended.";
+"[Lonca] Lonca duyurusu için süre uzatıldı.";
+
+"[Guild] Guild advertisement launched.";
+"[Lonca] Lonca duyurusu başlatıldı.";
+
+"[Guild] No applications available.";
+"[Lonca] Başvuru yok";
+
+"[Guild] No guild advertisements available.";
+"[Lonca] Lonca duyurusu yok";
+
+"[Guild] No guild found.";
+"[Lonca] Lonca bnulunamadı.";
+
+"[Guild] No guild has defeated the dragon yet.";
+"[Lonca] Henüz hiçbir lonca ejderhayı yenemedi.";
+
+"[Guild] No guild present with a guild advertisement.";
+"[Lonca] Lonca duyurusu olan lonca yok.";
+
+"[Guild] No guild territory found.";
+"[Lonca] Lonca bölgesi bulunamadı.";
+
+"[Guild] Not enough space in the guild bank.";
+"[Lonca] Lonca bankasında yeterli alan yok.";
+
+"[Guild] Object moved successfully.";
+"[Lonca] Nesne başarıyla kaydırıldı.";
+
+"[Guild] Only available to the guild leader (if a guild territory is being relinquished).";
+"[Lonca] Bu sadece lonca liderleri için mevcut. (Bir lonca bölgesi bırakıldığında.)";
+
+"[Guild] Player %s has applied to join you.";
+"[Lonca] Oyuncu %s size başvurdu.";
+
+"[Guild] Please check enemy members and leaders.";
+"[Lonca] Lütfen rakip üyeleri ve liderleri kontrol et.";
+
+"[Guild] Please check members and leaders.";
+"[Lonca] Lütfen üyeleri ve liderleri kontrol et.";
+
+"[Guild] Please try again in 10 seconds.";
+"[Lonca] Lütfen 10 saniye sonra tekrar dene.";
+
+"[Guild] Rankings update.";
+"[Lonca] En iyiler listesi yenilendi";
+
+"[Guild] Required time: %d min. %d sec.";
+"[Lonca] Gereken süre: %d dak. %d san.";
+
+"[Guild] Starting 'Guild Leader Transfer' vote.";
+"[Lonca] 'Lonca transferi' anketi başlıyor.";
+
+"[Guild] Starting 'Guild Territory Abandonment' vote.";
+"[Lonca] 'Lonca bölgesini kapat' anketi başlıyor.";
+
+"[Guild] Starting 'Guild Territory Sale' vote.";
+"[Lonca] 'Lonca bölgesini sat' anketi başlıyor.";
+
+"[Guild] Starting 'Remove Member' vote.";
+"[Lonca] 'Üyeyi çıkar' anketi başlıyor.";
+
+"[Guild] Successfully registered for Meley's Lair.";
+"[Lonca] Meley'in İni için kayıt başarıyla tamamlandı.";
+
+"[Guild] That can only be used in guild wars.";
+"[Lonca] Bunu sadece lonca savaşında kullanabilirsin.";
+
+"[Guild] The Deposit Yang or Withdraw Yang window is already open.";
+"[Lonca] 'Yang yatır' veya 'Yang öde' penceresi zaten açık.";
+
+"[Guild] The Guild Warehouse is currently in use.";
+"[Lonca] Lonca deposu şu anda kullanılıyor.";
+
+"[Guild] The battle against Dragon Queen Meley is starting.";
+"[Lonca] Ejderha Kraliçesi Meley'e karşı verilen savaş başladı.";
+
+"[Guild] The character must be at least level 40 to receive the guild leadership.";
+"[Lonca] Loncayı devralması için karakterin seviyesi en az 40 olmalı.";
+
+"[Guild] The enemy guild is currently fighting in the dragon cave.";
+"[Lonca] Rakip lonca şu anda Ejderha Mağarası'nda savaşta.";
+
+"[Guild] The gates to Meley's Lair are open. The time limit in the dungeon is one hour.";
+"[Lonca] Meley'in İni'nin kapısı açılıyor. En fazla bir saat kalabilirsiniz.";
+
+"[Guild] The gates to the lair are closed once more.";
+"[Lonca] İn'in kapısı tekrar kapanıyor.";
+
+"[Guild] The guild advertisement will run for %s.";
+"[Lonca] Lonca duyurusunun süresi: %s.";
+
+"[Guild] The guild already owns guild territory.";
+"[Lonca] Bu loncanın zaten bir lonca bölgesi var.";
+
+"[Guild] The guild has set a minimum level for applicants (min. level: %d).";
+"[Lonca] Lonca başvuru için minimum seviye ekledi (minimum seviye: %d).";
+
+"[Guild] The guild leader is offline or on another map.";
+"[Lonca] Lonca lideri çevrim dışı ya da başka bir haritada.";
+
+"[Guild] The guild level is too low.";
+"[Lonca] Lonca seviyesi çok düşük.";
+
+"[Guild] The guild member has been removed from the guild for inactivity.";
+"[Lonca] Bu oyuncu eylemsizlik sebebiyle loncadan çıkarıldı.";
+
+"[Guild] The guild territory sale cannot be completed as there is insufficient Yang in the guild bank.";
+"[Lonca] Lonca bankasında yeterince Yang bulunmadığı için lonca satılamıyor.";
+
+"[Guild] The guild territory sale has failed.";
+"[Lonca] Lonca bölgesi satışı başarısız.";
+
+"[Guild] The guild territory sale is complete.";
+"[Lonca] Lonca bölgesi satışı tamamlandı.";
+
+"[Guild] The guild's treasury has reached the maximum.";
+"[Lonca] Lonca serveti maksimuma ulaştı.";
+
+"[Guild] The lair will close in %d min.";
+"[Lonca] İn %d dak. sonra kapancak.";
+
+"[Guild] The list is being updated. Please try again later.";
+"[Lonca] Liste şu anda güncelleniyor. Lütfen daha sonra tekrar dene.";
+
+"[Guild] The logo server is currently undergoing maintenance.";
+"[Lonca] Logo sunucusu bakıma alındı.";
+
+"[Guild] The member is currently offline.";
+"[Lonca] Bu üye şu anda çevrim dışı.";
+
+"[Guild] The player is offline or on another map.";
+"[Lonca] Oyuncu çevrimdışı veya başka bir haritada bulunuyor.";
+
+"[Guild] The purchase was cancelled as you already own guild territory.";
+"[Lonca] Zaten Lonca bölgesine sahip olduğun için satın alım işlemi iptal edildi.";
+
+"[Guild] The purchase was cancelled as your guild already owns guild territory.";
+"[Lonca] Loncan zaten Lonca bölgesine sahip olduğu için satın alım işlemi iptal edildi.";
+
+"[Guild] The vote relating to this player failed. Please try again in %d months, %d days, %d hours and %d minutes.";
+"[Lonca] Bu oyuncu için anket olumsuz sonuçlandı. Lütfen %d ay, %d gün, %d saat ve %d dakika sonra tekrar dene.";
+
+"[Guild] There are no votes in progress.";
+"[Lonca] Devam eden anket yok.";
+
+"[Guild] There are not enough participants online.";
+"[Lonca] Yeterli sayıda katılımcı çevrim içi değil";
+
+"[Guild] There are still items in the Guild Warehouse.";
+"[Lonca] Lonca deposunda hala eşyalar mevcut.";
+
+"[Guild] This action is not possible during a war.";
+"[Lonca] Bu eylem savaş esnasında mümkün değil.";
+
+"[Guild] This guild does not exist.";
+"[Lonca] Böyle bir lonca yok.";
+
+"[Guild] This guild is not the one entered in the guild territory sale vote.";
+"[Lonca] Lonca bölgesi satışı için kaydedilen anketteki lonca bu değil.";
+
+"[Guild] This land belongs to another player.";
+"[Lonca] Bu arsa başka bir oyuncuya ait.";
+
+"[Guild] Time's up.";
+"[Lonca] Süre doldu.";
+
+"[Guild] Visit the Dragon Watcher Dolnarr to enter the dragon cave.";
+"[Lonca] Erjderha Mağarasına girmek için Ejderha Bekçisi Dolnarr'ı ziyaret et.";
+
+"[Guild] War ends in 1 minute.";
+"[Lonca] Savaş 1 dakika içinde sona erecek.";
+
+"[Guild] War ends in 5 minutes.";
+"[Lonca] Savaş 5 dakika içinde sona erecek.";
+
+"[Guild] You are now in observer mode because you have reached the respawn limit.";
+"[Lonca] Yeniden diriltme sınırına eriştiğin için şu anda seyirci modundasın.";
+
+"[Guild] You can only construct one Guild Warehouse.";
+"[Lonca] Sadece bir lonca deposu inşa edebilirsin.";
+
+"[Guild] You can only make one transaction every 10 seconds.";
+"[Lonca] Her 10 saniyede bir işlem gerçekleştirebilirsin.";
+
+"[Guild] You can use it in 10 seconds.";
+"[Lonca] 10 saniye içinde kullanabilirsin.";
+
+"[Guild] You cannot carry out this action during a war.";
+"[Lonca] Bu eylemi bir savaş esnasında gerçekleştiremezsin.";
+
+"[Guild] You cannot carry out this action while depositing or withdrawing Yang from the guild account.";
+"[Lonca] Lonca hesabına Yang yatırırken veya çekerken bu işlemi gerçekleştiremezsin.";
+
+"[Guild] You cannot carry out this action whilst the Guild Warehouse is open.";
+"[Lonca] Lonca deposu açıkken bu eylemi gerçekleştiremezsin.";
+
+"[Guild] You cannot change guild leader whilst at war.";
+"[Lonca] Bir savaş esnasında lonca liderini değiştiremezsin.";
+
+"[Guild] You cannot declare a guild war whilst fighting in the dragon cave.";
+"[Lonca] Ejderha Mağarası'nda iken lonca savaşı ilan edemezsin.";
+
+"[Guild] You cannot deposit or withdraw Yang from the guild account while another window is open.";
+"[Lonca] Başka bir pencere açık olduğu sürece lonca hesabına ne Yang yatırabilirsin ne de çekebilirsin.";
+
+"[Guild] You cannot deposit or withdraw Yang from the guild account while your pet is summoned.";
+"[Lonca] Bir pet çağırırken lonca hesabına ne Yang yatırabilir ne de çekebilirsin.";
+
+"[Guild] You cannot disband the guild whilst a vote is in progress.";
+"[Lonca] Bir anket esnasında loncayı kapatamazsın.";
+
+"[Guild] You cannot invite someone to the guild whilst a vote is in progress.";
+"[Lonca] Bir anket esnasında hiç kimseyi loncaya davet edemezsin.";
+
+"[Guild] You cannot kick the guild leader.";
+"[Lonca] Lonca liderini reddedemezsin.";
+
+"[Guild] You cannot kick yourself.";
+"[Lonca] Kendini reddedemezsin.";
+
+"[Guild] You cannot leave the guild while a vote is in progress.";
+"[Lonca] Bir anket esnasında loncayı terk edemezsin.";
+
+"[Guild] You cannot make yourself guild leader.";
+"[Lonca] Kendini lonca lideri ilan edemezsin.";
+
+"[Guild] You cannot relinquish guild territory during a guild battle.";
+"[Lonca] Bir lonca savaşı esnasında lonca bölgesini bırakamazsın.";
+
+"[Guild] You cannot remove anyone from the guild whilst at war.";
+"[Lonca] Bir savaş esnasında kimseyi loncadan çıkaramazsın.";
+
+"[Guild] You cannot select combatants whilst the guild is in a war.";
+"[Lonca] Lonca savaş halindeyken savaşçı belirleyemezsin.";
+
+"[Guild] You cannot sell the guild territory to yourself.";
+"[Lonca] Lonca bölgesini kendine satamazsın.";
+
+"[Guild] You cannot start a vote during a war.";
+"[Lonca] Savaş esnasında anket başlatamazsın.";
+
+"[Guild] You cannot start a vote for your own character.";
+"[Lonca] Kendi karakterin için anket oluşturamazsın.";
+
+"[Guild] You cannot start a vote to remove the guild leader.";
+"[Lonca] Lonca liderini çıkarmak için bir anket başlatamazsın.";
+
+"[Guild] You cannot start a vote to remove yourself from the guild.";
+"[Lonca] Kendini loncadan çıkarmak için bir anket başlatamazsın.";
+
+"[Guild] You cannot start a war whilst a vote is in progress.";
+"[Lonca] Bir anket esnasında savaşa başlayamazsın.";
+
+"[Guild] You cannot start another vote whilst one is in progress.";
+"[Lonca] Bir anket esnasında başka bir anket başlatamazsın.";
+
+"[Guild] You cannot use guild skills in field guild wars.";
+"[Lonca] Lonca savaşı alannında lonca yeteneklerini kullanamazsın.";
+
+"[Guild] You cannot use the Guild Warehouse whilst a vote is in progress.";
+"[Lonca] Bir anket esnasında lonca deposunu kullanamazsın.";
+
+"[Guild] You cannot use this guild logo. Please try again.";
+"[Lonca] Bu lonca logosunu kullanamazsın! Lütfen tekrar dene.";
+
+"[Guild] You cannot withdraw Yang while another window is open.";
+"[Lonca] Başka bir pencere açık olunca Yang çekemezsin.";
+
+"[Guild] You cannot withdraw any Yang as you have more than 2 billion Yang.";
+"[Lonca] 2 milyardan fazla Yang'a sahip olduğun için Yang çekemezsin.";
+
+"[Guild] You do not have permission to use guild skills.";
+"[Lonca] Lonca becerilerini kullanma yetkin yok.";
+
+"[Guild] You have already applied to this guild.";
+"[Lonca] Bu loncaya zaten başvurmuşsun.";
+
+"[Guild] You have already donated the maximum amount of EXP.";
+"[Lonca] Maksimum EXP miktarını zaten bağışladın.";
+
+"[Guild] You have cancelled the fight in Meley's Lair.";
+"[Lonca] Meley'in İni'ndeki savaşı iptal ettiniz.";
+
+"[Guild] You have defeated Meley the Dragon Queen!";
+"[Lonca] Ejderha Kraliçesi Meley'i yendiniz!";
+
+"[Guild] You have taken part in the current vote.";
+"[Lonca] Güncel ankete katıldın.";
+
+"[Guild] You have voted against.";
+"[Lonca] Anketi reddettin.";
+
+"[Guild] You have voted for.";
+"[Lonca] Anketi kabul ettin.";
+
+"[Guild] You must conduct a vote before selling your guild territory.";
+"[Lonca] Lonca bölgeni başlatmadan önce bir anket yapmalısın.";
+
+"[Guild] You must wait 10 seconds before reopening the Guild Warehouse.";
+"[Lonca] Lonca deposunu 10 saniye sonra açabilirsin.";
+
+"[Guild] You must wait at least 12 hours after using the Guild Warehouse before leaving the guild.";
+"[Lonca] Loncayı en erken 12 saat sonra, lonca deposunu kullandıktan sınra terk edebilirsin.";
+
+"[Guild] You need the Ring of Successor to transfer the guild.";
+"[Lonca] Loncayı devretmek için Yer Değiştirme Yüzüğü'ne ihtiyacın var.";
+
+"[Guild] Your application has been registered.";
+"[Lonca] Başvurun iletildi.";
+
+"[Guild] Your guild advertisement will expire soon.";
+"[Lonca] Lonca duyurunun süresi yakında sona erecek.";
+
+"[Guild] Your guild does not have enough Yang in the account. Please deposit more Yang and try again.";
+"[Lonca] Senin loncanın lonca hesabında yeterli Yang yok. Lütfen daha fazla Yang yatırın ve tekrar deneyin.";
+
+"[Guild] Your guild doesn't have a warehouse.";
+"[Lonca] Senin loncanın lonca deposu yok.";
+
+"[Guild] Your members rejected the last vote to sell. Try again.";
+"[Lonca] Üyelerin son ankette satışa karşı çıktı. Tekrar dene.";
+
+"[Guild] Your members rejected the last vote. Please try again in %d months, %d days, %d hours and %d minutes.";
+"[Lonca] Üyelerin son ankette buna karşıydı. Lütfen %d ay, %d gün, %d saat ve %d dakika sonra tekrar dene.";
+
+"[Monster Bash Event] Map %s is reporting sightings of %s.";
+"[Canavar Avı Etkinliği] %s haritasında %s belirdi.";
+
+"[Monster Card] Mission level: %d. You've defeated the monster: %s.";
+"[Canavar kartı] %d. görev sınıfında %s canavarını alt ettin.";
+
+"[Monster Card] You can now teleport to the monster's location.";
+"[Canavar Kartı] Şimdi bu canavarın yakınına ışınlanabilirsin.";
+
+"[Monster Card] You can now transform into the monster.";
+"[Canavar Kartı] Şimdi bu canavara dönüşebilirsin.";
+
+"[Monster Card] You can now watch the monster's movement animation.";
+"[Canavar Kartı] Şimdi canavarın hareket animasyonunu izleyebilirsin.";
+
+"[Monster Card] You don't have enough space in your inventory.";
+"[Canavar kartı] Envanterinde yer yok.";
+
+"[Monster Card] You've completed your monster mission. Collect your Monster Card now.";
+"[Canavar kartı] Bir canavar görevi tamamladın. Şimdi bir canavar kartı kap!";
+
+"[Monster Card] [%s] Level up complete.";
+"[Canavar kartı] [%s] Seviye atlamayı tamamladın.";
+
+"[Okey Event] Amazing prizes await!";
+"[Okey Etkinliği] Harika ödüller seni bekliyor!";
+
+"[Okey Event] Defeat monsters, collect cards and play a game of okey.";
+"[Okey Etkinliği] Canavarları yen, kartları topla ve bir tur okey oyna.";
+
+"[Okey Event] If you make it into the top rankings, you have 7 days to collect your prize.";
+"[Okey Etkinliği] Eğer en iyiler listesine girmeyi başardıysan, an itibarıyla 7 gün içinde ödülünü alabilirsin.";
+
+"[Personal Premium Shop] %s has been sold. Please collect your money.";
+"[Kişisel premium dükkan] %s satıldı. Lütfen paranı al.";
+
+"[Personal Premium Shop] A shop has already been opened here. Please find another location to open your shop.";
+"[Kişisel premium dükkan] Burada zaten bir dükkan açıldı. Lütfen dükkanını açmak için başka bir yer bul.";
+
+"[Personal Premium Shop] Collectable money will not be updated while you manage items.";
+"[Kişisel premium dükkan] Eşyaları yönetirken, tahsil edilebilen para güncellenmez.";
+
+"[Personal Premium Shop] The shop is being prepared now.";
+"[Kişisel premium dükkan] Dükkan şu anda hazırlanıyor.";
+
+"[Personal Premium Shop] You can collect items in your personal shop.";
+"[Kişisel premium dükkan] Eşyaları kişisel dükkanından alabilirsin.";
+
+"[Personal Premium Shop] You can collect money in your personal shop.";
+"[Kişisel premium dükkan] Parayı kişisel dükkanından alabilirsin.";
+
+"[Personal Premium Shop] You can't open this, because you still have items to collect.";
+"[Kişisel premium dükkan] Hala toplayacak eşyaların olduğu için bunu açamazsın.";
+
+"[Personal Premium Shop] You can't open this, because you still have money to collect.";
+"[Kişisel premium dükkan] Hala alacak paran olduğu için bunu açamazsın.";
+
+"[Personal Premium Shop] You cannot do that while managing items.";
+"[Kişisel premium dükkan] Eşyaları yönetirken bunu kullanamazsın.";
+
+"[Personal Premium Shop] You cannot duel here.";
+"[Kişisel premium dükkan] Burada düello yapamazsın.";
+
+"[Personal Premium Shop] You cannot reopen your shop for %d seconds after closing it.";
+"[Kişisel premium dükkan] Dükkanı kapattıktan sonra %d saniye boyunca tekrar açamazsın.";
+
+"[Personal Premium Shop] You cannot use items while opening your personal shop.";
+"[Kişisel premium dükkan] Kişisel dükkanını açarken eşya kullanamazsın.";
+
+"[Personal Premium Shop] You cannot use that. Go to the village's Trade Administrator.";
+"[Kişisel premium dükkan] Bunu kullanamazsın. Köydeki ticaret yöneticisine git.";
+
+"[Personal Premium Shop] You cannot use the Personal Premium Shop while you have other windows open.";
+"[Kişisel premium dükkan] Diğer pencereler açıkken kişisel premium dükkanı kullanamazsın.";
+
+"[Personal Premium Shop] You don't have enough space in your inventory.";
+"[Kişisel premium dükkan] Envanterinde yeterince yer yok.";
+
+"[Personal Premium Shop] You have already opened your personal shop.";
+"[Kişisel premium dükkan] Kişisel dükkanını zaten açtın.";
+
+"[Relic Bonus] This is not possible while the Soul Relic window is open.";
+"[Kalıntı bonusu] Ruh kalıntısı penceresi açıkken bu mümkün değil.";
+
+"[Relic Bonus] You are already wearing a Soul Relic.";
+"[Kalıntı bonusu] Zaten bir ruh kalıntısı kuşandın.";
+
+"[Ritual of Blood] You don't have enough Yang.";
+"[Kan Ritüeli] Yang'ın yetersiz.";
+
+"[Ritual of Blood] You don't have enough souls.";
+"[Kan Ritüeli] Yeterli Ruh'un yok.";
+
+"[Ritual of Blood] You don't have enough space in your inventory.";
+"[Kan Ritüeli] Envanterde yeterli alan yok.";
+
+"[Soul System] %s is already at the highest level.";
+"[Ruh sistemi] %s zaten en yüksek seviyede.";
+
+"[Soul System] The soul is active.";
+"[Ruh sistemi] Ruh etkin.";
+
+"[Soul System] Use %s to receive the effect.";
+"[Ruh sistemi] Efekti almak için %s kullan.";
+
+"[Storeroom] An item that is currently being used cannot be stored.";
+"[Lager] Şu anda kullanılan bir eşya depolanamaz.";
+
+"[Sung Mahi Tower] A new ranking cycle has begun.";
+"[Sung Mahi'nin Cehennem Kulesi] Yeni bir rütbe listesi devresi başladı.";
+
+"[Sung Mahi Tower] Break the seal with Sung Mahi's Sealstone!";
+"[Sung Mahi'nin Cehennem Kulesi] Sung Mahi'nin mühür taşı ile mührü çöz!";
+
+"[Sung Mahi Tower] Destroy the Demon Stone!";
+"[Sung Mahi'nin Cehennem Kulesi] Şeytan taşını imha et!";
+
+"[Sung Mahi Tower] Kill all the monsters within the time limit!";
+"[Sung Mahi'nin Cehennem Kulesi] Zaman sınırı esnasında tüm canavarları öldür!";
+
+"[Sung Mahi Tower] The current ranking cycle has ended.";
+"[Sung Mahi'nin Cehennem Kulesi] Güncel rütbe listesi devresi sona erdi.";
+
+"[Sung Mahi Tower] The key does not fit. Find another one and try again!";
+"[Sung Mahi'nin Cehennem Kulesi] Anahtar uymuyor. Başka bir tane bul ve tekrar dene.";
+
+"[Sung Mahi Tower] You completed this level in %d seconds.";
+"[Sung Mahi'nin Cehennem Kulesi] Bu seviyeyi %d saniyede tamamladın.";
+
+"[Sung Mahi Tower] You have to break another seal first!";
+"[Sung Mahi'nin Cehennem Kulesi] Önce başka bir mührü çözmelisin!";
+
+"[TEST_ONLY]ÇöÀç ±¹°í : %d";
+"[TEST_ONLY]Vergi : %d";
+
+"[Transmutation] You cannot equip the transmuted item as it does not match your class.";
+"[Yansıtma] Yansıtılan nesneyi kuşanamazsın çünkü sınıfı farklı.";
+
+"[Transmutation] You cannot equip the transmuted item as it does not match your gender.";
+"[Yansıtma] Yansıtılan nesneyi kuşanamazsın çünkü bu nesne diğer cinsiyet için.";
+
+"[World boss] Caution: the world boss will appear soon!";
+"[Dünya patronu] Dikkat: Yakında dünya patronu belirecek!";
+
+"[World boss] Event completed";
+"[Dünya patronu] etkinliği sona erdi";
+
+"[World boss] Event started";
+"[Dünya patronu] etkinliği başladı";
+
+"[World boss] In Channel %d, %s has appeared and is terrorising the area of %s. Let's go hunting!";
+"%d Kanalındaki [Dünya patronu], %s dahilinde belirdi ve %s bölgesinde dehşet saçıyor. Haydi ava!";
+
+"[World boss] Reward for Loot Level I in the rankings: %d";
+"[Dünya patronu] Rütbe listesi ganimet seviyesi I ödülü: %d";
+
+"[World boss] Rewards for Loot Level II in the rankings: %d";
+"[Dünya patronu] Rütbe listesi ganimet seviyesi II ödülü: %d";
+
+"[World boss] Rewards for Loot Level III in the rankings: %d";
+"[Dünya patronu] Rütbe listesi ganimet seviyesi III ödülü: %d";
+
+"[World boss] Rewards for Loot Level IV in the rankings: %d";
+"[Dünya patronu] Rütbe listesi ganimet seviyesi IV ödülü: %d";
+
+"[World boss] The World boss has escaped! Good luck next time.";
+"[Dünya patronu] Dünya patronu kaçtı! Şansını bir dahaki sefer dene.";
+
+"[World boss] The world boss in Channel %d has been attacked. Join the hunt now!";
+"%d Kanalında [Dünya patronu] saldırıya uğradı. Şimdi ava katıl!";
+
+"[World boss] Well done! Here is your reward. Join in next time as well!";
+"[Dünya patronu] Aferin! İşte ödülün. Bir dahaki sefer yine katıl!";
+
+"[World boss] Well done: %s has been defeated and peace has been restored... for now.";
+"Aferin [Dünya patronu]: %s mağlup edildi ve tekrar barış sağlandı... şimdilik.";
+
+"[World boss] You can't receive a reward now, because you do not have enough space in your inventory.";
+"[Dünya patronu] Şu anda bir ödül alamazsın, çünkü envanterinde yeterli alan yok.";
+
+"[World boss] You can't receive a reward now.";
+"[Dünya patronu] Şu anda bir ödül alamazsın.";
+
+"the level Heroic";
+"Kahraman Eğitimi basamağına";
+
+"the level Valiant";
+"Cesur basamağına";
+
+"the level Wild";
+"Yabani basamağına";
+
+"the level Young";
+"Genç basamağına";
+
+"°¡¸¸È÷ ÀÖÀ» ¶§¸¸ Âø¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Eşya giyebilmek için hareketsiz olman gerekli.";
+
+"°¢Á¦±¹ ÁøÇà Á¤º¸";
+"Krallık Bilgileri";
+
+"°¨Áö±â¸¦ ÀÛ¿ëÇÏ¿´À¸³ª °¨ÁöµÇ´Â ¿µ¼®ÀÌ ¾ø½À´Ï´Ù.";
+"Bu haritada şu anda Metin Taşı bulunmuyor.";
+
+"°©¿ÊÀ» ¹ş¾î¾ß °³ÀÎ »óÁ¡À» ¿­ ¼ö ÀÖ½À´Ï´Ù.";
+"Sadece zırhınızı çıkardığınızda bir dükkan açabilirsiniz.";
+
+"°ªÀ» Àß¸ø ÀÔ·ÂÇÏ¿´½À´Ï´Ù.";
+"Yanlış değer girdin.";
+
+"°­È­¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Güçlendirme başarılıydı.";
+
+"°­È­¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Güçlendirme başarısız";
+
+"°­È­¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Ejderha taşını güçlendirmek için gerekli malzemeye sahip değilisn.";
+
+"°­È­Ã¢À» ¿¬ »óÅÂ¿¡¼­´Â ¾ÆÀÌÅÛÀ» ¿Å±æ ¼ö ¾ø½À´Ï´Ù.";
+"Bu nesne, arındırma paneli içerisinde sürüklenemez.";
+
+"°­È­ÇÒ ¼ö ¾ø´Â ¿ëÈ¥¼®ÀÔ´Ï´Ù.";
+"Bu ejderha taşı güçlendirmek için kullanılamaz.";
+
+"°°Àº °³·®¼­¸¦ ÇÕÄ¥ ¼ö´Â ¾ø½À´Ï´Ù.";
+"Benzer roleleri birleştiremezsiniz.";
+
+"°°Àº Á¾·ùÀÇ ¸ŞÆ¾¼®Àº ¿©·¯°³ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Aynı türden çok sayıda zihin taşı ekleyemezsin.";
+
+"°°Àº Á¾·ùÀÇ À¯´ÏÅ© ¾ÆÀÌÅÛ µÎ °³¸¦ µ¿½Ã¿¡ ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"2.kez bu eşyayı giyemezsin.";
+
+"°°ÀÌ ÁöÀ» ¼ö ¾ø´Â Á¾·ùÀÇ °Ç¹°ÀÌ Áö¾îÁ® ÀÖ½À´Ï´Ù.";
+"Bu tip binalar sadece bir kez inşa edilebilir.";
+
+"°³·®µÈ ÈÄ ¾ÆÀÌÅÛÀÇ ·¹º§ Á¦ÇÑº¸´Ù ·¹º§ÀÌ ³·½À´Ï´Ù.";
+"Seviyeniz eşyanın yükseltmeden sonraki seviyesinden düşük.";
+
+"°³·®À» ÇÏ±â À§ÇÑ µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Geliştirme için yeterli Yang yok.";
+
+"°³·®À» ÇÏ±â À§ÇÑ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"Yükseltme için yeterli malzeme yok.";
+
+"°³ÀÎ»óÁ¡ »ç¿ëÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Depoyu açtıktan sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡ Ã¢°í¸¦ ¿­¼ö ¾ø½À´Ï´Ù.";
+"Ticaret yaptıktan %d saniye sonra dükkân açabilirsin.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎµîÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ticaretten sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡´Â ´Ù¸¥Áö¿ªÀ¸·Î ÀÌµ¿ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ticaretten sonra %d saniye bir yere gidemezsin.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Başka pencere açık olduğu sürece geri dönüş kağıdı kullanamazsın.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â ´Ù¸¥°÷À¸·Î ÀÌµ¿,Á¾·á ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Ticaretten sonra bir süre bir yere gidemezsin.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â º¸µû¸®,ºñ´Üº¸µû¸®¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Başka bir pencere açıkken depo açamazsın.";
+
+"°ÅÁş";
+"YANLIŞ";
+
+"°Ç¹° ºñ¿ë Á¤º¸ ÀÌ»óÀ¸·Î °Ç¼³ ÀÛ¾÷¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Yanlış fiyat nedeniyle bina inşa edilemedi.";
+
+"°Ç¹°À» ÁöÀ» ¼ö ¾ø´Â À§Ä¡ÀÔ´Ï´Ù.";
+"Bu alana bir bina inşa edemezsin.";
+
+"°Ç¼³ ºñ¿ëÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Binayi inşa edebilmek için loncan yeterli Yang'a sahip değil.";
+
+"°Ç¼³¿¡ ÇÊ¿äÇÑ °Ç¹°ÀÌ Áö¾îÁ® ÀÖÁö ¾Ê½À´Ï´Ù.";
+"İlk olarak temel binaları inşa etmelisin.";
+
+"°ÔÀÓÀ» Á¾·á ÇÕ´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Serverla olan bağlantınız kesiliyor. Lütfen bekleyin.";
+
+"°áÀç±â°£ÀÌ %dºĞ ÈÄ ¸¸·á µË´Ï´Ù.";
+"Oyun süreniz %d dakika içinde doluyor.";
+
+"°áÈ¥ »óÅÂ°¡ ¾Æ´Ï¸é °áÈ¥¹İÁö¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Evli değilsen nikah yüzüğü takamazsın.";
+
+"°áÈ¥½ÄÀÌ Á¾·áµË´Ï´Ù.";
+"Düğün kısa süre sonra bitecek.";
+
+"°áÈ¥ÇÏÁö ¾ÊÀº »óÅÂ¿¡¼­ ¿¹¹°À» Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Evli olmadığın için bu eşyayı kullanamazsın.";
+
+"°æÇèÄ¡ %d%%";
+"Tecrübe %%%d";
+
+"°æÇèÄ¡ %d%% Ãß°¡ È¹µæ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Tecrübe puanı bonusu şu anda %%%d oranında arttırıldı.";
+
+"°æÇèÄ¡ ¹èÀ²";
+"Deneyim yüzdesi";
+
+"°æÇèÄ¡°¡ ºÎÁ·ÇÏ¿© Ã¥À» ÀĞÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Bu kadar tecrübesizken bunu okuyamazsın.";
+
+"°í±â°¡ ¹Ì³¢¸¸ »©¸Ô°í Àì½Î°Ô µµ¸ÁÄ¨´Ï´Ù.";
+"Balık yemini kaybettin.";
+
+"°í±â°¡ ÀâÇû½À´Ï´Ù! (%s)";
+"Bir balık yakaladın! (%s)";
+
+"°í±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"Balık derin suda kayboldu.";
+
+"°î±ªÀÌ ¼ö·Ãµµ°¡ ÃÖ´ë(%d)°¡ µÇ¾ú½À´Ï´Ù.";
+"Madencilik Puanın maksimuma ulaştı. (%d)";
+
+"°î±ªÀÌ°¡ ÃÖ´ë ¼ö·Ãµµ¿¡ µµ´ŞÇÏ¿´½À´Ï´Ù.";
+"Madencilik Puanlarınız en üst Seviyeye ulaştı.";
+
+"°î±ªÀÌ¸¦ µé°í ÀÖÁö ¾Ê¾Æ¼­ Ä¶ ¼ö ¾ø½À´Ï´Ù.";
+"Kazma olmadan madencilik yapamazsın.";
+
+"°î±ªÀÌ¸¦ ÀåÂøÇÏ¼¼¿ä.";
+"Maden çıkarmak için bir kazmaya ihtiyacın var!";
+
+"°î±ªÀÌÀÇ ¼ö·Ãµµ°¡ Áõ°¡ÇÏ¿´½À´Ï´Ù! (%d/%d)";
+"Madencilik Puanların arttı! (%d/%d)";
+
+"°ñµå µå·Ó·ü %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Düşen Yang yüzdesi şu anda +%%%d";
+
+"°ø°İ·Â +%d";
+"Saldırı gücü + %d";
+
+"°ø°İ·Â +%d%%";
+"Saldırı +%%%d";
+
+"°ø°İ¼Óµµ +%d";
+"Saldırı Hızı +%d";
+
+"°øºÎÇÏ±â ½È¾îÁö³×.";
+"Daha fazla bir şey öğrenmek istemiyorum.";
+
+"°üÀü ¸ğµå·Î ±æµåÀü¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"Lonca savaşına izleyici olarak katılabilirsin.";
+
+"°üÀü »óÅÂ¿¡¼­´Â ±³È¯À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"İzleme sırasında ticaret yapamazsın.";
+
+"°üÅë Ãß°¡ µ¥¹ÌÁö %d";
+"Ek olarak verilen zarar %d";
+
+"±¹°í¿¡ µ·ÀÌ ºÎÁ·ÇÏ°Å³ª µ·À» °¡Á®¿Ã¼ö ¾ø´Â »óÈ²ÀÔ´Ï´Ù";
+"Yeterli Yang'a sahip değilsin.";
+
+"±¹°í¿¡ µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù. ÇöÀç : %u ÇÊ¿ä±İ¾× : %u";
+"Vergi eksikliği. Mevcut Sermaye : %u Eksik Sermaye : %u";
+
+"±¹°í¿¡ ÀÚ±İÀÌ ¸ğÀÚ¶ø´Ï´Ù ±¹°í : %d";
+"Yetersiz vergi geliri : %d";
+
+"±ºÁÖ Á¤º¸";
+"İmparator Bilgisi";
+
+"±ºÁÖ°¡ ³»¸° Ãàº¹À¸·Î ¸ğµç ¿¡³ÊÁö°¡ °¡µæ Ã¤¿öÁı´Ï´Ù";
+"İmparatorların Kutsaması nedeniyle enerji yansıtıldı.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ë °¡´ÉÇÑ ±â´ÉÀÔ´Ï´Ù";
+"Bu özellik sadece İmparator tarafından kullanılabilir.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ë°¡´É ÇÑ ±â´ÉÀÔ´Ï´Ù";
+"Bunu sadece İmparator kullanabilir.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ëÇÒ¼ö ÀÖ´Â ±â´ÉÀÔ´Ï´Ù";
+"Bunu sadece bir İmparator kullanabilir.";
+
+"±ºÁÖÀÇ ±İ°­±Ç ¿µÇâÀ¸·Î ÀÌÁö¿ª %s À¯Àú´Â 3ºĞ°£ 10 %% ÀÇ ¹æ¾î·ÂÀÌ  Áõ°¡µË´Ï´Ù";
+"İmparator Geum-Gang-Gwon sayesinde, oyuncu %s 3 dakika süreyle %%10 daha fazla savunma aldı.";
+
+"±ºÁÖÀÇ »çÀÚÈÄ ¿µÇâÀ¸·Î ÀÌÁö¿ª %s À¯Àú´Â 3ºĞ°£ 10 %% ÀÇ °ø°İ·ÂÀÌ  Áõ°¡µË´Ï´Ù";
+"İmparator Sa-Za-Hu sayesinde, oyuncu bu alanda %s 3 dakika için %%10 daha fazla saldırı gücü aldı.";
+
+"±ºÁÖÀÇ ÀÚ°İÀ» °¡Áö°í ÀÖÁö ¾Ê½À´Ï´Ù";
+"İmparator olmak için gerekli özelliklere sahip değilsin.";
+
+"±ºÁÖÀÇ Ãàº¹À¸·Î ÀÌÁö¿ª %s À¯Àú´Â HP,SP°¡ ¸ğµÎ Ã¤¿öÁı´Ï´Ù.";
+"İmparator kutsaması kullanıldığı zaman %s HP ve SP yeniden yüklenir.";
+
+"±ºÁÖÀÇ Ãàº¹À» »ç¿ëÇÏ¿´½À´Ï´Ù.";
+"İmparator Kutsaması aktif.";
+
+"±ºÁ÷ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Gerekli özelliklere sahip olmadığın için bu eşyayı kullanamazsın.";
+
+"±ÍÈ¯¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Işınlama başarısız.";
+
+"±×°ÍÀ¸·Î ¼ö·ÃÀº ³¡³­ °Å¾ß!";
+"Eğitim tamamlandı.";
+
+"±×·¡, ÀÌ ´À³¦ÀÌ¾ß. Ã¼³»¿¡ ±â°¡ ¾ÆÁÖ Ãæ¸¸ÇØ.";
+"Evet, bu his mükemmel. Bedenim Chi ile dolu.";
+
+"±×·¡, ÃµÃµÈ÷. Á»´õ ÃµÃµÈ÷, ±×·¯³ª ¸·Èû ¾øÀÌ ºü¸£°Ô!";
+"Yavaşça, fakat sürekli... Ara vermeksizin.";
+
+"±×·£µå ¸¶½ºÅÍ ¼ö·ÃÀ» ÇÒ ¼ö ¾ø´Â ½ºÅ³ÀÔ´Ï´Ù.";
+"Bu beceriyi Grand Master seviyesine geliştiremezsiniz.";
+
+"±×·± ¸í·É¾î´Â ¾ø½À´Ï´Ù";
+"Bu düzenleme mevcut değil.";
+
+"±×·± »ç¶÷ÀÌ ¾ø½À´Ï´Ù.";
+"Kişi bulunamadı.";
+
+"±×·± ÀÌ¸§ ¶Ç´Â ¹øÈ£ÀÇ ±æµå°¡ ¾ø½À´Ï´Ù.";
+"Belirtilen isim veya numarada lonca mevcut değil.";
+
+"±Ù·Â +%d";
+"Güç +%d";
+
+"±Ù·ÂÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu nesneyi kullanmak için yeterli güce sahip değilsin.";
+
+"±İ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Geçersiz Yang.";
+
+"±â¾ïµÈ À§Ä¡°¡ Å¸Á¦±¹¿¡ ¼ÓÇØ ÀÖ¾î¼­ ±ÍÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Yabancı Krallıkta güvenli bir yere ışınlanamazsın.";
+
+"±â¾ïÇØ µÑ ¼ö ¾ø´Â À§Ä¡ ÀÔ´Ï´Ù.";
+"Bu yeri kaydedemezsin.";
+
+"±âÀıÇÏÁö ¾ÊÀ½ %d%%";
+"Baş dönmesi yok %%%d";
+
+"±æµå¿¡ °¡ÀÔÇÏÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Loncaya katılamadın.";
+
+"±æµå¿ø";
+"Üye";
+
+"±æµåÀå";
+"Lider";
+
+"±æµåÀü¿¡ Âü°¡ÇÑ »ó´ë¹æ ±æµå¿øÀÌ ¾Æ¹«µµ ¾ø½À´Ï´Ù.";
+"Burada düşman yok.";
+
+"±æµåÀüÀÌ ÀÏÂï Á¾·áµÇ¾î ¹«½ÂºÎ·Î ÆÇÁ¤ µÇ¾ú½À´Ï´Ù. (5ºĞÀÌ Áö³ªÁö ¾ÊÀ½)";
+"Lonca Savaşı vaktinden önce bittiği için sonuç berabere sayılıyor.";
+
+"²Ş¼Ó¿¡¼­ ¾î¶»°Ô¿ä?";
+"Rüyamda? Ne?";
+
+"³ª¹«²Û¸¦ ÅëÇØ ´ÙÀ½ ·¹º§ÀÇ °î±ªÀÌ·Î ¾÷±×·¹ÀÌµå ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Kazmanı, oduncu Deokbae'nin yardımıyla geliştirebilirsin.";
+
+"³ª¹«¿¡¼­ ºÎÅÍ ½ÅºñÇÑ ºûÀÌ ³ª¿É´Ï´Ù.";
+"Ağaçtan gizemli bir ışık yayılıyor.";
+
+"³ªº¸´Ù ³Ê¹« ³ôÀº ·¹º§ÀÇ ¸ó½ºÅÍ·Î´Â º¯½Å ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Kendinden daha yüksek seviyeli bir canavara dönüşemezsin.";
+
+"³ªÀÇ ±ºÁÖ Á¤º¸";
+"Benim İmparatorluk Bilgim";
+
+"³ªÀÇ »ï°Å¸® ÁøÇàÁ¤º¸";
+"İmparatorluk savaşı hakkında bilgi";
+
+"³¬½Ã Áß¿¡ ¹Ì³¢¸¦ °¥¾Æ³¢¿ï ¼ö ¾ø½À´Ï´Ù.";
+"Balık tutarken yemi değiştiremezsin.";
+
+"³¬½Ã´ë°¡ ¾Æ´Ñ ¹°°ÇÀ¸·Î ³¬½Ã¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù!";
+"Oltasız balığa gidemezsin.";
+
+"³¬½Ã´ë°¡ ÃÖ´ë ¼ö·Ãµµ¿¡ µµ´ŞÇÏ¿´½À´Ï´Ù.";
+"Maksimum Balıkçılık Puanı'na ulaştın.";
+
+"³¬½Ã´ë¸¦ ÀåÂø ÇÏ¼¼¿ä.";
+"Lütfen bir olta seç.";
+
+"³¬½Ã´ë¿¡ %s¸¦ ¹Ì³¢·Î ³¢¿ó´Ï´Ù.";
+"Çengele yem olarak %s taktın.";
+
+"³¬½Ã´ëÀÇ ¼ö·Ãµµ°¡ Áõ°¡ÇÏ¿´½À´Ï´Ù! (%d/%d)";
+"Balıkçılık puanınız arttı! (%d/%d)";
+
+"³¬½Ã¸¦ ÇÒ ¼ö ÀÖ´Â °÷ÀÌ ¾Æ´Õ´Ï´Ù";
+"Burada balık tutamazsın.";
+
+"³¬½ÃÀÌº¥Æ®¿ùÃ´ºØ¾î";
+"Balıkçılık olayı 'Büyük Sudak Balığı'";
+
+"³¬½ÃÀÌº¥Æ®À×¾î";
+"Balıkçılık olayı 'Sazan Balığı'";
+
+"³²Àº »ı¸í·Â ¾çÀÌ ¸ğÀÚ¶ó »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Yeterli HP yok.";
+
+"³²Àº ½ºÅÈ Æ÷ÀÎÆ®°¡ ¾ø½À´Ï´Ù.";
+"Statü Puanı kalmadı.";
+
+"³²Àº ½ºÅÈ Æ÷ÀÎÆ®°¡ Àû½À´Ï´Ù.";
+"Kalan Statü puanları çok düşük.";
+
+"³²Àº Á¤½Å·Â ¾çÀÌ ¸ğÀÚ¶ó »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bunu kullanmak için yeterli manaya sahip değilsin.";
+
+"³Ê¹« °¡±îÀÌ ÀÖ½À´Ï´Ù.";
+"Çok yakınsın.";
+
+"³Ê¹« ¸Ö¸® ÀÖ½À´Ï´Ù";
+"Çok uzaksın.";
+
+"³Ñ¾îÁöÁö ¾ÊÀ½ %d%%";
+"Düşmek yok %%%d";
+
+"³à¼®µéÀº ÀÌ°÷ ¼ºÁö¿¡ ÀÖÀ» ÀÚ°İÀ» ÀÒ¾ú´Ù. ¸ğµÎ ¼ºÁö¿¡¼­ ¹°·¯³ª°Å¶ó~~[ENTER][ENTER] 10ÃÊ ÈÄ¿¡ ¸ğµÎ ¸¶À»·Î ÀÌµ¿ÇÏ°Ô µË´Ï´Ù.";
+", burada olmaya hakkın yok. 10 saniye içinde krallığına bağlı olanlar bu kutsal toprakları terk edecek.";
+
+"´À·ÁÁöÁö ¾ÊÀ½ %d%%";
+"Yavaşlama yok %%%d";
+
+"´ÔÀÇ ¸»";
+"At";
+
+"´Ù ÀĞ¾ú´Ù! ÀÌÁ¦ ºñ±Ş¿¡ ÀûÇôÀÖ´Â ´ë·Î Àü½Å¿¡ ±â¸¦ µ¹¸®±â¸¸ ÇÏ¸é,";
+"Okudum! Şimdi Chi tüm vücudumu kaplıyor.";
+
+"´Ù¸¥ °Å·¡Áß(Ã¢°í,±³È¯,»óÁ¡)¿¡´Â °³ÀÎ»óÁ¡À» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Şu anda özel depoyu kullanamazsın.";
+
+"´Ù¸¥ °Å·¡Áß(Ã¢°í,±³È¯,»óÁ¡)¿¡´Â »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Başka bir Ticaret/Depo penceresi açıkken herhangi birşey inşa edemezsiniz.";
+
+"´Ù¸¥ °Å·¡ÁßÀÏ°æ¿ì °³ÀÎ»óÁ¡À» ¿­¼ö°¡ ¾ø½À´Ï´Ù.";
+"Başka bir pencere açıkken özel dükkan açamazsın.";
+
+"´Ù¸¥ °Å·¡Ã¢ÀÌ ¿­·ÁÀÖÀ»°æ¿ì °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Pencereler açıkken başkaları ile ticaret yapamazsın.";
+
+"´Ù¸¥ °Å·¡Ã¢ÀÌ ¿­¸°»óÅÂ¿¡¼­´Â »óÁ¡°Å·¡¸¦ ÇÒ¼ö °¡ ¾ø½À´Ï´Ù.";
+"Başka bir pencere açıkken dükkanda ticaret yapamazsın.";
+
+"´Ù¸¥ Á¦±¹ À¯Àú´Â ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Başka krallıktan olan oyuncuları birliğine dahil edemezsin.";
+
+"´Ù¸¥ ÄÄÇ»ÅÍ¿¡¼­ ·Î±×ÀÎ ÇÏ¿© Á¢¼ÓÀ» Á¾·á ÇÕ´Ï´Ù.";
+"Biri hesabınıza giriş yaptı. Bağlantınız kesilecek.";
+
+"´Ù¸¥°Å·¡Ã¢ÀÌ ¿­¸°»óÅÂ¿¡¼­´Â Ã¢°í¸¦ ¿­¼ö°¡ ¾ø½À´Ï´Ù.";
+"Başka bir pencere açıkken depo açamazsın.";
+
+"´ÙÀ½ ¹®Á¦ ÁØºñÇØÁÖ¼¼¿ä.";
+"Sonraki soru için hazır mısın?";
+
+"´ÙÀÌ¾Æ¸óµå·Î ¼ÒÄÏÀ» Ãß°¡ÇØ¾ßÇÕ´Ï´Ù.";
+"Elmas kullanmak istiyorsan bir slot eklemen gerekiyor.";
+
+"´Ü°è °³·®¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Saflık derecesini geliştirme işlemi başarılıydı.";
+
+"´Ü°è °³·®¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Saflık derecesini geliştirme işlemi başarısızdı.";
+
+"´Ü°è °³·®¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Bu nesneye arındırmada ihtiyaç duyulmaz.";
+
+"´Ü°è °³·®ÇÒ ¼ö ¾ø´Â ¿ëÈ¥¼®ÀÔ´Ï´Ù.";
+"Bu ejderha taşı, arındırmada kullanılamaz.";
+
+"´İ±â";
+"Kapat";
+
+"´ç½ÅÀÌ ÁÖ»çÀ§¸¦ ±¼·Á %d°¡ ³ª¿Ô½À´Ï´Ù. (%d-%d)";
+"Zar atınız. Sonuç %d (%d-%d).";
+
+"´ë·Ã °­Á¦ Á¾·á ¼º°ø";
+"Düello iptali başarılı.";
+
+"´ë·Ã °­Á¦ Á¾·á ½ÇÆĞ";
+"Düello iptal edilmedi.";
+
+"´ë·Ã »ó´ë°¡ »ç¶óÁ® ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Düello bitti çünkü savaşçınız gözden kayboldu.";
+
+"´ë·Ã ½Ã°£ ÃÊ°ú·Î ´ë·ÃÀ» Áß´ÜÇÕ´Ï´Ù.";
+"Süre bittiği için düello sona erdi.";
+
+"´ë·Ã ½ÃÀÛ¿¡ ¹®Á¦°¡ ÀÖ½À´Ï´Ù.";
+"Düellonun başlamasıyla ilgili bir problem var.";
+
+"´ë·Ã Áß¿¡´Â ÀÌ¿ëÇÒ ¼ö ¾ø´Â ¹°Ç°ÀÔ´Ï´Ù.";
+"Bu eşyayı düelloda kullanamazsın.";
+
+"´ë·ÃÀÌ ¼º°øÀûÀ¸·Î ½ÃÀÛ µÇ¾ú½À´Ï´Ù.";
+"Düello başarıyla başladı.";
+
+"´ë·ÃÀÌ ½ÃÀÛµÇ¾ú½À´Ï´Ù.";
+"Düello başladı.";
+
+"´ë·ÃÀÚ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Savaşçınızla ilgili bir problem olduğu için düello sona erdi.";
+
+"´ë·ÃÀÚ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Áß´ÜÇÕ´Ï´Ù.";
+"Arena ile ilgili bir problem olduğu için düello sona erdi.";
+
+"´ë·ÃÀÚ°¡ ¾ø½À´Ï´Ù.";
+"Burada savaşçı yok.";
+
+"´ë·ÃÀå ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Arenadaki bir problemden dolayı düello bitti.";
+
+"´ë·ÃÀå¿¡¼­ »ç¿ëÇÏ½Ç ¼ö ¾ø½À´Ï´Ù.";
+"Bunu arenada kullanamazsın.";
+
+"´ë¹Ú°ñµå µå·Ó·ü %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Yang yağmurunun düşme oranı şu anda artı %%%d.";
+
+"´õ ³ôÀº °æÁöÀÇ ¼ö·ÃÀ» ¼º°øÀûÀ¸·Î ³¡³»¼Ì½À´Ï´Ù.";
+"Kitapla olan eğitimini başarıyla tamamladın.";
+
+"´õ ÀÌ»ó OXÀÌº¥Æ® Âü°¡ÀÚ¸¦ ¹ŞÁö ¾Ê½À´Ï´Ù.";
+"OX Etkinliğine daha fazla oyuncu katılamaz.";
+
+"´õ ÀÌ»ó °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Daha fazla geliştirme imkansız.";
+
+"´õ ÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu beceriyi daha fazla yükseltemezsin.";
+
+"´õ ÀÌ»ó ½Â¸¶ ¼ö·Ã¼­¸¦ ÀĞÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Daha fazla Binicilik Rehberi okuyamazsın.";
+
+"´õ ÀÌ»ó ÀÌ ¾ÆÀÌÅÛÀ» ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu eşya geliştirilemez. Maksimum bonus sayısına ulaşıldı.";
+
+"´õÀÌ»ó ÀÌ ¾ÆÀÌÅÛÀ» ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Kutsama Küresini bu eşyaya başka bir bonus eklemek için kullanmalısın.";
+
+"´õÀÌ»ó Ä³³¾ ¼ö ¾ø½À´Ï´Ù.";
+"Burada maden yok.";
+
+"´øÀü ¾È¿¡¼­´Â %s%s »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"%s%s zindanda kullanılamaz.";
+
+"µ¶ ÀúÇ× %d%%";
+"Zehire karşı koyma %%%d";
+
+"µ¶°ø°İ %d";
+"Zehirli Saldırı %d";
+
+"µ· %d ³ÉÀ» È¹µæÇß½À´Ï´Ù.";
+"%d Yang kazandın.";
+
+"µ· ´ë¹ÚÀÌ ³ª¿Ã È®·ü";
+"Yang yağmuru düşme oranı";
+
+"µ· µå·ÓÀ² %.1f¹è";
+"Yang bulma şansı %. 1f";
+
+"µ·ÀÌ ³ª¿Ã È®·ü";
+"Yang düşürme oranı yüzdesi";
+
+"µ·ÀÌ ºÎÁ·ÇÏ°Å³ª ¾ÆÀÌÅÛÀÌ Á¦ÀÚ¸®¿¡ ¾ø½À´Ï´Ù.";
+"Yeterli Yang veya envanter boş yer yok.";
+
+"µ¿¹°·ù ¸ó½ºÅÍ Å¸°İÄ¡ +%d%%";
+"Yaratıklara karşı Atın saldırı gücü +%%%d";
+
+"µ¿ÀÏÇÑ ¸Ó¸® ½ºÅ¸ÀÏ·Î´Â ±³Ã¼ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Zaten bu saç şekline sahipsin.";
+
+"µÎ¼Õ°Ë ¹æ¾î %d%%";
+"Çift-El Savunması %%%d";
+
+"µĞ°© Áß¿¡´Â ´É·ÂÀ» ¿Ã¸± ¼ö ¾ø½À´Ï´Ù.";
+"Dönüşmüş durumda olduğunuz sürece statünüzü değiştiremezsiniz.";
+
+"µĞ°© Áß¿¡´Â Âø¿ëÁßÀÎ Àåºñ¸¦ º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Dönüşüm esnasında ekipmanını değiştiremezsin.";
+
+"µĞ°©¼­ ¼ö·ÃÀ» ¸¶Ãº½À´Ï´Ù. ½Å¼±¿¡°Ô Ã£¾Æ°¡¼¼¿ä.";
+"Dönüşümü tamamen öğrendin.";
+
+"µĞ°©¿¡ ½ÇÆĞ ÇÏ¿´½À´Ï´Ù";
+"Dönüşüm sırasında hata oluştu.";
+
+"µĞ°©ÇÒ ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"Ata binerken dönüşemezsin.";
+
+"µåµğ¾î ³¡ÀÌ º¸ÀÌ´Â °Ç°¡...  ÀÌ ±â¼úÀº ÀÌÇØÇÏ±â°¡ ³Ê¹« Èûµé¾î..";
+"Bu talimatları anlamak kolay değil. Biraz daha çalışmam gerekiyor.";
+
+"µî±Ş °³·®¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Arındırmayı bir sınıf daha yükseltme işlemi başarılıydı.";
+
+"µî±Ş °³·®¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Arındırmayı bir sınıf daha yükseltme işlemi başarısızdı.";
+
+"µî±Ş °³·®¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Bu nesneye saflık derecesini geliştirmek için ihtiyaç duyulmaz.";
+
+"¶³¾îÁø ¾ÆÀÌÅÛÀº %dºĞ ÈÄ »ç¶óÁı´Ï´Ù.";
+"Düşürülen eşya %d dakika sonra kaybolacak.";
+
+"¶³¾îÁø ¾ÆÀÌÅÛÀº 3ºĞ ÈÄ »ç¶óÁı´Ï´Ù.";
+"Düşürülen eşya 5 dakika içinde yok olacak.";
+
+"¶ß°Å¿î ¹«¾ùÀÌ °è¼Ó ¿ë¼ÚÀ½Ä¡°í ÀÖ¾î! ÀÌ°Ç, ÀÌ°ÍÀº!";
+"Eğitim yavaş yavaş fayda ediyor...";
+
+"·¹º§ 20 ÀÌÇÏ´Â ÇÚµåÆù ¹øÈ£¸¦ µî·ÏÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Cep telefonu numarası kaydedebilmek için 20.Seviyeden yüksek olmalısın.";
+
+"·¹º§ 30ÀÌ µÇ±â Àü¿¡´Â ½ÀµæÇÒ ¼ö ÀÖÀ» °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Bu kitabı anlaman için 30.Seviyede olman gerekiyor.";
+
+"·¹º§ 50ÀÌ µÇ±â Àü¿¡´Â ½ÀµæÇÒ ¼ö ÀÖÀ» °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Bu kitabı anlaman için 50.Seviyede olman gerekiyor.";
+
+"·¹º§ÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Seviyen çok düşük olduğu için bu nesneyi kullanamıyorsun.";
+
+"·Î±×ÀÎ È­¸éÀ¸·Î µ¹¾Æ °©´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Giriş ekranına dön. Lütfen bekleyin.";
+
+"·í·¿À» µ¹¸³´Ï´Ù. ±İ¾× %d";
+"%d Yang için rulet çevir.";
+
+"¸¦";
+"the";
+
+"¸¶¹ı °ø°İ·Â +%d";
+"Büyülü Saldırı + %d";
+
+"¸¶¹ı ¹æ¾î·Â +%d";
+"Büyü Savunması + %d";
+
+"¸¶¹ı ÀúÇ× %d%%";
+"Büyü Savunması %%%d";
+
+"¸¶À½ÀÌ ¸¼¾ÆÁö´Â±º. °¡½¿À» Áş´©¸£´ø ¹«¾ğ°¡°¡ Á» °¡º­¿öÁø ´À³¦ÀÌ¾ß.";
+"Zihnin açık. Şimdi iyi konsantre olabilirsin.";
+
+"¸¹Àº Âü¿© ºÎÅ¹µå¸³´Ï´Ù.";
+"Katılım için birçok oyuncu arıyoruz.";
+
+"¸» ¼ÒÈ¯ ¾ÆÀÌÅÛÀ» »ç¿ëÇÏ¼¼¿ä.";
+"Lütfen at çağırma nesnesini kullan.";
+
+"¸» ¼ÒÈ¯¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"At çağırma işlemi başarısız.";
+
+"¸»¿¡°Ô %s%s ÁÖ¾ú½À´Ï´Ù.";
+"Ata %s%s yedirdin.";
+
+"¸»¿¡°Ô »ç·á¸¦ ÁÖ¾ú½À´Ï´Ù.";
+"Atı besledin.";
+
+"¸»¿¡°Ô ¼±ÃÊ¸¦ ÁÖ¾ú½À´Ï´Ù.";
+"Atı otlarla beslediniz.";
+
+"¸»¿¡¼­ ¸ÕÀú ³»·Á¾ß ÇÕ´Ï´Ù.";
+"Atından inmelisin.";
+
+"¸»À» µ¹·Áº¸³Â½À´Ï´Ù.";
+"Atını gönderdin.";
+
+"¸»À» ¸ÕÀú ¼ÒÈ¯ÇØÁÖ¼¼¿ä.";
+"Lütfen önce atını çağır.";
+
+"¸»À» ¼ÒÀ¯ÇÏ°í ÀÖÁö ¾Ê½À´Ï´Ù.";
+"Atın yok.";
+
+"¸»À» Åº »ó´ë¿Í °¨Á¤Ç¥ÇöÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"At süren bir kişiye duygularınızı ifade edemezsiniz.";
+
+"¸»À» Åº »óÅÂ¿¡¼­ °¨Á¤Ç¥ÇöÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"At sürerken duygularınızı ifade edemezsiniz.";
+
+"¸»À» Åº »óÅÂ¿¡¼­ ¿¹º¹À» ÀÔÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Ata binerken bunu kullanamazsınız.";
+
+"¸»À» Åº »óÅÂ¿¡¼­´Â ¸ÔÀÌ¸¦ ÁÙ ¼ö ¾ø½À´Ï´Ù.";
+"Atının üzerinde otururken onu besleyemezsin.";
+
+"¸»ÀÇ ½ºÅ×¹Ì³Ê°¡ ºÎÁ·ÇÏ¿© ¸»À» Å» ¼ö ¾ø½À´Ï´Ù.";
+"Atının dayanıklılığı çok az.";
+
+"¸»ÀÌ ¾ø½À´Ï´Ù. ¸¶±Â°£ °æºñº´À» Ã£¾Æ°¡¼¼¿ä.";
+"Burada at yok. Seyise sor.";
+
+"¸»ÀÌ Á×¾îÀÖ´Â »óÅÂ ÀÔ´Ï´Ù.";
+"Atın öldü.";
+
+"¸ÂÀ¸¸é O, Æ²¸®¸é X·Î ÀÌµ¿ÇØÁÖ¼¼¿ä";
+"Doğruysa O'ya git, yanlışsa X'e git.";
+
+"¸Ó´Ï  ·ê·¿ ½ÃÀÛ.";
+"Yang Ruleti Başlat.";
+
+"¸ÕÀú ´ÙÀÌ¾Æ¸óµå·Î ¾Ç¼¼¼­¸®¿¡ ¼ÒÄÏÀ» Ãß°¡ÇØ¾ßÇÕ´Ï´Ù.";
+"İlk önce bir slot eklemen gerekiyor. Bunu yapmak için bir elmas kullan.";
+
+"¸ÕÀú ¿ëÈ¥¼® Äù½ºÆ®¸¦ ¿Ï·áÇÏ¼Å¾ß ÇÕ´Ï´Ù.";
+"Cor Draconis'i açmadan önce Ejderha Taşı görevi tamamlanmış olmalı ve Ejderha Taşı Simyası etkinleştirilmiş olmalı.";
+
+"¸ÕÀú ÀÏ¾î ³ª¼¼¿ä.";
+"Önce kalk.";
+
+"¸ÕÀú Àç°¡ºñ¼­¸¦ ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡½ÃÄÑ ÁÖ¼¼¿ä.";
+"Kutsama Küresini üzerinde zaten 4 bonus olan eşyalar için kullanabilirsiniz.";
+
+"¸ŞÆ¾2ÀÎÁõ¹øÈ£: %s";
+"Metin2 Onay Numarası: %s";
+
+"¸ŞÆ¾¼® ºÎÂø¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Zihin taşını başarıyla taktın.";
+
+"¸ŞÆ¾¼® ºÎÂø¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Zihin taşı yerleştirirken kırıldı.";
+
+"¸í·É¾î¸¦ ¸ğµÎ ÀÔ·ÂÇÏ¼¼¿ä.";
+"Lütfen düzenlemenin tam ismini giriniz.";
+
+"¸í·É¾îÀÇ ¼­ºê Ä¿¸Çµå°¡ Àß¸ø µÇ¾ú½À´Ï´Ù.";
+"Sıralama veya alt sıralama yanlış.";
+
+"¸ğ´ÚºÒÀ» ÇÇ¿ï ¼ö ¾ø´Â ÁöÁ¡ÀÔ´Ï´Ù.";
+"Buraya kamp ateşi yakamazsın.";
+
+"¸ó½ºÅÍ¿¡°Ô °­ÇÔ +%d%%";
+"Canavarlara karşı güçlü +%%%d";
+
+"¸ö ¼ÓÀÌ ¶ß°Ì±º. ÇÏÁö¸¸ ¾ÆÁÖ Æí¾ÈÇØ. ÀÌ´ë·Î ±â¸¦ ¾ÈÁ¤½ÃÅ°ÀÚ.";
+"İçim yanıyor fakat vücudumu sakinleştiriyor.";
+
+"¸ö¿¡¼­ ¹º°¡ ÈûÀÌ ÅÍÁ® ³ª¿À´Â ±âºĞÀÌ¾ß!";
+"Bedenim güçle dolu!";
+
+"¹«±â¿Í °©¿Ê¿¡¸¸ »ç¿ë °¡´ÉÇÕ´Ï´Ù.";
+"Yalnızca silahlara ve zırhlara uygulanabilir.";
+
+"¹«´ç°ø°İ¿¡ %d%% ÀúÇ×";
+"Şaman ataklarında %%%d dayanıklılık";
+
+"¹«´ç¿¡°Ô °­ÇÔ +%d%%";
+"Şamanlara karşı güçlü +%%%d";
+
+"¹«·á °³·® ±âÈ¸´Â 20 ÀÌÇÏÀÇ ¹«±â¸¸ °¡´ÉÇÕ´Ï´Ù";
+"Ücretsiz silah geliştirmeleri ancak seviye 20'ye kadar olan silahlarda kullanılabilir.";
+
+"¹«»ç°ø°İ¿¡ %d%% ÀúÇ×";
+"Savaşçı ataklarında %%%d dayanıklılık";
+
+"¹«»ç¿¡°Ô °­ÇÔ +%d%%";
+"Savaşçılara karşı güçlü +%%%d";
+
+"¹®ÀÚ ¸Ş¼¼Áö Àü¼Û¿¡´Â 2000¿øÀÌ ÇÊ¿ä ÇÕ´Ï´Ù.";
+"Yazılı mesaj yollamak için 2000 Yang gerekli.";
+
+"¹®ÀÚ ¸Ş¼¼Áö Àü¼ÛÀº ·¹º§ 20ºÎÅÍ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Yazılı mesaj yollayabilmek için en az 20.Seviye olman gerekli.";
+
+"¹®ÀÚ ¸Ş¼¼Áö¸¦ Àü¼Û Çß½À´Ï´Ù.";
+"Yazılı mesajınız yollandı.";
+
+"¹®Á¦ ÀÔ´Ï´Ù.";
+"Soru.";
+
+"¹®Á¦¸¦ ÃâÁ¦ÇÏ¿´½À´Ï´Ù.";
+"Bir hata oluştu.";
+
+"¹®Á¦¸¦ ÃâÁ¦ÇÏÁö ¸øÇß½À´Ï´Ù.";
+"Hata oluşmadı.";
+
+"¹° ¼Ó¿¡ ¸ğ´ÚºÒÀ» ÇÇ¿ï ¼ö ¾ø½À´Ï´Ù.";
+"Suyun altında kamp ateşi yakamazsın.";
+
+"¹°¸®Å¸°İ½Ã ºí·° È®·ü %d%%";
+"Yakın dövüş saldırısını engelleme şansı %%%d";
+
+"¹°¾à »ç¿ë½Ã %d%% ¼º´É Áõ°¡";
+"İksir kullandığın zaman güç %%%d artacak.";
+
+"¹°¾à Á¦Á¶¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"İksir hazırlama işlemi başarısız.";
+
+"¹°¾à Á¦ÇÑÀÌ ¾ø½À´Ï´Ù.";
+"Burada iksirler için herhangi bir sınırlama yok.";
+
+"¹°¾à Á¶ÇÕÀ» À§ÇÑ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"İksir hazırlamak için tüm malzemelere sahip değilsin.";
+
+"¹°¾àÀ» %d °³ ±îÁö »ç¿ë °¡´ÉÇÕ´Ï´Ù.";
+"%d iksir kullanabilirsiniz.";
+
+"¹º°¡ ¸ö ¾È¿¡ ÈûÀÌ »ı±â´Â ±âºĞÀÎ °É.";
+"Yenilenmiş hissediyorum.";
+
+"¹Ì³¢¸¦ ³¢°í ´øÁ® ÁÖ¼¼¿ä.";
+"Önce yemi çengele geçir.";
+
+"¹ÎÃ¸ +%d";
+"Çeviklik +%d";
+
+"¹ÎÃ¸ÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu nesneyi kullanabilmek için yeterli çevikliğe sahip değilsin.";
+
+"¹Ğ±³·ù Å¸°İÄ¡ +%d%%";
+"Milgyo karşısında saldırı artışı +%%%d";
+
+"¹Ù¶÷ ÀúÇ× %d%%";
+"Rüzgara Dayanıklılık %%%d";
+
+"¹æ¾î·Â +%d";
+"Zırh + %d";
+
+"¹æ¾î·Â +%d%%";
+"Savunma +%%%d";
+
+"¹æ¿ï ¹æ¾î %d%%";
+"Çan Savunması %%%d";
+
+"¹è ¼Ó¿¡¼­ Á¶°³°¡ ³ª¿Ô½À´Ï´Ù.";
+"Balığın içinde bir istiridye var.";
+
+"¹è ¼Ó¿¡¼­ Áö··ÀÌ°¡ ³ª¿Ô½À´Ï´Ù.";
+"Balığın içinde bir solucan var.";
+
+"¹ö¸± ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Bu eşyayı düşüremezsin.";
+
+"º¯°æÇÒ ¼Ó¼ºÀÌ ¾ø½À´Ï´Ù.";
+"Değiştirebileceğin hiçbir geliştirme yok.";
+
+"º¯½Å »óÅÂ¿¡¼­´Â ¸»¿¡ Å» ¼ö ¾ø½À´Ï´Ù.";
+"Dönüşmüş durumdayken ata binemezsin.";
+
+"º¯½ÅÁß¿¡´Â Ã¥À» ÀĞÀ»¼ö ¾ø½À´Ï´Ù.";
+"Dönüşüm halindeyken kitap okuyamazsın.";
+
+"ºÎÂøÇÒ ¼ö ÀÖ´Â ½½·ÔÀÌ ¾ø½À´Ï´Ù.";
+"Boş yer yok.";
+
+"ºÎÃ¤ ¹æ¾î %d%%";
+"Yelpaze Savunması %%%d";
+
+"ºÒ¹ı ÇÁ·Î±×·¥ÀÌ °¨Áö µÇ¾î °ÔÀÓÀÌ Á¾·á µË´Ï´Ù.";
+"Yasadışı yazılım tespit edildi. Oyun kapatılacak.";
+
+"ºñ¼Ó¾î³ª Àº¾î°¡ Æ÷ÇÔµÈ »óÁ¡ ÀÌ¸§À¸·Î »óÁ¡À» ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"Depona hatalı bir isim veremezsin.";
+
+"ºó º´ÀÌ ¸ğÀÚ¸¨´Ï´Ù.";
+"Yeterince boş şişen yok.";
+
+"»©³¾ ¼ö ÀÖ´Â ¸ŞÆ¾¼®ÀÌ ¾ø½À´Ï´Ù.";
+"Çıkartılacak metin taşı yok.";
+
+"»©³¾ ¿µ¼®ÀÌ ¾ø½À´Ï´Ù";
+"Çıkartılacak taş yok.";
+
+"»ç±Í Å¸¿ö ¿Ï·á º¸»óÀº ÇÑ¹ø±îÁö »ç¿ë°¡´ÉÇÕ´Ï´Ù.";
+"Şeytan Kulesi görevi için sadece bir kez ödüllendirilebilirsiniz.";
+
+"»ç¿ë Á¦ÇÑ·®À» ÃÊ°úÇÏ¿´½À´Ï´Ù.";
+"Bu limitin üzerinde.";
+
+"»ç¿ë¹ı: transfer <name>";
+"Kullan: transfer <name>";
+
+"»ç¿ë¹ı: warpto <character name>";
+"Sıra: warpto <character name>";
+
+"»ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Şu anda eşinize teleport olamazsınız.";
+
+"»ï°Å¸® ¸÷ ¸®Á¨";
+"Krallık savaşındaki yaratıkların sayısı:";
+
+"»ï°Å¸® ÀüÅõ Âü°¡Áß¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Katılmış olduğun bir krallık savaşı devam ederken geri dönüş kağıdı kullanamazsın.";
+
+"»ï°Å¸® ÀüÅõ¿¡¼­ %s ±¹°¡°¡ °¡Àå¸ÕÀú Å»¶ôÀ» ÇÏ¿´½À´Ï´Ù";
+"%s Krallığı yenildi ve krallık savaşından çıktı.";
+
+"»ó´ë¹æ Ä³¸¯ÅÍ°¡ Á¢¼ÓÀ» Á¾·áÇÏ¿© ´ë·ÃÀ» ÁßÁöÇÕ´Ï´Ù.";
+"Savaşçılar ayrıldı. Düello sona erdi.";
+
+"»ó´ë¹æ Ä³¸¯ÅÍÀÇ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Savaşçınızla ilgili bir problem olduğu için düello sona erdi.";
+
+"»ó´ë¹æÀÇ µ·ÀÌ ºÎÁ·ÇÏ°Å³ª ¾ÆÀÌÅÛÀÌ Á¦ÀÚ¸®¿¡ ¾ø½À´Ï´Ù.";
+"Diğer kişide yeterli Yang veya envanterinde boş yer yok.";
+
+"»ó´ë¹æÀÇ ¼ÒÁöÇ°¿¡ ºó °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"Diğer kişinin envanterinde hiç boş yer yok.";
+
+"»ó´ë¹æÀÇ ÃÑ±İ¾×ÀÌ 20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© °Å·¡¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù..";
+"Oyuncunun 2 milyardan fazla Yang'ı var.Bu oyuncuyla ticaret yapamazsın.";
+
+"»ó´ë¹æÀÌ %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"Oyuncu %d numaralı kanalda. (Sen %d numaralı kanaldasın.)";
+
+"»ó´ë¹æÀÌ ±³È¯ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"Diğer oyuncu ticareti iptal etti.";
+
+"»ó´ë¹æÀÌ ´Ù¸¥ °Å·¡¸¦ ÇÏ°í ÀÖ´Â ÁßÀÔ´Ï´Ù.";
+"Bu oyuncu zaten başkasıyla ticaret yapıyor.";
+
+"»ó´ë¹æÀÌ ´Ù¸¥ °Å·¡ÁßÀÌ¶ó °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Diğer oyuncu şu an meşgul, bu nedenle onunla şimdi ticaret yapamazsın.";
+
+"»ó´ë¹æÀÌ ´ë·ÃÁßÀÔ´Ï´Ù.";
+"Oyuncu zaten dövüşüyor.";
+
+"»ó´ë¹æÀÌ ¸Ş½ÅÁ® Ãß°¡ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"Oyuncu, arkadaş listene eklenmeyi reddetti.";
+
+"»ó´ë¹æÀÌ ¿Â¶óÀÎ »óÅÂ°¡ ¾Æ´Õ´Ï´Ù.";
+"Oyuncu çevrimdışı.";
+
+"»ó´ë¹æÀÌ ÀÖ´Â °÷À¸·Î ¿öÇÁÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu oyuncuya ışınlanamazsın.";
+
+"»ó´ë¹æÀÌ Ä£±¸ Ãß°¡¸¦ ¹ŞÀ» ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"Karşındaki kişiyi arkadaşlarına ekleyemiyorsun.";
+
+"»ó´ë¹æÀÌ ÆÄÆ¼¿¡ ¼ÓÇØÀÖÁö ¾Ê½À´Ï´Ù.";
+"Oyuncu bu grupta değil.";
+
+"»óÀÚ°¡ °©ÀÚ±â Æø¹ßÇÏ¿´½À´Ï´Ù! »ı¸í·ÂÀÌ °¨¼ÒÇß½À´Ï´Ù.";
+"Kutu patladı! HP seviyen düştü.";
+
+"»óÀÚ¿¡¼­ %s °¡ %d °³ ³ª¿Ô½À´Ï´Ù.";
+"%s : %d adet kazandın.";
+
+"»óÀÚ¿¡¼­ %s °¡ ³ª¿Ô½À´Ï´Ù.";
+"Kutuda %s var.";
+
+"»óÀÚ¿¡¼­ ³ª¿Â ³ì»ö ¿¬±â¸¦ µéÀÌ¸¶½ÃÀÚ µ¶ÀÌ ¿Â¸öÀ¸·Î ÆÛÁı´Ï´Ù!";
+"Eğer kutudan gelen kırmızı dumanı solursan, zehirlenirsin!";
+
+"»óÀÚ¿¡¼­ ³ª¿Â »¡°£ ¿¬±â¸¦ µéÀÌ¸¶½ÃÀÚ ¿òÁ÷ÀÌ´Â ¼Óµµ°¡ ´À·ÁÁ³½À´Ï´Ù!";
+"Eğer kutudan gelen kırmızı dumanı solursan, hızın artar!";
+
+"»óÀÚ¿¡¼­ ¸ó½ºÅÍ°¡ ³ªÅ¸³µ½À´Ï´Ù!";
+"Bak kutudan ne çıktı!";
+
+"»óÀÚ¿¡¼­ ºÎÅÍ ½ÅºñÇÑ ºûÀÌ ³ª¿É´Ï´Ù.";
+"Kutudan gizemli bir ışık geliyor.";
+
+"»óÁ¡°úÀÇ °Å¸®°¡ ³Ê¹« ¸Ö¾î ¹°°ÇÀ» »ì ¼ö ¾ø½À´Ï´Ù.";
+"Almak için depodan çok uzaksın.";
+
+"»óÁ¡°úÀÇ °Å¸®°¡ ³Ê¹« ¸Ö¾î ¹°°ÇÀ» ÆÈ ¼ö ¾ø½À´Ï´Ù.";
+"Satmak için depodan çok uzaksın.";
+
+"»óÇ°À» ¹ŞÀ» ÀÎº¥Åä¸®°¡ ºÎÁ·ÇÕ´Ï´Ù. ÀÎº¥Åä¸®¸¦ ºñ¿öÁÖ¼¼¿ä!";
+"Ödüller için evanter kapasiten yeterli değil.";
+
+"»ı°¢¸¸Å­ ÀĞ±â°¡ ½±Áö°¡ ¾Ê±º. ÀÌÇØµµ ¾î·Æ°í ³»¿ëµµ ³­ÇØÇØ.";
+"Bu yöntem düşündüğümden çok daha karışık.";
+
+"»ı¸í·Â È¸º¹ +%d";
+"Geri Kazanılan Enerji +%d";
+
+"¼­¹ö¿¡ Ä¡¸íÀûÀÎ ¿À·ù°¡ ¹ß»ıÇÏ¿© ÀÚµ¿À¸·Î ÀçºÎÆÃµË´Ï´Ù.";
+"Kritik sunucu hatası. Sunucu otomatik olarak yeniden başlatılacak.";
+
+"¼±¾ÇÄ¡°¡ %d Áõ°¡ÇÏ¿´½À´Ï´Ù.";
+"Sıralama %d puana yükseldi.";
+
+"¼±¾ÇÄ¡¸¦ ´õ ÀÌ»ó ¿Ã¸± ¼ö ¾ø½À´Ï´Ù.";
+"Sıralama Puanları daha fazla arttırılamıyor.";
+
+"¼±ÅÃ ¸Ê Á¤º¸ ¼ºÁö %d Åë·Î %d %d %d";
+"Haritadan kutsal alan bilgisini seç %d Giriş Yap %d %d %d";
+
+"¼ºº°ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Doğru cinsiyette olmadığınız için bu eşyayı kullanamazsınız.";
+
+"¼ºº°ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"Bu eşya sadece karşı cins tarafından açılabilir.";
+
+"¼º¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖ´Â ±â´ÉÀÔ´Ï´Ù.";
+"Bu özelliği sadece kaledeyken kullanabilirsin.";
+
+"¼ºÁö¿¡¼­ ºÎÈ° ±âÈ¸¸¦ ¸ğµÎ ÀÒ¾ú½À´Ï´Ù! ¸¶À»·Î ÀÌµ¿ÇÕ´Ï´Ù!";
+"Bekleme süresi doldu. Şehirde yeniden diriltileceksin.";
+
+"¼ºÁöÀÇ ¸¶¿Õ: ³ÊÈñ";
+"Kutsal Yerin Şeytanı: [ENTER][ENTER]";
+
+"¼¼±İÀÌ %d %·Î ¼³Á¤µÇ¾ú½À´Ï´Ù";
+"Vergi ayarlandı: %d %%.";
+
+"¼Ë´Ù¿îÀÌ %dÃÊ ³²¾Ò½À´Ï´Ù.";
+"%d saniye sonra oyun kapanacak.";
+
+"¼ÒÀ¯ µ·ÀÌ 20¾ï³ÉÀ» ³Ñ¾î °Å·¡¸¦ ÇÛ¼ö°¡ ¾ø½À´Ï´Ù.";
+"2 milyardan fazla Yang sahibisiniz. Ticaret yapamazsınız.";
+
+"¼ÒÁö±İÀÌ ºÎÁ·ÇÏ¿© ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu eşyayı kullanmak için yeterli Yang a sahip değilsin.";
+
+"¼ÒÁöÇ°¿¡ ºó °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"Envanterde yeterli boşluk yok.";
+
+"¼ÒÁöÇÏ°í ÀÖ´Â ¾ÆÀÌÅÛÀÌ ³Ê¹« ¸¹½À´Ï´Ù.";
+"Çok fazla eşya taşıyorsun.";
+
+"¼ÒÄÏ Ãß°¡¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Slot eklenmedi.";
+
+"¼ÒÄÏÀÌ ¼º°øÀûÀ¸·Î Ãß°¡µÇ¾ú½À´Ï´Ù.";
+"Slot başarıyla eklendi.";
+
+"¼ÒÈ¯ÇÒ¼ö ¾ø´Â ¸ó½ºÅÍ ÀÔ´Ï´Ù. ¼ÒÈ¯°¡´ÉÇÑ ¸ó½ºÅÍ´Â È¨ÆäÀÌÁö¸¦ ÂüÁ¶ÇÏ¼¼¿ä";
+"Canavar çağrılamaz. Mob numarasını kontrol ediniz.";
+
+"¼Ó¼º Ãß°¡¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Geliştirme başarıyla eklendi.";
+
+"¼Ó¼º Ãß°¡¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Geliştirme eklenmedi.";
+
+"¼Ó¼ºÀ» ¹Ù²ÛÁö %dºĞ ÀÌ³»¿¡´Â ´Ù½Ã º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.(%d ºĞ ³²À½)";
+"Bunu bir geliştirmeden en az %d dakika sonra yapabilirsin. (%d dakika kaldı)";
+
+"¼Ó¼ºÀ» º¯°æÇÏ¿´½À´Ï´Ù.";
+"Geliştirmeyi değiştirdin.";
+
+"¼Ó¼ºÀ» º¯°æÇÒ ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Bu eşyanın geliştirilmesini değiştiremezsin.";
+
+"¼ö¶ó°ø°İ¿¡ %d%% ÀúÇ×";
+"Sura ataklarında %%%d dayanıklılık";
+
+"¼ö¶ó¿¡°Ô °­ÇÔ +%d%%";
+"Suralara karşı güçlü +%%%d";
+
+"¼ö·ÃÀÌ ½ÇÆĞ·Î ³¡³µ½À´Ï´Ù. ´Ù½Ã µµÀüÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.";
+"Eğitim başarısız. Lütfen sonra tekrar deneyin.";
+
+"¼ö·ÃÇÒ ¼ö ¾ø´Â ½ºÅ³ÀÔ´Ï´Ù.";
+"Bu beceriyi geliştiremezsiniz.";
+
+"½ºÅ³ µ¥¹ÌÁö %d%%";
+"Beceri Hasarı %%%d";
+
+"½ºÅ³ µ¥¹ÌÁö ÀúÇ× %d%%";
+"Beceri hasarına dayanıklılık %%%d";
+
+"½ºÅ³ ·¹º§À» ³»¸®´Âµ¥ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Beceri seviyeni düşürdün.";
+
+"½ºÅ³ ·¹º§À» ³»¸± ¼ö ¾ø½À´Ï´Ù.";
+"Beceri seviyeni düşüremezsin.";
+
+"½ºÅÏ +%d";
+"Star +%d";
+
+"½½·Î¿ì +%d";
+"Hız azalması +%d";
+
+"½Â¸¶ ¼ö·Ã¼­ ÀÌÇØ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Binicilik Rehberini anlamadın.";
+
+"½Â¸¶ ¼ö·Ã¼­¸¦ ÀĞ¾î ½Â¸¶ ½ºÅ³ Æ÷ÀÎÆ®¸¦ ¾ò¾ú½À´Ï´Ù.";
+"Binicilik Kılavuzu'nu okudun ve bir tane Binicilik Puanı kazandın.";
+
+"½ÃÃ¼·ù Å¸°İÄ¡ +%d%%";
+"Ölümsüzlere karşı saldırı artışı: +%%%d";
+
+"½Å¼ö±¹";
+"Shinsoo Krallığı";
+
+"¾²·¯Áø »óÅÂ¿¡¼­´Â ¸»¿¡ Å» ¼ö ¾ø½À´Ï´Ù.";
+"Yerde yatarken ata binemezsin.";
+
+"¾²·¯Áø »óÅÂ¿¡¼­´Â ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bunu düşmüş haldeyken yapamazsın.";
+
+"¾Æ´Ï ¾î¶»°Ô µÈ °Ô Á¾ÀÏ ÀĞ¾îµµ ¸Ó¸®¿¡ ¾È µé¾î¿À³Ä.";
+"Aynı satırı tekrar okuyup duruyorum.";
+
+"¾Æ¹«°Íµµ ¾òÀ» ¼ö ¾ø¾ú½À´Ï´Ù.";
+"Hiç bir şey kazanamadın.";
+
+"¾ÆÀÌÅÛ °³·®ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ticaretten sonra %d saniye Parşömen kullanamazsın.";
+
+"¾ÆÀÌÅÛ µå·Ó·ü  %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Düşen nesne yüzdesi şu anda +%%%d";
+
+"¾ÆÀÌÅÛ µå·ÓÀ² %.1f¹è";
+"Nesne bulma oranı %. 1f";
+
+"¾ÆÀÌÅÛ ·ê·¿ ½ÃÀÛ.";
+"Nesne Ruleti Başlat.";
+
+"¾ÆÀÌÅÛ Àü´Ş: %s ´Ô¿¡°Ô %s";
+"Eşya Ticareti:  %s, %s";
+
+"¾ÆÀÌÅÛ È¹µæ: %s";
+"%s Kazandın.";
+
+"¾ÆÀÌÅÛ È¹µæ: %s ´ÔÀ¸·ÎºÎÅÍ %s";
+"%s şunu kazandı: %s.";
+
+"¾ÆÀÌÅÛ·Î±×°¡ syslog ¿¡ ³²¾Ò½À´Ï´Ù";
+"Nesne logları, sistem loglarının içine yerleştirildi.";
+
+"¾ÆÀÌÅÛÀ» °Ç³×ÁÙ ¼ö ¾ø½À´Ï´Ù.";
+"Bu nesneyle ticaret yapamazsın.";
+
+"¾ÆÀÌÅÛÀÇ ·¹º§ Á¦ÇÑº¸´Ù ·¹º§ÀÌ ³·½À´Ï´Ù.";
+"Seviyen eşyanın geliştirmeden sonraki seviyesinden düşük.";
+
+"¾ÆÀÌÅÛÀÌ ³ª¿Ã È®·ü";
+"Eşya düşürme oran yüzdesi";
+
+"¾ÆÁ÷ °ñµå¸¦ ¹ö¸± ¼ö ¾ø½À´Ï´Ù.";
+"Altın'ı henüz atamazsın.";
+
+"¾ÆÁ÷ ¸¶À»¿¡¼­ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù. (%d ÃÊ ³²À½)";
+"Şehirde yeniden dirilme henüz mümkün değil. %d saniye bekle.";
+
+"¾ÆÁ÷ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Henüz kullanılamaz.";
+
+"¾ÆÁ÷ ½Â¸¶ ½ºÅ³À» ¼ö·ÃÇÒ ¼ö ÀÖ´Â ·¹º§ÀÌ ¾Æ´Õ´Ï´Ù.";
+"Binicilik Eğitimi almak için 50'inci seviyeye ulaşmış olman gerekiyor.";
+
+"¾ÆÁ÷ ÀÌ ¸Ó¸®¸¦ »ç¿ëÇÒ ¼ö ¾ø´Â ·¹º§ÀÔ´Ï´Ù.";
+"Bu saç şekli için seviyen çok düşük.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù. (%dÃÊ ³²À½)";
+"Yeniden dirilme henüz mümkün değil. %d saniye bekle.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù.(%dÃÊ ³²À½ )";
+"Yeniden dirilme henüz mümkün değil. %d saniye bekle.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù.(%dÃÊ ³²À½)";
+"Yeniden dirilme henüz mümkün değil. %d saniye bekle.";
+
+"¾Ç¸¶·ù Å¸°İÄ¡ +%d%%";
+"Şeytanlara karşı saldırı artışı: +%%%d";
+
+"¾È³çÇÏ¼¼¿ä. ¸ŞÆ¾2 ÀÔ´Ï´Ù.";
+"Metin2'ye Hoşgeldin.";
+
+"¾×¼ö°¡ 20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© °Å·¡¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù..";
+"2 milyardan fazla Yang'ın var.Ticaret yapamazsın.";
+
+"¾ç¼Õ°Ë ¹æ¾î %d%%";
+"Çift-El Savunması %%%d";
+
+"¾î´ÀÁ¤µµ ÀÌ ±â¼ú¿¡ ´ëÇØ ÀÌÇØ°¡ µÇ¾úÁö¸¸ Á¶±İ ºÎÁ·ÇÑµí ÇÑµ¥..";
+"İlerleyebiliyorum ama henüz hepsini anlamış değilim.";
+
+"¾îºÎ¸¦ ÅëÇØ ´ÙÀ½ ·¹º§ÀÇ ³¬½Ã´ë·Î ¾÷±×·¹ÀÌµå ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Balıkçının yanına git ve onun yardımıyla oltanı geliştir!";
+
+"¾òÀº Æ÷ÀÎÆ®·Î´Â ½Â¸¶ ½ºÅ³ÀÇ ·¹º§À» ¿Ã¸± ¼ö ÀÖ½À´Ï´Ù.";
+"Bu puanı Biniciliğini geliştirmek için kullanabilirsin!";
+
+"¾ó¸¶ ¾È ³²¾Ò¾î! Á¶±İ¸¸ ´õ!";
+"Nerdeyse bitti! Sadece azıcık kaldı!";
+
+"¿©ÀÚ¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Bunu sadece bayanlar yapabilir.";
+
+"¿¬°è±â´Â ´õÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Daha fazla kombo geliştiremezsin.";
+
+"¿­¼è°¡ ¸ÂÁö ¾Ê´Â °Í °°´Ù.";
+"Bu anahtar kilide uygun görünmüyor.";
+
+"¿­¼è´Â ¸ÂÀ¸³ª ¾ÆÀÌÅÛ ÁÖ´Â ºÎºĞ ±¸ÇöÀÌ ¾ÈµÇ¾ú½À´Ï´Ù.";
+"Doğru anahtar.";
+
+"¿­¼è·Î ¿©´Â ¹°°ÇÀÌ ¾Æ´Ñ°Í °°´Ù.";
+"Bu eşya bir anahtarla açılamaz.";
+
+"¿­¼è·Î Àá°Ü ÀÖ¾î¼­ ¿­¸®Áö ¾Ê´Â°Í °°´Ù. ¿­¼è¸¦ ±¸ÇØº¸ÀÚ.";
+"Kapalı. Anahtarı aramalısın.";
+
+"¿­½ÉÈ÷ ÇÏ´Â ¹è¿òÀ» °¡Áö´Â °Í¸¸ÀÌ ±â¼úÀ» ¹è¿ï¼ö ÀÖ´Â À¯ÀÏÇÑ ±æÀÌ´Ù..";
+"Bu bölümü anladım. Yine de çok çalışmam gerekiyor.";
+
+"¿­Á¤ÀÇ °¡¸éÀ» Âø¿ë½Ã¿¡¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Bunu Duygu Maskesi taktığında yapabilirsin.";
+
+"¿µ¼® °¨Áö±â°¡ ½Åºñ·Î¿î ºûÀ» ³»¸ç »ç¶óÁı´Ï´Ù.";
+"Metin Taşı Dedektörü gizemli ışıkla birlikte kayboldu.";
+
+"¿µ¼® °¨Áö±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"Metin Taşı Dedektörü kayboldu.";
+
+"¿¹º¹À» ÀÔÀº »óÅÂ¿¡¼­ ¸»À» Å» ¼ö ¾ø½À´Ï´Ù.";
+"Gelinlik veya Smokin giyerken ata binemezsin.";
+
+"¿ÜÄ¡±â´Â ·¹º§ %d ÀÌ»ó¸¸ »ç¿ë °¡´É ÇÕ´Ï´Ù.";
+"Çağırmak için en az %d. seviyede olman gerekiyor.";
+
+"¿ÜÄ¡±â´Â À¯·áÈ¸¿ø¸¸ »ç¿ëÇÒ¼ö ÀÖ½À´Ï´Ù";
+"Çağırmak için daha yüksek seviyede olman gerekiyor.";
+
+"¿ë½ÅÀÇ °¡È£·Î °æÇèÄ¡°¡ ¶³¾îÁöÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Ejderha Tanrının korumasında olduğun için tecrübe kaybetmedin.";
+
+"¿ë½ÅÀÇ º¸È£·Î ¾ÆÀÌÅÛÀÌ ¶³¾îÁöÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Ejderha Tanrının korumasında olduğun için hiç bir nesne kaybetmedin.";
+
+"¿ë½É ÃßÃâ¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Ejderha taşında kalan süreyi çıkarma işlemi başarılıydı.";
+
+"¿ë½É ÃßÃâ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Kalan süreyi çıkarma işlemi başarısızdı.";
+
+"¿ëÈ¥¼® »óÀÚ°¡ È°¼ºÈ­µÇÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Ejderha taşı etkinleştirilmedi.";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Ejderha taşı başarıyla çıkarıldı.";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ½ÇÆĞÇÏ¿© %s¸¦ ¾ò¾ú½À´Ï´Ù.";
+"Ejderha taşı çıkarılamadı, ama şunu elde ettin: %s";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Ejderha taşı çıkarılamadı.";
+
+"¿î¿µÀÚ Á¦Á¦·Î Ã¤ÆÃÀÌ ±İÁö µÇ¾ú½À´Ï´Ù.";
+"Sohbetin, spam nedeniyle geçici olarak engellendi.";
+
+"¿õ±ÍÁ· Å¸°İÄ¡ +%d%%";
+"Wonggui karşısında saldırı artışı  +%%%d";
+
+"¿ø·¡ À§Ä¡·Î º¹±Í";
+"Başlangıç yerine geri gönderiliyorsun.";
+
+"¿ùº´ ¶Ç´Â Á¾ÀÚ ¸¦ »ç¿ëÇÏ¿´½À´Ï´Ù";
+"Tohum ya da ay pastası kullanıldı.";
+
+"¿ùº´,Á¾ÀÚ »ç¿ëÈÄ 5ÃÊµ¿¾È »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Her 5 saniyede bir Ay Pastası kullanabilirsin.";
+
+"À¯·áÈ­ ¾ÆÀÌÅÛÀº °³ÀÎ»óÁ¡¿¡¼­ ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Nesne Market eşyalarını özel markette satamazsın.";
+
+"À»";
+"the";
+
+"À»µÎÁö¸¦ ÅëÇÏ¿© ÀÔÀå °¡´ÉÇÕ´Ï´Ù.";
+"Uriel girmene izin verdi.";
+
+"ÀÌ °³·®¼­·Î °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu role ile yükseltemezsiniz.";
+
+"ÀÌ °³·®¼­·Î ´õ ÀÌ»ó °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Savaş Kağıdı, +4'ün üzerinde olan nesnelerle işlemiyor.";
+
+"ÀÌ °÷¿¡¼­ ¿µ¼® °¨Áö±â°¡ µ¿ÀÛÇÏÁö ¾Ê´Â°Í °°½À´Ï´Ù.";
+"Metin Taşı Dedektörü zindanda çalışmıyor.";
+
+"ÀÌ °÷¿¡¼± ÀÌº¥Æ®¿ë °¨Áö±â°¡ µ¿ÀÛÇÏÁö ¾Ê´Â°Í °°½À´Ï´Ù.";
+"Etkinlik Dedektörünü bu pozisyondayken kullanamazsın.";
+
+"ÀÌ ¸ŞÆ¾¼®Àº ¹«±â¿¡ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu zihin taşını silaha takamazsın.";
+
+"ÀÌ ¸ŞÆ¾¼®Àº Àåºñ¿¡ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu zihin taşı böyle bir nesneye eklenemez.";
+
+"ÀÌ ½ºÅ³Àº ¾ÆÁ÷ ±×·£µå ¸¶½ºÅÍ ¼ö·ÃÀ» ÇÒ °æÁö¿¡ ÀÌ¸£Áö ¾Ê¾Ò½À´Ï´Ù.";
+"Becerin Grand Master seviyesi için yeterince yüksek değil.";
+
+"ÀÌ ½ºÅ³Àº ¾ÆÁ÷ Ã¥À¸·Î ¼ö·ÃÇÒ °æÁö¿¡ ÀÌ¸£Áö ¾Ê¾Ò½À´Ï´Ù.";
+"Bu becerin kitap okuyarak geliştirebilmek için yeterli seviyede değil.";
+
+"ÀÌ ½ºÅ³Àº Ã¥À¸·Î ´õÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu beceriyi kitap okuyarak geliştiremezsin.";
+
+"ÀÌ ¾ÆÀÌÅÛÀ¸·Î ¼ÒÄÏÀ» Ãß°¡ÇÒ ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Bu nesneye slot eklenmiyor.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº PC¹æ¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Bu nesne sadece internet cafede kullanılabilir.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu eşya daha iyi hale gelemez.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº º§Æ® ÀÎº¥Åä¸®·Î ¿Å±æ ¼ö ¾ø½À´Ï´Ù.";
+"Bu eşyayı kemer envanterinde donanamazsın.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº ÀÌ ¹æ½ÄÀ¸·Î´Â °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu eşya bu şekilde yükseltilemez.";
+
+"ÀÌ ¾ÆÀÌÅÛÀ» ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu nesneler birleştirilerek kullanılmıyor.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó º¸¼®À» ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu nesneye daha fazla mücevher eklenemiyor.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó ¼ÒÄÏÀ» Ãß°¡ÇÒ °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"Bu nesneye daha fazla slot eklenmiyor.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó ÀåÂøÇÒ ¼ÒÄÏÀÌ ¾ø½À´Ï´Ù.";
+"Bu nesnede mücevher slotu yok.";
+
+"ÀÌ Ã¥À¸·Î´Â ´õ ÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu kitapla daha fazla eğitim yapamazsın.";
+
+"ÀÌ Ã¥Àº ³Ê¹« ¾î·Á¿ö ÀÌÇØÇÏ±â°¡ Èûµì´Ï´Ù.";
+"Bu kitabı anlamak kolay değil.";
+
+"ÀÌ Ã¥Àº ³Ê¹« ¾î·Á¿ö¼­ ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Kitabın öğrenilmesi zor.";
+
+"ÀÌ Ã¥Àº ¾Æ¹«¸® ºÁµµ µµ¿òÀÌ µÉ °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Bu kitap sana yardım etmeyecek.";
+
+"ÀÌ Ã¥À» ÀĞÀ¸·Á¸é ·¹º§À» ´õ ¿Ã·Á¾ß ÇÕ´Ï´Ù.";
+"Bu kitabı anlayabilmek için seviyeni yükseltmelisin.";
+
+"ÀÌ Çàµ¿Àº »óÈ£µ¿ÀÇ ÇÏ¿¡ °¡´É ÇÕ´Ï´Ù.";
+"Bunun için eşinin onayı gerekli.";
+
+"ÀÌµ¿ µÇ¾îÁú À§Ä¡¿Í ³Ê¹« °¡±î¿ö ±ÍÈ¯ºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Mesafe çok yakın olduğu için geri dönüş kağıdı kullanamazsın.";
+
+"ÀÌµ¿¼Óµµ %d";
+"Hareket Hızı %d";
+
+"ÀÌµ¿ÇÒ ÁØºñ°¡ µÇ¾îÀÖÀ½À¸·Î ±ÍÈ¯ºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù";
+"Işınlanmaya hazırsın, bu nedenle geri dönüş kağıdını kullanamazsın.";
+
+"ÀÌ·¡¼­¾ß °øºÎ°¡ ¾ÈµÈ´Ù±¸.";
+"Konsantre olamıyorum. Mola vermem gerekiyor.";
+
+"ÀÌ¹Ì °°Àº Á¾·ùÀÇ ¿ëÈ¥¼®À» Âø¿ëÇÏ°í ÀÖ½À´Ï´Ù.";
+"Üzerinde zaten bu türden bir ejderha taşı bulunuyor.";
+
+"ÀÌ¹Ì ²ÈÇôÀÖ´ø ¹Ì³¢¸¦ »©°í %s¸¦ ³¢¿ó´Ï´Ù.";
+"Şu anki yemi %s ile değiştirdin.";
+
+"ÀÌ¹Ì µĞ°©ÁßÀÎ »óÅÂÀÔ´Ï´Ù.";
+"Dönüşmüş haldesin zaten.";
+
+"ÀÌ¹Ì ¼±ÀüÆ÷°í ÁßÀÎ ±æµåÀÔ´Ï´Ù.";
+"Bu Loncaya savaş ilan ettin.";
+
+"ÀÌ¹Ì ¿Ïº®ÇÏ°Ô ¾Ë¾ÆµéÀ» ¼ö ÀÖ´Â ¾ğ¾îÀÌ´Ù.";
+"Bu dili zaten anlıyorsun.";
+
+"ÀÌ¹Ì ÀÔÈÄº¸µÇ¾îÀÖ½À´Ï´Ù";
+"Zaten bir aday var.";
+
+"ÀÌ¹Ì Àåºñ¸¦ Âø¿ëÇÏ°í ÀÖ½À´Ï´Ù.";
+"Böyle bir ejderha taşı kuşandın bile.";
+
+"ÀÌ¹Ì ÀüÀïÀÌ ³¡³µ½À´Ï´Ù.";
+"Savaş çoktan sona erdi.";
+
+"ÀÌ¹Ì Á¦Á¶Ã¢ÀÌ ¿­·ÁÀÖ½À´Ï´Ù.";
+"İnşa penceresi zaten açık.";
+
+"ÀÌ¹Ì Å»°ÍÀ» ÀÌ¿ëÁßÀÔ´Ï´Ù.";
+"Zaten bir binektesin. Önce in.";
+
+"ÀÌ¹Ì ÆÄÆ¼¿¡ ¼ÓÇØ ÀÖÀ¸¹Ç·Î °¡ÀÔ½ÅÃ»À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Daveti kabul edemezsin, zaten bir grubun var.";
+
+"ÀÌ¹Ì È¿°ú°¡ °É·Á ÀÖ½À´Ï´Ù.";
+"Bu etki zaten çalışıyor.";
+
+"ÀÌ¹ÌÅõÇ¥¸¦ ÇßÀ½";
+"Zaten oy vermiştin.";
+
+"ÀÌ¹ø¿¡ ÀâÀº ¹°°í±âÀÇ ±æÀÌ´Â %.2fcm";
+"Yakalanan balığın uzunluğu %.2fcm.";
+
+"ÀÌº¥Æ®¿ë °¨Áö±â°¡ ½Åºñ·Î¿î ºûÀ» ³»¸ç »ç¶óÁı´Ï´Ù.";
+"Etkinlik Dedektörü gizemli bir ışıkla birlikte yok oldu.";
+
+"ÀÌº¥Æ®¿ë °¨Áö±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"Etkinlik Dedektörü kayboldu.";
+
+"ÀÌ¼º°£¿¡¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Bu sadece diğer cinsiyetle birlikte yapılabilen bir aksiyon.";
+
+"ÀÌÁ¦ Á» ½½½½ °¡´ÚÀÌ ÀâÈ÷´Â °Í °°Àºµ¥.";
+"Şimdi anladım!";
+
+"ÀÌÁ¦ Ã¥ÀÇ ¸¶Áö¸· ÀåÀÌ¾ß! ¼ö·ÃÀÇ ³¡ÀÌ ´«¿¡ º¸ÀÌ°í ÀÖ¾î!";
+"Kitabın son sayfasındayım. Eğitim neredeyse bitmek üzere!";
+
+"ÀÎ°£·ù ¸ó½ºÅÍ Å¸°İÄ¡ +%d%%";
+"Yaratıklara karşı oyuncunun saldırı gücü +%%%d";
+
+"ÀÎº¥Åä¸®°¡ ²Ë Â÷¼­ ³»¸± ¼ö ¾ø½À´Ï´Ù.";
+"Envanterin dolu. Eşyayı koyacak yer yok.";
+
+"ÀÎÁõ¹øÈ£°¡ Æ²·È½À´Ï´Ù. ´Ù½Ã ½ÃµµÇÏ¼¼¿ä.";
+"Onay Numaranız doğru değil. Lütfen tekrar deneyin.";
+
+"ÀÔ·ÂÇÏ½Å ÀÌ¸§À» °¡Áø »ç¿ëÀÚ°¡ ¾ø½À´Ï´Ù.";
+"Bu isimde bir kullanıcı yok.";
+
+"ÀÚ°´°ø°İ¿¡ %d%% ÀúÇ×";
+"Ninja ataklarında %%%d dayanıklılık";
+
+"ÀÚ°´¿¡°Ô °­ÇÔ +%d%%";
+"Ninjalara karşı güçlü +%%%d";
+
+"ÀÚµ¿À¸·Î ³ª°¡°ÔµË´Ï´Ù.";
+"Otomatik olarak geçecek.";
+
+"ÀÚ½ÅÀ» ¼±ÅÃÇÏ½Ã¸é ¹ÛÀ¸·Î ³ª°¥ ¼ö ÀÖ´Â <°ü¶÷ Á¾·á> ¹öÆ°ÀÌ ³ª¿É´Ï´Ù.";
+"Bir karakter seçerken <izlemeyi bitir> butonu görünür.";
+
+"ÀÚ½ÅÀ» ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Kendini birliğine ekleyemezsin.";
+
+"ÀÚÀç°¡ ºÎÁ·ÇÏ¿© °Ç¼³ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu binayı inşa edebilmek için yeterli kaynağın yok.";
+
+"Àß¸øµÈ µĞ°© ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Bu yanlış ticaret eşyası.";
+
+"Àß¸øµÈ ¼±ÅÃÀ» Çß½À´Ï´Ù";
+"Seçiminiz yanlış.";
+
+"Àá½Ã ÈÄ OX ÀÌº¥Æ®¸¦ ´Ù½Ã ½ÃÀÛÇÏ°Ú½À´Ï´Ù.";
+"Kısa süre içinde OX Etkinlik tekrar başlayacak.";
+
+"Àá½Ã ÈÄ ¸¶À»·Î ÀÌµ¿µÇ°Ú½À´Ï´Ù.";
+"Kısa süre içinde oyuncu şehre ışınlanacak.";
+
+"Àá½ÃÈÄ ¸ğµÎ ¸¶À»·Î ÀÌµ¿µË´Ï´Ù.";
+"Herkes şehre ışınlanacak.";
+
+"Àá½ÃÈÄ ÇØ´ç ¸¶À»Àº  ¸¶À»·Î ÀÌµ¿µË´Ï´Ù.";
+"Kısa zamanda herkes seçilen şehre ışınlanacak.";
+
+"ÀåºñÁßÀÎ ¾ÆÀÌÅÛÀº °³ÀÎ»óÁ¡¿¡¼­ ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Üzerinde olan nesneler özel dükkânda satılamıyor.";
+
+"ÀåÂø¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Silahlanma başarılı.";
+
+"ÀåÂø¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Silahlanma başarısız.";
+
+"Àç·á(%s)°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"Yeterli malzemen yok (%s).";
+
+"ÀúÁÖ µÇµ¹¸®±â È®·ü %d%%";
+"Lanet Yansıtma: %%%d";
+
+"Àû¿ë ·¹º§º¸´Ù ³ô¾Æ »ç¿ëÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.";
+"Eşyanın seviyesi çok yüksek.";
+
+"ÀûÇÕÇÏÁö ¾ÊÀº ±æµå ÀÌ¸§ ÀÔ´Ï´Ù.";
+"Lonca ismi geçersiz.";
+
+"Àü±â ÀúÇ× %d%%";
+"Şimşeğe dayanıklılık %%%d";
+
+"ÀüÀï ¼­¹ö°¡ ¿­·ÁÀÖÁö ¾Ê¾Æ ±æµåÀüÀ» ½ÃÀÛÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Sunucu çevrimiçi olmadığı için Lonca Savaşı başlayamaz.";
+
+"ÀüÁ¦±¹";
+"Tüm Krallıklar";
+
+"ÀüÅõ°¡ ½ÃÀÛ µÇ¾î Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"Hareket iptal edildi. Bir savaşa girdin.";
+
+"Á¤´äÀº";
+"Doğru cevap:";
+
+"Á¤´äÀÔ´Ï´Ù!";
+"Doğru!";
+
+"Á¤»óÀûÀ¸·Î ÅõÇ¥¸¦ÇÏ¿´½À´Ï´Ù.";
+"Düzenli olarak oylanır.";
+
+"Á¤½Å·Â È¸º¹ +%d";
+"Geri Kazanılan SP +%d";
+
+"Á¦Á¶ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù";
+"Doğru maddeye sahip değilsiniz.";
+
+"Á¦Á¶¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Eşya geliştirmede hata oluştu.";
+
+"Á¦Á¶Ã¢ÀÌ ¿­·ÁÀÖÁö ¾Ê½À´Ï´Ù";
+"İnşa penceresi açık değil.";
+
+"Á¶°³°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"İstiridye kayboldu.";
+
+"Á¶°³¿¡¼­ µ¹Á¶°¢ÀÌ ³ª¿Ô½À´Ï´Ù.";
+"İstiridyenin içinde sadece sıradan bir taş parçası var.";
+
+"Á¶°³¿¡¼­ ¹éÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"İstiridyenin içinde Beyaz bir inci var.";
+
+"Á¶°³¿¡¼­ Ã»ÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"İstiridyenin içinde Mavi bir inci var.";
+
+"Á¶°³¿¡¼­ ÇÇÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"İstiridyenin içinde kan kırmızı bir inci var.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â °Ç¹°ÀÔ´Ï´Ù.";
+"Bina mevcut değil.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â ¾ÆÀÌÅÛ ÀÔ´Ï´Ù";
+"Bu eşya mevcut değil.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â Ä³¸¯ÅÍ ÀÔ´Ï´Ù.";
+"Karakter bulunamadı.";
+
+"ÁÁ¾Æ, ÀÌ ±â¼¼·Î °è¼Ó ³ª°£´Ù!";
+"Tamam, konsantre kalmalıyım!";
+
+"ÁÁ¾Ò¾î! Á¶±İ¸¸ ´õ ÀĞÀ¸¸é ³¡ÀÌ´Ù!";
+"Aydınlandım! Neredeyse hepsini okudum!";
+
+"ÁÖ¾È¼ú¼­¸¦ ÅëÇØ ÁÖÈ­ÀÔ¸¶¿¡¼­ ºüÁ®³ª¿Ô½À´Ï´Ù.";
+"Kötü ruhların lanetinden Kötü Ruh Kovma Kağıdının yardımıyla kurtuldun.";
+
+"Á×Àº ¸»¿¡°Ô »ç·á¸¦ ¸ÔÀÏ ¼ö ¾ø½À´Ï´Ù.";
+"Ölü Atı besleyemezsin.";
+
+"Á×Àº Á¤º¸ %s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d";
+"%s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d";
+
+"Á×Áö ¾ÊÀº ¸»¿¡°Ô ¼±ÃÊ¸¦ ¸ÔÀÏ ¼ö ¾ø½À´Ï´Ù.";
+"Maymun Bitkisi yem olarak kullanılamaz. Ölmüş atları canlandırmak için kullanılır.";
+
+"Áö±İºÎÅÍ %sÀº 30ºĞ°£ ºÀÈ­¸¦ ÆÄ±«ÇÏ¿© º¸»óÀ» È¹µæ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"%s ateşi yok ettiği için şu andan itibaren 30 dakika boyunca bir ödül alabilir.";
+
+"Áö´É +%d";
+"Zeka +%d";
+
+"Áö´ÉÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Zekân çok düşük olduğu için bu nesneyi kullanamıyorsun.";
+
+"Á÷Á¢ Å¸°İÄ¡ ¹İ»ç È®·ü : %d%%";
+"Doğrudan Vuruş Yansıtma: %%%d";
+
+"Áø³ë±¹";
+"Jinno Krallığı";
+
+"Âø¿ë ÁßÀÎ ¾ÆÀÌÅÛÀº ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Üzerinde olan nesneleri satamazsın.";
+
+"Âø¿ë ÁßÀÎ ¿ëÈ¥¼®Àº ÃßÃâÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ejderha taşı çıkarılamaz.";
+
+"Âü";
+"DOĞRU";
+
+"Ã¢°í,°Å·¡Ã¢µîÀÌ ¿­¸° »óÅÂ¿¡¼­´Â °³·®À» ÇÒ¼ö°¡ ¾ø½À´Ï´Ù";
+"Başka bir pencere açıkken yükseltme yapamazsın.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"%d saniye içinde tekrar ticaret yapabilirsin.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Depoyu açtıktan sonra %d saniye boyunca geri dönüş kağıdı kullanamazsın.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â ´Ù¸¥°÷À¸·Î ÀÌµ¿ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Depo açtıktan sonra %d saniye başka bir yere gidemezsin.";
+
+"Ã¤±¤¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Madencilik başarılı.";
+
+"Ã¤±¤¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Madencilik başarısız.";
+
+"Ã¤±¤À» Áß´ÜÇÏ¿´½À´Ï´Ù.";
+"Madencilik bitti.";
+
+"Ã¤ÆÃ ±İÁö »óÅÂÀÔ´Ï´Ù.";
+"Sohbetiniz engellendi.";
+
+"Ã¤ÆÃ ±İÁö°¡ Ç®·È½À´Ï´Ù.";
+"Sohbet blokunuz kaldırıldı.";
+
+"Ã¥À¸·Î ´õ ³ôÀº °æÁöÀÇ ¼ö·ÃÀ» ¼º°øÀûÀ¸·Î ³¡³»¼Ì½À´Ï´Ù.";
+"Kitapla olan eğitimini başarıyla tamamladın.";
+
+"Ã¥Àåµµ ÀÌÁ¦ ¾ó¸¶ ³²Áö ¾Ê¾Ò±º.";
+"Sadece birkaç sayfa kaldı, onları da okuduktan sonra hepsini okumuş oluyorum.";
+
+"ÃµÁ¶±¹";
+"Chunjo Krallığı";
+
+"Ã»¼ÒÇÒ ¼®ÀÌ ¹ÚÇôÀÖÁö ¾Ê½À´Ï´Ù.";
+"Silinecek taş parçası kırıkları yok.";
+
+"Ã¼·Â +%d";
+"Dayanıklılık +%d";
+
+"Ã¼·ÂÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu nesneyi kullanmak için yeterli canlılığa sahip değilsin.";
+
+"ÃÑ ÄûÁî ¼ö: %d";
+"Toplam Quiz sayısı: %d";
+
+"ÃÖ´ë »ı¸í·Â +%d";
+"Hayat Puanları +%d";
+
+"ÃÖ´ë »ı¸í·Â +%d%%";
+"Enerji üst sınırı +%%%d";
+
+"ÃÖ´ë Á¤½Å·Â +%d";
+"Mana Puanı +%d";
+
+"ÃÖ´ë Á¤½Å·Â +%d%%";
+"Enerji üst sınırı +%%%d";
+
+"ÃÖ´ë Áö±¸·Â +%d";
+"Max. Dayanıklılık + %d";
+
+"Ãàº¹ÀÇ ¼­¿Í ÇöÃ¶À» ÇÕÄ¥ ¼ö ÀÖ½À´Ï´Ù.";
+"Kutsama Kağıdı ve Büyülü Demir Madeni birleştirebilirsin.";
+
+"Ãâ¸¶¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù";
+"Oylanamaz.";
+
+"ÃæÀüÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bu ejderha taşı tekrar yüklenemez.";
+
+"Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"Çıkışınız iptal edildi.";
+
+"Ä³¸¯ÅÍ¸¦ ÀüÈ¯ ÇÕ´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Karakteri değiştirdiniz. Lütfen bekleyin.";
+
+"ÄğÅ¸ÀÓ -%d";
+"Dinlenme Süresi -%d";
+
+"ÄğÅ¸ÀÓ Àû¿ëÁß  %d ÈÄ »ç¿ë°¡´É";
+"Hazırlandı. %d sonra kullanılabilir.";
+
+"Äù½ºÆ®¸¦ ·ÎµåÇÏ´Â ÁßÀÔ´Ï´Ù. Àá½Ã¸¸ ±â´Ù·Á ÁÖ½Ê½Ã¿À.";
+"İsteğin yükleniyor. Anlayışın için teşekkür ederiz.";
+
+"Å©À¹, ±â°¡ ¿ª·ùÇÏ°í ÀÖ¾î! ÀÌ°Å ¼³¸¶ ÁÖÈ­ÀÔ¸¶ÀÎ°¡!? Á¨Àå!";
+"Çalışmadı. Lanet olsun!";
+
+"Å¬¶óÀÌ¾ğÆ® ¹öÀüÀÌ Æ²·Á ·Î±×¾Æ¿ô µË´Ï´Ù. Á¤»óÀûÀ¸·Î ÆĞÄ¡ ÈÄ Á¢¼ÓÇÏ¼¼¿ä.";
+"İstemci versiyonunuz hatalı. Lütfen normal sürümü yükleyin.";
+
+"Å¸°İÄ¡ %d%% ¸¦ »ı¸í·ÂÀ¸·Î Èí¼ö";
+"Saldırı sırasında %%%d enerji emildi.";
+
+"Å¸·ÂÄ¡ %d%% ¸¦ Á¤½Å·ÂÀ¸·Î Èí¼ö";
+"Saldırı sırasında %%%d SP emildi.";
+
+"Å¸Á¦±¹ À¯Àú´Â ¼ÒÈ¯ ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Bilinmeyen bir oyuncuyu arayamazsın.";
+
+"Å¸Á¦±¹ À¯Àú¿¡°Ô´Â ÀÌµ¿ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Bilinmeyen bir oyuncuya nakledemezsiniz.";
+
+"Åº »óÅÂ¿¡¼­´Â ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Bunu at üzerinde yapamazsınız.";
+
+"Å×½ºÆ® ¼­¹ö ½Ã°£Á¦ÇÑ Åë°ú";
+"Test sunucusundaki zaman limiti aşıldı.";
+
+"ÆÄÆ¼ ÁßÀÌ ¾Æ´Õ´Ï´Ù.";
+"Bu Grupta değilsin.";
+
+"ÆÄÆ¼ÀÇ Çùµ¿·ÂÀÌ ³ô¾ÆÁ® Áö±İºÎÅÍ Ãß°¡ °æÇèÄ¡ º¸³Ê½º¸¦ ¹Ş½À´Ï´Ù.";
+"Grubun iyi bir ortak çalışma ortaya koyuyor, liderin yakınında bulunan grup üyeleri bir tecrübe bonusu kazanıyor.";
+
+"ÆÄÆ¼ÀåÀÌ Á¢¼Ó »óÅÂ°¡ ¾Æ´Ï¶ó¼­ ¿äÃ»À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] İstekte bulunamazsın çünkü grup lideri çevrim içi değil.";
+
+"ÆÇ¸Å±İ¾×ÀÇ %d %% °¡ ¼¼±İÀ¸·Î ³ª°¡°ÔµË´Ï´Ù";
+"Satış için %%%d vergi alınacak.";
+
+"ÆÛÆåÆ® ¸¶½ºÅÍµÈ ½ºÅ³ÀÔ´Ï´Ù. ´õ ÀÌ»ó ¼ö·Ã ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Zaten bu beceride master konumundasın. Onu geliştiremezsin.";
+
+"ÆòÅ¸ µ¥¹ÌÁö %d%%";
+"Vuruş Hasarı %%%d";
+
+"ÆòÅ¸ µ¥¹ÌÁö ÀúÇ× %d%%";
+"Vuruş direnci %%%d";
+
+"ÇÃ·¹ÀÌ¾î %d ¿Í ÇÃ·¹ÀÌ¾î  %d¸¦ ÆÄÈ¥½ÃÅµ´Ï´Ù..";
+"%d ve %d oyuncuları arasındaki anlaşma bozuldu.";
+
+"ÇÑ¼Õ°Ë ¹æ¾î %d%%";
+"Kılıç Savunması %%%d";
+
+"ÇØ´ç À¯Àú´Â %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"Oyuncu %d kanala ekleniyor. (Bulunulan kanal: %d)";
+
+"ÇÚµåÆù ¹øÈ£°¡ µî·Ï µÇ¾ú½À´Ï´Ù.";
+"Cep telefonu numarası kayıtlı.";
+
+"ÇÚµåÆù ¹øÈ£°¡ µî·ÏµÇ¾î ÀÖÁö ¾Ê½À´Ï´Ù.";
+"Cep telefonu numarası kayıtlı değil.";
+
+"ÇöÀç %s ±¹°í¿¡´Â %d ÀÇ µ·ÀÌ ÀÖ½À´Ï´Ù";
+"%s hala %d Yang sahibi";
+
+"ÇöÀç %s ±¹°í¿¡´Â %u ÀÇ µ·ÀÌ ÀÖ½À´Ï´Ù";
+"%s hala %u Yang sahibi.";
+
+"ÇöÀç ³²Àº Âü°¡ÀÚ¼ö : %d";
+"Diğer Katılımcıların sayısı : %d";
+
+"ÇöÀç ½ºÄÚ¾î ½Å¼ö±¹:%d ÃµÁ¶±¹:%d Áø³ë±¹:%d";
+"Mevcut Puan Durumu: Shinsoo %d, Chunjo %d, Jinno %d";
+
+"ÇöÀç ¿Â¶óÀÎ »óÅÂ ÀÔ´Ï´Ù. ±Ó¸»À» ÀÌ¿ëÇÏ¼¼¿ä.";
+"Oyuncu online. Lütfen fısıltı kullanın.";
+
+"ÇöÀç À§Ä¡¿¡¼­ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Şu anki pozisyonunda bunu kullanamazsın.";
+
+"ÇöÀç ÀÌº¥Æ® Âü°¡ÀÚ ºĞµéÀº ¸¶À»·Î ÀÌµ¿ µÇ°Ú½À´Ï´Ù.";
+"Geçerli etkinlik bir alanla kısıtlı.";
+
+"ÇöÀç ÀüÀïÁßÀÎ ±æµå ÀÔ´Ï´Ù";
+"Bu lonca savaşta.";
+
+"ÇöÀç Çì¾î½ºÅ¸ÀÏ¿¡¼­´Â ¿°»ö°ú Å»»öÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.";
+"Şu anki saç stilini beyazlatamaz veya boyayamazsın.";
+
+"È­¿° ÀúÇ× %d%%";
+"Ateşe dayanıklılık %%%d";
+
+"È° °ø°İ È¸ÇÇ È®·ü %d%%";
+"Uzak dövüş saldırısını engelleme şansı %%%d";
+
+"È°°ø°İ ÀúÇ× %d%%";
+"Uzak Dövüş Direnci %%%d";
+

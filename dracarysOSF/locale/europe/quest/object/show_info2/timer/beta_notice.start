@@ -1,0 +1,2 @@
+notice_mission ( "Please report any bugs on Trello Board." ) 
+timer ( "show_info3" , 5 ) 

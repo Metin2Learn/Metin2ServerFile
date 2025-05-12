@@ -1,0 +1,20 @@
+if pc . in_dungeon ( ) and pc . get_map_index ( ) >= 660000 and pc . get_map_index ( ) < 670000 then if party . is_party ( ) then 
+local pids = { party . get_member_pids ( ) } 
+for i , pid in next , pids , nil begin 
+q . begin_other_pc_block ( pid ) 
+if pc . getf ( "deviltower_zone" , "enter_time" ) > 0 then 
+d . update_rank ( 66 , ( get_global_time ( ) - pc . getf ( "deviltower_zone" , "enter_time" ) ) , pc . get_last_damage ( ) ) 
+end 
+q . end_other_pc_block ( ) 
+end 
+else 
+if pc . getf ( "deviltower_zone" , "enter_time" ) > 0 then 
+d . update_rank ( 66 , ( get_global_time ( ) - pc . getf ( "deviltower_zone" , "enter_time" ) ) , pc . get_last_damage ( ) ) 
+end 
+end 
+d . kill_all ( ) 
+d . setqf2 ( "deviltower_zone" , "9_done" , 1 ) 
+d . notice ( 858 ) 
+d . notice ( 859 ) 
+server_timer ( "devil_end_jump" , 60 , d . get_map_index ( ) ) 
+ return end 

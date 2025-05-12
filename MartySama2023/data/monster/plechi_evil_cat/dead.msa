@@ -1,0 +1,26 @@
+ScriptType               MotionData
+
+MotionFileName           "D:\ymir work\npc\plechi_evil_cat\dead.GR2"
+MotionDuration           1.000000
+
+Group MotionEventData
+{
+    MotionEventDataCount     2
+    Group Event00
+    {
+        MotionEventType      8
+        StartingTime         0.108974
+    }
+    Group Event01
+    {
+        MotionEventType      1
+        StartingTime         0.198974
+        
+        IndependentFlag      0
+        AttachingEnable      1
+        AttachingBoneName    "Bip01 Spine2"
+        FollowingEnable      1
+        EffectFileName       "d:/ymir work/npc/plechi_evil_cat/dead_eff.mse"
+        EffectPosition       0.000000 0.000000 0.000000
+    }
+}

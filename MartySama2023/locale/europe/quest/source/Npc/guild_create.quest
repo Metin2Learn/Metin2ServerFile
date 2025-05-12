@@ -1,0 +1,35 @@
+quest guild_create begin
+	state start begin end
+
+	state run begin
+		when letter begin
+			send_letter(locale_quest(1685))
+		end
+
+		when button or info begin
+			say_title(locale_quest(1685))
+			say_reward(locale_quest(1686))
+			say_item_vnum(70101)
+			say_reward(locale_quest(1687))
+		end
+
+		when 691.party_kill begin
+			set_state(reward)
+		end
+	end
+
+	state reward begin
+		when letter begin
+			send_letter(locale_quest(1688))
+		end
+
+		when button or info begin
+			say_title(locale_quest(1689))
+			say_reward(locale_quest(1690))
+			say_item_vnum(70101)
+			say_reward(locale_quest(1691))
+			set_state(start)
+			pc.give_item2(70101)
+		end
+	end
+end

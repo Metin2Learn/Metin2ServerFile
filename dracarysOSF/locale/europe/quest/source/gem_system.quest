@@ -1,0 +1,60 @@
+define GLIMMERSTONE_VNUM 50926
+define GLIMMERSTONE_COUNT 10
+define PROB_GEM 10
+define COST_GEM_YANG 5000
+define MAX_GEM 999999
+
+quest gem_system begin
+	state start begin
+		when 20504.chat.locale_quest(1458) begin
+			say(locale_quest(1459))
+			say(locale_quest(1460))
+			say(locale_quest(1461))
+			say(locale_quest(1462))
+			if select(locale_quest(1475), locale_quest(1476)) == 1 then
+				setskin(NOWINDOW)
+				game.open_gem_market()
+			else return end
+		end
+
+		when 20503.chat.locale_quest(1463) begin
+			say(locale_quest(1464))
+			say(string.format(locale_quest(1465), GLIMMERSTONE_COUNT))
+		end
+
+		when 20503.take with item.get_vnum() == GLIMMERSTONE_VNUM begin
+			say(string.format(locale_quest(1466), GLIMMERSTONE_COUNT))
+			say(locale_quest(1467))
+			say(locale_quest(1468))
+			say(string.format(locale_quest(1469), PROB_GEM, COST_GEM_YANG))
+			say(locale_quest(1470))
+			if select(locale_quest(1475), locale_quest(1476)) == 1 then
+				if pc.get_gold() < COST_GEM_YANG then
+					return say(locale_quest(1471))
+				end
+
+				if pc.get_gem() >= (MAX_GEM - 3) then
+					return say(locale_quest(1472))
+				end
+
+				if pc.count_item(GLIMMERSTONE_VNUM) < GLIMMERSTONE_COUNT then
+					return say(string.format(locale_quest(1474), GLIMMERSTONE_COUNT))
+				end
+
+				local has_stone = false
+				for stone = 28000, 28345 do -- all +0 to +3 stones
+					if pc.count_item(stone) > 0 then
+						has_stone = true
+						break
+					end
+				end
+
+				if not has_stone then
+					return say(locale_quest(1473))
+				end
+
+				game.open_gem()
+			else return end
+		end
+	end
+end

@@ -1,0 +1,16 @@
+quest beta_notice begin
+	state start begin
+		when login begin
+			timer("show_info1", 8)
+		end
+
+		when show_info1.timer begin
+			notice_mission("OSF V5 - Patch 30")
+			timer("show_info2", 10)
+		end
+
+		when show_info2.timer begin
+			notice_mission("")
+		end
+	end
+end

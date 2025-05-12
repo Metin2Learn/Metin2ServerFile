@@ -1,0 +1,12 @@
+target . delete ( "__TARGET__" ) 
+if pc . count_item ( 70601 ) > 0 then 
+say_title ( locale_quest ( 8234 ) ) 
+say ( locale_quest ( 8232 ) ) 
+pc . remove_item ( 70601 , 200 ) 
+pc . give_item2 ( 70600 , 1 ) 
+set_state ( "start" ) 
+else 
+say_title ( locale_quest ( 8234 ) ) 
+say ( locale_quest ( 8233 ) ) 
+set_state ( "hunt_wolves" ) 
+end 

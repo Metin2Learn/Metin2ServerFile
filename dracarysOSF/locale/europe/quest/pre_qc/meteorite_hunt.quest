@@ -1,0 +1,85 @@
+quest meteorite_hunt begin
+	state start begin end
+	state trigger begin
+		when enter begin
+			pc.setqf("hunted_meteorites", 0)
+		end
+
+		when letter begin
+			send_letter(locale_quest(6381))
+			q.set_counter_name(locale_quest(6413))
+			meteorite_hunt.meteorite_hunt_kill_count()
+		end
+
+		when button or info begin
+			say_title(locale_quest(6381))
+			say(locale_quest(6382))
+		end
+
+		when 8115.kill begin
+			local kill_count = pc.getqf("hunted_meteorites")
+			pc.setqf("hunted_meteorites", kill_count + 1)
+			pc.give_item2(31094)
+			meteorite_hunt.meteorite_hunt_kill_count()
+		end
+
+		function meteorite_hunt_kill_count()
+			local total_remaining = 0
+			local current_remaining = 1 - pc.getqf("hunted_meteorites")
+
+			if current_remaining < 0 then
+				current_remaining = 0
+			end
+
+			total_remaining = total_remaining + current_remaining
+			q.set_counter_value(total_remaining)
+			if total_remaining == 0 then
+				notice_multiline(locale_quest(6385), notice)
+				set_state("back_to_myonghorang")
+			end
+		end
+
+		when leave begin
+			pc.setqf("hunted_meteorites", 0)
+			q.done()
+		end
+	end
+
+	state back_to_myonghorang begin
+		when letter begin
+			send_letter(locale_quest(6388))
+			local v = find_npc_by_vnum(20400)
+			if 0 ~= v then
+				target.vid("__TARGET__", v, locale_quest(6388))
+			end
+		end
+
+		when button or info begin
+			say_title(locale_quest(6388))
+			say(locale_quest(6385))
+		end
+
+		when __TARGET__.target.click or 20400.chat.locale_quest(6388) begin
+			target.delete("__TARGET__")
+			clear_letter()
+
+			say_title(mob_name(20400))
+			say()
+			say(locale_quest(6396))
+			say_reward(string.format(locale_quest(5043), item_name(27001), 10))
+			say_reward(string.format(locale_quest(6882), 450))
+			say()
+			pc.give_exp2(450)
+			pc.give_item2(27001, 10)
+			wait()
+			say_title(mob_name(20400))
+			say()
+			say(string.format(locale_quest(6391), 1))
+			set_state(__COMPLETE__)
+			set_quest_state("the_metin_stone", "trigger")
+		end
+	end
+
+	state __COMPLETE__ begin
+	end
+end

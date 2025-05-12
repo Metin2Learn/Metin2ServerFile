@@ -1,0 +1,13 @@
+say_title ( mob_name ( 20001 ) ) 
+say ( locale_quest ( 968 ) ) 
+wait ( ) 
+say_title ( mob_name ( 20001 ) ) 
+say ( locale_quest ( 969 ) ) 
+wait ( ) 
+if pc . get_level ( ) < 35 then 
+say_title ( mob_name ( 20001 ) ) 
+say ( locale_quest ( 970 ) ) 
+else 
+say_title ( mob_name ( 20001 ) ) 
+say ( locale_quest ( 971 ) ) 
+end 

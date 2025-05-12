@@ -1,0 +1,5 @@
+if erebus_dungeon . is_erebus ( pc . get_map_index ( ) ) and d . getf ( "level" ) == 1 then local setting = erebus_dungeon . setting ( ) 
+erebus_dungeon . level_clear ( ) 
+server_timer ( "erebus_dungeon_1m_left_to_final_boss_spawn" , 60 , d . get_map_index ( ) ) 
+d . setf ( "level" , 2 ) 
+ return end 

@@ -1,0 +1,12 @@
+91614	Sono solo l'amministratore dei terreni, non posso[ENTER]abbassare il prezzo. Per favore, dammi più[ENTER]Yang 
+91615	La gilda ha comprato la proprietà!
+91613	Amministratore dei terreni:
+91616	Torna di nuovo quando ti sarai deciso. Il primo[ENTER]che arriva compra. 
+91617	Sono l'amministratore dei terreni e sono[ENTER]responsabile della vendita.[ENTER]Prima che i mostri occupassero la regione al[ENTER]centro del continente, non avevamo carenze di[ENTER]terre e tutti erano felici. Ora invece devo[ENTER]venderle solo ai capi gilda, che le usano come[ENTER]terreni di gilda.[ENTER]Vuoi comprarne una? 
+91618	Te l'ho già detto, non posso vendere a chiunque i[ENTER]terreni.Spero tu mi capisca. 
+91619	Una gilda che ha già comprato un terreno, non ne[ENTER]può acquistare un altro. 
+91620	Un errore è accaduto durante lo svolgersi di[ENTER]questo ordine 
+91621	Per comprare questo terreno il livello della[ENTER]gilda deve essere maggiore di %s.[ENTER]Il prezzo è di %s.
+91622	La tua gilda non ha ancora raggiunto il livello[ENTER]richiesto, mi spiace. 
+91623	Vuoi comprare il terreno?
+91624	Questo pezzo di terra è stato già venduto ad un[ENTER]altra gilda, spiacente. 

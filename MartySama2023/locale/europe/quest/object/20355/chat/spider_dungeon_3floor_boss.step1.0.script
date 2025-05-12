@@ -1,0 +1,4 @@
+say_title ( mob_name ( 20355 ) ) 
+say ( locale_quest ( 8278 ) ) 
+set_state ( "step2" ) 
+pc . give_item2 ( 76019 ) 

@@ -1,0 +1,4 @@
+if pc . get_map_index ( ) == 217 then 
+pc . setf ( "spider_dungeon_3floor_boss" , "exit_time" , get_global_time ( ) ) 
+pc . setf ( "spider_dungeon_3floor_boss" , "entered" , 0 ) 
+end 

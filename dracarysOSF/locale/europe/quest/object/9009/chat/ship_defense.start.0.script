@@ -1,0 +1,36 @@
+if game . get_event_flag ( "ship_defense" ) ~= 1 then 
+say ( "The Ship Defense will be available soon." ) 
+return 
+end 
+say ( locale_quest ( 10097 ) ) 
+if select ( locale_quest ( 10065 ) , locale_quest ( 10066 ) ) == 1 then 
+if pc . is_mount ( ) then 
+say ( locale_quest ( 10105 ) ) 
+return 
+end 
+if ship_defense_mgr . need_party ( ) then 
+if not party . is_party ( ) then 
+syschat ( locale_quest ( 10099 ) ) 
+return 
+end 
+if ship_defense_mgr . is_created ( ) or ship_defense_mgr . is_running ( ) then 
+ship_defense_mgr . join ( ) 
+return 
+end 
+if not party . is_leader ( ) then 
+say ( locale_quest ( 10100 ) ) 
+return 
+end 
+local pids = { party . get_member_pids ( ) } 
+if party . get_near_count ( ) < table . getn ( pids ) then 
+say ( locale_quest ( 10110 ) ) 
+return 
+end 
+else 
+if ship_defense_mgr . is_created ( ) or ship_defense_mgr . is_running ( ) then 
+ship_defense_mgr . join ( ) 
+return 
+end 
+end 
+ship_defense_mgr . create ( ) 
+end 

@@ -1,0 +1,3 @@
+say_title ( locale_quest ( 211 ) ) 
+say ( locale_quest ( 325 ) ) 
+set_state ( "start" ) 

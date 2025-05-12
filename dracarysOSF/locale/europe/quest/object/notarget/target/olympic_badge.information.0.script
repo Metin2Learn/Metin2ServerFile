@@ -1,0 +1,25 @@
+target . delete ( "__TARGET__" ) 
+say_title ( mob_name ( 20017 ) ) 
+say ( locale_quest ( 7529 ) ) 
+say ( locale_quest ( 7530 ) ) 
+wait ( ) 
+say_title ( mob_name ( 20017 ) ) 
+say ( locale_quest ( 7531 ) ) 
+say ( locale_quest ( 7532 ) ) 
+local s = select ( locale_quest ( 4473 ) , locale_quest ( 3418 ) ) 
+if 2 == s then 
+say ( locale_quest ( 7541 ) ) 
+local a = select ( locale_quest ( 4473 ) , locale_quest ( 3418 ) ) 
+if 2 == a then 
+say_title ( mob_name ( 20017 ) ) 
+say ( locale_quest ( 7542 ) ) 
+return 
+end 
+say_title ( mob_name ( 20017 ) ) 
+say ( locale_quest ( 7543 ) ) 
+set_state ( "__GIVEUP__" ) 
+return 
+end 
+say_title ( mob_name ( 20017 ) ) 
+say ( locale_quest ( 7544 ) ) 
+set_state ( "step1" ) 

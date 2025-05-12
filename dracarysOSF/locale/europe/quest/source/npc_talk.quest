@@ -1,0 +1,187 @@
+quest npc_talk begin
+	state start begin
+		when 20354.click begin
+			say_npc()
+			say(locale_quest(7443))
+		end
+
+		when 20002.chat.locale_quest(7501) begin
+			say_title(locale_quest(7502))
+			say(locale_quest(7503))
+		end
+
+		when 20003.chat.locale_quest(7495) begin
+			say_title(locale_quest(7496))
+			say(locale_quest(7497))
+		end
+
+		when 20003.chat.locale_quest(7499) begin
+			say_title(locale_quest(7496))
+			say(locale_quest(7500))
+		end
+
+		when 20005.chat.locale_quest(7498) begin
+			say_title(locale_quest(7509))
+			say(locale_quest(7520))
+		end
+
+		when 20005.chat.locale_quest(7527) begin
+			say_title(locale_quest(7509))
+			say(locale_quest(7444))
+		end
+
+		when 20006.chat.locale_quest(7481) begin
+			say_title(mob_name(20006))
+			say(locale_quest(7482))
+		end
+
+		when 20006.chat.locale_quest(7483) begin
+			say_title(mob_name(20006))
+			say(locale_quest(7484))
+		end
+
+		when 20008.chat.locale_quest(7454) begin
+			say_title(locale_quest(7465))
+			say(locale_quest(7476))
+			if math.random(2) == 1 then
+				wait()
+				say(pc.get_name() .. ":")
+				say(locale_quest(7487))
+			end
+		end
+
+		when 20010.chat.locale_quest(7504) begin
+			say_title(mob_name(20010))
+			say(locale_quest(7505))
+		end
+
+		when 20011.chat.locale_quest(7470) begin
+			say_title(locale_quest(7471))
+			say(locale_quest(7472))
+		end
+
+		when 20012.chat.locale_quest(7485) begin
+			say_title(locale_quest(7486))
+			say(locale_quest(7488))
+		end
+
+		when 20012.chat.locale_quest(7489) begin
+			say_title(locale_quest(7486))
+			say(locale_quest(7490))
+		end
+
+		when 20014.chat.locale_quest(7506) begin
+			say_title(locale_quest(7507))
+			say(locale_quest(7508))
+			if math.random(2) == 1 then
+				wait()
+				say(pc.get_name() .. ":")
+				say(locale_quest(7510))
+			end
+		end
+
+		when 20015.chat.locale_quest(7445) begin
+			say_npc()
+			say(locale_quest(7446))
+		end
+
+		when 20017.chat.locale_quest(7447) begin
+			say_title(locale_quest(7448))
+			say(locale_quest(7449))
+		end
+
+		when 20018.chat.locale_quest(7473) begin
+			say_title(mob_name(20018))
+			say(locale_quest(7474))
+		end
+
+		when 20019.chat.locale_quest(7475) begin
+			say_title(locale_quest(7477))
+			say(locale_quest(7478))
+		end
+
+		when 20019.chat.locale_quest(7479) begin
+			say_title(locale_quest(7477))
+			say(locale_quest(7480))
+		end
+
+		when 20020.chat.locale_quest(7462) begin
+			say_title(locale_quest(7463))
+			say(locale_quest(7464))
+		end
+
+		when 20020.chat.locale_quest(7466) begin
+			say_title(locale_quest(7463))
+			say(locale_quest(7467))
+			if math.random(2) == 1 then
+				wait()
+				say(pc.get_name() .. ":")
+				say(locale_quest(7468))
+				wait()
+				say_title(locale_quest(7463))
+				say(locale_quest(7469))
+			end
+		end
+
+		when 20021.chat.locale_quest(7491) begin
+			say_npc()
+			say(locale_quest(7492))
+		end
+
+		when 20021.chat.locale_quest(7493) begin
+			say_npc()
+			say(locale_quest(7494))
+		end
+
+		when 20023.chat.locale_quest(7450) begin
+			say_title(locale_quest(7451))
+			say(locale_quest(7452))
+		end
+
+		when 20023.chat.locale_quest(7453) begin
+			say_title(locale_quest(7451))
+			say(locale_quest(7455))
+		end
+
+		when 20024.chat.locale_quest(7511) begin
+			say_title(locale_quest(7512))
+			say(locale_quest(7513))
+		end
+
+		when 20024.chat.locale_quest(7514) begin
+			say_title(locale_quest(7512))
+			say(locale_quest(7515))
+		end
+
+		when 20086.chat.locale_quest(7456) begin
+			say_title(locale_quest(7457))
+			say(locale_quest(7458))
+		end
+
+		when 20087.chat.locale_quest(7459) begin
+			say_title(locale_quest(7460))
+			say(locale_quest(7461))
+		end
+
+		when 20091.chat.locale_quest(7516) begin
+			say_title(locale_quest(7517))
+			say(locale_quest(7518))
+		end
+
+		when 20091.chat.locale_quest(7519) begin
+			say_title(locale_quest(7517))
+			say(locale_quest(7521))
+		end
+
+		when 20091.chat.locale_quest(7522) begin
+			say_title(locale_quest(7517))
+			say(locale_quest(7523))
+			say(locale_quest(7524))
+		end
+
+		when 20091.chat.locale_quest(7525) begin
+			say_title(locale_quest(7517))
+			say(locale_quest(7526))
+		end
+	end
+end

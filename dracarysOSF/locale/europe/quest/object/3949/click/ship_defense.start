@@ -1,0 +1,4 @@
+if ship_defense . in_dungeon ( pc . get_map_index ( ) ) then if ship_defense_mgr . is_running ( ) then 
+ship_defense_mgr . land ( ) 
+end 
+ return end 

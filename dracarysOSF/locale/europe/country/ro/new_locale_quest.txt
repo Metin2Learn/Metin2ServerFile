@@ -1,0 +1,12 @@
+91614	Eu sunt doar administratorul terenului ºi nu pot[ENTER]sã scad preþul. Adu-mi mai mult Yang.
+91615	Breasla a cumpãrat locul!
+91613	Administratorul terenului :
+91616	Revino când te vei fi rãzgândit. Cine vine[ENTER]primul, macinã primul.
+91617	Sunt administrator de teren ºi mã ocup de[ENTER]vânzarea parcelelor. Înainte ca monºtrii sã[ENTER]cucereascã þara din mijlocul continentului, aveam[ENTER]pãmânt pentru toþi ºi tuturor ne mergea bine.[ENTER]Acum mai vând doar conducãtorilor breslelor, care[ENTER]îl folosesc ca pãmânt al breslei.[ENTER]Vrei sã cumperi acest teren?
+91618	Dupã cum ziceam, nu pot vinde teren oricui.[ENTER]Sper cã înþelegi.
+91619	O breaslã care are deja teren, nu mai poate[ENTER]cumpãra încã unul.
+91620	A apãrut o greºealã de sarcinã.
+91621	Pentru a cumpara acest teren, nivelul breslei[ENTER]trebuie sa fie peste %s. Pretul este %s.
+91622	Breasla ta nu a atins încã acest nivel.[ENTER]Îmi pare rãu.
+91623	Doresti sa cumperi acest pamant?
+91624	Acest teren a fost deja vândut unei alte bresle.[ENTER]Îmi pare rãu.

@@ -1,0 +1,2 @@
+notice_mission ( "You can find a GM shop in the center of the village." ) 
+timer ( "show_info4" , 5 ) 

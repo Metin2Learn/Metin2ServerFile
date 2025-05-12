@@ -1,0 +1,15 @@
+say_title ( locale_quest ( 12091 ) ) 
+say ( locale_quest ( 12093 ) ) 
+if select ( locale_quest ( 12094 ) , locale_quest ( 12095 ) ) == 1 then 
+if pc . get_conqueror_level ( ) > 0 then 
+say_title ( locale_quest ( 12091 ) ) 
+say ( locale_quest ( 12096 ) ) 
+wait ( ) 
+pc . warp ( 512000 , 486400 ) 
+else 
+say_title ( locale_quest ( 12091 ) ) 
+say ( locale_quest ( 12618 ) ) 
+end 
+else 
+return 
+end 

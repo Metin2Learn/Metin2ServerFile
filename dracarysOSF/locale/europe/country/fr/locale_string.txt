@@ -1,0 +1,4848 @@
+"$*** Winner of the item %s is: %s ***";
+"$*** Le gagnant de l'objet %s est : %s ***";
+
+"%d guild EXP received!";
+"%d d'EXP de guilde reçue !";
+
+"%d minutes remaining to register for the PvP tournament!";
+"Il vous reste encore %d min pour vous inscrire au tournoi JcJ !";
+
+"%d more until the battle begins!";
+"Encore %d et le combat commence !";
+
+"%d ±ÇÀ» ´õ ÀĞ¾î¾ß ¼ö·ÃÀ» ¿Ï·á ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Vous devez encore lire %d livres de cette compétence pour acquérir un niveau supplémentaire.";
+
+"%d ³ÉÀ» ÅõÀÚÇÏ¼Ì½À´Ï´Ù.";
+"Vous avez investi %d Yangs.";
+
+"%d ³ÉÀ» È¹µæÇÏ¼Ì½À´Ï´Ù.";
+"Vous avez gagné %d Yangs.";
+
+"%d ·¹º§ÀÌ µÇ¾î¾ß ´Ù½Ã ¿°»öÇÏ½Ç ¼ö ÀÖ½À´Ï´Ù.";
+"Vous devez atteindre le niveau %d pour pouvoir teindre vos cheveux à nouveau.";
+
+"%d ºĞ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d minutes %d secondes avant la fin de votre bannissement du chat";
+
+"%d ½Ã°£ %d ºĞ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d heures %d minutes %d secondes avant la fin de votre bannissement du chat.";
+
+"%d ½Ã°£ %d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"%d heures %d secondes avant la fin de votre bannissement du chat";
+
+"%d Á¾·ù %d ¸¶¸® ³¬À½";
+"Vous avez attrapé %d de %d .";
+
+"%d ÃÊ µ¿¾È Ã¤ÆÃ±İÁö »óÅÂÀÔ´Ï´Ù";
+"Il reste %d secondes avant déblocage du t'chat";
+
+"%d ÃÊ ÈÄ¿¡ ±ºÁÖÀÇ Ãàº¹À» »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù";
+"Après %d secondes vous pouvez utiliser la Bénédiction des Empereurs.";
+
+"%d ÃÊ°£ ÄğÅ¸ÀÓÀÌ Àû¿ëÁßÀÔ´Ï´Ù.";
+"Temps d'attente approximatif : %d secondes.";
+
+"%d ÃÊÈÄ ¸ñÀûÁö·Î ÀÌµ¿µË´Ï´Ù.";
+"Vous atteindrez la destination %d secondes après l'exécution.";
+
+"%d%% È®·ü·Î °üÅë °ø°İ";
+"Chance de toucher avec une flèche %d%%.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã °æÇèÄ¡ Ãß°¡ »ó½Â";
+"L'expérience sera augmentée de %d%% si vous l'emportez.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã µ· 2¹è µå·Ó";
+"Augmentation des Yangs %d%% si vous l'emportez.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã »ı¸í·Â È¸º¹";
+"%d%% de chance de récupérer tous vos points de vie après avoir vaincu un ennemi.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã ¾ÆÀÌÅÛ 2¹è µå·Ó";
+"Augmentation des objets capturés de %d%% si vous l'emportez.";
+
+"%d%% È®·ü·Î ÀûÅğÄ¡½Ã Á¤½Å·Â È¸º¹";
+"La Mana sera plus forte de %d%% si vous l'emportez.";
+
+"%d%% È®·ü·Î Ä¡¸íÅ¸ °ø°İ";
+"Chances de faire une attaque critique %d%%.";
+
+"%d%% È®·ü·Î Å¸°İ½Ã »ó´ë Àü½Å·Â ¼Ò¸ğ";
+"%d%% de chance de prendre de la Mana à l'ennemi.";
+
+"%d%% È®·ü·Î ÇÇÇØ½Ã Á¤½Å·Â È¸º¹";
+"Chance de %d%% d'absorber du Mana.";
+
+"%dºĞÀÇ °áÁ¦½Ã°£ÀÌ Ãß°¡ µÇ¾ú½À´Ï´Ù. (°áÁ¦¹øÈ£ %d)";
+"%d temps de jeu a été ajouté à votre compte. (Paiement numéro %d).";
+
+"%dÀÇ °æÇèÄ¡¸¦ È¹µæÇß½À´Ï´Ù.";
+"Vous avez reçu %d points d'expérience.";
+
+"%dÃÊ ³²¾Ò½À´Ï´Ù.";
+"%d secondes avant la fermeture.";
+
+"%dÃÊ ¸¸Å­ ÃæÀüµÇ¾ú½À´Ï´Ù.";
+"%d secondes ont été rechargées.";
+
+"%dÃÊ ÈÄ °ÔÀÓÀÌ ¼Ë´Ù¿î µË´Ï´Ù.";
+"Le jeu sera fermé dans %d secondes.";
+
+"%s";
+"%s";
+
+"%s : %d ¸¶¸®";
+"%s: %d .";
+
+"%s SP¼Ò¸ğ: %d";
+"%s Emploi de FP : %d.";
+
+"%s earned %d points in a game of okey.";
+"%s a collecté %d points dans une partie Okey.";
+
+"%s effect activated.";
+"L'effet %s a été activé.";
+
+"%s effect not activated.";
+"L'effet %s n'a pas été activé.";
+
+"%s emerges from the Transport Box.";
+"%s sort du sac de transport.";
+
+"%s has been revived.";
+"%s a ressuscité.";
+
+"%s has blocked you.";
+"%s vous a bloqué.";
+
+"%s has completed level %u in Sung Mahi Tower!";
+"%s a réussi le niveau %u de la Tour infernale de Sung Mahi !";
+
+"%s has erected all the outposts and Sung Mahi's control will start in %d minutes.";
+"Tous les postes avancés de la zone %s sont établis et Sung Mahi en prendra le contrôle dans %d minutes.";
+
+"%s has evolved to %s! Excellent!";
+"%s atteint le niveau %s ! Magnifique !";
+
+"%s has hatched!";
+"%s vient d'éclore !";
+
+"%s has left the arena. %s wins.";
+"%s a quitté l'arène. %s a gagné.";
+
+"%s has occupied %s!";
+"%s occupe %s !";
+
+"%s has reached level %d!";
+"%s a atteint le niveau %d !";
+
+"%s has reached the personal score of %d!";
+"%s a atteint le niveau de points personnel %d !";
+
+"%s improvement failed.";
+"L'amélioration de %s a échoué.";
+
+"%s improvement successful.";
+"L'amélioration de %s a réussi.";
+
+"%s is already being blocked.";
+"Vous avez déjà bloqué %s.";
+
+"%s is attacking %s!";
+"%s attaque %s !";
+
+"%s is currently fast asleep.";
+"%s est en train de dormir.";
+
+"%s is insufficient. You need %d for the next stage of evolution.";
+"%s est insuffisant. Il vous faut %d pour atteindre le niveau supérieur.";
+
+"%s is no longer blocked.";
+"%s n'est plus bloqué.";
+
+"%s is now blocked.";
+"%s est désormais bloqué.";
+
+"%s is now in a Transport Box.";
+"%s se trouve maintenant dans un sac de transport.";
+
+"%s is the tournament victor!";
+"Le vainqueur du tournoi est %s !";
+
+"%s killcount %d mobkillcount %d bosskillcount %d ¼ºÁö ÁøÀÔ¼ö %d";
+"%s Décompte des tués %d Décompte des Mobs tués %d Décompte des Boss tués %d Nombre de Terres sacrées %d.";
+
+"%s killed %s.";
+"%s a éliminé %s.";
+
+"%s recovers from the exhaustion.";
+"%s se remet de son épuisement.";
+
+"%s refuses to eat anything!";
+"%s refuse de se nourrir !";
+
+"%s skill activated. HP restored by %d.";
+"Compétence %s activée. PV restaurés de %d.";
+
+"%s skill activated. Slow, poison and bleeding effects were removed.";
+"Compétence %s activée. Les effets de ralentissements, poisons et saignements sont neutralisés.";
+
+"%s skill activated. You will now receive no damage.";
+"Compétence %s activée. Vous ne subissez plus de dégâts.";
+
+"%s still has %d outposts. (%d/%d)";
+"La zone %s compte encore %d postes avancés (%d/%d)";
+
+"%s wakes up and dives into the tasty meal.";
+"%s se réveille et se jette sur la délicieuse nourriture.";
+
+"%s was successful! A %d%% absorption rate on their new %s. Congratulations!";
+"%s a réussi ! %d%% de taux absorption sur le nouveau %s. Félicitations !";
+
+"%s will appear here: %s";
+"%s apparaît ici : %s";
+
+"%s ±ºÁÖ ÈÄº¸¿¡¼­ »èÁ¦ÇÏ¿´½À´Ï´Ù";
+"%s n'est plus candidat pour être Empereur.";
+
+"%s ±ºÁÖ·Î ÀÔ¸í Çß½À´Ï´Ù.";
+"%s a été nominé comme Empereur.";
+
+"%s ±ºÁÖ¸£ Á¦°Å ÇÏ¿´½À´Ï´Ù..";
+"L'Empereur %s va être chassé.";
+
+"%s ±ºÁÖ¸¦ Á¦°Å ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"L'Empereur %s ne peut pas être chassé.";
+
+"%s ±æµå°¡ %s ±æµå¿¡ ¼±ÀüÆ÷°í¸¦ ÇÏ¿´½À´Ï´Ù!";
+"La Guilde %s a déclaré la guerre à la Guilde %s !";
+
+"%s ±æµå°¡ %s ±æµå¿ÍÀÇ ÀüÀï¿¡¼­ ½Â¸® Çß½À´Ï´Ù.";
+"La Guilde %s a gagné la guerre contre la Guilde %s .";
+
+"%s ±æµå°¡ %s ±æµåÀÇ ±ê¹ßÀ» »©¾Ñ¾Ò½À´Ï´Ù!";
+"La Guilde %s a capturé le drapeau de la Guilde %s !";
+
+"%s ±æµå¿Í %s ±æµå »çÀÌÀÇ ÀüÀïÀÌ ¹«½ÂºÎ·Î ³¡³µ½À´Ï´Ù.";
+"La guerre entre la Guilde %s et la Guilde %s se termine en match nul.";
+
+"%s ±æµå¿Í %s ±æµå »çÀÌÀÇ ÀüÀïÀÌ Ãë¼ÒµÇ¾ú½À´Ï´Ù.";
+"La guerre entre la Guilde %s et la Guilde %s a été annulée.";
+
+"%s ±æµå¿Í %s ±æµå°¡ Àá½Ã ÈÄ ÀüÀïÀ» ½ÃÀÛÇÕ´Ï´Ù!";
+"La guerre de guilde entre %s et %s commencera dans quelques minutes !";
+
+"%s ±æµå¿Í %s ±æµå°¡ ÀüÀïÀ» ½ÃÀÛÇÏ¿´½À´Ï´Ù!";
+"La guerre entre la Guilde %s et la Guilde %s a démarré !";
+
+"%s ±æµåÀÇ %sÀÌ %d%% Áõ°¡Çß½À´Ï´Ù!";
+"%s de la Guilde %s a été augmenté de %d%%.";
+
+"%s ±æµåÀÇ %sÀÌ Á¤»óÀ¸·Î µ¹¾Æ¿Ô½À´Ï´Ù.";
+"%s de la Guilde %s est à nouveau normal.";
+
+"%s ±æµåÀÇ ±ê¹ßÀ» %s ´ÔÀÌ È¹µæÇÏ¿´½À´Ï´Ù.";
+"Le drapeau de la Guilde %s a été capturé par %s.";
+
+"%s ´Â ±ºÁÖ ÈÄº¸°¡ ¾Æ´Õ´Ï´Ù.";
+"%s n'est pas candidat pour être Empereur.";
+
+"%s ´Â ±ºÁÖ·Î ÀÔ¸íÇÒ¼ö ¾ø½À´Ï´Ù .";
+"%s ne peut pas être nominé comme Empereur.";
+
+"%s ´Ô°úÀÇ ±³È¯ÀÌ ¼º»ç µÇ¾ú½À´Ï´Ù.";
+"L'échange avec %s a réussi.";
+
+"%s ´Ô¿¡°Ô ÆÄÆ¼°¡ÀÔ ½ÅÃ»À» Çß½À´Ï´Ù.";
+"Voulez-vous rejoindre le groupe de %s ?";
+
+"%s ´ÔÀ¸·Î ºÎÅÍ Ä£±¸ µî·ÏÀ» °ÅºÎ ´çÇß½À´Ï´Ù.";
+"%s a décliné l'invitation.";
+
+"%s ´ÔÀº %d Ã¤³Î¿¡ Á¢¼Ó Áß ÀÔ´Ï´Ù. (ÇöÀç Ã¤³Î: %d)";
+"Le joueur %s est actuellement sur le channel %d. (Votre channel: %d)";
+
+"%s ´ÔÀº Á¢¼ÓµÇ ÀÖÁö ¾Ê½À´Ï´Ù.";
+"%s n'est pas connecté(e).";
+
+"%s ´ÔÀº Á¤»óÀûÀ¸·Î Ãâ¸¶¸¦ ÇÏ¿´½À´Ï´Ù.";
+"Le joueur %s a déjà voté.";
+
+"%s ´ÔÀ» ¼ÒÈ¯ÇÏ¿´½À´Ï´Ù.";
+"Vous avez recruté %s joueurs.";
+
+"%s ´ÔÀÌ ´ë·Ã¿¡¼­ ½Â¸®ÇÏ¿´½À´Ï´Ù.";
+"%s a remporté le duel.";
+
+"%s ´ÔÀÌ ½Â¸®ÇÏ¿´½À´Ï´Ù.";
+"%s a gagné.";
+
+"%s ºí·°! (%d%%)";
+"%s Paré ! (%d%%).";
+
+"%s ¾ÆÀÌÅÛ À» È¹µæÇÏ¼Ì½À´Ï´Ù";
+"Vous gagnez %s Objets.";
+
+"%s ¾ÆÀÌÅÛÀÌ ÇÊ¿äÇÕ´Ï´Ù";
+"Vous avez besoin de %s.";
+
+"%s ¿¡°Ô·Î ÀÌµ¿ÇÕ´Ï´Ù";
+"Transmettre à %s.";
+
+"%s È¸ÇÇ! (%d%%)";
+"%s Evité ! (%d%%)";
+
+"%s's pet skill has been activated. %s uses Feather Walk.";
+"La compétence de familier %s a été activée : %s utilise la Foulée de plume.";
+
+"%s's remaining HP: %d%%";
+"PV restants de %s : %d %%";
+
+"%s: Á¸ÀçÇÏÁö ¾Ê´Â ±æµå ÀÔ´Ï´Ù.";
+"%s: Cette Guilde n'existe pas.";
+
+"%s:%s_WAS_SET_TO%d%%";
+"%s : %s a été augmenté de %d%% !";
+
+"%s:_%s_IS_NORMAL_AGAIN";
+"%s de %s est à nouveau normal.";
+
+"%s[%d]°¡ °ø°İ À§Ä¡: %d %d";
+"Situation de l'attaque de %s[%d] : %d %d.";
+
+"%s´Ô°úÀÇ ´ë°á ½ÃÀÛ!";
+"La bataille contre %s a commencé !";
+
+"%s´ÔÀÌ ´ë°á½ÅÃ»À» Çß½À´Ï´Ù. ½Â³«ÇÏ·Á¸é ´ë°áµ¿ÀÇ¸¦ ÇÏ¼¼¿ä.";
+"%s vous défie pour une bataille !";
+
+"%s´ÔÀÌ ÁÖ»çÀ§¸¦ ±¼·Á %d°¡ ³ª¿Ô½À´Ï´Ù. (%d-%d)";
+"%s a lancé le dé. Il/Elle a obtenu %d (%d-%d).";
+
+"%s¸¦ ±¸¿ü½À´Ï´Ù.";
+"Vous faites griller %s à petit feu.";
+
+"%s¿¡ ¹ÚÇôÀÖ´ø º¸¼®ÀÌ »ç¶óÁı´Ï´Ù.";
+"Une gemme a disparu de %s.";
+
+"%s¿¡ ÀüÀïÀÇ ½ÃÀÛÀ» ¾Ë¸®´Â ºÀÈ­°¡ ³ªÅ¸³µ½À´Ï´Ù.";
+"Un feu a été allumé à %s pour prévenir d'une bataille.";
+
+"%s¿¡°Ô ´ë°á½ÅÃ»À» Çß½À´Ï´Ù.";
+"Vous défiez %s pour une bataille !";
+
+"%s¿¡¼­ ºÀÈ­¸¦ µÑ·¯½Î°í ÀüÅõ°¡ ÁøÇàÁßÀÔ´Ï´Ù.";
+"Il y a %s guerres qui ont allumées les feux.";
+
+"%s¿¡¼­ ¼ÒÄÏ ºüÁú¶§±îÁö ³²Àº ½Ã°£ %d";
+"%s Temps restant avant de pouvoir vider un emplacement : %d.";
+
+"%sÀÇ ±ºÁÖ°¡ %s ´ÔÀ¸·Î ±³Ã¼µÇ¾ú½À´Ï´Ù.";
+"L'Empereur de %s a changé pour %s.";
+
+"%sÀÌ ¸ğµç ºÀÈ­¸¦ ÆÄ±«ÇÏ¿´½À´Ï´Ù.";
+"%s a éteint le feu.";
+
+"%sÀÌ ºÀÈ­¸¦ ÆÄ±«Çß½À´Ï´Ù.";
+"%s a éteint le feu.";
+
+"%sÀÌ ¼ö¼º¿¡ ¼º°øÇß½À´Ï´Ù.";
+"%s s'est défendu avec succès.";
+
+"%sÀÌ ¼ö¼º¿¡ ½ÇÆĞÇÏ¿© ÀüÀï¿¡ ÆĞ¹èÇÏ¿´½À´Ï´Ù..";
+"%s perd la guerre vu qu'ils n'ont pas pu défendre le château.";
+
+"%sÀÌ ÇÊ¿äÇÕ´Ï´Ù.";
+"Pour cette action, vous avez besoin de: %s";
+
+"(%s) ±æµå°¡ »ı¼ºµÇ¾ú½À´Ï´Ù. [ÀÓ½Ã]";
+"(%s) Guilde créée. [Temporaire].";
+
+"(¸¸·áÀÏ : %d³â %d¿ù %dÀÏ)";
+"(Procédé: %d y- %d m - %d d).";
+
+". ³ÊÈñ°¡ ¼ºÁöÀÇ ¼öÈ£ÀÚ¸¦ Àâ°Ô µÈ´Ù¸é ³ÊÈñ´Â ¼ºÁöÀÇ ÁÖÀÎÀÌ µÈ´Ù.[ENTER][ENTER] ";
+"Vous avez battu les défenseurs du Lieu sacré, vous allez le devenir à votre tour.";
+
+"1-50 »çÀÌÀÇ ¼öÄ¡¸¦ ¼±ÅÃÇØÁÖ¼¼¿ä";
+"Choisissez un nombre entre 1 et 50.";
+
+"10ÃÊµÚ ´ÙÀ½ ÆÇÀ» ½ÃÀÛÇÕ´Ï´Ù.";
+"Le prochain round commence dans 10 secondes.";
+
+"10ÃÊµÚ ´ë·ÃÀÌ ½ÃÀÛµË´Ï´Ù.";
+"Le combat commencera dans 10 secondes.";
+
+"10ÃÊµÚ ¸¶À»·Î µÇµ¹¾Æ°©´Ï´Ù.";
+"Vous serez téléporté dans la cité dans 10 secondes.";
+
+"10ÃÊµÚ ¸¶À»·Î ÀÌµ¿ÇÕ´Ï´Ù.";
+"Dans 10 secondes vous serez déplacé dans la cité.";
+
+"10ÃÊµÚ ÆÇÁ¤ÇÏ°Ú½À´Ï´Ù.";
+"Le résultat sera disponible dans 10 secondes.";
+
+"10ÃÊÈÄ ÀÚµ¿À¸·Î Á¢¼ÓÀÌ Á¾·áµÇ¸ç,";
+"Vous serez déconnecté dans 10 secondes.";
+
+"1ºĞ ÀÌ³»¿¡ ¾Æ¹«µµ Á¢¼ÓÇÏÁö ¾ÊÀ¸¸é ±æµåÀüÀÌ ÀÚµ¿ Á¾·áµË´Ï´Ù.";
+"Si aucun ennemi ne peut être trouvé, la guerre de Guildes sera automatiquement conclue.";
+
+"20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© »óÁ¡À» ¿­¼ö°¡ ¾ø½À´Ï´Ù";
+"Vous avez plus de 2 milliards de Yangs. Vous ne pouvez pas échanger.";
+
+"20¾ï³ÉÀÌ ÃÊ°úÇÏ¿© ¹°Ç°À» ÆÈ¼ö ¾ø½À´Ï´Ù.";
+"Vous avez plus de 2 milliards de Yangs. Vous ne pouvez pas échanger.";
+
+"5ºĞ ÈÄ¿¡ Á¤»óÀûÀ¸·Î Á¢¼ÓÇÏ½Ç¼ö ÀÖ½À´Ï´Ù.";
+"Vous pourrez vous connecter dans 5 minutes.";
+
+"5ÃÊ µÚ Æ²¸®½Å ºĞµéÀ» ¹Ù±ùÀ¸·Î ÀÌµ¿ ½ÃÅ°°Ú½À´Ï´Ù.";
+"Dans 5 secondes, les participants ayant mal répondu à la question devront partir.";
+
+"<±æµå> %d ½ºÅ³À» »ç¿ëÇÔ (%d, %d) to %u";
+"[Guilde] La compétence %d a été utilisée (%d, %d) pour %u.";
+
+"<±æµå> %s ±æµå°¡ ±æµåÀüÀ» °ÅºÎÇÏ¿´½À´Ï´Ù.";
+"[Guilde] %s a refusé la guerre de Guildes.";
+
+"<±æµå> %uÀÇ °æÇèÄ¡¸¦ ÅõÀÚÇÏ¿´½À´Ï´Ù.";
+"[Guilde] %u points d'expérience utilisés.";
+
+"<±æµå> %uÀÇ ¿ë½Å·ÂÀ» È¸º¹ÇÏ¿´½À´Ï´Ù.";
+"[Guilde] %u points d'Esprit du Dragon ont été restaurés.";
+
+"<±æµå> [%s] ±æµå°¡ »ı¼ºµÇ¾ú½À´Ï´Ù.";
+"[Guilde] La Guilde [%s] a été créée.";
+
+"<±æµå> °¡Áö°í ÀÖ´Â µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"[Guilde] Vous n'avez pas assez de Yangs.";
+
+"<±æµå> °æÇèÄ¡ ÅõÀÚ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Guilde] L'utilisation de l'expérience a échoué.";
+
+"<±æµå> °øÁö±ÛÀ» ÀÛ¼ºÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guilde] Vous ne pouvez pas faire d'annonce.";
+
+"<±æµå> ±×·¯ÇÑ »ç¶÷À» Ã£À» ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] La personne recherchée n'a pas été trouvée.";
+
+"<±æµå> ±×·± ±æµå°¡ ¾ø½À´Ï´Ù.";
+"[Guilde] Aucune Guilde portant ce nom.";
+
+"<±æµå> ±æµå ±İ°í¿¡¼± ±æµåÀå¸¸ Ãâ±İÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Guilde] Seul le Maître de la Guilde peut retirer des Yangs.";
+
+"<±æµå> ±æµå »ı¼º¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Guilde] La création de la Guilde a échoué.";
+
+"<±æµå> ±æµå ½ºÅ³ ·¹º§À» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guilde] Vous ne pouvez pas changer le niveau des compétences de la Guilde.";
+
+"<±æµå> ±æµå ½ºÅ³Àº ±æµåÀü Áß¿¡¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Guilde] Cette compétence de Guilde ne peut être utilisée que durant une guerre.";
+
+"<±æµå> ±æµå ÀÌ¸§ÀÌ ÀûÇÕÇÏÁö ¾Ê½À´Ï´Ù.";
+"[Guild] The Guildname is invalid.";
+
+"<±æµå> ±æµå°¡ ÀÌ¹Ì ÃÖ°í ·¹º§ÀÔ´Ï´Ù.";
+"[Guild] Votre Guilde a atteint son niveau maximum.";
+
+"<±æµå> ±æµå¸¦ »ı¼ºÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] Vous ne pouvez pas créer de Guilde.";
+
+"<±æµå> ±æµå¸¦ ÇØ»êÇÑ Áö %dÀÏÀÌ Áö³ªÁö ¾ÊÀº »ç¶÷Àº ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] Après le changement vous pourrez inviter des membres à nouveau dans %d jours.";
+
+"<±æµå> ±æµå¿¡ ¼ÓÇØÀÖÁö ¾Ê½À´Ï´Ù.";
+"[Guilde] Ceci n'appartient pas à la Guilde.";
+
+"<±æµå> ±æµå¿ø %s ´ÔÀ» °­Á¦ Å»Åğ ½ÃÄ×½À´Ï´Ù.";
+"[Guilde] Le membre de la Guilde %s a été rejeté de la Guide.";
+
+"<±æµå> ±æµå¿øÀ» °­Á¦ Å»Åğ ½ÃÄ×½À´Ï´Ù.";
+"[Guilde] Vous avez rejeté le membre de la Guilde.";
+
+"<±æµå> ±æµå¿øÀ» °­Á¦ Å»Åğ ½ÃÅ³ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guilde] Vous ne pouvez pas rejeter des membres de la Guilde.";
+
+"<±æµå> ±æµå¿øÀ» ÃÊ´ëÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guilde] Vous ne pouvez pas inviter quelqu'un dans la Guilde.";
+
+"<±æµå> ±æµåÀåÀ¸·Î Á÷À§¸¦ º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] Vous ne pouvez pas vous faire vous-même Maître de la Guilde.";
+
+"<±æµå> ±æµåÀåÀÇ ±ÇÇÑÀº º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] Les pouvoirs du Maître de la Guilde ne peuvent être changés.";
+
+"<±æµå> ±æµåÀåÀÇ Á÷À§ ÀÌ¸§Àº º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] Les pouvoirs du Maître de la Guilde ne peuvent être changés.";
+
+"<±æµå> ±æµåÀåÀÇ Á÷À§´Â º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] Le grade du Maître de la Guilde ne peut être changé.";
+
+"<±æµå> ±æµåÀü¿¡ ´ëÇÑ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guilde] Une guerre de Guildes n'est pas justifiée.";
+
+"<±æµå> ±æµåÀüÀ» ÇÏ±â À§ÇØ¼± ÃÖ¼ÒÇÑ %d¸íÀÌ ÀÖ¾î¾ß ÇÕ´Ï´Ù.";
+"[Guilde] Au moins %d joueurs doivent participer pour qu'une guerre des Guildes puissent avoir lieu.";
+
+"<±æµå> ±æµåÀüÀÌ Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"[Guilde] La guerre de Guildes a été annulée.";
+
+"<±æµå> ±æµåÀüÁß¿¡´Â »ç³É¿¡ µû¸¥ ÀÌÀÍÀÌ ¾ø½À´Ï´Ù.";
+"[Guilde] Pendant une guerre de Guildes, aucun point d'expérience ne peut être en chassant.";
+
+"<±æµå> ´Ù¸¥ Á¦±¹ »ç¶÷À» ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] Vous ne pouvez pas inviter de joueurs d'un autre Empire dans la Guilde.";
+
+"<±æµå> ´õÀÌ»ó Àå¼ö¸¦ ÁöÁ¤ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] Vous ne pouvez pas choisir davantage de Maîtres de guilde.";
+
+"<±æµå> µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"[Guilde] Pas assez de Yangs dans la banque de guilde.";
+
+"<±æµå> ·¡´õ Á¡¼ö°¡ %d Á¡ÀÌ µÇ¾ú½À´Ï´Ù";
+"[Guilde] La guilde a atteint %d points.";
+
+"<±æµå> ·¹´õ Á¡¼ö°¡ ¸ğÀÚ¶ó¼­ ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] Le grade est trop faible pour participer à une guerre de Guildes.";
+
+"<±æµå> »èÁ¦ÇÒ ¼ö ¾ø´Â ±ÛÀÔ´Ï´Ù.";
+"[Guilde] Le message ne peut être effacé.";
+
+"<±æµå> »ó´ë°¡ %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"[Guilde] Le joueur est sur le canal %d. (Canal actuel: %d).";
+
+"<±æµå> »ó´ë°¡ ¿Â¶óÀÎ »óÅÂ°¡ ¾Æ´Õ´Ï´Ù.";
+"[Guilde] Le joueur n'est pas en ligne.";
+
+"<±æµå> »ó´ë¹æ ±æµå°¡ ÀÌ¹Ì ÀüÀï Áß ÀÔ´Ï´Ù.";
+"[Guilde] Cette Guilde participe déjà à une guerre.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ±æµå¿ø ¼ö°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] La Guilde n'a pas assez de membres pour participer à une guerre de Guildes.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ±æµåÀåÀÌ Á¢¼ÓÁßÀÌ ¾Æ´Õ´Ï´Ù.";
+"[Guild] Le chef de la guilde ennemie est hors ligne.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ ·¹´õ Á¡¼ö°¡ ¸ğÀÚ¶ó¼­ ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] La Guilde n'a pas assez de points pour participer à une Guerre de Guilde.";
+
+"<±æµå> »ó´ë¹æ ±æµåÀÇ Àüºñ°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] La Guilde n'a pas assez de Yangs pour participer à une guerre de Guildes.";
+
+"<±æµå> »ó´ë¹æÀÌ °°Àº ±æµå°¡ ¾Æ´Õ´Ï´Ù.";
+"[Guilde] Cette personne n'est pas dans la même Guilde.";
+
+"<±æµå> »ó´ë¹æÀÌ ±æµå ÃÊ´ë °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"[Guilde] Le joueur a décliné l'invitation dans la Guilde.";
+
+"<±æµå> »ó´ë¹æÀÌ ÀÌ¹Ì ´Ù¸¥ ±æµå¿¡ ¼ÓÇØÀÖ½À´Ï´Ù.";
+"[Guilde] Cette personne est déjà membre d'une autre Guilde.";
+
+"<±æµå> »ó´ë¹æÀÌ ÃÊ´ë ½ÅÃ»À» ¹ŞÀ» ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"[Guilde] Votre vis-à-vis ne peut pas recevoir votre invitation.";
+
+"<±æµå> ¿ë½Å·Â È¸º¹¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"[Guilde] L'Esprit du Dragon n'a pas été restauré.";
+
+"<±æµå> ¿ë½Å·ÂÀÌ ºÎÁ·ÇÕ´Ï´Ù. (%d, %d)";
+"[Guilde] Pas assez d'Esprit du Dragon. (%d, %d).";
+
+"<±æµå> ÀÌ¹Ì °°Àº ÀÌ¸§ÀÇ ±æµå°¡ ÀÖ½À´Ï´Ù.";
+"[Guilde] Ce nom de Guilde est déjà pris.";
+
+"<±æµå> ÀÌ¹Ì ´Ù¸¥ ÀüÀï¿¡ ÂüÀü Áß ÀÔ´Ï´Ù.";
+"[Guilde] Votre Guilde participe déjà à une autre guerre.";
+
+"<±æµå> ÀÌ¹Ì ÀüÀï ÁßÀÎ ±æµåÀÔ´Ï´Ù.";
+"[Guilde] Cette Guilde participe déjà à une autre guerre de Guildes.";
+
+"<±æµå> ÀÌ¹Ì ÀüÀïÀÌ ¿¹¾àµÈ ±æµå ÀÔ´Ï´Ù.";
+"[Guilde] Cette Guilde est déjà prêvue pour une autre guerre de Guildes.";
+
+"<±æµå> Àß¸øµÈ ±İ¾×ÀÔ´Ï´Ù.";
+"[Guilde] Ce n'est pas la somme de Yangs correcte.";
+
+"<±æµå> Àá½ÃÈÄ¿¡ ÀÌ¿ëÇØÁÖ½Ê½Ã¿À";
+"[Guild] Veuillez ré-essayer plus tard.";
+
+"<±æµå> Àá½ÃÈÄ¿¡ ÀÌ¿ëÇØÁÖ½Ê½Ã¿À.";
+"[Guild] Essayez plus tard.";
+
+"<±æµå> Àå±ºÀ» ÁöÁ¤ÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guilde] Vous n'avez pas les pouvoirs pour choisir votre Maître de Guilde.";
+
+"<±æµå> ÀûÇÕÇÏÁö ¾ÊÀº Á÷À§ ÀÌ¸§ ÀÔ´Ï´Ù.";
+"[Guilde] Ce nom de Grade est invalide.";
+
+"<±æµå> Àüºñ°¡ ºÎÁ·ÇÏ¿© ±æµåÀüÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] Pas assez de Yangs pour participer à une guerre de Guildes.";
+
+"<±æµå> Á¦°øÇÏ°íÀÚ ÇÏ´Â °æÇèÄ¡°¡ ³²Àº °æÇèÄ¡º¸´Ù ¸¹½À´Ï´Ù.";
+"[Guilde] L'expérience donnée est supérieure à l'expérience restante.";
+
+"<±æµå> Á÷À§ ±ÇÇÑÀ» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guilde] Vous ne pouvez pas changer votre position.";
+
+"<±æµå> Á÷À§ ÀÌ¸§À» º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guilde] Vous ne pouvez pas changer le nom de votre Grade.";
+
+"<±æµå> Á÷À§¸¦ º¯°æÇÒ ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Guilde] Vous n'êtes pas autorisé à changer la position.";
+
+"<±æµå> ÃÖ´ë ±æµå¿ø ¼ö¸¦ ÃÊ°úÇß½À´Ï´Ù.";
+"[Guilde] La Guilde a atteint sa capacité maximum.";
+
+"<±æµå> ÄğÅ¸ÀÓÀÌ ³¡³ªÁö ¾Ê¾Æ ±æµå ½ºÅ³À» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] Vous ne pouvez pas utiliser de compétence de Guilde pour le moment.";
+
+"<±æµå> Å»ÅğÇÑ ÈÄ %dÀÏ ÀÌ³»¿¡´Â ±æµå¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] Après avoir quitté une Guilde, vous ne pouvez pas en créer de nouvelle avant %d jours.";
+
+"<±æµå> Å»ÅğÇÑ ÈÄ %dÀÏÀÌ Áö³ªÁö ¾ÊÀº »ç¶÷Àº ±æµå¿¡ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] Vous pouvez inviter à nouveau ce joueur après %d jour(s).";
+
+"<±æµå> ÇØ»êÇÑ ÈÄ %dÀÏ ÀÌ³»¿¡´Â ±æµå¸¦ ¸¸µé ¼ö ¾ø½À´Ï´Ù.";
+"[Guilde] Après la dissolution d'une Guilde, vous ne pouvez pas en créer de nouvelle avant %d jours.";
+
+"<±æµå> ÇöÀç ±æµå°¡ ÀüÀï Áß ÀÔ´Ï´Ù.";
+"[Guild] La guilde participe déjà à une guerre en ce moment.";
+
+"<¸Ş½ÅÁ®> %s ´ÔÀ» ¸Ş½ÅÀú¿¡¼­ »èÁ¦ÇÏ¿´½À´Ï´Ù.";
+"[Amis] Vous avez effacé %s de votre liste.";
+
+"<¸Ş½ÅÁ®> %s ´ÔÀ» Ä£±¸·Î Ãß°¡ÇÏ¿´½À´Ï´Ù.";
+"[Amis] Vous avez ajouté %s à votre liste d'amis.";
+
+"<¸Ş½ÅÁ®> ¿î¿µÀÚ´Â ¸Ş½ÅÁ®¿¡ Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Amis] Vous ne pouvez pas ajouter un GM à votre liste.";
+
+"<Ã¢°í> °Å¸®°¡ ¸Ö¾î¼­ Ã¢°í¸¦ ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"[Entrepôt] Votre distance à l'entrepôt est trop grande pour pouvoir l'ouvrir.";
+
+"<Ã¢°í> ±âÁ¸ ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù.";
+"[Stockage] Vous avez entré un mot de passe incorrect.";
+
+"<Ã¢°í> ¿Å±æ ¼ö ¾ø´Â À§Ä¡ÀÔ´Ï´Ù.";
+"[Stockage] Aucun mouvement possible.";
+
+"<Ã¢°í> ÀÌ ¾ÆÀÌÅÛÀº ³ÖÀ» ¼ö ¾ø½À´Ï´Ù.";
+"[Stockage] Cet objet ne peut pas être stocké.";
+
+"<Ã¢°í> Àß¸øµÈ ¾ÏÈ£¸¦ ÀÔ·ÂÇÏ¼Ì½À´Ï´Ù.";
+"[Entrepôt] Vous avez entré un mauvais mot de passe.";
+
+"<Ã¢°í> Ã¢°í ºñ¹Ğ¹øÈ£°¡ º¯°æµÇ¾ú½À´Ï´Ù.";
+"[Dépôt] Le mot de passe du dépôt a été changé.";
+
+"<Ã¢°í> Ã¢°í°¡ ÀÌ¹Ì ¿­·ÁÀÖ½À´Ï´Ù.";
+"[Entrepôt] L'entrepôt est déjà ouvert.";
+
+"<Ã¢°í> Ã¢°í·Î ¿Å±æ ¼ö ¾ø´Â ¾ÆÀÌÅÛ ÀÔ´Ï´Ù.";
+"[Entrepôt] Vous ne pouvez pas déplacer cet objet vers l'entrepôt.";
+
+"<Ã¢°í> Ã¢°í¸¦ ´İÀºÁö 10ÃÊ ¾È¿¡´Â ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"[Entrepôt] Vous devez attendre 10 secondes pour ouvrir à nouveau l'entrepôt.";
+
+"<Äù½ºÆ®> ÀÌÀü¿¡ °°Àº º¸»óÀ» ¹ŞÀº ÀûÀÌ ÀÖ¾î ´Ù½Ã ¹ŞÁö ¾Ê½À´Ï´Ù.";
+"[Quête] Vous avez déjà reçu votre récompense.";
+
+"<ÆÄÆ¼> %s ´ÔÀÌ ÆÄÆ¼ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"[Groupe] %s a décliné votre invitation à rejoindre votre groupe.";
+
+"<ÆÄÆ¼> %s´ÔÀÇ ÆÄÆ¼¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"[Group] %s a rejoint le groupe.";
+
+"<ÆÄÆ¼> %s´ÔÀÌ ÆÄÆ¼ ÃÊ´ë¸¦ °ÅÀıÇÏ¼Ì½À´Ï´Ù.";
+"[Group] %s a décliné l'invitation.";
+
+"<ÆÄÆ¼> %s´ÔÀÌ ÆÄÆ¼¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"[Group] %s a rejoint le groupe.";
+
+"<ÆÄÆ¼> -30 ~ +30 ·¹º§ ÀÌ³»ÀÇ »ó´ë¹æ¸¸ ÃÊ´ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Groupe] Seuls les joueurs avec une différence de niveau de -30 à +30 peuvent être invités.";
+
+"<ÆÄÆ¼> °üÀü ¸ğµå¿¡¼± ÆÄÆ¼ ÃÊ´ë¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas inviter de joueurs en étant en mode Observateur.";
+
+"<ÆÄÆ¼> ´Ù¸¥ Á¦±¹°ú ÆÄÆ¼¸¦ ÀÌ·ê ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas former de groupe avec des joueurs d'un autre Empire.";
+
+"<ÆÄÆ¼> ´Ù¸¥ ÆÄÆ¼¿øÀ» Å»Åğ½ÃÅ³ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas rejeter un membre du Groupe.";
+
+"<ÆÄÆ¼> ´ë»óÀ» ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas appeler cette cible.";
+
+"<ÆÄÆ¼> ´õ ÀÌ»ó ÆÄÆ¼¿øÀ» ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas inviter d'avantage de joueurs dans ce groupe.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼ ÃÊ´ë¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas inviter de joueurs alors que vous vous trouvez dans un donjon.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼ ÃÊ´ë¿¡ ÀÀÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas accepter une invitation dans un donjon.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼¿¡¼­ ³ª°¥ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas quitter un groupe pendant que vous vous trouvez dans un donjon.";
+
+"<ÆÄÆ¼> ´øÀü ¾È¿¡¼­´Â ÆÄÆ¼¿¡¼­ Ãß¹æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas rejeter un joueur alors que vous êtes dans un donjon.";
+
+"<ÆÄÆ¼> ´øÁ¯³»¿¡¼­´Â ÆÄÆ¼¸¦ ³ª°¥ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas quitter un Groupe alors que vous êtes dans un donjon.";
+
+"<ÆÄÆ¼> ´øÁ¯³»¿¡¼­´Â ÆÄÆ¼¿øÀ» Ãß¹æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas rejeter un joueur alors que vous êtes dans un donjon.";
+
+"<ÆÄÆ¼> ¸®´õ¸¸ º¯°æÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Groupe] Seul le chef du Groupe peut changer cela.";
+
+"<ÆÄÆ¼> »óÅÂ¸¦ º¯°æÇÏ·Á´Â »ç¶÷ÀÌ ÆÄÆ¼¿øÀÌ ¾Æ´Õ´Ï´Ù.";
+"[Groupe] La cible n'est pas un membre de votre groupe.";
+
+"<ÆÄÆ¼> ¼­¹ö ¹®Á¦·Î ÆÄÆ¼ °ü·Ã Ã³¸®¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Le serveur ne peut pas éxécuter la demande pour être groupé.";
+
+"<ÆÄÆ¼> ¼ÒÈ¯ÇÏ·Á´Â ´ë»óÀ» Ã£À» ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] La cible n'a pas été trouvée.";
+
+"<ÆÄÆ¼> ÀÌ¹Ì %s´ÔÀº ÆÄÆ¼¿¡ ¼ÓÇØ ÀÖ½À´Ï´Ù.";
+"[Groupe] %s est déjà dans le groupe.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ ±â¼úÀº ÆÄÆ¼Àå¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"[Groupe] Seule le chef du Groupe peut utiliser les compétences de Groupe.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ ÃÊ´ë¿¡ ÀÀÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Group] Vous ne pouvez pas accepter l'invitation.";
+
+"<ÆÄÆ¼> ÆÄÆ¼°¡ ÇØ»ê µÇ¾ú½À´Ï´Ù.";
+"[Groupe] Le Groupe a été supprimé.";
+
+"<ÆÄÆ¼> ÆÄÆ¼³» ÃÖ°í ·¹º§ º¸´Ù 30·¹º§ÀÌ ³·¾Æ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas inviter ce joueur, son niveau est trop faible.";
+
+"<ÆÄÆ¼> ÆÄÆ¼³» ÃÖÀú ·¹º§ º¸´Ù 30·¹º§ÀÌ ³ô¾Æ ÃÊ´ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas inviter ce joueur, son niveau est trop haut.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿¡¼­ ³ª°¡¼Ì½À´Ï´Ù.";
+"[Groupe] Vous quittez le groupe.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿¡¼­ Ãß¹æ´çÇÏ¼Ì½À´Ï´Ù.";
+"[Groupe] Vous avez été rejeté du Groupe.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿äÃ»À» ÇÑ Ä³¸¯ÅÍ¸¦ Ã£À»¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Le joueur qui a formulé l'invitation n'est pas en ligne.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿øÀ» ÃÊ´ëÇÒ ¼ö ÀÖ´Â ±ÇÇÑÀÌ ¾ø½À´Ï´Ù.";
+"[Groupe] Vous n'avez pas l'autorisation d'inviter quelqu'un.";
+
+"<ÆÄÆ¼> ÆÄÆ¼¿øÀ» ÇöÀç À§Ä¡·Î ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas appeler de membres du Groupe depuis votre position actuelle.";
+
+"<ÆÄÆ¼> ÆÄÆ¼ÀÇ ÀÎ¿øÁ¦ÇÑÀÌ ÃÊ°úÇÏ¿© ÆÄÆ¼¿¡ Âü°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pôuvez rejoindre ce groupe car trop de joueurs le composent.";
+
+"@*** ->%*s - Dice score: %4d ***";
+"@*** ->%*s - résultat des dés : %4d ***";
+
+"@*** Rolling for the following item: %s ***";
+"@*** Jet de dés pour l'objet suivant : %s ***";
+
+"A level-%d Dragon Portal can now be entered.";
+"Un portail dragon de niveau %d peut désormais être traversé.";
+
+"A level-%d Dragon Portal has opened. Take the dungeon by storm!";
+"Un portail dragon de niveau %d a été ouvert. Au donjon !";
+
+"A name has already been registered.";
+"Un nom a déjà été enregistré.";
+
+"A player has announced their withdrawal. Kill them to earn more points!";
+"Un joueur a annoncé son retrait. Tuez-le pour empocher des points bonus !";
+
+"A special supply pack has been dropped somewhere.";
+"Un paquet de provisions spéciales a été déposé quelque part.";
+
+"Account limit reached. You cannot open this box.";
+"Limite de solde atteinte. Vous ne pouvez pas ouvrir cette caisse.";
+
+"Acquire the Valiant Pet Book for your pet's hero training.";
+"Procurez-vous le livre de familier vaillant pour l'entraînement héroïque de votre familier.";
+
+"Activate your pet first.";
+"Commencez par activer votre familier.";
+
+"After using the Tincture of Kingdoms, you cannot accept invitations in this kingdom any more.";
+"Après avoir utilisé la couleur des empires, vous ne pouvez plus accepter d'invitations dans cet empire.";
+
+"All Combat Zone rankings have been reset.";
+"Tous les classements de la Zone de combat ont été réinitialisés.";
+
+"All curses have been lifted.";
+"Toutes les malédictions sont levées.";
+
+"All group members have been turned to stone. Mission failed.";
+"Tous les membres sont transformés en pierre. La mission a échoué.";
+
+"All group members must be located on the same map to enter.";
+"Tous les membres du groupe doivent se trouver sur la même carte pour entrer.";
+
+"All levels cleared. You will now be teleported to the bonus level.";
+"Tous les niveaux sont terminés. Vous allez maintenant être téléportés vers le niveau bonus.";
+
+"All of the outposts in %s have been destroyed and the area is no longer under Sung Mahi's control.";
+"Tous les postes avancés de la zone %s ont été détruits et la zone n'est plus sous le contrôle de Sung Mahi.";
+
+"All slots are occupied.";
+"Tous les emplacements sont occupés.";
+
+"An error has occurred. The bonuses could not be changed.";
+"Une erreur s'est produite. La modification des bonus a échoué.";
+
+"An event is running and you will receive double points.";
+"Un évènement est en cours et vous octroie le double de points.";
+
+"Ask Sam Pumpkin if you've earned a reward.";
+"Réclamez votre récompense à Sam Citrouille.";
+
+"Battle Royale";
+"Battle Royale";
+
+"Battle Royale Combat Reward. Killed %d opponents or more";
+"Récompense de combat Battle Royale %d ennemis éliminés ou plus";
+
+"Battle Royale Game Reward. Rank: %d";
+"Récompense de jeu Battle Royale Rang : %d";
+
+"Battle Royale General Reward.";
+"Récompense générale de Battle Royale";
+
+"Battle Royale Season Reward. Season rank: %d";
+"Récompense saisonnière de Battle Royale Rang de saison : %d";
+
+"Battle Royale participants status: (%u/%u)";
+"Statut de participant à la Battle Royale : (%u/%u)";
+
+"Battle not started. Dungeon closed.";
+"La bataille n'a pas encore commencé. Donjon terminé.";
+
+"Bonus level: Destroy Metin stones.";
+"Niveau bonus : détruisez des pierres Metins.";
+
+"Bonus level: Destroy a Metin stone.";
+"Niveau bonus : détruisez une pierre Metin.";
+
+"Bonus level: You have 5 minutes to trade with the merchant and stock up on supplies.";
+"Niveau bonus : vous pouvez maintenant faire le plein de provisions auprès du marchand pendant 5 minutes.";
+
+"Cannot connect to the channel at this time. Please try again later.";
+"Il est actuellement impossible d'établir une connexion avec le canal. Réessayez ultérieurement.";
+
+"Climb the steps of Sung Mahi Tower and enter the next level.";
+"Gravissez les marches de la Tour infernale de Sung Mahi et accédez au niveau suivant.";
+
+"Collect Birch Branches, craft Yut Nori Boards from them and play the exciting minigame.";
+"Collectez des troncs de bouleau pour fabriquer des plateaux de jeu de Yutnori et participez à un minijeu passionnant.";
+
+"Comb through the areas and eliminate them. Gather hit points and exchange them for chests.";
+"Passez ces zones au peigne fin pour les éliminer. Cumulez des points de vie pour les échanger contre des coffres.";
+
+"County Bakra";
+"Comté Bakra";
+
+"County Bokjung";
+"Comté Bokjung";
+
+"County Yayang";
+"Comté Jayang";
+
+"Current participants: %lu";
+"Participants actuels : %lu";
+
+"Daeyami";
+"Daeyami";
+
+"Defeat 5 Zodiac bosses.";
+"Triomphez de 5 boss du zodiaque.";
+
+"Defeat all Zodiac bosses.";
+"Triomphez de tous les boss du zodiaque.";
+
+"Defeat all monsters without dying.";
+"Éliminez tous les monstres sans mourir.";
+
+"Defeat all monsters.";
+"Éliminez tous les monstres.";
+
+"Defeat monsters.";
+"Éliminez des monstres.";
+
+"Defeat the Zodiac boss without dying.";
+"Triomphez du boss du zodiaque sans mourir.";
+
+"Defeat the Zodiac boss.";
+"Triomphez du boss du zodiaque.";
+
+"Deliver equipped weapon skin.";
+"Livrer l'apparence d'arme équipée";
+
+"Delivered Pumpkin Lanterns: %d";
+"Citrouilles-lanternes déposées : %d";
+
+"Destroy Metin stones.";
+"Détruisez des pierres Metins.";
+
+"Destroy a Metin stone. If you are successful, you'll receive a bonus buff.";
+"Détruisez une pierre Metin. Si la mission est une réussite, vous recevrez un bonus.";
+
+"Destroy all Metin stones and defeat the Zodiac boss.";
+"Détruisez toutes les pierres Metin et tuez le boss du zodiaque.";
+
+"Destroy all Metin stones.";
+"Détruisez toutes les pierres Metin.";
+
+"Destroy the right Metin stone!";
+"Détruisez la bonne pierre Metin !";
+
+"Dodge every attack!";
+"Esquivez toutes les attaques !";
+
+"Dong Gwang Plain";
+"Niveau Dongan";
+
+"Doyyumhwan";
+"Doyyumhwan";
+
+"Drag the items into the window.";
+"Glissez les objets dans la fenêtre.";
+
+"Duel of the Seers Prizes";
+"Prix du concours des devins";
+
+"Enchant Item cannot be used on this item.";
+"Cet objet est incompatible avec la fonction d'objet enchanté.";
+
+"Enchanted Forest";
+"Forêt enchantée";
+
+"Enough Pumpkin Lanterns have been collected.";
+"Un nombre suffisant de Citrouilles-lanternes a été collecté.";
+
+"Entering the Combat Zone in %d seconds.";
+"%d secondes avant l'accès à la Zone de combat.";
+
+"Experience has increased to %d points.";
+"L'expérience est passée à %d points.";
+
+"Failed!";
+"Fusion ratée !";
+
+"Failure! The %s effect was not activated.";
+"Échec ! L'effet du %s n'a pas été activé.";
+
+"Failure! The absorption rate was reduced by 1%.";
+"Échec ! Le taux d'absorption diminue de 1 %.";
+
+"Failure! The attempt to change to the %s effect failed.";
+"Échec ! Le remplacement par l'effet du %s a échoué.";
+
+"Failure! The attempt to upgrade the %s effect to level %d failed.";
+"Échec ! L'amélioration de l'effet du %s pour atteindre le niveau %d a échoué.";
+
+"Fantastic prizes await!";
+"De formidables prix vous attendent !";
+
+"Final";
+"Finale";
+
+"Find a Sealstone to break the seal!";
+"Trouvez une pierre de sceau pour ôter le sceau !";
+
+"Find the right key to escape!";
+"Trouvez la bonne clé pour vous évader !";
+
+"First level cleared. Return to Monk Milbon.";
+"1er niveau terminé. Retournez voir le moine Milbon.";
+
+"Gautama Cliff";
+"Falaise de Gautama";
+
+"Go and talk to Sam Pumpkin!";
+"Allez parler à Sam Citrouille !";
+
+"Go to the Yut Nori Table to collect your reward.";
+"Rejoignez la table de Yutnori pour obtenir votre récompense.";
+
+"Grotto of Exile";
+"Grotte de l'Exil";
+
+"Grotto of Exile 2";
+"Grotte de l'Exil 2";
+
+"Guild [%s]! The final objective has appeared. Destroy all objectives to win this war!";
+"Guilde [%s] ! La cible ultime vient de s'afficher. Détruisez toutes les cibles et remportez ce combat !";
+
+"Hurry! You have %d minutes to travel through the portal to reach the mainland.";
+"Dépêchez-vous ! Vous avez %d minutes pour accéder à la terre ferme en utilisant le portail.";
+
+"Hwang Temple";
+"Temple de Hwang";
+
+"If you don't start the sea battle within 1 minute, you will have to leave the ship.";
+"Si vous ne lancez pas la bataille navale dans un délai de 1 minute, vous devrez quitter le navire.";
+
+"If you want to change weapons, you must remove the weapon skin first.";
+"Si vous souhaitez changer d'arme, vous devez d'abord retirer l'apparence d'arme.";
+
+"Imha";
+"Imha";
+
+"In 15 sec. everyone who gave an incorrect answer will be removed.";
+"Dans 15 secondes, les participants ayant mal répondu à la question devront partir.";
+
+"Insufficient space in your inventory. The reward will be sent to your mailbox.";
+"Pas assez de place dans l'inventaire. La récompense est envoyée dans votre boîte aux lettres.";
+
+"Items can only be traded on the same map.";
+"Des objets peuvent être échangés uniquement sur une même carte.";
+
+"Joan";
+"Joan";
+
+"Jungrang";
+"Jungrang";
+
+"Kill a pair of monsters that don't belong together!";
+"Éliminez une paire de monstres qui ne vont pas ensemble !";
+
+"Kill all the monsters within the time limit!";
+"Éliminez tous les monstres dans les temps impartis !";
+
+"Kuahlo Dong (Spiders Dungeon)";
+"Kuahlo Dong (Donjon des Araignées)";
+
+"Land sighted! You have successfully protected the mast and reached the new continent after a long and weary journey. Continue to the portal.";
+"Terre ! Vous avez réussi à défendre le mât et avez atteint le nouveau continent après un long périple. Continuez jusqu'au portail.";
+
+"Leaving the Combat Zone in %d seconds.";
+"%d secondes avant de quitter la Zone de combat.";
+
+"Loot for completing Sung Mahi Tower";
+"Butin de fin de la Tour infernale de Sung Mahi";
+
+"Magic penetration of %d%%.";
+"Effet anti-magie de %d%%.";
+
+"Make sure you have enough space in your inventory before you go fishing.";
+"Vérifiez la place disponible dans votre inventaire avant de partir à la pêche.";
+
+"Maximum absorption rate reached.";
+"Le taux d'absorption maximal est atteint.";
+
+"Maximum guild level reached. No more donations possible.";
+"Niveau de guilde maximal atteint. Le don n'est plus possible.";
+
+"Miryang";
+"Miryang";
+
+"Mission complete. As soon as the group leader hits the button, you will be teleported directly to level %d.";
+"Mission terminée. Dès que le chef de groupe appuie sur le bouton « Passer », vous serez immédiatement téléportés vers le niveau %d.";
+
+"Monsters have appeared in the Valley of Seungryong, Mount Sohan, Doyyumhwan and in the Yongbi Desert!";
+"Des monstres apparaissent dans la vallée de Seungryong, sur le mont Sohan, au Doyyumhwan et dans le désert Yongbi !";
+
+"Mount Sohan";
+"Mont Sohan";
+
+"Mr B and the boss monsters disappear in %d minute(s).";
+"Monsieur Lapin et les boss vont disparaître dans %d minute(s).";
+
+"Nam Gwang Chasm";
+"Abîme Namgan";
+
+"Nephrite Bay";
+"Baie de Néphrite";
+
+"New absorption rate: %d";
+"Nouveau taux d'absorption : %d";
+
+"Next entry available in %d minute(s).";
+"Un nouvel accès est possible dans %d minute(s).";
+
+"Next entry available in %d second(s).";
+"Un nouvel accès est possible dans %d seconde(s).";
+
+"No guilds have registered for the territory auction.";
+"Aucune guilde ne s'est inscrite pour la vente aux enchères de terrain.";
+
+"No lease needs to be paid.";
+"Vous n'avez pas de bail à payer.";
+
+"No winner";
+"Aucun vainqueur";
+
+"Not possible while transferring bonuses.";
+"Cette action est impossible pendant le transfert de bonus.";
+
+"O ÀÔ´Ï´Ù";
+"Oui (O)";
+
+"OX ¹®Á¦ ½ºÅ©¸³Æ® ·Îµù ¼º°ø";
+"Le script OX Quiz a été chargé.";
+
+"OX ¹®Á¦ ½ºÅ©¸³Æ® ·Îµù ½ÇÆĞ";
+"Le script OX Quiz n'a pas pu être chargé.";
+
+"OX »óÇ°À» Áö±ŞÇÏ¿´½À´Ï´Ù. ID: %d ¼ö·®: %d";
+"OX Le prix a été remis : %d, %d unité.";
+
+"OX ÀÌº¥Æ®°¡ ½ÃÀÛµÇ¾ú½À´Ï´Ù.";
+"OX L'évènement a commencé.";
+
+"OX ÀÌº¥Æ®°¡ ÀÌ¹Ì ÁøÇàÁßÀÔ´Ï´Ù(flag: %d)";
+"L'évènement est déjà en cours. (Flag: %d).";
+
+"OX ÀÌº¥Æ®¸¦ ¸¶Ä¡°Ù½À´Ï´Ù.";
+"L'évènement OX est terminé.";
+
+"OXÀÌº¥Æ® ¸ÊÀ» ¸ÕÀú ´İ¾Æ ÁÖ¼¼¿ä.(Flag: %d)";
+"Fermez tout d'abord la carte d'évènement OX. (Flag: %d).";
+
+"OXÀÌº¥Æ®°¡ ´İÈ÷Áö ¾Ê¾Ò°Å³ª, ÄûÁî ÃâÁ¦ÁßÀÔ´Ï´Ù.(flag: %d)";
+"OX L'évènement n'est pas encore terminée. Une erreur s'est produite. (Flag: %d).";
+
+"OXÀÌº¥Æ®°¡ ¿­·Á ÀÖÁö ¾Ê°Å³ª ¹®Á¦ ÃâÁ¦ÁßÀÔ´Ï´Ù.(Flag: %d)";
+"OX L'évènement est terminé. Aucune erreur ne s'est produite. (Flag : %d).";
+
+"OXÀÌº¥Æ®¸¦ °­Á¦ Á¾·á ½ÃÅµ´Ï´Ù.";
+"L'évènement OX est terminé.";
+
+"OXÀÌº¥Æ®ÀÇ ³ª¸ÓÁö ÀÎ¿ø ±â·ÏÀ» ½ÇÆĞÇß½À´Ï´Ù.";
+"OX Les autres participants à l'animation ont été notés.";
+
+"OXÀÌº¥Æ®ÀÇ ³ª¸ÓÁö ÀÎ¿øÀ» ±â·ÏÇÏ¿´½À´Ï´Ù.";
+"OX Les autres participants à l'animation ont été notés.";
+
+"Only guilds of level %d or higher can register.";
+"Seule une guilde de niveau %d ou supérieur peut s'inscrire.";
+
+"Only the guild leader can register for the territory auction.";
+"Seul le chef de guilde peut s'inscrire aux ventes aux enchères de terrain.";
+
+"Only the guild leader or a member with bank access can pay the lease.";
+"Seul le chef de la guilde ou un membre ayant accès à la banque peut payer le bail.";
+
+"Partial success! The absorption rate was reduced by 1%.";
+"Réussite partielle ! Le taux d'absorption diminue de 1 %.";
+
+"Participants: %s";
+"Participants : %s";
+
+"Perfect! You have attached the Spirit Stone successfully and you even receive a double stat bonus.";
+"Parfait ! Cette Pierre d'esprit a été liée avec succès et vous obtenez même le double de bonus de valeur.";
+
+"Please close all other windows to open your mailbox.";
+"Fermez toutes les autres fenêtres avant d'ouvrir votre boîte aux lettres.";
+
+"Please empty your mailbox to be able to receive new messages.";
+"Videz votre boîte aux lettres pour recevoir d'autres messages.";
+
+"Please enter another name.";
+"Veuillez entrer un autre nom.";
+
+"Please remove the equipped Dragon Stone before using this item.";
+"Avant d'utiliser cet objet, vérifie que tu as bien retiré la pierre-dragon équipée.";
+
+"Please try again later.";
+"Merci de réessayer plus tard.";
+
+"Please wait a moment. Changing channel...";
+"Merci de patienter quelques instants. Le changement de canal est en cours.";
+
+"PvP Tournament";
+"Tournoi JcJ";
+
+"Pyungmoo";
+"Pyungmoo";
+
+"Receive: %s - %d";
+"Obtenez : %s - %d";
+
+"Red Forest";
+"Bois rouge";
+
+"Registration for the Battle Royale has been closed.";
+"L'inscription à la Battle Royale est terminée.";
+
+"Registration for the PvP tournament complete.";
+"L'inscription au tournoi JcJ est désormais clôturée.";
+
+"Reinforce Item cannot be used on this item.";
+"Cet objet est incompatible avec la fonction d'objet de renforcement.";
+
+"Remaining number: %d";
+"Nombre restant : %d";
+
+"Remaining participants: %lu";
+"Participants restants : %lu";
+
+"Remaining time: %.2f | Fish difficulty: %lu | Difficulty reduction: %d";
+"Temps restant : %.2f | Niveau de difficulté du poisson : %lu | Réduction du niveau de difficulté : %d";
+
+"Remove %s from your friends list to continue.";
+"Pour poursuivre, supprimez %s de votre liste d'amis.";
+
+"Reward";
+"Récompense";
+
+"Reward for Ritual of Blood";
+"Récompense du rituel sanglant";
+
+"Reward for rank %d";
+"Récompense pour le rang %d";
+
+"Reward for winning a round";
+"Récompense pour victoire (partie)";
+
+"Reward for winning a tournament";
+"Récompense pour victoire (tournoi)";
+
+"Round %d is starting";
+"Début de la partie %d";
+
+"Round %lu";
+"%lu. Parties";
+
+"SOS! The mast has been smashed and your ship is sinking. You will now be teleported to Cape Dragon Fire.";
+"Sauve qui peut ! Le mât est détruit et votre bateau coule ! Vous allez maintenant être téléporté au Cap du Feu dragonesque.";
+
+"Sadly you were unable to stop the Apocalypse. You will be teleported back to the Zodiac Temple shortly.";
+"Malheureusement, vous n'êtes pas venu à bout de l'apocalypse. Vous serez téléporté au Temple du zodiaque dans un instant.";
+
+"Safe zone has now been deactivated.";
+"La zone de sécurité est désactivée.";
+
+"Seasonal Sung Mahi Tower Reward";
+"Récompense de saison de la Tour infernale";
+
+"Seasonal reward for 1st place on level %d in Sung Mahi Tower.";
+"Récompense de saison pour la 1re place au niveau %d de la Tour infernale.";
+
+"Semifinal";
+"Demi-finale";
+
+"Seo Gwang Wastelands";
+"Désert Seogan";
+
+"Snakefield";
+"Grande Vallée";
+
+"Songpa";
+"Songpa";
+
+"Spider Dungeon 2";
+"Donjon des araignées 2";
+
+"Success!";
+"Fusion réussie !";
+
+"Success! The %s effect has been increased to level %d.";
+"Succès ! L'effet du %s est passé au niveau supérieur %d.";
+
+"Success! The %s effect is now active.";
+"Succès ! Dès maintenant, l'effet du %s est actif.";
+
+"Success! The bonus was transferred successfully.";
+"Réussite totale ! Le bonus a été transféré comme vous le souhaitiez.";
+
+"Sung Mahi Tower Level %d";
+"Tour infernale : niveau %d";
+
+"Sung Mahi's outposts are being erected.";
+"Les postes avancés de Sung Mahi sont en cours d'établissement.";
+
+"Sung Mahi's outposts have been destroyed.";
+"Les postes avancés de Sung Mahi ont été démolis.";
+
+"TEST : ÇöÀç ±¹°í : %d";
+"TEST: Dans les coffres de votre empire, il y a : %d";
+
+"TEST : È²±İµÎ²¨ºñ°¡ ±¹°í·Î È¯¿øµÇ¾ú½À´Ï´Ù.";
+"TEST: L'argent a été versé à la sécurité de l'Empire.";
+
+"TEST : È²±İµÎ²¨ºñ¸¦ ±¹°í·Î È¯¿øÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"TEST: Vous ne pouvez pas payer les millions pour la sécurité de votre empire.";
+
+"Taxes are set to %d%%.";
+"Les taxes sont fixées à %d %%.";
+
+"Teleportation to the Plateau of Primal Forces has failed.";
+"La téléportation au Plateau primal a échoué.";
+
+"Thanks to the immunity blessing, you are not influenced by Sung Mahi's Presence.";
+"Grâce à la bénédiction d'immunité, vous n'êtes plus affecté par l'influence de Sung Mahi.";
+
+"The %s guild has purchased the territory in the %s area at %d,%d for %d Won.";
+"La guilde %s a fait l'acquisition, dans la zone %s, du terrain %d, %d en échange de %d Wons.";
+
+"The 'Ship Defence' dungeon is ready. The fisherman will let you board now.";
+"Le donjon « Défense du navire » est prêt. Le pêcheur va vous laisser monter à bord.";
+
+"The Altar of Blood has appeared.";
+"L'Autel sanglant est apparu.";
+
+"The Anniversary Event ends in %d minute(s).";
+"L'évènement de l'anniversaire prend fin dans %d minute(s).";
+
+"The Anniversary Event has started!";
+"L'évènement de l'anniversaire a commencé !";
+
+"The Battle Royale cannot begin, because there are too few participants.";
+"La Battle Royale ne peut pas commencer, car il n'y a pas assez de participants.";
+
+"The Battle Royale ends in %d seconds.";
+"La Battle Royale prend fin dans %d secondes.";
+
+"The Battle Royale has begun!!";
+"La Battle Royale a commencé !!!";
+
+"The Battle Royale has begun. The first area will be shown in %d seconds.";
+"La Battle Royale a commencé. La première zone s'affichera dans %d secondes.";
+
+"The Battle Royale has ended!!";
+"La Battle Royale est terminée !!!";
+
+"The Battle of the Five Shrines ends in %d minute(s).";
+"La Bataille des cinq sanctuaires se termine dans %d minutes.";
+
+"The Battle of the Five Shrines has begun! It will last %d days.";
+"La Bataille des cinq sanctuaires a commencé ! Elle durera %d jours";
+
+"The Battle of the Five Shrines is over. The next battle starts in %d hour(s).";
+"La Bataille des cinq sanctuaires a commencé ! La prochaine bataille démarre dans %d heures.";
+
+"The Boss Reaper Event ends in %d minute(s).";
+"L'évènement du chasseur de boss va prendre fin dans %d minute(s).";
+
+"The Combat Zone has been updated. It will be closed off in %d seconds.";
+"La Zone de combat a été actualisée. Elle se réduira dans %d secondes.";
+
+"The Combat Zone is now closed.";
+"La Zone de combat est fermée.";
+
+"The Combat Zone is now open.";
+"La Zone de combat est ouverte.";
+
+"The Combat Zone will be closed off in %d seconds.";
+"La Zone de combat est réduite pendant %d secondes.";
+
+"The Combat Zone will close in %d minute(s).";
+"La Zone de combat fermera dans %d minute(s).";
+
+"The Combat Zone will open in %d minute(s).";
+"La Zone de combat s'ouvrira dans %d minute(s).";
+
+"The Compass was used, but the Guard wasn’t found.";
+"Le compas a servi, mais le garde reste introuvable.";
+
+"The Flower Power Event has ended.";
+"L'évènement saison florale s'est terminé.";
+
+"The Flower Power Event has started.";
+"L'évènement saison florale a commencé.";
+
+"The Halloween Event has begun!";
+"L'évènement d'Halloween commence !";
+
+"The Halloween Event has finished. Don't forget to collect your rewards!";
+"L'évènement d'Halloween se termine. N'oubliez pas de récupérer vos récompenses !";
+
+"The Okey Event has started!";
+"L'évènement Okey commence !";
+
+"The Okey Event is over!";
+"L'évènement Okey est terminé !";
+
+"The PvP tournament is over.";
+"Le tournoi JcJ est terminé.";
+
+"The PvP tournament starts in %d min.";
+"Le tournoi JcJ commence dans %d min.";
+
+"The Ramadan Event has started!";
+"L'évènement du Ramadan commence !";
+
+"The Ramadan Event is over.";
+"L'évènement du Ramadan est terminé.";
+
+"The Ritual Stone only works with items above level 80.";
+"La pierre rituelle ne fonctionne que sur des objets de niveau supérieur à 80.";
+
+"The Ritual of Blood has started. Buy special items to get better rewards.";
+"Le rituel sanglant commence. Procurez-vous des objets spéciaux pour obtenir de meilleures récompenses.";
+
+"The Ritual of Blood is over. Try again another time.";
+"Le rituel sanglant est terminé. Réessayez une autre fois.";
+
+"The Tower Action has been activated.";
+"L'action de la Tour infernale a été activée.";
+
+"The Zodiac Apocalypse has already started.";
+"L'apocalypse du zodiaque a déjà commencé.";
+
+"The Zodiac Apocalypse is not currently active.";
+"L'apocalypse du zodiaque n'a pas lieu pour le moment.";
+
+"The answer will appear in 20 seconds.";
+"La réponse apparaîtra dans 20 secondes.";
+
+"The battle has been terminated as a result of an unexpected issue.";
+"La bataille a été interrompue à cause d'un problème inattendu.";
+
+"The battle has begun.";
+"La bataille a commencé.";
+
+"The battle starts in %d seconds.";
+"Le combat commence dans %d secondes.";
+
+"The boss has been defeated! You will be teleported back to the Zodiac Temple shortly.";
+"Le boss a été vaincu ! Vous serez téléporté au Temple du zodiaque dans un instant.";
+
+"The countdown has begun. The Battle Royale starts in %d seconds.";
+"Le compte à rebours a commencé. La Battle Royale commence dans %d secondes.";
+
+"The dungeon will be closed if you do not start the battle within %d minute(s).";
+"Le donjon va se fermer si vous ne commencez pas la bataille dans %d minutes.";
+
+"The electrical field has stopped. The next Combat Zone will be shown in %d seconds.";
+"Le champ électrique s'est arrêté. La prochaine Zone de combat s'affichera dans %d secondes.";
+
+"The event has ended as none of the kingdoms entered.";
+"L'évènement est terminé, car aucun empire n'a souhaité y participer";
+
+"The event has started!";
+"L'évènement a commencé !";
+
+"The event in the Combat Zone has finished.";
+"L'évènement de la Zone de combat est terminé.";
+
+"The event is not currently active.";
+"L'évènement n'est pas en cours.";
+
+"The event is over. You cannot use this item any more.";
+"L'évènement est terminé. Vous ne pouvez plus utiliser cet objet.";
+
+"The group members are too far away to receive the item.";
+"Les membres du groupe sont trop éloignés pour obtenir l'objet.";
+
+"The guild does not have enough Yang.";
+"La guilde n'a pas suffisamment de Yangs.";
+
+"The guild war declaration expires in 3 minutes.";
+"La déclaration de guerre de guilde expire dans 3 minutes.";
+
+"The interface cannot be opened while you are mounted.";
+"Impossible d'ouvrir l'IU quand vous êtes sur une monture.";
+
+"The lease for the guild territory wasn't paid. The guild territory has been abandoned.";
+"Le bail pour le terrain de guilde n'a pas été réglé. Le terrain de guilde a été abandonné.";
+
+"The loot from Sung Mahi Tower has been sent to your mailbox.";
+"Le butin de la Tour infernale de Sung Mahi a été remis dans votre boîte aux lettres.";
+
+"The maximum bid is %d Won.";
+"L'offre maximale est de %d Wons.";
+
+"The maximum level has already been reached.";
+"Le niveau maximum a déjà été atteint.";
+
+"The mission was unsuccessful.";
+"La mission a échoué.";
+
+"The monster from the current event has appeared.";
+"Le monstre de l'évènement actuel a fait son apparition.";
+
+"The name entered is too short.";
+"Le nom entré est trop court.";
+
+"The next wave begins in %d sec.";
+"La vague suivante commence dans %d secondes.";
+
+"The other person is currently busy so you cannot trade right now.";
+"Vous ne pouvez pas échanger avec ce joueur, car il est déjà occupé.";
+
+"The pet's level cannot be higher than the player's.";
+"Le niveau du familier ne peut pas dépasser celui du joueur.";
+
+"The player cannot accept your invitation at this time.";
+"Ce joueur ne peut pas accepter votre invitation pour le moment.";
+
+"The portal to the next level is open.";
+"Le portail vers le prochain niveau est ouvert.";
+
+"The portal to the next room is open.";
+"Le portail menant vers la salle suivante est ouvert.";
+
+"The reward from the Duel of the Seers will be delivered by post since your inventory was full.";
+"La récompense pour le concours des devins vous a été envoyée par la poste, car votre inventaire était plein.";
+
+"The sash cannot take on any further bonuses.";
+"L'étole ne peut pas absorber de bonus supplémentaires.";
+
+"The sea battle starts in %d sec.";
+"La bataille navale commence dans %d secondes.";
+
+"The soulbind on this item is already in the process of being removed.";
+"Cet objet est déjà en phase de séparation de l'âme.";
+
+"The summer event has started. Visit Summer in town. She'll give you some tasty refreshments.";
+"L'évènement d'été commence. Allez voir Summer en ville. Elle vous offrira des rafraîchissements savoureux.";
+
+"The summer event will end soon. Summer will keep the towns supplied with tasty refreshments for 7 more days.";
+"L'évènement d'été se termine bientôt. Summer offre des rafraîchissements savoureux dans les villes pendant 7 jours encore.";
+
+"The time to enter the Dragon Portal has expired.";
+"Le moment d'entrer dans le portail dragon est passé.";
+
+"The window is already open.";
+"La fenêtre est déjà ouverte.";
+
+"There are %d Zodiac Temple(s) in the area. Enter the relevant command to teleport to one of them (1-%d).";
+"On trouve %d Temples du zodiaque dans les environs. Donnez l'ordre qui convient pour vous téléporter dans l'un d'entre eux (1 - %d).";
+
+"There are no items matching your search.";
+"Aucun objet ne correspond à votre recherche.";
+
+"There are no more Combat Zones. The whole area will be closed off in %d seconds.";
+"Il n'y a plus d'autre Zone de combat. La zone dans son ensemble sera réduite dans %d secondes.";
+
+"There are no territory auctions right now.";
+"Il n'y a aucune vente aux enchères de terrain en cours.";
+
+"There is no Zodiac Temple on this map.";
+"Il n'y a pas de Temple du zodiaque sur cette carte.";
+
+"There's nothing to collect.";
+"Il n'y a rien à récupérer.";
+
+"These sashes cannot be combined.";
+"Ces étoles ne peuvent pas être fusionnées.";
+
+"They're attacking again! Ready your weapons!";
+"Ils attaquent à nouveau ! Soyez prêts à combattre !";
+
+"This action is not possible on this map.";
+"Impossible de réaliser cette action sur cette carte.";
+
+"This cannot be used on equipped items.";
+"Vous ne pouvez pas l'utiliser sur des objets équipés.";
+
+"This character isn't available to duel.";
+"Ce personnage n'est pas disponible pour un duel.";
+
+"This command can only be used in the Zodiac Temple.";
+"Cette commande ne s'exécute que dans le Temple du zodiaque.";
+
+"This command can only be used on the PvP tournament map.";
+"Cette commande ne s'exécute que sur la carte du tournoi JcJ.";
+
+"This effect is already active.";
+"Cet effet est déjà en cours.";
+
+"This function is unavailable as hacking software has been detected.";
+"Cette fonction n'est pas disponible, car un programme de hacking a été trouvé.";
+
+"This guild does not exist.";
+"Cette guilde n'existe pas.";
+
+"This has already been customised.";
+"Le rang rare est déjà atteint.";
+
+"This is not possible while the other player is transferring bonuses.";
+"C'est impossible pendant que l'autre personne transfère un bonus.";
+
+"This is the winner of the Battle Royale: %s";
+"Voici le gagnant de Battle Royale : %s";
+
+"This item cannot be absorbed.";
+"Cet objet ne peut pas être stocké.";
+
+"This item cannot be transmuted.";
+"Cet objet ne peut pas être transformé.";
+
+"This item is already soulbound.";
+"Cet objet est déjà lié à l'âme.";
+
+"This item is not soulbound.";
+"Cet objet n'est pas lié à l'âme.";
+
+"This item is only available in Meley’s Lair.";
+"Cet objet n'est disponible que dans le Repaire de Meley.";
+
+"This player is already trading with someone else.";
+"Ce joueur fait déjà un échange avec un autre joueur.";
+
+"This temple's gates open on another day.";
+"Les portes de ce temple s'ouvrent sur une nouvelle journée.";
+
+"Thunder Mountains";
+"Montagnes fulgurantes";
+
+"Time remaining to finish first round: %d minutes.";
+"Temps restant pour finir le premier tour : %d minutes.";
+
+"Time remaining to finish second round: %d minutes.";
+"Temps restant pour finir le second tour : %d minutes.";
+
+"Time remaining until safe zone is deactivated: %d minutes.";
+"Temps restant avant la désactivation de la zone de sécurité : %d minutes.";
+
+"Time's up.";
+"Le temps est écoulé.";
+
+"Time's up. Better luck next time.";
+"Le temps est écoulé. Retentez votre chance la prochaine fois.";
+
+"Time's up. First round over.";
+"Temps écoulé. Fin du premier tour.";
+
+"Time's up. Second round over.";
+"Temps écoulé. Fin du second tour.";
+
+"Time's up. You're being taken outside.";
+"Le temps est écoulé. Vous êtes amené à l'extérieur.";
+
+"To determine a pet's destiny you need a Pet Destiny Orb.";
+"Pour identifier un familier, il vous faut un orbe d'identification de familier.";
+
+"Total %d: You can still unpack %d.";
+"Tu peux encore déballer %d sur %d.";
+
+"Total Pumpkin Lanterns: %d";
+"Total de Citrouilles-lanternes : %d";
+
+"Unblock %s to continue.";
+"Débloquez %s pour continuer.";
+
+"Unfortunately you don't have enough space in your inventory.";
+"Vous n'avez malheureusement pas assez de place dans votre inventaire.";
+
+"Unlucky, there was no treasure in the fish's belly.";
+"Vous partez bredouille. Aucun trésor ne se trouvait dans le ventre du poisson.";
+
+"Unpack the next gift in %d minutes.";
+"Tu pourras déballer le prochain cadeau dans %d minutes.";
+
+"Upgrade change failed.";
+"Le changement d'amélioration a échoué.";
+
+"Valley of Seungryong";
+"Vallée de Seungryong";
+
+"Visit %s to collect your reward.";
+"Allez voir %s pour obtenir votre récompense.";
+
+"Waryong";
+"Waryong";
+
+"Wave %d: For %d sec. you must protect the %s with all your strength.";
+"%d. Vague : pendant %d secondes, vous devez défendre le %s de toutes vos forces.";
+
+"Wave %d: While protecting the %s, defeat %s.";
+"%d. Vague : pendant que vous défendez le %s, vous devez vaincre %s.";
+
+"We're under attack from sea monsters! Get ready to fight!";
+"Des monstres marins nous attaquent ! Préparez-vous au combat !";
+
+"We've slain the boss!";
+"Nous avons éliminé le boss !";
+
+"Well done! For reaching rank %d in the Combat Zone rankings, you will be rewarded a special accolade.";
+"Splendide ! Vous avez atteint la %de place du classement de la Zone de combat. En conséquence, vous recevez cette distinction spéciale.";
+
+"While modifying your pet's stats, you cannot trade, sell items, use the storeroom etc.";
+"Pendant que vous modifiez les statistiques de votre familier, vous ne pouvez ni commercer, ni vendre des objets, ni utiliser l'entrepôt, ou actions similaires.";
+
+"Winner: %s / Loser: %s";
+"Gagnant : %s/perdant : %s";
+
+"Wipe out! If no one is revived within one minute, your dungeon adventure will be over.";
+"Temps écoulé ! Le temps à passer dans le donjon est écoulé si personne ne ressuscite dans la minute qui suit.";
+
+"X ÀÔ´Ï´Ù";
+"Non (X)";
+
+"Yongan";
+"Yongan";
+
+"Yongbi Desert";
+"Désert de Yongbi";
+
+"You already have the maximum amount of Won.";
+"Vous avez déjà le montant maximal en Wons.";
+
+"You are entering the Combat Zone. Please wait.";
+"Vous rejoignez la Zone de combat. Veuillez patienter.";
+
+"You are facing level %d.";
+"Tu relèves le défi du niveau %d.";
+
+"You are leaving the Combat Zone. Please wait.";
+"Vous quittez la Zone de combat. Veuillez patienter.";
+
+"You are not a member of any guild.";
+"Vous n'êtes membre d'aucune guilde.";
+
+"You are not cursed.";
+"Vous ne subissez aucune malédiction.";
+
+"You are not the group leader.";
+"Vous n'êtes pas le chef d'un groupe.";
+
+"You attacked the wrong monster. Kill all the monsters!";
+"Vous avez attaqué le mauvais monstre. Éliminez tous les monstres !";
+
+"You can get back the Won you bid from the guard in the village.";
+"Vous pouvez récupérer les Wons que vous avez investis auprès du garde dans le village.";
+
+"You can learn this after reaching the Champion Level.";
+"Vous pouvez l'apprendre après avoir atteint un niveau de champion.";
+
+"You can now wear gloves.";
+"Vous pouvez désormais porter des gants.";
+
+"You can only bid if you have been a member of the guild for more than 24 hours.";
+"Vous ne pouvez enchérir que si vous appartenez à la guilde depuis plus de 24 heures.";
+
+"You can only discard the belt when there are no longer any items in its inventory.";
+"Vous ne pouvez retirer votre ceinture qu'une fois son inventaire vidé.";
+
+"You can only receive your prize once you have made space in your inventory.";
+"Vous pourrez obtenir votre prix une fois qu'il y aura de la place dans votre inventaire.";
+
+"You can only use Shoulder Sashes as well as weapons and armour pieces.";
+"Vous pouvez uniquement utiliser des étoles ainsi que des armes et armures.";
+
+"You can only use Shoulder Sashes.";
+"Vous pouvez uniquement utiliser des étoles.";
+
+"You can only use this item during the current event.";
+"Cet objet est uniquement valable pendant l'évènement en cours.";
+
+"You can only withdraw from the battle in %d sec.";
+"Vous ne pouvez pas vous retirer des combats avant %d secondes.";
+
+"You can open it 3 seconds after closing the menu for modifying pet stats.";
+"Vous pouvez l'ouvrir 3 secondes après avoir fermé la fenêtre de transformation des statistiques de familier.";
+
+"You can take back the Won you bid.";
+"Vous pouvez récupérer les Wons que vous avez investis.";
+
+"You can use a maximum of 200 ingredients at once.";
+"Vous ne pouvez utiliser que 200 ingrédients au maximum en une seule fois.";
+
+"You cannot bind this item to your soul.";
+"Vous ne pouvez pas lier cet objet à votre âme.";
+
+"You cannot block your spouse.";
+"Vous ne pouvez pas bloquer votre époux.";
+
+"You cannot cancel this on the Battle Royale server.";
+"Vous ne pouvez pas l'interrompre sur le serveur Battle Royale.";
+
+"You cannot carry out this action at the moment.";
+"Vous ne pouvez pas exécuter cette action pour le moment.";
+
+"You cannot carry out this action while fishing.";
+"Vous ne pouvez pas effectuer cette action pendant que vous pêchez.";
+
+"You cannot carry out this action while the Shoulder Sash bonus transfer window is open.";
+"Vous ne pouvez pas effectuer cette action tant que la fenêtre de transfert de bonus d'étoles est ouverte.";
+
+"You cannot carry out this action while the bonus transfer window is open.";
+"Vous ne pouvez pas effectuer cette action tant que la fenêtre de transfert de bonus est ouverte.";
+
+"You cannot carry out this action while the window for combining or absorbing Shoulder Sashes is open.";
+"Vous ne pouvez pas effectuer cette action tant que la fenêtre de combinaison ou d'absorption d'étoles est ouverte.";
+
+"You cannot change channel.";
+"Vous ne pouvez pas changer de canal.";
+
+"You cannot change the attributes of a soulbound item.";
+"Vous ne pouvez pas modifier les propriétés d'un objet lié à l'âme.";
+
+"You cannot claim an achievement right now.";
+"Actuellement, vous ne pouvez pas revendiquer d'exploit.";
+
+"You cannot declare a guild war here.";
+"Vous ne pouvez pas déclarer une guerre de guilde ici.";
+
+"You cannot declare wars in the Combat Zone.";
+"Vous ne pouvez pas déclarer la guerre depuis la Zone de combat.";
+
+"You cannot discard cards when you have already selected some.";
+"Vous ne pouvez pas vous défausser de cartes quand vous avez sélectionné des cartes.";
+
+"You cannot do that during a Battle Royale.";
+"Vous ne pouvez pas le faire pendant une Battle Royale.";
+
+"You cannot do that while the territory auction is ongoing.";
+"Vous ne pouvez pas faire cela tant que la vente aux enchères de terrain est en cours.";
+
+"You cannot do this while the item is equipped.";
+"Vous ne pouvez pas effectuer cette action tant que l'objet est équipé.";
+
+"You cannot do this whilst carrying out another action.";
+"Vous ne pouvez pas faire cela pendant que vous effectuez une autre action.";
+
+"You cannot do this whilst performing another action.";
+"Vous ne pouvez pas faire cela pendant que vous effectuez une autre action.";
+
+"You cannot do this whilst playing okey.";
+"Vous ne pouvez pas effectuer cette action pendant que vous jouez à Okey.";
+
+"You cannot do this with a user of hacking software.";
+"Vous pouvez faire cela avec l'utilisateur d'un programme de hacking.";
+
+"You cannot donate while your pet is summoned.";
+"Vous ne pouvez pas faire de donation quand votre familier est appelé.";
+
+"You cannot draw any more cards when you have already selected some.";
+"Vous ne pouvez pas piocher de carte quand vous avez sélectionné des cartes.";
+
+"You cannot draw any more cards.";
+"Vous ne pouvez pas piocher de carte supplémentaire.";
+
+"You cannot drop a soulbound item.";
+"Vous ne pouvez pas abandonner un objet lié à l'âme.";
+
+"You cannot drop items during the bonus transfer.";
+"Pendant le transfert de bonus, vous ne pouvez pas abandonner d'objets.";
+
+"You cannot drop items while modifying your pet's stats.";
+"Pendant que vous modifiez les statistiques de votre familier, vous ne pouvez abandonner aucun objet.";
+
+"You cannot drop items while the Fortune Chest is open.";
+"Vous ne pouvez pas lâcher d'objet tant que votre coffret bonne fortune est ouvert.";
+
+"You cannot enter the Combat Zone at the moment.";
+"Impossible d'accéder à la Zone de combat pour le moment.";
+
+"You cannot enter the Combat Zone from this map.";
+"Vous ne pouvez malheureusement pas accéder à la Zone de combat depuis cette carte.";
+
+"You cannot enter the PvP tournament combat arena.";
+"Vous ne pouvez pas entrer dans l'arène de combat du tournoi JcJ.";
+
+"You cannot enter while you are mounted.";
+"Vous ne pouvez pas entrer tant que vous êtes à cheval sur une monture.";
+
+"You cannot enter, because the countdown has already begun.";
+"Vous ne pouvez pas participer, car le compte à rebours a déjà commencé.";
+
+"You cannot equip this item while wearing a Wedding Dress or a Tuxedo.";
+"Vous ne pouvez pas équiper cet objet lorsque vous portez une robe de mariée ou un smoking.";
+
+"You cannot exchange as this would exceed the maximum amount of Won.";
+"Vous ne pouvez pas effectuer d'échange, car vous n'avez pas assez de Wons.";
+
+"You cannot exchange as this would exceed the maximum amount of Yang.";
+"Vous ne pouvez pas effectuer d'échange, car vous n'avez pas assez de Yangs.";
+
+"You cannot expand your inventory while trading.";
+"Vous ne pouvez pas agrandir l'inventaire pendant que vous échanger.";
+
+"You cannot feed your pet while the refinement window is open.";
+"Vous ne pouvez pas nourrir votre familier quand la fenêtre de raffinage est ouverte.";
+
+"You cannot fish when your pet is hatched.";
+"Vous ne pouvez pas pêcher quand votre familier éclot.";
+
+"You cannot fish while other windows are open.";
+"Vous ne pouvez pas pêcher tant que d'autres fenêtres sont ouvertes.";
+
+"You cannot fish while the pet bonus change window is open.";
+"Vous ne pouvez pas pêcher tant que la fenêtre de modification de bonus de votre familier est ouverte.";
+
+"You cannot fish while your pet is summoned.";
+"Vous ne pouvez pas pêcher tant que votre familier est invoqué.";
+
+"You cannot give away a soulbound item.";
+"Vous ne pouvez pas donner un objet lié à l'âme.";
+
+"You cannot improve a soulbound item.";
+"Vous ne pouvez pas améliorer un objet lié à l'âme.";
+
+"You cannot improve your weapon while your pet is summoned.";
+"Vous ne pouvez pas améliorer votre arme alors que votre familier est appelé.";
+
+"You cannot leave the Combat Zone when you are dead.";
+"Vous ne pouvez pas quitter la Zone de combat en étant mort.";
+
+"You cannot make use of weapon skins while you are wearing a Wedding Dress or a Tuxedo.";
+"Vous ne pouvez pas utiliser d'apparence d'arme lorsque vous portez une robe de mariage ou un smoking.";
+
+"You cannot move items during the bonus transfer.";
+"Pendant le transfert de bonus, vous ne pouvez pas déplacer des objets.";
+
+"You cannot move items while modifying your pet's stats.";
+"Pendant que vous modifiez les statistiques de votre familier, vous ne pouvez déplacer aucun objet.";
+
+"You cannot move items while the Fortune Chest is open.";
+"Vous ne pouvez pas déplacer d'objet tant que votre coffret bonne fortune est ouvert.";
+
+"You cannot move items while the bonus change window is open.";
+"Vous ne pouvez pas déplacer d'objet tant que la fenêtre de modification de bonus est ouverte.";
+
+"You cannot neither trade or move, nor sell, drop or store items while summoning a mount.";
+"Vous ne pouvez ni échanger, ni vous déplacer ou encore vendre, lâcher ou stocker des objets pendant que vous invoquer une monture.";
+
+"You cannot open a private shop while you are trading with others.";
+"Vous ne pouvez pas ouvrir de magasin privé tant que vous échangez avec d'autres personnes.";
+
+"You cannot open a private shop whilst summoning your pet.";
+"Vous ne pouvez pas ouvrir de magasin privé pendant que vous appelez votre familier.";
+
+"You cannot open a private shop, as this would exceed the maximum amount of %d Won.";
+"Vous ne pouvez pas ouvrir de magasin privé, car vous avez dépassé le montant maximal de %d Wons.";
+
+"You cannot open a private shop.";
+"Vous ne pouvez pas ouvrir de magasin privé.";
+
+"You cannot open a shop while you are turned to stone.";
+"Vous ne pouvez pas ouvrir de magasin tant que vous êtes transformé en pierre.";
+
+"You cannot open this chest because you do not have enough space in your inventory.";
+"Vous ne pouvez pas ouvrir le coffre, car vous n'avez pas assez de place dans votre inventaire.";
+
+"You cannot participate in the territory auction on the day the guild is founded.";
+"Vous ne pouvez pas participer à la vente aux enchères au jour de la création de la guilde.";
+
+"You cannot register for that on the Battle Royale server.";
+"Vous ne pouvez pas vous connecter au serveur Battle Royale dans ce but.";
+
+"You cannot register for that on this map.";
+"Vous ne pouvez pas vous y connecter sur cette carte.";
+
+"You cannot ride in this dungeon.";
+"Il n'est pas possible de chevaucher dans ce donjon.";
+
+"You cannot sell a soulbound item.";
+"Vous ne pouvez pas vendre un objet lié à l'âme.";
+
+"You cannot sell items during the bonus transfer.";
+"Pendant le transfert de bonus, vous ne pouvez pas vendre des objets.";
+
+"You cannot sell items you are currently using in a private shop.";
+"Vous ne pouvez pas vendre les objets que vous êtes en train d'utiliser dans un magasin privé.";
+
+"You cannot sell soulbound items in a private shop.";
+"Vous ne pouvez pas vendre un objet lié à l'âme dans un magasin privé.";
+
+"You cannot soulbind items on this server.";
+"Vous ne pouvez lier aucun objet à votre âme sur ce serveur.";
+
+"You cannot speak with an NPC while modifying your pet's stats.";
+"Pendant que vous modifiez les statistiques de votre familier, vous ne pouvez parler à un PNJ.";
+
+"You cannot start a game of okey while trading.";
+"Vous ne pouvez pas débuter de partie Okey pendant que vous marchandez.";
+
+"You cannot summon your mount/pet right now.";
+"Vous ne pouvez pas appeler votre monture/familier pour l'instant.";
+
+"You cannot summon your pet whilst trading.";
+"Vous ne pouvez pas appeler votre familier pendant un échange.";
+
+"You cannot swap this.";
+"Vous ne pouvez pas l'échanger.";
+
+"You cannot take part in the Battle Royale.";
+"Vous ne pouvez pas participer à la Battle Royale à ce moment.";
+
+"You cannot talk to NPCs while the Fortune Chest is open.";
+"Vous ne pouvez pas parler à un PNJ tant que votre coffret bonne fortune est ouvert.";
+
+"You cannot trade while another window is open.";
+"Vous ne pouvez pas effectuer d'échange tant qu'une autre fenêtre est ouverte.";
+
+"You cannot trade while the Fortune Chest is open.";
+"Vous ne pouvez pas échanger d'objet tant que votre coffret bonne fortune est ouvert.";
+
+"You cannot trade while your partner's Fortune Chest is open.";
+"Vous ne pouvez pas échanger d'objet avec quelqu'un d'autre tant que son coffret bonne fortune est ouvert.";
+
+"You cannot trade while your trading partner is modifying their pet's stats.";
+"Pendant que votre partenaire d'échange modifie les statistiques de son familier, vous ne pouvez pas commercer avec lui.";
+
+"You cannot trade whilst summoning your pet.";
+"Vous ne pouvez pas échanger pendant que vous appelez votre familier.";
+
+"You cannot trade whilst your partner is summoning their pet.";
+"Vous ne pouvez pas échanger pendant que votre vis-à-vis appelle son familier.";
+
+"You cannot trade whilst your partner's Incubator is open.";
+"Vous ne pouvez pas échanger quand la couveuse de votre vis-à-vis est ouverte.";
+
+"You cannot trade, because the maximum number of %d Won was exceeded.";
+"Vous ne pouvez pas échanger, car vous avez dépassé le montant maximal de %d Wons.";
+
+"You cannot transfer the bonus as the sashes have different absorption rates.";
+"Vous ne pouvez pas transférer le bonus, car les taux d'absorption sont différents.";
+
+"You cannot transfer the bonus as the sashes have different grades.";
+"Vous ne pouvez pas transférer le bonus, car les rangs des étoles sont différents.";
+
+"You cannot transform at the moment.";
+"Vous ne pouvez pas vous transformer maintenant.";
+
+"You cannot transform during the PvP tournament.";
+"Vous ne pouvez pas vous transformer pendant le tournoi JcJ.";
+
+"You cannot use a Scroll of the Location while the window for the Shoulder Sash is open.";
+"Vous ne pouvez pas utiliser le parchemin du lieu tant que la fenêtre de l'étole est ouverte.";
+
+"You cannot use a sash with a bonus for the target.";
+"Une étole assortie d'un bonus ne peut pas être le destinataire d'un transfert.";
+
+"You cannot use a sash without a bonus as the source.";
+"Une étole sans bonus ne peut pas être l'original d'un transfert.";
+
+"You cannot use a soulbound item.";
+"Vous ne pouvez pas utiliser un objet lié à l'âme.";
+
+"You cannot use any emotions right now.";
+"Actuellement, vous ne pouvez pas utiliser d'émotions.";
+
+"You cannot use any soulbound items.";
+"Vous ne pouvez pas utiliser un objet lié à l'âme.";
+
+"You cannot use it at the moment.";
+"Vous ne pouvez l'utiliser pour le moment.";
+
+"You cannot use items while modifying your pet's stats.";
+"Pendant que vous modifiez les statistiques de votre familier, vous ne pouvez utiliser aucun objet.";
+
+"You cannot use items while the Fortune Chest is open.";
+"Vous ne pouvez pas utiliser d'objet tant que votre coffret bonne fortune est ouvert.";
+
+"You cannot use items while you are turned to stone.";
+"Vous ne pouvez utiliser aucun objet tant que vous êtes transformé en pierre.";
+
+"You cannot use that any more.";
+"Vous pouvez plus l'utiliser.";
+
+"You cannot use that at the moment.";
+"Vous ne pouvez pas l'utiliser pour l'instant.";
+
+"You cannot use that at this location.";
+"Vous ne pouvez pas l'utiliser dans ce lieu.";
+
+"You cannot use that here.";
+"Vous ne pouvez pas l'utiliser ici.";
+
+"You cannot use the Incubator whilst trading or whilst you have your storeroom or private shop open.";
+"Vous ne pouvez pas utiliser la couveuse pendant un échange ou pendant l'ouverture de votre entrepôt ou de votre magasin privé.";
+
+"You cannot use the item here.";
+"Vous ne pouvez pas utiliser cet objet ici.";
+
+"You cannot use this bundle whilst riding.";
+"Vous ne pouvez pas utiliser le paquet en étant à cheval.";
+
+"You cannot use this costume for this weapon.";
+"Vous ne pouvez pas choisir ce costume pour cette arme.";
+
+"You cannot use this item during your withdrawal from the Combat Zone.";
+"Vous ne pouvez pas utiliser cet objet pendant votre retrait de la Zone de combat.";
+
+"You cannot use this item here.";
+"Vous ne pouvez pas utiliser cet objet ici.";
+
+"You cannot use this item on soulbound items.";
+"Vous ne pouvez pas appliquer cet objet sur des objets liés à l'âme.";
+
+"You cannot use this item while the windows for absorption and combination are open.";
+"Vous ne pouvez pas utiliser cet objet tant que les fenêtres d'absorption et de fusion sont ouvertes.";
+
+"You cannot use this item while wearing another costume.";
+"Vous ne pouvez pas utiliser cet objet pendant que vous portez un autre costume.";
+
+"You cannot use this item while you are trading.";
+"Vous ne pouvez pas utiliser cet objet pendant un échange.";
+
+"You cannot wear a Wedding Dress or a Tuxedo when you are already wearing a weapon skin.";
+"Vous ne pouvez pas porter de robe de mariage ou de smoking lorsque vous utilisez une apparence d'arme.";
+
+"You cannot wear gloves yet.";
+"Vous ne pouvez pas encore porter de gants.";
+
+"You currently have %d point(s). Your total score is %d.";
+"Vous avez %d point(s) pour le moment. Votre score total s'élève à %d.";
+
+"You destroyed the wrong Metin stone. Defeat all the monsters!";
+"Vous avez détruit la mauvaise pierre Metin. Triomphez de tous les monstres !";
+
+"You do not have enough Yang.";
+"Vous n'avez pas assez de Yangs.";
+
+"You do not have enough money for the combination.";
+"Vous n'avez pas assez de Yangs pour la fusion.";
+
+"You don't have an %s to start a game of okey.";
+"Vous n'avez pas de %s pour débuter une partie Okey.";
+
+"You don't have enough Anniversary Flags.";
+"Vous n'avez pas assez de fanions d'anniversaire !";
+
+"You don't have enough Gaya.";
+"Vous n'avez pas assez de Gayas.";
+
+"You don't have enough Won.";
+"Vous n'avez pas assez de Wons.";
+
+"You don't have enough Yang to start a game of okey.";
+"Vous n'avez pas assez de Yangs pour débuter une partie Okey.";
+
+"You don't have enough Yang to trade books with me.";
+"Vous n'avez pas assez de Yangs pour échanger les livres.";
+
+"You don't have enough Yang.";
+"Vous n'avez pas assez de Yangs.";
+
+"You don't have enough insignia.";
+"Vous n'avez pas assez d'insignes.";
+
+"You don't have enough items to revive anyone.";
+"Vous n'avez pas assez d'objets pour la résurrection.";
+
+"You don't have enough of the necessary items to play Yut Nori.";
+"Vous n'avez pas assez d'objets requis pour jouer au Yutnori.";
+
+"You don't have enough space in your inventory.";
+"Vous n'avez pas suffisamment de place dans l'inventaire.";
+
+"You don't receive any points for this player.";
+"Ce joueur ne vous rapporte pas de points.";
+
+"You have already learned this skill.";
+"Vous avez déjà appris cette compétence.";
+
+"You have already reached the Champion Level.";
+"Vous avez déjà atteint le niveau de champion.";
+
+"You have already registered for the territory auction.";
+"Vous êtes déjà inscrit à la vente aux enchères de terrain.";
+
+"You have already submitted your bid.";
+"Vous avez déjà soumis votre offre.";
+
+"You have already used the Researcher's Elixir.";
+"Vous avez déjà utilisé l'élixir du chercheur.";
+
+"You have announced your withdrawal from the Combat Zone and can leave in %d minutes.";
+"Vous avez annoncé votre retrait et pourrez quitter la Zone de retrait dans %d minutes.";
+
+"You have announced your withdrawal from the Combat Zone and can leave in %d seconds.";
+"Vous avez annoncé votre retrait et pourrez quitter la Zone de combat dans %d secondes.";
+
+"You have been revived by %s.";
+"Vous avez ressuscité grâce à %s.";
+
+"You have been revived.";
+"Vous avez ressuscité.";
+
+"You have bid %d Won.";
+"Vous avez proposé %d Wons.";
+
+"You have captured a soul.";
+"Vous avez capturé une âme.";
+
+"You have dismissed %s.";
+"Vous avez renvoyé %s.";
+
+"You have earned your daily target – collect your reward.";
+"Vous avez atteint votre objectif de la journée : vous pouvez récupérer votre récompense.";
+
+"You have entered an area which is under Sung Mahi's sway and are suffering from his curse.";
+"Vous venez d'entrer dans une zone contrôlée par Sung Mahi et êtes frappé par sa malédiction.";
+
+"You have entered the dungeon %s with difficulty %d. The battle starts in %d seconds.";
+"Vous êtes entré dans le donjon %s au niveau de difficulté %d. Le combat commence dans %d secondes.";
+
+"You have entered the dungeon %s. The battle starts in %d seconds.";
+"Vous être entré dans le donjon %s. Le combat commence dans %d secondes.";
+
+"You have insufficient materials for the upgrade. (Soulbound items cannot be used.)";
+"Vous n'avez pas assez de matériaux pour l'amélioration. (Les objets liés à l'âme ne peuvent pas être utilisés)";
+
+"You have lost %d points. Remaining points: %d";
+"Vous avez perdu %d points. Points restants : %d";
+
+"You have no debuff at the moment.";
+"Vous ne subissez aucun malus en ce moment.";
+
+"You have not registered for any territory auctions.";
+"Vous n'êtes inscrit à aucune vente aux enchères de terrain.";
+
+"You have not registered for the PvP tournament.";
+"Vous ne vous êtes pas inscrit au tournoi JcJ.";
+
+"You have not yet completed all missions.";
+"Vous n'avez pas encore accompli toutes les tâches.";
+
+"You have paid the %lu-Yang lease for the guild territory.";
+"Vous vous êtes acquitté de %lu Yangs pour le bail du terrain de guilde.";
+
+"You have received %d Won.";
+"Vous avez reçu %d Wons.";
+
+"You have received %lu EXP for your Champion Level.";
+"Vous avez reçu %lu EXP pour votre niveau de champion.";
+
+"You have received a storage bonus of %d defence.";
+"Vous avez reçu le bonus de stockage suivant : %d de défense.";
+
+"You have received a storage bonus of %d%% EXP.";
+"Vous avez reçu le bonus de stockage suivant : %d%% d'EXP.";
+
+"You have received a storage bonus of %d%% HP.";
+"Vous avez reçu le bonus de stockage suivant : %d%% de PV.";
+
+"You have received a storage bonus of %d%% strength against monsters.";
+"Vous avez reçu le bonus de stockage suivant : %d%% de force contre les monstres.";
+
+"You have registered for the PvP tournament.";
+"Vous vous êtes inscrit au tournoi JcJ.";
+
+"You have revived %s.";
+"Vous avez ressuscité %s.";
+
+"You have successfully protected the mast. Keep it up! Get ready for the next wave.";
+"Vous avez réussi à défendre le mât. Continuez comme ça ! Préparez-vous pour la vague suivante.";
+
+"You have summoned %s.";
+"Vous avez appelé %s.";
+
+"You have to leave your group first.";
+"Vous devez d'abord quitter votre groupe.";
+
+"You have to wait %d sec. after opening the Mailbox before you can switch channels or teleport.";
+"Après avoir ouvert la boîte aux lettres, vous devez attendre %d secondes avant de pouvoir changer de canal ou vous téléporter.";
+
+"You have transferred the bonuses successfully.";
+"Vous avez transféré vos bonus avec succès.";
+
+"You just missed the bonus level.";
+"Vous avez échoué de peu au niveau bonus.";
+
+"You must abandon the ship in %d min.";
+"Vous devez abandonner le navire dans %d minutes.";
+
+"You must abandon the ship in %d sec.";
+"Vous devez abandonner le navire dans %d secondes.";
+
+"You must be level %d to enter the Combat Zone.";
+"Vous devez être de niveau %d pour accéder à la Zone de combat.";
+
+"You must close all windows before entering or leaving the Combat Zone.";
+"Vous devez refermer toutes les fenêtres pour avoir accès ou quitter la Zone de combat.";
+
+"You must complete the 'Ship Defence' dungeon.";
+"Vous devez terminer le donjon Défense du navire.";
+
+"You must fill up at least 1 EXP Marble at level 120 to reach Champion Level.";
+"Vous devez compléter au minimum 1 orbe d'EXP au niveau 120 pour atteindre le niveau de champion.";
+
+"You must leave the ship now as you have not started the sea battle.";
+"Vous devez maintenant quitter le navire car vous n'avez pas lancé la bataille navale.";
+
+"You must wait a while before opening your mailbox again.";
+"Attendez un instant avant de rouvrir votre boîte aux lettres.";
+
+"You need %d perpendicular slots in your inventory to open the Chest.";
+"Vous devez disposer de %d emplacements verticaux dans votre inventaire pour ouvrir la caisse.";
+
+"You need a Battle Royale Ticket to participate.";
+"Il vous faut un ticket de Battle Royale pour participer.";
+
+"You need a Reincarnation item to revive instantly.";
+"Vous avez besoin d'un objet de réincarnation pour être immédiatement ressuscité.";
+
+"You need more Aventurine and Aureolin Treasures to receive your reward.";
+"Vous avez besoin de plus de trésors d'aventurine et d'auréoline pour obtenir votre récompense.";
+
+"You need to equip a weapon first.";
+"Il faut d'abord vous équiper d'une arme.";
+
+"You receive your bonuses.";
+"Vous conservez vos bonus.";
+
+"You require %s x %d more.";
+"Vous avez besoin de %sx%d en plus.";
+
+"You still require %d %s(s).";
+"Il vous faut encore %dx %s.";
+
+"You took back the %d Won you bid.";
+"Vous avez récupéré %d Wons que vous avez investis.";
+
+"You've taught your pet well! It's quickly learning its new skills!";
+"Votre familier apprend rapidement ses nouvelles compétences, vous l'entraînez bien !";
+
+"Your Dragon Stone's bonus has been changed.";
+"Le bonus de votre pierre-dragon a été modifié.";
+
+"Your game of okey has started!";
+"Votre partie Okey a débuté !";
+
+"Your guild already has a guild territory.";
+"Votre guilde a déjà un terrain de guilde.";
+
+"Your guild isn't registered for the territory auction.";
+"Votre guilde n'est pas inscrite à la vente aux enchères de terrain.";
+
+"Your guild leader has registered for the auction of the territory in the %s area at %d,%d.";
+"Votre chef de guilde s'est inscrit à la vente aux enchères dans la zone %s pour le terrain %d, %d.";
+
+"Your guild's territory will be automatically relinquished in %d hours. Any items in the guild warehouse will be deleted.";
+"Le terrain de votre guilde sera automatiquement cédé dans %d. Les objets présents dans l'entrepôt de guilde seront supprimés.";
+
+"Your immunity has expired and you are again influenced by Sung Mahi's Presence and Curse.";
+"Votre bénédiction d'immunité est terminée et vous vous trouvez de nouveau sous l'influence de Sung Mahi et subissez la malédiction.";
+
+"Your inventory is full.";
+"Votre inventaire est plein.";
+
+"Your inventory is full. Your reward will be delivered by post.";
+"Votre inventaire est plein. Votre récompense vous sera envoyée par la poste.";
+
+"Your level is too low to summon the pet.";
+"Votre niveau n'est pas assez élevé pour pouvoir appeler le familier.";
+
+"Your mailbox is full.";
+"Votre boîte aux lettres est pleine.";
+
+"Your mast has been smashed. You fought valiantly, but the battle is lost.";
+"Votre mât est détruit. Vous avez combattu avec bravoure, mais la bataille est perdue.";
+
+"Your pet enthusiastically tucks into the Protein Snack.";
+"Votre familier mange les fortifiants avec appétit.";
+
+"Your pet has already learnt this skill and refuses to practice it again.";
+"Votre familier a déjà appris cette compétence et refuse l'entraînement.";
+
+"Your pet has already reached the highest stage of evolution.";
+"Votre familier a déjà atteint le niveau maximum.";
+
+"Your pet has gathered enough experience. It now requires Item EXP to reach the next stage of evolution.";
+"Votre familier a assez d'expérience. Il lui faut maintenant de l'EXP d'objet pour atteindre le niveau de développement suivant.";
+
+"Your pet is ready to evolve. Use Pet Books to achieve this.";
+"Votre familier peut atteindre le niveau suivant. Pour y parvenir, utilisez les livres de familier.";
+
+"Your pet must be %d days old to train and promote it to the next stage of evolution.";
+"Pour entraîner le familier et lui faire atteindre le niveau supérieur, il doit être âgé de %d jours.";
+
+"Your pet must be level %d to train and promote it to the next stage of evolution.";
+"Pour entraîner le familier et lui faire atteindre le niveau supérieur, il doit avoir le niveau %d.";
+
+"Your pet must have 100% experience to train and promote it to the next stage of evolution.";
+"Pour entraîner le familier et lui faire atteindre le niveau supérieur, il doit avoir 100 % d'expérience.";
+
+"Your pet's stats have been modified.";
+"Les statistiques de votre familier ont changé.";
+
+"Your withdrawal announcement is active.";
+"Votre annonce de retrait est active.";
+
+"Your withdrawal announcement was cancelled.";
+"Votre annonce de retrait est annulée.";
+
+"Yut Nori has finished.";
+"Le jeu de Yutnori est terminé.";
+
+"Yut Nori has started!";
+"Le jeu de Yutnori a commencé !";
+
+"[%s±ºÁÖ] : %s";
+"[%sMonarch] : %s.";
+
+"[%s±ºÁÖ] : %s  º¸À¯±İ¾× %lld";
+"[%sMonarch] : %s Yangs propres %lld.";
+
+"[Aura] Can only be done once an Aura Outfit has been inserted.";
+"[Aura] L'action est possible lorsqu'une tenue d'aura est ajoutée.";
+
+"[Aura] Cannot be evolved.";
+"[Aura] La progression est impossible.";
+
+"[Aura] Cannot be improved.";
+"[Aura] L'amélioration est impossible.";
+
+"[Aura] Does not work with an Aura Outfit onto which an item has already been transmitted.";
+"[Aura] Le fonctionnement est impossible avec une tenue d'aura à laquelle un objet est déjà transféré.";
+
+"[Aura] Does not work with soulbound items.";
+"[Aura] Le fonctionnement est impossible avec les objets liés à l'âme.";
+
+"[Aura] Evolution successful!";
+"[Aura] Progression réussie !";
+
+"[Aura] Improvement successful!";
+"[Aura] Amélioration réussie !";
+
+"[Aura] Improvement successful. Evolution is now possible.";
+"[Aura] Amélioration réussie. La progression est désormais possible.";
+
+"[Aura] Only Aura Outfit can be inserted.";
+"[Aura] Seules des tenues d'aura peuvent être ajoutées.";
+
+"[Aura] Only Aura Outfit, Shield, Necklace, Earring or Armband can be inserted.";
+"[Aura] Seuls la tenue d'aura, le bouclier, le collier, les boucles d'oreille et le bracelet peuvent être ajoutés.";
+
+"[Aura] Successful!";
+"[Aura] Succès !";
+
+"[Aura] The amount of inserted materials has been adjusted to match the required amount.";
+"[Aura] Le nombre de matériaux ajoutés a été ajusté à la quantité requise.";
+
+"[Aura] You cannot evolve your Aura Outfit until you have improved it.";
+"[Aura] Vous ne pouvez faire progresser votre tenue d'aura qu'une fois que vous l'avez améliorée.";
+
+"[Aura] You don’t have enough money to evolve your Aura Outfit.";
+"[Aura] Vous n'avez pas assez d'argent pour faire progresser votre tenue d'aura.";
+
+"[Aura] You have to insert items.";
+"[Aura] Vous devez ajouter des objets.";
+
+"[Aura] Your Aura Outfit has reached the maximum level.";
+"[Aura] La tenue d'aura a atteint le niveau maximal.";
+
+"[Catch the King] %s earned %d points in Catch the King.";
+"[Chasse au roi] %s a marqué %d points à la Chasse au roi.";
+
+"[Catch the King] Catch the King has ended.";
+"[Chasse au roi] La « Chasse au roi » est terminée.";
+
+"[Catch the King] Defeat monsters to collect King Cards. You need 25 cards for a King Deck.";
+"Chasse au roi : éliminez des monstres pour collecter des cartes royales. Vous avez besoin de 25 cartes pour constituer un jeu royal.";
+
+"[Catch the King] If you make it into the top rankings, you'll receive your prize from the game table.";
+"Chasse au roi : si vous êtes parvenu à faire partie de la liste des meilleurs dans le classement, vous obtenez vos gains à la table de jeu.";
+
+"[Catch the King] Loads of great prizes await!";
+"Chasse au roi : une multitude de prix somptueux vous tend les bras !";
+
+"[Catch the King] Play a game of Catch the King now!";
+"[Chasse au roi] Faites une partie de « Chasse au roi » !";
+
+"[Catch the King] You don't have a complete King Deck or you have insufficient Yang.";
+"[Chasse au roi] Vous ne possédez pas de jeu royal complet ou pas assez de Yangs.";
+
+"[Catch the King] Your score isn't good enough for a prize.";
+"[Chasse au roi] Vous n'avez pas assez de points pour empocher une récompense.";
+
+"[DS] Your rank reward";
+"[CD] Récompense de rang";
+
+"[Duel of the Seers] Check your rank and claim your reward.";
+"[Concours des devins] Consultez votre rang et récupérez votre récompense.";
+
+"[Duel of the Seers] Rich treasures await!";
+"[Concours des devins] Un butin précieux vous attend !";
+
+"[Duel of the Seers] The Duel of the Seers has begun!";
+"[Concours des devins] Le concours des devins a commencé !";
+
+"[Duel of the Seers] The Duel of the Seers is over.";
+"[Concours des devins] Le concours des devins est terminé.";
+
+"[Duel of the Seers] You don't have enough Seer Coins.";
+"[Concours des devins] Vous n'avez pas assez de pièces de devin.";
+
+"[Duel of the Seers] You have increased your donations count by 1.";
+"[Concours des devins] Votre chiffre de donation augmente de 1.";
+
+"[Duel of the Seers] You receive a quest for the minigame.";
+"[Concours des devins] Vous avez débloqué une quête pour le minijeu.";
+
+"[Flower Power] There isn't enough space in your inventory.";
+"Saison florale : vous n'avez pas assez de place dans votre inventaire.";
+
+"[Flower Power] This item can no longer be used.";
+"Saison florale : cet objet ne peut plus être utilisé.";
+
+"[Flower Power] You don't have enough Flower Seeds.";
+"Saison florale : vous n'avez pas suffisamment de graines de fleurs.";
+
+"[Flower Power] You don't have enough shoots.";
+"Saison florale : vous n'avez pas assez de pousses.";
+
+"[Flower Power] You have received a Chrysanthemum Shoot.";
+"Saison florale : vous avez obtenu une pousse de chrysanthème.";
+
+"[Flower Power] You have received a Daffodil Shoot.";
+"Saison florale : vous avez obtenu une pousse de narcisse.";
+
+"[Flower Power] You have received a Lily Shoot.";
+"Saison florale : vous avez obtenu une pousse de lys.";
+
+"[Flower Power] You have received a May Bell Shoot.";
+"Saison florale : vous avez obtenu une pousse de muguet.";
+
+"[Flower Power] You have received a Sunflower Shoot.";
+"Saison florale : vous avez obtenu une pousse de tournesol.";
+
+"[Flower Power] You received Flower Seeds.";
+"Saison florale : vous avez obtenu des graines de fleurs.";
+
+"[Gaya] Cutting failed.";
+"[Gaya] Votre pierre n'a pas été taillée.";
+
+"[Gaya] Cutting successful.";
+"[Gaya] Votre pierre a été taillée.";
+
+"[Gaya] The Gaya Market is already open.";
+"[Gaya] La bourse aux Gayas est déjà ouverte.";
+
+"[Gaya] The Gaya Market is currently unavailable.";
+"[Gaya] La bourse aux Gayas n'est pas disponible pour le moment.";
+
+"[Gaya] The item list has been refreshed.";
+"[Gaya] La liste des objets a été actualisée.";
+
+"[Gaya] You already have the maximum amount of Gaya.";
+"[Gaya] Vous avez déjà le nombre maximal de Gayas.";
+
+"[Gaya] You can only open the Gaya Market once you have closed the other windows.";
+"[Gaya] Pour ouvrir la bourse aux Gayas, vous devez d'abord fermer les autres fenêtres.";
+
+"[Gaya] You cannot purchase this item.";
+"[Gaya] Vous ne pouvez pas acheter cet objet.";
+
+"[Gaya] You cannot unlock any more slots on the Gaya Market.";
+"[Gaya] Vous ne pouvez pas ouvrir d'emplacement supplémentaire dans la bourse aux Gayas.";
+
+"[Gaya] You don't have a Refresh Gaya Market item.";
+"[Gaya] Vous n'avez pas de : réinit. bourse aux Gayas.";
+
+"[Gaya] You don't have enough %s. You need %d more to unlock an additional slot.";
+"[Gaya] Vous n'avez pas suffisamment de %s. Vous devez en avoir %d de plus pour ouvrir un emplacement supplémentaire.";
+
+"[Gaya] You don't have enough Gaya.";
+"[Gaya] Vous n'avez pas assez de Gayas.";
+
+"[Gaya] You don't have enough Glimmerstones.";
+"[Gaya] Vous n'avez pas assez de gemmes précieuses.";
+
+"[Gaya] You don't have enough Yang to cut Glimmerstones.";
+"[Gaya] Vous n'avez pas assez de Yangs pour tailler des gemmes précieuses.";
+
+"[Gaya] You must open the Gaya Market first.";
+"[Gaya] Vous devez d'abord ouvrir la bourse aux Gayas.";
+
+"[Gaya] Your inventory is full.";
+"[Gaya] Votre inventaire est plein.";
+
+"[Group] Please talk to the relevant NPC to enter.";
+"[Groupe] Adressez-vous au PNJ compétent pour entrer.";
+
+"[Group] The battle has begun.";
+"[Groupe] La bataille a commencé.";
+
+"[Group] The dungeon will close in %d min.";
+"[Groupe] Le donjon se termine dans %d minutes.";
+
+"[Group] The rankings for groups in Meley's Lair is being compiled.";
+"[Groupe] La liste des meilleurs joueurs de la bataille en groupe au Repaire de Meley va être affichée.";
+
+"[Group] Time until teleportation: %d min. %d sec.";
+"[Groupe] Temps restant jusqu'à la téléportation : %d min et %d s";
+
+"[Group] You are now registered for Meley's Lair.";
+"[Groupe] Vous êtes maintenant inscrit au Repaire de Meley.";
+
+"[Group] You cannot do this while the group search is active.";
+"[Groupe] Vous ne pouvez pas effectuer cette opération pendant que la recherche de groupe est active.";
+
+"[Group] You cannot leave the dungeon at the moment.";
+"[Groupe] Vous ne pouvez pas quitter le donjon maintenant.";
+
+"[Group] You have 1 hour to complete the dungeon.";
+"[Groupe] Vous disposez de 1 heure pour venir à bout du donjon.";
+
+"[Group] You have completed your task with distinction!";
+"[Groupe] Vous avez accompli votre mission avec bravoure.";
+
+"[Group] You have conceded.";
+"[Groupe] Vous avez abandonné.";
+
+"[Group] You have left the dungeon.";
+"[Groupe] Vous avez quitté le donjon.";
+
+"[Group] You will be teleported to the city in 1 minute.";
+"[Groupe] Dans 1 minute, vous serez emmené dans la cité.";
+
+"[Group] You will be transported from the dungeon in 10 minutes.";
+"[Groupe] Dans 10 minutes, vous serez transporté hors du donjon.";
+
+"[Group] Your time in the dungeon is up.";
+"[Groupe] Le temps en donjon est écoulé.";
+
+"[Guild Territory] Go to the guard and pay the lease of %d Yang for your guild territory.";
+"[Terrain de guilde] Allez voir le garde et acquittez-vous du bail de %d Yangs pour votre terrain de guilde.";
+
+"[Guild] %d EXP has been donated.";
+"[Guilde] %d d'EXP a été donnée.";
+
+"[Guild] %d Yang received.";
+"[Guilde] %d Yangs reçus.";
+
+"[Guild] %s has used %s.";
+"[Guilde] %s a utilisé %s.";
+
+"[Guild] %s has won.";
+"[Guilde] %s a gagné.";
+
+"[Guild] 'Guild Leader Transfer' vote in progress.";
+"[Guilde] Le sondage 'Changement de chef de guilde' est en cours.";
+
+"[Guild] 'Guild Territory Abandonment' vote in progress.";
+"[Guilde] Le sondage 'Dissolution de terrain de guilde' est en cours.";
+
+"[Guild] 'Guild Territory Sale' vote in progress.";
+"[Guilde] Le sondage 'Vente de terrain de guilde' est en cours.";
+
+"[Guild] 'Remove Member' vote in progress.";
+"[Guilde] Le sondage 'Bannir un membre' est en cours.";
+
+"[Guild] A Dragon's Temple fight is running on another channel.";
+"[Guilde] Il y a déjà un combat dans le Temple du dragon sur un autre canal.";
+
+"[Guild] After deduction of %d%% taxes you receive %d Yang.";
+"[Guilde] Après déduction fiscale de %d%%, vous recevez %d Yangs.";
+
+"[Guild] Another guild member is currently using this.";
+"[Guilde] Un autre membre de guilde utilise déjà ceci.";
+
+"[Guild] Another member is currently using the guild bank.";
+"[Guilde] Un autre membre utilise la banque de guilde en ce moment.";
+
+"[Guild] As a combatant you cannot spectate your own guild war.";
+"[Guilde] Les combattants n'ont pas le droit d'assister à leur propre guerre de guilde.";
+
+"[Guild] Cannot be upgraded as the guild bank is full.";
+"Guilde] Aucune amélioration possible, car la banque de guilde est pleine.";
+
+"[Guild] Certain members are offline or on another map.";
+"[Guilde] Certains membres sont hors ligne ou sur une autre carte.";
+
+"[Guild] Certain members of the enemy guild are offline or on another map.";
+"[Guilde] Certains membres de la guilde ennemie sont hors ligne ou sur une autre carte.";
+
+"[Guild] Deposited: %d Yang";
+"[Guilde] Versement : %d Yangs";
+
+"[Guild] Draw";
+"[Guilde] Match nul";
+
+"[Guild] For your own safety, you will be teleported away from the nest in 1 minute.";
+"[Guilde] Pour votre propre sécurité, vous serez téléporté hors du Repaire dans 1 minute.";
+
+"[Guild] For your own safety, you will be teleported away from the nest in 10 minutes.";
+"[Guilde] Pour votre propre sécurité, vous serez téléporté hors du Repaire dans 10 minutes.";
+
+"[Guild] Guild %s has purchased territory.";
+"[Guilde] La guilde %s a acheté un terrain.";
+
+"[Guild] Guild [%s] has lost the war against [%s].";
+"[Guilde] La guilde [%s] a perdu le combat contre [%s].";
+
+"[Guild] Guild advertisement extended.";
+"[Guilde] L'appel d'offre a été prolongé.";
+
+"[Guild] Guild advertisement launched.";
+"[Guilde] L'appel d'offre vient d'être lancée.";
+
+"[Guild] No applications available.";
+"[Guilde] Aucune candidature.";
+
+"[Guild] No guild advertisements available.";
+"[Guilde] Aucun appel d'offre de guilde.";
+
+"[Guild] No guild found.";
+"[Guilde] Aucune guilde n'a été trouvée.";
+
+"[Guild] No guild has defeated the dragon yet.";
+"[Guilde] Aucune guilde n'a encore réussi à vaincre le Dragon.";
+
+"[Guild] No guild present with a guild advertisement.";
+"[Guilde] Aucune guilde avec appel d'offre";
+
+"[Guild] No guild territory found.";
+"[Guilde] Aucun terrain de guilde trouvé.";
+
+"[Guild] Not enough space in the guild bank.";
+"[Guilde] Pas assez de place dans la banque de guilde.";
+
+"[Guild] Object moved successfully.";
+"[Guilde] Objet déplacé avec succès.";
+
+"[Guild] Only available to the guild leader (if a guild territory is being relinquished).";
+"[Guilde] Ceci n'est disponible que pour le chef de guilde. (Lorsqu'un terrain de guilde est cédé.)";
+
+"[Guild] Player %s has applied to join you.";
+"[Guilde] Le joueur %s a déposé sa candidature.";
+
+"[Guild] Please check enemy members and leaders.";
+"[Guilde] Veuillez vérifier les membres et le chef ennemis.";
+
+"[Guild] Please check members and leaders.";
+"[Guilde] Veuillez vérifier les membres et le chef.";
+
+"[Guild] Please try again in 10 seconds.";
+"[Guilde] Merci de réessayer dans 10 secondes.";
+
+"[Guild] Rankings update.";
+"[Guilde] Renouvellement de la liste des meilleurs joueurs.";
+
+"[Guild] Required time: %d min. %d sec.";
+"[Guilde] Temps nécessaire : %d min. %d sec.";
+
+"[Guild] Starting 'Guild Leader Transfer' vote.";
+"[Guilde] Le sondage 'Changement de chef de guilde' commence.";
+
+"[Guild] Starting 'Guild Territory Abandonment' vote.";
+"[Guilde] Le sondage 'Dissolution de terrain de guilde' commence.";
+
+"[Guild] Starting 'Guild Territory Sale' vote.";
+"[Guilde] Le sondage 'Vente de terrain de guilde' commence.";
+
+"[Guild] Starting 'Remove Member' vote.";
+"[Guilde] Le sondage 'Bannir un membre' commence.";
+
+"[Guild] Successfully registered for Meley's Lair.";
+"[Guilde] Inscription pour le Repaire de Meley réussie.";
+
+"[Guild] That can only be used in guild wars.";
+"[Guilde] Ceci est uniquement utilisable dans le cadre d'une guerre de guilde.";
+
+"[Guild] The Deposit Yang or Withdraw Yang window is already open.";
+"[Guilde] La fenêtre 'Verser des Yangs' ou 'Prélever des Yangs' est déjà ouverte.";
+
+"[Guild] The Guild Warehouse is currently in use.";
+"[Guilde] Quelqu'un utilise déjà l'entrepôt de guilde.";
+
+"[Guild] The battle against Dragon Queen Meley is starting.";
+"[Guilde] Le combat contre Meley, reine des dragons, commence.";
+
+"[Guild] The character must be at least level 40 to receive the guild leadership.";
+"[Guilde] Le personnage doit être au minimum niveau 40 pour devenir chef de guilde.";
+
+"[Guild] The enemy guild is currently fighting in the dragon cave.";
+"[Guilde] Actuellement, la guilde ennemie se bat dans la Grotte du dragon.";
+
+"[Guild] The gates to Meley's Lair are open. The time limit in the dungeon is one hour.";
+"[Guilde] La porte qui mène au Repaire de Meley s'ouvre. Vous pouvez y rester une heure au maximum.";
+
+"[Guild] The gates to the lair are closed once more.";
+"[Guilde] La porte du Repaire se referme.";
+
+"[Guild] The guild advertisement will run for %s.";
+"[Guilde] La durée de l'appel d'offre de guilde est de %s.";
+
+"[Guild] The guild already owns guild territory.";
+"[Guilde] La guilde possède déjà un terrain.";
+
+"[Guild] The guild has set a minimum level for applicants (min. level: %d).";
+"[Guilde] La guilde a fixé un niveau minimum pour les candidatures (niveau minimum : %d).";
+
+"[Guild] The guild leader is offline or on another map.";
+"[Guilde] Le chef de guilde est hors ligne ou sur une autre carte.";
+
+"[Guild] The guild level is too low.";
+"[Guilde] Le grade de guilde est trop faible.";
+
+"[Guild] The guild member has been removed from the guild for inactivity.";
+"[Guilde] Ce membre a été supprimé de la guilde pour cause d'inactivité.";
+
+"[Guild] The guild territory sale cannot be completed as there is insufficient Yang in the guild bank.";
+"[Guilde] La vente du terrain de guilde est impossible, car il n'y a pas assez de Yangs dans la banque de guilde.";
+
+"[Guild] The guild territory sale has failed.";
+"[Guilde] La vente du terrain de guilde a échoué.";
+
+"[Guild] The guild territory sale is complete.";
+"[Guilde] La vente du terrain de guilde est terminée.";
+
+"[Guild] The guild's treasury has reached the maximum.";
+"[Gilde] La fortune de la guilde a atteint son niveau maximal.";
+
+"[Guild] The lair will close in %d min.";
+"[Guilde] Le Repaire va se refermer dans %d minutes.";
+
+"[Guild] The list is being updated. Please try again later.";
+"[Guilde] La liste est en cours d'actualisation. Veuillez réessayer ultérieurement.";
+
+"[Guild] The logo server is currently undergoing maintenance.";
+"[Guilde] Le serveur du logo est en maintenance.";
+
+"[Guild] The member is currently offline.";
+"[Guilde] Ce membre est hors ligne.";
+
+"[Guild] The player is offline or on another map.";
+"[Guilde] Le joueur est hors ligne ou sur une autre carte.";
+
+"[Guild] The purchase was cancelled as you already own guild territory.";
+"[Guilde] L'achat a été interrompu, car vous possédez déjà du terrain de guilde.";
+
+"[Guild] The purchase was cancelled as your guild already owns guild territory.";
+"[Guilde] L'achat a été interrompu, car votre guilde possède déjà du terrain de guilde.";
+
+"[Guild] The vote relating to this player failed. Please try again in %d months, %d days, %d hours and %d minutes.";
+"[Guilde] Ce joueur a répondu par la négative au sondage. Merci de réessayer dans %d mois, %d jours, %d heures et %d minutes.";
+
+"[Guild] There are no votes in progress.";
+"[Guilde] Aucun sondage actuellement.";
+
+"[Guild] There are not enough participants online.";
+"[Guilde] Il n'y a pas assez de membres en ligne.";
+
+"[Guild] There are still items in the Guild Warehouse.";
+"[Guilde] L'entrepôt de guilde contient encore des objets.";
+
+"[Guild] This action is not possible during a war.";
+"[Guilde] Cette action n'est pas possible lors d'un combat.";
+
+"[Guild] This guild does not exist.";
+"[Guilde] Cette guilde n'existe pas.";
+
+"[Guild] This guild is not the one entered in the guild territory sale vote.";
+"[Guilde] Cette guilde n'est pas la même que celle inscrite lors du sondage pour la vente du terrain de guilde.";
+
+"[Guild] This land belongs to another player.";
+"[Guilde] Ce terrain appartient à un autre joueur.";
+
+"[Guild] Time's up.";
+"[Guilde] Le temps est écoulé.";
+
+"[Guild] Visit the Dragon Watcher Dolnarr to enter the dragon cave.";
+"[Guilde] Allez voir Dolnarr, garde du dragon, afin de pénétrer dans la Grotte du dragon.";
+
+"[Guild] War ends in 1 minute.";
+"[Guilde] Le combat se termine dans 1 minute.";
+
+"[Guild] War ends in 5 minutes.";
+"[Guilde] Le combat se termine dans 5 minutes.";
+
+"[Guild] You are now in observer mode because you have reached the respawn limit.";
+"[Guilde] Vous êtes en mode spectateur, car vous avez atteint votre limite de résurrection.";
+
+"[Guild] You can only construct one Guild Warehouse.";
+"[Guilde] Vous pouvez seulement construire un entrepôt de guilde.";
+
+"[Guild] You can only make one transaction every 10 seconds.";
+"[Guilde] Vous pouvez effectuer une transaction toutes les 10 secondes.";
+
+"[Guild] You can use it in 10 seconds.";
+"[Guilde] Vous pourrez l'utiliser dans 10 secondes.";
+
+"[Guild] You cannot carry out this action during a war.";
+"[Guilde] Vous ne pouvez pas effectuer cette action pendant un combat.";
+
+"[Guild] You cannot carry out this action while depositing or withdrawing Yang from the guild account.";
+"[Guilde] Vous ne pouvez pas effectuer cette action pendant que vous versez ou prélevez des Yangs du compte de guilde.";
+
+"[Guild] You cannot carry out this action whilst the Guild Warehouse is open.";
+"[Guilde] Vous ne pouvez pas effectuer cette action tant que l'entrepôt de guilde est ouvert.";
+
+"[Guild] You cannot change guild leader whilst at war.";
+"[Guilde] Vous ne pouvez pas changer de chef de guilde pendant un combat.";
+
+"[Guild] You cannot declare a guild war whilst fighting in the dragon cave.";
+"[Guilde] Vous ne pouvez pas déclarer la guerre à une guilde tant que vous êtes dans la Grotte du dragon.";
+
+"[Guild] You cannot deposit or withdraw Yang from the guild account while another window is open.";
+"[Guilde] Tant qu'une autre fenêtre est ouverte, vous ne pouvez pas verser ou prélever de Yangs du compte de guilde.";
+
+"[Guild] You cannot deposit or withdraw Yang from the guild account while your pet is summoned.";
+"[Guilde] Lorsque vous avez invoqué un familier, vous ne pouvez pas verser ou prélever de Yangs du compte de guilde.";
+
+"[Guild] You cannot disband the guild whilst a vote is in progress.";
+"[Guilde] Vous ne pouvez pas dissoudre la guilde avant la fin du sondage.";
+
+"[Guild] You cannot invite someone to the guild whilst a vote is in progress.";
+"[Guilde] Vous ne pouvez pas inviter de nouveau membre dans la guilde avant la fin du sondage.";
+
+"[Guild] You cannot kick the guild leader.";
+"[Guilde] Vous ne pouvez pas exclure le chef de guilde.";
+
+"[Guild] You cannot kick yourself.";
+"[Guilde] Vous ne pouvez pas vous exclure vous-même.";
+
+"[Guild] You cannot leave the guild while a vote is in progress.";
+"[Guilde] Vous ne pouvez pas quitter la guilde avant la fin du sondage.";
+
+"[Guild] You cannot make yourself guild leader.";
+"[Guilde] Vous ne pouvez pas vous faire vous-même chef de guilde.";
+
+"[Guild] You cannot relinquish guild territory during a guild battle.";
+"[Guilde] Vous ne pouvez pas céder un terrain de guilde pendant une bataille entre guildes.";
+
+"[Guild] You cannot remove anyone from the guild whilst at war.";
+"[Guilde] Vous ne pouvez pas bannir quelqu'un de la guilde pendant un combat.";
+
+"[Guild] You cannot select combatants whilst the guild is in a war.";
+"[Guilde] Vous ne pouvez pas donner d'ordres aux combattants tant que la guilde est en guerre.";
+
+"[Guild] You cannot sell the guild territory to yourself.";
+"[Guilde] Vous ne pouvez pas vendre le terrain de guilde à vous-même.";
+
+"[Guild] You cannot start a vote during a war.";
+"[Guilde] Vous ne pouvez pas lancer de sondage pendant le combat.";
+
+"[Guild] You cannot start a vote for your own character.";
+"[Guilde] Vous ne pouvez pas créer de sondage pour votre propre personnage.";
+
+"[Guild] You cannot start a vote to remove the guild leader.";
+"[Guilde] Vous ne pouvez pas lancer de sondage pour bannir le chef de guilde.";
+
+"[Guild] You cannot start a vote to remove yourself from the guild.";
+"[Guilde] Vous ne pouvez pas lancer de sondage pour vous bannir vous-même de la guilde.";
+
+"[Guild] You cannot start a war whilst a vote is in progress.";
+"[Guilde] Vous ne pouvez pas commencer un combat tant que le sondage n'est pas terminé.";
+
+"[Guild] You cannot start another vote whilst one is in progress.";
+"[Guilde] Vous devez attendre la fin du sondage avant d'en lancer un nouveau.";
+
+"[Guild] You cannot use guild skills in field guild wars.";
+"[Guilde] Vous ne pouvez pas utiliser de compétences de guilde dans le champ de guerre de guilde.";
+
+"[Guild] You cannot use the Guild Warehouse whilst a vote is in progress.";
+"[Guilde] Vous devez attendre la fin du sondage avant d'utiliser l'entrepôt de guilde.";
+
+"[Guild] You cannot use this guild logo. Please try again.";
+"[Guilde] Vous ne pouvez pas utiliser ce logo de guilde. Essayez à nouveau.";
+
+"[Guild] You cannot withdraw Yang while another window is open.";
+"[Guilde] Impossible de retirer des Yangs tant qu'une autre fenêtre est encore ouverte.";
+
+"[Guild] You cannot withdraw any Yang as you have more than 2 billion Yang.";
+"[Guilde] Impossible de retirer des Yangs tant que vous possédez plus de 2 milliards de Yangs.";
+
+"[Guild] You do not have permission to use guild skills.";
+"[Guilde] Vous n'avez pas le droit d'utiliser les compétences de guilde.";
+
+"[Guild] You have already applied to this guild.";
+"[Guilde] Vous avez déjà postulé auprès de cette guilde.";
+
+"[Guild] You have already donated the maximum amount of EXP.";
+"[Guilde] Vous avez déjà donné le nombre maximum d'EXP autorisé.";
+
+"[Guild] You have cancelled the fight in Meley's Lair.";
+"[Guilde] Vous avez interrompu le combat dans le Repaire de Meley.";
+
+"[Guild] You have defeated Meley the Dragon Queen!";
+"[Guilde] Vous avez vaincu Meley, reine des dragons.";
+
+"[Guild] You have taken part in the current vote.";
+"[Guilde] Vous avez participé au sondage en cours.";
+
+"[Guild] You have voted against.";
+"[Guilde] Vous avez refusé le sondage.";
+
+"[Guild] You have voted for.";
+"[Guilde] Vous avez accepté le sondage.";
+
+"[Guild] You must conduct a vote before selling your guild territory.";
+"[Guilde] Vous devez effectuer un sondage avant de vendre le terrain de guilde.";
+
+"[Guild] You must wait 10 seconds before reopening the Guild Warehouse.";
+"[Guilde] Vous devez attendre 10 secondes avant d'ouvrir à nouveau l'entrepôt de guilde.";
+
+"[Guild] You must wait at least 12 hours after using the Guild Warehouse before leaving the guild.";
+"[Guilde] Vous pourrez quitter la guilde seulement 12 heures après avoir utilisé l'entrepôt de guilde.";
+
+"[Guild] You need the Ring of Successor to transfer the guild.";
+"[Guilde] Vous avez besoin de l'Anneau de remplacement pour devenir chef de guilde.";
+
+"[Guild] Your application has been registered.";
+"[Guilde] Votre candidature a été envoyée.";
+
+"[Guild] Your guild advertisement will expire soon.";
+"[Guilde] Votre appel d'offre de guilde expire bientôt.";
+
+"[Guild] Your guild does not have enough Yang in the account. Please deposit more Yang and try again.";
+"[Guilde] Votre guilde ne dispose pas d'assez de Yangs sur son compte de guilde. Veuillez verser plus de Yangs et réessayer.";
+
+"[Guild] Your guild doesn't have a warehouse.";
+"[Guilde] Votre guilde n'a pas d'entrepôt de guilde.";
+
+"[Guild] Your members rejected the last vote to sell. Try again.";
+"[Guilde] Lors du dernier sondage, vos membres ont répondu par la négative. Veuillez réessayer.";
+
+"[Guild] Your members rejected the last vote. Please try again in %d months, %d days, %d hours and %d minutes.";
+"[Guilde] Lors du dernier sondage, vos membres ont répondu par la négative. Merci de réessayer dans %d mois, %d jours, %d heures et %d minutes.";
+
+"[Monster Bash Event] Map %s is reporting sightings of %s.";
+"[Évènement de chasse au monstre] %s est apparu sur la carte %s.";
+
+"[Monster Card] Mission level: %d. You've defeated the monster: %s.";
+"[Carte de monstre] Vous avez, au niveau de mission %d, éliminé le monstre %s.";
+
+"[Monster Card] You can now teleport to the monster's location.";
+"[Carte de monstre] Vous pouvez maintenant vous téléporter à proximité du monstre.";
+
+"[Monster Card] You can now transform into the monster.";
+"[Carte de monstre] Vous pouvez maintenant prendre la forme du monstre.";
+
+"[Monster Card] You can now watch the monster's movement animation.";
+"[Carte de monstre] Vous pouvez maintenant voir l'animation du monstre.";
+
+"[Monster Card] You don't have enough space in your inventory.";
+"[Carte de monstre] Vous n'avez pas assez de place dans votre inventaire.";
+
+"[Monster Card] You've completed your monster mission. Collect your Monster Card now.";
+"[Carte de monstre] Vous avez complété une mission de monstre. Procurez-vous votre carte de monstre.";
+
+"[Monster Card] [%s] Level up complete.";
+"[Carte de monstre] [%s] Vous avez complété la progression de niveau.";
+
+"[Okey Event] Amazing prizes await!";
+"Évènement Okey : des prix de grande valeur vous attendent !";
+
+"[Okey Event] Defeat monsters, collect cards and play a game of okey.";
+"Évènement Okey : éliminez des monstres, collectionnez des cartes et jouez une partie d'Okey.";
+
+"[Okey Event] If you make it into the top rankings, you have 7 days to collect your prize.";
+"Évènement Okey : si vous êtes parvenu à faire partie de la liste des meilleurs dans le classement, vous avez 7 jours à partir de maintenant pour aller chercher votre prix.";
+
+"[Personal Premium Shop] %s has been sold. Please collect your money.";
+"[Magasin premium privé] %s a été vendu. Récupérez votre argent.";
+
+"[Personal Premium Shop] A shop has already been opened here. Please find another location to open your shop.";
+"[Magasin premium privé] Un magasin a déjà été ouvert. Trouvez un autre endroit pour ouvrir votre magasin.";
+
+"[Personal Premium Shop] Collectable money will not be updated while you manage items.";
+"[Magasin premium privé] L'argent récupérable n'est pas actualisé pendant que vous gérez des objets.";
+
+"[Personal Premium Shop] The shop is being prepared now.";
+"[Magasin premium privé] Le magasin est déjà prêt.";
+
+"[Personal Premium Shop] You can collect items in your personal shop.";
+"[Magasin premium privé] Vous pouvez récupérer des objets dans votre magasin privé.";
+
+"[Personal Premium Shop] You can collect money in your personal shop.";
+"[Magasin premium privé] Vous pouvez récupérer de l'argent dans votre magasin privé.";
+
+"[Personal Premium Shop] You can't open this, because you still have items to collect.";
+"[Magasin premium privé] Vous ne pouvez pas ouvrir ceci, car vous avez encore des objets à récupérer.";
+
+"[Personal Premium Shop] You can't open this, because you still have money to collect.";
+"[Magasin premium privé] Vous ne pouvez pas ouvrir ceci, car vous avez encore de l'argent à récupérer.";
+
+"[Personal Premium Shop] You cannot do that while managing items.";
+"[Magasin premium privé] Vous ne pouvez pas utiliser ceci pendant que vous gérez des objets.";
+
+"[Personal Premium Shop] You cannot duel here.";
+"[Magasin premium privé] Vous ne pouvez pas vous battre en duel ici.";
+
+"[Personal Premium Shop] You cannot reopen your shop for %d seconds after closing it.";
+"[Magasin premium privé] Vous ne pouvez plus rouvrir votre magasin pendant %d secondes après l'avoir fermé.";
+
+"[Personal Premium Shop] You cannot use items while opening your personal shop.";
+"[Magasin premium privé] Vous ne pouvez pas utiliser d'objets pendant que vous ouvrez votre magasin privé.";
+
+"[Personal Premium Shop] You cannot use that. Go to the village's Trade Administrator.";
+"[Magasin premium privé] Vous ne pouvez pas utiliser ceci. Rendez visite à la gestionnaire commercial au village.";
+
+"[Personal Premium Shop] You cannot use the Personal Premium Shop while you have other windows open.";
+"[Magasin premium privé] Vous ne pouvez pas utiliser votre magasin premium privé pendant que d'autres fenêtres sont ouvertes.";
+
+"[Personal Premium Shop] You don't have enough space in your inventory.";
+"[Magasin premium privé] Vous n'avez pas assez de place dans votre inventaire.";
+
+"[Personal Premium Shop] You have already opened your personal shop.";
+"[Magasin premium privé] Vous avez déjà ouvert votre magasin privé.";
+
+"[Relic Bonus] This is not possible while the Soul Relic window is open.";
+"[Bonus de relique] c'est impossible lorsque la fenêtre de relique d'âme est ouverte.";
+
+"[Relic Bonus] You are already wearing a Soul Relic.";
+"[Bonus de relique] tu portes déjà une relique d'âme.";
+
+"[Ritual of Blood] You don't have enough Yang.";
+"Rituel sanglant : vous n'avez pas suffisamment de Yangs.";
+
+"[Ritual of Blood] You don't have enough souls.";
+"Rituel sanglant : vous n'avez pas suffisamment d'âmes.";
+
+"[Ritual of Blood] You don't have enough space in your inventory.";
+"Rituel sanglant : vous n'avez pas suffisamment de place dans l'inventaire";
+
+"[Soul System] %s is already at the highest level.";
+"[Système d'âme] %s est déjà à son niveau maximal.";
+
+"[Soul System] The soul is active.";
+"[Système d'âme] L'âme est active.";
+
+"[Soul System] Use %s to receive the effect.";
+"[Système d'âme] Utilisez %s pour obtenir l'effet.";
+
+"[Storeroom] An item that is currently being used cannot be stored.";
+"[Entrepôt] Un objet en cours d'utilisation ne peut pas être entreposé.";
+
+"[Sung Mahi Tower] A new ranking cycle has begun.";
+"[Tour infernale de Sung Mahi] Un nouveau cycle de classement a commencé.";
+
+"[Sung Mahi Tower] Break the seal with Sung Mahi's Sealstone!";
+"[Tour infernale de Sung Mahi] Ôtez le sceau à l'aide d'une pierre sceau de Sung Mahi !";
+
+"[Sung Mahi Tower] Destroy the Demon Stone!";
+"[Tour infernale de Sung Mahi] Détruisez la pierre démoniaque !";
+
+"[Sung Mahi Tower] Kill all the monsters within the time limit!";
+"[Tour infernale de Sung Mahi] Éliminez tous les monstres dans les temps impartis !";
+
+"[Sung Mahi Tower] The current ranking cycle has ended.";
+"[Tour infernale de Sung Mahi] Le cycle de classement actuel est terminé.";
+
+"[Sung Mahi Tower] The key does not fit. Find another one and try again!";
+"[Tour infernale de Sung Mahi] La clé ne rentre pas. Trouvez-en une autre et réessayez !";
+
+"[Sung Mahi Tower] You completed this level in %d seconds.";
+"[Tour infernale de Sung Mahi] Vous avez atteint ce niveau au bout de %d secondes.";
+
+"[Sung Mahi Tower] You have to break another seal first!";
+"[Tour infernale de Sung Mahi] Vous devez d'abord ôter un autre sceau !";
+
+"[TEST_ONLY]ÇöÀç ±¹°í : %d";
+"[TEST_ONLY]Impôt : %d.";
+
+"[Transmutation] You cannot equip the transmuted item as it does not match your class.";
+"[Projection] Vous ne pouvez pas vous équiper de l'objet projeté, car il est destiné à une classe différente.";
+
+"[Transmutation] You cannot equip the transmuted item as it does not match your gender.";
+"[Projection] Vous ne pouvez pas vous équiper de l'objet projeté, car il est destiné à l'autre sexe.";
+
+"[World boss] Caution: the world boss will appear soon!";
+"Boss mondial : attention ! Le boss mondial va bientôt apparaître !";
+
+"[World boss] Event completed";
+"Boss mondial : l'évènement est terminé";
+
+"[World boss] Event started";
+"Boss mondial : l'évènement a commencé";
+
+"[World boss] In Channel %d, %s has appeared and is terrorising the area of %s. Let's go hunting!";
+"Boss mondial : dans le canal %d, %s est apparu et terrorise la zone %s. À la chasse !";
+
+"[World boss] Reward for Loot Level I in the rankings: %d";
+"Boss mondial : récompense pour le niveau de butin I du classement : %d";
+
+"[World boss] Rewards for Loot Level II in the rankings: %d";
+"Boss mondial : récompense pour le niveau de butin II du classement : %d";
+
+"[World boss] Rewards for Loot Level III in the rankings: %d";
+"Boss mondial : récompense pour le niveau de butin III du classement : %d";
+
+"[World boss] Rewards for Loot Level IV in the rankings: %d";
+"Boss mondial : récompense pour le niveau de butin IV du classement : %d";
+
+"[World boss] The World boss has escaped! Good luck next time.";
+"Boss mondial : le boss mondial s'est échappé ! Bonne chance la prochaine fois.";
+
+"[World boss] The world boss in Channel %d has been attacked. Join the hunt now!";
+"Boss mondial : le boss mondial du canal %d a été attaqué. Rejoins la chasse !";
+
+"[World boss] Well done! Here is your reward. Join in next time as well!";
+"Boss mondial : bien joué ! Voici votre récompense. Revenez tenter votre chance la prochaine fois !";
+
+"[World boss] Well done: %s has been defeated and peace has been restored... for now.";
+"Boss mondial : bien joué ! %s a été éliminé et la paix est rétablie... pour le moment.";
+
+"[World boss] You can't receive a reward now, because you do not have enough space in your inventory.";
+"Boss mondial : vous ne pouvez pas obtenir de récompense actuellement, car vous n'avez pas suffisamment de place dans votre inventaire.";
+
+"[World boss] You can't receive a reward now.";
+"Boss mondial : vous ne pouvez pas obtenir de récompense actuellement.";
+
+"the level Heroic";
+"Niveau : entraînement héroïque";
+
+"the level Valiant";
+"Niveau : vaillant";
+
+"the level Wild";
+"Niveau : sauvage";
+
+"the level Young";
+"Niveau : jeune";
+
+"°¡¸¸È÷ ÀÖÀ» ¶§¸¸ Âø¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Vous ne devez pas être actif pour pouvoir vous équiper.";
+
+"°¢Á¦±¹ ÁøÇà Á¤º¸";
+"Information pour les Empires.";
+
+"°¨Áö±â¸¦ ÀÛ¿ëÇÏ¿´À¸³ª °¨ÁöµÇ´Â ¿µ¼®ÀÌ ¾ø½À´Ï´Ù.";
+"Pour le moment, il n'y a pas de pierre Metin sur cette carte.";
+
+"°©¿ÊÀ» ¹ş¾î¾ß °³ÀÎ »óÁ¡À» ¿­ ¼ö ÀÖ½À´Ï´Ù.";
+"Vous devez être déséquipé pour ouvrir un magasin";
+
+"°ªÀ» Àß¸ø ÀÔ·ÂÇÏ¿´½À´Ï´Ù.";
+"Vous avez entré une valeur incorrecte.";
+
+"°­È­¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Le renforcement a réussi.";
+
+"°­È­¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Le renforcement a échoué.";
+
+"°­È­¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Vous n'avez pas le matériel nécessaire au renforcement de la pierre-dragon.";
+
+"°­È­Ã¢À» ¿¬ »óÅÂ¿¡¼­´Â ¾ÆÀÌÅÛÀ» ¿Å±æ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas déplacer l'objet dans la fenêtre de raffinage.";
+
+"°­È­ÇÒ ¼ö ¾ø´Â ¿ëÈ¥¼®ÀÔ´Ï´Ù.";
+"Cette pierre-dragon ne peut pas être utilisée pour un renforcement.";
+
+"°°Àº °³·®¼­¸¦ ÇÕÄ¥ ¼ö´Â ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas combiner de Rôles de l'Avancement identiques.";
+
+"°°Àº Á¾·ùÀÇ ¸ŞÆ¾¼®Àº ¿©·¯°³ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas monter plusieurs pierres d'esprit du même type.";
+
+"°°Àº Á¾·ùÀÇ À¯´ÏÅ© ¾ÆÀÌÅÛ µÎ °³¸¦ µ¿½Ã¿¡ ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas vous équiper de cet objet deux fois.";
+
+"°°ÀÌ ÁöÀ» ¼ö ¾ø´Â Á¾·ùÀÇ °Ç¹°ÀÌ Áö¾îÁ® ÀÖ½À´Ï´Ù.";
+"Ce type de bâtiment ne peut être construit qu'une fois.";
+
+"°³·®µÈ ÈÄ ¾ÆÀÌÅÛÀÇ ·¹º§ Á¦ÇÑº¸´Ù ·¹º§ÀÌ ³·½À´Ï´Ù.";
+"Votre niveau n'est pas assez élevé pour pouvoir utiliser cet objet.";
+
+"°³·®À» ÇÏ±â À§ÇÑ µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Pas assez de Yangs pour une amélioration.";
+
+"°³·®À» ÇÏ±â À§ÇÑ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"Pas assez de matériau pour une progression.";
+
+"°³ÀÎ»óÁ¡ »ç¿ëÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas utiliser le parchemin du lieu pendant %d secondes après l'ouverture de l'entrepôt.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡ Ã¢°í¸¦ ¿­¼ö ¾ø½À´Ï´Ù.";
+"Après avoir échangé, vous devez attendre %d secondes avant de pouvoir ouvrir un magasin.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎµîÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas utiliser le parchemin du lieu pendant %d secondes après un échange.";
+
+"°Å·¡ ÈÄ %dÃÊ ÀÌ³»¿¡´Â ´Ù¸¥Áö¿ªÀ¸·Î ÀÌµ¿ ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez aller ailleurs durant %d secondes après avoir effectué un échange.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas utiliser le parchemin du lieu tant qu'une autre fenêtre est ouverte.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â ´Ù¸¥°÷À¸·Î ÀÌµ¿,Á¾·á ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Vous ne pouvez vous rendre ailleurs pendant un moment après un échange.";
+
+"°Å·¡Ã¢,Ã¢°í µîÀ» ¿¬ »óÅÂ¿¡¼­´Â º¸µû¸®,ºñ´Üº¸µû¸®¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas ouvrir un espace de stockage si une autre fenêtre est déjà ouverte.";
+
+"°ÅÁş";
+"FALSE.";
+
+"°Ç¹° ºñ¿ë Á¤º¸ ÀÌ»óÀ¸·Î °Ç¼³ ÀÛ¾÷¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"La construction a échoué du fait d'une mauvaise évaluation du prix.";
+
+"°Ç¹°À» ÁöÀ» ¼ö ¾ø´Â À§Ä¡ÀÔ´Ï´Ù.";
+"YVous ne pouvez pas ériger de bâtiment à cet endroit.";
+
+"°Ç¼³ ºñ¿ëÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Votre guilde n'a pas assez de Yangs pour construire ce bâtiment.";
+
+"°Ç¼³¿¡ ÇÊ¿äÇÑ °Ç¹°ÀÌ Áö¾îÁ® ÀÖÁö ¾Ê½À´Ï´Ù.";
+"Le bâtiment de base doit être construit avant.";
+
+"°ÔÀÓÀ» Á¾·á ÇÕ´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Vous avez été déconnecté du serveur. Veuillez patienter.";
+
+"°áÀç±â°£ÀÌ %dºĞ ÈÄ ¸¸·á µË´Ï´Ù.";
+"Votre temps de jeu se monte à %d Minutes.";
+
+"°áÈ¥ »óÅÂ°¡ ¾Æ´Ï¸é °áÈ¥¹İÁö¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas porter d'alliance si vous n'êtes pas marié(e).";
+
+"°áÈ¥½ÄÀÌ Á¾·áµË´Ï´Ù.";
+"Le mariage sera bientôt terminé.";
+
+"°áÈ¥ÇÏÁö ¾ÊÀº »óÅÂ¿¡¼­ ¿¹¹°À» Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas utiliser cet objet car vous n'êtes pas marié(e).";
+
+"°æÇèÄ¡ %d%%";
+"Expérience %d%%.";
+
+"°æÇèÄ¡ %d%% Ãß°¡ È¹µæ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Le bonus d'expérience est augmenté de %d%%.";
+
+"°æÇèÄ¡ ¹èÀ²";
+"Pourcentage d'expérience";
+
+"°æÇèÄ¡°¡ ºÎÁ·ÇÏ¿© Ã¥À» ÀĞÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas lire ceci car il vous manque de l'expérience.";
+
+"°í±â°¡ ¹Ì³¢¸¸ »©¸Ô°í Àì½Î°Ô µµ¸ÁÄ¨´Ï´Ù.";
+"Vous perdez votre appât avec le poisson.";
+
+"°í±â°¡ ÀâÇû½À´Ï´Ù! (%s)";
+"Vous avez attrapé un poisson ! (%s).";
+
+"°í±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"Le poisson a disparu au fond de l'eau.";
+
+"°î±ªÀÌ ¼ö·Ãµµ°¡ ÃÖ´ë(%d)°¡ µÇ¾ú½À´Ï´Ù.";
+"Vos points d'extraction ont atteint le maximum. (%d).";
+
+"°î±ªÀÌ°¡ ÃÖ´ë ¼ö·Ãµµ¿¡ µµ´ŞÇÏ¿´½À´Ï´Ù.";
+"Vos points d'extraction ont été montés au plus haut niveau.";
+
+"°î±ªÀÌ¸¦ µé°í ÀÖÁö ¾Ê¾Æ¼­ Ä¶ ¼ö ¾ø½À´Ï´Ù.";
+"Sans pioche vous ne pouvez pas extraire.";
+
+"°î±ªÀÌ¸¦ ÀåÂøÇÏ¼¼¿ä.";
+"Vous avez besoin d'une pioche pour extraire du minerai !";
+
+"°î±ªÀÌÀÇ ¼ö·Ãµµ°¡ Áõ°¡ÇÏ¿´½À´Ï´Ù! (%d/%d)";
+"Vos points d'extraction ont augmenté ! (%d/%d).";
+
+"°ñµå µå·Ó·ü %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Pour l'instant, le quota de Yangs lâchés est de %d%% supérieur.";
+
+"°ø°İ·Â +%d";
+"Puissance de l'attaque + %d.";
+
+"°ø°İ·Â +%d%%";
+"Attaque + %d%%.";
+
+"°ø°İ¼Óµµ +%d";
+"Vitesse d'attaque +%d.";
+
+"°øºÎÇÏ±â ½È¾îÁö³×.";
+"Je ne veux plus en apprendre davantage.";
+
+"°üÀü ¸ğµå·Î ±æµåÀü¿¡ Âü°¡ÇÏ¼Ì½À´Ï´Ù.";
+"Vous pouvez participer à cette bataille entre Guildes en mode spectateur.";
+
+"°üÀü »óÅÂ¿¡¼­´Â ±³È¯À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez commercer lorsque vous observez.";
+
+"°üÅë Ãß°¡ µ¥¹ÌÁö %d";
+"Dommage du bonus de charge %d.";
+
+"±¹°í¿¡ µ·ÀÌ ºÎÁ·ÇÏ°Å³ª µ·À» °¡Á®¿Ã¼ö ¾ø´Â »óÈ²ÀÔ´Ï´Ù";
+"Vous n'avez pas assez de Yangs.";
+
+"±¹°í¿¡ µ·ÀÌ ºÎÁ·ÇÕ´Ï´Ù. ÇöÀç : %u ÇÊ¿ä±İ¾× : %u";
+"Manque de taxes. Fonds actuels : %u Fonds manquants : %u";
+
+"±¹°í¿¡ ÀÚ±İÀÌ ¸ğÀÚ¶ø´Ï´Ù ±¹°í : %d";
+"Trop peu de taxes parviennent : %d.";
+
+"±ºÁÖ Á¤º¸";
+"Informations sur l'Empereur";
+
+"±ºÁÖ°¡ ³»¸° Ãàº¹À¸·Î ¸ğµç ¿¡³ÊÁö°¡ °¡µæ Ã¤¿öÁı´Ï´Ù";
+"L'énergie est réfléchie du fait de la Bénédiction de l'Empereur.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ë °¡´ÉÇÑ ±â´ÉÀÔ´Ï´Ù";
+"Cette fonction ne peut être utilisée que par l'Empereur.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ë°¡´É ÇÑ ±â´ÉÀÔ´Ï´Ù";
+"Seul l'Empereur peut utiliser ceci.";
+
+"±ºÁÖ¸¸ÀÌ »ç¿ëÇÒ¼ö ÀÖ´Â ±â´ÉÀÔ´Ï´Ù";
+"Seul un Empereur peut utiliser ceci.";
+
+"±ºÁÖÀÇ ±İ°­±Ç ¿µÇâÀ¸·Î ÀÌÁö¿ª %s À¯Àú´Â 3ºĞ°£ 10 %% ÀÇ ¹æ¾î·ÂÀÌ  Áõ°¡µË´Ï´Ù";
+"Par l'Empereur Geum-Gang-Gwon le joueur %s obtient dans cette région 10%% de défense en plus pendant 3 minutes.";
+
+"±ºÁÖÀÇ »çÀÚÈÄ ¿µÇâÀ¸·Î ÀÌÁö¿ª %s À¯Àú´Â 3ºĞ°£ 10 %% ÀÇ °ø°İ·ÂÀÌ  Áõ°¡µË´Ï´Ù";
+"Par l'Empereur Sa-Za-Hu le joueur %s obtient dans cette région 10%% en force d'attaque pendant 3 minutes.";
+
+"±ºÁÖÀÇ ÀÚ°İÀ» °¡Áö°í ÀÖÁö ¾Ê½À´Ï´Ù";
+"Vous n'avez pas les prérequis pour être Empereur.";
+
+"±ºÁÖÀÇ Ãàº¹À¸·Î ÀÌÁö¿ª %s À¯Àú´Â HP,SP°¡ ¸ğµÎ Ã¤¿öÁı´Ï´Ù.";
+"Lorsque la bénédiction de l'Empereur %s est utilisée les PV et PM sont restaurés.";
+
+"±ºÁÖÀÇ Ãàº¹À» »ç¿ëÇÏ¿´½À´Ï´Ù.";
+"La bénédiction des Empereurs est activée.";
+
+"±ºÁ÷ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas utiliser cet objet car vous n'avez pas toutes les qualifications.";
+
+"±ÍÈ¯¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"La Téléportation a échoué.";
+
+"±×°ÍÀ¸·Î ¼ö·ÃÀº ³¡³­ °Å¾ß!";
+"L'entraînement est terminé.";
+
+"±×·¡, ÀÌ ´À³¦ÀÌ¾ß. Ã¼³»¿¡ ±â°¡ ¾ÆÁÖ Ãæ¸¸ÇØ.";
+"Oui, ça semble bon. Mon corps est empli de Chi.";
+
+"±×·¡, ÃµÃµÈ÷. Á»´õ ÃµÃµÈ÷, ±×·¯³ª ¸·Èû ¾øÀÌ ºü¸£°Ô!";
+"Lentement mais sûrement... sans s'arrêter.";
+
+"±×·£µå ¸¶½ºÅÍ ¼ö·ÃÀ» ÇÒ ¼ö ¾ø´Â ½ºÅ³ÀÔ´Ï´Ù.";
+"Vous ne pouvez apprendre cette compétence avant d'être Grand Maître.";
+
+"±×·± ¸í·É¾î´Â ¾ø½À´Ï´Ù";
+"Cet ordre n'existe pas.";
+
+"±×·± »ç¶÷ÀÌ ¾ø½À´Ï´Ù.";
+"Cette personne n'existe pas.";
+
+"±×·± ÀÌ¸§ ¶Ç´Â ¹øÈ£ÀÇ ±æµå°¡ ¾ø½À´Ï´Ù.";
+"Aucune guilde avec ce nom ou numéro n'existe.";
+
+"±Ù·Â +%d";
+"Force +%d";
+
+"±Ù·ÂÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous n'êtes pas assez fort pour équiper cet objet.";
+
+"±İ¾×ÀÌ ºÎÁ·ÇÕ´Ï´Ù.";
+"Yangs invalides.";
+
+"±â¾ïµÈ À§Ä¡°¡ Å¸Á¦±¹¿¡ ¼ÓÇØ ÀÖ¾î¼­ ±ÍÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Dans un empire étranger, vous ne pouvez pas vous téléporter vers un endroit sûr.";
+
+"±â¾ïÇØ µÑ ¼ö ¾ø´Â À§Ä¡ ÀÔ´Ï´Ù.";
+"Vous ne pouvez sauvegarder cet endroit.";
+
+"±âÀıÇÏÁö ¾ÊÀ½ %d%%";
+"Pas d'étourdissement %d%%.";
+
+"±æµå¿¡ °¡ÀÔÇÏÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Vous n'avez pas rejoint cette Guilde.";
+
+"±æµå¿ø";
+"Membre.";
+
+"±æµåÀå";
+"Chef.";
+
+"±æµåÀü¿¡ Âü°¡ÇÑ »ó´ë¹æ ±æµå¿øÀÌ ¾Æ¹«µµ ¾ø½À´Ï´Ù.";
+"Il n'y a aucun ennemi.";
+
+"±æµåÀüÀÌ ÀÏÂï Á¾·áµÇ¾î ¹«½ÂºÎ·Î ÆÇÁ¤ µÇ¾ú½À´Ï´Ù. (5ºĞÀÌ Áö³ªÁö ¾ÊÀ½)";
+"Comme la guerre de Guilde a été interrompue, elle sera considérée comme match nul.";
+
+"²Ş¼Ó¿¡¼­ ¾î¶»°Ô¿ä?";
+"Dans mes rêves ? Quoi?";
+
+"³ª¹«²Û¸¦ ÅëÇØ ´ÙÀ½ ·¹º§ÀÇ °î±ªÀÌ·Î ¾÷±×·¹ÀÌµå ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Vous pouvez améliorer votre pioche avec l'aide d'un bûcheron.";
+
+"³ª¹«¿¡¼­ ºÎÅÍ ½ÅºñÇÑ ºûÀÌ ³ª¿É´Ï´Ù.";
+"Une mystérieuse lumière apparaît depuis l'arbre.";
+
+"³ªº¸´Ù ³Ê¹« ³ôÀº ·¹º§ÀÇ ¸ó½ºÅÍ·Î´Â º¯½Å ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas vous transformer en un monstre ayant un niveau plus élevé que vous.";
+
+"³ªÀÇ ±ºÁÖ Á¤º¸";
+"Information de mon Empereur.";
+
+"³ªÀÇ »ï°Å¸® ÁøÇàÁ¤º¸";
+"Information sur la guerre entre Empires.";
+
+"³¬½Ã Áß¿¡ ¹Ì³¢¸¦ °¥¾Æ³¢¿ï ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas changer l'appât pendant que vous pêchez.";
+
+"³¬½Ã´ë°¡ ¾Æ´Ñ ¹°°ÇÀ¸·Î ³¬½Ã¸¦ ÇÒ ¼ö ¾ø½À´Ï´Ù!";
+"Vous ne pouvez pas pêcher sans canne!";
+
+"³¬½Ã´ë°¡ ÃÖ´ë ¼ö·Ãµµ¿¡ µµ´ŞÇÏ¿´½À´Ï´Ù.";
+"Vous avez atteint le maximum de points de pêche.";
+
+"³¬½Ã´ë¸¦ ÀåÂø ÇÏ¼¼¿ä.";
+"Choisissez s'il vous plaît une canne.";
+
+"³¬½Ã´ë¿¡ %s¸¦ ¹Ì³¢·Î ³¢¿ó´Ï´Ù.";
+"Vous avez mis %s comme appât sur votre hameçon.";
+
+"³¬½Ã´ëÀÇ ¼ö·Ãµµ°¡ Áõ°¡ÇÏ¿´½À´Ï´Ù! (%d/%d)";
+"Vos points de pêche ont été augmentés ! (%d/%d).";
+
+"³¬½Ã¸¦ ÇÒ ¼ö ÀÖ´Â °÷ÀÌ ¾Æ´Õ´Ï´Ù";
+"Vous ne pouvez pas pêcher ici.";
+
+"³¬½ÃÀÌº¥Æ®¿ùÃ´ºØ¾î";
+"Animation de pêche Grand Sandre.";
+
+"³¬½ÃÀÌº¥Æ®À×¾î";
+"Animation de pêche Carpe.";
+
+"³²Àº »ı¸í·Â ¾çÀÌ ¸ğÀÚ¶ó »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous n'avez pas assez de PV.";
+
+"³²Àº ½ºÅÈ Æ÷ÀÎÆ®°¡ ¾ø½À´Ï´Ù.";
+"Aucun points de caractéristiques restants.";
+
+"³²Àº ½ºÅÈ Æ÷ÀÎÆ®°¡ Àû½À´Ï´Ù.";
+"Les points de caractéristiques restants sont insuffisants.";
+
+"³²Àº Á¤½Å·Â ¾çÀÌ ¸ğÀÚ¶ó »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous n'avez pas assez de Mana pour l'utiliser.";
+
+"³Ê¹« °¡±îÀÌ ÀÖ½À´Ï´Ù.";
+"Vous êtes trop proche.";
+
+"³Ê¹« ¸Ö¸® ÀÖ½À´Ï´Ù";
+"Vous êtes trop éloigné(e).";
+
+"³Ñ¾îÁöÁö ¾ÊÀ½ %d%%";
+"Pas de chute %d%%.";
+
+"³à¼®µéÀº ÀÌ°÷ ¼ºÁö¿¡ ÀÖÀ» ÀÚ°İÀ» ÀÒ¾ú´Ù. ¸ğµÎ ¼ºÁö¿¡¼­ ¹°·¯³ª°Å¶ó~~[ENTER][ENTER] 10ÃÊ ÈÄ¿¡ ¸ğµÎ ¸¶À»·Î ÀÌµ¿ÇÏ°Ô µË´Ï´Ù.";
+", vous n'avez pas le droit d'être là ! Dans 10 secondes, les membres de votre empire quitteront ce sol sacré.";
+
+"´À·ÁÁöÁö ¾ÊÀ½ %d%%";
+"Pas de ralentissement %d%%.";
+
+"´ÔÀÇ ¸»";
+"Cheval.";
+
+"´Ù ÀĞ¾ú´Ù! ÀÌÁ¦ ºñ±Ş¿¡ ÀûÇôÀÖ´Â ´ë·Î Àü½Å¿¡ ±â¸¦ µ¹¸®±â¸¸ ÇÏ¸é,";
+"Je l'ai lu ! À présent, le Chi envahit mon corps.";
+
+"´Ù¸¥ °Å·¡Áß(Ã¢°í,±³È¯,»óÁ¡)¿¡´Â °³ÀÎ»óÁ¡À» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas ouvrir un magasin maintenant.";
+
+"´Ù¸¥ °Å·¡Áß(Ã¢°í,±³È¯,»óÁ¡)¿¡´Â »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas construire pendant qu'un magasin/échange est en cours.";
+
+"´Ù¸¥ °Å·¡ÁßÀÏ°æ¿ì °³ÀÎ»óÁ¡À» ¿­¼ö°¡ ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas ouvrir de magasin privé tant qu'une autre fenêtre est ouverte.";
+
+"´Ù¸¥ °Å·¡Ã¢ÀÌ ¿­·ÁÀÖÀ»°æ¿ì °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Quand une fenêtre est ouverte, vous ne pouvez pas échanger avec d'autres personnes.";
+
+"´Ù¸¥ °Å·¡Ã¢ÀÌ ¿­¸°»óÅÂ¿¡¼­´Â »óÁ¡°Å·¡¸¦ ÇÒ¼ö °¡ ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas échanger dans le magasin tant qu'une autre fenêtre est ouverte.";
+
+"´Ù¸¥ Á¦±¹ À¯Àú´Â ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas recruter de joueurs d'un autre Empire.";
+
+"´Ù¸¥ ÄÄÇ»ÅÍ¿¡¼­ ·Î±×ÀÎ ÇÏ¿© Á¢¼ÓÀ» Á¾·á ÇÕ´Ï´Ù.";
+"Une personne se connecte avec votre compte. Vous allez être déconnecté.";
+
+"´Ù¸¥°Å·¡Ã¢ÀÌ ¿­¸°»óÅÂ¿¡¼­´Â Ã¢°í¸¦ ¿­¼ö°¡ ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas ouvrir d'entrepôt tant qu'une autre fenêtre est ouverte.";
+
+"´ÙÀ½ ¹®Á¦ ÁØºñÇØÁÖ¼¼¿ä.";
+"Prêts pour la question suivante ?";
+
+"´ÙÀÌ¾Æ¸óµå·Î ¼ÒÄÏÀ» Ãß°¡ÇØ¾ßÇÕ´Ï´Ù.";
+"Vous devez ajouter un emplacement pour pouvoir utiliser un diamant.";
+
+"´Ü°è °³·®¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Le degré de pureté de la pierre a été amélioré.";
+
+"´Ü°è °³·®¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"L'amélioration du degré de pureté a échoué.";
+
+"´Ü°è °³·®¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Cet objet n'est pas nécessaire au raffinage.";
+
+"´Ü°è °³·®ÇÒ ¼ö ¾ø´Â ¿ëÈ¥¼®ÀÔ´Ï´Ù.";
+"Cette pierre-dragon ne peut pas être utilisée pour le raffinage.";
+
+"´İ±â";
+"Fermer";
+
+"´ç½ÅÀÌ ÁÖ»çÀ§¸¦ ±¼·Á %d°¡ ³ª¿Ô½À´Ï´Ù. (%d-%d)";
+"Vous avez lancé le dé. Vous avez obtenu %d (%d-%d).";
+
+"´ë·Ã °­Á¦ Á¾·á ¼º°ø";
+"Le duel a été annulé avec succès.";
+
+"´ë·Ã °­Á¦ Á¾·á ½ÇÆĞ";
+"Le duel a été annulé.";
+
+"´ë·Ã »ó´ë°¡ »ç¶óÁ® ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Duel terminé, votre combattant ayant disparu.";
+
+"´ë·Ã ½Ã°£ ÃÊ°ú·Î ´ë·ÃÀ» Áß´ÜÇÕ´Ï´Ù.";
+"Le duel est terminé car le temps est écoulé.";
+
+"´ë·Ã ½ÃÀÛ¿¡ ¹®Á¦°¡ ÀÖ½À´Ï´Ù.";
+"Il y a un problème avec le lancement du duel.";
+
+"´ë·Ã Áß¿¡´Â ÀÌ¿ëÇÒ ¼ö ¾ø´Â ¹°Ç°ÀÔ´Ï´Ù.";
+"Vous ne pouvez utiliser cet objet durant un duel.";
+
+"´ë·ÃÀÌ ¼º°øÀûÀ¸·Î ½ÃÀÛ µÇ¾ú½À´Ï´Ù.";
+"Le lancement du duel a été un succès.";
+
+"´ë·ÃÀÌ ½ÃÀÛµÇ¾ú½À´Ï´Ù.";
+"Le duel a commencé.";
+
+"´ë·ÃÀÚ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Le duel est terminé car un problème est survenu avec un combattant.";
+
+"´ë·ÃÀÚ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Áß´ÜÇÕ´Ï´Ù.";
+"Le duel a été stoppé car l'arène a rencontré un problème.";
+
+"´ë·ÃÀÚ°¡ ¾ø½À´Ï´Ù.";
+"Pas de combattants ici.";
+
+"´ë·ÃÀå ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Le duel est terminé car l'arène a rencontré un problème.";
+
+"´ë·ÃÀå¿¡¼­ »ç¿ëÇÏ½Ç ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez utiliser cette arène.";
+
+"´ë¹Ú°ñµå µå·Ó·ü %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"En ce moment, le taux de butin de la pluie de Yangs est augmenté de %d %%.";
+
+"´õ ³ôÀº °æÁöÀÇ ¼ö·ÃÀ» ¼º°øÀûÀ¸·Î ³¡³»¼Ì½À´Ï´Ù.";
+"Vous avez terminé votre entraînement grâce au livre avec succès.";
+
+"´õ ÀÌ»ó OXÀÌº¥Æ® Âü°¡ÀÚ¸¦ ¹ŞÁö ¾Ê½À´Ï´Ù.";
+"OX L'évènement ne peut accepter d'avantage de participants.";
+
+"´õ ÀÌ»ó °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Pas de progression possible.";
+
+"´õ ÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez plus augmenter cette compétence.";
+
+"´õ ÀÌ»ó ½Â¸¶ ¼ö·Ã¼­¸¦ ÀĞÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez plus lire de livres d'équitation.";
+
+"´õ ÀÌ»ó ÀÌ ¾ÆÀÌÅÛÀ» ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Cet objet ne peut plus être amélioré. Le nombre maximum de bonus a été atteint.";
+
+"´õÀÌ»ó ÀÌ ¾ÆÀÌÅÛÀ» ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous devez utiliser l'orbe de bénédiction afin d'ajouter un nouveau bonus à cet objet.";
+
+"´õÀÌ»ó Ä³³¾ ¼ö ¾ø½À´Ï´Ù.";
+"Rien à extraire ici.";
+
+"´øÀü ¾È¿¡¼­´Â %s%s »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"%s%s ne peut être utilisé dans un donjon.";
+
+"µ¶ ÀúÇ× %d%%";
+"Résistance au Poison %d%%.";
+
+"µ¶°ø°İ %d";
+"Attaque empoisonnée %d.";
+
+"µ· %d ³ÉÀ» È¹µæÇß½À´Ï´Ù.";
+"Vous avez reçu %d Yangs.";
+
+"µ· ´ë¹ÚÀÌ ³ª¿Ã È®·ü";
+"Taux de butin : pluie de Yangs";
+
+"µ· µå·ÓÀ² %.1f¹è";
+"Chance de trouver des Yangs %. 1f.";
+
+"µ·ÀÌ ³ª¿Ã È®·ü";
+"Pourcentages de drop de Yangs";
+
+"µ·ÀÌ ºÎÁ·ÇÏ°Å³ª ¾ÆÀÌÅÛÀÌ Á¦ÀÚ¸®¿¡ ¾ø½À´Ï´Ù.";
+"Pas assez de Yangs ou d'espace restant dans l'inventaire.";
+
+"µ¿¹°·ù ¸ó½ºÅÍ Å¸°İÄ¡ +%d%%";
+"Puissance de l'attaque du cheval contre un monstre +%d%%.";
+
+"µ¿ÀÏÇÑ ¸Ó¸® ½ºÅ¸ÀÏ·Î´Â ±³Ã¼ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous avez déjà cette coupe de cheveux.";
+
+"µÎ¼Õ°Ë ¹æ¾î %d%%";
+"Défense contre l'épée à deux mains %d%%.";
+
+"µĞ°© Áß¿¡´Â ´É·ÂÀ» ¿Ã¸± ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez changer vos caractéristiques tant que vous êtes transformé.";
+
+"µĞ°© Áß¿¡´Â Âø¿ëÁßÀÎ Àåºñ¸¦ º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas changer d'objets équipés tant que vous êtes transformé.";
+
+"µĞ°©¼­ ¼ö·ÃÀ» ¸¶Ãº½À´Ï´Ù. ½Å¼±¿¡°Ô Ã£¾Æ°¡¼¼¿ä.";
+"Votre apprentissage de la polymorphie est parfait !";
+
+"µĞ°©¿¡ ½ÇÆĞ ÇÏ¿´½À´Ï´Ù";
+"Erreur pendant la transformation.";
+
+"µĞ°©ÇÒ ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"Vous ne pouvez pas vous transformer en étant à cheval.";
+
+"µåµğ¾î ³¡ÀÌ º¸ÀÌ´Â °Ç°¡...  ÀÌ ±â¼úÀº ÀÌÇØÇÏ±â°¡ ³Ê¹« Èûµé¾î..";
+"Les explications sont difficiles à comprendre. Il faut que je continue à étudier le texte.";
+
+"µî±Ş °³·®¿¡ ¼º°øÇß½À´Ï´Ù.";
+"Le raffinage d'une classe au-dessus a réussi.";
+
+"µî±Ş °³·®¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"Le raffinage d'une classe au-dessus a échoué.";
+
+"µî±Ş °³·®¿¡ ÇÊ¿äÇÑ Àç·á°¡ ¾Æ´Õ´Ï´Ù.";
+"Cet objet n'est pas nécessaire à l'amélioration du degré de pureté.";
+
+"¶³¾îÁø ¾ÆÀÌÅÛÀº %dºĞ ÈÄ »ç¶óÁı´Ï´Ù.";
+"L'objet disparaîtra après %d minutes.";
+
+"¶³¾îÁø ¾ÆÀÌÅÛÀº 3ºĞ ÈÄ »ç¶óÁı´Ï´Ù.";
+"L'objet abandonné disparaîtra dans 5 minutes.";
+
+"¶ß°Å¿î ¹«¾ùÀÌ °è¼Ó ¿ë¼ÚÀ½Ä¡°í ÀÖ¾î! ÀÌ°Ç, ÀÌ°ÍÀº!";
+"L’entraînement semble déjà porter ses fruits...";
+
+"·¹º§ 20 ÀÌÇÏ´Â ÇÚµåÆù ¹øÈ£¸¦ µî·ÏÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Votre niveau doit être supérieur à 20 pour enregistrer votre numéro de téléphone portable.";
+
+"·¹º§ 30ÀÌ µÇ±â Àü¿¡´Â ½ÀµæÇÒ ¼ö ÀÖÀ» °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Vous devez être au moins de niveau 30 pour comprendre ce livre.";
+
+"·¹º§ 50ÀÌ µÇ±â Àü¿¡´Â ½ÀµæÇÒ ¼ö ÀÖÀ» °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Vous devez être au moins de niveau 50 pour comprendre ce livre.";
+
+"·¹º§ÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Votre niveau est trop bas pour équiper cet objet.";
+
+"·Î±×ÀÎ È­¸éÀ¸·Î µ¹¾Æ °©´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Retour à la fenêtre de connexion. Veuillez patienter.";
+
+"·í·¿À» µ¹¸³´Ï´Ù. ±İ¾× %d";
+"Tourner la Roulette pour %d Yangs.";
+
+"¸¦";
+"Le.";
+
+"¸¶¹ı °ø°İ·Â +%d";
+"Attaque Magique + %d.";
+
+"¸¶¹ı ¹æ¾î·Â +%d";
+"Défense Magique + %d.";
+
+"¸¶¹ı ÀúÇ× %d%%";
+"Résistance à la Magie %d%%.";
+
+"¸¶À½ÀÌ ¸¼¾ÆÁö´Â±º. °¡½¿À» Áş´©¸£´ø ¹«¾ğ°¡°¡ Á» °¡º­¿öÁø ´À³¦ÀÌ¾ß.";
+"Vous avez l'esprit clair. Vous pouvez vous concentrer correctement à présent.";
+
+"¸¹Àº Âü¿© ºÎÅ¹µå¸³´Ï´Ù.";
+"Nous demandons à un grand nombre de joueurs de participer.";
+
+"¸» ¼ÒÈ¯ ¾ÆÀÌÅÛÀ» »ç¿ëÇÏ¼¼¿ä.";
+"Veuillez utiliser un objet pour appeler un cheval.";
+
+"¸» ¼ÒÈ¯¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"L'appel de votre monture a échoué.";
+
+"¸»¿¡°Ô %s%s ÁÖ¾ú½À´Ï´Ù.";
+"Vous avez donné du %s%s au cheval.";
+
+"¸»¿¡°Ô »ç·á¸¦ ÁÖ¾ú½À´Ï´Ù.";
+"Vous avez nourri le cheval.";
+
+"¸»¿¡°Ô ¼±ÃÊ¸¦ ÁÖ¾ú½À´Ï´Ù.";
+"Vous avez nourri un cheval avec des Herbes médicinales.";
+
+"¸»¿¡¼­ ¸ÕÀú ³»·Á¾ß ÇÕ´Ï´Ù.";
+"Vous devez descendre de votre cheval.";
+
+"¸»À» µ¹·Áº¸³Â½À´Ï´Ù.";
+"Vous avez renvoyé votre cheval.";
+
+"¸»À» ¸ÕÀú ¼ÒÈ¯ÇØÁÖ¼¼¿ä.";
+"Veuillez appeler votre cheval auparavant.";
+
+"¸»À» ¼ÒÀ¯ÇÏ°í ÀÖÁö ¾Ê½À´Ï´Ù.";
+"Vous ne possédez pas de cheval.";
+
+"¸»À» Åº »ó´ë¿Í °¨Á¤Ç¥ÇöÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez exprimer vos émotions à quelqu'un qui est à cheval";
+
+"¸»À» Åº »óÅÂ¿¡¼­ °¨Á¤Ç¥ÇöÀ» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez montrer vos émotions à cheval";
+
+"¸»À» Åº »óÅÂ¿¡¼­ ¿¹º¹À» ÀÔÀ» ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas utiliser cela pendant que vous êtes en selle.";
+
+"¸»À» Åº »óÅÂ¿¡¼­´Â ¸ÔÀÌ¸¦ ÁÙ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas nourrir votre cheval alors que vous êtes en selle.";
+
+"¸»ÀÇ ½ºÅ×¹Ì³Ê°¡ ºÎÁ·ÇÏ¿© ¸»À» Å» ¼ö ¾ø½À´Ï´Ù.";
+"L'endurance de votre cheval est trop faible.";
+
+"¸»ÀÌ ¾ø½À´Ï´Ù. ¸¶±Â°£ °æºñº´À» Ã£¾Æ°¡¼¼¿ä.";
+"Pas de cheval ici. Demandez au garçon d'écurie.";
+
+"¸»ÀÌ Á×¾îÀÖ´Â »óÅÂ ÀÔ´Ï´Ù.";
+"Votre cheval est mort.";
+
+"¸ÂÀ¸¸é O, Æ²¸®¸é X·Î ÀÌµ¿ÇØÁÖ¼¼¿ä";
+"Si ceci est vrai, allez sur O. Si ceci est faux, allez sur X.";
+
+"¸Ó´Ï  ·ê·¿ ½ÃÀÛ.";
+"Démarrer la Roulette de Yang.";
+
+"¸ÕÀú ´ÙÀÌ¾Æ¸óµå·Î ¾Ç¼¼¼­¸®¿¡ ¼ÒÄÏÀ» Ãß°¡ÇØ¾ßÇÕ´Ï´Ù.";
+"Vous devez tout d'abord ajouter un emplacement en utilisant un diamant.";
+
+"¸ÕÀú ¿ëÈ¥¼® Äù½ºÆ®¸¦ ¿Ï·áÇÏ¼Å¾ß ÇÕ´Ï´Ù.";
+"Avant de pouvoir briser le Cor Draconis, vous devez avoir terminé la quête de la pierre-dragon et activé l'alchimie des pierres-dragons.";
+
+"¸ÕÀú ÀÏ¾î ³ª¼¼¿ä.";
+"Levez vous auparavant.";
+
+"¸ÕÀú Àç°¡ºñ¼­¸¦ ÀÌ¿ëÇÏ¿© ¼Ó¼ºÀ» Ãß°¡½ÃÄÑ ÁÖ¼¼¿ä.";
+"Seul l'orbe de bénédiction peut être utilisé pour un objet possédant déjà 4 bonus.";
+
+"¸ŞÆ¾2ÀÎÁõ¹øÈ£: %s";
+"Numéro de confirmation Metin2: %s";
+
+"¸ŞÆ¾¼® ºÎÂø¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Cette Pierre d'esprit a été liée avec succès.";
+
+"¸ŞÆ¾¼® ºÎÂø¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Cette Pierre d'esprit s'est brisée lors de la tentative de liaison.";
+
+"¸í·É¾î¸¦ ¸ğµÎ ÀÔ·ÂÇÏ¼¼¿ä.";
+"Veuillez entrer l'ordre en entier.";
+
+"¸í·É¾îÀÇ ¼­ºê Ä¿¸Çµå°¡ Àß¸ø µÇ¾ú½À´Ï´Ù.";
+"L'ordre ou le sous-ordre est incorrect.";
+
+"¸ğ´ÚºÒÀ» ÇÇ¿ï ¼ö ¾ø´Â ÁöÁ¡ÀÔ´Ï´Ù.";
+"Vous ne pouvez faire de feu de camp ici.";
+
+"¸ó½ºÅÍ¿¡°Ô °­ÇÔ +%d%%";
+"Force contre les Monstres + %d%%.";
+
+"¸ö ¼ÓÀÌ ¶ß°Ì±º. ÇÏÁö¸¸ ¾ÆÁÖ Æí¾ÈÇØ. ÀÌ´ë·Î ±â¸¦ ¾ÈÁ¤½ÃÅ°ÀÚ.";
+"Je boue intérieurement mais cela apaise mon corps.";
+
+"¸ö¿¡¼­ ¹º°¡ ÈûÀÌ ÅÍÁ® ³ª¿À´Â ±âºĞÀÌ¾ß!";
+"Mon corps est chargé de puissance !";
+
+"¹«±â¿Í °©¿Ê¿¡¸¸ »ç¿ë °¡´ÉÇÕ´Ï´Ù.";
+"Ne peut être utilisé que sur les armes et les armures.";
+
+"¹«´ç°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% Résistance contre les attaques des Chamanes.";
+
+"¹«´ç¿¡°Ô °­ÇÔ +%d%%";
+"Force contre les Chamanes + %d%%.";
+
+"¹«·á °³·® ±âÈ¸´Â 20 ÀÌÇÏÀÇ ¹«±â¸¸ °¡´ÉÇÕ´Ï´Ù";
+"L'amélioration gratuite d'armes ne peut être effectuée que sur les armes de niveau 20 maximum.";
+
+"¹«»ç°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% Résistance contre les attaques des Guerriers.";
+
+"¹«»ç¿¡°Ô °­ÇÔ +%d%%";
+"Force contre les Guerriers + %d%%.";
+
+"¹®ÀÚ ¸Ş¼¼Áö Àü¼Û¿¡´Â 2000¿øÀÌ ÇÊ¿ä ÇÕ´Ï´Ù.";
+"Vous avez besoin de 2000 Yangs pour envoyer un message.";
+
+"¹®ÀÚ ¸Ş¼¼Áö Àü¼ÛÀº ·¹º§ 20ºÎÅÍ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Vous devez être au moins niveau 20 pour pouvoir envoyer des messages.";
+
+"¹®ÀÚ ¸Ş¼¼Áö¸¦ Àü¼Û Çß½À´Ï´Ù.";
+"Votre message a été envoyé.";
+
+"¹®Á¦ ÀÔ´Ï´Ù.";
+"Question.";
+
+"¹®Á¦¸¦ ÃâÁ¦ÇÏ¿´½À´Ï´Ù.";
+"Une erreur a été rencontrée.";
+
+"¹®Á¦¸¦ ÃâÁ¦ÇÏÁö ¸øÇß½À´Ï´Ù.";
+"Aucune erreur rencontrée.";
+
+"¹° ¼Ó¿¡ ¸ğ´ÚºÒÀ» ÇÇ¿ï ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez faire de feu de camp sous l'eau.";
+
+"¹°¸®Å¸°İ½Ã ºí·° È®·ü %d%%";
+"%d%% de chance d'esquiver une attaque de mêlée.";
+
+"¹°¾à »ç¿ë½Ã %d%% ¼º´É Áõ°¡";
+"Augmentation de la Puissance de %d%% lorsque vous prenez une potion.";
+
+"¹°¾à Á¦Á¶¿¡ ½ÇÆĞÇß½À´Ï´Ù.";
+"La création de la potion a échoué.";
+
+"¹°¾à Á¦ÇÑÀÌ ¾ø½À´Ï´Ù.";
+"Il n'y a pas de limites pour les Potions.";
+
+"¹°¾à Á¶ÇÕÀ» À§ÇÑ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"Vous n'avez pas le nécessaire pour préparer cette potion.";
+
+"¹°¾àÀ» %d °³ ±îÁö »ç¿ë °¡´ÉÇÕ´Ï´Ù.";
+"Vous pouvez utiliser %d Potions.";
+
+"¹º°¡ ¸ö ¾È¿¡ ÈûÀÌ »ı±â´Â ±âºĞÀÎ °É.";
+"Je me sens reposé.";
+
+"¹Ì³¢¸¦ ³¢°í ´øÁ® ÁÖ¼¼¿ä.";
+"Mettez tout d'abord l'appât sur l'hameçon.";
+
+"¹ÎÃ¸ +%d";
+"Dextérité +%d";
+
+"¹ÎÃ¸ÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous manquez de dextérité pour pouvoir vous équiper de ceci.";
+
+"¹Ğ±³·ù Å¸°İÄ¡ +%d%%";
+"Bonus d'attaque contre Milgyo + %d%%.";
+
+"¹Ù¶÷ ÀúÇ× %d%%";
+"Résistance au Vent %d%%.";
+
+"¹æ¾î·Â +%d";
+"Armure + %d.";
+
+"¹æ¾î·Â +%d%%";
+"Défense + %d%%.";
+
+"¹æ¿ï ¹æ¾î %d%%";
+"Défense contre le Gong %d%%.";
+
+"¹è ¼Ó¿¡¼­ Á¶°³°¡ ³ª¿Ô½À´Ï´Ù.";
+"Il y a un coquillage dans l'estomac du poisson.";
+
+"¹è ¼Ó¿¡¼­ Áö··ÀÌ°¡ ³ª¿Ô½À´Ï´Ù.";
+"Il y a un ver dans l'estomac du poisson.";
+
+"¹ö¸± ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Vous ne pouvez pas lâcher cet objet.";
+
+"º¯°æÇÒ ¼Ó¼ºÀÌ ¾ø½À´Ï´Ù.";
+"Vous n'avez aucune amélioration à faire.";
+
+"º¯½Å »óÅÂ¿¡¼­´Â ¸»¿¡ Å» ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas acheter de cheval tant que vous êtes transformé.";
+
+"º¯½ÅÁß¿¡´Â Ã¥À» ÀĞÀ»¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas lire de livre lorsque vous êtes transformé.";
+
+"ºÎÂøÇÒ ¼ö ÀÖ´Â ½½·ÔÀÌ ¾ø½À´Ï´Ù.";
+"Aucun emplacement libre.";
+
+"ºÎÃ¤ ¹æ¾î %d%%";
+"Défense contre l'éventail %d%%.";
+
+"ºÒ¹ı ÇÁ·Î±×·¥ÀÌ °¨Áö µÇ¾î °ÔÀÓÀÌ Á¾·á µË´Ï´Ù.";
+"Un programme illégal a été détecté. Le jeu va être fermé.";
+
+"ºñ¼Ó¾î³ª Àº¾î°¡ Æ÷ÇÔµÈ »óÁ¡ ÀÌ¸§À¸·Î »óÁ¡À» ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"Nom de magasin non autorisé.";
+
+"ºó º´ÀÌ ¸ğÀÚ¸¨´Ï´Ù.";
+"Vous n'avez pas assez de bouteilles vides.";
+
+"»©³¾ ¼ö ÀÖ´Â ¸ŞÆ¾¼®ÀÌ ¾ø½À´Ï´Ù.";
+"Il n'y a pas de pierre pouvant être retirée.";
+
+"»©³¾ ¿µ¼®ÀÌ ¾ø½À´Ï´Ù";
+"Il n'y a pas de pierre qui puisse être enlevée.";
+
+"»ç±Í Å¸¿ö ¿Ï·á º¸»óÀº ÇÑ¹ø±îÁö »ç¿ë°¡´ÉÇÕ´Ï´Ù.";
+"Vous ne pouvez être récompensé qu'une fois pour la Quête de la Tour des démons.";
+
+"»ç¿ë Á¦ÇÑ·®À» ÃÊ°úÇÏ¿´½À´Ï´Ù.";
+"La limite est dépassée.";
+
+"»ç¿ë¹ı: transfer <name>";
+"Utilisez : transfer <name>";
+
+"»ç¿ë¹ı: warpto <character name>";
+"Ordre : warpto <character name>";
+
+"»ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Cette fonction n'est pas disponible ici pour l'instant.";
+
+"»ï°Å¸® ¸÷ ¸®Á¨";
+"Nombre de monstres dans la guerre de Empires.";
+
+"»ï°Å¸® ÀüÅõ Âü°¡Áß¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas utiliser le parchemin du lieu pendant une bataille des empires.";
+
+"»ï°Å¸® ÀüÅõ¿¡¼­ %s ±¹°¡°¡ °¡Àå¸ÕÀú Å»¶ôÀ» ÇÏ¿´½À´Ï´Ù";
+"L'Empire %s a été battu et abandonne la guerre de Empires.";
+
+"»ó´ë¹æ Ä³¸¯ÅÍ°¡ Á¢¼ÓÀ» Á¾·áÇÏ¿© ´ë·ÃÀ» ÁßÁöÇÕ´Ï´Ù.";
+"Les combattants ont été séparé. Le duel est arrété.";
+
+"»ó´ë¹æ Ä³¸¯ÅÍÀÇ ¹®Á¦·Î ÀÎÇÏ¿© ´ë·ÃÀ» Á¾·áÇÕ´Ï´Ù.";
+"Votre combattant rencontre des problèmes. Le duel a été arrété.";
+
+"»ó´ë¹æÀÇ µ·ÀÌ ºÎÁ·ÇÏ°Å³ª ¾ÆÀÌÅÛÀÌ Á¦ÀÚ¸®¿¡ ¾ø½À´Ï´Ù.";
+"L'autre joueur n'a assez de Yangs ou d'espace restant dans l'inventaire.";
+
+"»ó´ë¹æÀÇ ¼ÒÁöÇ°¿¡ ºó °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"L'autre joueur n'a pas assez d'espace dans l'inventaire.";
+
+"»ó´ë¹æÀÇ ÃÑ±İ¾×ÀÌ 20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© °Å·¡¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù..";
+"Le joueur a plus de 2 milliards de Yangs. Vous ne pouvez pas échanger avec lui.";
+
+"»ó´ë¹æÀÌ %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"Le joueur est sur le canal %d (Vous êtes sur le canal %d).";
+
+"»ó´ë¹æÀÌ ±³È¯ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"L'autre personne a annulé l'échange.";
+
+"»ó´ë¹æÀÌ ´Ù¸¥ °Å·¡¸¦ ÇÏ°í ÀÖ´Â ÁßÀÔ´Ï´Ù.";
+"Ce joueur effectue un échange avec un autre joueur.";
+
+"»ó´ë¹æÀÌ ´Ù¸¥ °Å·¡ÁßÀÌ¶ó °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas échanger avec ce joueur, car il est déjà occupé.";
+
+"»ó´ë¹æÀÌ ´ë·ÃÁßÀÔ´Ï´Ù.";
+"Le joueur est en ce moment en train de se battre.";
+
+"»ó´ë¹æÀÌ ¸Ş½ÅÁ® Ãß°¡ °ÅºÎ »óÅÂÀÔ´Ï´Ù.";
+"Le joueur a refusé d'être ajouté à votre liste d'amis.";
+
+"»ó´ë¹æÀÌ ¿Â¶óÀÎ »óÅÂ°¡ ¾Æ´Õ´Ï´Ù.";
+"Le joueur est déconnecté.";
+
+"»ó´ë¹æÀÌ ÀÖ´Â °÷À¸·Î ¿öÇÁÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez vous téléporter jusqu'à ce joueur.";
+
+"»ó´ë¹æÀÌ Ä£±¸ Ãß°¡¸¦ ¹ŞÀ» ¼ö ¾ø´Â »óÅÂÀÔ´Ï´Ù.";
+"Vous ne pouvez pas ajouter votre vis-à-vis à vos amis.";
+
+"»ó´ë¹æÀÌ ÆÄÆ¼¿¡ ¼ÓÇØÀÖÁö ¾Ê½À´Ï´Ù.";
+"Ce joueur n'est pas dans ce groupe.";
+
+"»óÀÚ°¡ °©ÀÚ±â Æø¹ßÇÏ¿´½À´Ï´Ù! »ı¸í·ÂÀÌ °¨¼ÒÇß½À´Ï´Ù.";
+"La boîte explose soudainement ! Vos PV sont réduits.";
+
+"»óÀÚ¿¡¼­ %s °¡ %d °³ ³ª¿Ô½À´Ï´Ù.";
+"Vous avez reçu %s, %d unités.";
+
+"»óÀÚ¿¡¼­ %s °¡ ³ª¿Ô½À´Ï´Ù.";
+"Il y a %s dans cette boîte.";
+
+"»óÀÚ¿¡¼­ ³ª¿Â ³ì»ö ¿¬±â¸¦ µéÀÌ¸¶½ÃÀÚ µ¶ÀÌ ¿Â¸öÀ¸·Î ÆÛÁı´Ï´Ù!";
+"Si vous inhalez la fumée verte s'échappant de la boîte, du poison se propagera dans votre corps!";
+
+"»óÀÚ¿¡¼­ ³ª¿Â »¡°£ ¿¬±â¸¦ µéÀÌ¸¶½ÃÀÚ ¿òÁ÷ÀÌ´Â ¼Óµµ°¡ ´À·ÁÁ³½À´Ï´Ù!";
+"Si vous inhalez la fumée rouge s'échappant de la boîte, vous serez plus rapide!";
+
+"»óÀÚ¿¡¼­ ¸ó½ºÅÍ°¡ ³ªÅ¸³µ½À´Ï´Ù!";
+"Découvrez ce qui était dans la boîte !";
+
+"»óÀÚ¿¡¼­ ºÎÅÍ ½ÅºñÇÑ ºûÀÌ ³ª¿É´Ï´Ù.";
+"Une lumière mystérieuse s'échappe de la boîte.";
+
+"»óÁ¡°úÀÇ °Å¸®°¡ ³Ê¹« ¸Ö¾î ¹°°ÇÀ» »ì ¼ö ¾ø½À´Ï´Ù.";
+"Vous êtes trop loin du magasin pour acheter.";
+
+"»óÁ¡°úÀÇ °Å¸®°¡ ³Ê¹« ¸Ö¾î ¹°°ÇÀ» ÆÈ ¼ö ¾ø½À´Ï´Ù.";
+"Vous êtes trop loin du magasin pour vendre.";
+
+"»óÇ°À» ¹ŞÀ» ÀÎº¥Åä¸®°¡ ºÎÁ·ÇÕ´Ï´Ù. ÀÎº¥Åä¸®¸¦ ºñ¿öÁÖ¼¼¿ä!";
+"Pas assez de place dans l'inventaire pour recevoir la récompense.";
+
+"»ı°¢¸¸Å­ ÀĞ±â°¡ ½±Áö°¡ ¾Ê±º. ÀÌÇØµµ ¾î·Æ°í ³»¿ëµµ ³­ÇØÇØ.";
+"C'est une voie plus compliquée que je ne le pensais.";
+
+"»ı¸í·Â È¸º¹ +%d";
+"Récupération de l'Énergie +%d.";
+
+"¼­¹ö¿¡ Ä¡¸íÀûÀÎ ¿À·ù°¡ ¹ß»ıÇÏ¿© ÀÚµ¿À¸·Î ÀçºÎÆÃµË´Ï´Ù.";
+"Erreur critique du serveur. Le serveur va être redémarré automatiquement.";
+
+"¼±¾ÇÄ¡°¡ %d Áõ°¡ÇÏ¿´½À´Ï´Ù.";
+"Votre rang a été augmenté de %d points.";
+
+"¼±¾ÇÄ¡¸¦ ´õ ÀÌ»ó ¿Ã¸± ¼ö ¾ø½À´Ï´Ù.";
+"Les points de rang ne peuvent plus être augmentés.";
+
+"¼±ÅÃ ¸Ê Á¤º¸ ¼ºÁö %d Åë·Î %d %d %d";
+"Choisissez les informations de la Carte de la Terre sacrée  %d Entrée %d %d %d.";
+
+"¼ºº°ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas utiliser cet objet car vous n'avez pas le bon genre.";
+
+"¼ºº°ÀÌ ¸ÂÁö¾Ê¾Æ ÀÌ ¾ÆÀÌÅÛÀ» ¿­ ¼ö ¾ø½À´Ï´Ù.";
+"Cet objet ne peut être ouvert que par un individu de l'autre sexe.";
+
+"¼º¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖ´Â ±â´ÉÀÔ´Ï´Ù.";
+"Vous pouvez utiliser cette fonction seulement si vous êtes au château.";
+
+"¼ºÁö¿¡¼­ ºÎÈ° ±âÈ¸¸¦ ¸ğµÎ ÀÒ¾ú½À´Ï´Ù! ¸¶À»·Î ÀÌµ¿ÇÕ´Ï´Ù!";
+"Le temps d'attente est écoulé. Vous allez être ressuscité en ville.";
+
+"¼ºÁöÀÇ ¸¶¿Õ: ³ÊÈñ";
+"Le Diable du lieu sacré : [ENTER][ENTER]";
+
+"¼¼±İÀÌ %d %·Î ¼³Á¤µÇ¾ú½À´Ï´Ù";
+"Les taxes sont fixées à %d %%.";
+
+"¼Ë´Ù¿îÀÌ %dÃÊ ³²¾Ò½À´Ï´Ù.";
+"%d secondes avant la fermeture.";
+
+"¼ÒÀ¯ µ·ÀÌ 20¾ï³ÉÀ» ³Ñ¾î °Å·¡¸¦ ÇÛ¼ö°¡ ¾ø½À´Ï´Ù.";
+"Vous avez plus de 2 milliards de Yangs. Vous ne pouvez pas commercer.";
+
+"¼ÒÁö±İÀÌ ºÎÁ·ÇÏ¿© ÀÌ ¾ÆÀÌÅÛÀ» »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous n'avez pas assez de Yangs pour utiliser cet objet.";
+
+"¼ÒÁöÇ°¿¡ ºó °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"Il n'y a pas assez de place dans l'inventaire.";
+
+"¼ÒÁöÇÏ°í ÀÖ´Â ¾ÆÀÌÅÛÀÌ ³Ê¹« ¸¹½À´Ï´Ù.";
+"Vous portez trop d'objets.";
+
+"¼ÒÄÏ Ãß°¡¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Aucun emplacement ajouté.";
+
+"¼ÒÄÏÀÌ ¼º°øÀûÀ¸·Î Ãß°¡µÇ¾ú½À´Ï´Ù.";
+"Un emplacement a bien été ajouté.";
+
+"¼ÒÈ¯ÇÒ¼ö ¾ø´Â ¸ó½ºÅÍ ÀÔ´Ï´Ù. ¼ÒÈ¯°¡´ÉÇÑ ¸ó½ºÅÍ´Â È¨ÆäÀÌÁö¸¦ ÂüÁ¶ÇÏ¼¼¿ä";
+"Le monstre ne peut être appelé. Vérifiez le numéro du Mob.";
+
+"¼Ó¼º Ãß°¡¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Amélioration ajoutée avec succès.";
+
+"¼Ó¼º Ãß°¡¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Aucune amélioration ajoutée.";
+
+"¼Ó¼ºÀ» ¹Ù²ÛÁö %dºĞ ÀÌ³»¿¡´Â ´Ù½Ã º¯°æÇÒ ¼ö ¾ø½À´Ï´Ù.(%d ºĞ ³²À½)";
+"Vous ne pouvez faire cela qu'au bout de %d minutes après votre amélioration. (%d minutes restantes).";
+
+"¼Ó¼ºÀ» º¯°æÇÏ¿´½À´Ï´Ù.";
+"Vous changez l'amélioration.";
+
+"¼Ó¼ºÀ» º¯°æÇÒ ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Vous ne pouvez pas changer l'amélioration de cet objet.";
+
+"¼ö¶ó°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% Résistance contre les attaques des Sura.";
+
+"¼ö¶ó¿¡°Ô °­ÇÔ +%d%%";
+"Force contre les Sura + %d%%.";
+
+"¼ö·ÃÀÌ ½ÇÆĞ·Î ³¡³µ½À´Ï´Ù. ´Ù½Ã µµÀüÇØÁÖ½Ã±â ¹Ù¶ø´Ï´Ù.";
+"Entraînement a échoué. Veuillez réessayer plus tard.";
+
+"¼ö·ÃÇÒ ¼ö ¾ø´Â ½ºÅ³ÀÔ´Ï´Ù.";
+"Vous ne pouvez pas apprendre cette compétence.";
+
+"½ºÅ³ µ¥¹ÌÁö %d%%";
+"Dommage des compétences %d%%.";
+
+"½ºÅ³ µ¥¹ÌÁö ÀúÇ× %d%%";
+"Résistance contre les dommages de compétences %d%%.";
+
+"½ºÅ³ ·¹º§À» ³»¸®´Âµ¥ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Vous avez baissé votre niveau de compétence.";
+
+"½ºÅ³ ·¹º§À» ³»¸± ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas baisser votre niveau de compétence.";
+
+"½ºÅÏ +%d";
+"Etoile +%d.";
+
+"½½·Î¿ì +%d";
+"Malus de vitesse +%d.";
+
+"½Â¸¶ ¼ö·Ã¼­ ÀÌÇØ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Vous n'avez pas compris cet ouvrage d'équitation.";
+
+"½Â¸¶ ¼ö·Ã¼­¸¦ ÀĞ¾î ½Â¸¶ ½ºÅ³ Æ÷ÀÎÆ®¸¦ ¾ò¾ú½À´Ï´Ù.";
+"Vous avez reçu un point d'équitation après avoir lu un manuel d'équitation.";
+
+"½ÃÃ¼·ù Å¸°İÄ¡ +%d%%";
+"Bonus d'attaque contre un mort-vivant + %d%%.";
+
+"½Å¼ö±¹";
+"Empire Shinsoo";
+
+"¾²·¯Áø »óÅÂ¿¡¼­´Â ¸»¿¡ Å» ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez monter à cheval lorsque vous êtes couché à terre.";
+
+"¾²·¯Áø »óÅÂ¿¡¼­´Â ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas faire cela alors que vous êtes à terre.";
+
+"¾Æ´Ï ¾î¶»°Ô µÈ °Ô Á¾ÀÏ ÀĞ¾îµµ ¸Ó¸®¿¡ ¾È µé¾î¿À³Ä.";
+"Je relis la même ligne encore et encore.";
+
+"¾Æ¹«°Íµµ ¾òÀ» ¼ö ¾ø¾ú½À´Ï´Ù.";
+"Vous n'avez rien reçu.";
+
+"¾ÆÀÌÅÛ °³·®ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez utiliser parchemin durant les %d secondes suivant un échange.";
+
+"¾ÆÀÌÅÛ µå·Ó·ü  %d%% Ãß°¡ ÀÌº¥Æ® ÁßÀÔ´Ï´Ù.";
+"Le quota d'objets lâchés est augmenté de %d%%.";
+
+"¾ÆÀÌÅÛ µå·ÓÀ² %.1f¹è";
+"Chance de trouver un objet %. 1f.";
+
+"¾ÆÀÌÅÛ ·ê·¿ ½ÃÀÛ.";
+"Démarrer la Roulette d'objet.";
+
+"¾ÆÀÌÅÛ Àü´Ş: %s ´Ô¿¡°Ô %s";
+"Objets échangés : %s, %s.";
+
+"¾ÆÀÌÅÛ È¹µæ: %s";
+"Vous avez reçu %s.";
+
+"¾ÆÀÌÅÛ È¹µæ: %s ´ÔÀ¸·ÎºÎÅÍ %s";
+"%s reçoit %s.";
+
+"¾ÆÀÌÅÛ·Î±×°¡ syslog ¿¡ ³²¾Ò½À´Ï´Ù";
+"L'historique des objets a été placé dans l'historique du système.";
+
+"¾ÆÀÌÅÛÀ» °Ç³×ÁÙ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas échanger cet objet.";
+
+"¾ÆÀÌÅÛÀÇ ·¹º§ Á¦ÇÑº¸´Ù ·¹º§ÀÌ ³·½À´Ï´Ù.";
+"Votre niveau n'est pas assez élevé pour pouvoir utiliser cet objet.";
+
+"¾ÆÀÌÅÛÀÌ ³ª¿Ã È®·ü";
+"Pourcentage du taux de drop d'items";
+
+"¾ÆÁ÷ °ñµå¸¦ ¹ö¸± ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas encore jeter l'or.";
+
+"¾ÆÁ÷ ¸¶À»¿¡¼­ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù. (%d ÃÊ ³²À½)";
+"Aucun démarrage possible dans la ville, attendez %d secondes.";
+
+"¾ÆÁ÷ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ne peut pas encore servir.";
+
+"¾ÆÁ÷ ½Â¸¶ ½ºÅ³À» ¼ö·ÃÇÒ ¼ö ÀÖ´Â ·¹º§ÀÌ ¾Æ´Õ´Ï´Ù.";
+"Vous ne pouvez apprendre l'équitation qu'à partir du niveau 50.";
+
+"¾ÆÁ÷ ÀÌ ¸Ó¸®¸¦ »ç¿ëÇÒ ¼ö ¾ø´Â ·¹º§ÀÔ´Ï´Ù.";
+"Votre niveau est trop faible pour porter cette coupe de cheveux.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù. (%dÃÊ ³²À½)";
+"Aucun nouveau démarrage possible actuellement, attendez %d secondes.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù.(%dÃÊ ³²À½ )";
+"Un nouveau démarrage n'est pas possible actuellement, attendez %d secondes.";
+
+"¾ÆÁ÷ Àç½ÃÀÛ ÇÒ ¼ö ¾ø½À´Ï´Ù.(%dÃÊ ³²À½)";
+"Aucun nouveau démarrage possible actuellement, attendez %d secondes.";
+
+"¾Ç¸¶·ù Å¸°İÄ¡ +%d%%";
+"Bonus d'attaque contre le Démon + %d%%.";
+
+"¾È³çÇÏ¼¼¿ä. ¸ŞÆ¾2 ÀÔ´Ï´Ù.";
+"Bienvenue sur Metin2.";
+
+"¾×¼ö°¡ 20¾ï ³ÉÀ» ÃÊ°úÇÏ¿© °Å·¡¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù..";
+"Vous avez plus de 2 milliards de Yangs. Vous ne pouvez pas échanger.";
+
+"¾ç¼Õ°Ë ¹æ¾î %d%%";
+"Défense contre l'épée à deux mains %d%%.";
+
+"¾î´ÀÁ¤µµ ÀÌ ±â¼ú¿¡ ´ëÇØ ÀÌÇØ°¡ µÇ¾úÁö¸¸ Á¶±İ ºÎÁ·ÇÑµí ÇÑµ¥..";
+"Je progresse, même si je n'ai pas encore tout compris.";
+
+"¾îºÎ¸¦ ÅëÇØ ´ÙÀ½ ·¹º§ÀÇ ³¬½Ã´ë·Î ¾÷±×·¹ÀÌµå ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Améliorez votre canne à pêche grâce à l'aide du pêcheur.";
+
+"¾òÀº Æ÷ÀÎÆ®·Î´Â ½Â¸¶ ½ºÅ³ÀÇ ·¹º§À» ¿Ã¸± ¼ö ÀÖ½À´Ï´Ù.";
+"Vous pouvez améliorer votre équitation en utilisant ce point.";
+
+"¾ó¸¶ ¾È ³²¾Ò¾î! Á¶±İ¸¸ ´õ!";
+"Presque fini ! Juste encore un peu !";
+
+"¿©ÀÚ¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Seules les femmes peuvent faire cela.";
+
+"¿¬°è±â´Â ´õÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez plus apprendre de Combo.";
+
+"¿­¼è°¡ ¸ÂÁö ¾Ê´Â °Í °°´Ù.";
+"Cette clé ne semble pas aller dans cette serrure.";
+
+"¿­¼è´Â ¸ÂÀ¸³ª ¾ÆÀÌÅÛ ÁÖ´Â ºÎºĞ ±¸ÇöÀÌ ¾ÈµÇ¾ú½À´Ï´Ù.";
+"C'est la bonne clé.";
+
+"¿­¼è·Î ¿©´Â ¹°°ÇÀÌ ¾Æ´Ñ°Í °°´Ù.";
+"Cet objet ne peut pas être ouvert au moyen d'une clé.";
+
+"¿­¼è·Î Àá°Ü ÀÖ¾î¼­ ¿­¸®Áö ¾Ê´Â°Í °°´Ù. ¿­¼è¸¦ ±¸ÇØº¸ÀÚ.";
+"Fermé. Vous devez trouver la clé.";
+
+"¿­½ÉÈ÷ ÇÏ´Â ¹è¿òÀ» °¡Áö´Â °Í¸¸ÀÌ ±â¼úÀ» ¹è¿ï¼ö ÀÖ´Â À¯ÀÏÇÑ ±æÀÌ´Ù..";
+"J'ai bien compris ce chapitre, mais il va falloir continuer à travailler dur.";
+
+"¿­Á¤ÀÇ °¡¸éÀ» Âø¿ë½Ã¿¡¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Vous pouvez faire cela uniquement si vous portez un masque d'émotions.";
+
+"¿µ¼® °¨Áö±â°¡ ½Åºñ·Î¿î ºûÀ» ³»¸ç »ç¶óÁı´Ï´Ù.";
+"Le compas de la Metin a disparu avec le halo mystérieux.";
+
+"¿µ¼® °¨Áö±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"Le compas de la Metin a disparu.";
+
+"¿¹º¹À» ÀÔÀº »óÅÂ¿¡¼­ ¸»À» Å» ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas monter à cheval lorsque vous portez une robe de mariage ou un smoking.";
+
+"¿ÜÄ¡±â´Â ·¹º§ %d ÀÌ»ó¸¸ »ç¿ë °¡´É ÇÕ´Ï´Ù.";
+"Il faut être au moins de niveau %d pour pouvoir crier.";
+
+"¿ÜÄ¡±â´Â À¯·áÈ¸¿ø¸¸ »ç¿ëÇÒ¼ö ÀÖ½À´Ï´Ù";
+"Vous avez besoin d'un niveau plus élevé pour pouvoir Crier";
+
+"¿ë½ÅÀÇ °¡È£·Î °æÇèÄ¡°¡ ¶³¾îÁöÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Vous ne perdrez pas d'expérience du fait de la Bénédiction de l'Esprit du Dragon.";
+
+"¿ë½ÅÀÇ º¸È£·Î ¾ÆÀÌÅÛÀÌ ¶³¾îÁöÁö ¾Ê¾Ò½À´Ï´Ù.";
+"Vous ne perdez aucun objet lorsque vous êtes protégé par l'Esprit du Dragon.";
+
+"¿ë½É ÃßÃâ¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"La durée d'action restante de la pierre-dragon a pu être extraite.";
+
+"¿ë½É ÃßÃâ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"L'extraction de la durée d'action restante a échoué.";
+
+"¿ëÈ¥¼® »óÀÚ°¡ È°¼ºÈ­µÇÁö ¾Ê¾Ò½À´Ï´Ù.";
+"La pierre-dragon n'est pas activée.";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"La pierre-dragon est dessertie.";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ½ÇÆĞÇÏ¿© %s¸¦ ¾ò¾ú½À´Ï´Ù.";
+"Le dessertissage de la pierre-dragon a échoué mais vous avez reçu ceci : %s";
+
+"¿ëÈ¥¼® ÃßÃâ¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Le dessertissage de la pierre-dragon a échoué.";
+
+"¿î¿µÀÚ Á¦Á¦·Î Ã¤ÆÃÀÌ ±İÁö µÇ¾ú½À´Ï´Ù.";
+"Votre tchat a momentanément été bloqué pour cause de spam.";
+
+"¿õ±ÍÁ· Å¸°İÄ¡ +%d%%";
+"Bonus d'attaque contre Wonggui + %d%%.";
+
+"¿ø·¡ À§Ä¡·Î º¹±Í";
+"Vous êtes renvoyé au commencement.";
+
+"¿ùº´ ¶Ç´Â Á¾ÀÚ ¸¦ »ç¿ëÇÏ¿´½À´Ï´Ù";
+"Vous avez utilisé un gâteau de Lune ou un noyau.";
+
+"¿ùº´,Á¾ÀÚ »ç¿ëÈÄ 5ÃÊµ¿¾È »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Vous pouvez utiliser un gâteau de Lune toutes les 5 secondes.";
+
+"À¯·áÈ­ ¾ÆÀÌÅÛÀº °³ÀÎ»óÁ¡¿¡¼­ ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez vendre d'objets de la boutique dans un magasin privé.";
+
+"À»";
+"Le.";
+
+"À»µÎÁö¸¦ ÅëÇÏ¿© ÀÔÀå °¡´ÉÇÕ´Ï´Ù.";
+"Uriel est autorisé à entrer.";
+
+"ÀÌ °³·®¼­·Î °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez progresser avec ce personnage.";
+
+"ÀÌ °³·®¼­·Î ´õ ÀÌ»ó °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Le parchemin du guerrier ne fonctionne pas avec les objets +4 ou supérieur.";
+
+"ÀÌ °÷¿¡¼­ ¿µ¼® °¨Áö±â°¡ µ¿ÀÛÇÏÁö ¾Ê´Â°Í °°½À´Ï´Ù.";
+"Le compas de la Metin ne fonctionne pas dans les donjons.";
+
+"ÀÌ °÷¿¡¼± ÀÌº¥Æ®¿ë °¨Áö±â°¡ µ¿ÀÛÇÏÁö ¾Ê´Â°Í °°½À´Ï´Ù.";
+"Vous ne pouvez pas utiliser le détecteur d'évènement depuis cet endroit.";
+
+"ÀÌ ¸ŞÆ¾¼®Àº ¹«±â¿¡ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas monter cette Pierre d'esprit sur une arme.";
+
+"ÀÌ ¸ŞÆ¾¼®Àº Àåºñ¿¡ ºÎÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Cette Pierre d'esprit ne peut pas être montée sur ce genre d'objet.";
+
+"ÀÌ ½ºÅ³Àº ¾ÆÁ÷ ±×·£µå ¸¶½ºÅÍ ¼ö·ÃÀ» ÇÒ °æÁö¿¡ ÀÌ¸£Áö ¾Ê¾Ò½À´Ï´Ù.";
+"Votre compétence n'est pas assez élevée pour devenir un Grand Maître.";
+
+"ÀÌ ½ºÅ³Àº ¾ÆÁ÷ Ã¥À¸·Î ¼ö·ÃÇÒ °æÁö¿¡ ÀÌ¸£Áö ¾Ê¾Ò½À´Ï´Ù.";
+"Cette compétence n'est pas assez haute pour être entraînée au moyen d'un livre.";
+
+"ÀÌ ½ºÅ³Àº Ã¥À¸·Î ´õÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas entraîner cette compétence au moyen d'un livre.";
+
+"ÀÌ ¾ÆÀÌÅÛÀ¸·Î ¼ÒÄÏÀ» Ãß°¡ÇÒ ¼ö ¾ø´Â ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"Vous ne pouvez pas ajouter d'emplacement à cet objet.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº PC¹æ¿¡¼­¸¸ »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Cet objet ne peut être utilisé que dans un cybercafé.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Cet objet ne peut être mieux réalisé.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº º§Æ® ÀÎº¥Åä¸®·Î ¿Å±æ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas équiper cet objet sur votre ceinture-inventaire.";
+
+"ÀÌ ¾ÆÀÌÅÛÀº ÀÌ ¹æ½ÄÀ¸·Î´Â °³·®ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Cet objet ne peut être amélioré de cette façon.";
+
+"ÀÌ ¾ÆÀÌÅÛÀ» ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ces objets ne peut pas être utilisés ensemble.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó º¸¼®À» ÀåÂøÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Aucune Gemme supplémentaire ne peut être ajoutée à cet objet.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó ¼ÒÄÏÀ» Ãß°¡ÇÒ °ø°£ÀÌ ¾ø½À´Ï´Ù.";
+"Vous ne pouvez plus ajouter d'emplacement à cet objet.";
+
+"ÀÌ ¾×¼¼¼­¸®¿¡´Â ´õÀÌ»ó ÀåÂøÇÒ ¼ÒÄÏÀÌ ¾ø½À´Ï´Ù.";
+"Il n'y a pas d'emplacement pour gemme sur cet objet.";
+
+"ÀÌ Ã¥À¸·Î´Â ´õ ÀÌ»ó ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas en apprendre plus avec ce livre.";
+
+"ÀÌ Ã¥Àº ³Ê¹« ¾î·Á¿ö ÀÌÇØÇÏ±â°¡ Èûµì´Ï´Ù.";
+"Il n'est pas facile de comprendre ce livre.";
+
+"ÀÌ Ã¥Àº ³Ê¹« ¾î·Á¿ö¼­ ¼ö·ÃÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Ce livre est difficile à apprendre.";
+
+"ÀÌ Ã¥Àº ¾Æ¹«¸® ºÁµµ µµ¿òÀÌ µÉ °Í °°Áö ¾Ê½À´Ï´Ù.";
+"Ce livre ne peut pas vous aider.";
+
+"ÀÌ Ã¥À» ÀĞÀ¸·Á¸é ·¹º§À» ´õ ¿Ã·Á¾ß ÇÕ´Ï´Ù.";
+"Vous devez augmenter votre niveau pour comprendre ce livre.";
+
+"ÀÌ Çàµ¿Àº »óÈ£µ¿ÀÇ ÇÏ¿¡ °¡´É ÇÕ´Ï´Ù.";
+"Vous devez avoir l'accord de votre partenaire pour cela.";
+
+"ÀÌµ¿ µÇ¾îÁú À§Ä¡¿Í ³Ê¹« °¡±î¿ö ±ÍÈ¯ºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas utiliser le parchemin du lieu, car la distance est trop faible.";
+
+"ÀÌµ¿¼Óµµ %d";
+"Vitesse de déplacement %d.";
+
+"ÀÌµ¿ÇÒ ÁØºñ°¡ µÇ¾îÀÖÀ½À¸·Î ±ÍÈ¯ºÎ¸¦ »ç¿ëÇÒ¼ö ¾ø½À´Ï´Ù";
+"Vous êtes sur le point d'être téléporté, vous ne pouvez donc pas utiliser le parchemin du lieu.";
+
+"ÀÌ·¡¼­¾ß °øºÎ°¡ ¾ÈµÈ´Ù±¸.";
+"J'ai du mal à me concentrer. Je devrais faire une pause.";
+
+"ÀÌ¹Ì °°Àº Á¾·ùÀÇ ¿ëÈ¥¼®À» Âø¿ëÇÏ°í ÀÖ½À´Ï´Ù.";
+"Vous portez déjà une pierre-dragon de ce type.";
+
+"ÀÌ¹Ì ²ÈÇôÀÖ´ø ¹Ì³¢¸¦ »©°í %s¸¦ ³¢¿ó´Ï´Ù.";
+"Vous échangez l'appât actuel avec %s.";
+
+"ÀÌ¹Ì µĞ°©ÁßÀÎ »óÅÂÀÔ´Ï´Ù.";
+"Vous êtes déjà transformé.";
+
+"ÀÌ¹Ì ¼±ÀüÆ÷°í ÁßÀÎ ±æµåÀÔ´Ï´Ù.";
+"Vous avez déclaré la guerre à cette guilde.";
+
+"ÀÌ¹Ì ¿Ïº®ÇÏ°Ô ¾Ë¾ÆµéÀ» ¼ö ÀÖ´Â ¾ğ¾îÀÌ´Ù.";
+"Vous comprenez déjà cette langue.";
+
+"ÀÌ¹Ì ÀÔÈÄº¸µÇ¾îÀÖ½À´Ï´Ù";
+"Il y a déjà une candidature.";
+
+"ÀÌ¹Ì Àåºñ¸¦ Âø¿ëÇÏ°í ÀÖ½À´Ï´Ù.";
+"Vous êtes déjà équipé d'une pierre-dragon de ce genre.";
+
+"ÀÌ¹Ì ÀüÀïÀÌ ³¡³µ½À´Ï´Ù.";
+"La guerre est déjà ouverte.";
+
+"ÀÌ¹Ì Á¦Á¶Ã¢ÀÌ ¿­·ÁÀÖ½À´Ï´Ù.";
+"La fenêtre de constuction est déjà ouverte.";
+
+"ÀÌ¹Ì Å»°ÍÀ» ÀÌ¿ëÁßÀÔ´Ï´Ù.";
+"Vous êtes déjà sur une monture. Vous devez d'abord la quitter.";
+
+"ÀÌ¹Ì ÆÄÆ¼¿¡ ¼ÓÇØ ÀÖÀ¸¹Ç·Î °¡ÀÔ½ÅÃ»À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas accepter l'invitation car vous êtes déjà dans un groupe.";
+
+"ÀÌ¹Ì È¿°ú°¡ °É·Á ÀÖ½À´Ï´Ù.";
+"L'effet est déjà en cours.";
+
+"ÀÌ¹ÌÅõÇ¥¸¦ ÇßÀ½";
+"A déjà voté.";
+
+"ÀÌ¹ø¿¡ ÀâÀº ¹°°í±âÀÇ ±æÀÌ´Â %.2fcm";
+"La taille du poisson capturé est de %.2fcm.";
+
+"ÀÌº¥Æ®¿ë °¨Áö±â°¡ ½Åºñ·Î¿î ºûÀ» ³»¸ç »ç¶óÁı´Ï´Ù.";
+"Le détecteur d'évènement a disparu dans un halo mystérieux.";
+
+"ÀÌº¥Æ®¿ë °¨Áö±â°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"Le détecteur d'évènement a disparu.";
+
+"ÀÌ¼º°£¿¡¸¸ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Cette action ne peut être employée qu'avec un membre de l'autre sexe.";
+
+"ÀÌÁ¦ Á» ½½½½ °¡´ÚÀÌ ÀâÈ÷´Â °Í °°Àºµ¥.";
+"À présent je comprends !";
+
+"ÀÌÁ¦ Ã¥ÀÇ ¸¶Áö¸· ÀåÀÌ¾ß! ¼ö·ÃÀÇ ³¡ÀÌ ´«¿¡ º¸ÀÌ°í ÀÖ¾î!";
+"J'en suis à la dernière page du livre. L'entraînement est bientôt terminé.";
+
+"ÀÎ°£·ù ¸ó½ºÅÍ Å¸°İÄ¡ +%d%%";
+"Puissance de l'attaque du joueur contre un monstre +%d%%.";
+
+"ÀÎº¥Åä¸®°¡ ²Ë Â÷¼­ ³»¸± ¼ö ¾ø½À´Ï´Ù.";
+"Votre inventaire est plein. L'objet ne peut pas y être stocké.";
+
+"ÀÎÁõ¹øÈ£°¡ Æ²·È½À´Ï´Ù. ´Ù½Ã ½ÃµµÇÏ¼¼¿ä.";
+"Votre numéro de confirmation est incorrect. Essayez à nouveau s'il vous plaît.";
+
+"ÀÔ·ÂÇÏ½Å ÀÌ¸§À» °¡Áø »ç¿ëÀÚ°¡ ¾ø½À´Ï´Ù.";
+"Il n'y a pas de joueur portant ce nom.";
+
+"ÀÚ°´°ø°İ¿¡ %d%% ÀúÇ×";
+"%d%% Résistance contres les attaques des Ninjas.";
+
+"ÀÚ°´¿¡°Ô °­ÇÔ +%d%%";
+"Force contre les Ninjas + %d%%.";
+
+"ÀÚµ¿À¸·Î ³ª°¡°ÔµË´Ï´Ù.";
+"sera quitté automatiquement.";
+
+"ÀÚ½ÅÀ» ¼±ÅÃÇÏ½Ã¸é ¹ÛÀ¸·Î ³ª°¥ ¼ö ÀÖ´Â <°ü¶÷ Á¾·á> ¹öÆ°ÀÌ ³ª¿É´Ï´Ù.";
+"Lorsque vous choisissez un personnage, une icône apparaît.";
+
+"ÀÚ½ÅÀ» ¼ÒÈ¯ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas vous recruter.";
+
+"ÀÚÀç°¡ ºÎÁ·ÇÏ¿© °Ç¼³ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous n'avez pas assez de ressources pour ce bâtiment.";
+
+"Àß¸øµÈ µĞ°© ¾ÆÀÌÅÛÀÔ´Ï´Ù.";
+"C'est un objet qui ne peut être échangé.";
+
+"Àß¸øµÈ ¼±ÅÃÀ» Çß½À´Ï´Ù";
+"Votre choix est incorrect.";
+
+"Àá½Ã ÈÄ OX ÀÌº¥Æ®¸¦ ´Ù½Ã ½ÃÀÛÇÏ°Ú½À´Ï´Ù.";
+"Dans un petit moment l'évènement OX redémarrera.";
+
+"Àá½Ã ÈÄ ¸¶À»·Î ÀÌµ¿µÇ°Ú½À´Ï´Ù.";
+"D'ici peu les joueurs seront téléportés dans la cité.";
+
+"Àá½ÃÈÄ ¸ğµÎ ¸¶À»·Î ÀÌµ¿µË´Ï´Ù.";
+"Tout le monde sera téléporté dans la cité dans quelques instants.";
+
+"Àá½ÃÈÄ ÇØ´ç ¸¶À»Àº  ¸¶À»·Î ÀÌµ¿µË´Ï´Ù.";
+"Tout le monde sera téléporté dans la cité choisie dans un instant.";
+
+"ÀåºñÁßÀÎ ¾ÆÀÌÅÛÀº °³ÀÎ»óÁ¡¿¡¼­ ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Les objets équipés ne peuvent pas être vendus dans un magasin privé.";
+
+"ÀåÂø¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"Vous avez réussi à vous armer.";
+
+"ÀåÂø¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"Vous avez échoué à vous armer.";
+
+"Àç·á(%s)°¡ ºÎÁ·ÇÕ´Ï´Ù.";
+"Vous n'avez pas assez de matériel (%s).";
+
+"ÀúÁÖ µÇµ¹¸®±â È®·ü %d%%";
+"Renvoyer malédiction : %d%%.";
+
+"Àû¿ë ·¹º§º¸´Ù ³ô¾Æ »ç¿ëÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.";
+"Le niveau de votre objet est trop élevé.";
+
+"ÀûÇÕÇÏÁö ¾ÊÀº ±æµå ÀÌ¸§ ÀÔ´Ï´Ù.";
+"Ce nom de Guilde n'est pas valide.";
+
+"Àü±â ÀúÇ× %d%%";
+"Résistance à la foudre %d%%.";
+
+"ÀüÀï ¼­¹ö°¡ ¿­·ÁÀÖÁö ¾Ê¾Æ ±æµåÀüÀ» ½ÃÀÛÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"La bataille entre les guildes ne peut commencer car le serveur est déconnecté.";
+
+"ÀüÁ¦±¹";
+"Tous les empires";
+
+"ÀüÅõ°¡ ½ÃÀÛ µÇ¾î Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"Annulée. Vous avez déjà commencé à vous battre.";
+
+"Á¤´äÀº";
+"La réponse correcte est.";
+
+"Á¤´äÀÔ´Ï´Ù!";
+"Correcte !";
+
+"Á¤»óÀûÀ¸·Î ÅõÇ¥¸¦ÇÏ¿´½À´Ï´Ù.";
+"A voté régulièrement.";
+
+"Á¤½Å·Â È¸º¹ +%d";
+"Récupération de la Mana +%d.";
+
+"Á¦Á¶ Àç·á°¡ ºÎÁ·ÇÕ´Ï´Ù";
+"Vous n'avez pas les bons matériaux.";
+
+"Á¦Á¶¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"L'amélioration de votre objet a échoué.";
+
+"Á¦Á¶Ã¢ÀÌ ¿­·ÁÀÖÁö ¾Ê½À´Ï´Ù";
+"La fenêtre de construction n'est pas ouverte.";
+
+"Á¶°³°¡ ÈçÀûµµ ¾øÀÌ »ç¶óÁı´Ï´Ù.";
+"La palourde a disparu.";
+
+"Á¶°³¿¡¼­ µ¹Á¶°¢ÀÌ ³ª¿Ô½À´Ï´Ù.";
+"Vous trouvez un morceau de pierre dans la palourde.";
+
+"Á¶°³¿¡¼­ ¹éÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"Il y a une perle blanche à l'intérieur du coquillage.";
+
+"Á¶°³¿¡¼­ Ã»ÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"Il y a une perle bleue à l'intérieur du coquillage.";
+
+"Á¶°³¿¡¼­ ÇÇÁøÁÖ°¡ ³ª¿Ô½À´Ï´Ù.";
+"Il y a une Perle de sang à l'intérieur du coquillage.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â °Ç¹°ÀÔ´Ï´Ù.";
+"Ce bâtiment n'existe pas.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â ¾ÆÀÌÅÛ ÀÔ´Ï´Ù";
+"Cet objet n'existe pas.";
+
+"Á¸ÀçÇÏÁö ¾Ê´Â Ä³¸¯ÅÍ ÀÔ´Ï´Ù.";
+"Ce personnage n'existe pas.";
+
+"ÁÁ¾Æ, ÀÌ ±â¼¼·Î °è¼Ó ³ª°£´Ù!";
+"D'accord je dois rester concentré.";
+
+"ÁÁ¾Ò¾î! Á¶±İ¸¸ ´õ ÀĞÀ¸¸é ³¡ÀÌ´Ù!";
+"Je suis illuminé ! J'ai presque tout lu !";
+
+"ÁÖ¾È¼ú¼­¸¦ ÅëÇØ ÁÖÈ­ÀÔ¸¶¿¡¼­ ºüÁ®³ª¿Ô½À´Ï´Ù.";
+"Vous avez repoussé la malédiction du mauvais Esprit avec l'aide d'un parchemin d'exorcisme.";
+
+"Á×Àº ¸»¿¡°Ô »ç·á¸¦ ¸ÔÀÏ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas nourrir un cheval mort.";
+
+"Á×Àº Á¤º¸ %s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d";
+"%s deadcount %d Empire %d killcount %d(Purpose %d) killmobcount %d, RegenFlag %d";
+
+"Á×Áö ¾ÊÀº ¸»¿¡°Ô ¼±ÃÊ¸¦ ¸ÔÀÏ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas nourrir un cheval vivant avec de l'herbe des singes, elle sert à le ressusciter.";
+
+"Áö±İºÎÅÍ %sÀº 30ºĞ°£ ºÀÈ­¸¦ ÆÄ±«ÇÏ¿© º¸»óÀ» È¹µæ ÇÒ ¼ö ÀÖ½À´Ï´Ù.";
+"Le feu a été éteint avant les 30 minutes par %s qui peut obtenir une récompense pour cela.";
+
+"Áö´É +%d";
+"Intelligence +%d.";
+
+"Áö´ÉÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous manquez de points d'intelligence pour pouvoir vous équiper de cet objet.";
+
+"Á÷Á¢ Å¸°İÄ¡ ¹İ»ç È®·ü : %d%%";
+"Renvoyer un coup direct : %d%%.";
+
+"Áø³ë±¹";
+"Empire Jinno";
+
+"Âø¿ë ÁßÀÎ ¾ÆÀÌÅÛÀº ÆÇ¸ÅÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas vendre des objets dont vous êtes équipés.";
+
+"Âø¿ë ÁßÀÎ ¿ëÈ¥¼®Àº ÃßÃâÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"La pierre-dragon ne peut pas être dessertie.";
+
+"Âü";
+"TRUE.";
+
+"Ã¢°í,°Å·¡Ã¢µîÀÌ ¿­¸° »óÅÂ¿¡¼­´Â °³·®À» ÇÒ¼ö°¡ ¾ø½À´Ï´Ù";
+"Vous ne pouvez rien améliorer tant qu'une autre fenêtre est ouverte.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â °Å·¡¸¦ ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Vous pourrez échanger à nouveau dans %d secondes.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â ±ÍÈ¯ºÎ,±ÍÈ¯±â¾ïºÎ¸¦ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas utiliser le parchemin du lieu pendant %d secondes après l'ouverture de l'entrepôt.";
+
+"Ã¢°í¸¦ ¿¬ÈÄ %dÃÊ ÀÌ³»¿¡´Â ´Ù¸¥°÷À¸·Î ÀÌµ¿ÇÒ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez vous rendre ailleurs durant %d secondes après avoir ouvert un magasin.";
+
+"Ã¤±¤¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+"L'extraction est un succès.";
+
+"Ã¤±¤¿¡ ½ÇÆĞÇÏ¿´½À´Ï´Ù.";
+"L'extraction a échoué.";
+
+"Ã¤±¤À» Áß´ÜÇÏ¿´½À´Ï´Ù.";
+"Extraction terminée.";
+
+"Ã¤ÆÃ ±İÁö »óÅÂÀÔ´Ï´Ù.";
+"Votre fenêtre de discussion est fermée.";
+
+"Ã¤ÆÃ ±İÁö°¡ Ç®·È½À´Ï´Ù.";
+"Votre fenêtre de discussion n'est plus bloquée.";
+
+"Ã¥À¸·Î ´õ ³ôÀº °æÁöÀÇ ¼ö·ÃÀ» ¼º°øÀûÀ¸·Î ³¡³»¼Ì½À´Ï´Ù.";
+"Vous avez terminé votre entraînement grâce au livre avec succès.";
+
+"Ã¥Àåµµ ÀÌÁ¦ ¾ó¸¶ ³²Áö ¾Ê¾Ò±º.";
+"Il ne me reste plus que quelques pages à lire avant d'avoir fini.";
+
+"ÃµÁ¶±¹";
+"Empire Chunjo";
+
+"Ã»¼ÒÇÒ ¼®ÀÌ ¹ÚÇôÀÖÁö ¾Ê½À´Ï´Ù.";
+"Aucun morceau de Pierre pouvant être enlevé.";
+
+"Ã¼·Â +%d";
+"Endurance +%d.";
+
+"Ã¼·ÂÀÌ ³·¾Æ Âø¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous manquez de vitalité pour pouvoir vous équiper de cet objet.";
+
+"ÃÑ ÄûÁî ¼ö: %d";
+"Nombre total du Quizz: %d.";
+
+"ÃÖ´ë »ı¸í·Â +%d";
+"Points de vie +%d";
+
+"ÃÖ´ë »ı¸í·Â +%d%%";
+"Limite supérieure d'Énergie +%d%%.";
+
+"ÃÖ´ë Á¤½Å·Â +%d";
+"Points de Mana +%d.";
+
+"ÃÖ´ë Á¤½Å·Â +%d%%";
+"Limite supérieure d'Énergie +%d%%.";
+
+"ÃÖ´ë Áö±¸·Â +%d";
+"Endurance maximale + %d.";
+
+"Ãàº¹ÀÇ ¼­¿Í ÇöÃ¶À» ÇÕÄ¥ ¼ö ÀÖ½À´Ï´Ù.";
+"Vous pouvez combiner le parchemin de bénédiction et le minerai de fer magique.";
+
+"Ãâ¸¶¸¦ ÇÒ¼ö°¡ ¾ø½À´Ï´Ù";
+"Ne peut pas être voté.";
+
+"ÃæÀüÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas recharger cette pierre-dragon.";
+
+"Ãë¼Ò µÇ¾ú½À´Ï´Ù.";
+"Votre déconnexion a été annulée.";
+
+"Ä³¸¯ÅÍ¸¦ ÀüÈ¯ ÇÕ´Ï´Ù. Àá½Ã¸¸ ±â´Ù¸®¼¼¿ä.";
+"Vous avez changé de personnage. Veuillez patienter.";
+
+"ÄğÅ¸ÀÓ -%d";
+"Temps de rechargement -%d";
+
+"ÄğÅ¸ÀÓ Àû¿ëÁß  %d ÈÄ »ç¿ë°¡´É";
+"En cours de préparation. Utilisable après %d.";
+
+"Äù½ºÆ®¸¦ ·ÎµåÇÏ´Â ÁßÀÔ´Ï´Ù. Àá½Ã¸¸ ±â´Ù·Á ÁÖ½Ê½Ã¿À.";
+"Votre demande est en train d'être chargée. Merci de patienter.";
+
+"Å©À¹, ±â°¡ ¿ª·ùÇÏ°í ÀÖ¾î! ÀÌ°Å ¼³¸¶ ÁÖÈ­ÀÔ¸¶ÀÎ°¡!? Á¨Àå!";
+"Ça n'a pas marché. C'est infernal !";
+
+"Å¬¶óÀÌ¾ğÆ® ¹öÀüÀÌ Æ²·Á ·Î±×¾Æ¿ô µË´Ï´Ù. Á¤»óÀûÀ¸·Î ÆĞÄ¡ ÈÄ Á¢¼ÓÇÏ¼¼¿ä.";
+"La version du client du jeu n'est pas correcte. Veuillez installer le patch prévu.";
+
+"Å¸°İÄ¡ %d%% ¸¦ »ı¸í·ÂÀ¸·Î Èí¼ö";
+"Absorption de l'Énergie %d%% durant une attaque.";
+
+"Å¸·ÂÄ¡ %d%% ¸¦ Á¤½Å·ÂÀ¸·Î Èí¼ö";
+"Absorption de Mana %d%% durant une attaque.";
+
+"Å¸Á¦±¹ À¯Àú´Â ¼ÒÈ¯ ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Vous ne pouvez pas appeler des joueurs inconnus.";
+
+"Å¸Á¦±¹ À¯Àú¿¡°Ô´Â ÀÌµ¿ÇÒ¼ö ¾ø½À´Ï´Ù";
+"Vous ne pouvez rien transmettre à un joueur inconnu.";
+
+"Åº »óÅÂ¿¡¼­´Â ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez pas faire cela pendant que vous êtes en selle.";
+
+"Å×½ºÆ® ¼­¹ö ½Ã°£Á¦ÇÑ Åë°ú";
+"La limite maximale de temps du serveur test a été dépassée.";
+
+"ÆÄÆ¼ ÁßÀÌ ¾Æ´Õ´Ï´Ù.";
+"Vous n'êtes pas dans ce groupe.";
+
+"ÆÄÆ¼ÀÇ Çùµ¿·ÂÀÌ ³ô¾ÆÁ® Áö±İºÎÅÍ Ãß°¡ °æÇèÄ¡ º¸³Ê½º¸¦ ¹Ş½À´Ï´Ù.";
+"Votre groupe fonctionne bien en tant qu'équipe et les membres qui se trouvent à proximité du chef reçoivent un bonus d'expérience.";
+
+"ÆÄÆ¼ÀåÀÌ Á¢¼Ó »óÅÂ°¡ ¾Æ´Ï¶ó¼­ ¿äÃ»À» ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"[Groupe] Vous ne pouvez pas effectuer de demande car le chef du groupe est déconnecté.";
+
+"ÆÇ¸Å±İ¾×ÀÇ %d %% °¡ ¼¼±İÀ¸·Î ³ª°¡°ÔµË´Ï´Ù";
+"Une taxe de %d%% sera prélevée sur la vente.";
+
+"ÆÛÆåÆ® ¸¶½ºÅÍµÈ ½ºÅ³ÀÔ´Ï´Ù. ´õ ÀÌ»ó ¼ö·Ã ÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous êtes déjà un Maître de cette compétence. Vous ne pouvez plus vous entraîner.";
+
+"ÆòÅ¸ µ¥¹ÌÁö %d%%";
+"Dommage des coups %d%%.";
+
+"ÆòÅ¸ µ¥¹ÌÁö ÀúÇ× %d%%";
+"Résistance contre les dommages des coups %d%%.";
+
+"ÇÃ·¹ÀÌ¾î %d ¿Í ÇÃ·¹ÀÌ¾î  %d¸¦ ÆÄÈ¥½ÃÅµ´Ï´Ù..";
+"Contrat rompu entre le joueur %d et le joueur %d.";
+
+"ÇÑ¼Õ°Ë ¹æ¾î %d%%";
+"Défense contre l'épée %d%%.";
+
+"ÇØ´ç À¯Àú´Â %d Ã¤³Î¿¡ ÀÖ½À´Ï´Ù. (ÇöÀç Ã¤³Î %d)";
+"Ajouter le joueur %d au canal. (Canal actuel %d).";
+
+"ÇÚµåÆù ¹øÈ£°¡ µî·Ï µÇ¾ú½À´Ï´Ù.";
+"Le numéro de téléphone portable est enregistré.";
+
+"ÇÚµåÆù ¹øÈ£°¡ µî·ÏµÇ¾î ÀÖÁö ¾Ê½À´Ï´Ù.";
+"Le numéro de téléphone portable n'est pas enregistré.";
+
+"ÇöÀç %s ±¹°í¿¡´Â %d ÀÇ µ·ÀÌ ÀÖ½À´Ï´Ù";
+"%s a encore %d.";
+
+"ÇöÀç %s ±¹°í¿¡´Â %u ÀÇ µ·ÀÌ ÀÖ½À´Ï´Ù";
+"%s a encore %u.";
+
+"ÇöÀç ³²Àº Âü°¡ÀÚ¼ö : %d";
+"Nombre d'autres participants : %d.";
+
+"ÇöÀç ½ºÄÚ¾î ½Å¼ö±¹:%d ÃµÁ¶±¹:%d Áø³ë±¹:%d";
+"Score actuel Shinsoo: %d, Chunjo: %d, Jinno: %d";
+
+"ÇöÀç ¿Â¶óÀÎ »óÅÂ ÀÔ´Ï´Ù. ±Ó¸»À» ÀÌ¿ëÇÏ¼¼¿ä.";
+"Il/elle est en ligne. Veuillez utiliser le chuchotement.";
+
+"ÇöÀç À§Ä¡¿¡¼­ »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.";
+"Vous ne pouvez utiliser cela depuis cet endroit.";
+
+"ÇöÀç ÀÌº¥Æ® Âü°¡ÀÚ ºĞµéÀº ¸¶À»·Î ÀÌµ¿ µÇ°Ú½À´Ï´Ù.";
+"L'animation actuelle est limitée à une région.";
+
+"ÇöÀç ÀüÀïÁßÀÎ ±æµå ÀÔ´Ï´Ù";
+"Cette Guilde est en guerre.";
+
+"ÇöÀç Çì¾î½ºÅ¸ÀÏ¿¡¼­´Â ¿°»ö°ú Å»»öÀÌ ºÒ°¡´ÉÇÕ´Ï´Ù.";
+"Vous ne pouvez pas teindre ou décolorer votre coupe de cheveux actuelle.";
+
+"È­¿° ÀúÇ× %d%%";
+"Résistance au Feu %d%%.";
+
+"È° °ø°İ È¸ÇÇ È®·ü %d%%";
+"%d%% de chance d'esquiver une attaque à distance.";
+
+"È°°ø°İ ÀúÇ× %d%%";
+"Résistance aux attaques à distance %d%%.";
+

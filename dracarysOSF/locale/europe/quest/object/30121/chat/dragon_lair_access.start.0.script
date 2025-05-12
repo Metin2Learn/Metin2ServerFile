@@ -1,0 +1,77 @@
+local starttime = game . get_event_flag ( "dragon_lair_time" ) 
+local current_time = get_global_time ( ) 
+local settings = dragon_lair_access . get_settings ( ) 
+local time_remaining = dragon_lair_access . get_time_remaining ( ) 
+if pc . count_item ( settings . access_item ) >= settings . access_item_amount then 
+if starttime + settings . group_time >= current_time then 
+local password_input 
+repeat 
+say_title ( locale_quest ( 1477 ) ) 
+say ( locale_quest ( 868 ) ) 
+password_input = tonumber ( input ( ) ) 
+if password_input ~= game . get_event_flag ( "dragon_lair_password" ) then 
+say_title ( locale_quest ( 1477 ) ) 
+say ( locale_quest ( 9772 ) ) 
+local again = select ( locale_quest ( 9773 ) , locale_quest ( 2426 ) ) 
+if again == 2 then 
+return 
+end 
+end 
+until password_input == game . get_event_flag ( "dragon_lair_password" ) 
+if not dragon_lair_access . give_item_to_ghost ( ) then 
+return 
+end 
+pc . setqf ( "time" , starttime ) 
+dragon_lair_access . warp_to_lair ( ) 
+set_state ( "kill_dragon" ) 
+elseif time_remaining < 0 and npc . lock ( ) then 
+say_title ( locale_quest ( 1477 ) ) 
+say ( locale_quest ( 871 ) ) 
+local abort = select ( locale_quest ( 872 ) , locale_quest ( 2426 ) ) 
+if abort == 2 then 
+npc . unlock ( ) 
+return 
+end 
+local password_number 
+repeat 
+say_title ( locale_quest ( 1477 ) ) 
+say ( locale_quest ( 873 ) ) 
+password_number = tonumber ( input ( ) ) 
+local again 
+if not is_valid_number ( password_number ) then 
+say_title ( locale_quest ( 1477 ) ) 
+say ( locale_quest ( 874 ) ) 
+again = select ( locale_quest ( 9773 ) , locale_quest ( 2426 ) ) 
+if again == 2 then 
+npc . unlock ( ) 
+return 
+end 
+end 
+until is_valid_number ( password_number ) 
+if not dragon_lair_access . give_item_to_ghost ( ) then 
+npc . unlock ( ) 
+return 
+end 
+if dragon_lair_access . get_time_remaining ( ) > 0 then 
+pc . give_item2 ( settings . access_item , settings . access_item_amount ) 
+npc . unlock ( ) 
+say_title ( locale_quest ( 1477 ) ) 
+say ( locale_quest ( 882 ) ) 
+return 
+end 
+pc . setqf ( "password" , password_number ) 
+timer ( "dragon_lair_warptimer" , pc . get_channel_id ( ) * 2 ) 
+npc . unlock ( ) 
+else 
+say_title ( locale_quest ( 1477 ) ) 
+say ( locale_quest ( 882 ) ) 
+return 
+end 
+else 
+say_title ( locale_quest ( 1477 ) ) 
+say ( locale_quest ( 876 ) ) 
+say ( locale_quest ( 877 ) ) 
+say ( settings . access_item_amount .. "x: " ) 
+say_item_vnum ( settings . access_item ) 
+return 
+end 

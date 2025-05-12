@@ -1,0 +1,5 @@
+say_title ( mob_name ( 20001 ) ) 
+say ( locale_quest ( 10861 ) ) 
+if select ( locale_quest ( 1475 ) , locale_quest ( 1476 ) ) == 1 then 
+ds . open_changeattr_window ( ) 
+else return end 

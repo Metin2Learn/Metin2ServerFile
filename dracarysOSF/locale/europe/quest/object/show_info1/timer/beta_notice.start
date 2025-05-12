@@ -1,0 +1,2 @@
+notice_mission ( "OSF V5 - Patch 10" ) 
+timer ( "show_info2" , 10 ) 
